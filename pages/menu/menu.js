@@ -33,13 +33,13 @@ function habilitarJuegos(array) {
   if (array[0].granja01 == "1" ) {
     $("#cardGranja1").removeClass("cards-deshabilitados");
     $("#cardGranja1").attr("activo", "1");
-    console.log("cardGranja1 ACTIVO");
+    //console.log("cardGranja1 ACTIVO");
     
   }
   if (array[0].platform01 == "1" ) {
     $("#cardPlatform1").removeClass("cards-deshabilitados");
     $("#cardPlatform1").attr("activo", "1");
-    console.log("cardPlatform1 ACTIVO");    
+    //console.log("cardPlatform1 ACTIVO");    
   }
 
     
@@ -48,8 +48,25 @@ function habilitarJuegos(array) {
 function eClick() {
     //Manejador de eventos para las opciones de menú
     $(".cards").click(function () { 
-        let thisActivo = $(this).attr("activo");
-        console.log(thisActivo);
+        let thisActivo = $(this).attr("activo"),
+        thisId = $(this).attr("id");
+
+       // console.log(thisActivo);
+        if (thisActivo=="1") {
+           switch (thisId) {
+               case "cardGranja1":
+                    window.location.assign("../granja1");
+                break;                
+                case "cardPlatform1":
+                    window.location.assign("../platform1");
+                break;
+           
+               default:
+               console.log("Opcion fuera de rango");
+               
+                   break;
+           }
+        }
     });
     
 }
