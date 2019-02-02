@@ -8,6 +8,8 @@ $id_grupo = $_GET['id_grupo'];
 $sql = "SELECT * FROM desbloqueados WHERE id_grupo = '".$id_grupo."'";
 //echo $sql; 
 
+sleep(1);
+
 
 include "conectar.php";
 function desconectar($conexion){
