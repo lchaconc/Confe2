@@ -3,25 +3,31 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Juegos - Menu</title>
-    <link rel="shortcut icon" href="./assets/ico/dragon.png" type="image/x-icon">
+    <title>Juegos - Localstorage</title>
+    <link rel="shortcut icon" href="./assets/ico/dragon.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-    <script src="./js/main.js"></script>
+    <script src="./js/guardar_localstorage.js"></script>
 </head>
 <body>
-    <h1>Menú Principal</h1>
+    <h1>Página Principal</h1>
+    <br>
+    <strong>Id de grupo:</strong> 
     <div>
-        <select  id="selCodigoJuego">
-                <option selected disabled value="0">Seleccione un valor </option> 
-            <option value="moravia122"> Moravia Centro </option>
-            <option value="coronado015"> San Antonio Coronado </option>
-            <option value="desampa042"> Gravilias Desamparados </option>
-        </select>
+    <br>
+    <div>
+            <select  id="selCodigoJuego">
+                    <option selected disabled value="0">Seleccione un valor </option> 
+                <option value="moravia122"> Moravia Centro </option>
+                <option value="coronado015"> San Antonio Coronado </option>
+                <option value="desampa042"> Gravilias Desamparados </option>
+            </select>
     </div>
+        
+    </div>
+    <hr>
     <div>
-        <button id="btnCargar" > Cargar </button>
+        <button id="btnCargar" > Ir a Menú </button>
     </div>
     
 </body>
