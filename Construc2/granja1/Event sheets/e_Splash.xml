@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>e_Splash</name>
+    <events>
+        <event-block sid="850646477373350">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="182059395750369" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Preload" sid="389639860107865" type="Audio">
+                    <param id="0" name="Audio file">corte</param>
+                </action>
+                <action id="4" name="Preload" sid="751897043181088" type="Audio">
+                    <param id="0" name="Audio file">logrado1</param>
+                </action>
+                <action id="4" name="Preload" sid="295048177529416" type="Audio">
+                    <param id="0" name="Audio file">obtenido</param>
+                </action>
+                <action id="4" name="Preload" sid="217919135254906" type="Audio">
+                    <param id="0" name="Audio file">amazonas</param>
+                </action>
+                <action id="4" name="Preload" sid="504446327985121" type="Audio">
+                    <param id="0" name="Audio file">Finish1</param>
+                </action>
+                <action id="4" name="Preload" sid="600950954692456" type="Audio">
+                    <param id="0" name="Audio file">timescapes</param>
+                </action>
+                <action id="4" name="Preload" sid="684352516028997" type="Audio">
+                    <param id="0" name="Audio file">oveja</param>
+                </action>
+                <action id="4" name="Preload" sid="623652326462644" type="Audio">
+                    <param id="0" name="Audio file">rasuradora</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="902606925070323">
+            <conditions>
+                <condition id="-25" name="On loader layout complete" sid="671439085863831" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="257595932001220" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="737014892911400" type="System">
+                    <param id="0" name="Layout">Game_farm</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
