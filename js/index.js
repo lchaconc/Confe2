@@ -9,14 +9,16 @@ $(document).ready(function () {
 function eCArgarJuego() {
     $("#btnCargar").click(function (e) { 
         e.preventDefault();
-        guardarIdGrupo($("#selCodigoJuego").val());        
+                
+        //Guarda el grupo en el local storage
+        localStorage.setItem("idGrupo", $("#selCodigoJuego").val());
+
+        //Guarda el usuario en el local storage
+        localStorage.setItem("idUsuario", $("#selCodigoUsuario").val());
+
+        //Rutea a la página del menú:
+        window.location.assign("./pages/menu/menu.html");
+
     });
     
 }
-
-function guardarIdGrupo(id) {
-    localStorage.setItem("idGrupo", id);
-    window.location.assign("./pages/menu/menu.html");
-}
-
-

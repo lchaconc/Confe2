@@ -7,20 +7,38 @@ $(document).ready(function () {
 
 
 function cargarIdJuego() { 
-    var idGrupo = localStorage.getItem("idGrupo")
-    //console.log(idGrupo);    
+    let idGrupo = localStorage.getItem("idGrupo"),
+    idUsuario = localStorage.getItem("idUsuario");       
     cargarEstadoJuegos(idGrupo);
+    cargarAvanceJugador(idUsuario);
+
     eClick();
     
 }
 
 
-function cargarEstadoJuegos( valor) {
-    console.log(valor);    
-    $.getJSON("http://localhost/Confe2/ws/get_estado_juegos.php?id_grupo="+valor,
+function cargarEstadoJuegos( idGrupo) {
+    console.log(idGrupo);    
+    $.getJSON("http://localhost/Confe2/ws/get_estado_juegos.php?id_grupo="+idGrupo,
         function (data, textStatus, jqXHR) {
            // console.log(data);
            habilitarJuegos(data);
+
+        }
+    );
+    
+}
+
+
+
+function cargarAvanceJugador( idUsuario) {
+    console.log(idUsuario);    
+    $.getJSON("http://localhost/Confe2/ws/get_avance_usuario.php?id_usuario=luis@correo.de",
+        function (data, textStatus, jqXHR) {
+           console.log(data);
+           
+           //TODO Demás instrucciones
+
            $("#divAjaxSpiner").removeClass("hadow-layer");
            $("#divAjaxSpiner").fadeOut();
         }
@@ -29,6 +47,7 @@ function cargarEstadoJuegos( valor) {
 }
 
 function habilitarJuegos(array) {
+    //Activa el botón correspondiente dependiendo si está habilitado el juego
     //console.log(array[0]  );    
   if (array[0].granja01 == "1" ) {
     $("#cardGranja1").removeClass("cards-deshabilitados");
@@ -46,6 +65,7 @@ function habilitarJuegos(array) {
 }
 
 function eClick() {
+    //Clic de los botones del menú para ir a los juegos:
     //Manejador de eventos para las opciones de menú
     $(".cards").click(function () { 
         let thisActivo = $(this).attr("activo"),
