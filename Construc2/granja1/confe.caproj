@@ -1,0 +1,1345 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>confe</name>
+    <description>prototipo confe</description>
+    <version>1.0.0.0</version>
+    <author>Luis Chacon Campos</author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.solaris.confe</app-id>
+    <unique-id>1oe5m24r5irl4</unique-id>
+    <saved-with-version>26500</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1280</width>
+        <height>720</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>Splash</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Landscape</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">Chrome</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="sprites">
+            <object-type name="farmMainCharacter" sid="462235984797681">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="8Direction" sid="543084786536334">
+                        <behavior id="EightDir" />
+                    </behavior-type>
+                    <behavior-type name="ScrollTo" sid="926961159642966">
+                        <behavior id="scrollto" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="4" loop="0" name="down" pingpong="0" repeatcount="1" repeatto="0" sid="192155087284772" speed="12">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="4" loop="0" name="right" pingpong="0" repeatcount="1" repeatto="0" sid="549783439540682" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="0.8125" y="0.927083" />
+                                <point x="0.242188" y="0.963542" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="4" loop="0" name="up" pingpong="0" repeatcount="1" repeatto="0" sid="410686677824512" speed="12">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.140625" y="0.0104167" />
+                                <point x="0.90625" y="0.03125" />
+                                <point x="0.835938" y="0.989583" />
+                                <point x="0.125" y="0.96875" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="4" loop="0" name="left" pingpong="0" repeatcount="1" repeatto="0" sid="567250692091107" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="idle" pingpong="0" repeatcount="1" repeatto="0" sid="503496040173910" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.161765" y="0.11828" />
+                                <point x="0.5" y="0" />
+                                <point x="0.852941" y="0.107527" />
+                                <point x="0.941176" y="0.494624" />
+                                <point x="0.837316" y="0.981014" />
+                                <point x="0.235294" y="0.963374" />
+                                <point x="0.0735294" y="0.494624" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="logos">
+            <object-type name="logoConfe" sid="834312970915883">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="701479236669328" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\assets\icon_warrior.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="backgrounds">
+            <object-type name="bgShadow" sid="793716587266488">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="692911023956160" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="grass2" sid="535045527318294">
+                <plugin id="TiledBg" />
+                <texture original-source="C:\Users\logan24\Desktop\granja\granjagrass.png" />
+            </object-type>
+            <object-type name="ground1" sid="976642986904565">
+                <plugin id="TiledBg" />
+                <texture original-source="C:\Users\mima\Desktop\CONFE\granja128w\granjaground.png" />
+            </object-type>
+            <object-type name="inventario1" sid="981844015976061">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="664242912383864" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502538" original-source="C:\Users\logan24\Desktop\assets\bg_inventario.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="camino" sid="821301217298112">
+                <plugin id="TiledBg" />
+                <texture original-source="C:\Users\mima\Desktop\CONFE\granja128w\Asset 146.png" />
+            </object-type>
+            <object-type name="limites" sid="365244717077834">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="589977282161631">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="664969557998869" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bgPergamino" sid="929124618165715">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="128050558557063" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\assets\pergamino1.png">
+                            <collision-poly>
+                                <point x="0.0314286" y="0.0419847" />
+                                <point x="0.5" y="0.0267176" />
+                                <point x="0.967143" y="0.0438931" />
+                                <point x="0.994286" y="0.5" />
+                                <point x="0.95" y="0.933206" />
+                                <point x="0.5" y="0.979008" />
+                                <point x="0.0471429" y="0.937023" />
+                                <point x="0.0142857" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bgVerdeOscuro" sid="470863083271250">
+                <plugin id="TiledBg" />
+                <texture />
+            </object-type>
+        </object-folder>
+        <object-folder name="system">
+            <object-type name="Touch" sid="579146676650647">
+                <plugin id="Touch" />
+            </object-type>
+            <object-type name="Function" sid="435684026861341">
+                <plugin id="Function" />
+            </object-type>
+            <object-type name="Audio" sid="769253343451038">
+                <plugin id="Audio" />
+            </object-type>
+            <object-type global="1" name="Array" sid="481966986499013">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type name="AJAX" sid="562511662943404">
+                <plugin id="AJAX" />
+            </object-type>
+            <object-type name="Keyboard" sid="799381717906974">
+                <plugin id="Keyboard" />
+            </object-type>
+        </object-folder>
+        <object-folder name="btn">
+            <object-type name="btnClose" sid="546241411165846">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="577824204293986" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\lchaconc\Desktop\cancel.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btnLeft" sid="592005597681527">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="413524923845397" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\assets\img_arrow.png">
+                            <collision-poly>
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btnDown" sid="724276255663229">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="363646132184912" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\assets\img_arrow.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btnUp" sid="713119834334928">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="874450133150333" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\assets\img_arrow.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btnRight" sid="371824245017055">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="447936978616775" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\assets\img_arrow.png">
+                            <collision-poly>
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btnInventario" sid="552419852479629">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="689719371412716" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\assets\backpack.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btnAceptar" sid="359987350699010">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="869514884136494" speed="5">
+                        <frame duration="1" hotspotX="0.505376" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\assets\aceptar.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="visor">
+            <object-type name="progress_bar" sid="916072727061301">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="764224621909144" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\barra.jpg" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="objects_4directions">
+            <object-type name="tree1" sid="344214551494694">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable comment="verdadero cuando es tocado por el jugador" name="colision" sid="288553627765911" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Solid" sid="880788037684302">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="712654582315631" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.507042" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.507042" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="carriot" sid="996691434084084">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="activo" sid="311943495204432" type="boolean" />
+                    <instance-variable name="cosechadas" sid="616873387777289" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Bullet" sid="311355378113776">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="listo" pingpong="0" repeatcount="1" repeatto="0" sid="861552132733085" speed="5">
+                        <frame duration="1" hotspotX="0.514286" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\assets\zanahoria.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="semilla" pingpong="0" repeatcount="1" repeatto="0" sid="734449790108619" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="planta" pingpong="0" repeatcount="1" repeatto="0" sid="639935162403242" speed="5">
+                        <frame duration="1" hotspotX="0.509091" hotspotY="0.514286" original-source="C:\Users\logan24\Desktop\assets\planta_zanahoria.png">
+                            <collision-poly>
+                                <point x="0.218182" y="0.342857" />
+                                <point x="0.490909" y="0" />
+                                <point x="0.781818" y="0.342857" />
+                                <point x="0.763636" y="0.485714" />
+                                <point x="0.727273" y="0.571429" />
+                                <point x="0.490909" y="1" />
+                                <point x="0.272727" y="0.571429" />
+                                <point x="0.236364" y="0.485714" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="granero" sid="654591830572873">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="activo" sid="839498355816006" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Solid" sid="543740423760964">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="956657230738186" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502092" original-source="C:\Users\logan24\Desktop\granja\granjaAsset 126512.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.744769" />
+                                <point x="0.00195313" y="0.711297" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="pig" sid="535497767983927">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="119854484553312" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\granja\granjapig2128.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="cow" sid="660107163587294">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="472015088811572" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.506024" original-source="C:\Users\logan24\Desktop\granja\cow128.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="cerca1" sid="417538262899405">
+                <plugin id="TiledBg" />
+                <texture original-source="C:\Users\mima\Desktop\CONFE\granja128w\granja1128.png" />
+            </object-type>
+            <object-type name="cerca2" sid="484420954617487">
+                <plugin id="TiledBg" />
+                <texture original-source="C:\Users\mima\Desktop\CONFE\granja128w\granjafence128.png" />
+            </object-type>
+            <object-type name="cow2" sid="325519050870160">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="colision" sid="242549258316617" type="boolean" />
+                    <instance-variable name="activoComida" sid="807883520906514" type="boolean" />
+                    <instance-variable comment="ordeñado" name="activoOrdenar" sid="573845421056884" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Solid" sid="985780624397429">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="791162229034547" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.506024" original-source="C:\Users\logan24\Desktop\granja\cow128.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="gallo" sid="212926271774885">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="848198374439848" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.512195" original-source="C:\Users\mima\Desktop\CONFE\granja128w\granjaAsset 1128.png">
+                            <collision-poly>
+                                <point x="0.03125" y="0.0310078" />
+                                <point x="0.5" y="0.457364" />
+                                <point x="0.851563" y="0.147287" />
+                                <point x="0.859375" y="0.496124" />
+                                <point x="0.65625" y="0.658915" />
+                                <point x="0.5" y="0.813953" />
+                                <point x="0.195313" y="0.806202" />
+                                <point x="0.046875" y="0.496124" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="gallina1" sid="398978573089442">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="940044503878096" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.512195" original-source="C:\Users\mima\Desktop\CONFE\granja128w\granjahan1128.png">
+                            <collision-poly>
+                                <point x="0.03125" y="0.039604" />
+                                <point x="0.5" y="0.138614" />
+                                <point x="0.75" y="0.316832" />
+                                <point x="0.835938" y="0.49505" />
+                                <point x="0.929688" y="0.910891" />
+                                <point x="0.5" y="0.762376" />
+                                <point x="0.203125" y="0.742574" />
+                                <point x="0.0703125" y="0.49505" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="gallina2" sid="105062716803725">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="102256314885757" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.512195" original-source="C:\Users\mima\Desktop\CONFE\granja128w\granjahan2128.png">
+                            <collision-poly>
+                                <point x="0.445313" y="0.360759" />
+                                <point x="0.5" y="0.360759" />
+                                <point x="0.914063" y="0.0696203" />
+                                <point x="0.96875" y="0.5" />
+                                <point x="0.765625" y="0.810127" />
+                                <point x="0.5" y="1" />
+                                <point x="0.257813" y="0.791139" />
+                                <point x="0.0703125" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="pala" sid="107414833125625">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="294598065550308" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501695" original-source="C:\Users\mima\Desktop\CONFE\granja128w\granjashovel2128.png">
+                            <collision-poly>
+                                <point x="0.375" y="0.0752351" />
+                                <point x="0.5" y="0" />
+                                <point x="0.625" y="0.0752351" />
+                                <point x="0.625" y="0.5" />
+                                <point x="0.851563" y="0.970219" />
+                                <point x="0.5" y="1" />
+                                <point x="0.148438" y="0.970219" />
+                                <point x="0.375" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="rastrillo" sid="341804956245559">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="962139147885103" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501695" original-source="C:\Users\mima\Desktop\CONFE\granja128w\granjarake128.png">
+                            <collision-poly>
+                                <point x="0.367188" y="0.105145" />
+                                <point x="0.5" y="0.00447427" />
+                                <point x="0.546875" y="0.129754" />
+                                <point x="0.570313" y="0.498881" />
+                                <point x="0.984375" y="0.995526" />
+                                <point x="0.5" y="0.955257" />
+                                <point x="0" y="1" />
+                                <point x="0.390625" y="0.498881" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="regadera" sid="383957089040948">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="939355072155541" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.509434" original-source="C:\Users\mima\Desktop\CONFE\granja128w\granjawatering can128.png">
+                            <collision-poly>
+                                <point x="0.757812" y="0.5" />
+                                <point x="0.6875" y="0.622642" />
+                                <point x="0.5" y="1" />
+                                <point x="0.132812" y="0.839623" />
+                                <point x="0.054687" y="0.5" />
+                                <point x="0.039062" y="0.0471698" />
+                                <point x="0.5" y="0.0566038" />
+                                <point x="0.898437" y="0.122642" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="carretillo" sid="123654945165259">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="562580244712563">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="346703969293537" speed="5">
+                        <frame duration="1" hotspotX="0.503937" hotspotY="0.509434" original-source="C:\Users\logan24\Desktop\assets\carretillo.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="oveja" sid="213118536265982">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="colision" sid="466862552162967" type="boolean" />
+                    <instance-variable name="activo" sid="474244602865090" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Solid" sid="602025212082661">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="636019927833649" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\mima\Desktop\CONFE\granja128w\granjaAsset 122128.png">
+                            <collision-poly>
+                                <point x="0.140625" y="0.216867" />
+                                <point x="0.5" y="0.0240964" />
+                                <point x="0.890625" y="0.168675" />
+                                <point x="0.953125" y="0.493976" />
+                                <point x="0.8125" y="0.710843" />
+                                <point x="0.5" y="0.843373" />
+                                <point x="0.171875" y="0.73494" />
+                                <point x="0" y="0.493976" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="arbol1" sid="579384112794984">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="940523753891223">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="434322635302556" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\mima\Desktop\CONFE\granja128w\granjaapple tree with stones and grass128.png">
+                            <collision-poly>
+                                <point x="0.460938" y="0" />
+                                <point x="0.921875" y="0" />
+                                <point x="0.867188" y="0.571429" />
+                                <point x="0.429688" y="0.622449" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="arbol2" sid="185333497646972">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="629054773807428">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="958215098226493" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\mima\Desktop\CONFE\granja128w\granjaapple tree with stones and grass (2)128.png">
+                            <collision-poly>
+                                <point x="0.0781255" y="0.0204078" />
+                                <point x="0.539063" y="0" />
+                                <point x="0.578125" y="0.602041" />
+                                <point x="0" y="0.581633" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="arbol3" sid="190813015549705">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="406708787630116">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="546991603384583" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502924" original-source="C:\Users\mima\Desktop\CONFE\granja128w\granjatree with flower128.png">
+                            <collision-poly>
+                                <point x="0.148438" y="0.128655" />
+                                <point x="0.882813" y="0" />
+                                <point x="0.882813" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="arbol4" sid="227176408385207">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="147870139257539">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="589738991220833" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502857" original-source="C:\Users\mima\Desktop\CONFE\granja128w\granjapear tree128.png">
+                            <collision-poly>
+                                <point x="0" y="0.137143" />
+                                <point x="1" y="0.131429" />
+                                <point x="1" y="0.754285" />
+                                <point x="0" y="0.742857" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ladrilloGranero" sid="130127127173745">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="activo" sid="997049793402564" type="boolean" />
+                    <instance-variable name="colision" sid="568861366769235" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Solid" sid="309044040669716">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="188662049254621" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\mima\Desktop\CONFE\granja128w\granjafoundation128.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="palita" sid="941792049617189">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="colision" sid="143122027338164" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Solid" sid="582259893724164">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="958708616459394" speed="5">
+                        <frame duration="1" hotspotX="0.533333" hotspotY="0.509091" original-source="C:\Users\mima\Desktop\CONFE\granja128w\granjashovel1128.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="baseCasa" sid="367144201673664">
+                <plugin id="TiledBg" />
+                <instance-variables>
+                    <instance-variable name="colision" sid="470680549722333" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Solid" sid="183581926122070">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="C:\Users\logan24\Desktop\assets\granja128w\granjaground.png" />
+            </object-type>
+            <object-type name="hacha" sid="598690091164558">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="activo" sid="466225995066278" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="786127441794948" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\assets\axe.png">
+                            <collision-poly>
+                                <point x="0.317073" y="0.448276" />
+                                <point x="0.5" y="0.258621" />
+                                <point x="0.841463" y="0.224138" />
+                                <point x="0.963415" y="0.5" />
+                                <point x="0.756098" y="0.655172" />
+                                <point x="0.5" y="0.413793" />
+                                <point x="0.0365854" y="0.948276" />
+                                <point x="0.256098" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="tablas_madera" sid="822527174151763">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="activo" sid="281521379913057" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="533371699290154" speed="5">
+                        <frame duration="1" hotspotX="0.502222" hotspotY="0.503401" original-source="C:\Users\logan24\Desktop\assets\madera.png">
+                            <collision-poly>
+                                <point x="0.231111" y="0.353741" />
+                                <point x="0.497778" y="0.0748299" />
+                                <point x="0.902222" y="0.14966" />
+                                <point x="0.933333" y="0.496599" />
+                                <point x="0.808889" y="0.707483" />
+                                <point x="0.497778" y="0.959184" />
+                                <point x="0.177778" y="0.727891" />
+                                <point x="0.0577778" y="0.496599" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="arena" sid="612940990249527">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="activo" sid="553262007170908" type="boolean" />
+                    <instance-variable name="colision" sid="456162631529503" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Solid" sid="483924088310191">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="510932931616901" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.52" original-source="C:\Users\logan24\Desktop\assets\arena.png">
+                            <collision-poly>
+                                <point x="0.351786" y="0" />
+                                <point x="0.728571" y="0.02" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ladrilloCasa" sid="694563490901691">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="activo" sid="108255408987478" type="boolean" />
+                    <instance-variable name="colision" sid="888817114782918" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Solid" sid="703412248062770">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="485516789813633" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\mima\Desktop\CONFE\granja128w\granjafoundation128.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="tree2" sid="452247595685377">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable comment="verdadero cuando es tocado por el jugador" name="colision" sid="212742409172661" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Solid" sid="479360241223150">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="294962260732625" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.507042" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.507042" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="choza" sid="744404606028621">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="activo" sid="195272264609450" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Solid" sid="608997390372770">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="144387456288415" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\assets\choza.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.792857" />
+                                <point x="0" y="0.817857" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="baseGranero" sid="497588587167525">
+                <plugin id="TiledBg" />
+                <instance-variables>
+                    <instance-variable name="colision" sid="244907283674265" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Solid" sid="922089825424459">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="C:\Users\logan24\Desktop\assets\granja128w\granjaground.png" />
+            </object-type>
+            <object-type name="semillas" sid="139989612565816">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="145543923421378" speed="5">
+                        <frame duration="1" hotspotX="0.508197" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\assets\semillas.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="heno" sid="937533606675360">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="colision" sid="418221812688414" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Solid" sid="800363808939238">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="610858940497617" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\assets\heno.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="rasuradora" sid="154161326636569">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="activo" sid="177978765963443" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Solid" sid="739305546810424">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="628236594952541" speed="5">
+                        <frame duration="1" hotspotX="0.504505" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\assets\rasuradora.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="baldeVacio" sid="288576892122121">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="938858562762197">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="104959751527369" speed="5">
+                        <frame duration="1" hotspotX="0.507463" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\assets\balde.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="mesa_rustica" sid="518908669597561">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="colision" sid="789410520578214" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Solid" sid="763196872200118">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="380668046707099" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502513" original-source="C:\Users\logan24\Desktop\assets\mesa.png">
+                            <collision-poly>
+                                <point x="0.120438" y="0.231156" />
+                                <point x="1" y="0" />
+                                <point x="0.726277" y="0.552763" />
+                                <point x="0.0583942" y="0.80402" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="queso" sid="378984993050325">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="activo" sid="428292799349614" type="boolean" />
+                    <instance-variable comment="cantidad de quesos vendidos. Max 3" name="vendidos" sid="233560247784167" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="147598613931246" speed="5">
+                        <frame duration="1" hotspotX="0.503546" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\assets\queso.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="comprador1" sid="393699601332277">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="750591771494555">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="408380683939313" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\assets\zombie.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="comprador2" sid="400294896084758">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="407223174820457">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="905532444005162" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\assets\zombie2.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="comprador3" sid="838244644108952">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="203040879479744">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="9" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="765106714503222" speed="8">
+                        <frame duration="1" hotspotX="0.502857" hotspotY="0.502262" />
+                        <frame duration="1" hotspotX="0.502857" hotspotY="0.502262" />
+                        <frame duration="1" hotspotX="0.502857" hotspotY="0.502262" />
+                        <frame duration="1" hotspotX="0.502857" hotspotY="0.502262" />
+                        <frame duration="1" hotspotX="0.502857" hotspotY="0.502262" />
+                        <frame duration="1" hotspotX="0.502857" hotspotY="0.502262" />
+                        <frame duration="1" hotspotX="0.502857" hotspotY="0.502262" />
+                        <frame duration="1" hotspotX="0.502857" hotspotY="0.502262" />
+                        <frame duration="1" hotspotX="0.502857" hotspotY="0.502262" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="comprador4" sid="340768155007147">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="739819041047450">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="918142726037906" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="pollo" sid="649696383030449">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="36" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="663318705596499" speed="8">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="carriots1" sid="442075922541195">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable comment="cantidad de zanahorias venidads. 1 activa el total " name="vendido" sid="101870826568292" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="224253642970680" speed="5">
+                        <frame duration="1" hotspotX="0.496183" hotspotY="0.495146" original-source="C:\Users\logan24\Desktop\assets\carriots.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="inventario">
+            <object-type name="inv_axe" sid="734554926233979">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="activo" sid="686010975793344" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="907398283170629" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\assets\axe.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="inv_hand" sid="120338540414399">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="activo" sid="738892489427926" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="542317428890941" speed="5">
+                        <frame duration="1" hotspotX="0.506329" hotspotY="0.518987" original-source="C:\Users\logan24\Desktop\assets\hand3.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="inv_carretillo" sid="970140080763987">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="activo" sid="855238531866851" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="385958801518223" speed="5">
+                        <frame duration="1" hotspotX="0.503937" hotspotY="0.509434" original-source="C:\Users\logan24\Desktop\assets\carretillo.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="inv_semillas" sid="368434587049054">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="activo" sid="193193777510915" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="904825389617552" speed="5">
+                        <frame duration="1" hotspotX="0.508197" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\assets\semillas.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="inv_heno" sid="635088814692879">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="activo" sid="599768859471298" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="182587551447133" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\assets\heno.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="inv_rasuradora" sid="457759033046439">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="activo" sid="492592753892712" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="525750341510418" speed="5">
+                        <frame duration="1" hotspotX="0.504505" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\assets\rasuradora.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="inv_balde" sid="611345082399029">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="activo" sid="567934632644515" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="703043121710059" speed="5">
+                        <frame duration="1" hotspotX="0.507463" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\assets\balde.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="inv_balde_leche" sid="537489767683217">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="activo" sid="116015676655010" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="297194843157861" speed="5">
+                        <frame duration="1" hotspotX="0.506329" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\assets\balde_leche.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="inv_regadera" sid="637107410077497">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="activo" sid="810853945561938" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="533794500649759" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.509434" original-source="C:\Users\mima\Desktop\CONFE\granja128w\granjawatering can128.png">
+                            <collision-poly>
+                                <point x="0.757812" y="0.5" />
+                                <point x="0.6875" y="0.622642" />
+                                <point x="0.5" y="1" />
+                                <point x="0.132812" y="0.839623" />
+                                <point x="0.054687" y="0.5" />
+                                <point x="0.039062" y="0.0471698" />
+                                <point x="0.5" y="0.0566038" />
+                                <point x="0.898437" y="0.122642" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="inv_canasta" sid="724446683918397">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="activo" sid="674940261741252" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="942133438996049" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501992" original-source="C:\Users\logan24\Desktop\assets\canasta_verde.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="texts">
+            <object-type name="txtfinDia" sid="502043671391215">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="txtConsignas" sid="633791259052584">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="jesus" sid="194553131822561">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="867494436945436" speed="5">
+                        <frame duration="1" hotspotX="0.50303" hotspotY="0.50303" original-source="C:\Users\logan24\Desktop\assets\jesus.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="txtVisorDebug" sid="905191564860653">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="txtInstruccionesDia" sid="237794363881362">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="txtFinJuego" sid="358367723452191">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="txtVidas" sid="516749620979854">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
+        <object-folder name="particulas">
+            <object-type name="particulas_rojo" sid="385512792799643">
+                <plugin id="Particles" />
+                <texture />
+            </object-type>
+            <object-type name="particulas_blanco" sid="367742004976874">
+                <plugin id="Particles" />
+                <texture />
+            </object-type>
+        </object-folder>
+        <object-folder name="sensores">
+            <object-type name="sensorHuerta" sid="115644723619063">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="colision" sid="599084499057089" type="boolean" />
+                    <instance-variable name="activoRegado1" sid="910284871968936" type="boolean" />
+                    <instance-variable comment="Regado en el día 4" name="activoRegado2" sid="963439792656723" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Solid" sid="749650840441376">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="416109452574297" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+    </object-folder>
+    <families>
+        <family name="compradores" plugin-id="Sprite" sid="216870339618986">
+            <members>
+                <member>comprador1</member>
+                <member>comprador2</member>
+                <member>comprador3</member>
+                <member>comprador4</member>
+            </members>
+        </family>
+        <family name="sensores" plugin-id="Sprite" sid="719851249785450">
+            <members>
+                <member>limites</member>
+                <member>sensorHuerta</member>
+            </members>
+        </family>
+    </families>
+    <layout-folder>
+        <layout>Splash.xml</layout>
+        <layout>Game_farm.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>e_Splash.xml</event-sheet>
+        <event-sheet>e_Game_farm.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Touch" uid="5">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Function" uid="6" />
+        <global-instance type="Audio" uid="106">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="AJAX" uid="145" />
+        <global-instance type="Keyboard" uid="188" />
+    </global-instances>
+    <sounds-folder>
+        <file name="corte.m4a" />
+        <file name="corte.ogg" />
+        <file name="logrado1.m4a" />
+        <file name="logrado1.ogg" />
+        <file name="obtenido.m4a" />
+        <file name="obtenido.ogg" />
+        <file name="Finish1.m4a" />
+        <file name="Finish1.ogg" />
+        <file name="vaca.m4a" />
+        <file name="vaca.ogg" />
+        <file name="oveja.m4a" />
+        <file name="oveja.ogg" />
+        <file name="rasuradora.m4a" />
+        <file name="rasuradora.ogg" />
+    </sounds-folder>
+    <music-folder>
+        <file name="timescapes.m4a" />
+        <file name="timescapes.ogg" />
+        <file name="amazonas.m4a" />
+        <file name="amazonas.ogg" />
+    </music-folder>
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
