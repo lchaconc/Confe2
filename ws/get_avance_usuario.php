@@ -8,7 +8,7 @@ $id_usuario = $_GET['id_usuario'];
 $sql = "SELECT * FROM avance_juegos WHERE id_usuario = '".$id_usuario."'";
 //echo $sql; 
 
-sleep(1);
+//sleep(1);
 
 
 include "conectar.php";

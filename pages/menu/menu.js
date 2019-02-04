@@ -19,7 +19,7 @@ function cargarIdJuego() {
 
 function cargarEstadoJuegos( idGrupo) {
     console.log(idGrupo);    
-    $.getJSON("http://localhost/Confe2/ws/get_estado_juegos.php?id_grupo="+idGrupo,
+    $.getJSON("http://construtecdeleste.com/test/confe_ws/get_estado_juegos.php?id_grupo="+idGrupo,
         function (data, textStatus, jqXHR) {
            // console.log(data);
            habilitarJuegos(data);
@@ -33,7 +33,7 @@ function cargarEstadoJuegos( idGrupo) {
 
 function cargarAvanceJugador( idUsuario) {
     console.log(idUsuario);    
-    $.getJSON("http://localhost/Confe2/ws/get_avance_usuario.php?id_usuario=luis@correo.de",
+    $.getJSON("http://construtecdeleste.com/test/confe_ws/get_avance_usuario.php?id_usuario="+idUsuario,
         function (data, textStatus, jqXHR) {
            console.log(data);
            
