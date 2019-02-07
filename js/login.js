@@ -18,8 +18,8 @@ function validar() {
   pwd = $("#txtPwd").val();
 
   if (usr == "jimena@correo.de"  && pwd == "j123" ) {
-    localStorage.setItem("idGrupo", "coronado015" );
-    localStorage.setItem("idUsuario", "jimena@correo.de" );    
+    sessionStorage.setItem("idGrupo", "coronado015" );
+    sessionStorage.setItem("idUsuario", "jimena@correo.de" );    
     window.location.assign("./pages/menu/menu.html");             
   } else {
     $('.error').slideDown('slow');
@@ -30,8 +30,8 @@ function validar() {
   }
 
   if (usr == "felipe@correo.de"  && pwd == "f123" ) {
-    localStorage.setItem("idGrupo", "moravia122" );
-    localStorage.setItem("idUsuario", "felipe@correo.de" );    
+    sessionStorage.setItem("idGrupo", "moravia122" );
+    sessionStorage.setItem("idUsuario", "felipe@correo.de" );    
     window.location.assign("./pages/menu/menu.html");             
   } else {
     $('.error').slideDown('slow');
@@ -42,8 +42,8 @@ function validar() {
   }
 
   if (usr == "ana@correo.de"  && pwd == "a123" ) {
-    localStorage.setItem("idGrupo", "desampa042" );
-    localStorage.setItem("idUsuario", "ana@correo.de" );    
+    sessionStorage.setItem("idGrupo", "desampa042" );
+    sessionStorage.setItem("idUsuario", "ana@correo.de" );    
     window.location.assign("./pages/menu/menu.html");             
   } else {
     $('.error').slideDown('slow');

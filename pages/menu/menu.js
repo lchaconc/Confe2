@@ -7,8 +7,8 @@ $(document).ready(function () {
 
 
 function cargarIdJuego() { 
-    let idGrupo = localStorage.getItem("idGrupo"),
-    idUsuario = localStorage.getItem("idUsuario");       
+    let idGrupo = sessionStorage.getItem("idGrupo"),
+    idUsuario = sessionStorage.getItem("idUsuario");       
     cargarEstadoJuegos(idGrupo);
     cargarAvanceJugador(idUsuario);
 
@@ -35,10 +35,9 @@ function cargarAvanceJugador( idUsuario) {
     console.log(idUsuario);    
     $.getJSON("http://construtecdeleste.com/test/confe_ws/get_avance_usuario.php?id_usuario="+idUsuario,
         function (data, textStatus, jqXHR) {
-           console.log(data);
            
-           //TODO Demás instrucciones
-
+            alamcenamientoLocal(data[0]);
+           
            $("#divAjaxSpiner").removeClass("hadow-layer");
            $("#divAjaxSpiner").fadeOut();
         }
@@ -88,5 +87,13 @@ function eClick() {
            }
         }
     });
+    
+}
+
+
+function alamcenamientoLocal(array) {
+    console.log(array.granja01);    
+    sessionStorage.setItem("granja01", array.granja01 );
+    sessionStorage.setItem("platform1", array.platform1 );
     
 }

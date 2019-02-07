@@ -77,9 +77,7 @@
                 </event-block>
                 <event-block sid="802119344703098">
                     <conditions>
-                        <condition id="11" name="On Nth touch end" sid="416731214565548" type="Touch">
-                            <param id="0" name="Touch number">0</param>
-                        </condition>
+                        <condition id="1" name="On any touch end" sid="416731214565548" type="Touch" />
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="277518849412533" type="farmMainCharacter">
@@ -1778,7 +1776,6 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <variable constant="0" name="aux" sid="102148551737226" static="0" type="text"></variable>
         <event-group description="" sid="288392222517428" title="OnLoad">
             <sub-events>
                 <event-block sid="279006828555637">
@@ -1806,6 +1803,9 @@
                         </action>
                         <action id="-15" name="Set visible" sid="524833769036517" type="compradores">
                             <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="840193910797994" type="txtVisorDebug">
+                            <param id="0" name="Text">progreso</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2052,6 +2052,7 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>DEsactiva el grupo y llama al grupo que muestra los textos &quot;Seleccionar consigna&quot;</comment>
                 <event-block sid="646876171442314">
                     <conditions />
                     <actions>
@@ -2059,9 +2060,9 @@
                             <param id="0" name="Group name">&quot;loadArray&quot;</param>
                             <param id="1" name="State">0</param>
                         </action>
-                        <action id="0" name="Call function" sid="123285955524951" type="Function">
-                            <param id="0" name="Name">&quot;cargarTextoConsigna1&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
+                        <action id="-12" name="Set group active" sid="940041847858284" type="System">
+                            <param id="0" name="Group name">&quot;Seleccionar_consigna&quot;</param>
+                            <param id="1" name="State">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2091,6 +2092,124 @@
                         <action id="-9" name="Set value" sid="750775804703028" type="System">
                             <param id="0" name="Variable">consecutivoDia</param>
                             <param id="1" name="Value">consecutivoDia + 1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="434450442131260" title="Seleccionar_consigna">
+            <sub-events>
+                <event-block sid="238978244471494">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="356874238067165" type="System">
+                            <param id="0" name="Variable">progreso</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="123285955524951" type="Function">
+                            <param id="0" name="Name">&quot;cargarTextoConsigna1&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="290783765774959" type="System">
+                            <param id="0" name="Group name">&quot;Seleccionar_consigna&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="808814278373279">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="468944392353737" type="System">
+                            <param id="0" name="Variable">progreso</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="905780460227202" type="Function">
+                            <param id="0" name="Name">&quot;cargarTextoConsigna2&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="405607039432603" type="System">
+                            <param id="0" name="Group name">&quot;Seleccionar_consigna&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="407528685136556">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="599729916918497" type="System">
+                            <param id="0" name="Variable">progreso</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="657723531906097" type="Function">
+                            <param id="0" name="Name">&quot;cargarTextoConsigna3&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="819629200415274" type="System">
+                            <param id="0" name="Group name">&quot;Seleccionar_consigna&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="171613325640108">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="888924375907231" type="System">
+                            <param id="0" name="Variable">progreso</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="225260405534059" type="Function">
+                            <param id="0" name="Name">&quot;cargarTextoConsigna4&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="494175434853019" type="System">
+                            <param id="0" name="Group name">&quot;Seleccionar_consigna&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="194545177234435">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="783370412591206" type="System">
+                            <param id="0" name="Variable">progreso</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="813029136844311" type="Function">
+                            <param id="0" name="Name">&quot;cargarTextoConsigna5&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="758259262396393" type="System">
+                            <param id="0" name="Group name">&quot;Seleccionar_consigna&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="591468458545826">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="730650028479583" type="System">
+                            <param id="0" name="Variable">progreso</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="371523235591259" type="Function">
+                            <param id="0" name="Name">&quot;cargarTextoConsigna6&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="180904477133694" type="System">
+                            <param id="0" name="Group name">&quot;Seleccionar_consigna&quot;</param>
+                            <param id="1" name="State">0</param>
                         </action>
                     </actions>
                 </event-block>
