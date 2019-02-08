@@ -4,8 +4,7 @@
     <name>e_Game_farm</name>
     <events>
         <variable constant="1" name="URLTXTINTROS" sid="133953060642819" static="0" type="text">http://construtecdeleste.com/test/confe_server/get_txt1.php</variable>
-        <variable constant="1" name="URLGUARDARDIA" sid="923403895803467" static="0" type="text">http://construtecdeleste.com/test/confe_server/actualizar_dia.php?</variable>
-        <variable comment="dias que va completando la misión 1 = primer día" constant="0" name="consecutivoDia" sid="517144503279101" static="0" type="number">0</variable>
+        <variable constant="1" name="URLGUARDARavance" sid="923403895803467" static="0" type="text">http://construtecdeleste.com/test/confe_ws/set_avance_usuario.php?</variable>
         <variable constant="1" name="cFinDia" sid="378310848182712" static="0" type="text">¡Felicidades! Has completado la misión del día </variable>
         <variable constant="0" name="status" sid="136760279146205" static="0" type="text">nulo</variable>
         <event-group description="" sid="390927723385015" title="mainChar">
@@ -155,6 +154,11 @@
                         <condition id="-8" name="Is boolean instance variable set" sid="255357671782683" type="tree1">
                             <param id="0" name="Instance variable">colision</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="308153252407650" type="System">
+                            <param id="0" name="Variable">progreso</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-13" name="Set boolean" sid="735947302217847" type="inv_axe">
@@ -220,6 +224,11 @@
                         <condition id="-8" name="Is boolean instance variable set" sid="958929566258195" type="palita">
                             <param id="0" name="Instance variable">colision</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="816116221873263" type="System">
+                            <param id="0" name="Variable">progreso</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-13" name="Set boolean" sid="934060832602356" type="inv_semillas">
@@ -261,47 +270,6 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="207495070444908">
-                    <conditions>
-                        <condition id="17" name="On tap object" sid="857304954257125" type="Touch">
-                            <param id="0" name="Object">inv_carretillo</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="221830865095692" type="inv_carretillo">
-                            <param id="0" name="Instance variable">activo</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="992782361037138" type="arena">
-                            <param id="0" name="Instance variable">colision</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="705545166477983" type="inv_carretillo">
-                            <param id="0" name="Instance variable">activo</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="0" name="Call function" sid="337042819615018" type="Function">
-                            <param id="0" name="Name">&quot;cerarModalInventario&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="0" name="Play" sid="923961175449937" type="Audio">
-                            <param id="0" name="Audio file">logrado1</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;corte&quot;</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="834369535193872" type="arena">
-                            <param id="0" name="X">1632</param>
-                            <param id="1" name="Y">64</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="155290316776314" type="arena">
-                            <param id="0" name="Instance variable">activo</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="794628288522004" type="System">
-                            <param id="0" name="Variable">status</param>
-                            <param id="1" name="Value">&quot;Arena agregada&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <comment>Día 2: Regar huerta</comment>
                 <event-block sid="535316469867461">
                     <conditions>
@@ -314,8 +282,8 @@
                         <condition id="-8" name="Is boolean instance variable set" sid="925567917712632" type="sensorHuerta">
                             <param id="0" name="Instance variable">colision</param>
                         </condition>
-                        <condition id="-14" name="Compare variable" sid="299508991175317" type="System">
-                            <param id="0" name="Variable">consecutivoDia</param>
+                        <condition id="-14" name="Compare variable" sid="826763012124751" type="System">
+                            <param id="0" name="Variable">progreso</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
                         </condition>
@@ -365,6 +333,11 @@
                         <condition id="-8" name="Is boolean instance variable set" sid="849870773411598" type="cow2">
                             <param id="0" name="Instance variable">colision</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="678973825345922" type="System">
+                            <param id="0" name="Variable">progreso</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-13" name="Set boolean" sid="953575445681961" type="inv_heno">
@@ -395,6 +368,53 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>Día 3: Construir el granero</comment>
+                <event-block sid="207495070444908">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="857304954257125" type="Touch">
+                            <param id="0" name="Object">inv_carretillo</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="221830865095692" type="inv_carretillo">
+                            <param id="0" name="Instance variable">activo</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="992782361037138" type="arena">
+                            <param id="0" name="Instance variable">colision</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="503841046786061" type="System">
+                            <param id="0" name="Variable">progreso</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="705545166477983" type="inv_carretillo">
+                            <param id="0" name="Instance variable">activo</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="337042819615018" type="Function">
+                            <param id="0" name="Name">&quot;cerarModalInventario&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Play" sid="923961175449937" type="Audio">
+                            <param id="0" name="Audio file">logrado1</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;corte&quot;</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="834369535193872" type="arena">
+                            <param id="0" name="X">1632</param>
+                            <param id="1" name="Y">64</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="155290316776314" type="arena">
+                            <param id="0" name="Instance variable">activo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="794628288522004" type="System">
+                            <param id="0" name="Variable">status</param>
+                            <param id="1" name="Value">&quot;Arena agregada&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <comment>Dia 3: Trasquilar oveja</comment>
                 <event-block sid="570938205672704">
                     <conditions>
@@ -406,6 +426,11 @@
                         </condition>
                         <condition id="-8" name="Is boolean instance variable set" sid="524678849648436" type="oveja">
                             <param id="0" name="Instance variable">colision</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="164088059101899" type="System">
+                            <param id="0" name="Variable">progreso</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -466,6 +491,11 @@
                                 <condition id="-8" name="Is boolean instance variable set" sid="485905409263456" type="ladrilloGranero">
                                     <param id="0" name="Instance variable">activo</param>
                                 </condition>
+                                <condition id="-14" name="Compare variable" sid="670944900029126" type="System">
+                                    <param id="0" name="Variable">progreso</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="681700766725494" type="Function">
@@ -520,6 +550,11 @@
                         <condition id="-8" name="Is boolean instance variable set" sid="955419682009929" type="cow2">
                             <param id="0" name="Instance variable">colision</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="383307278342260" type="System">
+                            <param id="0" name="Variable">progreso</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-13" name="Set boolean" sid="340577564659745" type="inv_balde">
@@ -572,8 +607,8 @@
                         <condition id="-8" name="Is boolean instance variable set" sid="613951448421056" type="sensorHuerta">
                             <param id="0" name="Instance variable">colision</param>
                         </condition>
-                        <condition id="-14" name="Compare variable" sid="262738026600606" type="System">
-                            <param id="0" name="Variable">consecutivoDia</param>
+                        <condition id="-14" name="Compare variable" sid="311456649344919" type="System">
+                            <param id="0" name="Variable">progreso</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">4</param>
                         </condition>
@@ -626,6 +661,11 @@
                         <condition id="-8" name="Is boolean instance variable set" sid="245980842644030" type="mesa_rustica">
                             <param id="0" name="Instance variable">colision</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="449170763148994" type="System">
+                            <param id="0" name="Variable">progreso</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-13" name="Set boolean" sid="933228314609749" type="inv_balde_leche">
@@ -671,8 +711,8 @@
                         <condition id="-8" name="Is boolean instance variable set" sid="595263638755887" type="sensorHuerta">
                             <param id="0" name="Instance variable">colision</param>
                         </condition>
-                        <condition id="-14" name="Compare variable" sid="725267012611333" type="System">
-                            <param id="0" name="Variable">consecutivoDia</param>
+                        <condition id="-14" name="Compare variable" sid="180454048701700" type="System">
+                            <param id="0" name="Variable">progreso</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">5</param>
                         </condition>
@@ -731,6 +771,11 @@
                         </condition>
                         <condition id="-8" name="Is boolean instance variable set" sid="977667700214323" type="baseCasa">
                             <param id="0" name="Instance variable">colision</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="990662634282832" type="System">
+                            <param id="0" name="Variable">progreso</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -1395,7 +1440,7 @@
                             <param id="1" name="Value">&quot;Mostrando papiro dia 1&quot;</param>
                         </action>
                         <action id="0" name="Set text" sid="742010760857355" type="txtfinDia">
-                            <param id="0" name="Text">CFINDIA &amp;  &quot; &quot;  &amp; consecutivoDia</param>
+                            <param id="0" name="Text">CFINDIA &amp;  &quot; &quot;  &amp; progreso</param>
                         </action>
                         <action id="0" name="Play" sid="290004245946345" type="Audio">
                             <param id="0" name="Audio file">Finish1</param>
@@ -1431,6 +1476,10 @@
                             <param id="2" name="Loop">1</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;ambiente2&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="236879684431188" type="System">
+                            <param id="0" name="Variable">progreso</param>
+                            <param id="1" name="Value">progreso + 1</param>
                         </action>
                         <action id="0" name="Call function" sid="650563230888358" type="Function">
                             <param id="0" name="Name">&quot;ajaxGuardarDia&quot;</param>
@@ -1470,7 +1519,7 @@
                             <param id="1" name="Value">&quot;Mostrando papiro dia 2&quot;</param>
                         </action>
                         <action id="0" name="Set text" sid="412484078852724" type="txtfinDia">
-                            <param id="0" name="Text">CFINDIA &amp;  &quot; &quot;  &amp; consecutivoDia</param>
+                            <param id="0" name="Text">CFINDIA &amp;  &quot; &quot;  &amp; progreso</param>
                         </action>
                         <action id="0" name="Play" sid="607176130798209" type="Audio">
                             <param id="0" name="Audio file">Finish1</param>
@@ -1506,6 +1555,10 @@
                             <param id="2" name="Loop">1</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;ambiente&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="655874126943404" type="System">
+                            <param id="0" name="Variable">progreso</param>
+                            <param id="1" name="Value">progreso + 1</param>
                         </action>
                         <action id="0" name="Call function" sid="930518358593460" type="Function">
                             <param id="0" name="Name">&quot;ajaxGuardarDia&quot;</param>
@@ -1545,7 +1598,7 @@
                             <param id="1" name="Value">&quot;Mostrando papiro dia 3&quot;</param>
                         </action>
                         <action id="0" name="Set text" sid="663603036947651" type="txtfinDia">
-                            <param id="0" name="Text">CFINDIA &amp;  &quot; &quot;  &amp; consecutivoDia</param>
+                            <param id="0" name="Text">CFINDIA &amp;  &quot; &quot;  &amp; progreso</param>
                         </action>
                         <action id="0" name="Play" sid="714557791816951" type="Audio">
                             <param id="0" name="Audio file">Finish1</param>
@@ -1581,6 +1634,10 @@
                             <param id="2" name="Loop">1</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;ambiente&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="320298019335986" type="System">
+                            <param id="0" name="Variable">progreso</param>
+                            <param id="1" name="Value">progreso + 1</param>
                         </action>
                         <action id="0" name="Call function" sid="863820661068163" type="Function">
                             <param id="0" name="Name">&quot;ajaxGuardarDia&quot;</param>
@@ -1624,7 +1681,7 @@
                             <param id="1" name="Value">&quot;Mostrando papiro dia 4&quot;</param>
                         </action>
                         <action id="0" name="Set text" sid="924443635241890" type="txtfinDia">
-                            <param id="0" name="Text">CFINDIA &amp;  &quot; &quot;  &amp; consecutivoDia</param>
+                            <param id="0" name="Text">CFINDIA &amp;  &quot; &quot;  &amp; progreso</param>
                         </action>
                         <action id="0" name="Play" sid="869931572112498" type="Audio">
                             <param id="0" name="Audio file">Finish1</param>
@@ -1668,6 +1725,10 @@
                             <param id="0" name="Instance variable">activo</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="-9" name="Set value" sid="755897015072447" type="System">
+                            <param id="0" name="Variable">progreso</param>
+                            <param id="1" name="Value">progreso + 1</param>
+                        </action>
                         <action id="0" name="Call function" sid="500696524619581" type="Function">
                             <param id="0" name="Name">&quot;ajaxGuardarDia&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
@@ -1706,7 +1767,7 @@
                             <param id="1" name="Value">&quot;Mostrando papiro dia 4&quot;</param>
                         </action>
                         <action id="0" name="Set text" sid="406411408368468" type="txtfinDia">
-                            <param id="0" name="Text">CFINDIA &amp;  &quot; &quot;  &amp; consecutivoDia</param>
+                            <param id="0" name="Text">CFINDIA &amp;  &quot; &quot;  &amp; progreso</param>
                         </action>
                         <action id="0" name="Play" sid="650497334103714" type="Audio">
                             <param id="0" name="Audio file">Finish1</param>
@@ -1742,6 +1803,10 @@
                             <param id="2" name="Loop">1</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;ambiente&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="734287787070376" type="System">
+                            <param id="0" name="Variable">progreso</param>
+                            <param id="1" name="Value">progreso + 1</param>
                         </action>
                         <action id="0" name="Call function" sid="110911606356278" type="Function">
                             <param id="0" name="Name">&quot;ajaxGuardarDia&quot;</param>
@@ -1850,10 +1915,7 @@
                     <actions>
                         <action id="0" name="Request URL" sid="582517534288729" type="AJAX">
                             <param id="0" name="Tag">&quot;seguimientoDia&quot;</param>
-                            <param id="1" name="URL">URLGUARDARDIA &amp; &quot;id_usuario=lchc@correo.de&amp;dia=&quot; &amp; consecutivoDia</param>
-                        </action>
-                        <action id="0" name="Set text" sid="966108095966935" type="txtVisorDebug">
-                            <param id="0" name="Text">URLGUARDARDIA &amp; &quot;id_usuario=lchc@correo.de&amp;dia=&quot; &amp; consecutivoDia</param>
+                            <param id="1" name="URL">URLGUARDARAVANCE &amp; &quot;id_usuario=&quot;&amp; idUsuario &amp;&quot;  &amp;id_juego=granja01&quot; &amp; &quot;&amp;progreso=&quot; &amp; progreso</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2061,7 +2123,7 @@
                             <param id="1" name="State">0</param>
                         </action>
                         <action id="-12" name="Set group active" sid="940041847858284" type="System">
-                            <param id="0" name="Group name">&quot;Seleccionar_consigna&quot;</param>
+                            <param id="0" name="Group name">&quot;activar_dia_por_progreso&quot;</param>
                             <param id="1" name="State">1</param>
                         </action>
                     </actions>
@@ -2089,15 +2151,11 @@
                             <param id="0" name="X">-320</param>
                             <param id="1" name="Y">-416</param>
                         </action>
-                        <action id="-9" name="Set value" sid="750775804703028" type="System">
-                            <param id="0" name="Variable">consecutivoDia</param>
-                            <param id="1" name="Value">consecutivoDia + 1</param>
-                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" inactive="1" sid="434450442131260" title="Seleccionar_consigna">
+        <event-group description="" inactive="1" sid="434450442131260" title="activar_dia_por_progreso">
             <sub-events>
                 <event-block sid="238978244471494">
                     <conditions>
@@ -2113,7 +2171,7 @@
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action id="-12" name="Set group active" sid="290783765774959" type="System">
-                            <param id="0" name="Group name">&quot;Seleccionar_consigna&quot;</param>
+                            <param id="0" name="Group name">&quot;activar_dia_por_progreso&quot;</param>
                             <param id="1" name="State">0</param>
                         </action>
                     </actions>
@@ -2131,8 +2189,12 @@
                             <param id="0" name="Name">&quot;cargarTextoConsigna2&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
+                        <action id="0" name="Call function" sid="446632525970365" type="Function">
+                            <param id="0" name="Name">&quot;activarInvDia2&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                         <action id="-12" name="Set group active" sid="405607039432603" type="System">
-                            <param id="0" name="Group name">&quot;Seleccionar_consigna&quot;</param>
+                            <param id="0" name="Group name">&quot;activar_dia_por_progreso&quot;</param>
                             <param id="1" name="State">0</param>
                         </action>
                     </actions>
@@ -2151,7 +2213,7 @@
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action id="-12" name="Set group active" sid="819629200415274" type="System">
-                            <param id="0" name="Group name">&quot;Seleccionar_consigna&quot;</param>
+                            <param id="0" name="Group name">&quot;activar_dia_por_progreso&quot;</param>
                             <param id="1" name="State">0</param>
                         </action>
                     </actions>
@@ -2170,7 +2232,7 @@
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action id="-12" name="Set group active" sid="494175434853019" type="System">
-                            <param id="0" name="Group name">&quot;Seleccionar_consigna&quot;</param>
+                            <param id="0" name="Group name">&quot;activar_dia_por_progreso&quot;</param>
                             <param id="1" name="State">0</param>
                         </action>
                     </actions>
@@ -2189,7 +2251,7 @@
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action id="-12" name="Set group active" sid="758259262396393" type="System">
-                            <param id="0" name="Group name">&quot;Seleccionar_consigna&quot;</param>
+                            <param id="0" name="Group name">&quot;activar_dia_por_progreso&quot;</param>
                             <param id="1" name="State">0</param>
                         </action>
                     </actions>
@@ -2208,8 +2270,39 @@
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action id="-12" name="Set group active" sid="180904477133694" type="System">
-                            <param id="0" name="Group name">&quot;Seleccionar_consigna&quot;</param>
+                            <param id="0" name="Group name">&quot;activar_dia_por_progreso&quot;</param>
                             <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="801986886101215" title="Activar_elementos_de_progreso">
+            <sub-events>
+                <event-block sid="810773682278514">
+                    <conditions>
+                        <condition id="0" name="On function" sid="851647024566363" type="Function">
+                            <param id="0" name="Name">&quot;activarInvDia2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="130600948662942" type="hacha" />
+                        <action id="-9" name="Destroy" sid="323949267217602" type="tree1" />
+                        <action id="-9" name="Destroy" sid="308736651037969" type="tree2" />
+                        <action id="-9" name="Destroy" sid="103714129063285" type="ladrilloCasa" />
+                        <action id="-3" name="Set position" sid="791195838333271" type="choza">
+                            <param id="0" name="X">832</param>
+                            <param id="1" name="Y">96</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="877384453632473" type="choza">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="283420554361218" type="carriot">
+                            <param id="0" name="Animation">&quot;semilla&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="505556775220689" type="carriot">
+                            <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
                 </event-block>

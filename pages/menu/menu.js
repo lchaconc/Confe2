@@ -74,10 +74,10 @@ function eClick() {
         if (thisActivo=="1") {
            switch (thisId) {
                case "cardGranja1":
-                    window.location.assign("../granja1");
+                    window.location.assign("../granja01/index.html");
                 break;                
                 case "cardPlatform1":
-                    window.location.assign("../platform1");
+                    window.location.assign("../platform01/index.html");
                 break;
            
                default:
@@ -94,6 +94,6 @@ function eClick() {
 function alamcenamientoLocal(array) {
     console.log(array.granja01);    
     sessionStorage.setItem("granja01", array.granja01 );
-    sessionStorage.setItem("platform1", array.platform1 );
+    sessionStorage.setItem("platform01", array.platform01 );
     
 }
