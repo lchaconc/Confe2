@@ -1375,15 +1375,15 @@
                 <comment>Fin del juego</comment>
                 <event-block sid="277787561122518">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="891228788149527" type="queso">
-                            <param id="0" name="Instance variable">vendidos</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">3</param>
-                        </condition>
                         <condition id="-7" name="Compare instance variable" sid="443293178840056" type="carriots1">
                             <param id="0" name="Instance variable">vendido</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="695642982144266" type="mesa_rustica">
+                            <param id="0" name="Instance variable">quesosVendidos</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -2345,6 +2345,7 @@
                         <action id="-15" name="Set visible" sid="877384453632473" type="choza">
                             <param id="0" name="Visibility">1</param>
                         </action>
+                        <action id="-9" name="Destroy" sid="732365649800631" type="semillas" />
                         <action id="4" name="Set animation" sid="283420554361218" type="carriot">
                             <param id="0" name="Animation">&quot;semilla&quot;</param>
                             <param id="1" name="From">1</param>
@@ -2352,6 +2353,24 @@
                         <action id="-15" name="Set visible" sid="505556775220689" type="carriot">
                             <param id="0" name="Visibility">1</param>
                         </action>
+                    </actions>
+                </event-block>
+                <event-block sid="131484954015485">
+                    <conditions>
+                        <condition id="0" name="On function" sid="544374928269350" type="Function">
+                            <param id="0" name="Name">&quot;activarInvDia3&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="812793141833931" type="heno" />
+                        <action id="4" name="Set animation" sid="499519318998730" type="carriot">
+                            <param id="0" name="Animation">&quot;planta&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="966221923216818" type="carriot">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="407891054396297" type="regadera" />
                     </actions>
                 </event-block>
             </sub-events>
