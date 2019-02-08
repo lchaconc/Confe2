@@ -457,6 +457,10 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;rasuradora&quot;</param>
                         </action>
+                        <action id="4" name="Set animation" sid="385125538746102" type="oveja">
+                            <param id="0" name="Animation">&quot;pelona&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                         <action id="-13" name="Set boolean" sid="733052919395932" type="oveja">
                             <param id="0" name="Instance variable">activo</param>
                             <param id="1" name="Value">1</param>
@@ -697,6 +701,18 @@
                             <param id="0" name="Name">&quot;papiroFinDia5&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
+                        <action id="-13" name="Set boolean" sid="379048220528513" type="comprador1">
+                            <param id="0" name="Instance variable">activo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="600807951932266" type="comprador2">
+                            <param id="0" name="Instance variable">activo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="471811949135252" type="comprador3">
+                            <param id="0" name="Instance variable">activo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <comment>Dìa 5: cosechar hortalizas (zanahorias)</comment>
@@ -734,6 +750,10 @@
                         </action>
                         <action id="-13" name="Set boolean" sid="309387925462406" type="carriot">
                             <param id="0" name="Instance variable">cosechadas</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="502642173157906" type="comprador4">
+                            <param id="0" name="Instance variable">activo</param>
                             <param id="1" name="Value">1</param>
                         </action>
                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="161933641420337" type="carriot">
@@ -1205,6 +1225,9 @@
                         <condition id="0" name="On collision with another object" sid="935184732086085" type="farmMainCharacter">
                             <param id="0" name="Object">comprador1</param>
                         </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="525165125827202" type="comprador1">
+                            <param id="0" name="Instance variable">activo</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
@@ -1215,12 +1238,16 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-13" name="Set boolean" sid="147577053997590" type="comprador1">
+                                    <param id="0" name="Instance variable">activo</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
                                 <action id="-15" name="Set visible" sid="501843670019263" type="queso">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
-                                <action id="-11" name="Add to" sid="356714428564107" type="queso">
-                                    <param id="0" name="Instance variable">vendidos</param>
-                                    <param id="1" name="Value">1</param>
+                                <action id="-10" name="Set value" sid="462817757449491" type="mesa_rustica">
+                                    <param id="0" name="Instance variable">quesosVendidos</param>
+                                    <param id="1" name="Value">mesa_rustica.quesosVendidos + 1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1230,6 +1257,9 @@
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="120347722480081" type="farmMainCharacter">
                             <param id="0" name="Object">comprador2</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="828725861041344" type="comprador2">
+                            <param id="0" name="Instance variable">activo</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -1241,12 +1271,16 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-13" name="Set boolean" sid="720287229552645" type="comprador2">
+                                    <param id="0" name="Instance variable">activo</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
                                 <action id="-15" name="Set visible" sid="469939195788859" type="queso">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
-                                <action id="-11" name="Add to" sid="970243228525360" type="queso">
-                                    <param id="0" name="Instance variable">vendidos</param>
-                                    <param id="1" name="Value">1</param>
+                                <action id="-10" name="Set value" sid="449721402533254" type="mesa_rustica">
+                                    <param id="0" name="Instance variable">quesosVendidos</param>
+                                    <param id="1" name="Value">mesa_rustica.quesosVendidos + 1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1256,6 +1290,9 @@
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="437555236963156" type="farmMainCharacter">
                             <param id="0" name="Object">comprador3</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="634221734300154" type="comprador3">
+                            <param id="0" name="Instance variable">activo</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -1267,12 +1304,16 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-13" name="Set boolean" sid="842157890254697" type="comprador3">
+                                    <param id="0" name="Instance variable">activo</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
                                 <action id="-15" name="Set visible" sid="199922670081411" type="queso">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
-                                <action id="-11" name="Add to" sid="559567919535349" type="queso">
-                                    <param id="0" name="Instance variable">vendidos</param>
-                                    <param id="1" name="Value">1</param>
+                                <action id="-10" name="Set value" sid="990615821761816" type="mesa_rustica">
+                                    <param id="0" name="Instance variable">quesosVendidos</param>
+                                    <param id="1" name="Value">mesa_rustica.quesosVendidos + 1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1283,8 +1324,15 @@
                         <condition id="0" name="On collision with another object" sid="575376872798180" type="farmMainCharacter">
                             <param id="0" name="Object">comprador4</param>
                         </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="493205901367560" type="comprador4">
+                            <param id="0" name="Instance variable">activo</param>
+                        </condition>
                     </conditions>
                     <actions>
+                        <action id="-13" name="Set boolean" sid="985877153567787" type="comprador4">
+                            <param id="0" name="Instance variable">activo</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
                         <action id="-15" name="Set visible" sid="487597103843373" type="carriots1">
                             <param id="0" name="Visibility">0</param>
                         </action>

@@ -587,6 +587,9 @@
                             </collision-poly>
                         </frame>
                     </animation>
+                    <animation framecount="1" loop="0" name="pelona" pingpong="0" repeatcount="1" repeatto="0" sid="711958691865981" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\lchaconc\Desktop\assets2\assets2\oveja_pelona.png" />
+                    </animation>
                 </animation-folder>
             </object-type>
             <object-type name="arbol1" sid="579384112794984">
@@ -908,6 +911,7 @@
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="colision" sid="789410520578214" type="boolean" />
+                    <instance-variable name="quesosVendidos" sid="817316439787206" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Solid" sid="763196872200118">
@@ -941,6 +945,9 @@
             </object-type>
             <object-type name="comprador1" sid="393699601332277">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable comment="si está desactivado no puede comprar queso" name="activo" sid="775142249535092" type="boolean" />
+                </instance-variables>
                 <behaviors>
                     <behavior-type name="Solid" sid="750591771494555">
                         <behavior id="solid" />
@@ -954,6 +961,9 @@
             </object-type>
             <object-type name="comprador2" sid="400294896084758">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="activo" sid="185789495549519" type="boolean" />
+                </instance-variables>
                 <behaviors>
                     <behavior-type name="Solid" sid="407223174820457">
                         <behavior id="solid" />
@@ -974,6 +984,9 @@
             </object-type>
             <object-type name="comprador3" sid="838244644108952">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="activo" sid="936379514660909" type="boolean" />
+                </instance-variables>
                 <behaviors>
                     <behavior-type name="Solid" sid="203040879479744">
                         <behavior id="solid" />
@@ -995,6 +1008,9 @@
             </object-type>
             <object-type name="comprador4" sid="340768155007147">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="activo" sid="347643668824263" type="boolean" />
+                </instance-variables>
                 <behaviors>
                     <behavior-type name="Solid" sid="739819041047450">
                         <behavior id="solid" />
