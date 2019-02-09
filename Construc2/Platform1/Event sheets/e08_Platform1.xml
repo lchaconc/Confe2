@@ -235,6 +235,12 @@
                         <action id="-15" name="Set visible" sid="307390109958386" type="sensores">
                             <param id="0" name="Visibility">0</param>
                         </action>
+                        <action id="0" name="Play" sid="687622220998573" type="Audio">
+                            <param id="0" name="Audio file">MattOglseby</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;fondo1&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -258,6 +264,12 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="0" name="Play" sid="794797131927062" type="Audio">
+                                    <param id="0" name="Audio file">SFX5</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                                 <action id="-9" name="Destroy" sid="109846220641136" type="spriteCaracol" />
                                 <action behavior="Platform" id="9" name="Set vector Y" sid="756091354100492" type="ctrlSprite">
                                     <param id="0" name="Vector Y">-700</param>
@@ -273,6 +285,12 @@
                                     <param id="0" name="&apos;On&apos; time">0.1</param>
                                     <param id="1" name="&apos;Off&apos; time">0.1</param>
                                     <param id="2" name="Duration">1.0</param>
+                                </action>
+                                <action id="0" name="Play" sid="231202095640235" type="Audio">
+                                    <param id="0" name="Audio file">fail</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
