@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>e_Game_farm</name>
     <events>
+        <variable comment="ultima direccion registrada. Funciona con el método desplazaraAtras" constant="0" name="orientacionActual" sid="735267580446441" static="0" type="text">null</variable>
         <variable constant="1" name="URLTXTINTROS" sid="133953060642819" static="0" type="text">http://construtecdeleste.com/test/confe_server/get_txt1.php</variable>
         <variable constant="1" name="URLGUARDARavance" sid="923403895803467" static="0" type="text">http://construtecdeleste.com/test/confe_ws/set_avance_usuario.php?</variable>
         <variable constant="1" name="cFinDia" sid="378310848182712" static="0" type="text">¡Felicidades! Has completado la misión del día </variable>
@@ -24,6 +25,10 @@
                         <action behavior="8Direction" id="7" name="Simulate control" sid="173470800865048" type="farmMainCharacter">
                             <param id="0" name="Control">1</param>
                         </action>
+                        <action id="-9" name="Set value" sid="192193073558187" type="System">
+                            <param id="0" name="Variable">orientacionActual</param>
+                            <param id="1" name="Value">&quot;der&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="661110588566585">
@@ -39,6 +44,10 @@
                         </action>
                         <action behavior="8Direction" id="7" name="Simulate control" sid="835297152793403" type="farmMainCharacter">
                             <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="787211970891016" type="System">
+                            <param id="0" name="Variable">orientacionActual</param>
+                            <param id="1" name="Value">&quot;izq&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -56,6 +65,10 @@
                         <action behavior="8Direction" id="7" name="Simulate control" sid="145762729749954" type="farmMainCharacter">
                             <param id="0" name="Control">2</param>
                         </action>
+                        <action id="-9" name="Set value" sid="424775318127326" type="System">
+                            <param id="0" name="Variable">orientacionActual</param>
+                            <param id="1" name="Value">&quot;arr&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="120909149302080">
@@ -71,6 +84,10 @@
                         </action>
                         <action behavior="8Direction" id="7" name="Simulate control" sid="618124531819470" type="farmMainCharacter">
                             <param id="0" name="Control">3</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="232511698257736" type="System">
+                            <param id="0" name="Variable">orientacionActual</param>
+                            <param id="1" name="Value">&quot;aba&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -260,6 +277,7 @@
                             <param id="0" name="Instance variable">activo</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="-9" name="Destroy" sid="701704199859757" type="palita" />
                         <action id="-9" name="Set value" sid="957506089156567" type="System">
                             <param id="0" name="Variable">status</param>
                             <param id="1" name="Value">&quot;huerto sembrado&quot;</param>
@@ -1406,7 +1424,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="236474492639731" title="Funciones_inventarios_papiros">
+        <event-group description="" sid="236474492639731" title="Funciones_inventarios_papiros_atras">
             <sub-events>
                 <event-block sid="170452937815649">
                     <conditions>
@@ -1873,6 +1891,10 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Call function" sid="468174757110807" type="Function">
+                            <param id="0" name="Name">&quot;desplazarAtras&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                         <action id="-9" name="Set value" sid="285866413506924" type="System">
                             <param id="0" name="Variable">status</param>
                             <param id="1" name="Value">&quot;Abriendo modal&quot;</param>
@@ -1886,6 +1908,72 @@
                             <param id="1" name="Visibility">1</param>
                         </action>
                     </actions>
+                </event-block>
+                <event-block sid="831652334116751">
+                    <conditions>
+                        <condition id="0" name="On function" sid="763864942656054" type="Function">
+                            <param id="0" name="Name">&quot;desplazarAtras&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="506708077582986">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="875385660547629" type="System">
+                                    <param id="0" name="Variable">orientacionActual</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;arr&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="602938745589004" type="farmMainCharacter">
+                                    <param id="0" name="Y">farmMainCharacter.Y + 40</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="137053357242454">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="717069713310414" type="System">
+                                    <param id="0" name="Variable">orientacionActual</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;aba&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="619551497782837" type="farmMainCharacter">
+                                    <param id="0" name="Y">farmMainCharacter.Y - 40</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="681767842103490">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="812026634011248" type="System">
+                                    <param id="0" name="Variable">orientacionActual</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;izq&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="530004656722402" type="farmMainCharacter">
+                                    <param id="0" name="Y">farmMainCharacter.X + 40</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="552866987272238">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="550330410442257" type="System">
+                                    <param id="0" name="Variable">orientacionActual</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;der&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="542964787424034" type="farmMainCharacter">
+                                    <param id="0" name="Y">farmMainCharacter.X - 40</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -2205,6 +2293,7 @@
         </event-group>
         <event-group description="" inactive="1" sid="434450442131260" title="activar_dia_por_progreso">
             <sub-events>
+                <comment>De acuerdo a la variable progreso carga los diferentes textos de consignas por dia</comment>
                 <event-block sid="238978244471494">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="356874238067165" type="System">
@@ -2224,6 +2313,7 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>llama a los métodos para activar y desactivar los diferentes elementos según el día</comment>
                 <event-block sid="808814278373279">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="468944392353737" type="System">
@@ -2260,6 +2350,14 @@
                             <param id="0" name="Name">&quot;cargarTextoConsigna3&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
+                        <action id="0" name="Call function" sid="582189752392288" type="Function">
+                            <param id="0" name="Name">&quot;activarInvDia2&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="747569496430574" type="Function">
+                            <param id="0" name="Name">&quot;activarInvDia3&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                         <action id="-12" name="Set group active" sid="819629200415274" type="System">
                             <param id="0" name="Group name">&quot;activar_dia_por_progreso&quot;</param>
                             <param id="1" name="State">0</param>
@@ -2279,6 +2377,18 @@
                             <param id="0" name="Name">&quot;cargarTextoConsigna4&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
+                        <action id="0" name="Call function" sid="457125697458645" type="Function">
+                            <param id="0" name="Name">&quot;activarInvDia2&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="603179640339523" type="Function">
+                            <param id="0" name="Name">&quot;activarInvDia3&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="606636812341019" type="Function">
+                            <param id="0" name="Name">&quot;activarInvDia4&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                         <action id="-12" name="Set group active" sid="494175434853019" type="System">
                             <param id="0" name="Group name">&quot;activar_dia_por_progreso&quot;</param>
                             <param id="1" name="State">0</param>
@@ -2294,6 +2404,22 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Call function" sid="633045603867816" type="Function">
+                            <param id="0" name="Name">&quot;activarInvDia2&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="102865756904951" type="Function">
+                            <param id="0" name="Name">&quot;activarInvDia3&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="922810824809761" type="Function">
+                            <param id="0" name="Name">&quot;activarInvDia4&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="417997424350864" type="Function">
+                            <param id="0" name="Name">&quot;activarInvDia5&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                         <action id="0" name="Call function" sid="813029136844311" type="Function">
                             <param id="0" name="Name">&quot;cargarTextoConsigna5&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
@@ -2314,6 +2440,30 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="371523235591259" type="Function">
+                            <param id="0" name="Name">&quot;cargarTextoConsigna6&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="598235613731609" type="Function">
+                            <param id="0" name="Name">&quot;activarInvDia2&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="485359475945153" type="Function">
+                            <param id="0" name="Name">&quot;activarInvDia3&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="895573664483642" type="Function">
+                            <param id="0" name="Name">&quot;activarInvDia4&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="372231640901097" type="Function">
+                            <param id="0" name="Name">&quot;activarInvDia5&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="546842430785310" type="Function">
+                            <param id="0" name="Name">&quot;activarInvDia6&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="102251641907810" type="Function">
                             <param id="0" name="Name">&quot;cargarTextoConsigna6&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
@@ -2371,6 +2521,112 @@
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="-9" name="Destroy" sid="407891054396297" type="regadera" />
+                    </actions>
+                </event-block>
+                <event-block sid="131950077400876">
+                    <conditions>
+                        <condition id="0" name="On function" sid="435959421870992" type="Function">
+                            <param id="0" name="Name">&quot;activarInvDia4&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="968312615807074" type="rasuradora" />
+                        <action id="-9" name="Destroy" sid="418080587016238" type="carretillo" />
+                        <action id="-9" name="Destroy" sid="898661295150829" type="arena" />
+                        <action id="-9" name="Destroy" sid="990575694990445" type="ladrilloGranero" />
+                        <action id="-3" name="Set position" sid="864525369152235" type="granero">
+                            <param id="0" name="X">1792</param>
+                            <param id="1" name="Y">160</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="578048311657853" type="granero">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="243610307594919" type="oveja">
+                            <param id="0" name="Animation">&quot;pelona&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="687688014615367" type="inv_regadera">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="603891388892953" type="inv_regadera">
+                            <param id="0" name="Instance variable">activo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="284156200984317">
+                    <conditions>
+                        <condition id="0" name="On function" sid="472909570175244" type="Function">
+                            <param id="0" name="Name">&quot;activarInvDia5&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="739007091253780" type="inv_balde_leche">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="952398253171889" type="inv_balde_leche">
+                            <param id="0" name="Instance variable">activo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="164091478654617" type="inv_canasta">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="608075640104243" type="inv_canasta">
+                            <param id="0" name="Instance variable">activo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="273565968568865" type="carriot">
+                            <param id="0" name="Animation">&quot;listo&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="953667648289155" type="baldeVacio" />
+                    </actions>
+                </event-block>
+                <event-block sid="873110142892316">
+                    <conditions>
+                        <condition id="0" name="On function" sid="513094123246306" type="Function">
+                            <param id="0" name="Name">&quot;activarInvDia6&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="260042797072509" type="comprador1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="255552158880529" type="comprador1">
+                            <param id="0" name="Instance variable">activo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="117287491140210" type="comprador2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="544106412737516" type="comprador2">
+                            <param id="0" name="Instance variable">activo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="245077121139968" type="comprador3">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="365099304638725" type="comprador3">
+                            <param id="0" name="Instance variable">activo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="370739590309344" type="comprador4">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="566336885220064" type="comprador4">
+                            <param id="0" name="Instance variable">activo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="129264889694970" type="queso">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="872775061569444" type="queso">
+                            <param id="0" name="Instance variable">activo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="779605695064114" type="carriots1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
