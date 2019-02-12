@@ -22,15 +22,16 @@
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
-    <used-effects>
-        <effect author="Scirra" id="grayscale">Grayscale</effect>
-    </used-effects>
+    <used-effects />
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
@@ -330,9 +331,20 @@
             </object-type>
             <object-type name="letrero" sid="297020206403268">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="activo" sid="439413404773239" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Fade" sid="520632122617588">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                    <behavior-type name="Bullet" sid="932779936828646">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="508077315193950" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\recursos_CONFE\assets_granja2\granjaAsset 154@2x.png" />
+                        <frame duration="1" hotspotX="0.0925" hotspotY="0.255" original-source="C:\Users\logan24\Desktop\recursos_CONFE\assets_granja2\granjaAsset 154@2x.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -358,27 +370,11 @@
             </object-type>
         </object-folder>
         <object-folder name="btn">
-            <object-type name="menu1_1" sid="409402437937823">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="984950158379511" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Dropbox\JPGs PNGs GIFs\iconos PNG\Nautilus-Globe-icon.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
             <object-type name="btnClose" sid="546241411165846">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="577824204293986" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\lchaconc\Desktop\cancel.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="menu1_5" sid="302756004512550">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="332797456237436" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.502618" original-source="D:\Users\lchaconc\Dropbox\JPGs PNGs GIFs\iconos PNG\mariquita.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -448,14 +444,6 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="869514884136494" speed="5">
                         <frame duration="1" hotspotX="0.505376" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\assets\aceptar.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="btnPlatform" sid="482215659993322">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="350870555437334" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Dropbox\JPGs PNGs GIFs\iconos PNG\Corbeille-pleine-256.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -578,7 +566,16 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder name="inventario" />
+        <object-folder name="inventario">
+            <object-type name="invFuego" sid="169955312036439">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="228262980143901" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\recursos_CONFE\platform01\fire.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-folder name="texts">
             <object-type name="txtConsignas" sid="633791259052584">
                 <plugin id="Text" />
@@ -587,9 +584,12 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="867494436945436" speed="5">
-                        <frame duration="1" hotspotX="0.50303" hotspotY="0.50303" original-source="C:\Users\logan24\Desktop\assets\jesus.png" />
+                        <frame duration="1" hotspotX="0.90303" hotspotY="0.951515" original-source="C:\Users\logan24\Desktop\assets\jesus.png" />
                     </animation>
                 </animation-folder>
+            </object-type>
+            <object-type name="txtVidas" sid="543581025749597">
+                <plugin id="Text" />
             </object-type>
         </object-folder>
         <object-folder name="particulas">
@@ -664,6 +664,22 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="849790767162804" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="sensorReten" sid="918889967479866">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="426049731197013" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="sensorLimiteVertival" sid="156731893843925">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="965341515921504" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
@@ -776,6 +792,33 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="movediza" sid="962165205023066">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Physics" sid="789674830862816">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                    <behavior-type name="Solid" sid="543394399118834">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="382876210583339" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Documents\Recursos\diggerman_assets\ground.png">
+                            <collision-poly>
+                                <point x="0.015625" y="0.015625" />
+                                <point x="0.5" y="0" />
+                                <point x="0.984375" y="0.015625" />
+                                <point x="1" y="0.5" />
+                                <point x="0.984375" y="0.984375" />
+                                <point x="0.5" y="1" />
+                                <point x="0.015625" y="0.984375" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="visor_controles">
             <object-type name="corazonVida" sid="973635770480894">
@@ -789,17 +832,6 @@
         </object-folder>
     </object-folder>
     <families>
-        <family name="btn_menu" plugin-id="Sprite" sid="102201987410844">
-            <members>
-                <member>menu1_1</member>
-                <member>menu1_5</member>
-            </members>
-            <effects>
-                <effect-type name="Grayscale">
-                    <effect id="grayscale" />
-                </effect-type>
-            </effects>
-        </family>
         <family name="sensores" plugin-id="Sprite" sid="719851249785450">
             <members>
                 <member>limites</member>
@@ -850,6 +882,7 @@
         <file name="monedas2.ogg" />
         <file name="swing.m4a" />
         <file name="swing.ogg" />
+        <file name="get_item.ogg" />
     </sounds-folder>
     <music-folder>
         <file name="MattOglseby.ogg" />

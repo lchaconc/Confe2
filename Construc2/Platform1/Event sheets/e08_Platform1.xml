@@ -16,6 +16,21 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="770857879170805">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="109754526259830" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="456367670373472" type="txtConsignas">
+                            <param id="0" name="Object">letrero</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="264440058633374" type="jesus">
+                            <param id="0" name="Object">letrero</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="332361253078251" title="control_sprite">
@@ -100,7 +115,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="170437970639587" title="Animations">
+        <event-group description="" sid="170437970639587" title="Animations_sprite_y_rotulos">
             <sub-events>
                 <event-block sid="415365016496837">
                     <conditions>
@@ -146,6 +161,28 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="297943520096461">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="127458488734585" type="Touch">
+                            <param id="0" name="Object">btnAceptar</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="409237131605633" type="btnAceptar">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="932364600741457" type="letrero">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="720857442111797" type="letrero">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="843943329157500" type="letrero">
+                            <param id="0" name="Instance variable">activo</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="849871347301157" title="Sensores">
@@ -166,6 +203,9 @@
                         <action id="-10" name="Set value" sid="298667440589968" type="ctrlSprite">
                             <param id="0" name="Instance variable">vidas</param>
                             <param id="1" name="Value">ctrlSprite.vidas - 1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="266414278197446" type="txtVidas">
+                            <param id="0" name="Text">ctrlSprite.vidas</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -195,6 +235,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment>efecto cortar el arbol</comment>
                 <event-block sid="666534508654181">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="830797597558534" type="ctrlSprite">
@@ -233,6 +274,32 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="587864687838740">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="506823725011049" type="sensorReten">
+                            <param id="0" name="Object">letrero</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="336215809909067" type="letrero">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="962349186213615">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="802255181927163" type="letrero">
+                                    <param id="0" name="Instance variable">activo</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="344175503735139" type="btnAceptar">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="322774359884925" title="on_Load">
@@ -250,6 +317,15 @@
                             <param id="2" name="Loop">1</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;fondo1&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="621763358523414" type="txtVidas">
+                            <param id="0" name="Text">ctrlSprite.vidas</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="295069936565181" type="letrero">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="143033719149921" type="letrero">
+                            <param id="0" name="Angle">90</param>
                         </action>
                     </actions>
                 </event-block>
@@ -321,6 +397,9 @@
                             <param id="0" name="Seconds">1.0</param>
                         </action>
                         <action id="-9" name="Destroy" sid="413295287221672" type="spriteCoco" />
+                        <action behavior="Physics" id="27" name="Set enabled" sid="129940895601190" type="movediza">
+                            <param id="0" name="Mode">1</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -468,6 +547,20 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <comment>Movediza</comment>
+                <event-block sid="592784365752299">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="454911882007530" type="movediza">
+                            <param id="0" name="Object">sensorLimiteVertival</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="15" name="Set velocity" sid="827705308155860" type="movediza">
+                            <param id="0" name="X component">0</param>
+                            <param id="1" name="Y component">movediza.Physics.VelocityY * -1</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
@@ -635,6 +728,29 @@
                         </event-block>
                     </sub-events>
                 </event-group>
+            </sub-events>
+        </event-group>
+        <comment>6 elementos (items) a encontrar</comment>
+        <event-group description="" sid="530936326043218" title="items">
+            <sub-events>
+                <event-block sid="372551121343036">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="446320169763593" type="spriteNinjaGirl">
+                            <param id="0" name="Object">fuego</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="346671979331802" type="Audio">
+                            <param id="0" name="Audio file">get_item</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="662944455387376" type="invFuego">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
     </events>
