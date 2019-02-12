@@ -1970,8 +1970,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>5120</x>
-                        <y>336</y>
+                        <x>4880</x>
+                        <y>384</y>
                         <z>0</z>
                         <width>128</width>
                         <height>128</height>
@@ -1999,8 +1999,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>4992</x>
-                        <y>336</y>
+                        <x>4752</x>
+                        <y>384</y>
                         <z>0</z>
                         <width>128</width>
                         <height>128</height>
@@ -2028,8 +2028,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>5120</x>
-                        <y>464</y>
+                        <x>4880</x>
+                        <y>512</y>
                         <z>0</z>
                         <width>128</width>
                         <height>128</height>
@@ -2057,8 +2057,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>4992</x>
-                        <y>464</y>
+                        <x>4752</x>
+                        <y>512</y>
                         <z>0</z>
                         <width>128</width>
                         <height>128</height>
@@ -2870,8 +2870,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>5072</x>
-                        <y>240</y>
+                        <x>4832</x>
+                        <y>288</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -2892,8 +2892,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>5072</x>
-                        <y>272</y>
+                        <x>4832</x>
+                        <y>320</y>
                         <z>0</z>
                         <width>78.909339905</width>
                         <height>214.119155884</height>
@@ -2918,7 +2918,7 @@
                                 <collision-mask>Use collision polygon</collision-mask>
                                 <prevent-rotation>No</prevent-rotation>
                                 <density>1</density>
-                                <friction>0.5</friction>
+                                <friction>0.8</friction>
                                 <elasticity>0.2</elasticity>
                                 <linear-damping>0</linear-damping>
                                 <angular-damping>0.01</angular-damping>
@@ -2935,11 +2935,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>4320</x>
+                        <x>4312</x>
                         <y>144</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>32</width>
+                        <height>128</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -2949,7 +2949,7 @@
                 </instance>
                 <instance type="sensorLimiteVertival" uid="29">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -2958,7 +2958,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>4304</x>
-                        <y>80</y>
+                        <y>96</y>
                         <z>0</z>
                         <width>112</width>
                         <height>32</height>
@@ -2980,7 +2980,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>4304</x>
-                        <y>640</y>
+                        <y>656</y>
                         <z>0</z>
                         <width>112</width>
                         <height>32</height>
@@ -2988,6 +2988,93 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="sensorLimiteVertival" uid="30">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>4528</x>
+                        <y>208</y>
+                        <z>0</z>
+                        <width>112</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="sensorLimiteVertival" uid="32">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>4528</x>
+                        <y>608</y>
+                        <z>0</z>
+                        <width>112</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="movediza" uid="33">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>No</immovable>
+                                <collision-mask>Use collision polygon</collision-mask>
+                                <prevent-rotation>No</prevent-rotation>
+                                <density>1</density>
+                                <friction>0.8</friction>
+                                <elasticity>0.2</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>4528</x>
+                        <y>256</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>128</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>1.570796371</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
