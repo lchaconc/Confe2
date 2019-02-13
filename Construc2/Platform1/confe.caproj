@@ -348,6 +348,15 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="bgNegro" sid="994288729759553">
+                <plugin id="TiledBg" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="307531703350204">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <texture />
+            </object-type>
         </object-folder>
         <object-folder name="system">
             <object-type name="Touch" sid="579146676650647">
@@ -591,6 +600,9 @@
             <object-type name="txtVidas" sid="543581025749597">
                 <plugin id="Text" />
             </object-type>
+            <object-type name="txtGameOver" sid="635366855347008">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
         <object-folder name="particulas">
             <object-type name="particulas_rojo" sid="385512792799643">
@@ -660,6 +672,38 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="luzAmarilla" sid="368385514934447">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="294503976278799" speed="20">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500924" original-source="C:\Users\logan24\Desktop\recursos_CONFE\platform01\luz_amarilla.png" />
+                        <frame duration="1" hotspotX="0.499076" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.499076">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.500924" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="sensores">
             <object-type name="sensorCaida" sid="115644723619063">
@@ -721,6 +765,14 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="965341515921504" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="sensorFinJuego" sid="992247279967180">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="176525356934049" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
@@ -860,6 +912,14 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="jesusOk" sid="528325115472822">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="197916445536663" speed="5">
+                        <frame duration="1" hotspotX="0.502591" hotspotY="0.502591" original-source="C:\Users\logan24\Desktop\recursos_CONFE\platform01\jesus_ok.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="visor_controles">
             <object-type name="corazonVida" sid="973635770480894">
@@ -886,10 +946,12 @@
     <layout-folder>
         <layout>Splash.xml</layout>
         <layout>Platform1.xml</layout>
+        <layout>GameOver.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>e01_splash.xml</event-sheet>
         <event-sheet>e08_Platform1.xml</event-sheet>
+        <event-sheet>eGameOver.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="5">
@@ -924,6 +986,9 @@
         <file name="swing.m4a" />
         <file name="swing.ogg" />
         <file name="get_item.ogg" />
+        <file name="Airshot2.m4a" />
+        <file name="Airshot2.ogg" />
+        <file name="caida.ogg" />
     </sounds-folder>
     <music-folder>
         <file name="MattOglseby.ogg" />
