@@ -564,6 +564,60 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="agua" sid="246354746175781">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="12" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="939319449146772" speed="12">
+                        <frame duration="1" hotspotX="0.509317" hotspotY="0.598253" />
+                        <frame duration="1" hotspotX="0.509317" hotspotY="0.596491" />
+                        <frame duration="1" hotspotX="0.509317" hotspotY="0.598253" />
+                        <frame duration="1" hotspotX="0.509317" hotspotY="0.601732" />
+                        <frame duration="1" hotspotX="0.509317" hotspotY="0.60515" />
+                        <frame duration="1" hotspotX="0.509317" hotspotY="0.608511" />
+                        <frame duration="1" hotspotX="0.509317" hotspotY="0.610169" />
+                        <frame duration="1" hotspotX="0.509317" hotspotY="0.606838" />
+                        <frame duration="1" hotspotX="0.509317" hotspotY="0.6" />
+                        <frame duration="1" hotspotX="0.509317" hotspotY="0.603448" />
+                        <frame duration="1" hotspotX="0.509317" hotspotY="0.6" />
+                        <frame duration="1" hotspotX="0.509317" hotspotY="0.6" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="aceite" sid="713132005821705">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="431034666011276" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\lchaconc\Dropbox\ChaconPrado\CONFE\nuevas\olive.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="nube" sid="130539140817208">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="890504065314252" speed="5">
+                        <frame duration="1" hotspotX="0.493671" hotspotY="0.596491" original-source="D:\Users\lchaconc\Dropbox\ChaconPrado\CONFE\nuevas\nube2.gif" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="sello" sid="437048506193198">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="762058534281184" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\lchaconc\Dropbox\ChaconPrado\CONFE\nuevas\post-office.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="paloma" sid="122271415197957">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="767614715127016" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="visor">
             <object-type name="progress_bar" sid="916072727061301">
@@ -581,6 +635,46 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="228262980143901" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\recursos_CONFE\platform01\fire.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="invAgua" sid="445949821522762">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="649235461185097" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\lchaconc\Dropbox\ChaconPrado\CONFE\nuevas\drop.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="invPaloma" sid="415192306182619">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="552806144266457" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\lchaconc\Dropbox\ChaconPrado\CONFE\nuevas\paloma2.gif" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="invNube" sid="890959128542334">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="216112486824705" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\lchaconc\Dropbox\ChaconPrado\CONFE\nuevas\cloud.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="invAceite" sid="683309785672488">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="619823819449513" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\lchaconc\Dropbox\ChaconPrado\CONFE\nuevas\engine-oil.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="invSello" sid="758127918464379">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="161699880491039" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\lchaconc\Dropbox\ChaconPrado\CONFE\nuevas\ribbon.png" />
                     </animation>
                 </animation-folder>
             </object-type>

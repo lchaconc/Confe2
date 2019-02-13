@@ -337,7 +337,7 @@
                             <param id="0" name="State">0</param>
                         </action>
                         <action id="-3" name="Set position" sid="456861142703396" type="bgNegro">
-                            <param id="0" name="X">7184</param>
+                            <param id="0" name="X">7520</param>
                             <param id="1" name="Y">-32</param>
                         </action>
                         <action behavior="Fade" id="1" name="Start fade" sid="231740419043014" type="bgNegro" />
@@ -629,168 +629,120 @@
         </event-group>
         <event-group description="" sid="745653224866532" title="obtener_objetos">
             <sub-events>
-                <event-group description="" sid="869521322279978" title="get_zafiros">
+                <event-block sid="760842703780242">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="447731665438333" type="ctrlSprite">
+                            <param id="0" name="Object">monedsasOro</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="936592582877848" type="Audio">
+                            <param id="0" name="Audio file">monedas2</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
                     <sub-events>
-                        <event-block sid="300117429827112">
+                        <event-block sid="891953061733441">
                             <conditions>
-                                <condition id="0" name="On collision with another object" sid="551395247992822" type="ctrlSprite">
-                                    <param id="0" name="Object">zafiro</param>
+                                <condition id="-14" name="Pick by unique ID" sid="325137548583028" type="monedsasOro">
+                                    <param id="0" name="Unique ID">1</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Play" sid="725695184794869" type="Audio">
-                                    <param id="0" name="Audio file">monedas2</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
-                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                                </action>
+                                <action id="-9" name="Destroy" sid="537943199730174" type="monedsasOro" />
                             </actions>
-                            <sub-events>
-                                <event-block sid="823630279911437">
-                                    <conditions>
-                                        <condition id="-14" name="Pick by unique ID" sid="171244908389510" type="zafiro">
-                                            <param id="0" name="Unique ID">9</param>
-                                        </condition>
-                                        <condition id="-14" name="Pick by unique ID" sid="910368975367180" type="luzBlanca">
-                                            <param id="0" name="Unique ID">11</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-15" name="Set visible" sid="324109176169909" type="luzBlanca">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                        <action id="9" name="Set scale" sid="755016607201926" type="zafiro">
-                                            <param id="0" name="Scale">2</param>
-                                        </action>
-                                        <action id="-16" name="Wait" sid="142465830066642" type="System">
-                                            <param id="0" name="Seconds">0.2</param>
-                                        </action>
-                                        <action id="-9" name="Destroy" sid="662372694374337" type="zafiro" />
-                                        <action id="-15" name="Set visible" sid="759042162150824" type="luzBlanca">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="599087575578317">
-                                    <conditions>
-                                        <condition id="-14" name="Pick by unique ID" sid="763797644733767" type="zafiro">
-                                            <param id="0" name="Unique ID">10</param>
-                                        </condition>
-                                        <condition id="-14" name="Pick by unique ID" sid="694598906393186" type="luzBlanca">
-                                            <param id="0" name="Unique ID">12</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-15" name="Set visible" sid="531610147241826" type="luzBlanca">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                        <action id="9" name="Set scale" sid="468362560285975" type="zafiro">
-                                            <param id="0" name="Scale">2</param>
-                                        </action>
-                                        <action id="-16" name="Wait" sid="300309903987280" type="System">
-                                            <param id="0" name="Seconds">0.2</param>
-                                        </action>
-                                        <action id="-9" name="Destroy" sid="885811674863282" type="zafiro" />
-                                        <action id="-15" name="Set visible" sid="372215658773844" type="luzBlanca">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
                         </event-block>
-                    </sub-events>
-                </event-group>
-                <event-group description="" sid="767411736865149" title="get_monedas">
-                    <sub-events>
-                        <event-block sid="760842703780242">
+                        <event-block sid="845540422697569">
                             <conditions>
-                                <condition id="0" name="On collision with another object" sid="447731665438333" type="ctrlSprite">
-                                    <param id="0" name="Object">monedsasOro</param>
+                                <condition id="-14" name="Pick by unique ID" sid="447778911875723" type="monedsasOro">
+                                    <param id="0" name="Unique ID">2</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Play" sid="936592582877848" type="Audio">
-                                    <param id="0" name="Audio file">monedas2</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
-                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                                </action>
+                                <action id="-9" name="Destroy" sid="448169049250725" type="monedsasOro" />
                             </actions>
-                            <sub-events>
-                                <event-block sid="891953061733441">
-                                    <conditions>
-                                        <condition id="-14" name="Pick by unique ID" sid="325137548583028" type="monedsasOro">
-                                            <param id="0" name="Unique ID">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-9" name="Destroy" sid="537943199730174" type="monedsasOro" />
-                                    </actions>
-                                </event-block>
-                                <event-block sid="845540422697569">
-                                    <conditions>
-                                        <condition id="-14" name="Pick by unique ID" sid="447778911875723" type="monedsasOro">
-                                            <param id="0" name="Unique ID">2</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-9" name="Destroy" sid="448169049250725" type="monedsasOro" />
-                                    </actions>
-                                </event-block>
-                                <event-block sid="280496935210964">
-                                    <conditions>
-                                        <condition id="-14" name="Pick by unique ID" sid="658426762727878" type="monedsasOro">
-                                            <param id="0" name="Unique ID">3</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-9" name="Destroy" sid="558571195941219" type="monedsasOro" />
-                                    </actions>
-                                </event-block>
-                                <event-block sid="949180335930839">
-                                    <conditions>
-                                        <condition id="-14" name="Pick by unique ID" sid="695733324372887" type="monedsasOro">
-                                            <param id="0" name="Unique ID">4</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-9" name="Destroy" sid="735665083871840" type="monedsasOro" />
-                                    </actions>
-                                </event-block>
-                                <event-block sid="398387182049103">
-                                    <conditions>
-                                        <condition id="-14" name="Pick by unique ID" sid="370169643186046" type="monedsasOro">
-                                            <param id="0" name="Unique ID">7</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-9" name="Destroy" sid="745241345951515" type="monedsasOro" />
-                                    </actions>
-                                </event-block>
-                                <event-block sid="326235725407395">
-                                    <conditions>
-                                        <condition id="-14" name="Pick by unique ID" sid="326020763677363" type="monedsasOro">
-                                            <param id="0" name="Unique ID">8</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-9" name="Destroy" sid="835568694985284" type="monedsasOro" />
-                                    </actions>
-                                </event-block>
-                                <event-block disabled="1" sid="877654608446530">
-                                    <conditions>
-                                        <condition id="-14" name="Pick by unique ID" sid="476144267851231" type="monedsasOro">
-                                            <param id="0" name="Unique ID">3</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-9" name="Destroy" sid="401450375861808" type="monedsasOro" />
-                                    </actions>
-                                </event-block>
-                            </sub-events>
+                        </event-block>
+                        <event-block sid="280496935210964">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="658426762727878" type="monedsasOro">
+                                    <param id="0" name="Unique ID">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="558571195941219" type="monedsasOro" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="949180335930839">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="695733324372887" type="monedsasOro">
+                                    <param id="0" name="Unique ID">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="735665083871840" type="monedsasOro" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="398387182049103">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="370169643186046" type="monedsasOro">
+                                    <param id="0" name="Unique ID">7</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="745241345951515" type="monedsasOro" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="326235725407395">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="326020763677363" type="monedsasOro">
+                                    <param id="0" name="Unique ID">8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="835568694985284" type="monedsasOro" />
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="877654608446530">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="476144267851231" type="monedsasOro">
+                                    <param id="0" name="Unique ID">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="401450375861808" type="monedsasOro" />
+                            </actions>
                         </event-block>
                     </sub-events>
-                </event-group>
+                </event-block>
+                <event-block sid="541569015468464">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="358268699845108" type="ctrlSprite">
+                            <param id="0" name="Object">zafiro</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="446690373785201" type="Audio">
+                            <param id="0" name="Audio file">monedas2</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="499605303216245">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="339412248902684" type="zafiro">
+                                    <param id="0" name="Unique ID">9</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="849374581012328" type="zafiro" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
         <comment>6 elementos (items) a encontrar</comment>
@@ -850,6 +802,231 @@
                             <param id="1" name="Y">-400</param>
                         </action>
                         <action id="-9" name="Destroy" sid="413097059843990" type="movediza" />
+                    </actions>
+                </event-block>
+                <event-block sid="213802478978025">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="594953119923759" type="ctrlSprite">
+                            <param id="0" name="Object">agua</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="779561353127360" type="luzBlanca">
+                            <param id="0" name="Unique ID">142</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="183023372323377" type="Audio">
+                            <param id="0" name="Audio file">get_item</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="915584880357953" type="luzBlanca">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="877996681483395" type="System">
+                            <param id="0" name="Seconds">0.4</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="200723584538638" type="luzBlanca">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="355287302699303" type="agua" />
+                        <action id="-16" name="Wait" sid="641897115840668" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="282836550565481" type="particulas_rojo">
+                            <param id="0" name="Object">invAgua</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="307955451865432" type="invAgua">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="165752965693276" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="196949938807387" type="particulas_rojo">
+                            <param id="0" name="X">-400</param>
+                            <param id="1" name="Y">-400</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="599619330629134">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="951621083275452" type="ctrlSprite">
+                            <param id="0" name="Object">aceite</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="526174759689858" type="luzBlanca">
+                            <param id="0" name="Unique ID">12</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="282258171127069" type="Audio">
+                            <param id="0" name="Audio file">get_item</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="263884676908341" type="luzBlanca">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="996981297123561" type="System">
+                            <param id="0" name="Seconds">0.4</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="861340201813417" type="luzBlanca">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="771586908588688" type="aceite" />
+                        <action id="-16" name="Wait" sid="872962026869934" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="509441571982776" type="particulas_rojo">
+                            <param id="0" name="Object">invAceite</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="582050869284110" type="invAceite">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="814752712976043" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="301400613883907" type="particulas_rojo">
+                            <param id="0" name="X">-400</param>
+                            <param id="1" name="Y">-400</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="575413733570886">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="369700930669482" type="ctrlSprite">
+                            <param id="0" name="Object">nube</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="307538493191714" type="luzBlanca">
+                            <param id="0" name="Unique ID">152</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="206706965132233" type="Audio">
+                            <param id="0" name="Audio file">get_item</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="676812265422094" type="luzBlanca">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="997257666736228" type="System">
+                            <param id="0" name="Seconds">0.4</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="527645929066523" type="luzBlanca">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="332832051259403" type="nube" />
+                        <action id="-16" name="Wait" sid="871650654185343" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="268190765509644" type="particulas_rojo">
+                            <param id="0" name="Object">invNube</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="820760624028299" type="invNube">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="259420792811261" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="957795492847930" type="particulas_rojo">
+                            <param id="0" name="X">-400</param>
+                            <param id="1" name="Y">-400</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="253194736964573">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="684527733322259" type="ctrlSprite">
+                            <param id="0" name="Object">sello</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="335049249529174" type="luzBlanca">
+                            <param id="0" name="Unique ID">171</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="338347009799331" type="Audio">
+                            <param id="0" name="Audio file">get_item</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="713066900467959" type="luzBlanca">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="106858896624926" type="System">
+                            <param id="0" name="Seconds">0.4</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="169996186587562" type="luzBlanca">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="104551748173100" type="sello" />
+                        <action id="-16" name="Wait" sid="271983996016639" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="625010567157044" type="particulas_rojo">
+                            <param id="0" name="Object">invSello</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="219997876700399" type="invSello">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="414738982341214" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="587127999302511" type="particulas_rojo">
+                            <param id="0" name="X">-400</param>
+                            <param id="1" name="Y">-400</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="516018845613887">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="696560987925398" type="ctrlSprite">
+                            <param id="0" name="Object">paloma</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="972707634431884" type="luzBlanca">
+                            <param id="0" name="Unique ID">179</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="272622221422640" type="Audio">
+                            <param id="0" name="Audio file">get_item</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="460255659830816" type="luzBlanca">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="227467068710064" type="System">
+                            <param id="0" name="Seconds">0.4</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="687579457298523" type="luzBlanca">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="955560299427956" type="paloma" />
+                        <action id="-16" name="Wait" sid="667134097434424" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="871008549640536" type="particulas_rojo">
+                            <param id="0" name="Object">invPaloma</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="709284867690865" type="invPaloma">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="424092687901368" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="977529614262436" type="particulas_rojo">
+                            <param id="0" name="X">-400</param>
+                            <param id="1" name="Y">-400</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
