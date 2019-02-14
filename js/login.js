@@ -26,7 +26,7 @@ function validar() {
     setTimeout(function(){
     $('.error').slideUp('slow');
   },3000);
-  $('.botonlg').val('Iniciar Secion');
+  $('.botonlg').val('Iniciar Sesión');
   }
 
   if (usr == "felipe@correo.de"  && pwd == "f123" ) {

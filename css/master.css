@@ -8,19 +8,25 @@ h1 {
 }
 
 
-.img-icons {   
+.img-icons { 
+    position: absolute;
     height: 64px;
     width: 64px;
    
 }
 
+.fondo-menu {
+    min-height: 600px; 
+    /*background-color: red;    */
+}
+
+.img-fondo {
+    height: 100%;
+    width: 100%;
+}
+
 .cards {
-    position: absolute;
-    height: 100px;
-    width: 80px;   
-    text-align: center;
-    border-radius: 15px;
-    background-color: bisque;
+    position: absolute; 
     cursor: pointer;
 }
 
