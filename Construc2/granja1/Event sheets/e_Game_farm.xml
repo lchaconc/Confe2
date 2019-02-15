@@ -2522,6 +2522,13 @@
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="-9" name="Destroy" sid="407891054396297" type="regadera" />
+                        <action id="-15" name="Set visible" sid="878769096237346" type="inv_regadera">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="771652972026908" type="inv_regadera">
+                            <param id="0" name="Instance variable">activo2</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="131950077400876">
@@ -2550,7 +2557,7 @@
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="-13" name="Set boolean" sid="603891388892953" type="inv_regadera">
-                            <param id="0" name="Instance variable">activo</param>
+                            <param id="0" name="Instance variable">activo2</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
