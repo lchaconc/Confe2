@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>CONFE - Login</title>
+    <link rel="shortcut icon" href="./assets/ico/dragon.png" type="image/png">
+    <link rel="stylesheet" href="css/login.css">
+  </head>
+  <body>
+    <br>
+    <br>
+    <h4>CONFE - APP</h4>
+
+    <div class="error">
+      <span>Datos de ingreso no válidos, inténtelo de nuevo  por favor</span>
+    </div>
+    <div class="main">
+     <form action="" id="formLg">
+       <!-- Consultar API pattern en can i use.com -->
+        <input type="text" name="usuariolg"  id="txtUsr" placeholder="Usuario" required>
+        <input type="password" name="passlg"  id="txtPwd"  pattern="[A-Za-z0-9_-]{1,15}" placeholder="Contraseña" required>
+        <input type="submit" class="botonlg"   id="btnbtnLogin" value="Iniciar Sesion" >
+     </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/login.js"></script>
+  </body>
+</html>
