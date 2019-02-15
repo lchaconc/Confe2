@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1549598618,
+	"version": 1550206172,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -71,7 +71,10 @@
 		"images/pollo-sheet2.png",
 		"images/pollo-sheet3.png",
 		"images/carriots1-sheet0.png",
+		"images/casapueblo-sheet0.png",
+		"images/casagrande-sheet0.png",
 		"images/inv_hand-sheet0.png",
+		"images/inv_rasuradora-sheet0.png",
 		"images/inv_balde_leche-sheet0.png",
 		"images/inv_canasta-sheet0.png",
 		"images/jesus-sheet0.png",
