@@ -1,19 +1,9 @@
+
 body {
     background-color: black;
-    color: aqua;
+    margin: 0;
 }
 
-h1 {
-    text-align: center;
-}
-
-
-.img-icons { 
-    position: absolute;
-    height: 64px;
-    width: 64px;
-   
-}
 
 .fondo-menu {
     min-height: 600px; 
@@ -25,24 +15,122 @@ h1 {
     width: 100%;
 }
 
+
+.img-icons { 
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    top: 10%;
+    left: 10%;   
+}
+
+.img-icons-light {
+    position: absolute;
+    height: 200%;
+    width: 200%;
+    top: -45%;
+    left: -45%; 
+}
+
+.img-icons-bg { 
+    position: absolute;
+    height: 100%;
+    width: 100;
+    top: 0;
+    left: 0;   
+}
+
+.img-txt {
+    position: absolute;  
+    height: 11%;
+    width: auto;
+}
+
+#imgTxtAvatar {
+    top: 8%;
+    left: 12%;
+}
+
+#imgTxtReto1 {
+    top: 82%;
+    left: 31%;
+}
+
+#imgTxtReto2 {
+    top: 5%;
+    left: 43%;
+}
+
+#imgTxtReto3 {
+    top: 39%;
+    left: 80%;
+}
+
+#imgTxtReto4 {
+    top: 73%;
+    left: 79%;
+}
+
+
+.img-dots {
+    position: absolute;  
+    height: 50%;
+    width: auto;
+
+}
+
+#imgDot1 {
+    top: 33%;
+    left: 12%;
+}
+
+#imgDot2 {
+    top: 29%;
+    left: 34%;
+}
+
+#imgDot3 {
+    top: 21%;
+    left: 53%;
+}
+
+#imgDot4 {
+    top: 21%;
+    left: 75%;
+}
+
+
 .cards {
-    position: absolute; 
-    cursor: pointer;
+    position: absolute;
+    cursor: pointer;    
+    height: 90px;
+    width: 90px;
 }
 
 #cardAvatar {
-    top: 25%;
+    top: 22%;
     left: 10%
 }
 
 #cardGranja1 {
-    top: 40%;
-    left: 40%
+    top: 58%;
+    left: 32%;
 }
 
 #cardPlatform1 {
-    top: 60%;
-    left: 80%
+    top: 17%;
+    left: 45%;
+}
+
+
+#cardReto3 {
+    top: 64%;
+    left: 64%;
+}
+
+#cardReto4 {
+    top: 14%;
+    left: 77%
 }
 
 .cards-deshabilitados {
