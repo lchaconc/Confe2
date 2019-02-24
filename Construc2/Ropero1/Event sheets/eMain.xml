@@ -1,0 +1,537 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>eMain</name>
+    <events>
+        <event-group description="" sid="879955431676101" title="seleccion de vestidos">
+            <sub-events>
+                <comment>Una vez que sobrepasa el limite se considera como seleccionado</comment>
+                <event-block sid="394338790658445">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="831750030738666" type="r1">
+                            <param id="0" name="Object">limite</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="714422221775015" type="r1">
+                            <param id="0" name="Instance variable">seleccionado</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="165675804813296" type="r1">
+                            <param id="0" name="Layer">&quot;arrastrado&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="555078641469624">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="558451237599284" type="r2">
+                            <param id="0" name="Object">limite</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="596826191180044" type="r2">
+                            <param id="0" name="Instance variable">seleccionado</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="618507708782889" type="r2">
+                            <param id="0" name="Layer">&quot;arrastrado&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="287697690396979">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="349920862000044" type="r3">
+                            <param id="0" name="Object">limite</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="166790340642354" type="r3">
+                            <param id="0" name="Instance variable">seleccionado</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="798317023681594" type="r3">
+                            <param id="0" name="Layer">&quot;arrastrado&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="998068288544376">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="636221922100575" type="r3" />
+                        <condition id="1" name="Is overlapping another object" sid="410524507637391" type="r3">
+                            <param id="0" name="Object">mainCar</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <comment>Cuando lo suelta el vestido: sobre el personaje se acomoda sino lo envia al reopero</comment>
+                <event-block sid="667614135353802">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="153072104772873" type="r1" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="907689549656835">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="529736199199794" type="r1">
+                                    <param id="0" name="Object">mainCar</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="327085791041110" type="r1">
+                                    <param id="0" name="Object">baseVestido</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="281813864476753" type="Function">
+                                    <param id="0" name="Name">&quot;resetTrajeVestido&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="303610872626138" type="r1">
+                                    <param id="0" name="Instance variable">vestido</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="790316581033424" type="r1">
+                                    <param id="0" name="Layer">&quot;main&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="135548838019256">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="869924899999442" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="801126454063633" type="Function">
+                                    <param id="0" name="Name">&quot;posicionXR1&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="384669986819023" type="Function">
+                                    <param id="0" name="Name">&quot;posicionYR1&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="254519938742060">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="331499120574151" type="r2" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="597096038991575">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="955668693120245" type="r2">
+                                    <param id="0" name="Object">mainCar</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="834412560899411" type="r2">
+                                    <param id="0" name="Object">baseVestido</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="275803360503125" type="Function">
+                                    <param id="0" name="Name">&quot;resetTrajeVestido&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="156818791443673" type="r2">
+                                    <param id="0" name="Instance variable">vestido</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="280170416503225" type="r2">
+                                    <param id="0" name="Layer">&quot;main&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="720676066733732">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="954200403644643" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="300173107261535" type="Function">
+                                    <param id="0" name="Name">&quot;posicionXR2&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="379270435606994" type="Function">
+                                    <param id="0" name="Name">&quot;posicionYR2&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="830662739790496">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="615392638663209" type="r3" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="331040966806276">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="524786881611037" type="r3">
+                                    <param id="0" name="Object">mainCar</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="602707024280237" type="r3">
+                                    <param id="0" name="Object">baseVestido</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="606376909869455" type="Function">
+                                    <param id="0" name="Name">&quot;resetTrajeVestido&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="168784655262799" type="r3">
+                                    <param id="0" name="Instance variable">vestido</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="506284703838740" type="r3">
+                                    <param id="0" name="Layer">&quot;main&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="970890691566149">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="124567584676578" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="809858871091713" type="Function">
+                                    <param id="0" name="Name">&quot;posicionXR3&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="564503581449636" type="Function">
+                                    <param id="0" name="Name">&quot;posicionYR3&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="721052239571297" title="Reset_posiciones_trajes_pos_X">
+            <sub-events>
+                <event-block sid="219748738710240">
+                    <conditions>
+                        <condition id="0" name="On function" sid="436075933700843" type="Function">
+                            <param id="0" name="Name">&quot;posicionXR1&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="189363221603651" type="r1">
+                            <param id="0" name="X">slider.X - 300</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="812263738224134" type="r1">
+                            <param id="0" name="Instance variable">seleccionado</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="253932766621771">
+                    <conditions>
+                        <condition id="0" name="On function" sid="303030757801200" type="Function">
+                            <param id="0" name="Name">&quot;posicionXR2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="763000701196834" type="r2">
+                            <param id="0" name="X">slider.X - 100</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="395747234377801" type="r2">
+                            <param id="0" name="Instance variable">seleccionado</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="735038640315775">
+                    <conditions>
+                        <condition id="0" name="On function" sid="188305303311391" type="Function">
+                            <param id="0" name="Name">&quot;posicionXR3&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="670847189265079" type="r3">
+                            <param id="0" name="X">slider.X + 100</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="307814341677939" type="r3">
+                            <param id="0" name="Instance variable">seleccionado</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="614644829085309" title="Reset_posiciones_trajes_pos_Y">
+            <sub-events>
+                <event-block sid="804457440037559">
+                    <conditions>
+                        <condition id="0" name="On function" sid="865100409274475" type="Function">
+                            <param id="0" name="Name">&quot;posicionYR1&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="256344588575351" type="r1">
+                            <param id="0" name="Y">136</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="336423852385750">
+                    <conditions>
+                        <condition id="0" name="On function" sid="601028472763825" type="Function">
+                            <param id="0" name="Name">&quot;posicionYR2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="744221041026588" type="r2">
+                            <param id="0" name="Y">136</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="657175962759232">
+                    <conditions>
+                        <condition id="0" name="On function" sid="359950834997922" type="Function">
+                            <param id="0" name="Name">&quot;posicionYR3&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="129403624864467" type="r3">
+                            <param id="0" name="Y">136</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="648105344657048" title="Reset_general">
+            <sub-events>
+                <event-block sid="336813833366722">
+                    <conditions>
+                        <condition behavior="DragDrop" id="1" name="On drag start" sid="736745048660302" type="slider" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="125552918842568">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="583342212883471" type="r1">
+                                    <param id="0" name="Instance variable">seleccionado</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="815122167628130" type="Function">
+                                    <param id="0" name="Name">&quot;posicionYR1&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="396188307101217">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="961543573501328" type="r2">
+                                    <param id="0" name="Instance variable">seleccionado</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="762324050416480" type="Function">
+                                    <param id="0" name="Name">&quot;posicionYR2&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="817443316360538">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="546864762635443" type="r3">
+                                    <param id="0" name="Instance variable">seleccionado</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="200327376282990" type="Function">
+                                    <param id="0" name="Name">&quot;posicionYR3&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="262895768473141" title="Reset_vestido_seleccionado">
+            <sub-events>
+                <comment>En caso de que haya ya un vestido puesto lo envia de nuevo al ropero.</comment>
+                <event-block sid="491251498515404">
+                    <conditions>
+                        <condition id="0" name="On function" sid="409418183338596" type="Function">
+                            <param id="0" name="Name">&quot;resetTrajeVestido&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="615202701809676">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="496597652977343" type="r1">
+                                    <param id="0" name="Instance variable">vestido</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="999448980345191" type="Function">
+                                    <param id="0" name="Name">&quot;posicionXR1&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="111252031078406" type="Function">
+                                    <param id="0" name="Name">&quot;posicionYR1&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="389045775016793" type="r1">
+                                    <param id="0" name="Instance variable">vestido</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="376323305132596">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="124517461207779" type="r2">
+                                    <param id="0" name="Instance variable">vestido</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="500290103666585" type="Function">
+                                    <param id="0" name="Name">&quot;posicionXR2&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="797441856904773" type="Function">
+                                    <param id="0" name="Name">&quot;posicionYR2&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="984014017398982" type="r2">
+                                    <param id="0" name="Instance variable">vestido</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="926555731777065">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="785223376615510" type="r3">
+                                    <param id="0" name="Instance variable">vestido</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="645931717080229" type="Function">
+                                    <param id="0" name="Name">&quot;posicionXR3&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="866906574077474" type="Function">
+                                    <param id="0" name="Name">&quot;posicionYR3&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="181836347357982" type="r3">
+                                    <param id="0" name="Instance variable">vestido</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="694394845267089" title="Movimiento_Slider">
+            <sub-events>
+                <event-block sid="787862195981907">
+                    <conditions>
+                        <condition behavior="DragDrop" id="0" name="Is dragging" sid="473308081600400" type="slider" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="123602562981757">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="580622461299713" type="slider">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="X co-ordinate">1065</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="DragDrop" id="0" name="Set enabled" sid="679439590360764" type="slider">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="254222453316130" type="slider">
+                                    <param id="0" name="X">slider.X - 10</param>
+                                </action>
+                                <action behavior="DragDrop" id="0" name="Set enabled" sid="595746013015575" type="slider">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="254813252103344">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="314404973214689" type="slider">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="X co-ordinate">160</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="DragDrop" id="0" name="Set enabled" sid="417759647823678" type="slider">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="932321027506301" type="slider">
+                                    <param id="0" name="X">slider.X + 10</param>
+                                </action>
+                                <action behavior="DragDrop" id="0" name="Set enabled" sid="838350189812154" type="slider">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="322298546617296" title="Por_siempre">
+            <sub-events>
+                <event-block sid="493680633423769">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="900899483181922" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="246617801778564" type="txtDebug">
+                            <param id="0" name="Text">str(slider.X)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="749009261064529">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="385086569975867" type="r1">
+                                    <param id="0" name="Instance variable">seleccionado</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="352816485025895" type="Function">
+                                    <param id="0" name="Name">&quot;posicionXR1&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="444867045101025">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="963351632672882" type="r2">
+                                    <param id="0" name="Instance variable">seleccionado</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="961476598532585" type="Function">
+                                    <param id="0" name="Name">&quot;posicionXR2&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="137960549851580">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="983206591191768" type="r3">
+                                    <param id="0" name="Instance variable">seleccionado</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="467546849093632" type="Function">
+                                    <param id="0" name="Name">&quot;posicionXR3&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

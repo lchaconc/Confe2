@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Ropero1</name>
+    <description>prueba ropero 1</description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.loga24.ropero1</app-id>
+    <unique-id>399r3duraboym</unique-id>
+    <saved-with-version>26500</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1280</width>
+        <height>720</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>main</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar only</prop>
+        <prop name="Orientations">Landscape</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">Chrome</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="slider" sid="785338075329702">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DragDrop" sid="584295091096051">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="818694963871955" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="r1" sid="305215276115111">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="seleccionado" sid="650818891153478" type="boolean" />
+                <instance-variable name="vestido" sid="730127008381320" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="DragDrop" sid="537428445344199">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="546201179243325" speed="5">
+                    <frame duration="1" hotspotX="0.501608" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\recursos_CONFE\jelly\png\separate\Jellies\WithEyeShades\Jelly (1).png">
+                        <collision-poly>
+                            <point x="0.0643087" y="0.0740741" />
+                            <point x="0.932476" y="0.0777778" />
+                            <point x="0.961415" y="0.5" />
+                            <point x="0.893891" y="0.877778" />
+                            <point x="0.498392" y="0.996296" />
+                            <point x="0.109325" y="0.874074" />
+                            <point x="0.0418006" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="r2" sid="689253043256971">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="seleccionado" sid="856301648898672" type="boolean" />
+                <instance-variable name="vestido" sid="700874288116204" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="DragDrop" sid="387094006478756">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="623394754983384" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501661" original-source="C:\Users\logan24\Desktop\recursos_CONFE\jelly\png\separate\Jellies\WithEyeShades\Jelly (2).png">
+                        <collision-poly>
+                            <point x="0.124161" y="0.122924" />
+                            <point x="0.5" y="0" />
+                            <point x="0.872483" y="0.126246" />
+                            <point x="0.966443" y="0.498339" />
+                            <point x="0.895973" y="0.89701" />
+                            <point x="0.5" y="0.996678" />
+                            <point x="0.104027" y="0.89701" />
+                            <point x="0.0369128" y="0.498339" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="r3" sid="648430671412133">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="seleccionado" sid="355534378901759" type="boolean" />
+                <instance-variable name="vestido" sid="539326350719257" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="DragDrop" sid="640045648535892">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="862048481000411" speed="5">
+                    <frame duration="1" hotspotX="0.501683" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\recursos_CONFE\jelly\png\separate\Jellies\WithEyeShades\Jelly (3).png">
+                        <collision-poly>
+                            <point x="0.148148" y="0.174603" />
+                            <point x="0.498316" y="0.00396825" />
+                            <point x="0.855219" y="0.170635" />
+                            <point x="0.989899" y="0.5" />
+                            <point x="0.89899" y="0.880952" />
+                            <point x="0.498316" y="0.996032" />
+                            <point x="0.104377" y="0.876984" />
+                            <point x="0.013468" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="carril" sid="440942594632881">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="174705959154779" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="txtDebug" sid="232854224182178">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="mainCar" sid="595507661083908">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="816799695598993" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Dropbox\JPGs PNGs GIFs\iconos PNG\angry-red-bird-256.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="limite" sid="245134556584980">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="887443058422433" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Function" sid="309074896409691">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="baseVestido" sid="692910213225711">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="992334975253829" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>main.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>eMain.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Function" uid="9" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

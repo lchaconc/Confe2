@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 04-02-2019 a las 05:24:46
--- Versión del servidor: 5.7.21
--- Versión de PHP: 7.1.16
+-- Host: localhost:3306
+-- Generation Time: Feb 18, 2019 at 07:56 PM
+-- Server version: 5.6.39-cll-lve
+-- PHP Version: 5.6.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,50 +19,46 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `confe_game`
+-- Database: `confe_game`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `avance_juegos`
+-- Table structure for table `avance_juegos`
 --
 
-DROP TABLE IF EXISTS `avance_juegos`;
-CREATE TABLE IF NOT EXISTS `avance_juegos` (
-  `id_avance` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `avance_juegos` (
+  `id_avance` int(11) NOT NULL,
   `id_usuario` varchar(128) CHARACTER SET utf8 NOT NULL,
   `granja01` tinyint(4) NOT NULL,
-  `platform1` tinyint(4) NOT NULL,
-  PRIMARY KEY (`id_avance`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+  `platform01` tinyint(4) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `avance_juegos`
+-- Dumping data for table `avance_juegos`
 --
 
-INSERT INTO `avance_juegos` (`id_avance`, `id_usuario`, `granja01`, `platform1`) VALUES
-(1, 'felipe@correo.de', 5, 2),
-(2, 'jimena@correo.de', 2, 0),
-(3, 'ana@correo.de', 0, 0);
+INSERT INTO `avance_juegos` (`id_avance`, `id_usuario`, `granja01`, `platform01`) VALUES
+(1, 'felipe@correo.de', 6, 2),
+(2, 'jimena@correo.de', 3, 1),
+(3, 'ana@correo.de', 1, 1);
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `desbloqueados`
+-- Table structure for table `desbloqueados`
 --
 
-DROP TABLE IF EXISTS `desbloqueados`;
-CREATE TABLE IF NOT EXISTS `desbloqueados` (
-  `id_desbloq` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `desbloqueados` (
+  `id_desbloq` int(11) NOT NULL,
   `id_grupo` varchar(128) CHARACTER SET utf8 NOT NULL,
   `granja01` tinyint(1) NOT NULL,
-  `platform01` tinyint(1) NOT NULL,
-  PRIMARY KEY (`id_desbloq`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+  `platform01` tinyint(1) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `desbloqueados`
+-- Dumping data for table `desbloqueados`
 --
 
 INSERT INTO `desbloqueados` (`id_desbloq`, `id_grupo`, `granja01`, `platform01`) VALUES
@@ -73,27 +69,69 @@ INSERT INTO `desbloqueados` (`id_desbloq`, `id_grupo`, `granja01`, `platform01`)
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usuarios`
+-- Table structure for table `usuarios`
 --
 
-DROP TABLE IF EXISTS `usuarios`;
-CREATE TABLE IF NOT EXISTS `usuarios` (
-  `id_usuario` int(64) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `usuarios` (
+  `id_usuario` int(64) NOT NULL,
   `nombre` varchar(256) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
   `usuario` varchar(256) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
   `password` varchar(256) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
-  `grupo` varchar(128) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
-  PRIMARY KEY (`id_usuario`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+  `id_grupo` varchar(128) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `usuarios`
+-- Dumping data for table `usuarios`
 --
 
-INSERT INTO `usuarios` (`id_usuario`, `nombre`, `usuario`, `password`, `grupo`) VALUES
+INSERT INTO `usuarios` (`id_usuario`, `nombre`, `usuario`, `password`, `id_grupo`) VALUES
 (1, 'Felipe', 'felipe@correo.de', 'f123', 'moravia122'),
 (2, 'Jimena', 'jimena@correo.de', 'j123', 'coronado015'),
 (3, 'Ana', 'ana@correo.de', 'a123', 'desampa042');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `avance_juegos`
+--
+ALTER TABLE `avance_juegos`
+  ADD PRIMARY KEY (`id_avance`);
+
+--
+-- Indexes for table `desbloqueados`
+--
+ALTER TABLE `desbloqueados`
+  ADD PRIMARY KEY (`id_desbloq`);
+
+--
+-- Indexes for table `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`id_usuario`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `avance_juegos`
+--
+ALTER TABLE `avance_juegos`
+  MODIFY `id_avance` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `desbloqueados`
+--
+ALTER TABLE `desbloqueados`
+  MODIFY `id_desbloq` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `id_usuario` int(64) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
