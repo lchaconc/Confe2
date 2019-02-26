@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Top_10</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>3subbtu8xvytq</unique-id>
+    <saved-with-version>26500</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1280</width>
+        <height>720</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>main</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar only</prop>
+        <prop name="Orientations">Landscape</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">Firefox</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="Buttons" />
+        <object-folder name="Backgrounds">
+            <object-type name="mainBg" sid="940560789663431">
+                <plugin id="TiledBg" />
+                <texture />
+            </object-type>
+        </object-folder>
+        <object-folder name="Sprites">
+            <object-type name="sprJesus" sid="451790161248082">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="643194960259257" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\recursos_CONFE\platform01\jesus_ok.png">
+                            <collision-poly>
+                                <point x="0.295337" y="0.295337" />
+                                <point x="0.497409" y="0.00518135" />
+                                <point x="0.870466" y="0.497409" />
+                                <point x="0.88601" y="0.88601" />
+                                <point x="0.497409" y="0.963731" />
+                                <point x="0.150259" y="0.849741" />
+                                <point x="0.0362694" y="0.497409" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="sprModa" sid="831856460151576">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="365723589688109" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Dropbox\JPGs PNGs GIFs\iconos PNG\hat-icon.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="sprMusica" sid="243285986786891">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="349027952203838" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Dropbox\JPGs PNGs GIFs\iconos PNG\Dark-Gold-icon.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="sprDeporte" sid="175561587949839">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="720211008151178" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Dropbox\JPGs PNGs GIFs\iconos PNG\Hot-Air-Balloon-icon.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="sprDinero" sid="238967408001554">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="140532630214221" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Dropbox\JPGs PNGs GIFs\iconos PNG\Cog-Yellow-icon.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="sprCelular" sid="694431380263251">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="810780689549937" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Dropbox\JPGs PNGs GIFs\iconos PNG\Conversion-Target-icon.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="sprAmigos" sid="200665339964788">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="591611757289886" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Dropbox\JPGs PNGs GIFs\iconos PNG\dog-russel-grin-icon.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="sprFamilia" sid="582636722341539">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="450249206664978" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Dropbox\JPGs PNGs GIFs\iconos PNG\dragon.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="sprPareja" sid="316908203540616">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="282210351131361" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\recursos_CONFE\platform01\jesus_ok.png">
+                            <collision-poly>
+                                <point x="0.295337" y="0.295337" />
+                                <point x="0.497409" y="0.00518135" />
+                                <point x="0.870466" y="0.497409" />
+                                <point x="0.88601" y="0.88601" />
+                                <point x="0.497409" y="0.963731" />
+                                <point x="0.150259" y="0.849741" />
+                                <point x="0.0362694" y="0.497409" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="sprArte" sid="849183108519732">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="690853839229475" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\recursos_CONFE\platform01\jesus_ok.png">
+                            <collision-poly>
+                                <point x="0.295337" y="0.295337" />
+                                <point x="0.497409" y="0.00518135" />
+                                <point x="0.870466" y="0.497409" />
+                                <point x="0.88601" y="0.88601" />
+                                <point x="0.497409" y="0.963731" />
+                                <point x="0.150259" y="0.849741" />
+                                <point x="0.0362694" y="0.497409" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="sprRedesSociales" sid="237934434445194">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="376538390980125" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\recursos_CONFE\platform01\jesus_ok.png">
+                            <collision-poly>
+                                <point x="0.295337" y="0.295337" />
+                                <point x="0.497409" y="0.00518135" />
+                                <point x="0.870466" y="0.497409" />
+                                <point x="0.88601" y="0.88601" />
+                                <point x="0.497409" y="0.963731" />
+                                <point x="0.150259" y="0.849741" />
+                                <point x="0.0362694" y="0.497409" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="sprFiestas" sid="774662259531620">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="894115481707244" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\recursos_CONFE\platform01\jesus_ok.png">
+                            <collision-poly>
+                                <point x="0.295337" y="0.295337" />
+                                <point x="0.497409" y="0.00518135" />
+                                <point x="0.870466" y="0.497409" />
+                                <point x="0.88601" y="0.88601" />
+                                <point x="0.497409" y="0.963731" />
+                                <point x="0.150259" y="0.849741" />
+                                <point x="0.0362694" y="0.497409" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="sprEstante" sid="363814025823626">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Physics" sid="415377378411899">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="756856296725446" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Texts">
+            <object-type name="txtVisor" sid="274401029745207">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Controls" />
+        <object-folder name="System" />
+        <object-folder name="Sensors">
+            <object-type name="snsLimit" sid="230361604985515">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Physics" sid="993759302707293">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="115511735115409" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="snsEstante" sid="981478343753462">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="valor" sid="690091964810406" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="618042269764101" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+    </object-folder>
+    <families>
+        <family name="famDragable" plugin-id="Sprite" sid="170151659133625">
+            <members>
+                <member>sprAmigos</member>
+                <member>sprArte</member>
+                <member>sprCelular</member>
+                <member>sprDeporte</member>
+                <member>sprDinero</member>
+                <member>sprFamilia</member>
+                <member>sprFiestas</member>
+                <member>sprJesus</member>
+                <member>sprModa</member>
+                <member>sprMusica</member>
+                <member>sprPareja</member>
+                <member>sprRedesSociales</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="valor" sid="809690174075430" type="string" />
+                <instance-variable name="jesus" sid="929832244881005" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="DragDrop" sid="122953968307407">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+                <behavior-type name="Physics" sid="305796627902992">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+        </family>
+    </families>
+    <layout-folder>
+        <layout>main.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>eMain.xml</event-sheet>
+    </event-folder>
+    <global-instances />
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
