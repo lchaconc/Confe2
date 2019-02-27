@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>eMain</name>
+    <events>
+        <event-group description="" sid="370034331693827" title="Setup">
+            <sub-events>
+                <event-block sid="250151715630644">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="113989134144720" type="System" />
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="909280465049092" title="Interacciones">
+            <sub-events>
+                <event-block disabled="1" sid="122768771087676">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="730984744338206" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="0" name="Apply force" sid="812925631799208" type="player">
+                            <param id="0" name="Force X">0</param>
+                            <param id="1" name="Force Y">-5</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="274414323258062">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="453638018778848" type="Touch">
+                            <param id="0" name="Object">snsGround</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="0" name="Apply force" sid="355413013221330" type="player">
+                            <param id="0" name="Force X">0</param>
+                            <param id="1" name="Force Y">-20</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

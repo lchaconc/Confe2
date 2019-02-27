@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
-    <name>plantilla</name>
+    <name>Flappy_bird</name>
     <description></description>
     <version>1.0.0.0</version>
     <author></author>
@@ -11,9 +11,12 @@
     <saved-with-version>26500</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
-    <used-behaviors />
+    <used-behaviors>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
+    </used-behaviors>
     <used-effects />
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -44,7 +47,21 @@
     <object-folder>
         <object-folder name="Buttons" />
         <object-folder name="Backgrounds" />
-        <object-folder name="Sprites" />
+        <object-folder name="Sprites">
+            <object-type name="player" sid="513840176431530">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Physics" sid="591435965692347">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="538623889330172" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-folder name="Texts" />
         <object-folder name="Controls" />
         <object-folder name="System">
@@ -55,7 +72,21 @@
                 <plugin id="Function" />
             </object-type>
         </object-folder>
-        <object-folder name="Sensors" />
+        <object-folder name="Sensors">
+            <object-type name="snsGround" sid="382919421385345">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Physics" sid="117094465236407">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="109905686228556" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
     </object-folder>
     <families />
     <layout-folder>
