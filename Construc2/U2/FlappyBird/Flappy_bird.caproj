@@ -12,18 +12,21 @@
     <used-plugins>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>1280</width>
-        <height>720</height>
+        <width>400</width>
+        <height>500</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
@@ -46,23 +49,78 @@
     </configuration-settings>
     <object-folder>
         <object-folder name="Buttons" />
-        <object-folder name="Backgrounds" />
+        <object-folder name="Backgrounds">
+            <object-type name="day" sid="367773516472876">
+                <plugin id="TiledBg" />
+                <texture original-source="C:\Users\logan24\Desktop\FlapPyBird-master\FlapPyBird-master\assets\sprites\background-day.png" />
+            </object-type>
+            <object-type name="suelo" sid="516226443735220">
+                <plugin id="TiledBg" />
+                <texture original-source="C:\Users\logan24\Desktop\FlapPyBird-master\FlapPyBird-master\assets\sprites\base.png" />
+            </object-type>
+        </object-folder>
         <object-folder name="Sprites">
             <object-type name="player" sid="513840176431530">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="puntaje" sid="763506313861223" type="number" />
+                </instance-variables>
                 <behaviors>
-                    <behavior-type name="Physics" sid="591435965692347">
-                        <behavior id="Physics" />
+                    <behavior-type name="Platform" sid="358199882196519">
+                        <behavior id="Platform" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="538623889330172" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="538623889330172" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\FlapPyBird-master\FlapPyBird-master\assets\sprites\bluebird-downflap.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\FlapPyBird-master\FlapPyBird-master\assets\sprites\bluebird-midflap.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\FlapPyBird-master\FlapPyBird-master\assets\sprites\bluebird-upflap.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="tubo2" sid="176371551389594">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="389022680831169" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Users\logan24\Desktop\FlapPyBird-master\FlapPyBird-master\assets\sprites\pipe-green.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="0.961538" y="0.5" />
+                                <point x="0.961538" y="0.99375" />
+                                <point x="0.0384615" y="0.99375" />
+                                <point x="0.0384615" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="tubo1" sid="736773190848243">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="632672116549327" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Desktop\FlapPyBird-master\FlapPyBird-master\assets\sprites\pipe-red.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0.0384616" y="0.5" />
+                                <point x="0.0384616" y="0.00625002" />
+                                <point x="0.961538" y="0.00625002" />
+                                <point x="0.961538" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder name="Texts" />
+        <object-folder name="Texts">
+            <object-type name="txtJugar" sid="931431033630918">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="txtPuntos" sid="444701207725267">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
         <object-folder name="Controls" />
         <object-folder name="System">
             <object-type name="Touch" sid="948977961617129">
@@ -91,9 +149,11 @@
     <families />
     <layout-folder>
         <layout>main.xml</layout>
+        <layout>menu.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>eMain.xml</event-sheet>
+        <event-sheet>eMenu.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Function" uid="0" />

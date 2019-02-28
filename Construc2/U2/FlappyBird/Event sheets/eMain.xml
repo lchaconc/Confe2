@@ -3,6 +3,9 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eMain</name>
     <events>
+        <variable constant="0" name="salto" sid="465286816214649" static="0" type="number">500</variable>
+        <variable comment="tiempo entre generación de un par de tubos y sus sucesores" constant="0" name="tiempoGeneracion" sid="136227174366459" static="0" type="number">1</variable>
+        <variable comment="velocidad del suelo" constant="0" name="velocidad" sid="650993365875738" static="0" type="number">300</variable>
         <event-group description="" sid="370034331693827" title="Setup">
             <sub-events>
                 <event-block sid="250151715630644">
@@ -15,29 +18,138 @@
         </event-group>
         <event-group description="" sid="909280465049092" title="Interacciones">
             <sub-events>
-                <event-block disabled="1" sid="122768771087676">
+                <event-block sid="490724605660879">
                     <conditions>
-                        <condition id="0" name="On any touch start" sid="730984744338206" type="Touch" />
+                        <condition id="0" name="On any touch start" sid="296340400056154" type="Touch" />
                     </conditions>
                     <actions>
-                        <action behavior="Physics" id="0" name="Apply force" sid="812925631799208" type="player">
-                            <param id="0" name="Force X">0</param>
-                            <param id="1" name="Force Y">-5</param>
-                            <param id="2" name="Image point">0</param>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="838575923090745" type="player">
+                            <param id="0" name="Vector Y">-salto</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="501548535786656" type="player">
+                            <param id="0" name="Angle">330</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="274414323258062">
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="516951928891827" title="Animacion">
+            <sub-events>
+                <event-block sid="969042304700717">
                     <conditions>
-                        <condition id="4" name="Is touching object" sid="453638018778848" type="Touch">
-                            <param id="0" name="Object">snsGround</param>
+                        <condition id="-1" name="Every tick" sid="101601034535635" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="138244557559797" type="suelo">
+                            <param id="0" name="X">suelo.X - velocidad * dt</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="946990907850801" type="tubo2">
+                            <param id="0" name="X">tubo2.X - velocidad * dt</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="152882947088797" type="tubo1">
+                            <param id="0" name="X">tubo1.X - velocidad * dt</param>
+                        </action>
+                        <action id="-18" name="Rotate clockwise" sid="270089007886703" type="player">
+                            <param id="0" name="Degrees">60*dt</param>
+                        </action>
+                        <action id="0" name="Set text" sid="583494499143965" type="txtPuntos">
+                            <param id="0" name="Text">player.puntaje</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="493382674176198">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="978416145468149" type="suelo">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="X co-ordinate">-400</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Physics" id="0" name="Apply force" sid="355413013221330" type="player">
-                            <param id="0" name="Force X">0</param>
-                            <param id="1" name="Force Y">-20</param>
-                            <param id="2" name="Image point">0</param>
+                        <action id="-1" name="Set X" sid="526168818727882" type="suelo">
+                            <param id="0" name="X">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="535924191107693">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="973515366413201" type="tubo2">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="X co-ordinate">-50</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="480290503097751" type="tubo2" />
+                    </actions>
+                </event-block>
+                <event-block sid="628181837506738">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="333221947336560" type="tubo1">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="X co-ordinate">-50</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="383622844853565" type="tubo1" />
+                    </actions>
+                </event-block>
+                <event-block sid="731289067006300">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="644386530338493" type="System">
+                            <param id="0" name="Interval (seconds)">tiempoGeneracion</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="201434629618248" type="System">
+                            <param id="0" name="Object to create">tubo1</param>
+                            <param id="1" name="Layer">&quot;main&quot;</param>
+                            <param id="2" name="X">450</param>
+                            <param id="3" name="Y">random(50,250)</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="797029339220290" type="System">
+                            <param id="0" name="Object to create">tubo2</param>
+                            <param id="1" name="Layer">&quot;main&quot;</param>
+                            <param id="2" name="X">450</param>
+                            <param id="3" name="Y">tubo1.Y + 140</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="155951619010051" title="Colisiones">
+            <sub-events>
+                <event-block any="1" sid="184804146877563">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="686970091251902" type="player">
+                            <param id="0" name="Object">tubo1</param>
+                        </condition>
+                        <condition id="0" name="On collision with another object" sid="421099131399249" type="player">
+                            <param id="0" name="Object">tubo2</param>
+                        </condition>
+                        <condition id="0" name="On collision with another object" sid="841431347709296" type="player">
+                            <param id="0" name="Object">suelo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="205277843494432" type="System">
+                            <param id="0" name="Layout">menu</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="437709892310624" title="Puntaje">
+            <sub-events>
+                <event-block sid="791414141458826">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="950872199256659" type="tubo1">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">player.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="930347947213769" type="player">
+                            <param id="0" name="Instance variable">puntaje</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>

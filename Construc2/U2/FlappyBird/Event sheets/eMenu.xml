@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>eMenu</name>
+    <events>
+        <event-group description="" sid="106479516665652" title="Setup_Menu">
+            <sub-events>
+                <event-block sid="894281385740263">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="763836235248413" type="Touch">
+                            <param id="0" name="Object">txtJugar</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="354384323499415" type="System">
+                            <param id="0" name="Layout">main</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
