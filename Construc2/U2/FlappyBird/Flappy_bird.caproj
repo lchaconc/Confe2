@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
     <name>Flappy_bird</name>
-    <description></description>
+    <description>Beta de Flappy bird</description>
     <version>1.0.0.0</version>
-    <author></author>
+    <author>Lus Ch C</author>
     <author-email></author-email>
     <author-website>http://</author-website>
-    <app-id>com.mycompany.myapp</app-id>
+    <app-id>com.logan24.flappy_bird</app-id>
     <unique-id>3subbtu8xvytq</unique-id>
     <saved-with-version>26500</saved-with-version>
     <used-plugins>
@@ -30,7 +30,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
-    <first-layout>main</first-layout>
+    <first-layout>menu</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -39,7 +39,7 @@
         <prop name="Fullscreen in browser">Letterbox scale</prop>
         <prop name="Fullscreen scaling">High quality</prop>
         <prop name="Loader style">Progress bar only</prop>
-        <prop name="Orientations">Landscape</prop>
+        <prop name="Orientations">Portrait</prop>
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
@@ -62,9 +62,6 @@
         <object-folder name="Sprites">
             <object-type name="player" sid="513840176431530">
                 <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable name="puntaje" sid="763506313861223" type="number" />
-                </instance-variables>
                 <behaviors>
                     <behavior-type name="Platform" sid="358199882196519">
                         <behavior id="Platform" />
@@ -117,7 +114,13 @@
             <object-type name="txtJugar" sid="931431033630918">
                 <plugin id="Text" />
             </object-type>
-            <object-type name="txtPuntos" sid="444701207725267">
+            <object-type name="txtMisPuntos" sid="217959466791061">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="txtPuntaje" sid="265755609292529">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="txtMisRecord" sid="415816389011783">
                 <plugin id="Text" />
             </object-type>
         </object-folder>

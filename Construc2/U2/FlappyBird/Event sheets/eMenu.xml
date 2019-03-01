@@ -17,6 +17,19 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="346498040545169">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="812875010171977" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="966811663438301" type="txtMisPuntos">
+                            <param id="0" name="Text">&quot;¡Tienes &quot; &amp; puntaje &amp; &quot; puntos!&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="407616711394525" type="txtMisRecord">
+                            <param id="0" name="Text">&quot;Tu record: &quot; &amp; record &amp; &quot; Puntos.&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
     </events>
