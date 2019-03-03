@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable constant="0" name="maximo" sid="759433740666194" static="0" type="number">2</variable>
+        <variable constant="0" name="indice" sid="239827787297999" static="0" type="number">0</variable>
+        <event-block sid="740340103546362">
+            <conditions>
+                <condition id="3" name="On touched object" sid="461585741227890" type="Touch">
+                    <param id="0" name="Object">btnAdelante</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="708456412579346" type="System">
+                    <param id="0" name="Variable">indice</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">maximo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="437277489805402" type="System">
+                    <param id="0" name="Variable">indice</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="286630914567412" type="txtNombreTraje">
+                    <param id="0" name="Text">Array.At(indice,0,0)</param>
+                </action>
+                <action id="10" name="Load image from URL" sid="753830268068399" type="visor">
+                    <param id="0" name="URI">Array.At(indice,0,2)</param>
+                    <param id="1" name="Size">1</param>
+                    <param id="2" name="Cross-origin">0</param>
+                </action>
+                <action id="0" name="Set text" sid="749072061563066" type="Text">
+                    <param id="0" name="Text">indice</param>
+                </action>
+                <action id="0" name="Set text" sid="436281537961523" type="txtUri">
+                    <param id="0" name="Text">Array.At(indice,0,2)</param>
+                </action>
+                <action id="-15" name="Set visible" sid="207055439239740" type="btnAtras">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="680338585448979">
+            <conditions>
+                <condition id="3" name="On touched object" sid="332150082352130" type="Touch">
+                    <param id="0" name="Object">btnAtras</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="514812048937021" type="System">
+                    <param id="0" name="Variable">indice</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="262084743173294" type="System">
+                    <param id="0" name="Variable">indice</param>
+                    <param id="1" name="Value">-1</param>
+                </action>
+                <action id="0" name="Set text" sid="553462831565333" type="txtNombreTraje">
+                    <param id="0" name="Text">Array.At(indice,0,0)</param>
+                </action>
+                <action id="10" name="Load image from URL" sid="790846196685355" type="visor">
+                    <param id="0" name="URI">Array.At(indice,0,2)</param>
+                    <param id="1" name="Size">1</param>
+                    <param id="2" name="Cross-origin">0</param>
+                </action>
+                <action id="0" name="Set text" sid="946777006797178" type="Text">
+                    <param id="0" name="Text">indice</param>
+                </action>
+                <action id="0" name="Set text" sid="296257492657874" type="txtUri">
+                    <param id="0" name="Text">Array.At(indice,0,2)</param>
+                </action>
+                <action id="-15" name="Set visible" sid="771037813566332" type="btnAdelante">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="881151050393156">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="582952555847652" type="System">
+                    <param id="0" name="Variable">indice</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">maximo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="778276860073441" type="btnAdelante">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="738141771012232">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="869353073124538" type="System">
+                    <param id="0" name="Variable">indice</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="347177754631361" type="btnAtras">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="708488274587899" title="Ajax">
+            <sub-events>
+                <event-block sid="757802333213997">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="648779130365730" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Request URL" sid="969167996444678" type="AJAX">
+                            <param id="0" name="Tag">&quot;AjaxTrajes&quot;</param>
+                            <param id="1" name="URL">&quot;http://localhost/confe_server/trajes.php&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="186190858758672">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="626977496498521" type="AJAX">
+                            <param id="0" name="Tag">&quot;AjaxTrajes&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="856726075310137" type="Array">
+                            <param id="0" name="JSON">AJAX.LastData</param>
+                        </action>
+                        <action id="0" name="Set text" sid="294150648334309" type="txtNombreTraje">
+                            <param id="0" name="Text">Array.At(0,0,0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
