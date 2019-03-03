@@ -1,0 +1,656 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>e08_Platform1</name>
+    <events>
+        <event-group description="" sid="113639644737802" title="Por_siempre">
+            <sub-events>
+                <event-block sid="629276838965178">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="497276033038167" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="165797438499855" type="spriteJesus">
+                            <param id="0" name="Object">ctrlSprite</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="770857879170805">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="109754526259830" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="456367670373472" type="txtConsignas">
+                            <param id="0" name="Object">letrero</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="264440058633374" type="jesus">
+                            <param id="0" name="Object">letrero</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="332361253078251" title="control_sprite">
+            <sub-events>
+                <event-block sid="865745877717089">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="217858008195920" type="Touch">
+                            <param id="0" name="Object">btnRight</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="224126600213903" type="ctrlSprite">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="977851028181367" type="spriteJesus">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="370586651126942">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="817498612739680" type="Touch">
+                            <param id="0" name="Object">btnLeft</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="639552737824030" type="ctrlSprite">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="780279687856389" type="spriteJesus">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="932241338663850">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="880211039189340" type="Touch">
+                            <param id="0" name="Object">btnUp</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="685034965129729" type="ctrlSprite">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="354441133378066" type="spriteJesus">
+                            <param id="0" name="Animation">&quot;jump&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="285480620711280">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="975706618375848" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="403162771899100" type="spriteJesus">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="246838477344424">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="984854585256645" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="253881794472569" type="spriteJesus">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="884031602610634">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="637052810753759" type="Keyboard">
+                            <param id="0" name="Key">38</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="170437970639587" title="Animations_sprite_y_rotulos">
+            <sub-events>
+                <event-block sid="415365016496837">
+                    <conditions>
+                        <condition behavior="Platform" id="4" name="Is falling" sid="778711164536873" type="ctrlSprite" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="538205620385249" type="spriteJesus">
+                            <param id="0" name="Animation">&quot;jump&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="754706738954383">
+                    <conditions>
+                        <condition behavior="Platform" id="0" name="Is moving" sid="227858585275671" type="ctrlSprite" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="402018975658768" type="spriteJesus">
+                            <param id="0" name="Animation">&quot;run&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="194137443874865">
+                    <conditions>
+                        <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="993911537130196" type="ctrlSprite" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="393040735382507" type="spriteJesus">
+                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="621142543694467">
+                    <conditions>
+                        <condition behavior="Platform" id="3" name="Is jumping" sid="870206487279457" type="ctrlSprite" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="574211467651152" type="spriteJesus">
+                            <param id="0" name="Animation">&quot;jump&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="297943520096461">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="127458488734585" type="Touch">
+                            <param id="0" name="Object">btnAceptar</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="409237131605633" type="btnAceptar">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="932364600741457" type="letrero">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="720857442111797" type="letrero">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="843943329157500" type="letrero">
+                            <param id="0" name="Instance variable">activo</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="849871347301157" title="Sensores">
+            <sub-events>
+                <event-block sid="296726408707067">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="548053145950717" type="ctrlSprite">
+                            <param id="0" name="Object">sensorCaida</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="790119410091207" type="Audio">
+                            <param id="0" name="Audio file">caida</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="880979843988864" type="ctrlSprite">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="298437502879025" type="spriteJesus">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="298667440589968" type="ctrlSprite">
+                            <param id="0" name="Instance variable">vidas</param>
+                            <param id="1" name="Value">ctrlSprite.vidas - 1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="266414278197446" type="txtVidas">
+                            <param id="0" name="Text">ctrlSprite.vidas</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="544241968754246">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="333654669220989" type="ctrlSprite">
+                                    <param id="0" name="Instance variable">vidas</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="977575265527927" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="108790224932784" type="ctrlSprite">
+                                    <param id="0" name="X">128</param>
+                                    <param id="1" name="Y">160</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="900155333115915" type="ctrlSprite">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="778349795706429" type="spriteJesus">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="587864687838740">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="506823725011049" type="sensorReten">
+                            <param id="0" name="Object">letrero</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="336215809909067" type="letrero">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="962349186213615">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="802255181927163" type="letrero">
+                                    <param id="0" name="Instance variable">activo</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="344175503735139" type="btnAceptar">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>FIN DEL JUEGO</comment>
+                <event-block sid="597050026190750">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="815126539232255" type="ctrlSprite">
+                            <param id="0" name="Object">sensorFinJuego</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="145668038861553" type="jesusOk">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="101382316753375" type="luzAmarilla">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="170576002955493" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="548551427181500" type="particulas_blanco">
+                            <param id="0" name="Object">ctrlSprite</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="745627466995829" type="ctrlSprite">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="255882677956717" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="928611167157475" type="ctrlSprite">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="456861142703396" type="bgNegro">
+                            <param id="0" name="X">7520</param>
+                            <param id="1" name="Y">-32</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="231740419043014" type="bgNegro" />
+                        <action id="-16" name="Wait" sid="396784031520714" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="781209515785139" type="System">
+                            <param id="0" name="Layout">GameOver</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="322774359884925" title="on_Load">
+            <sub-events>
+                <event-block sid="288689659712528">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="527127508875947" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="307390109958386" type="sensores">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="687622220998573" type="Audio">
+                            <param id="0" name="Audio file">MattOglseby</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;fondo1&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="621763358523414" type="txtVidas">
+                            <param id="0" name="Text">ctrlSprite.vidas</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="295069936565181" type="letrero">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="143033719149921" type="letrero">
+                            <param id="0" name="Angle">90</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="468064776699335" type="ctrlSprite">
+                            <param id="0" name="X">176</param>
+                            <param id="1" name="Y">160</param>
+                        </action>
+                        <action disabled="1" id="-3" name="Set position" sid="593547729717013" type="ctrlSprite">
+                            <param id="0" name="X">7504</param>
+                            <param id="1" name="Y">512</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="509714760924478" title="Interacciones">
+            <sub-events>
+                <event-block sid="916702020485236">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="343440115224956" type="spriteJesus">
+                            <param id="0" name="Object">enfermo1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="13" name="Set double-jump" sid="151780059189475" type="ctrlSprite">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="513271177197080" title="Animaciones" />
+        <event-group description="" sid="745653224866532" title="obtener_objetos" />
+        <comment>6 elementos (items) a encontrar</comment>
+        <event-group description="" sid="530936326043218" title="items">
+            <sub-events>
+                <event-block sid="372551121343036">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="446320169763593" type="ctrlSprite">
+                            <param id="0" name="Object">fuego</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="349897519324755" type="luzBlanca">
+                            <param id="0" name="Unique ID">34</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="346671979331802" type="Audio">
+                            <param id="0" name="Audio file">get_item</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="266183706278025" type="luzBlanca">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="105991695631685" type="System">
+                            <param id="0" name="Seconds">0.4</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="220715115602948" type="fuego" />
+                        <action id="-15" name="Set visible" sid="698813170951429" type="luzBlanca">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="810112199955057" type="explosionEspacial1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="537115648515513" type="roca" />
+                        <action id="-16" name="Wait" sid="870469902635422" type="System">
+                            <param id="0" name="Seconds">0.4</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="354022977445039" type="explosionEspacial1">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="282912126929028" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="117867520250269" type="particulas_rojo">
+                            <param id="0" name="Object">invFuego</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="662944455387376" type="invFuego">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="369947775847290" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="679564377866014" type="particulas_rojo">
+                            <param id="0" name="X">-400</param>
+                            <param id="1" name="Y">-400</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="213802478978025">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="594953119923759" type="ctrlSprite">
+                            <param id="0" name="Object">agua</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="779561353127360" type="luzBlanca">
+                            <param id="0" name="Unique ID">142</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="183023372323377" type="Audio">
+                            <param id="0" name="Audio file">get_item</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="915584880357953" type="luzBlanca">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="877996681483395" type="System">
+                            <param id="0" name="Seconds">0.4</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="200723584538638" type="luzBlanca">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="355287302699303" type="agua" />
+                        <action id="-16" name="Wait" sid="641897115840668" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="282836550565481" type="particulas_rojo">
+                            <param id="0" name="Object">invAgua</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="307955451865432" type="invAgua">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="165752965693276" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="196949938807387" type="particulas_rojo">
+                            <param id="0" name="X">-400</param>
+                            <param id="1" name="Y">-400</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="599619330629134">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="951621083275452" type="ctrlSprite">
+                            <param id="0" name="Object">aceite</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="526174759689858" type="luzBlanca">
+                            <param id="0" name="Unique ID">12</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="282258171127069" type="Audio">
+                            <param id="0" name="Audio file">get_item</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="263884676908341" type="luzBlanca">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="996981297123561" type="System">
+                            <param id="0" name="Seconds">0.4</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="861340201813417" type="luzBlanca">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="771586908588688" type="aceite" />
+                        <action id="-16" name="Wait" sid="872962026869934" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="509441571982776" type="particulas_rojo">
+                            <param id="0" name="Object">invAceite</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="582050869284110" type="invAceite">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="814752712976043" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="301400613883907" type="particulas_rojo">
+                            <param id="0" name="X">-400</param>
+                            <param id="1" name="Y">-400</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="575413733570886">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="369700930669482" type="ctrlSprite">
+                            <param id="0" name="Object">nube</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="307538493191714" type="luzBlanca">
+                            <param id="0" name="Unique ID">152</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="206706965132233" type="Audio">
+                            <param id="0" name="Audio file">get_item</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="676812265422094" type="luzBlanca">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="997257666736228" type="System">
+                            <param id="0" name="Seconds">0.4</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="527645929066523" type="luzBlanca">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="332832051259403" type="nube" />
+                        <action id="-16" name="Wait" sid="871650654185343" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="268190765509644" type="particulas_rojo">
+                            <param id="0" name="Object">invNube</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="820760624028299" type="invNube">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="259420792811261" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="957795492847930" type="particulas_rojo">
+                            <param id="0" name="X">-400</param>
+                            <param id="1" name="Y">-400</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="253194736964573">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="684527733322259" type="ctrlSprite">
+                            <param id="0" name="Object">sello</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="335049249529174" type="luzBlanca">
+                            <param id="0" name="Unique ID">171</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="338347009799331" type="Audio">
+                            <param id="0" name="Audio file">get_item</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="713066900467959" type="luzBlanca">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="106858896624926" type="System">
+                            <param id="0" name="Seconds">0.4</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="169996186587562" type="luzBlanca">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="104551748173100" type="sello" />
+                        <action id="-16" name="Wait" sid="271983996016639" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="625010567157044" type="particulas_rojo">
+                            <param id="0" name="Object">invSello</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="219997876700399" type="invSello">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="414738982341214" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="587127999302511" type="particulas_rojo">
+                            <param id="0" name="X">-400</param>
+                            <param id="1" name="Y">-400</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="516018845613887">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="696560987925398" type="ctrlSprite">
+                            <param id="0" name="Object">paloma</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="972707634431884" type="luzBlanca">
+                            <param id="0" name="Unique ID">179</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="272622221422640" type="Audio">
+                            <param id="0" name="Audio file">get_item</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="460255659830816" type="luzBlanca">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="227467068710064" type="System">
+                            <param id="0" name="Seconds">0.4</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="687579457298523" type="luzBlanca">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="955560299427956" type="paloma" />
+                        <action id="-16" name="Wait" sid="667134097434424" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="871008549640536" type="particulas_rojo">
+                            <param id="0" name="Object">invPaloma</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="709284867690865" type="invPaloma">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="424092687901368" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="977529614262436" type="particulas_rojo">
+                            <param id="0" name="X">-400</param>
+                            <param id="1" name="Y">-400</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
