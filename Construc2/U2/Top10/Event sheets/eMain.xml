@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eMain</name>
     <events>
+        <variable constant="0" name="valorEstante" sid="967576464703263" static="0" type="number">0</variable>
         <variable constant="0" name="valorDragable" sid="662324788808024" static="0" type="text"></variable>
         <variable constant="0" name="posJesus" sid="422814514843786" static="0" type="number">0</variable>
         <variable constant="0" name="cont" sid="736004203631310" static="0" type="number">0</variable>
@@ -64,6 +65,10 @@
                                     <param id="0" name="Variable">posiciones</param>
                                     <param id="1" name="Value">posiciones &amp; &quot;:&quot; &amp; snsEstante.valor &amp; &quot;,&quot;</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="722155474817673" type="System">
+                                    <param id="0" name="Variable">valorEstante</param>
+                                    <param id="1" name="Value">snsEstante.valor</param>
+                                </action>
                                 <action id="-9" name="Set value" sid="576455411420956" type="System">
                                     <param id="0" name="Variable">valorDragable</param>
                                     <param id="1" name="Value">trim(famDragable.valor)</param>
@@ -93,7 +98,7 @@
                                     <actions>
                                         <action id="-9" name="Set value" sid="137763805935567" type="System">
                                             <param id="0" name="Variable">posJesus</param>
-                                            <param id="1" name="Value">123</param>
+                                            <param id="1" name="Value">valorEstante</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -119,6 +124,58 @@
                             <param id="0" name="Text">posiciones</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="382202323016319">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="825861524881505" type="System">
+                                    <param id="0" name="Variable">posJesus</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">9</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="247115353156133" type="txtPosicionC">
+                                    <param id="0" name="X">405</param>
+                                    <param id="1" name="Y">268</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="213605506372310">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="740637902370396" type="System">
+                                    <param id="0" name="Variable">posJesus</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="750226467962653" type="txtPosicionA">
+                                    <param id="0" name="X">405</param>
+                                    <param id="1" name="Y">268</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="201986754359019">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="152543436314300" type="System">
+                                    <param id="0" name="Variable">posJesus</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="366819434493430" type="System">
+                                    <param id="0" name="Variable">posJesus</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="846755691972415" type="txtPosicionB">
+                                    <param id="0" name="X">405</param>
+                                    <param id="1" name="Y">268</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
