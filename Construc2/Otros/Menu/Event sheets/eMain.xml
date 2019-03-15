@@ -11,11 +11,45 @@
                             <param id="0" name="Object">btnRight</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="5" name="Set frame" sid="267258341701814" type="model">
-                            <param id="0" name="Frame number">model.AnimationFrame + 1</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="452806373732874">
+                            <conditions>
+                                <condition id="-31" name="Object UID exists" sid="996153918897475" type="System">
+                                    <param id="0" name="UID">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="987001545115189" type="model">
+                                    <param id="0" name="Frame number">model.AnimationFrame + 1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="353333794337969">
+                            <conditions>
+                                <condition id="-31" name="Object UID exists" sid="993334921182506" type="System">
+                                    <param id="0" name="UID">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="189222238093374" type="model">
+                                    <param id="0" name="Frame number">model.AnimationFrame + 2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="532775802853728">
+                            <conditions>
+                                <condition id="-31" name="Object UID exists" sid="591573762578387" type="System">
+                                    <param id="0" name="UID">7</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="800935981692425" type="model">
+                                    <param id="0" name="Frame number">model.AnimationFrame + 3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="411170342694871">
                     <conditions>
