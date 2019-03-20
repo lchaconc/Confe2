@@ -1,22 +1,23 @@
 
 const imgPath = "./assets/png/";
-var i=1; //indice para recorrer el areglo
-
+var i=1, //indice para recorrer el areglo
+limite; //Longitud del arreglo
 $(document).ready(function () {    
       setup();    
 });
 
 function setup () {
-    
+    limite = data.length;
+	console.log("Limite del arreglo " + limite);
     cargarImg(data);
     eventos();
     
 }
 
 function cargarImg (data) {
-    $("#imgVisorIzq").attr("src", imgPath + data[2].url + ".png" );
-    $("#imgVisorCen").attr("src", imgPath + data[1].url + ".png" );
-    $("#imgVisorDer").attr("src", imgPath + data[0].url + ".png" );
+    $("#imgVisorIzq").attr("src",  data[0].url  );
+    $("#imgVisorCen").attr("src",  data[1].url  );
+    $("#imgVisorDer").attr("src",  data[2].url  );
 }
 
 function eventos () {
@@ -27,16 +28,37 @@ function eventos () {
         pasarDerecha();
         
     });
+	
+	$("#btnIzquierdo").click(function (e) { 
+        e.preventDefault();
+        pasarIzquierda();
+        
+    });
 }
 
 
 
-function pasarDerecha() {
-    console.log(i);
-    $("#imgVisorIzq").attr("src", imgPath + data[i].url + ".png" );
-    $("#imgVisorCen").attr("src", imgPath + data[i+1].url + ".png" );
-    $("#imgVisorDer").attr("src", imgPath + data[i+2].url + ".png" );
-    i++;
-    
-    
+function pasarDerecha() {    
+	
+	console.log(i);
+
+	if (i < limite - 2 ) {
+		$("#imgVisorIzq").attr("src",  data[i].url  );
+		$("#imgVisorCen").attr("src",  data[i+1].url  );
+		$("#imgVisorDer").attr("src", data[i+2].url  );
+		i++; 
+	} else {
+		alert ("Fin del arreglo");
+	}		
+}
+
+function pasarIzquierda() {    console.log(i);
+    if (i > 2) {
+	$("#imgVisorIzq").attr("src",  data[i-2].url  );
+    $("#imgVisorCen").attr("src",  data[i-1].url  );
+    $("#imgVisorDer").attr("src", data[i].url  );
+	i--;       
+	} else {
+		alert ("Fin del arreglo");
+	}
 }

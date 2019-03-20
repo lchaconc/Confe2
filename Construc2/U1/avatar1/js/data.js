@@ -1,22 +1,27 @@
 var data = [
     {
         "nombre" :  "Batnan",
-        "url" : "batman"
+        "url" : "http://localhost/confe-ws/avatar/sprites/batman.png"
     },
     {
         "nombre" :  "Bunny",
-        "url" : "bunny"
+        "url" : "http://localhost/confe-ws/avatar/sprites/bunny.png"
     },
     {
         "nombre" :  "Jocker",
-        "url" : "joker"
+        "url" : "http://localhost/confe-ws/avatar/sprites/joker.png"
     },
     {
         "nombre" :  "spiderman",
-        "url" : "spiderman"
+        "url" : "http://localhost/confe-ws/avatar/sprites/spiderman.png"
     },
     {
         "nombre" :  "Superman",
-        "url" : "superman"
+        "url" : "http://localhost/confe-ws/avatar/sprites/superman.png"
+    },
+	    {
+        "nombre" :  "El Chapulìn",
+        "url" : "http://localhost/confe-ws/avatar/sprites/chapulin.png"
     }
+	
 ]
