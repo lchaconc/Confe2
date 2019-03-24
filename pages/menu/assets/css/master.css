@@ -1,0 +1,31 @@
+body {
+    background-color: #000;
+}
+
+.cards-deshabilitados {
+    filter: sepia(100%);
+    cursor: no-drop;
+}
+
+.cards-habilitados {    
+    cursor: pointer;    
+}
+
+.shadow-layer {
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 900;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.img-centrada {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    width: 10%;
+}

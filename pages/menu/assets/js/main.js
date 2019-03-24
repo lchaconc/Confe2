@@ -1,5 +1,7 @@
 "use strict";
 
+const cantUnidades = 6;
+
 $(document).ready(function () {
     console.log("ready");    
     cargarIdJuego();
@@ -7,8 +9,15 @@ $(document).ready(function () {
 
 
 function cargarIdJuego() { 
-    let idGrupo = sessionStorage.getItem("idGrupo"),
-    idUsuario = sessionStorage.getItem("idUsuario");       
+    let 
+    //idGrupo = sessionStorage.getItem("idGrupo"),
+    //idUsuario = sessionStorage.getItem("idUsuario");       
+
+    idGrupo = "moravia122",
+    //idGrupo = "desampa042",
+    idUsuario = "felipe@correo.de";
+
+
     cargarEstadoJuegos(idGrupo);
     cargarAvanceJugador(idUsuario);
 
@@ -19,9 +28,10 @@ function cargarIdJuego() {
 
 function cargarEstadoJuegos( idGrupo) {
     console.log(idGrupo);    
-    $.getJSON("http://construtecdeleste.com/test/confe_ws/get_estado_juegos.php?id_grupo="+idGrupo,
+    $.getJSON("http://construtecdeleste.com/test/confe_ws/get_estado_grupo.php?id_grupo="+idGrupo,
         function (data, textStatus, jqXHR) {
-           // console.log(data);
+           console.log("Estado de juegos: ");           
+            //console.log(data);
            habilitarJuegos(data);
 
         }
@@ -38,7 +48,7 @@ function cargarAvanceJugador( idUsuario) {
            
             alamcenamientoLocal(data[0]);
            
-           $("#divAjaxSpiner").removeClass("hadow-layer");
+           $("#divAjaxSpiner").removeClass("shadow-layer");
            $("#divAjaxSpiner").fadeOut();
         }
     );
@@ -47,21 +57,24 @@ function cargarAvanceJugador( idUsuario) {
 
 function habilitarJuegos(array) {
     //Activa el botón correspondiente dependiendo si está habilitado el juego
-    //console.log(array[0]  );    
-  if (array[0].granja01 == "1" ) {
-    $("#cardGranja1").removeClass("cards-deshabilitados");
-    $("#cardGranja1").attr("activo", "1");
-    //console.log("cardGranja1 ACTIVO");
-    
-  }
-  if (array[0].platform01 == "1" ) {
-    $("#cardPlatform1").removeClass("cards-deshabilitados");
-    $("#cardPlatform1").attr("activo", "1");
-    //console.log("cardPlatform1 ACTIVO");    
-  }
+    //console.log(array[0]  ); 
 
+  
+    for (let index = 1; index < cantUnidades+1; index++) {
+        console.log(array[0]["unidad" + index  ]  );
+        if (array[0]["unidad" + index  ] == "1") {
+            $("#icoUnidad" + index).removeClass("cards-deshabilitados");    
+            $("#icoUnidad" + index).attr("activo", "1");
+            $("#icoUnidad" + index).addClass("cards-habilitados");    
+        }      
+        
+    }    
     
 }
+
+
+
+
 
 function eClick() {
     //Clic de los botones del menú para ir a los juegos:
@@ -92,6 +105,8 @@ function eClick() {
 
 
 function alamcenamientoLocal(array) {
+    //Guarada Avance de cada juego
+    //para que cuando se abbra el juego en C2 cargue el avance desde session storage   
     console.log(array.granja01);    
     sessionStorage.setItem("granja01", array.granja01 );
     sessionStorage.setItem("platform01", array.platform01 );
