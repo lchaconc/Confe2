@@ -82,23 +82,10 @@ function eClick() {
     $(".cards").click(function () { 
         let thisActivo = $(this).attr("activo"),
         thisId = $(this).attr("id");
+        console.log(thisId);
+        $("#modalJuegos").modal();
+        
 
-       // console.log(thisActivo);
-        if (thisActivo=="1") {
-           switch (thisId) {
-               case "cardGranja1":
-                    window.location.assign("../granja01/index.html");
-                break;                
-                case "cardPlatform1":
-                    window.location.assign("../platform01/index.html");
-                break;
-           
-               default:
-               console.log("Opcion fuera de rango");
-               
-                   break;
-           }
-        }
     });
     
 }
