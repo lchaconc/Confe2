@@ -2,18 +2,10 @@
 header ("Content-Type: application/json");
 header("Access-Control-Allow-Origin: *");
 
-
 $id_grupo = $_GET['id_grupo'];
-$id_usr = $_GET['id_usr'];
+//echo $id_grupo;
 
-
-/*
-$id_grupo = "moravia122";
-$id_usr = "felipe@correo.de";
-*/
-
-$sql = "SELECT * FROM estado_juegos WHERE id_grupo = '".$id_grupo."'  AND id_usr = '".$id_usr."'";
-
+$sql = "SELECT * FROM desbloqueados WHERE id_grupo = '".$id_grupo."'";
 //echo $sql; 
 
 //sleep(1);

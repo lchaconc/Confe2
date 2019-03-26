@@ -23,15 +23,15 @@
                 </div>
             </div>
             <div class="row" id="row1menu">
-                <div class="col text-center" ><img id="icoAvatar" activo="1" class="img-fluid cards" src="assets/img/img_avatar.png" style="width: 90%;"></div>
-                <div class="col text-center"><img  id="icoUnidad1" class="img-fluid cards cards-deshabilitados" src="assets/img/img_u1.png" style="width: 91%;"></div>
-                <div class="col text-center" ><img id="icoUnidad2" class="img-fluid cards cards-deshabilitados" src="assets/img/img_u2.png" style="width: 90%;"></div>
-                <div class="col text-center" ><img id="icoUnidad3" class="img-fluid cards cards-deshabilitados" src="assets/img/img_u3.png" style="width: 90%;"></div>
+                <div class="col text-center" ><img title="Seleccionando mi avatar" id="icoAvatar" activo="1" class="img-fluid cards cards-habilitados" src="assets/img/img_avatar.png" style="width: 90%;"></div>
+                <div class="col text-center"><img title="¿Crezco en todos los aspectos?" id="icoUnidad1" unidad="0" class="img-fluid cards cards-deshabilitados" src="assets/img/img_u1.png" style="width: 91%;"></div>
+                <div class="col text-center" ><img title="Al encuentro con Jesucristo vivo" id="icoUnidad2" unidad="0" class="img-fluid cards cards-deshabilitados" src="assets/img/img_u2.png" style="width: 90%;"></div>
+                <div class="col text-center" ><img id="icoUnidad3" unidad="0" class="img-fluid cards cards-deshabilitados" src="assets/img/img_u3.png" style="width: 90%;"></div>
             </div>
             <div class="row" id="row2menu">
-                <div class="col text-center"  style="padding: 25px;padding-top: 0px;padding-bottom: 0px;"><img id="icoUnidad4" class="img-fluid cards-deshabilitados" src="assets/img/img_u4.png" style="width: 60%;"></div>
-                <div class="col text-center"  style="padding-top: 0px;padding-bottom: 0px;"><img id="icoUnidad5" class="img-fluid cards cards-deshabilitados" src="assets/img/img_u5.png" style="width: 60%;"></div>
-                <div class="col text-center"  style="padding-top: 0px;padding-bottom: 0px;"><img id="icoUnidad6" class="img-fluid cards cards-deshabilitados" src="assets/img/img_u6.png" style="width: 60%;"></div>
+                <div class="col text-center"  style="padding: 25px;padding-top: 0px;padding-bottom: 0px;"><img id="icoUnidad4" unidad="0" class="img-fluid cards-deshabilitados" src="assets/img/img_u4.png" style="width: 60%;"></div>
+                <div class="col text-center"  style="padding-top: 0px;padding-bottom: 0px;"><img id="icoUnidad5" unidad="0" class="img-fluid cards cards-deshabilitados" src="assets/img/img_u5.png" style="width: 60%;"></div>
+                <div class="col text-center"  style="padding-top: 0px;padding-bottom: 0px;"><img id="icoUnidad6" unidad="0" class="img-fluid cards cards-deshabilitados" src="assets/img/img_u6.png" style="width: 60%;"></div>
             </div>
         </div>
     </div>
@@ -41,19 +41,39 @@
   
   <!-- Modal -->
   <div class="modal fade" id="modalJuegos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">         
+    <div class="modal-dialog modal-lg" role="document">         
                   
       <div class="modal-content">            
        
         <div class="modal-body">
-            <span>U1</span>
-            <h1>Crezco en todos los aspectos.</h1>
-        
-        <div class="row">
-            <div class="col-3">
-                <button  class="btn btn-danger" > Reto </button>
-            </div>
-        </div>
+         
+		  
+		    <div class="row row-encabezado">
+					<div class="col-12 text-center" >				
+						 <span class="letra-u" >U</span> 
+						 <span class="numero-unidad" >1</span> 
+					</div>
+		  </div>
+		  
+		  
+		  <div class="row row-titulo-unidad">
+				<div class="col-12">				
+					<h3 class="color-blanco">Crezco en todos los aspectos.</h3>
+				</div>
+		  </div>
+			<div class="row">
+				<div class="col-3 cont-botones text-center" id="colRow0" ></div>
+				<div class="col-3 cont-botones text-center" id="colRow1" ></div>
+				<div class="col-3 cont-botones text-center" id="colRow2" ></div>
+				<div class="col-3 cont-botones text-center" id="colRow3" ></div>
+			</div>
+			<div class="row">
+				<div class="col-3 cont-botones text-center" id="colRow4" ></div>
+				<div class="col-3 cont-botones text-center" id="colRow5" ></div>
+				<div class="col-3 cont-botones text-center" id="colRow6" ></div>
+				<div class="col-3 cont-botones text-center" id="colRow7" ></div>
+			</div>        
+      
         </div>
        
       </div>

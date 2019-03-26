@@ -1,15 +1,16 @@
 "use strict";
 
 const cantUnidades = 6;
+var datasetJuegos;
 
 $(document).ready(function () {
     console.log("ready");    
-    cargarIdJuego();
+    setup();
 });
 
 
-function cargarIdJuego() { 
-    let 
+function setup() { 
+    var 
     //idGrupo = sessionStorage.getItem("idGrupo"),
     //idUsuario = sessionStorage.getItem("idUsuario");       
 
@@ -18,21 +19,21 @@ function cargarIdJuego() {
     idUsuario = "felipe@correo.de";
 
 
-    cargarEstadoJuegos(idGrupo);
-    cargarAvanceJugador(idUsuario);
+    cargarEstadoGrupo(idGrupo);
+    cargarEstadoJuegos(idUsuario, idGrupo);
 
     eClick();
     
 }
 
 
-function cargarEstadoJuegos( idGrupo) {
+function cargarEstadoGrupo( idGrupo) {
     console.log(idGrupo);    
     $.getJSON("http://construtecdeleste.com/test/confe_ws/get_estado_grupo.php?id_grupo="+idGrupo,
         function (data, textStatus, jqXHR) {
-           console.log("Estado de juegos: ");           
-            //console.log(data);
-           habilitarJuegos(data);
+           console.log("Estado de unidades: ");           
+           console.log(data);
+           habilitarUnidades(data);
 
         }
     );
@@ -41,12 +42,14 @@ function cargarEstadoJuegos( idGrupo) {
 
 
 
-function cargarAvanceJugador( idUsuario) {
-    console.log(idUsuario);    
-    $.getJSON("http://construtecdeleste.com/test/confe_ws/get_avance_usuario.php?id_usuario="+idUsuario,
+function cargarEstadoJuegos( idUsuario, idGrupo ) {    
+    $.getJSON("http://construtecdeleste.com/test/confe_ws/get_estado_juegos.php?id_grupo="+idGrupo+"&id_usr="+idUsuario,
         function (data, textStatus, jqXHR) {
-           
-            alamcenamientoLocal(data[0]);
+           datasetJuegos = data;
+		   
+		   console.log("Estado de juegos");
+		   console.log(datasetJuegos);
+		   //alamcenamientoLocal(data[0]);
            
            $("#divAjaxSpiner").removeClass("shadow-layer");
            $("#divAjaxSpiner").fadeOut();
@@ -55,8 +58,8 @@ function cargarAvanceJugador( idUsuario) {
     
 }
 
-function habilitarJuegos(array) {
-    //Activa el botón correspondiente dependiendo si está habilitado el juego
+function habilitarUnidades(array) {
+    //Activa el botón correspondiente dependiendo si está habilitada la unidad
     //console.log(array[0]  ); 
 
   
@@ -65,6 +68,7 @@ function habilitarJuegos(array) {
         if (array[0]["unidad" + index  ] == "1") {
             $("#icoUnidad" + index).removeClass("cards-deshabilitados");    
             $("#icoUnidad" + index).attr("activo", "1");
+			$("#icoUnidad" + index).attr("unidad", index);
             $("#icoUnidad" + index).addClass("cards-habilitados");    
         }      
         
@@ -73,16 +77,29 @@ function habilitarJuegos(array) {
 }
 
 
-
+/*
+TODO: Antes de cargar todo el arreglo hay que hacer un filtrado con la unidad
+por otro lado se debe cargar la propiedad title en el encabezado del modal de cada unidad.
 
 
 function eClick() {
     //Clic de los botones del menú para ir a los juegos:
     //Manejador de eventos para las opciones de menú
     $(".cards").click(function () { 
-        let thisActivo = $(this).attr("activo"),
+        let thisActivo = $(this).attr("activo"),		
         thisId = $(this).attr("id");
         console.log(thisId);
+		
+		//Limpia la clase contendor de botones:
+		$(".cont-botones").empty();
+		//Genera los botnes:		
+		for (let index = 0; index < datasetJuegos.length; index++ ) {
+			//console.log(datasetJuegos[index].etiqueta );
+			let htmlBtn = $("<button class='btn btn-danger  btn-block'> </button>");
+			$(htmlBtn).text(datasetJuegos[index].etiqueta  );
+			$("#colRow" + index).html(htmlBtn);
+		}
+		
         $("#modalJuegos").modal();
         
 

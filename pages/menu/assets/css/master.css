@@ -22,6 +22,11 @@ body {
     
 }
 
+.cont-botones {
+	/*background-color: #fff; */
+}
+
+
 .img-centrada {
     display: block;
     margin-left: auto;
@@ -37,20 +42,48 @@ body {
 }
 
 .modal-body {
-    padding: 0;
+    padding-left: 50px;
+	padding-right: 50px;
     min-height: 330px;
     background-image: url("../img/fondo2.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
-
- 
-
+	box-sizing:border-box;
 }
 
 
-
-    .modal-dialog {
+.modal-dialog {
         max-width:500px;
         margin-right: auto;
-        margin-left: auto;
-    }
+        margin-left: auto;		
+}
+
+.col-3 {
+	padding-left: 1px;
+	padding-right: 1px;
+	
+}
+
+.color-blanco {
+	color: #fff;
+}
+
+.row-encabezado {
+	margin-top: 20px;
+}
+
+.row-titulo-unidad {
+	margin-top: 40px;
+}
+
+
+.letra-u {
+	color: orange;
+	font-size: 1.5 em;
+}
+
+.numero-unidad {
+	color:#fff;
+	font-size: 1.5em;
+}
+
