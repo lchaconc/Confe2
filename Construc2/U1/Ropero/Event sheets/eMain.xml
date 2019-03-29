@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>eMain</name>
+    <events>
+        <variable constant="0" name="aux" sid="264688356595490" static="0" type="text">nulo</variable>
+        <event-group description="" sid="370034331693827" title="Setup">
+            <sub-events>
+                <event-block sid="250151715630644">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="113989134144720" type="System" />
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="421293411584205" title="arrastrar">
+            <sub-events>
+                <event-block sid="620077874021026">
+                    <conditions>
+                        <condition behavior="DragDrop" id="0" name="Is dragging" sid="113715336973467" type="trajes" />
+                    </conditions>
+                    <actions>
+                        <action id="-24" name="Move to top" sid="771373182271023" type="trajes" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="265302390471864" title="soltarRopa">
+            <sub-events>
+                <event-block sid="551802851900951">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="665542595033866" type="trajes" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="834666616606705" type="System">
+                            <param id="0" name="Variable">aux</param>
+                            <param id="1" name="Value">&quot;soltando&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="143313737499956">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="632173920540726" type="trajeEntero">
+                                    <param id="0" name="Object">baseAvatarMasc</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="554427151848969" type="baseTrajePlaya">
+                                    <param id="0" name="X">-100</param>
+                                    <param id="1" name="Y">-100</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="327229999338405" type="baseTrajeEntero">
+                                    <param id="0" name="X">277.88</param>
+                                    <param id="1" name="Y">357.895</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="542906065761402" type="trajeEntero">
+                                    <param id="0" name="X">-100</param>
+                                    <param id="1" name="Y">-100</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="758890368049232" type="trajePlaya">
+                                    <param id="0" name="X">1117.378</param>
+                                    <param id="1" name="Y">290.322</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="745665954399787">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="309706921767011" type="trajePlaya">
+                                    <param id="0" name="Object">baseAvatarMasc</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="470812010856759" type="baseTrajeEntero">
+                                    <param id="0" name="X">-100</param>
+                                    <param id="1" name="Y">-100</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="737073380318343" type="baseTrajePlaya">
+                                    <param id="0" name="X">277.88</param>
+                                    <param id="1" name="Y">357.895</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="984885998078094" type="trajePlaya">
+                                    <param id="0" name="X">-100</param>
+                                    <param id="1" name="Y">-100</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="879978095182480" type="trajeEntero">
+                                    <param id="0" name="X">927</param>
+                                    <param id="1" name="Y">287</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
