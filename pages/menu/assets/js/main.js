@@ -95,7 +95,7 @@ function eClick() {
 		//Genera los botnes:		
 		for (let index = 0; index < datasetJuegos.length; index++ ) {
 			//console.log(datasetJuegos[index].etiqueta );
-			let htmlBtn = $("<button class='btn btn-danger  btn-block'> </button>");
+			let htmlBtn = $("<img class='custom-btn' src='./assets/img/fondo_boton_activo.png'  >");
 			$(htmlBtn).text(datasetJuegos[index].etiqueta  );
 			$("#colRow" + index).html(htmlBtn);
 		}

@@ -38,26 +38,40 @@ body {
 
 .custom-modal { 
     /*background-color: blueviolet;*/
-    display: none;
-    background-image: url("../img/fondo2.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
+    display: none;   
     z-index: -800;
+    
 }
 
+
+.main-cont-btn {
+    /*background-color: blueviolet;*/
+    margin-top: 25%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
 
 .modal-activo {
     position: absolute;
     top: 0;
     left:10%;
-    width: 80%;
-    height: 400px;
+    width: 90%;
+    height: 300px;
+    background-image: url("../img/fondo2.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center; 
+    background-origin: padding-box;   
     z-index: 900;
+    background-color: brown;
 }
 
 
 
-
+.custom-btn {
+    width: 80%;
+    height: auto;
+}
 
 
 
