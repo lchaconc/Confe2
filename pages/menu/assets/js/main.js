@@ -80,7 +80,7 @@ function habilitarUnidades(array) {
 /*
 TODO: Antes de cargar todo el arreglo hay que hacer un filtrado con la unidad
 por otro lado se debe cargar la propiedad title en el encabezado del modal de cada unidad.
-
+*/
 
 function eClick() {
     //Clic de los botones del menú para ir a los juegos:
@@ -100,7 +100,11 @@ function eClick() {
 			$("#colRow" + index).html(htmlBtn);
 		}
 		
-        $("#modalJuegos").modal();
+        //$("#modalJuegos").modal();
+        
+        $(".custom-modal").addClass("modal-activo");
+        $(".custom-modal").removeClass("fade");
+        $(".custom-modal").slideDown();
         
 
     });
@@ -116,3 +120,4 @@ function alamcenamientoLocal(array) {
     sessionStorage.setItem("platform01", array.platform01 );
     
 }
+

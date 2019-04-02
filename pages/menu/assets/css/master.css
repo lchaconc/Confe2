@@ -35,6 +35,33 @@ body {
     width: 10%;
 }
 
+
+.custom-modal { 
+    /*background-color: blueviolet;*/
+    display: none;
+    background-image: url("../img/fondo2.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: -800;
+}
+
+
+.modal-activo {
+    position: absolute;
+    top: 0;
+    left:10%;
+    width: 80%;
+    height: 400px;
+    z-index: 900;
+}
+
+
+
+
+
+
+
+
 .modal-content {
     /*background-color: */
     padding: 0;
@@ -45,7 +72,7 @@ body {
     padding-left: 50px;
 	padding-right: 50px;
     min-height: 330px;
-    background-image: url("../img/fondo2.jpg");
+    background-image: url("../img/fondo2.png");
     background-repeat: no-repeat;
     background-size: 100%;
 	box-sizing:border-box;
@@ -65,7 +92,7 @@ body {
 }
 
 .color-blanco {
-	color: #fff;
+	/*color: #fff; */
 }
 
 .row-encabezado {
