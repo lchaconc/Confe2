@@ -69,23 +69,23 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="4" loop="0" name="down" pingpong="0" repeatcount="1" repeatto="0" sid="192155087284772" speed="12">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.53125" hotspotY="0.489583" />
+                        <frame duration="1" hotspotX="0.515625" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.484375" hotspotY="0.489583" />
+                        <frame duration="1" hotspotX="0.546875" hotspotY="0.5" />
                     </animation>
                     <animation framecount="4" loop="0" name="right" pingpong="0" repeatcount="1" repeatto="0" sid="549783439540682" speed="10">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <frame duration="1" hotspotX="0.4375" hotspotY="0.479167">
                             <collision-poly>
                                 <point x="0" y="0" />
-                                <point x="1" y="0" />
-                                <point x="0.8125" y="0.927083" />
-                                <point x="0.242188" y="0.963542" />
+                                <point x="0.990741" y="0" />
+                                <point x="0.78588" y="0.929534" />
+                                <point x="0.162761" y="0.967709" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.53125" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.4375" hotspotY="0.479167" />
+                        <frame duration="1" hotspotX="0.59375" hotspotY="0.5" />
                     </animation>
                     <animation framecount="4" loop="0" name="up" pingpong="0" repeatcount="1" repeatto="0" sid="410686677824512" speed="12">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
@@ -106,18 +106,19 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
-                    <animation framecount="1" loop="0" name="idle" pingpong="0" repeatcount="1" repeatto="0" sid="503496040173910" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                    <animation framecount="2" loop="0" name="idle" pingpong="0" repeatcount="0" repeatto="0" sid="503496040173910" speed="2">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.489583">
                             <collision-poly>
-                                <point x="0.161765" y="0.11828" />
-                                <point x="0.5" y="0" />
-                                <point x="0.852941" y="0.107527" />
-                                <point x="0.941176" y="0.494624" />
-                                <point x="0.837316" y="0.981014" />
-                                <point x="0.235294" y="0.963374" />
-                                <point x="0.0735294" y="0.494624" />
+                                <point x="0.0846046" y="0.0981264" />
+                                <point x="0.493827" y="0.00571429" />
+                                <point x="0.920842" y="0.0871276" />
+                                <point x="0.987654" y="0.483073" />
+                                <point x="0.901938" y="0.98058" />
+                                <point x="0.173566" y="0.962537" />
+                                <point x="0.0123457" y="0.483073" />
                             </collision-poly>
                         </frame>
+                        <frame duration="1" hotspotX="0.5625" hotspotY="0.479167" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -153,7 +154,16 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="664242912383864" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.502538" original-source="C:\Users\logan24\Desktop\assets\bg_inventario.png" />
+                        <frame duration="1" hotspotX="0.500668" hotspotY="0.504359" original-source="C:\Users\logan24\Desktop\recursos_CONFE\assetsfinales-20190418T001056Z-001\fondo_inventario2.png">
+                            <collision-poly>
+                                <point x="0.0134861" y="0.0206065" />
+                                <point x="0.500418" y="0.00544323" />
+                                <point x="0.986395" y="0.0222913" />
+                                <point x="0.986395" y="0.979264" />
+                                <point x="0.500418" y="0.997797" />
+                                <point x="0.0134861" y="0.980949" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -574,10 +584,26 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="636019927833649" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.506024" original-source="C:\Users\logan24\Desktop\assets\granja128w\granjaAsset 122128.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.510417" original-source="C:\Users\logan24\Desktop\recursos_CONFE\assetsfinales-20190418T001056Z-001\assetsGranja-09.png">
+                            <collision-poly>
+                                <point x="0.458333" y="0.135417" />
+                                <point x="1" y="0.302083" />
+                                <point x="0.802083" y="0.802083" />
+                                <point x="0.208333" y="0.791667" />
+                                <point x="0" y="0.364583" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="pelona" pingpong="0" repeatcount="1" repeatto="0" sid="711958691865981" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504132" original-source="C:\Users\logan24\Desktop\assets2\oveja_pelona.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\recursos_CONFE\assetsfinales-20190418T001056Z-001\assetsGranja-11.png">
+                            <collision-poly>
+                                <point x="0.416667" y="0.270833" />
+                                <point x="0.947917" y="0.28125" />
+                                <point x="0.739583" y="0.739583" />
+                                <point x="0.239583" y="0.760417" />
+                                <point x="0.0208333" y="0.270833" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1134,7 +1160,7 @@
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="907398283170629" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\assets\axe.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\recursos_CONFE\assetsfinales-20190418T001056Z-001\assetsGranja-31.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1145,7 +1171,7 @@
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="542317428890941" speed="5">
-                        <frame duration="1" hotspotX="0.506329" hotspotY="0.518987" original-source="C:\Users\logan24\Desktop\assets\hand3.png" />
+                        <frame duration="1" hotspotX="0.510417" hotspotY="0.520833" original-source="C:\Users\logan24\Desktop\recursos_CONFE\assetsfinales-20190418T001056Z-001\assetsGranja-32.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1156,7 +1182,7 @@
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="385958801518223" speed="5">
-                        <frame duration="1" hotspotX="0.503937" hotspotY="0.509434" original-source="C:\Users\logan24\Desktop\assets\carretillo.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.510417" original-source="C:\Users\logan24\Desktop\recursos_CONFE\assetsfinales-20190418T001056Z-001\assetsGranja-34.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1167,7 +1193,7 @@
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="904825389617552" speed="5">
-                        <frame duration="1" hotspotX="0.508197" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\assets\semillas.png" />
+                        <frame duration="1" hotspotX="0.510417" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\recursos_CONFE\assetsfinales-20190418T001056Z-001\assetsGranja-33.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1178,7 +1204,7 @@
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="182587551447133" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\assets\heno.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\recursos_CONFE\assetsfinales-20190418T001056Z-001\assetsGranja-35.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1189,7 +1215,7 @@
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="525750341510418" speed="5">
-                        <frame duration="1" hotspotX="0.504505" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\assets\rasuradora.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\recursos_CONFE\assetsfinales-20190418T001056Z-001\assetsGranja-39.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1200,7 +1226,7 @@
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="703043121710059" speed="5">
-                        <frame duration="1" hotspotX="0.507463" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\assets\balde.png" />
+                        <frame duration="1" hotspotX="0.510417" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\recursos_CONFE\assetsfinales-20190418T001056Z-001\assetsGranja-38.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1211,7 +1237,7 @@
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="297194843157861" speed="5">
-                        <frame duration="1" hotspotX="0.506329" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\assets\balde_leche.png" />
+                        <frame duration="1" hotspotX="0.510417" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\recursos_CONFE\assetsfinales-20190418T001056Z-001\assetsGranja-37.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1223,18 +1249,7 @@
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="533794500649759" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.509434" original-source="C:\Users\mima\Desktop\CONFE\granja128w\granjawatering can128.png">
-                            <collision-poly>
-                                <point x="0.757812" y="0.5" />
-                                <point x="0.6875" y="0.622642" />
-                                <point x="0.5" y="1" />
-                                <point x="0.132812" y="0.839623" />
-                                <point x="0.054687" y="0.5" />
-                                <point x="0.039062" y="0.0471698" />
-                                <point x="0.5" y="0.0566038" />
-                                <point x="0.898437" y="0.122642" />
-                            </collision-poly>
-                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.510417" original-source="C:\Users\logan24\Desktop\recursos_CONFE\assetsfinales-20190418T001056Z-001\assetsGranja-36.png" />
                     </animation>
                 </animation-folder>
             </object-type>
