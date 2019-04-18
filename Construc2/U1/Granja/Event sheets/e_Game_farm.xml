@@ -18,11 +18,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="288741831042991" type="farmMainCharacter">
-                            <param id="0" name="Animation">&quot;right&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="173470800865048" type="farmMainCharacter">
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="173470800865048" type="sprControl">
                             <param id="0" name="Control">1</param>
                         </action>
                         <action id="-9" name="Set value" sid="192193073558187" type="System">
@@ -30,6 +26,34 @@
                             <param id="1" name="Value">&quot;der&quot;</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="888535661705875">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="333177814081502" type="System">
+                                    <param id="0" name="Variable">sexo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;f&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="121783301672730" type="characterFem">
+                                    <param id="0" name="Animation">&quot;right&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="146201254910923">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="929236246979300" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="288741831042991" type="characterMasc">
+                                    <param id="0" name="Animation">&quot;right&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="661110588566585">
                     <conditions>
@@ -38,11 +62,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="491487241502056" type="farmMainCharacter">
-                            <param id="0" name="Animation">&quot;left&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="835297152793403" type="farmMainCharacter">
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="835297152793403" type="sprControl">
                             <param id="0" name="Control">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="787211970891016" type="System">
@@ -50,6 +70,34 @@
                             <param id="1" name="Value">&quot;izq&quot;</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="988415954564445">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="694407925098344" type="System">
+                                    <param id="0" name="Variable">sexo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;f&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="616086084812404" type="characterFem">
+                                    <param id="0" name="Animation">&quot;left&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="380174719805406">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="726119791785709" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="491487241502056" type="characterMasc">
+                                    <param id="0" name="Animation">&quot;left&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="952493354103404">
                     <conditions>
@@ -58,11 +106,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="436674194230499" type="farmMainCharacter">
-                            <param id="0" name="Animation">&quot;up&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="145762729749954" type="farmMainCharacter">
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="145762729749954" type="sprControl">
                             <param id="0" name="Control">2</param>
                         </action>
                         <action id="-9" name="Set value" sid="424775318127326" type="System">
@@ -70,6 +114,34 @@
                             <param id="1" name="Value">&quot;arr&quot;</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="563190683796385">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="831200225178392" type="System">
+                                    <param id="0" name="Variable">sexo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;f&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="682745890785070" type="characterFem">
+                                    <param id="0" name="Animation">&quot;up&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="807661481144055">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="485583032487679" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="436674194230499" type="characterMasc">
+                                    <param id="0" name="Animation">&quot;up&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="120909149302080">
                     <conditions>
@@ -78,11 +150,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="195674086703158" type="farmMainCharacter">
-                            <param id="0" name="Animation">&quot;down&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="618124531819470" type="farmMainCharacter">
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="618124531819470" type="sprControl">
                             <param id="0" name="Control">3</param>
                         </action>
                         <action id="-9" name="Set value" sid="232511698257736" type="System">
@@ -90,17 +158,68 @@
                             <param id="1" name="Value">&quot;aba&quot;</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="378567072602151">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="701698698248743" type="System">
+                                    <param id="0" name="Variable">sexo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;f&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="967862814378963" type="characterFem">
+                                    <param id="0" name="Animation">&quot;down&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="199860833567007">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="804479344801706" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="195674086703158" type="characterMasc">
+                                    <param id="0" name="Animation">&quot;down&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="802119344703098">
                     <conditions>
                         <condition id="1" name="On any touch end" sid="416731214565548" type="Touch" />
                     </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="277518849412533" type="farmMainCharacter">
-                            <param id="0" name="Animation">&quot;idle&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="501652125593111">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="416271185204049" type="System">
+                                    <param id="0" name="Variable">sexo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;f&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="426256554623935" type="characterFem">
+                                    <param id="0" name="Animation">&quot;idle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="875055799799267">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="959673723209208" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="277518849412533" type="characterMasc">
+                                    <param id="0" name="Animation">&quot;idle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <comment>Control de animacion con teclado</comment>
                 <event-block sid="123185754612056">
@@ -110,7 +229,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="120174562287136" type="farmMainCharacter">
+                        <action id="4" name="Set animation" sid="120174562287136" type="characterMasc">
                             <param id="0" name="Animation">&quot;right&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -123,7 +242,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="175021011352950" type="farmMainCharacter">
+                        <action id="4" name="Set animation" sid="175021011352950" type="characterMasc">
                             <param id="0" name="Animation">&quot;up&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -136,7 +255,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="743684184944091" type="farmMainCharacter">
+                        <action id="4" name="Set animation" sid="743684184944091" type="characterMasc">
                             <param id="0" name="Animation">&quot;left&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -149,9 +268,37 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="983897493124330" type="farmMainCharacter">
+                        <action id="4" name="Set animation" sid="983897493124330" type="characterMasc">
                             <param id="0" name="Animation">&quot;down&quot;</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="328259684620808">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="410934404651702" type="System">
+                            <param id="0" name="Variable">sexo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;f&quot;</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="599065944905738" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="929957678735367" type="characterFem">
+                            <param id="0" name="Object">sprControl</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="535533330283314">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="103904700902962" type="System" />
+                        <condition id="-1" name="Every tick" sid="887989053933293" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="180583857761773" type="characterMasc">
+                            <param id="0" name="Object">sprControl</param>
+                            <param id="1" name="Image point (optional)">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -548,7 +695,7 @@
                                     <param id="0" name="Instance variable">activo</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="962922483261984" type="farmMainCharacter">
+                                <action id="-3" name="Set position" sid="962922483261984" type="characterMasc">
                                     <param id="0" name="X">1792</param>
                                     <param id="1" name="Y">340</param>
                                 </action>
@@ -829,7 +976,7 @@
                             <param id="0" name="Name">&quot;cerarModalInventario&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
-                        <action id="-3" name="Set position" sid="384993619145916" type="farmMainCharacter">
+                        <action id="-3" name="Set position" sid="384993619145916" type="characterMasc">
                             <param id="0" name="X">608</param>
                             <param id="1" name="Y">256</param>
                         </action>
@@ -872,7 +1019,7 @@
             <sub-events>
                 <event-block any="1" sid="704478060648402">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="565480135546420" type="farmMainCharacter">
+                        <condition id="0" name="On collision with another object" sid="565480135546420" type="sprControl">
                             <param id="0" name="Object">tree1</param>
                         </condition>
                     </conditions>
@@ -889,7 +1036,7 @@
                 </event-block>
                 <event-block any="1" sid="227478175441345">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="970572796638644" type="farmMainCharacter">
+                        <condition id="0" name="On collision with another object" sid="970572796638644" type="sprControl">
                             <param id="0" name="Object">regadera</param>
                         </condition>
                     </conditions>
@@ -912,7 +1059,7 @@
                 </event-block>
                 <event-block any="1" sid="752926648305320">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="609339428105414" type="farmMainCharacter">
+                        <condition id="0" name="On collision with another object" sid="609339428105414" type="sprControl">
                             <param id="0" name="Object">heno</param>
                         </condition>
                     </conditions>
@@ -929,7 +1076,7 @@
                 </event-block>
                 <event-block any="1" sid="398411437854321">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="458209170101093" type="farmMainCharacter">
+                        <condition id="0" name="On collision with another object" sid="458209170101093" type="sprControl">
                             <param id="0" name="Object">palita</param>
                         </condition>
                     </conditions>
@@ -946,7 +1093,7 @@
                 </event-block>
                 <event-block any="1" sid="416954338535460">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="966719089022141" type="farmMainCharacter">
+                        <condition id="0" name="On collision with another object" sid="966719089022141" type="sprControl">
                             <param id="0" name="Object">oveja</param>
                         </condition>
                     </conditions>
@@ -963,7 +1110,7 @@
                 </event-block>
                 <event-block any="1" sid="835550516773034">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="149982312278977" type="farmMainCharacter">
+                        <condition id="0" name="On collision with another object" sid="149982312278977" type="sprControl">
                             <param id="0" name="Object">cow2</param>
                         </condition>
                     </conditions>
@@ -980,7 +1127,7 @@
                 </event-block>
                 <event-block sid="807131861588179">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="543417444266446" type="farmMainCharacter">
+                        <condition id="0" name="On collision with another object" sid="543417444266446" type="sprControl">
                             <param id="0" name="Object">arena</param>
                         </condition>
                         <condition id="-8" name="Is boolean instance variable set" sid="743327048363004" type="inv_carretillo">
@@ -1000,7 +1147,7 @@
                 </event-block>
                 <event-block any="1" sid="720608550666010">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="656576488481707" type="farmMainCharacter">
+                        <condition id="0" name="On collision with another object" sid="656576488481707" type="sprControl">
                             <param id="0" name="Object">hacha</param>
                         </condition>
                     </conditions>
@@ -1023,7 +1170,7 @@
                 </event-block>
                 <event-block any="1" sid="948434670828912">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="422616557970516" type="farmMainCharacter">
+                        <condition id="0" name="On collision with another object" sid="422616557970516" type="sprControl">
                             <param id="0" name="Object">carretillo</param>
                         </condition>
                     </conditions>
@@ -1046,7 +1193,7 @@
                 </event-block>
                 <event-block any="1" sid="790517516933579">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="452489450071106" type="farmMainCharacter">
+                        <condition id="0" name="On collision with another object" sid="452489450071106" type="sprControl">
                             <param id="0" name="Object">semillas</param>
                         </condition>
                     </conditions>
@@ -1069,7 +1216,7 @@
                 </event-block>
                 <event-block any="1" sid="973144970965344">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="993893451275192" type="farmMainCharacter">
+                        <condition id="0" name="On collision with another object" sid="993893451275192" type="sprControl">
                             <param id="0" name="Object">rasuradora</param>
                         </condition>
                     </conditions>
@@ -1092,7 +1239,7 @@
                 </event-block>
                 <event-block any="1" sid="242391578226095">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="302613383765797" type="farmMainCharacter">
+                        <condition id="0" name="On collision with another object" sid="302613383765797" type="sprControl">
                             <param id="0" name="Object">baldeVacio</param>
                         </condition>
                     </conditions>
@@ -1115,7 +1262,7 @@
                 </event-block>
                 <event-block any="1" sid="664546784175465">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="619481005470775" type="farmMainCharacter">
+                        <condition id="0" name="On collision with another object" sid="619481005470775" type="sprControl">
                             <param id="0" name="Object">ladrilloGranero</param>
                         </condition>
                     </conditions>
@@ -1145,7 +1292,7 @@
                 </event-block>
                 <event-block any="1" sid="355923269582106">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="412780805521548" type="farmMainCharacter">
+                        <condition id="0" name="On collision with another object" sid="412780805521548" type="sprControl">
                             <param id="0" name="Object">ladrilloCasa</param>
                         </condition>
                     </conditions>
@@ -1175,7 +1322,7 @@
                 </event-block>
                 <event-block sid="596551923152657">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="901231227802175" type="farmMainCharacter">
+                        <condition id="0" name="On collision with another object" sid="901231227802175" type="sprControl">
                             <param id="0" name="Object">baseCasa</param>
                         </condition>
                     </conditions>
@@ -1192,7 +1339,7 @@
                 </event-block>
                 <event-block sid="803989238269526">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="967682051872654" type="farmMainCharacter">
+                        <condition id="0" name="On collision with another object" sid="967682051872654" type="sprControl">
                             <param id="0" name="Object">baseGranero</param>
                         </condition>
                     </conditions>
@@ -1209,7 +1356,7 @@
                 </event-block>
                 <event-block sid="132425847987467">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="469858610817933" type="farmMainCharacter">
+                        <condition id="0" name="On collision with another object" sid="469858610817933" type="sprControl">
                             <param id="0" name="Object">sensorHuerta</param>
                         </condition>
                     </conditions>
@@ -1226,7 +1373,7 @@
                 </event-block>
                 <event-block sid="712144393350691">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="363428536629416" type="farmMainCharacter">
+                        <condition id="0" name="On collision with another object" sid="363428536629416" type="sprControl">
                             <param id="0" name="Object">mesa_rustica</param>
                         </condition>
                     </conditions>
@@ -1244,7 +1391,7 @@
                 <comment>Diàs 6: vender los quesos t zanahorias</comment>
                 <event-block sid="330859517127541">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="935184732086085" type="farmMainCharacter">
+                        <condition id="0" name="On collision with another object" sid="935184732086085" type="sprControl">
                             <param id="0" name="Object">comprador1</param>
                         </condition>
                         <condition id="-8" name="Is boolean instance variable set" sid="525165125827202" type="comprador1">
@@ -1277,7 +1424,7 @@
                 </event-block>
                 <event-block sid="331143000237750">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="120347722480081" type="farmMainCharacter">
+                        <condition id="0" name="On collision with another object" sid="120347722480081" type="sprControl">
                             <param id="0" name="Object">comprador2</param>
                         </condition>
                         <condition id="-8" name="Is boolean instance variable set" sid="828725861041344" type="comprador2">
@@ -1310,7 +1457,7 @@
                 </event-block>
                 <event-block sid="858728361209390">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="437555236963156" type="farmMainCharacter">
+                        <condition id="0" name="On collision with another object" sid="437555236963156" type="sprControl">
                             <param id="0" name="Object">comprador3</param>
                         </condition>
                         <condition id="-8" name="Is boolean instance variable set" sid="634221734300154" type="comprador3">
@@ -1343,7 +1490,7 @@
                 </event-block>
                 <event-block sid="610906247007586">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="575376872798180" type="farmMainCharacter">
+                        <condition id="0" name="On collision with another object" sid="575376872798180" type="sprControl">
                             <param id="0" name="Object">comprador4</param>
                         </condition>
                         <condition id="-8" name="Is boolean instance variable set" sid="493205901367560" type="comprador4">
@@ -1927,8 +2074,8 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-2" name="Set Y" sid="602938745589004" type="farmMainCharacter">
-                                    <param id="0" name="Y">farmMainCharacter.Y + 40</param>
+                                <action id="-2" name="Set Y" sid="602938745589004" type="characterMasc">
+                                    <param id="0" name="Y">characterMasc.Y + 40</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1941,8 +2088,8 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-2" name="Set Y" sid="619551497782837" type="farmMainCharacter">
-                                    <param id="0" name="Y">farmMainCharacter.Y - 40</param>
+                                <action id="-2" name="Set Y" sid="619551497782837" type="characterMasc">
+                                    <param id="0" name="Y">characterMasc.Y - 40</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1955,8 +2102,8 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-2" name="Set Y" sid="530004656722402" type="farmMainCharacter">
-                                    <param id="0" name="Y">farmMainCharacter.X + 40</param>
+                                <action id="-2" name="Set Y" sid="530004656722402" type="characterMasc">
+                                    <param id="0" name="Y">characterMasc.X + 40</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1969,8 +2116,8 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-2" name="Set Y" sid="542964787424034" type="farmMainCharacter">
-                                    <param id="0" name="Y">farmMainCharacter.X - 40</param>
+                                <action id="-2" name="Set Y" sid="542964787424034" type="characterMasc">
+                                    <param id="0" name="Y">characterMasc.X - 40</param>
                                 </action>
                             </actions>
                         </event-block>

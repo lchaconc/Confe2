@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>e_Splash</name>
     <events>
+        <variable comment="sigla de sexo del avatar. f: Femenino, m: Masculino" constant="0" name="sexo" sid="177159572759459" static="0" type="text">f</variable>
         <variable comment="guarda correo de usuario desde session storage" constant="0" name="idUsuario" sid="757215105972641" static="0" type="text">null</variable>
         <variable comment="prograso del usuario" constant="0" name="progreso" sid="485139064955151" static="0" type="number">0</variable>
         <event-block sid="850646477373350">
@@ -52,7 +53,7 @@
                 </action>
                 <action id="-9" name="Set value" sid="812399487976148" type="System">
                     <param id="0" name="Variable">progreso</param>
-                    <param id="1" name="Value">3</param>
+                    <param id="1" name="Value">1</param>
                 </action>
                 <action id="-9" name="Set value" sid="887174641828854" type="System">
                     <param id="0" name="Variable">idUsuario</param>
