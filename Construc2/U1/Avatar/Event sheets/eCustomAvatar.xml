@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>eCustomAvatar</name>
+    <events>
+        <event-group description="" sid="183278830994025" title="setup_Custom_Avatar">
+            <sub-events>
+                <event-block sid="535699390094752">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="819314488454675" type="System" />
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="151206694225468" title="Definir_base_avatar">
+            <sub-events>
+                <event-block sid="685183835698560">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="256972597059193" type="System">
+                            <param id="0" name="Variable">sexo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;masc&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="417485118786039" type="baseAvatarMasc">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="981607243034073">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="624259322063583" type="System">
+                                    <param id="0" name="Variable">aatarSeleccionado</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="284030448395455" type="baseAvatarMasc">
+                                    <param id="0" name="Animation">&quot;blanco&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="146744747345622">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="523077416161810" type="System">
+                                    <param id="0" name="Variable">aatarSeleccionado</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="131726638893380" type="baseAvatarMasc">
+                                    <param id="0" name="Animation">&quot;moreno&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="215486101074847">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="849265270518869" type="System">
+                                    <param id="0" name="Variable">aatarSeleccionado</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="648385312827461" type="baseAvatarMasc">
+                                    <param id="0" name="Animation">&quot;negro&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="100009522025028">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="632289076224094" type="System">
+                                    <param id="0" name="Variable">aatarSeleccionado</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="101061416318054" type="baseAvatarMasc">
+                                    <param id="0" name="Animation">&quot;blanco&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="154317800403509" title="Navegacion_custom_avatar">
+            <sub-events>
+                <event-block sid="551605044823608">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="238762558832137" type="Touch">
+                            <param id="0" name="Object">btnAtras</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="540865257296762" type="System">
+                            <param id="0" name="Layout">main</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

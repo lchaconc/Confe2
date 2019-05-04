@@ -3,17 +3,26 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eMain</name>
     <events>
-        <variable constant="0" name="sexo" sid="327830480643913" static="0" type="text">fem</variable>
+        <variable constant="0" name="sexo" sid="327830480643913" static="0" type="text">masc</variable>
         <variable constant="0" name="isFinLista" sid="654288113613225" static="0" type="number">0</variable>
         <variable comment="0 falso / 1 verdero" constant="0" name="isInicioLista" sid="901388738268504" static="0" type="number">0</variable>
         <variable constant="0" name="aatarSeleccionado" sid="161729942656353" static="0" type="number">1</variable>
-        <event-group description="" sid="370034331693827" title="Setup">
+        <event-group description="" sid="370034331693827" title="Setup_main">
             <sub-events>
                 <event-block sid="250151715630644">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="113989134144720" type="System" />
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="939347095797292" type="System">
+                            <param id="0" name="Variable">isFinLista</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="560680179915752" type="System">
+                            <param id="0" name="Variable">isInicioLista</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
@@ -242,6 +251,10 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-9" name="Set value" sid="952439352044369" type="System">
+                                    <param id="0" name="Variable">aatarSeleccionado</param>
+                                    <param id="1" name="Value">4</param>
+                                </action>
                                 <action id="-15" name="Set visible" sid="681969541145366" type="luz">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
@@ -356,6 +369,22 @@
                         <action id="4" name="Set animation" sid="617359785647300" type="avatar4">
                             <param id="0" name="Animation">&quot;fem&quot;</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="726087135606376" title="CambioLayout">
+            <sub-events>
+                <event-block sid="339053854454359">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="323450968362832" type="Touch">
+                            <param id="0" name="Object">btnGoCustom</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="514564795553796" type="System">
+                            <param id="0" name="Layout">customAvatar</param>
                         </action>
                     </actions>
                 </event-block>

@@ -62,6 +62,22 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="btnGoCustom" sid="205320093527910">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="804886611750036" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btnAtras" sid="115896856885030">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="232135838521203" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Backgrounds">
             <object-type name="bgMain" sid="878258669696475">
@@ -69,6 +85,14 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="707329657411992" speed="5">
                         <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\inicio juegos\seleccionavatar.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bgCustom" sid="940307493492213">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="987969526887777" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\avatars seleccion\personalizaravatar.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -167,6 +191,20 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="baseAvatarMasc" sid="226289217039203">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="negro" pingpong="0" repeatcount="1" repeatto="0" sid="752616455156688" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\avatars seleccion\negro.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="blanco" pingpong="0" repeatcount="1" repeatto="0" sid="367018790498832" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\avatars seleccion\blanco.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="moreno" pingpong="0" repeatcount="1" repeatto="0" sid="151689747684248" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\avatars seleccion\moreno.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Texts" />
         <object-folder name="Controls" />
@@ -208,9 +246,11 @@
     <families />
     <layout-folder>
         <layout>main.xml</layout>
+        <layout>customAvatar.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>eMain.xml</event-sheet>
+        <event-sheet>eCustomAvatar.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Function" uid="0" />
