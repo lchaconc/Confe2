@@ -3,6 +3,9 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eMain</name>
     <events>
+        <variable constant="0" name="sexo" sid="327830480643913" static="0" type="text">fem</variable>
+        <variable constant="0" name="isFinLista" sid="654288113613225" static="0" type="number">0</variable>
+        <variable comment="0 falso / 1 verdero" constant="0" name="isInicioLista" sid="901388738268504" static="0" type="number">0</variable>
         <variable constant="0" name="aatarSeleccionado" sid="161729942656353" static="0" type="number">1</variable>
         <event-group description="" sid="370034331693827" title="Setup">
             <sub-events>
@@ -21,8 +24,17 @@
                         <condition id="4" name="Is touching object" sid="817773526791046" type="Touch">
                             <param id="0" name="Object">btnDerecho</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="337587832922133" type="System">
+                            <param id="0" name="Variable">isInicioLista</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
+                        <action id="-9" name="Set value" sid="843930237249445" type="System">
+                            <param id="0" name="Variable">isFinLista</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
                         <action behavior="8Direction" id="7" name="Simulate control" sid="514909169987250" type="avatar1">
                             <param id="0" name="Control">1</param>
                         </action>
@@ -42,8 +54,17 @@
                         <condition id="4" name="Is touching object" sid="356394245277479" type="Touch">
                             <param id="0" name="Object">btnIzquierdo</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="296799681707628" type="System">
+                            <param id="0" name="Variable">isFinLista</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
+                        <action id="-9" name="Set value" sid="105122096253084" type="System">
+                            <param id="0" name="Variable">isInicioLista</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
                         <action behavior="8Direction" id="7" name="Simulate control" sid="774420845997067" type="avatar1">
                             <param id="0" name="Control">0</param>
                         </action>
@@ -68,15 +89,25 @@
                             <param id="0" name="Object">avatar1</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="955313056475944" type="System">
-                            <param id="0" name="Variable">aatarSeleccionado</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="9" name="Set scale" sid="517805473708408" type="avatar1">
-                            <param id="0" name="Scale">2</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="552984909221858">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="817986246079409" type="luz">
+                                    <param id="0" name="Unique ID">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="955313056475944" type="System">
+                                    <param id="0" name="Variable">aatarSeleccionado</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="932182624760398" type="luz">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="854545505716492">
                     <conditions>
@@ -84,11 +115,21 @@
                             <param id="0" name="Object">avatar1</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="9" name="Set scale" sid="728016806738993" type="avatar1">
-                            <param id="0" name="Scale">1</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="648846499108977">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="941483546880673" type="luz">
+                                    <param id="0" name="Unique ID">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="270380382444219" type="luz">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="603980102053866">
                     <conditions>
@@ -96,15 +137,25 @@
                             <param id="0" name="Object">avatar2</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="531530622198745" type="System">
-                            <param id="0" name="Variable">aatarSeleccionado</param>
-                            <param id="1" name="Value">2</param>
-                        </action>
-                        <action id="9" name="Set scale" sid="373941115352314" type="avatar2">
-                            <param id="0" name="Scale">2</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="251270802258998">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="594869848317048" type="luz">
+                                    <param id="0" name="Unique ID">11</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="531530622198745" type="System">
+                                    <param id="0" name="Variable">aatarSeleccionado</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="721911159987121" type="luz">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="592880145813466">
                     <conditions>
@@ -112,11 +163,21 @@
                             <param id="0" name="Object">avatar2</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="9" name="Set scale" sid="963546121007081" type="avatar2">
-                            <param id="0" name="Scale">1</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="277556971248887">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="933271772338218" type="luz">
+                                    <param id="0" name="Unique ID">11</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="805525860007104" type="luz">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="344371135143863">
                     <conditions>
@@ -124,13 +185,177 @@
                             <param id="0" name="Object">avatar3</param>
                         </condition>
                     </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="530319619749801">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="833708716120340" type="luz">
+                                    <param id="0" name="Unique ID">12</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="878333074032143" type="System">
+                                    <param id="0" name="Variable">aatarSeleccionado</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="866428796847597" type="luz">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="130411791361245">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="715528218777031" type="snsActivo">
+                            <param id="0" name="Object">avatar3</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="748850025010829">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="738766403690515" type="luz">
+                                    <param id="0" name="Unique ID">12</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="902999112550330" type="luz">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="171072783352544">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="390914422865734" type="snsActivo">
+                            <param id="0" name="Object">avatar4</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="854839985065370">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="251904838278915" type="luz">
+                                    <param id="0" name="Unique ID">13</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="681969541145366" type="luz">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="497377618884742">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="314753622666898" type="snsActivo">
+                            <param id="0" name="Object">avatar4</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="646428029931189">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="314823456157206" type="luz">
+                                    <param id="0" name="Unique ID">13</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="857142795764919" type="luz">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Cuando se llega al elemento 0 o se llega al ultimo elemento de los avatar se desactivan los botones de desplazamiento para evitar que se pierdan en pantalla los avatar" sid="759399647716988" title="Verificar_extremos_lista">
+            <sub-events>
+                <event-block sid="123216584514055">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="150553843693428" type="snsAvatar1">
+                            <param id="0" name="Object">avatar1</param>
+                        </condition>
+                    </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="268246953113463" type="snsActivo">
-                            <param id="0" name="Visibility">1</param>
+                        <action id="-9" name="Set value" sid="558593006797813" type="System">
+                            <param id="0" name="Variable">isInicioLista</param>
+                            <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-9" name="Set value" sid="878333074032143" type="System">
-                            <param id="0" name="Variable">aatarSeleccionado</param>
-                            <param id="1" name="Value">3</param>
+                    </actions>
+                </event-block>
+                <event-block sid="259747770154587">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="631654328087678" type="snsAvatarUltimo">
+                            <param id="0" name="Object">avatar4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="488813566080741" type="System">
+                            <param id="0" name="Variable">isFinLista</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="952993258919362" title="Determinar_genero">
+            <sub-events>
+                <event-block sid="136355492019167">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="481464708171595" type="System">
+                            <param id="0" name="Variable">sexo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;masc&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="489211856337700" type="avatar1">
+                            <param id="0" name="Animation">&quot;masc&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="253613970064217" type="avatar2">
+                            <param id="0" name="Animation">&quot;masc&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="754247087537024" type="avatar3">
+                            <param id="0" name="Animation">&quot;masc&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="514274493264459" type="avatar4">
+                            <param id="0" name="Animation">&quot;masc&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="279210052991571">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="661898029567275" type="System">
+                            <param id="0" name="Variable">sexo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;fem&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="168415400291527" type="avatar1">
+                            <param id="0" name="Animation">&quot;fem&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="677831416745848" type="avatar2">
+                            <param id="0" name="Animation">&quot;fem&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="874269199094890" type="avatar3">
+                            <param id="0" name="Animation">&quot;fem&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="617359785647300" type="avatar4">
+                            <param id="0" name="Animation">&quot;fem&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
