@@ -3,6 +3,9 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eCustomAvatar</name>
     <events>
+        <variable constant="0" name="aux" sid="490144674465871" static="0" type="text">&quot;nulo&quot;</variable>
+        <variable constant="0" name="indiceMostrarPelo" sid="709742669096658" static="0" type="number">1</variable>
+        <comment>Define la base del avatar</comment>
         <event-group description="" sid="183278830994025" title="setup_Custom_Avatar">
             <sub-events>
                 <event-block sid="535699390094752">
@@ -10,84 +13,114 @@
                         <condition id="-2" name="On start of layout" sid="819314488454675" type="System" />
                     </conditions>
                     <actions />
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="151206694225468" title="Definir_base_avatar">
-            <sub-events>
-                <event-block sid="685183835698560">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="256972597059193" type="System">
-                            <param id="0" name="Variable">sexo</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;masc&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="417485118786039" type="baseAvatarMasc">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                    </actions>
                     <sub-events>
-                        <event-block sid="981607243034073">
+                        <event-block sid="580058677271961">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="624259322063583" type="System">
-                                    <param id="0" name="Variable">aatarSeleccionado</param>
+                                <condition id="-14" name="Compare variable" sid="430468636922916" type="System">
+                                    <param id="0" name="Variable">sexo</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
+                                    <param id="2" name="Value">&quot;masc&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="284030448395455" type="baseAvatarMasc">
-                                    <param id="0" name="Animation">&quot;blanco&quot;</param>
-                                    <param id="1" name="From">1</param>
+                                <action id="-15" name="Set visible" sid="417485118786039" type="baseAvatarMasc">
+                                    <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
-                        </event-block>
-                        <event-block sid="146744747345622">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="523077416161810" type="System">
-                                    <param id="0" name="Variable">aatarSeleccionado</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">2</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="131726638893380" type="baseAvatarMasc">
-                                    <param id="0" name="Animation">&quot;moreno&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="215486101074847">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="849265270518869" type="System">
-                                    <param id="0" name="Variable">aatarSeleccionado</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">3</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="648385312827461" type="baseAvatarMasc">
-                                    <param id="0" name="Animation">&quot;negro&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="100009522025028">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="632289076224094" type="System">
-                                    <param id="0" name="Variable">aatarSeleccionado</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">4</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="101061416318054" type="baseAvatarMasc">
-                                    <param id="0" name="Animation">&quot;blanco&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
+                            <sub-events>
+                                <event-block sid="547258898337947">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="947415273253297" type="System">
+                                            <param id="0" name="Variable">aatarSeleccionado</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="284030448395455" type="baseAvatarMasc">
+                                            <param id="0" name="Animation">&quot;blanco&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="216779374501365" type="cabellosMasc">
+                                            <param id="0" name="Animation">&quot;c3&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="349283639081689" type="expresionesMasc">
+                                            <param id="0" name="Animation">&quot;triste&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="862764697509559">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="510808298513216" type="System">
+                                            <param id="0" name="Variable">aatarSeleccionado</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="131726638893380" type="baseAvatarMasc">
+                                            <param id="0" name="Animation">&quot;moreno&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="630053625375744" type="cabellosMasc">
+                                            <param id="0" name="Animation">&quot;c1&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="968301312157041" type="expresionesMasc">
+                                            <param id="0" name="Animation">&quot;triste&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="947484176575776">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="785253175162210" type="System">
+                                            <param id="0" name="Variable">aatarSeleccionado</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="648385312827461" type="baseAvatarMasc">
+                                            <param id="0" name="Animation">&quot;negro&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="973150587845978" type="cabellosMasc">
+                                            <param id="0" name="Animation">&quot;c6&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="792121211257574" type="expresionesMasc">
+                                            <param id="0" name="Animation">&quot;triste&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="173190293707248">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="481117796474499" type="System">
+                                            <param id="0" name="Variable">aatarSeleccionado</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">4</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="101061416318054" type="baseAvatarMasc">
+                                            <param id="0" name="Animation">&quot;blanco&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="485286161904744" type="cabellosMasc">
+                                            <param id="0" name="Animation">&quot;c2&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="113849634610292" type="expresionesMasc">
+                                            <param id="0" name="Animation">&quot;triste&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -104,6 +137,256 @@
                     <actions>
                         <action id="-2" name="Go to layout" sid="540865257296762" type="System">
                             <param id="0" name="Layout">main</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="325101390886335" title="Seleccionar_Pelo">
+            <sub-events>
+                <event-block sid="444538108939152">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="422341971640481" type="Touch">
+                            <param id="0" name="Object">btnCabelloMasc1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="856004328871051" type="System">
+                            <param id="0" name="Variable">aux</param>
+                            <param id="1" name="Value">&quot;c1&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="940353543875284" type="cabellosMasc">
+                            <param id="0" name="Animation">&quot;c1&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="393299671090174">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="992274396408415" type="Touch">
+                            <param id="0" name="Object">btnCabelloMasc2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="850991451764081" type="System">
+                            <param id="0" name="Variable">aux</param>
+                            <param id="1" name="Value">&quot;c2&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="392431648044920" type="cabellosMasc">
+                            <param id="0" name="Animation">&quot;c2&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="130647975797295">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="464644774098734" type="Touch">
+                            <param id="0" name="Object">btnCabelloMasc3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="847348926140057" type="System">
+                            <param id="0" name="Variable">aux</param>
+                            <param id="1" name="Value">&quot;c3&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="332315756049649" type="cabellosMasc">
+                            <param id="0" name="Animation">&quot;c3&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="253581531257440">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="757238942588987" type="Touch">
+                            <param id="0" name="Object">btnCabelloMasc4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="836621948969751" type="cabellosMasc">
+                            <param id="0" name="Animation">&quot;c4&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="151636103291107">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="793099048530835" type="Touch">
+                            <param id="0" name="Object">btnCabelloMasc5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="969651961397577" type="cabellosMasc">
+                            <param id="0" name="Animation">&quot;c5&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="807118767286912">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="676742253360128" type="Touch">
+                            <param id="0" name="Object">btnCabelloMasc6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="850496571026058" type="cabellosMasc">
+                            <param id="0" name="Animation">&quot;c6&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="735881750368905">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="337809251329666" type="Touch">
+                            <param id="0" name="Object">btnCabelloMasc7</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="840261951909604" type="cabellosMasc">
+                            <param id="0" name="Animation">&quot;c7&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="470114728439396" title="Pasar_pelo">
+            <sub-events>
+                <event-block sid="940948913426790">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="605954228988256" type="Touch">
+                            <param id="0" name="Object">btnPeloDerecho</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="891386605326988" type="System">
+                            <param id="0" name="Variable">indiceMostrarPelo</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="597867684803885" type="System">
+                            <param id="0" name="Variable">indiceMostrarPelo</param>
+                            <param id="1" name="Value">indiceMostrarPelo + 1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="660221011313464">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="228205413012155" type="Touch">
+                            <param id="0" name="Object">btnPeloIzquierdo</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="732797632567934" type="System">
+                            <param id="0" name="Variable">indiceMostrarPelo</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="231868915927295" type="System">
+                            <param id="0" name="Variable">indiceMostrarPelo</param>
+                            <param id="1" name="Value">indiceMostrarPelo - 1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="764571066499748">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="663557356399460" type="System">
+                            <param id="0" name="Variable">indiceMostrarPelo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="363964984860898" type="btnCabellos">
+                            <param id="0" name="X">-50</param>
+                            <param id="1" name="Y">-50</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="231911186929173" type="btnCabelloMasc1">
+                            <param id="0" name="X">120</param>
+                            <param id="1" name="Y">240</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="965593218675764" type="btnCabelloMasc2">
+                            <param id="0" name="X">230</param>
+                            <param id="1" name="Y">240</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="601438006381896" type="btnCabelloMasc3">
+                            <param id="0" name="X">340</param>
+                            <param id="1" name="Y">240</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="208633103602148">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="921537731802833" type="System">
+                            <param id="0" name="Variable">indiceMostrarPelo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="685136810632173" type="btnCabellos">
+                            <param id="0" name="X">-50</param>
+                            <param id="1" name="Y">-50</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="233994917866014" type="btnCabelloMasc4">
+                            <param id="0" name="X">120</param>
+                            <param id="1" name="Y">240</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="852280591272558" type="btnCabelloMasc5">
+                            <param id="0" name="X">230</param>
+                            <param id="1" name="Y">240</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="336533001393409" type="btnCabelloMasc6">
+                            <param id="0" name="X">340</param>
+                            <param id="1" name="Y">240</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="741263408591573">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="978942353531927" type="System">
+                            <param id="0" name="Variable">indiceMostrarPelo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="429539402307059" type="btnCabellos">
+                            <param id="0" name="X">-50</param>
+                            <param id="1" name="Y">-50</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="900693687217236" type="btnCabelloMasc7">
+                            <param id="0" name="X">120</param>
+                            <param id="1" name="Y">240</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="414771265783597" title="Seleccionar_expresion">
+            <sub-events>
+                <event-block sid="428229359091258">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="192163908621200" type="Touch">
+                            <param id="0" name="Object">btnExpresionEnojado</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="984491481185614" type="expresionesMasc">
+                            <param id="0" name="Animation">&quot;enojado&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="795373527446149">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="495576537733450" type="Touch">
+                            <param id="0" name="Object">btnExpresionFeliz</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="418114068924315" type="expresionesMasc">
+                            <param id="0" name="Animation">&quot;feliz&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
