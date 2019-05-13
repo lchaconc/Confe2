@@ -15,6 +15,19 @@
         </event-group>
         <event-group description="" sid="545420417498187" title="Botones_Unidades">
             <sub-events>
+                <event-block sid="334735540154439">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="770530493776624" type="Touch">
+                            <param id="0" name="Object">btnAvatar</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Go to URL" sid="381091024336164" type="Browser">
+                            <param id="0" name="URL">&quot;http://localhost/c2/Avatar/&quot;</param>
+                            <param id="1" name="Target">0</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="545350866579797">
                     <conditions>
                         <condition id="3" name="On touched object" sid="339167844658024" type="Touch">
