@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>eSunMenu</name>
+    <events>
+        <event-group description="" sid="701117620132210" title="Boton_Home">
+            <sub-events>
+                <event-block sid="135116166036958">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="310439826823176" type="Touch">
+                            <param id="0" name="Object">btnHome</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="925704592519468" type="System">
+                            <param id="0" name="Layout">Home</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="199779665079946" title="Btn_Unidad1">
+            <sub-events>
+                <event-block sid="241480781912158">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="502185254737914" type="Touch">
+                            <param id="0" name="Object">u1Ropero1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Go to URL" sid="525352204399974" type="Browser">
+                            <param id="0" name="URL">&quot;http://localhost/c2/Ropero/&quot;</param>
+                            <param id="1" name="Target">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
