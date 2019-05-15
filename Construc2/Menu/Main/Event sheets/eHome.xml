@@ -34,11 +34,37 @@
                             <param id="0" name="Object">btnU1</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-2" name="Go to layout" sid="269669215344388" type="System">
-                            <param id="0" name="Layout">SubMenu</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="783893233826258">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="117416160131707" type="System">
+                                    <param id="0" name="Variable">isFirstTime</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="658379071815759" type="System">
+                                    <param id="0" name="Variable">isFirstTime</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="846193684338638" type="System">
+                                    <param id="0" name="Layout">Objetos</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="368146997110881">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="294942957623954" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="269669215344388" type="System">
+                                    <param id="0" name="Layout">SubMenu</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>

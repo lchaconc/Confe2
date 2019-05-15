@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eMain</name>
     <events>
-        <variable constant="0" name="sexo" sid="327830480643913" static="0" type="text">masc</variable>
+        <variable comment="masc - fem" constant="0" name="sexo" sid="327830480643913" static="0" type="text">masc</variable>
         <variable constant="0" name="isFinLista" sid="654288113613225" static="0" type="number">0</variable>
         <variable comment="0 falso / 1 verdero" constant="0" name="isInicioLista" sid="901388738268504" static="0" type="number">0</variable>
         <variable constant="0" name="aatarSeleccionado" sid="161729942656353" static="0" type="number">1</variable>
@@ -114,6 +114,9 @@
                                 <action id="-15" name="Set visible" sid="932182624760398" type="luz">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
+                                <action id="9" name="Set scale" sid="915681929930158" type="avatar1">
+                                    <param id="0" name="Scale">1.1</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -135,6 +138,9 @@
                             <actions>
                                 <action id="-15" name="Set visible" sid="270380382444219" type="luz">
                                     <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="119309397337961" type="avatar1">
+                                    <param id="0" name="Scale">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -162,6 +168,9 @@
                                 <action id="-15" name="Set visible" sid="721911159987121" type="luz">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
+                                <action id="9" name="Set scale" sid="618767701099366" type="avatar2">
+                                    <param id="0" name="Scale">1.1</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -183,6 +192,9 @@
                             <actions>
                                 <action id="-15" name="Set visible" sid="805525860007104" type="luz">
                                     <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="658402076283875" type="avatar2">
+                                    <param id="0" name="Scale">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -210,6 +222,9 @@
                                 <action id="-15" name="Set visible" sid="866428796847597" type="luz">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
+                                <action id="9" name="Set scale" sid="557320465935290" type="avatar3">
+                                    <param id="0" name="Scale">1.1</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -231,6 +246,9 @@
                             <actions>
                                 <action id="-15" name="Set visible" sid="902999112550330" type="luz">
                                     <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="635569919096126" type="avatar3">
+                                    <param id="0" name="Scale">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -258,6 +276,9 @@
                                 <action id="-15" name="Set visible" sid="681969541145366" type="luz">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
+                                <action id="9" name="Set scale" sid="621112498291890" type="avatar4">
+                                    <param id="0" name="Scale">1.1</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -279,6 +300,9 @@
                             <actions>
                                 <action id="-15" name="Set visible" sid="857142795764919" type="luz">
                                     <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="223090799999658" type="avatar4">
+                                    <param id="0" name="Scale">1</param>
                                 </action>
                             </actions>
                         </event-block>

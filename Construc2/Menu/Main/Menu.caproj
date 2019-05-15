@@ -12,6 +12,7 @@
     <used-plugins>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
@@ -26,7 +27,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
-    <first-layout>Home</first-layout>
+    <first-layout>Preload</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -141,6 +142,14 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="btnSiguiente" sid="701364222665765">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="670236226660850" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Backgrounds">
             <object-type name="bgMain" sid="777382065577838">
@@ -159,9 +168,89 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="bgSecundario" sid="478585067528401">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="948925053824523" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\inicio juegos\sandalias.png">
+                            <collision-poly>
+                                <point x="0.00078125" y="0.00138889" />
+                                <point x="0.999219" y="0.00138889" />
+                                <point x="1" y="1" />
+                                <point x="0.00078125" y="0.998611" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bgSecundario2" sid="745546583981750">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="225453760777806" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\inicio juegos\avance.png">
+                            <collision-poly>
+                                <point x="0.00078125" y="0.00138889" />
+                                <point x="0.999219" y="0.00138889" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
-        <object-folder name="Sprites" />
-        <object-folder name="Texts" />
+        <object-folder name="Sprites">
+            <object-type name="sandalias" sid="378089074337998">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="802085614407772" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.50173" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\inicio juegos\Asset 49inicio.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="fondoRedondo" sid="313534486120095">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="854675685902167" speed="5">
+                        <frame duration="1" hotspotX="0.501639" hotspotY="0.501558" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\inicio juegos\Asset 51inicio.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="barraAvance" sid="430209969570552">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="avance1" pingpong="0" repeatcount="1" repeatto="0" sid="117096229486543" speed="5">
+                        <frame duration="1" hotspotX="0.500971" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\inicio juegos\Asset 57@2x.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Texts">
+            <object-type name="txtSandalias" sid="257918641298354">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="643519359645197" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\inicio juegos\Asset 60inicio.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="txtTituloSandalias" sid="982423779224050">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="203671218815531" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.506849" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\inicio juegos\Asset 59inicio.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="txtAmistad1" sid="771119745911215">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="584454691520572" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503401" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\inicio juegos\Asset 61inicio.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-folder name="Controls" />
         <object-folder name="System">
             <object-type name="Touch" sid="948977961617129">
@@ -172,6 +261,9 @@
             </object-type>
             <object-type name="Browser" sid="310670933015733">
                 <plugin id="Browser" />
+            </object-type>
+            <object-type name="LocalStorage" sid="298499100656917">
+                <plugin id="LocalStorage" />
             </object-type>
         </object-folder>
         <object-folder name="Sensors" />
@@ -200,10 +292,16 @@
     <layout-folder>
         <layout>Home.xml</layout>
         <layout>SubMenu.xml</layout>
+        <layout>Objetos.xml</layout>
+        <layout>AvanceAmistad.xml</layout>
+        <layout>Preload.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>eHome.xml</event-sheet>
         <event-sheet>eSunMenu.xml</event-sheet>
+        <event-sheet>eObjetos.xml</event-sheet>
+        <event-sheet>eAvanceAmistad.xml</event-sheet>
+        <event-sheet>ePreload.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Function" uid="0" />
@@ -213,6 +311,7 @@
             </properties>
         </global-instance>
         <global-instance type="Browser" uid="21" />
+        <global-instance type="LocalStorage" uid="37" />
     </global-instances>
     <sounds-folder />
     <music-folder />

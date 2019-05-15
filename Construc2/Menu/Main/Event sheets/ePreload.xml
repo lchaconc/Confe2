@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ePreload</name>
+    <events>
+        <variable constant="0" name="isFirstTime" sid="151443005306942" static="0" type="number">1</variable>
+        <event-block sid="258257201921075">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="850352657410277" type="System" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="619145828608203" type="System">
+                    <param id="0" name="Layout">Home</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
