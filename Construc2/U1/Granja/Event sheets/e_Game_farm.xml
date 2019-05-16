@@ -611,20 +611,42 @@
                             <param id="0" name="Name">&quot;cerarModalInventario&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
+                        <action id="-16" name="Wait" sid="407284439315704" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="492838668052201" type="characterFem">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="515814382606772" type="animacionTrasquiladaElla">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="498278133374976" type="animacionTrasquiladaElla">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
                         <action id="0" name="Play" sid="622491310835081" type="Audio">
                             <param id="0" name="Audio file">rasuradora</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;rasuradora&quot;</param>
                         </action>
-                        <action id="-16" name="Wait" sid="407284439315704" type="System">
-                            <param id="0" name="Seconds">3</param>
+                        <action id="-16" name="Wait" sid="634259589094199" type="System">
+                            <param id="0" name="Seconds">2</param>
                         </action>
                         <action id="0" name="Play" sid="106018027215145" type="Audio">
                             <param id="0" name="Audio file">oveja</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;rasuradora&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="476796369708780" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="778989392843321" type="animacionTrasquiladaElla">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="722515969305314" type="characterFem">
+                            <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="4" name="Set animation" sid="385125538746102" type="oveja">
                             <param id="0" name="Animation">&quot;pelona&quot;</param>
@@ -2741,6 +2763,9 @@
                         <action id="-13" name="Set boolean" sid="771652972026908" type="inv_regadera">
                             <param id="0" name="Instance variable">activo2</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="539882886229448" type="rasuradora">
+                            <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
                 </event-block>
