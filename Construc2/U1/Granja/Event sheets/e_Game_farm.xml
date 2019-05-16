@@ -695,7 +695,7 @@
                                     <param id="0" name="Instance variable">activo</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="962922483261984" type="characterMasc">
+                                <action id="-3" name="Set position" sid="962922483261984" type="sprControl">
                                     <param id="0" name="X">1792</param>
                                     <param id="1" name="Y">340</param>
                                 </action>
@@ -976,7 +976,7 @@
                             <param id="0" name="Name">&quot;cerarModalInventario&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
-                        <action id="-3" name="Set position" sid="384993619145916" type="characterMasc">
+                        <action id="-3" name="Set position" sid="384993619145916" type="sprControl">
                             <param id="0" name="X">608</param>
                             <param id="1" name="Y">256</param>
                         </action>
@@ -1699,6 +1699,9 @@
                             <param id="0" name="Name">&quot;ajaxGuardarDia&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
+                        <action id="-15" name="Set visible" sid="785563926563776" type="regadera">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
                         <action id="0" name="Call function" sid="830434035902279" type="Function">
                             <param id="0" name="Name">&quot;cargarTextoConsigna2&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
@@ -1778,6 +1781,12 @@
                             <param id="0" name="Name">&quot;ajaxGuardarDia&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
+                        <action id="-15" name="Set visible" sid="471827004683492" type="rasuradora">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="212843422899689" type="carretillo">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
                         <action id="0" name="Call function" sid="841074349412992" type="Function">
                             <param id="0" name="Name">&quot;cargarTextoConsigna3&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
@@ -1856,6 +1865,9 @@
                         <action id="0" name="Call function" sid="863820661068163" type="Function">
                             <param id="0" name="Name">&quot;ajaxGuardarDia&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="594879869230745" type="baldeVacio">
+                            <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="0" name="Call function" sid="340542205127930" type="Function">
                             <param id="0" name="Name">&quot;cargarTextoConsigna4&quot;</param>
@@ -2217,9 +2229,17 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Set position" sid="632874949612599" type="txtInstruccionesDia">
+                        <action disabled="1" id="-3" name="Set position" sid="632874949612599" type="txtInstruccionesDia">
                             <param id="0" name="X">512</param>
                             <param id="1" name="Y">224</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="450460486822385" type="textosMisiones">
+                            <param id="0" name="Animation">&quot;m1&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="603970216666354" type="titulosDias">
+                            <param id="0" name="Animation">&quot;d1&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                         <action id="-4" name="Set layer visible" sid="606694299145989" type="System">
                             <param id="0" name="Layer">&quot;textos&quot;</param>
@@ -2241,9 +2261,17 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Set position" sid="420759548166177" type="txtInstruccionesDia">
+                        <action disabled="1" id="-3" name="Set position" sid="420759548166177" type="txtInstruccionesDia">
                             <param id="0" name="X">512</param>
                             <param id="1" name="Y">224</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="146365449090467" type="textosMisiones">
+                            <param id="0" name="Animation">&quot;m2&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="608330917955642" type="titulosDias">
+                            <param id="0" name="Animation">&quot;d2&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                         <action id="-4" name="Set layer visible" sid="967760404157724" type="System">
                             <param id="0" name="Layer">&quot;textos&quot;</param>
@@ -2265,9 +2293,17 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Set position" sid="605779610973688" type="txtInstruccionesDia">
+                        <action disabled="1" id="-3" name="Set position" sid="605779610973688" type="txtInstruccionesDia">
                             <param id="0" name="X">512</param>
                             <param id="1" name="Y">224</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="787112737447370" type="textosMisiones">
+                            <param id="0" name="Animation">&quot;m3&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="588246810002505" type="titulosDias">
+                            <param id="0" name="Animation">&quot;d3&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                         <action id="-4" name="Set layer visible" sid="276578465248906" type="System">
                             <param id="0" name="Layer">&quot;textos&quot;</param>
@@ -2289,9 +2325,17 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Set position" sid="365481512808236" type="txtInstruccionesDia">
+                        <action disabled="1" id="-3" name="Set position" sid="365481512808236" type="txtInstruccionesDia">
                             <param id="0" name="X">512</param>
                             <param id="1" name="Y">224</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="985966160923004" type="textosMisiones">
+                            <param id="0" name="Animation">&quot;m4&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="113718961057308" type="titulosDias">
+                            <param id="0" name="Animation">&quot;d4&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                         <action id="-4" name="Set layer visible" sid="881344427409438" type="System">
                             <param id="0" name="Layer">&quot;textos&quot;</param>
@@ -2317,9 +2361,17 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Set position" sid="861217754068633" type="txtInstruccionesDia">
+                        <action disabled="1" id="-3" name="Set position" sid="861217754068633" type="txtInstruccionesDia">
                             <param id="0" name="X">512</param>
                             <param id="1" name="Y">224</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="642689240911653" type="textosMisiones">
+                            <param id="0" name="Animation">&quot;m5&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="191554728497130" type="titulosDias">
+                            <param id="0" name="Animation">&quot;d5&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                         <action id="-4" name="Set layer visible" sid="328230408126956" type="System">
                             <param id="0" name="Layer">&quot;textos&quot;</param>
@@ -2345,9 +2397,17 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Set position" sid="354616667230275" type="txtInstruccionesDia">
+                        <action disabled="1" id="-3" name="Set position" sid="354616667230275" type="txtInstruccionesDia">
                             <param id="0" name="X">512</param>
                             <param id="1" name="Y">224</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="492707226295156" type="textosMisiones">
+                            <param id="0" name="Animation">&quot;m6&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="291124806485665" type="titulosDias">
+                            <param id="0" name="Animation">&quot;d6&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                         <action id="-4" name="Set layer visible" sid="192774119059365" type="System">
                             <param id="0" name="Layer">&quot;textos&quot;</param>
