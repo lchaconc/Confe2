@@ -93,5 +93,22 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="708973977331450" title="Boton_Home">
+            <sub-events>
+                <event-block sid="448312571995200">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="553952288383951" type="Touch">
+                            <param id="0" name="Object">btnHome</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Go to URL" sid="372044641486890" type="Browser">
+                            <param id="0" name="URL">&quot;http://localhost:5000&quot;</param>
+                            <param id="1" name="Target">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
