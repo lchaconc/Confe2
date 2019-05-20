@@ -761,7 +761,7 @@
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action id="-16" name="Wait" sid="969281765062529" type="System">
-                            <param id="0" name="Seconds">3</param>
+                            <param id="0" name="Seconds">0.5</param>
                         </action>
                         <action id="-13" name="Set boolean" sid="476641152136501" type="cow2">
                             <param id="0" name="Instance variable">activoOrdenar</param>
@@ -774,12 +774,6 @@
                             <param id="0" name="Instance variable">activo</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="0" name="Play" sid="675939479359208" type="Audio">
-                            <param id="0" name="Audio file">logrado1</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;corte&quot;</param>
-                        </action>
                         <action id="-9" name="Set value" sid="837836346784946" type="System">
                             <param id="0" name="Variable">status</param>
                             <param id="1" name="Value">&quot;VAca ordeñanada&quot;</param>
@@ -789,6 +783,72 @@
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="977625629464258">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="765410063257270" type="System">
+                                    <param id="0" name="Variable">sexo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;f&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="700899956024491" type="cow2">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="513182168962665" type="animacionOrdenada">
+                                    <param id="0" name="X">514</param>
+                                    <param id="1" name="Y">114</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="740686650464542" type="animacionOrdenada">
+                                    <param id="0" name="Animation">&quot;ella&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="675939479359208" type="Audio">
+                                    <param id="0" name="Audio file">milky</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;leche&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="212565664492337" type="System">
+                                    <param id="0" name="Seconds">3</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="682458813389076" type="cow2">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="767239300817161">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="585416288056742" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="760290220999980" type="cow2">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="906124692603666" type="animacionOrdenada">
+                                    <param id="0" name="X">514</param>
+                                    <param id="1" name="Y">114</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="115660621392171" type="animacionOrdenada">
+                                    <param id="0" name="Animation">&quot;el&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="176869044181161" type="Audio">
+                                    <param id="0" name="Audio file">milky</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;leche&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="169523610468135" type="System">
+                                    <param id="0" name="Seconds">3</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="838000881798569" type="cow2">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <comment>Día 4: regar huerta segunda vez</comment>
                 <event-block sid="425375007417324">
@@ -1894,8 +1954,9 @@
                             <param id="0" name="Name">&quot;ajaxGuardarDia&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
-                        <action id="-15" name="Set visible" sid="594879869230745" type="baldeVacio">
-                            <param id="0" name="Visibility">1</param>
+                        <action id="-3" name="Set position" sid="594879869230745" type="baldeVacio">
+                            <param id="0" name="X">1298</param>
+                            <param id="1" name="Y">1104</param>
                         </action>
                         <action id="0" name="Call function" sid="340542205127930" type="Function">
                             <param id="0" name="Name">&quot;cargarTextoConsigna4&quot;</param>
@@ -2790,6 +2851,10 @@
                         <action id="4" name="Set animation" sid="243610307594919" type="oveja">
                             <param id="0" name="Animation">&quot;pelona&quot;</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="152421860636788" type="baldeVacio">
+                            <param id="0" name="X">1298</param>
+                            <param id="1" name="Y">1104</param>
                         </action>
                         <action id="-15" name="Set visible" sid="687688014615367" type="inv_regadera">
                             <param id="0" name="Visibility">1</param>
