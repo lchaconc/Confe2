@@ -707,8 +707,8 @@
                                     <param id="1" name="Tag (optional)">&quot;corte&quot;</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="417909881766822" type="granero">
-                                    <param id="0" name="X">1792</param>
-                                    <param id="1" name="Y">160</param>
+                                    <param id="0" name="X">1740</param>
+                                    <param id="1" name="Y">163</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="894426788059374" type="granero">
                                     <param id="0" name="Visibility">1</param>
@@ -717,6 +717,7 @@
                                     <param id="0" name="Instance variable">activo</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="-9" name="Destroy" sid="745881319999521" type="ladrilloGranero" />
                                 <action id="-3" name="Set position" sid="962922483261984" type="sprControl">
                                     <param id="0" name="X">1792</param>
                                     <param id="1" name="Y">340</param>
@@ -1101,8 +1102,8 @@
                             <param id="1" name="Tag (optional)">&quot;corte&quot;</param>
                         </action>
                         <action id="-3" name="Set position" sid="113961119569518" type="choza">
-                            <param id="0" name="X">832</param>
-                            <param id="1" name="Y">117</param>
+                            <param id="0" name="X">877</param>
+                            <param id="1" name="Y">113</param>
                         </action>
                         <action id="-15" name="Set visible" sid="875238743234374" type="choza">
                             <param id="0" name="Visibility">1</param>
@@ -1819,8 +1820,9 @@
                             <param id="0" name="Name">&quot;ajaxGuardarDia&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
-                        <action id="-15" name="Set visible" sid="785563926563776" type="regadera">
-                            <param id="0" name="Visibility">1</param>
+                        <action id="0" name="Call function" sid="194419912927657" type="Function">
+                            <param id="0" name="Name">&quot;activarInvDia2&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action id="0" name="Call function" sid="830434035902279" type="Function">
                             <param id="0" name="Name">&quot;cargarTextoConsigna2&quot;</param>
@@ -1901,11 +1903,9 @@
                             <param id="0" name="Name">&quot;ajaxGuardarDia&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
-                        <action id="-15" name="Set visible" sid="471827004683492" type="rasuradora">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="212843422899689" type="carretillo">
-                            <param id="0" name="Visibility">1</param>
+                        <action id="0" name="Call function" sid="948418155856324" type="Function">
+                            <param id="0" name="Name">&quot;activarInvDia3&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action id="0" name="Call function" sid="841074349412992" type="Function">
                             <param id="0" name="Name">&quot;cargarTextoConsigna3&quot;</param>
@@ -1986,17 +1986,13 @@
                             <param id="0" name="Name">&quot;ajaxGuardarDia&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
-                        <action id="-3" name="Set position" sid="594879869230745" type="baldeVacio">
-                            <param id="0" name="X">1298</param>
-                            <param id="1" name="Y">1104</param>
+                        <action id="0" name="Call function" sid="479871473771800" type="Function">
+                            <param id="0" name="Name">&quot;cargarTextoConsigna3&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action id="0" name="Call function" sid="340542205127930" type="Function">
                             <param id="0" name="Name">&quot;cargarTextoConsigna4&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="367671927270803" type="inv_regadera">
-                            <param id="0" name="Instance variable">activo</param>
-                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2832,6 +2828,11 @@
                         <action id="-15" name="Set visible" sid="505556775220689" type="carriot">
                             <param id="0" name="Visibility">1</param>
                         </action>
+                        <action id="-3" name="Set position" sid="269292310759173" type="regadera">
+                            <param id="0" name="X">928</param>
+                            <param id="1" name="Y">1120</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="372528511589891" type="palita" />
                     </actions>
                 </event-block>
                 <event-block sid="131484954015485">
@@ -2857,8 +2858,13 @@
                             <param id="0" name="Instance variable">activo2</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="539882886229448" type="rasuradora">
-                            <param id="0" name="Visibility">1</param>
+                        <action id="-3" name="Set position" sid="539882886229448" type="rasuradora">
+                            <param id="0" name="X">247</param>
+                            <param id="1" name="Y">824</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="326584722819423" type="carretillo">
+                            <param id="0" name="X">352</param>
+                            <param id="1" name="Y">1088</param>
                         </action>
                     </actions>
                 </event-block>
