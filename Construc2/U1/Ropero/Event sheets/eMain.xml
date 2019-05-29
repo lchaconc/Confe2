@@ -3,6 +3,10 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eMain</name>
     <events>
+        <variable constant="0" name="expresion" sid="515570341785015" static="0" type="text">enojado</variable>
+        <variable constant="0" name="cabello" sid="896856940074906" static="0" type="number">0</variable>
+        <variable constant="0" name="colorPiel" sid="271624059746128" static="0" type="text">negro</variable>
+        <variable constant="0" name="sexo" sid="561508372494367" static="0" type="text">h</variable>
         <variable constant="0" name="aux" sid="264688356595490" static="0" type="text">nulo</variable>
         <event-group description="" sid="370034331693827" title="Setup">
             <sub-events>
@@ -41,51 +45,43 @@
                     <sub-events>
                         <event-block sid="143313737499956">
                             <conditions>
-                                <condition id="1" name="Is overlapping another object" sid="632173920540726" type="trajeEntero">
+                                <condition id="1" name="Is overlapping another object" sid="632173920540726" type="ganchoHombreEntero">
                                     <param id="0" name="Object">baseAvatarMasc</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="554427151848969" type="baseTrajePlaya">
+                                <action id="0" name="Call function" sid="649143535803604" type="Function">
+                                    <param id="0" name="Name">&quot;AcomodarRopaOrigen&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-3" name="Set position" sid="327229999338405" type="trajeHombreEntero">
+                                    <param id="0" name="X">249</param>
+                                    <param id="1" name="Y">333</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="542906065761402" type="ganchoHombreEntero">
                                     <param id="0" name="X">-100</param>
                                     <param id="1" name="Y">-100</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="327229999338405" type="baseTrajeEntero">
-                                    <param id="0" name="X">277.88</param>
-                                    <param id="1" name="Y">357.895</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="542906065761402" type="trajeEntero">
-                                    <param id="0" name="X">-100</param>
-                                    <param id="1" name="Y">-100</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="758890368049232" type="trajePlaya">
-                                    <param id="0" name="X">1117.378</param>
-                                    <param id="1" name="Y">290.322</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block sid="745665954399787">
                             <conditions>
-                                <condition id="1" name="Is overlapping another object" sid="309706921767011" type="trajePlaya">
+                                <condition id="1" name="Is overlapping another object" sid="309706921767011" type="ganchoHombrePlaya">
                                     <param id="0" name="Object">baseAvatarMasc</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="470812010856759" type="baseTrajeEntero">
+                                <action id="0" name="Call function" sid="894737158663696" type="Function">
+                                    <param id="0" name="Name">&quot;AcomodarRopaOrigen&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-3" name="Set position" sid="737073380318343" type="trajeHombrePlaya">
+                                    <param id="0" name="X">248</param>
+                                    <param id="1" name="Y">333</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="984885998078094" type="ganchoHombrePlaya">
                                     <param id="0" name="X">-100</param>
                                     <param id="1" name="Y">-100</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="737073380318343" type="baseTrajePlaya">
-                                    <param id="0" name="X">277.88</param>
-                                    <param id="1" name="Y">357.895</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="984885998078094" type="trajePlaya">
-                                    <param id="0" name="X">-100</param>
-                                    <param id="1" name="Y">-100</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="879978095182480" type="trajeEntero">
-                                    <param id="0" name="X">927</param>
-                                    <param id="1" name="Y">287</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -105,6 +101,35 @@
                         <action id="7" name="Go to URL" sid="372044641486890" type="Browser">
                             <param id="0" name="URL">&quot;http://localhost:5000&quot;</param>
                             <param id="1" name="Target">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="227927846682199" title="Acomodar_ropa_origen">
+            <sub-events>
+                <event-block sid="784989658753805">
+                    <conditions>
+                        <condition id="0" name="On function" sid="902419503761842" type="Function">
+                            <param id="0" name="Name">&quot;AcomodarRopaOrigen&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="554427151848969" type="trajeHombrePlaya">
+                            <param id="0" name="X">-100</param>
+                            <param id="1" name="Y">-100</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="470812010856759" type="trajeHombreEntero">
+                            <param id="0" name="X">-100</param>
+                            <param id="1" name="Y">-100</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="758890368049232" type="ganchoHombrePlaya">
+                            <param id="0" name="X">1117.378</param>
+                            <param id="1" name="Y">290.322</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="879978095182480" type="ganchoHombreEntero">
+                            <param id="0" name="X">927</param>
+                            <param id="1" name="Y">287</param>
                         </action>
                     </actions>
                 </event-block>

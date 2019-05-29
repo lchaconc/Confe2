@@ -61,8 +61,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>852</x>
-                        <y>351</y>
+                        <x>861</x>
+                        <y>289</y>
                         <z>0</z>
                         <width>821</width>
                         <height>523</height>
@@ -95,18 +95,18 @@
                 <instance type="baseAvatarMasc" uid="2">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
+                        <initial-animation>negro</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>277</x>
-                        <y>356</y>
+                        <x>253</x>
+                        <y>371</y>
                         <z>0</z>
-                        <width>280</width>
-                        <height>600</height>
+                        <width>140</width>
+                        <height>540</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -114,7 +114,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="baseTrajeEntero" uid="5">
+                <instance type="trajeHombreEntero" uid="5">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -124,19 +124,19 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-192</x>
-                        <y>-63</y>
+                        <x>-398</x>
+                        <y>-174</y>
                         <z>0</z>
-                        <width>131.906845093</width>
-                        <height>353.806884766</height>
+                        <width>125</width>
+                        <height>383</height>
                         <depth>0</depth>
-                        <hotspotX>0.531680465</hotspotX>
-                        <hotspotY>0.187438667</hotspotY>
+                        <hotspotX>0.527999997</hotspotX>
+                        <hotspotY>0.187675074</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="trajeEntero" uid="6">
+                <instance type="ganchoHombreEntero" uid="6">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -155,7 +155,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>927</x>
-                        <y>287</y>
+                        <y>220</y>
                         <z>0</z>
                         <width>182.4140625</width>
                         <height>252.031005859</height>
@@ -166,7 +166,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="trajePlaya" uid="7">
+                <instance type="ganchoHombrePlaya" uid="7">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -185,7 +185,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1117.377685547</x>
-                        <y>290.321777344</y>
+                        <y>223.321777344</y>
                         <z>0</z>
                         <width>176.836715698</width>
                         <height>268.722473145</height>
@@ -196,7 +196,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="baseTrajePlaya" uid="8">
+                <instance type="trajeHombrePlaya" uid="8">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -206,19 +206,19 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-197</x>
-                        <y>336</y>
+                        <x>-621</x>
+                        <y>268</y>
                         <z>0</z>
-                        <width>118.729881287</width>
-                        <height>350.391448975</height>
+                        <width>86</width>
+                        <height>380</height>
                         <depth>0</depth>
-                        <hotspotX>0.527777791</hotspotX>
-                        <hotspotY>0.185148522</hotspotY>
+                        <hotspotX>0.529411793</hotspotX>
+                        <hotspotY>0.183381096</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="trajeCasual" uid="9">
+                <instance type="ganchoHombreModa" uid="9">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -237,13 +237,177 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>733</x>
-                        <y>289</y>
+                        <y>222</y>
                         <z>0</z>
                         <width>199.727172852</width>
                         <height>251.713348389</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.500955999</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="ganchoHombrePijama" uid="12">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="DragDrop">
+                            <properties>
+                                <axes>Both</axes>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>724</x>
+                        <y>390</y>
+                        <z>0</z>
+                        <width>200</width>
+                        <height>252</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="ganchoHombreBiblico" uid="13">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="DragDrop">
+                            <properties>
+                                <axes>Both</axes>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>940</x>
+                        <y>398</y>
+                        <z>0</z>
+                        <width>200</width>
+                        <height>252</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="ganchoHombreCasual" uid="14">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="DragDrop">
+                            <properties>
+                                <axes>Both</axes>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1133</x>
+                        <y>412</y>
+                        <z>0</z>
+                        <width>200</width>
+                        <height>252</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="ganchoHombreScout" uid="15">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="DragDrop">
+                            <properties>
+                                <axes>Both</axes>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>727</x>
+                        <y>531</y>
+                        <z>0</z>
+                        <width>200</width>
+                        <height>252</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="trajeHombrePijama" uid="16">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-409</x>
+                        <y>268</y>
+                        <z>0</z>
+                        <width>129</width>
+                        <height>392</height>
+                        <depth>0</depth>
+                        <hotspotX>0.528384268</hotspotX>
+                        <hotspotY>0.18699187</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="trajeHombreBiblico" uid="17">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-602</x>
+                        <y>-190</y>
+                        <z>0</z>
+                        <width>89</width>
+                        <height>381</height>
+                        <depth>0</depth>
+                        <hotspotX>0.528089881</hotspotX>
+                        <hotspotY>0.186968833</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -277,8 +441,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1249</x>
-                        <y>636</y>
+                        <x>1268</x>
+                        <y>743</y>
                         <z>0</z>
                         <width>117</width>
                         <height>181</height>
