@@ -3,10 +3,10 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eMain</name>
     <events>
-        <variable constant="0" name="expresion" sid="515570341785015" static="0" type="text">enojado</variable>
-        <variable constant="0" name="cabello" sid="896856940074906" static="0" type="number">3</variable>
-        <variable constant="0" name="colorPiel" sid="271624059746128" static="0" type="text">moreno</variable>
-        <variable constant="0" name="sexo" sid="561508372494367" static="0" type="text">h</variable>
+        <variable constant="0" name="expresion" sid="515570341785015" static="0" type="text">feliz</variable>
+        <variable constant="0" name="cabello" sid="896856940074906" static="0" type="number">6</variable>
+        <variable constant="0" name="colorPiel" sid="271624059746128" static="0" type="text">negro</variable>
+        <variable constant="0" name="sexo" sid="561508372494367" static="0" type="text">m</variable>
         <variable constant="0" name="aux" sid="264688356595490" static="0" type="text">nulo</variable>
         <event-group description="" sid="370034331693827" title="Setup">
             <sub-events>
@@ -29,6 +29,14 @@
                                     <param id="0" name="Name">&quot;caracteristicasHombre&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
+                                <action id="0" name="Call function" sid="179964123680862" type="Function">
+                                    <param id="0" name="Name">&quot;AcomodarRopaOrigenHombre&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-3" name="Set position" sid="373182675041203" type="baseAvatarFem">
+                                    <param id="0" name="X">-1500</param>
+                                    <param id="1" name="Y">-1500</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="323155589292145">
@@ -36,9 +44,17 @@
                                 <condition id="-22" name="Else" sid="736178187823267" type="System" />
                             </conditions>
                             <actions>
+                                <action id="0" name="Call function" sid="217445652615801" type="Function">
+                                    <param id="0" name="Name">&quot;AcomodarRopaOrigenMujer&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                                 <action id="0" name="Call function" sid="659127049756387" type="Function">
                                     <param id="0" name="Name">&quot;caracteristicasMujer&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-3" name="Set position" sid="238209073140362" type="baseAvatarMasc">
+                                    <param id="0" name="X">-1500</param>
+                                    <param id="1" name="Y">-1500</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -58,7 +74,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="265302390471864" title="soltarRopa">
+        <event-group description="" sid="265302390471864" title="soltarRopaHombre">
             <sub-events>
                 <event-block sid="551802851900951">
                     <conditions>
@@ -79,7 +95,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="649143535803604" type="Function">
-                                    <param id="0" name="Name">&quot;AcomodarRopaOrigen&quot;</param>
+                                    <param id="0" name="Name">&quot;AcomodarRopaOrigenHombre&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                                 <action id="-3" name="Set position" sid="327229999338405" type="trajeHombreEntero">
@@ -99,8 +115,8 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="127034495867757" type="Function">
-                                    <param id="0" name="Name">&quot;AcomodarRopaOrigen&quot;</param>
+                                <action id="0" name="Call function" sid="862485567613555" type="Function">
+                                    <param id="0" name="Name">&quot;AcomodarRopaOrigenHombre&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                                 <action id="-3" name="Set position" sid="455843467104675" type="ganchoHombreModa">
@@ -116,8 +132,8 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="894737158663696" type="Function">
-                                    <param id="0" name="Name">&quot;AcomodarRopaOrigen&quot;</param>
+                                <action id="0" name="Call function" sid="621257551699038" type="Function">
+                                    <param id="0" name="Name">&quot;AcomodarRopaOrigenHombre&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                                 <action id="-3" name="Set position" sid="737073380318343" type="trajeHombrePlaya">
@@ -137,13 +153,13 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="104367196790345" type="Function">
-                                    <param id="0" name="Name">&quot;AcomodarRopaOrigen&quot;</param>
+                                <action id="0" name="Call function" sid="200779170009381" type="Function">
+                                    <param id="0" name="Name">&quot;AcomodarRopaOrigenHombre&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                                 <action id="-3" name="Set position" sid="460911992459884" type="trajeHombrePijama">
-                                    <param id="0" name="X">244</param>
-                                    <param id="1" name="Y">334</param>
+                                    <param id="0" name="X">247.375</param>
+                                    <param id="1" name="Y">328.285</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="739524472361745" type="ganchoHombrePijama">
                                     <param id="0" name="X">-100</param>
@@ -158,8 +174,8 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="812927234037856" type="Function">
-                                    <param id="0" name="Name">&quot;AcomodarRopaOrigen&quot;</param>
+                                <action id="0" name="Call function" sid="500517380019975" type="Function">
+                                    <param id="0" name="Name">&quot;AcomodarRopaOrigenHombre&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                                 <action id="-3" name="Set position" sid="840426342189858" type="trajeHombreBiblico">
@@ -180,7 +196,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="987866328604483" type="Function">
-                                    <param id="0" name="Name">&quot;AcomodarRopaOrigen&quot;</param>
+                                    <param id="0" name="Name">&quot;AcomodarRopaOrigenHombre&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                                 <action id="-3" name="Set position" sid="230700235580860" type="trajeHombreCasual">
@@ -214,15 +230,23 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="227927846682199" title="Acomodar_ropa_origen">
+        <event-group description="Acomoda los ganchos con ropa dependiendo si es hombre o mujer." sid="227927846682199" title="Acomodar_ropa_origen">
             <sub-events>
                 <event-block sid="784989658753805">
                     <conditions>
                         <condition id="0" name="On function" sid="902419503761842" type="Function">
-                            <param id="0" name="Name">&quot;AcomodarRopaOrigen&quot;</param>
+                            <param id="0" name="Name">&quot;AcomodarRopaOrigenHombre&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-3" name="Set position" sid="674529816533963" type="ganchoMujerPijama">
+                            <param id="0" name="X">-500</param>
+                            <param id="1" name="Y">-500</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="284241381809577" type="ganchoMujerBiblico">
+                            <param id="0" name="X">-500</param>
+                            <param id="1" name="Y">-500</param>
+                        </action>
                         <action id="-3" name="Set position" sid="554427151848969" type="trajeHombrePlaya">
                             <param id="0" name="X">-100</param>
                             <param id="1" name="Y">-100</param>
@@ -244,38 +268,111 @@
                             <param id="1" name="Y">-100</param>
                         </action>
                         <action id="-3" name="Set position" sid="711683840005844" type="ganchoHombreModa">
-                            <param id="0" name="X">710</param>
-                            <param id="1" name="Y">230</param>
+                            <param id="0" name="X">720</param>
+                            <param id="1" name="Y">260</param>
                         </action>
                         <action id="-3" name="Set position" sid="879978095182480" type="ganchoHombreEntero">
-                            <param id="0" name="X">910</param>
-                            <param id="1" name="Y">230</param>
+                            <param id="0" name="X">880</param>
+                            <param id="1" name="Y">260</param>
                         </action>
                         <action id="-3" name="Set position" sid="758890368049232" type="ganchoHombrePlaya">
-                            <param id="0" name="X">1110</param>
-                            <param id="1" name="Y">230</param>
+                            <param id="0" name="X">1040</param>
+                            <param id="1" name="Y">260</param>
                         </action>
                         <action id="-3" name="Set position" sid="396519763434253" type="ganchoHombrePijama">
-                            <param id="0" name="X">710</param>
-                            <param id="1" name="Y">340</param>
+                            <param id="0" name="X">720</param>
+                            <param id="1" name="Y">384</param>
                         </action>
                         <action id="-3" name="Set position" sid="499863712406744" type="ganchoHombreBiblico">
-                            <param id="0" name="X">910</param>
-                            <param id="1" name="Y">340</param>
+                            <param id="0" name="X">880</param>
+                            <param id="1" name="Y">384</param>
                         </action>
                         <action id="-3" name="Set position" sid="417254383410470" type="ganchoHombreScout">
-                            <param id="0" name="X">710</param>
-                            <param id="1" name="Y">430</param>
+                            <param id="0" name="X">720</param>
+                            <param id="1" name="Y">485</param>
                         </action>
                         <action id="-3" name="Set position" sid="388029968689298" type="ganchoHombreCasual">
-                            <param id="0" name="X">1110</param>
-                            <param id="1" name="Y">340</param>
+                            <param id="0" name="X">1040</param>
+                            <param id="1" name="Y">384</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="101821226391032">
+                    <conditions>
+                        <condition id="0" name="On function" sid="137284140654370" type="Function">
+                            <param id="0" name="Name">&quot;AcomodarRopaOrigenMujer&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="106989221181016" type="ganchoHombreModa">
+                            <param id="0" name="X">-500</param>
+                            <param id="1" name="Y">-500</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="901248475432294" type="ganchoHombreEntero">
+                            <param id="0" name="X">-500</param>
+                            <param id="1" name="Y">-500</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="470067670084325" type="ganchoHombrePlaya">
+                            <param id="0" name="X">-500</param>
+                            <param id="1" name="Y">-500</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="815833558277854" type="ganchoHombrePijama">
+                            <param id="0" name="X">-500</param>
+                            <param id="1" name="Y">-500</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="584692700056808" type="ganchoHombreBiblico">
+                            <param id="0" name="X">-500</param>
+                            <param id="1" name="Y">-500</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="367109549158265" type="ganchoHombreScout">
+                            <param id="0" name="X">-500</param>
+                            <param id="1" name="Y">-500</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="212958052018338" type="ganchoHombreCasual">
+                            <param id="0" name="X">-500</param>
+                            <param id="1" name="Y">-500</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="519876183516074" type="trajeHombrePlaya">
+                            <param id="0" name="X">-100</param>
+                            <param id="1" name="Y">-100</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="433639385025913" type="trajeHombreEntero">
+                            <param id="0" name="X">-100</param>
+                            <param id="1" name="Y">-100</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="371052973936367" type="trajeHombreBiblico">
+                            <param id="0" name="X">-100</param>
+                            <param id="1" name="Y">-100</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="846846005986105" type="trajeHombrePijama">
+                            <param id="0" name="X">-100</param>
+                            <param id="1" name="Y">-100</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="673017623932033" type="trajeHombreCasual">
+                            <param id="0" name="X">-100</param>
+                            <param id="1" name="Y">-100</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="956100994547259" type="trajeMujerBiblica">
+                            <param id="0" name="X">-100</param>
+                            <param id="1" name="Y">-100</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="411755934255709" type="trajeMujerPijama">
+                            <param id="0" name="X">-100</param>
+                            <param id="1" name="Y">-100</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="614969430912432" type="ganchoMujerPijama">
+                            <param id="0" name="X">700</param>
+                            <param id="1" name="Y">300</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="675242247379138" type="ganchoMujerBiblico">
+                            <param id="0" name="X">855.914</param>
+                            <param id="1" name="Y">299.98</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="947601014686593" title="caracteristicas_avatar">
+        <event-group description="Personalizacion de caracteristicas como color de piel, cabello y expresiones tanto de hombre como de mujer" sid="947601014686593" title="caracteristicas_avatar">
             <sub-events>
                 <event-block sid="906205647358836">
                     <conditions>
@@ -622,6 +719,60 @@
                                 <action id="4" name="Set animation" sid="295186001882189" type="baseAvatarFem">
                                     <param id="0" name="Animation">&quot;moreno&quot;</param>
                                     <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="762017619686835" title="soltarRopaMujer">
+            <sub-events>
+                <event-block sid="927442597107960">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="141593770262554" type="trajes" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="564843110583540">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="259960354230611" type="ganchoMujerPijama">
+                                    <param id="0" name="Object">baseAvatarFem</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="327832534318423" type="Function">
+                                    <param id="0" name="Name">&quot;AcomodarRopaOrigenMujer&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-3" name="Set position" sid="552247174372854" type="trajeMujerPijama">
+                                    <param id="0" name="X">250</param>
+                                    <param id="1" name="Y">450</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="839213256689891" type="ganchoMujerPijama">
+                                    <param id="0" name="X">-200</param>
+                                    <param id="1" name="Y">-200</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="855145907500140">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="630432062819659" type="ganchoMujerBiblico">
+                                    <param id="0" name="Object">baseAvatarFem</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="268058884468222" type="Function">
+                                    <param id="0" name="Name">&quot;AcomodarRopaOrigenMujer&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-3" name="Set position" sid="180758497075366" type="trajeMujerBiblica">
+                                    <param id="0" name="X">261</param>
+                                    <param id="1" name="Y">450</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="345760563011133" type="ganchoMujerBiblico">
+                                    <param id="0" name="X">-200</param>
+                                    <param id="1" name="Y">-200</param>
                                 </action>
                             </actions>
                         </event-block>
