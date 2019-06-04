@@ -14,6 +14,7 @@
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
@@ -136,6 +137,9 @@
             </object-type>
             <object-type name="Browser" sid="334329033992119">
                 <plugin id="Browser" />
+            </object-type>
+            <object-type name="WebStorage" sid="836860356122927">
+                <plugin id="WebStorage" />
             </object-type>
         </object-folder>
         <object-folder name="Sensors" />
@@ -289,6 +293,22 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="ganchoMujerPlaya" sid="380720314878799">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="764852087948562" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\Ropero\Mujer\GANCHOmujerplaya.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ganchoMujerCasual" sid="173075775648827">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="758863297441467" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\Ropero\Mujer\mujermoderna.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="trajes-base">
             <object-type name="trajeHombreEntero" sid="337915889090845">
@@ -394,11 +414,21 @@
                     <animation framecount="1" loop="0" name="playaBlanca" pingpong="0" repeatcount="1" repeatto="0" sid="667501167920718" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\Ropero\Mujer\playa blanca.png" />
                     </animation>
+                    <animation framecount="1" loop="0" name="casual" pingpong="0" repeatcount="1" repeatto="0" sid="755367782008336" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\Ropero\Mujer\casual.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
                 </animation-folder>
             </object-type>
         </object-folder>
         <object-folder name="Cabellos-Expresiones">
-            <object-type name="cabellosMasc" sid="837030253382636">
+            <object-type name="cabellos" sid="837030253382636">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="c1" pingpong="0" repeatcount="1" repeatto="0" sid="297824250605479" speed="5">
@@ -422,6 +452,42 @@
                     <animation framecount="1" loop="0" name="c7" pingpong="0" repeatcount="1" repeatto="0" sid="769388184724739" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\avatars seleccion\Asset 22cabellos.png" />
                     </animation>
+                    <animation framecount="1" loop="0" name="m1" pingpong="0" repeatcount="1" repeatto="0" sid="823518500653774" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\avatars seleccion\femenino\cabello1.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="m2" pingpong="0" repeatcount="1" repeatto="0" sid="941950881687407" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\avatars seleccion\femenino\cabello2.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="m3" pingpong="0" repeatcount="1" repeatto="0" sid="975462349868150" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\avatars seleccion\femenino\cabello3.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="m4" pingpong="0" repeatcount="1" repeatto="0" sid="212708760918324" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\avatars seleccion\femenino\cabello4.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="m5" pingpong="0" repeatcount="1" repeatto="0" sid="423787118030582" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\avatars seleccion\femenino\cabello5.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
                 </animation-folder>
             </object-type>
             <object-type name="expresionesMasc" sid="510564034839099">
@@ -438,43 +504,35 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="expresionesFem" sid="787018583553083">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="feliz" pingpong="0" repeatcount="1" repeatto="0" sid="279892656629134" speed="5">
+                        <frame duration="1" hotspotX="0.502415" hotspotY="0.503401" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\avatars seleccion\femenino\feliz.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="triste" pingpong="0" repeatcount="1" repeatto="0" sid="166939767875067" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\avatars seleccion\femenino\triste.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="sexy" pingpong="0" repeatcount="1" repeatto="0" sid="801639805524697" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\avatars seleccion\femenino\sexy.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
-        <object-type name="ganchoMujerPlaya" sid="380720314878799">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="764852087948562" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\Ropero\Mujer\GANCHOmujerplaya.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="expresionesFem" sid="787018583553083">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="feliz" pingpong="0" repeatcount="1" repeatto="0" sid="279892656629134" speed="5">
-                    <frame duration="1" hotspotX="0.502415" hotspotY="0.503401" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\avatars seleccion\femenino\feliz.png" />
-                </animation>
-                <animation framecount="1" loop="0" name="triste" pingpong="0" repeatcount="1" repeatto="0" sid="166939767875067" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\avatars seleccion\femenino\triste.png">
-                        <collision-poly>
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-                <animation framecount="1" loop="0" name="sexy" pingpong="0" repeatcount="1" repeatto="0" sid="801639805524697" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\avatars seleccion\femenino\sexy.png">
-                        <collision-poly>
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
     </object-folder>
     <families>
         <family name="ganchoDragNDrop" plugin-id="Sprite" sid="520533466887575">
@@ -487,6 +545,7 @@
                 <member>ganchoHombrePlaya</member>
                 <member>ganchoHombreScout</member>
                 <member>ganchoMujerBiblico</member>
+                <member>ganchoMujerCasual</member>
                 <member>ganchoMujerGala</member>
                 <member>ganchoMujerPijama</member>
                 <member>ganchoMujerPlaya</member>
@@ -513,6 +572,7 @@
             </properties>
         </global-instance>
         <global-instance type="Browser" uid="11" />
+        <global-instance type="WebStorage" uid="29" />
     </global-instances>
     <sounds-folder />
     <music-folder />

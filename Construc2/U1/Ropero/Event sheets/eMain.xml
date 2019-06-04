@@ -4,8 +4,8 @@
     <name>eMain</name>
     <events>
         <variable constant="0" name="expresion" sid="515570341785015" static="0" type="text">feliz</variable>
-        <variable constant="0" name="cabello" sid="896856940074906" static="0" type="number">6</variable>
-        <variable constant="0" name="colorPiel" sid="271624059746128" static="0" type="text">blanco</variable>
+        <variable constant="0" name="cabello" sid="896856940074906" static="0" type="text">m1</variable>
+        <variable constant="0" name="colorPiel" sid="271624059746128" static="0" type="text">negro</variable>
         <variable constant="0" name="sexo" sid="561508372494367" static="0" type="text">m</variable>
         <variable constant="0" name="aux" sid="264688356595490" static="0" type="text">nulo</variable>
         <event-group description="" sid="370034331693827" title="Setup">
@@ -14,7 +14,12 @@
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="113989134144720" type="System" />
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="0" name="Call function" sid="792862395255489" type="Function">
+                            <param id="0" name="Name">&quot;cargarValores&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="872427692924450">
                             <conditions>
@@ -36,6 +41,10 @@
                                 <action id="-3" name="Set position" sid="373182675041203" type="baseAvatarFem">
                                     <param id="0" name="X">-1500</param>
                                     <param id="1" name="Y">-1500</param>
+                                </action>
+                                <action disabled="1" id="-9" name="Set value" sid="778285283822943" type="System">
+                                    <param id="0" name="Variable">aux</param>
+                                    <param id="1" name="Value">cabellos.AnimationName</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -239,13 +248,29 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Set position" sid="674529816533963" type="ganchoMujerPijama">
-                            <param id="0" name="X">-500</param>
-                            <param id="1" name="Y">-500</param>
+                        <action id="-3" name="Set position" sid="301482116262708" type="ganchoMujerPijama">
+                            <param id="0" name="X">-100</param>
+                            <param id="1" name="Y">-100</param>
                         </action>
-                        <action id="-3" name="Set position" sid="284241381809577" type="ganchoMujerBiblico">
-                            <param id="0" name="X">-500</param>
-                            <param id="1" name="Y">-500</param>
+                        <action id="-3" name="Set position" sid="714848519754452" type="ganchoMujerBiblico">
+                            <param id="0" name="X">-100</param>
+                            <param id="1" name="Y">-100</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="437319923709510" type="ganchoMujerPlaya">
+                            <param id="0" name="X">-100</param>
+                            <param id="1" name="Y">-100</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="808076569140170" type="ganchoMujerSport">
+                            <param id="0" name="X">-100</param>
+                            <param id="1" name="Y">-100</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="756684342748886" type="ganchoMujerGala">
+                            <param id="0" name="X">-100</param>
+                            <param id="1" name="Y">-100</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="688892931959624" type="ganchoMujerCasual">
+                            <param id="0" name="X">-100</param>
+                            <param id="1" name="Y">-100</param>
                         </action>
                         <action id="-3" name="Set position" sid="554427151848969" type="trajeHombrePlaya">
                             <param id="0" name="X">-100</param>
@@ -376,6 +401,10 @@
                             <param id="0" name="X">700</param>
                             <param id="1" name="Y">400</param>
                         </action>
+                        <action id="-3" name="Set position" sid="202853647025131" type="ganchoMujerCasual">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">400</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -396,6 +425,10 @@
                         <action id="-7" name="Set size" sid="712152577752478" type="baseAvatarMasc">
                             <param id="0" name="Width">140</param>
                             <param id="1" name="Height">540</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="220367459482240" type="expresionesFem">
+                            <param id="0" name="X">-600</param>
+                            <param id="1" name="Y">-600</param>
                         </action>
                         <action id="-3" name="Set position" sid="420818342674733" type="expresionesMasc">
                             <param id="0" name="X">233</param>
@@ -502,21 +535,21 @@
                                 <condition id="-14" name="Compare variable" sid="932921061971410" type="System">
                                     <param id="0" name="Variable">cabello</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
+                                    <param id="2" name="Value">&quot;c1&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="352896974007359" type="cabellosMasc">
+                                <action id="4" name="Set animation" sid="352896974007359" type="cabellos">
                                     <param id="0" name="Animation">&quot;c1&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="896675786206986" type="cabellosMasc">
-                                    <param id="0" name="X">264</param>
-                                    <param id="1" name="Y">131</param>
+                                <action id="-3" name="Set position" sid="896675786206986" type="cabellos">
+                                    <param id="0" name="X">239.636</param>
+                                    <param id="1" name="Y">150.819</param>
                                 </action>
-                                <action id="-7" name="Set size" sid="454630689947552" type="cabellosMasc">
-                                    <param id="0" name="Width">168</param>
-                                    <param id="1" name="Height">140</param>
+                                <action id="-7" name="Set size" sid="454630689947552" type="cabellos">
+                                    <param id="0" name="Width">196.496</param>
+                                    <param id="1" name="Height">148.828</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -525,19 +558,19 @@
                                 <condition id="-14" name="Compare variable" sid="226311095893256" type="System">
                                     <param id="0" name="Variable">cabello</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">2</param>
+                                    <param id="2" name="Value">&quot;c2&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="761769500334465" type="cabellosMasc">
+                                <action id="4" name="Set animation" sid="761769500334465" type="cabellos">
                                     <param id="0" name="Animation">&quot;c2&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="433095835150972" type="cabellosMasc">
+                                <action id="-3" name="Set position" sid="433095835150972" type="cabellos">
                                     <param id="0" name="X">236</param>
                                     <param id="1" name="Y">155</param>
                                 </action>
-                                <action id="-7" name="Set size" sid="363141049874771" type="cabellosMasc">
+                                <action id="-7" name="Set size" sid="363141049874771" type="cabellos">
                                     <param id="0" name="Width">192</param>
                                     <param id="1" name="Height">140</param>
                                 </action>
@@ -548,19 +581,19 @@
                                 <condition id="-14" name="Compare variable" sid="893757290374741" type="System">
                                     <param id="0" name="Variable">cabello</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">3</param>
+                                    <param id="2" name="Value">&quot;c3&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="950446833704657" type="cabellosMasc">
+                                <action id="4" name="Set animation" sid="950446833704657" type="cabellos">
                                     <param id="0" name="Animation">&quot;c3&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="938412591279774" type="cabellosMasc">
+                                <action id="-3" name="Set position" sid="938412591279774" type="cabellos">
                                     <param id="0" name="X">251</param>
                                     <param id="1" name="Y">127</param>
                                 </action>
-                                <action id="-7" name="Set size" sid="939258127514341" type="cabellosMasc">
+                                <action id="-7" name="Set size" sid="939258127514341" type="cabellos">
                                     <param id="0" name="Width">168</param>
                                     <param id="1" name="Height">126</param>
                                 </action>
@@ -571,19 +604,19 @@
                                 <condition id="-14" name="Compare variable" sid="137105531741417" type="System">
                                     <param id="0" name="Variable">cabello</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">4</param>
+                                    <param id="2" name="Value">&quot;c4&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="743375245982015" type="cabellosMasc">
+                                <action id="4" name="Set animation" sid="743375245982015" type="cabellos">
                                     <param id="0" name="Animation">&quot;c4&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="355995653042720" type="cabellosMasc">
+                                <action id="-3" name="Set position" sid="355995653042720" type="cabellos">
                                     <param id="0" name="X">243</param>
                                     <param id="1" name="Y">124</param>
                                 </action>
-                                <action id="-7" name="Set size" sid="116258863132423" type="cabellosMasc">
+                                <action id="-7" name="Set size" sid="116258863132423" type="cabellos">
                                     <param id="0" name="Width">167</param>
                                     <param id="1" name="Height">116</param>
                                 </action>
@@ -594,19 +627,19 @@
                                 <condition id="-14" name="Compare variable" sid="318513169122172" type="System">
                                     <param id="0" name="Variable">cabello</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">5</param>
+                                    <param id="2" name="Value">&quot;c5&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="946306308990579" type="cabellosMasc">
+                                <action id="4" name="Set animation" sid="946306308990579" type="cabellos">
                                     <param id="0" name="Animation">&quot;c5&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="771787995404248" type="cabellosMasc">
+                                <action id="-3" name="Set position" sid="771787995404248" type="cabellos">
                                     <param id="0" name="X">237.933</param>
                                     <param id="1" name="Y">154.7</param>
                                 </action>
-                                <action id="-7" name="Set size" sid="307785809490065" type="cabellosMasc">
+                                <action id="-7" name="Set size" sid="307785809490065" type="cabellos">
                                     <param id="0" name="Width">200.242</param>
                                     <param id="1" name="Height">137.727</param>
                                 </action>
@@ -617,19 +650,19 @@
                                 <condition id="-14" name="Compare variable" sid="788171998587909" type="System">
                                     <param id="0" name="Variable">cabello</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">6</param>
+                                    <param id="2" name="Value">&quot;c6&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="825426580616292" type="cabellosMasc">
+                                <action id="4" name="Set animation" sid="825426580616292" type="cabellos">
                                     <param id="0" name="Animation">&quot;c6&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="988368008632341" type="cabellosMasc">
+                                <action id="-3" name="Set position" sid="988368008632341" type="cabellos">
                                     <param id="0" name="X">252.394</param>
                                     <param id="1" name="Y">121.578</param>
                                 </action>
-                                <action id="-7" name="Set size" sid="889451280458192" type="cabellosMasc">
+                                <action id="-7" name="Set size" sid="889451280458192" type="cabellos">
                                     <param id="0" name="Width">205.196</param>
                                     <param id="1" name="Height">132.039</param>
                                 </action>
@@ -640,19 +673,19 @@
                                 <condition id="-14" name="Compare variable" sid="505605078498453" type="System">
                                     <param id="0" name="Variable">cabello</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">7</param>
+                                    <param id="2" name="Value">&quot;c7&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="278928636760776" type="cabellosMasc">
+                                <action id="4" name="Set animation" sid="278928636760776" type="cabellos">
                                     <param id="0" name="Animation">&quot;c7&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="360352966859308" type="cabellosMasc">
+                                <action id="-3" name="Set position" sid="360352966859308" type="cabellos">
                                     <param id="0" name="X">262.891</param>
                                     <param id="1" name="Y">120.878</param>
                                 </action>
-                                <action id="-7" name="Set size" sid="786386974824697" type="cabellosMasc">
+                                <action id="-7" name="Set size" sid="786386974824697" type="cabellos">
                                     <param id="0" name="Width">161.2</param>
                                     <param id="1" name="Height">149.879</param>
                                 </action>
@@ -699,7 +732,108 @@
                             <param id="0" name="Width">65</param>
                             <param id="1" name="Height">56</param>
                         </action>
+                        <action id="4" name="Set animation" sid="643860069485849" type="cabellos">
+                            <param id="0" name="Animation">cabello</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="957614509968150">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="480555707368461" type="System">
+                                    <param id="0" name="Variable">cabello</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;m1&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="981142757026506" type="cabellos">
+                                    <param id="0" name="X">267.283</param>
+                                    <param id="1" name="Y">166.784</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="943052405195904" type="cabellos">
+                                    <param id="0" name="Width">124.</param>
+                                    <param id="1" name="Height">169</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="329773029150316">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="152088406027664" type="System">
+                                    <param id="0" name="Variable">cabello</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;m2&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="223043679024218" type="cabellos">
+                                    <param id="0" name="X">265.242</param>
+                                    <param id="1" name="Y">200.839</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="157504820508712" type="cabellos">
+                                    <param id="0" name="Width">112.622</param>
+                                    <param id="1" name="Height">219.896</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="406015368503077">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="317949753001034" type="System">
+                                    <param id="0" name="Variable">cabello</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;m3&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="391596503264084" type="cabellos">
+                                    <param id="0" name="X">281.821</param>
+                                    <param id="1" name="Y">128.935</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="522652232236785" type="cabellos">
+                                    <param id="0" name="Width">143.862</param>
+                                    <param id="1" name="Height">158.05</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="670090325030722">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="736701487477249" type="System">
+                                    <param id="0" name="Variable">cabello</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;m4&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="314412336891235" type="cabellos">
+                                    <param id="0" name="X">287.099</param>
+                                    <param id="1" name="Y">124.342</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="350271410929214" type="cabellos">
+                                    <param id="0" name="Width">180.196</param>
+                                    <param id="1" name="Height">172.611</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="890450992515224">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="239523796400047" type="System">
+                                    <param id="0" name="Variable">cabello</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;m5&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="508586404037674" type="cabellos">
+                                    <param id="0" name="X">261.499</param>
+                                    <param id="1" name="Y">238.442</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="632818200609679" type="cabellos">
+                                    <param id="0" name="Width">114.149</param>
+                                    <param id="1" name="Height">286.748</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -827,6 +961,35 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="382605812473122">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="281162468481202" type="ganchoMujerCasual">
+                                    <param id="0" name="Object">baseAvatarFem</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="444617193739673" type="Function">
+                                    <param id="0" name="Name">&quot;AcomodarRopaOrigenMujer&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="4" name="Set animation" sid="700680514857866" type="trajeMujer">
+                                    <param id="0" name="Animation">&quot;casual&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="272757170180616" type="trajeMujer">
+                                    <param id="0" name="X">255.132</param>
+                                    <param id="1" name="Y">454.172</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="326060912232716" type="trajeMujer">
+                                    <param id="0" name="Width">86.479</param>
+                                    <param id="1" name="Height">404.543</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="782844841772205" type="ganchoMujerCasual">
+                                    <param id="0" name="X">-200</param>
+                                    <param id="1" name="Y">-200</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="824079261415127">
                             <conditions>
                                 <condition id="1" name="Is overlapping another object" sid="891744438652733" type="ganchoMujerPlaya">
@@ -916,6 +1079,35 @@
                             </sub-events>
                         </event-block>
                     </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="999977084202986" title="Cargar_Valores_WebStorage">
+            <sub-events>
+                <event-block sid="478467534674781">
+                    <conditions>
+                        <condition id="0" name="On function" sid="867347328686265" type="Function">
+                            <param id="0" name="Name">&quot;cargarValores&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="968692210285763" type="System">
+                            <param id="0" name="Variable">cabello</param>
+                            <param id="1" name="Value">WebStorage.SessionValue(&quot;cabello&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="243261231900106" type="System">
+                            <param id="0" name="Variable">colorPiel</param>
+                            <param id="1" name="Value">WebStorage.SessionValue(&quot;colorPiel&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="993803718681475" type="System">
+                            <param id="0" name="Variable">sexo</param>
+                            <param id="1" name="Value">WebStorage.SessionValue(&quot;sexo&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="142829536070866" type="System">
+                            <param id="0" name="Variable">expresion</param>
+                            <param id="1" name="Value">&quot;feliz&quot;</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
