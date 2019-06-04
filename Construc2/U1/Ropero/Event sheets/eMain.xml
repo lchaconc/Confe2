@@ -5,7 +5,7 @@
     <events>
         <variable constant="0" name="expresion" sid="515570341785015" static="0" type="text">feliz</variable>
         <variable constant="0" name="cabello" sid="896856940074906" static="0" type="number">6</variable>
-        <variable constant="0" name="colorPiel" sid="271624059746128" static="0" type="text">negro</variable>
+        <variable constant="0" name="colorPiel" sid="271624059746128" static="0" type="text">blanco</variable>
         <variable constant="0" name="sexo" sid="561508372494367" static="0" type="text">m</variable>
         <variable constant="0" name="aux" sid="264688356595490" static="0" type="text">nulo</variable>
         <event-group description="" sid="370034331693827" title="Setup">
@@ -66,10 +66,10 @@
             <sub-events>
                 <event-block sid="620077874021026">
                     <conditions>
-                        <condition behavior="DragDrop" id="0" name="Is dragging" sid="113715336973467" type="trajes" />
+                        <condition behavior="DragDrop" id="0" name="Is dragging" sid="113715336973467" type="ganchoDragNDrop" />
                     </conditions>
                     <actions>
-                        <action id="-24" name="Move to top" sid="771373182271023" type="trajes" />
+                        <action id="-24" name="Move to top" sid="771373182271023" type="ganchoDragNDrop" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -78,7 +78,7 @@
             <sub-events>
                 <event-block sid="551802851900951">
                     <conditions>
-                        <condition behavior="DragDrop" id="2" name="On drop" sid="665542595033866" type="trajes" />
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="665542595033866" type="ganchoDragNDrop" />
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="834666616606705" type="System">
@@ -352,21 +352,29 @@
                             <param id="0" name="X">-100</param>
                             <param id="1" name="Y">-100</param>
                         </action>
-                        <action id="-3" name="Set position" sid="956100994547259" type="trajeMujerBiblica">
+                        <action id="-3" name="Set position" sid="956100994547259" type="trajeMujer">
                             <param id="0" name="X">-100</param>
                             <param id="1" name="Y">-100</param>
                         </action>
-                        <action id="-3" name="Set position" sid="411755934255709" type="trajeMujerPijama">
-                            <param id="0" name="X">-100</param>
-                            <param id="1" name="Y">-100</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="614969430912432" type="ganchoMujerPijama">
+                        <action id="-3" name="Set position" sid="514197122848458" type="ganchoMujerPijama">
                             <param id="0" name="X">700</param>
                             <param id="1" name="Y">300</param>
                         </action>
                         <action id="-3" name="Set position" sid="675242247379138" type="ganchoMujerBiblico">
-                            <param id="0" name="X">855.914</param>
-                            <param id="1" name="Y">299.98</param>
+                            <param id="0" name="X">850</param>
+                            <param id="1" name="Y">300</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="339009005319693" type="ganchoMujerPlaya">
+                            <param id="0" name="X">850</param>
+                            <param id="1" name="Y">400</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="138846130941361" type="ganchoMujerSport">
+                            <param id="0" name="X">1000</param>
+                            <param id="1" name="Y">300</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="683330172504938" type="ganchoMujerGala">
+                            <param id="0" name="X">700</param>
+                            <param id="1" name="Y">400</param>
                         </action>
                     </actions>
                 </event-block>
@@ -659,6 +667,14 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-3" name="Set position" sid="257838072345735" type="expresionesMasc">
+                            <param id="0" name="X">-800</param>
+                            <param id="1" name="Y">-800</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="286938837156322" type="baseAvatarMasc">
+                            <param id="0" name="X">-500</param>
+                            <param id="1" name="Y">-500</param>
+                        </action>
                         <action id="-3" name="Set position" sid="931873074824866" type="baseAvatarFem">
                             <param id="0" name="X">253</param>
                             <param id="1" name="Y">371</param>
@@ -667,62 +683,23 @@
                             <param id="0" name="Width">140</param>
                             <param id="1" name="Height">540</param>
                         </action>
-                        <action id="-3" name="Set position" sid="257838072345735" type="expresionesMasc">
-                            <param id="0" name="X">233</param>
-                            <param id="1" name="Y">187</param>
+                        <action id="4" name="Set animation" sid="446369479431090" type="baseAvatarFem">
+                            <param id="0" name="Animation">colorPiel</param>
+                            <param id="1" name="From">1</param>
                         </action>
-                        <action id="-3" name="Set position" sid="286938837156322" type="baseAvatarMasc">
-                            <param id="0" name="X">-500</param>
-                            <param id="1" name="Y">-500</param>
+                        <action id="4" name="Set animation" sid="147860081908620" type="expresionesFem">
+                            <param id="0" name="Animation">expresion</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="757642985588253" type="expresionesFem">
+                            <param id="0" name="X">251</param>
+                            <param id="1" name="Y">192</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="794910860137007" type="expresionesFem">
+                            <param id="0" name="Width">65</param>
+                            <param id="1" name="Height">56</param>
                         </action>
                     </actions>
-                    <sub-events>
-                        <event-block sid="965623329901400">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="916872976830147" type="System">
-                                    <param id="0" name="Variable">colorPiel</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;negro&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="756552717382377" type="baseAvatarFem">
-                                    <param id="0" name="Animation">&quot;negro&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="937241640021670">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="990731054849836" type="System">
-                                    <param id="0" name="Variable">colorPiel</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;blanco&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="846111873948101" type="baseAvatarFem">
-                                    <param id="0" name="Animation">&quot;blanco&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="427679812976524">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="917288892108906" type="System">
-                                    <param id="0" name="Variable">colorPiel</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;moreno&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="295186001882189" type="baseAvatarFem">
-                                    <param id="0" name="Animation">&quot;moreno&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -730,7 +707,7 @@
             <sub-events>
                 <event-block sid="927442597107960">
                     <conditions>
-                        <condition behavior="DragDrop" id="2" name="On drop" sid="141593770262554" type="trajes" />
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="141593770262554" type="ganchoDragNDrop" />
                     </conditions>
                     <actions />
                     <sub-events>
@@ -745,9 +722,17 @@
                                     <param id="0" name="Name">&quot;AcomodarRopaOrigenMujer&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
-                                <action id="-3" name="Set position" sid="552247174372854" type="trajeMujerPijama">
+                                <action id="-3" name="Set position" sid="552247174372854" type="trajeMujer">
                                     <param id="0" name="X">250</param>
                                     <param id="1" name="Y">450</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="913282778139847" type="trajeMujer">
+                                    <param id="0" name="Animation">&quot;pijama&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="842921833098031" type="trajeMujer">
+                                    <param id="0" name="Width">76</param>
+                                    <param id="1" name="Height">393</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="839213256689891" type="ganchoMujerPijama">
                                     <param id="0" name="X">-200</param>
@@ -757,7 +742,7 @@
                         </event-block>
                         <event-block sid="855145907500140">
                             <conditions>
-                                <condition id="1" name="Is overlapping another object" sid="630432062819659" type="ganchoMujerBiblico">
+                                <condition id="1" name="Is overlapping another object" sid="630432062819659" type="ganchoMujerSport">
                                     <param id="0" name="Object">baseAvatarFem</param>
                                 </condition>
                             </conditions>
@@ -766,15 +751,169 @@
                                     <param id="0" name="Name">&quot;AcomodarRopaOrigenMujer&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
-                                <action id="-3" name="Set position" sid="180758497075366" type="trajeMujerBiblica">
-                                    <param id="0" name="X">261</param>
-                                    <param id="1" name="Y">450</param>
+                                <action id="4" name="Set animation" sid="874239908588377" type="trajeMujer">
+                                    <param id="0" name="Animation">&quot;sport&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="345760563011133" type="ganchoMujerBiblico">
+                                <action id="-3" name="Set position" sid="180758497075366" type="trajeMujer">
+                                    <param id="0" name="X">246.796</param>
+                                    <param id="1" name="Y">385.192</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="309167351623205" type="trajeMujer">
+                                    <param id="0" name="Width">148.783</param>
+                                    <param id="1" name="Height">561.331</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="345760563011133" type="ganchoMujerSport">
                                     <param id="0" name="X">-200</param>
                                     <param id="1" name="Y">-200</param>
                                 </action>
                             </actions>
+                        </event-block>
+                        <event-block sid="933656928655451">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="740661355568958" type="ganchoMujerBiblico">
+                                    <param id="0" name="Object">baseAvatarFem</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="157230319355098" type="Function">
+                                    <param id="0" name="Name">&quot;AcomodarRopaOrigenMujer&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="4" name="Set animation" sid="872690876504532" type="trajeMujer">
+                                    <param id="0" name="Animation">&quot;biblico&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="473001951960076" type="trajeMujer">
+                                    <param id="0" name="X">261</param>
+                                    <param id="1" name="Y">450</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="915087275013996" type="trajeMujer">
+                                    <param id="0" name="Width">84.066</param>
+                                    <param id="1" name="Height">392.483</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="589960494296200" type="ganchoMujerBiblico">
+                                    <param id="0" name="X">-200</param>
+                                    <param id="1" name="Y">-200</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="191838963621704">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="711431662053074" type="ganchoMujerGala">
+                                    <param id="0" name="Object">baseAvatarFem</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="374352090095874" type="Function">
+                                    <param id="0" name="Name">&quot;AcomodarRopaOrigenMujer&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="4" name="Set animation" sid="881954674885305" type="trajeMujer">
+                                    <param id="0" name="Animation">&quot;gala&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="757837057357816" type="trajeMujer">
+                                    <param id="0" name="X">252.43</param>
+                                    <param id="1" name="Y">450.66</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="669089328729994" type="trajeMujer">
+                                    <param id="0" name="Width">102.307</param>
+                                    <param id="1" name="Height">389.817</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="231573708825292" type="ganchoMujerGala">
+                                    <param id="0" name="X">-200</param>
+                                    <param id="1" name="Y">-200</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="824079261415127">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="891744438652733" type="ganchoMujerPlaya">
+                                    <param id="0" name="Object">baseAvatarFem</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="565416461107474" type="Function">
+                                    <param id="0" name="Name">&quot;AcomodarRopaOrigenMujer&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-3" name="Set position" sid="254095635171974" type="ganchoMujerPlaya">
+                                    <param id="0" name="X">-200</param>
+                                    <param id="1" name="Y">-200</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="528914525339735">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="104860986039446" type="System">
+                                            <param id="0" name="Variable">colorPiel</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;negro&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="156688492826196" type="trajeMujer">
+                                            <param id="0" name="Animation">&quot;playaNegra&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="964249482218040" type="trajeMujer">
+                                            <param id="0" name="X">254.192</param>
+                                            <param id="1" name="Y">400.482</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="784333569851438" type="trajeMujer">
+                                            <param id="0" name="Width">140.895</param>
+                                            <param id="1" name="Height">492.569</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="317475304414267">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="532561326706215" type="System">
+                                            <param id="0" name="Variable">colorPiel</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;blanco&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="397387743530792" type="trajeMujer">
+                                            <param id="0" name="Animation">&quot;playaBlanca&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="949462542190912" type="trajeMujer">
+                                            <param id="0" name="X">251</param>
+                                            <param id="1" name="Y">427.5</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="151019389680223" type="trajeMujer">
+                                            <param id="0" name="Width">73</param>
+                                            <param id="1" name="Height">439</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="914073357788894">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="663837275618754" type="System">
+                                            <param id="0" name="Variable">colorPiel</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;moreno&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="911511749964955" type="trajeMujer">
+                                            <param id="0" name="Animation">&quot;playaBlanca&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="133575608796297" type="trajeMujer">
+                                            <param id="0" name="X">251</param>
+                                            <param id="1" name="Y">427.5</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="874973996464793" type="trajeMujer">
+                                            <param id="0" name="Width">73</param>
+                                            <param id="1" name="Height">439</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>

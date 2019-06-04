@@ -80,8 +80,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>253</x>
-                        <y>371</y>
+                        <x>-261</x>
+                        <y>1185</y>
                         <z>0</z>
                         <width>140</width>
                         <height>540</height>
@@ -324,8 +324,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-466</x>
-                        <y>-287</y>
+                        <x>-445</x>
+                        <y>-427</y>
                         <z>0</z>
                         <width>99</width>
                         <height>65</height>
@@ -346,8 +346,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>62</x>
-                        <y>-148</y>
+                        <x>253</x>
+                        <y>371</y>
                         <z>0</z>
                         <width>140</width>
                         <height>540</height>
@@ -358,43 +358,21 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="trajeMujerPijama" uid="22">
+                <instance type="trajeMujer" uid="23">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
+                        <initial-animation>playaBlanca</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-370</x>
-                        <y>805</y>
+                        <x>251</x>
+                        <y>427.5</y>
                         <z>0</z>
-                        <width>76</width>
-                        <height>393</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.501272261</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="trajeMujerBiblica" uid="23">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-238</x>
-                        <y>688</y>
-                        <z>0</z>
-                        <width>88</width>
-                        <height>386</height>
+                        <width>73</width>
+                        <height>439</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -450,14 +428,66 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>855.913818359</x>
-                        <y>299.980072021</y>
+                        <x>850</x>
+                        <y>300</y>
                         <z>0</z>
                         <width>124.72869873</width>
                         <height>200</height>
                         <depth>0</depth>
                         <hotspotX>0.500751853</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="ganchoMujerSport" uid="22">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="DragDrop">
+                            <properties>
+                                <axes>Both</axes>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1000</x>
+                        <y>300</y>
+                        <z>0</z>
+                        <width>132</width>
+                        <height>187</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="expresionesFem" uid="27">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>251.287963867</x>
+                        <y>191.809158325</y>
+                        <z>0</z>
+                        <width>65.27633667</width>
+                        <height>55.697280884</height>
+                        <depth>0</depth>
+                        <hotspotX>0.502415478</hotspotX>
+                        <hotspotY>0.503401339</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -564,6 +594,66 @@
                         <z>0</z>
                         <width>136</width>
                         <height>145</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="ganchoMujerGala" uid="25">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="DragDrop">
+                            <properties>
+                                <axes>Both</axes>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>700</x>
+                        <y>400</y>
+                        <z>0</z>
+                        <width>171</width>
+                        <height>259</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="ganchoMujerPlaya" uid="26">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="DragDrop">
+                            <properties>
+                                <axes>Both</axes>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>850</x>
+                        <y>400</y>
+                        <z>0</z>
+                        <width>142</width>
+                        <height>200</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

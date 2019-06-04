@@ -273,6 +273,22 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="ganchoMujerSport" sid="694053476565736">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="934504013772831" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\Ropero\Mujer\GANCHOmujerdeportiva.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ganchoMujerGala" sid="334672150106964">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="682835930582783" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\Ropero\Mujer\GANCHOmujergala.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="trajes-base">
             <object-type name="trajeHombreEntero" sid="337915889090845">
@@ -336,10 +352,13 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="trajeMujerPijama" sid="483137247052136">
+            <object-type name="trajeMujer" sid="344491565421788">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="160975486887766" speed="5">
+                    <animation framecount="1" loop="0" name="biblico" pingpong="0" repeatcount="1" repeatto="0" sid="217732733400913" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\Ropero\Mujer\Ropa biblica.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="pijama" pingpong="0" repeatcount="1" repeatto="0" sid="521087312250212" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.501272" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\Ropero\Mujer\pijama.png">
                             <collision-poly>
                                 <point x="1" y="1" />
@@ -349,13 +368,31 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="trajeMujerBiblica" sid="344491565421788">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="217732733400913" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\Ropero\Mujer\Ropa biblica.png" />
+                    <animation framecount="1" loop="0" name="gala" pingpong="0" repeatcount="1" repeatto="0" sid="518867240561316" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\Ropero\Mujer\vestidogala.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="sport" pingpong="0" repeatcount="1" repeatto="0" sid="590332606693054" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\Ropero\Mujer\sport.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="playaNegra" pingpong="0" repeatcount="1" repeatto="0" sid="144816201183598" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\Ropero\Mujer\playanegra.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="playaBlanca" pingpong="0" repeatcount="1" repeatto="0" sid="667501167920718" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\Ropero\Mujer\playa blanca.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -402,9 +439,45 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-type name="ganchoMujerPlaya" sid="380720314878799">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="764852087948562" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\Ropero\Mujer\GANCHOmujerplaya.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="expresionesFem" sid="787018583553083">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="feliz" pingpong="0" repeatcount="1" repeatto="0" sid="279892656629134" speed="5">
+                    <frame duration="1" hotspotX="0.502415" hotspotY="0.503401" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\avatars seleccion\femenino\feliz.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="triste" pingpong="0" repeatcount="1" repeatto="0" sid="166939767875067" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\avatars seleccion\femenino\triste.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="sexy" pingpong="0" repeatcount="1" repeatto="0" sid="801639805524697" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\avatars seleccion\femenino\sexy.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
-        <family name="trajes" plugin-id="Sprite" sid="520533466887575">
+        <family name="ganchoDragNDrop" plugin-id="Sprite" sid="520533466887575">
             <members>
                 <member>ganchoHombreBiblico</member>
                 <member>ganchoHombreCasual</member>
@@ -414,7 +487,10 @@
                 <member>ganchoHombrePlaya</member>
                 <member>ganchoHombreScout</member>
                 <member>ganchoMujerBiblico</member>
+                <member>ganchoMujerGala</member>
                 <member>ganchoMujerPijama</member>
+                <member>ganchoMujerPlaya</member>
+                <member>ganchoMujerSport</member>
             </members>
             <behaviors>
                 <behavior-type name="DragDrop" sid="133932914441866">
