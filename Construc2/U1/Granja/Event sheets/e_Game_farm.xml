@@ -1628,7 +1628,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="625679334791743" title="Eventos_generales">
+        <event-group description="" sid="625679334791743" title="Eventos_botones">
             <sub-events>
                 <event-block sid="640459346368774">
                     <conditions>
@@ -1820,13 +1820,9 @@
                             <param id="0" name="Name">&quot;ajaxGuardarDia&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
-                        <action id="0" name="Call function" sid="194419912927657" type="Function">
-                            <param id="0" name="Name">&quot;activarInvDia2&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="0" name="Call function" sid="830434035902279" type="Function">
-                            <param id="0" name="Name">&quot;cargarTextoConsigna2&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
+                        <action id="-12" name="Set group active" sid="467150783174425" type="System">
+                            <param id="0" name="Group name">&quot;activar_dia_por_progreso&quot;</param>
+                            <param id="1" name="State">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1903,13 +1899,9 @@
                             <param id="0" name="Name">&quot;ajaxGuardarDia&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
-                        <action id="0" name="Call function" sid="948418155856324" type="Function">
-                            <param id="0" name="Name">&quot;activarInvDia3&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="0" name="Call function" sid="841074349412992" type="Function">
-                            <param id="0" name="Name">&quot;cargarTextoConsigna3&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
+                        <action id="-12" name="Set group active" sid="194031942303639" type="System">
+                            <param id="0" name="Group name">&quot;activar_dia_por_progreso&quot;</param>
+                            <param id="1" name="State">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1986,13 +1978,9 @@
                             <param id="0" name="Name">&quot;ajaxGuardarDia&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
-                        <action id="0" name="Call function" sid="479871473771800" type="Function">
-                            <param id="0" name="Name">&quot;cargarTextoConsigna3&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="0" name="Call function" sid="340542205127930" type="Function">
-                            <param id="0" name="Name">&quot;cargarTextoConsigna4&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
+                        <action id="-12" name="Set group active" sid="531383811204545" type="System">
+                            <param id="0" name="Group name">&quot;activar_dia_por_progreso&quot;</param>
+                            <param id="1" name="State">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2076,9 +2064,9 @@
                             <param id="0" name="Name">&quot;ajaxGuardarDia&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
-                        <action id="0" name="Call function" sid="308229344184466" type="Function">
-                            <param id="0" name="Name">&quot;cargarTextoConsigna5&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
+                        <action id="-12" name="Set group active" sid="600102056548288" type="System">
+                            <param id="0" name="Group name">&quot;activar_dia_por_progreso&quot;</param>
+                            <param id="1" name="State">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2155,9 +2143,9 @@
                             <param id="0" name="Name">&quot;ajaxGuardarDia&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
-                        <action id="0" name="Call function" sid="107156015037454" type="Function">
-                            <param id="0" name="Name">&quot;cargarTextoConsigna6&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
+                        <action id="-12" name="Set group active" sid="549471558769393" type="System">
+                            <param id="0" name="Group name">&quot;activar_dia_por_progreso&quot;</param>
+                            <param id="1" name="State">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2261,6 +2249,18 @@
                         <condition id="-2" name="On start of layout" sid="703592176193939" type="System" />
                     </conditions>
                     <actions>
+                        <action id="-9" name="Set value" sid="136942028912433" type="System">
+                            <param id="0" name="Variable">progreso</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="296430774468666" type="System">
+                            <param id="0" name="Variable">idUsuario</param>
+                            <param id="1" name="Value">&quot;felipe@correo.de&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="351719777995426" type="System">
+                            <param id="0" name="Variable">sexo</param>
+                            <param id="1" name="Value">&quot;m&quot;</param>
+                        </action>
                         <action id="0" name="Play" sid="869889608108873" type="Audio">
                             <param id="0" name="Audio file">amazonas</param>
                             <param id="2" name="Loop">1</param>
@@ -2275,9 +2275,9 @@
                             <param id="0" name="Variable">status</param>
                             <param id="1" name="Value">&quot;loaded&quot;</param>
                         </action>
-                        <action id="0" name="Call function" sid="801053914971281" type="Function">
-                            <param id="0" name="Name">&quot;ajaxLoadTextIntro&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
+                        <action id="-12" name="Set group active" sid="247765044089939" type="System">
+                            <param id="0" name="Group name">&quot;activar_dia_por_progreso&quot;</param>
+                            <param id="1" name="State">1</param>
                         </action>
                         <action id="-15" name="Set visible" sid="524833769036517" type="compradores">
                             <param id="0" name="Visibility">0</param>
@@ -2289,36 +2289,8 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="759214904434431" title="Ajax">
+        <event-group description="Ajax que envia el dia que conlcuye el jugador" sid="759214904434431" title="Ajax_Guardar_progreso_dia">
             <sub-events>
-                <comment>Ajax que carga los textos de instrucciones para cada dia</comment>
-                <event-block sid="534939463439349">
-                    <conditions>
-                        <condition id="0" name="On function" sid="610541982447960" type="Function">
-                            <param id="0" name="Name">&quot;ajaxLoadTextIntro&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Request URL" sid="153511178068682" type="AJAX">
-                            <param id="0" name="Tag">&quot;introTextsFarm&quot;</param>
-                            <param id="1" name="URL">URLTXTINTROS</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="379588097169541">
-                    <conditions>
-                        <condition id="0" name="On completed" sid="765293968385561" type="AJAX">
-                            <param id="0" name="Tag">&quot;introTextsFarm&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-12" name="Set group active" sid="652416013468281" type="System">
-                            <param id="0" name="Group name">&quot;loadArray&quot;</param>
-                            <param id="1" name="State">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>Ajax que envia el dia que conlcuye el jugador</comment>
                 <event-block sid="354903972110397">
                     <conditions>
                         <condition id="0" name="On function" sid="310916442241739" type="Function">
@@ -2341,15 +2313,8 @@
                         <condition id="0" name="On function" sid="553735547854346" type="Function">
                             <param id="0" name="Name">&quot;cargarTextoConsigna1&quot;</param>
                         </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="286355631313182" type="txtInstruccionesDia">
-                            <param id="0" name="Unique ID">147</param>
-                        </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="-3" name="Set position" sid="632874949612599" type="txtInstruccionesDia">
-                            <param id="0" name="X">512</param>
-                            <param id="1" name="Y">224</param>
-                        </action>
                         <action id="4" name="Set animation" sid="450460486822385" type="textosMisiones">
                             <param id="0" name="Animation">&quot;m1&quot;</param>
                             <param id="1" name="From">1</param>
@@ -2373,15 +2338,8 @@
                         <condition id="0" name="On function" sid="156394913694756" type="Function">
                             <param id="0" name="Name">&quot;cargarTextoConsigna2&quot;</param>
                         </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="560359726264183" type="txtInstruccionesDia">
-                            <param id="0" name="Unique ID">148</param>
-                        </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="-3" name="Set position" sid="420759548166177" type="txtInstruccionesDia">
-                            <param id="0" name="X">512</param>
-                            <param id="1" name="Y">224</param>
-                        </action>
                         <action id="4" name="Set animation" sid="146365449090467" type="textosMisiones">
                             <param id="0" name="Animation">&quot;m2&quot;</param>
                             <param id="1" name="From">1</param>
@@ -2405,15 +2363,8 @@
                         <condition id="0" name="On function" sid="982172235825623" type="Function">
                             <param id="0" name="Name">&quot;cargarTextoConsigna3&quot;</param>
                         </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="225290089075933" type="txtInstruccionesDia">
-                            <param id="0" name="Unique ID">149</param>
-                        </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="-3" name="Set position" sid="605779610973688" type="txtInstruccionesDia">
-                            <param id="0" name="X">512</param>
-                            <param id="1" name="Y">224</param>
-                        </action>
                         <action id="4" name="Set animation" sid="787112737447370" type="textosMisiones">
                             <param id="0" name="Animation">&quot;m3&quot;</param>
                             <param id="1" name="From">1</param>
@@ -2437,15 +2388,8 @@
                         <condition id="0" name="On function" sid="670593258684687" type="Function">
                             <param id="0" name="Name">&quot;cargarTextoConsigna4&quot;</param>
                         </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="986276579916972" type="txtInstruccionesDia">
-                            <param id="0" name="Unique ID">155</param>
-                        </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="-3" name="Set position" sid="365481512808236" type="txtInstruccionesDia">
-                            <param id="0" name="X">512</param>
-                            <param id="1" name="Y">224</param>
-                        </action>
                         <action id="4" name="Set animation" sid="985966160923004" type="textosMisiones">
                             <param id="0" name="Animation">&quot;m4&quot;</param>
                             <param id="1" name="From">1</param>
@@ -2473,15 +2417,8 @@
                         <condition id="0" name="On function" sid="230714121315647" type="Function">
                             <param id="0" name="Name">&quot;cargarTextoConsigna5&quot;</param>
                         </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="341813554858378" type="txtInstruccionesDia">
-                            <param id="0" name="Unique ID">156</param>
-                        </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="-3" name="Set position" sid="861217754068633" type="txtInstruccionesDia">
-                            <param id="0" name="X">512</param>
-                            <param id="1" name="Y">224</param>
-                        </action>
                         <action id="4" name="Set animation" sid="642689240911653" type="textosMisiones">
                             <param id="0" name="Animation">&quot;m5&quot;</param>
                             <param id="1" name="From">1</param>
@@ -2509,15 +2446,8 @@
                         <condition id="0" name="On function" sid="505248935991034" type="Function">
                             <param id="0" name="Name">&quot;cargarTextoConsigna6&quot;</param>
                         </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="450809898749638" type="txtInstruccionesDia">
-                            <param id="0" name="Unique ID">159</param>
-                        </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="-3" name="Set position" sid="354616667230275" type="txtInstruccionesDia">
-                            <param id="0" name="X">512</param>
-                            <param id="1" name="Y">224</param>
-                        </action>
                         <action id="4" name="Set animation" sid="492707226295156" type="textosMisiones">
                             <param id="0" name="Animation">&quot;m6&quot;</param>
                             <param id="1" name="From">1</param>
@@ -2548,49 +2478,6 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" inactive="1" sid="870653898091128" title="loadArray">
-            <sub-events>
-                <event-block sid="291253591188365">
-                    <conditions>
-                        <condition id="3" name="For each element" sid="324543032437973" type="Array">
-                            <param id="0" name="Axes">2</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="2" name="Set at X" sid="811339782077612" type="Array">
-                            <param id="0" name="X">Array.CurX</param>
-                            <param id="1" name="Value">tokenat(Ajax.LastData, Array.CurX, &quot;|&quot;)</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="345852489273702">
-                    <conditions>
-                        <condition id="-11" name="For Each" sid="446302855855004" type="System">
-                            <param id="0" name="Object">txtInstruccionesDia</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="423633343509009" type="txtInstruccionesDia">
-                            <param id="0" name="Text">Array.At(txtInstruccionesDia.IID)</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>DEsactiva el grupo y llama al grupo que muestra los textos &quot;Seleccionar consigna&quot;</comment>
-                <event-block sid="646876171442314">
-                    <conditions />
-                    <actions>
-                        <action id="-12" name="Set group active" sid="315955149890932" type="System">
-                            <param id="0" name="Group name">&quot;loadArray&quot;</param>
-                            <param id="1" name="State">0</param>
-                        </action>
-                        <action id="-12" name="Set group active" sid="940041847858284" type="System">
-                            <param id="0" name="Group name">&quot;activar_dia_por_progreso&quot;</param>
-                            <param id="1" name="State">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
         <event-group description="" sid="460636316549813" title="eventos_btnAceptar">
             <sub-events>
                 <event-block sid="883479496087193">
@@ -2616,9 +2503,8 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" inactive="1" sid="434450442131260" title="activar_dia_por_progreso">
+        <event-group description="De acuerdo a la variable progreso carga los diferentes textos de consignas por dia. llama a los métodos para activar y desactivar los diferentes elementos según el día." inactive="1" sid="434450442131260" title="activar_dia_por_progreso">
             <sub-events>
-                <comment>De acuerdo a la variable progreso carga los diferentes textos de consignas por dia</comment>
                 <event-block sid="238978244471494">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="356874238067165" type="System">
@@ -2632,13 +2518,16 @@
                             <param id="0" name="Name">&quot;cargarTextoConsigna1&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
-                        <action id="-12" name="Set group active" sid="290783765774959" type="System">
+                        <action id="-12" name="Set group active" sid="638675165482477" type="System">
+                            <param id="0" name="Group name">&quot;resaltado_dia_1&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="683525278052082" type="System">
                             <param id="0" name="Group name">&quot;activar_dia_por_progreso&quot;</param>
                             <param id="1" name="State">0</param>
                         </action>
                     </actions>
                 </event-block>
-                <comment>llama a los métodos para activar y desactivar los diferentes elementos según el día</comment>
                 <event-block sid="808814278373279">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="468944392353737" type="System">
@@ -2800,7 +2689,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="801986886101215" title="Activar_elementos_de_progreso">
+        <event-group description="Funciones de inventario según progreso" sid="801986886101215" title="Activar_elementos_de_progreso">
             <sub-events>
                 <event-block sid="810773682278514">
                     <conditions>
@@ -2978,6 +2867,62 @@
                         </action>
                     </actions>
                 </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="412111869142278" title="Resaltados_Objetos">
+            <sub-events>
+                <event-group description="" inactive="1" sid="525093234250369" title="resaltado_dia_1">
+                    <sub-events>
+                        <event-block sid="170626004739345">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="262772194467521" type="sprControl">
+                                    <param id="0" name="Object">sResaltadoSemillas</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="298393017634993" type="semillas">
+                                    <param id="0" name="Animation">&quot;resaltado&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="828905964447807">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="461433761347516" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="820647531365522" type="semillas">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="919864194499232">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="462701507637909" type="sprControl">
+                                    <param id="0" name="Object">sResaltadoHacha</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="550977859517448" type="hacha">
+                                    <param id="0" name="Animation">&quot;resaltado&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="796272876403482">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="840958998720895" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="464346200851817" type="hacha">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
     </events>

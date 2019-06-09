@@ -2298,6 +2298,12 @@
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="786127441794948" speed="5">
                         <frame duration="1" hotspotX="0.431818" hotspotY="0.505618" original-source="C:\Users\logan24\Desktop\recursos_CONFE\assetsfinales-20190418T001056Z-001\assetsGranja-05.png" />
                     </animation>
+                    <animation framecount="4" loop="1" name="resaltado" pingpong="0" repeatcount="1" repeatto="0" sid="433585486537354" speed="10">
+                        <frame duration="1" hotspotX="0.39726" hotspotY="0.438596" original-source="C:\Users\logan24\Desktop\hacha.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\wamp\www\Confe2\Construc2\U1\Granja\Animations\hacha\Default\000.png" />
+                        <frame duration="1" hotspotX="0.39726" hotspotY="0.438596" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.505618" />
+                    </animation>
                 </animation-folder>
             </object-type>
             <object-type name="tablas_madera" sid="822527174151763">
@@ -2420,6 +2426,12 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="145543923421378" speed="5">
                         <frame duration="1" hotspotX="0.51087" hotspotY="0.44" original-source="C:\Users\logan24\Desktop\recursos_CONFE\assetsfinales-20190418T001056Z-001\assetsGranja-14.png" />
+                    </animation>
+                    <animation framecount="4" loop="1" name="resaltado" pingpong="0" repeatcount="1" repeatto="0" sid="744010394000506" speed="5">
+                        <frame duration="1" hotspotX="0.484848" hotspotY="0.504274" original-source="C:\Users\logan24\Desktop\semilla.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\wamp\www\Confe2\Construc2\U1\Granja\Animations\semillas\Default\000.png" />
+                        <frame duration="1" hotspotX="0.484848" hotspotY="0.504274" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -4369,6 +4381,22 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="416109452574297" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="sResaltadoSemillas" sid="473346863194134">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="700007878052023" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="sResaltadoHacha" sid="381970695273665">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="767783679034608" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>

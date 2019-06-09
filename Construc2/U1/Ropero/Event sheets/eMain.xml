@@ -6,7 +6,7 @@
         <variable constant="0" name="expresion" sid="515570341785015" static="0" type="text">feliz</variable>
         <variable constant="0" name="cabello" sid="896856940074906" static="0" type="text">m1</variable>
         <variable constant="0" name="colorPiel" sid="271624059746128" static="0" type="text">negro</variable>
-        <variable constant="0" name="sexo" sid="561508372494367" static="0" type="text">m</variable>
+        <variable constant="0" name="sexo" sid="561508372494367" static="0" type="text">x</variable>
         <variable constant="0" name="aux" sid="264688356595490" static="0" type="text">nulo</variable>
         <event-group description="" sid="370034331693827" title="Setup">
             <sub-events>
@@ -1105,7 +1105,7 @@
                         </action>
                         <action id="-9" name="Set value" sid="142829536070866" type="System">
                             <param id="0" name="Variable">expresion</param>
-                            <param id="1" name="Value">&quot;feliz&quot;</param>
+                            <param id="1" name="Value">WebStorage.SessionValue(&quot;expresion&quot;)</param>
                         </action>
                     </actions>
                 </event-block>
