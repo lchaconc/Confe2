@@ -325,6 +325,11 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-9" name="Destroy" sid="914432086207738" type="sResaltadoArbol" />
+                        <action id="-3" name="Set position" sid="329716727257814" type="resaltado">
+                            <param id="0" name="X">950</param>
+                            <param id="1" name="Y">-200</param>
+                        </action>
                         <action id="-13" name="Set boolean" sid="735947302217847" type="inv_axe">
                             <param id="0" name="Instance variable">activo</param>
                             <param id="1" name="Value">0</param>
@@ -1092,8 +1097,8 @@
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action id="-3" name="Set position" sid="384993619145916" type="sprControl">
-                            <param id="0" name="X">608</param>
-                            <param id="1" name="Y">256</param>
+                            <param id="0" name="X">546</param>
+                            <param id="1" name="Y">1312</param>
                         </action>
                         <action id="0" name="Play" sid="744369320180095" type="Audio">
                             <param id="0" name="Audio file">logrado1</param>
@@ -1102,8 +1107,8 @@
                             <param id="1" name="Tag (optional)">&quot;corte&quot;</param>
                         </action>
                         <action id="-3" name="Set position" sid="113961119569518" type="choza">
-                            <param id="0" name="X">877</param>
-                            <param id="1" name="Y">113</param>
+                            <param id="0" name="X">288</param>
+                            <param id="1" name="Y">1232</param>
                         </action>
                         <action id="-15" name="Set visible" sid="875238743234374" type="choza">
                             <param id="0" name="Visibility">1</param>
@@ -1267,6 +1272,16 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-9" name="Destroy" sid="765499521907834" type="sResaltadoHacha" />
+                        <action id="-3" name="Set position" sid="810652596223545" type="resaltado">
+                            <param id="0" name="X">950</param>
+                            <param id="1" name="Y">-200</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="850895748943726" type="hacha">
+                            <param id="0" name="Object">particulas_blanco</param>
+                            <param id="1" name="Layer">&quot;main&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
                         <action id="-9" name="Destroy" sid="522566440614960" type="hacha" />
                         <action id="-15" name="Set visible" sid="626426927271997" type="inv_axe">
                             <param id="0" name="Visibility">1</param>
@@ -1412,6 +1427,11 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-9" name="Destroy" sid="235678594008882" type="sResaltadoLadrillosChoza" />
+                        <action id="-3" name="Set position" sid="434328944736634" type="resaltado">
+                            <param id="0" name="X">900</param>
+                            <param id="1" name="Y">-200</param>
+                        </action>
                         <action id="-16" name="Wait" sid="438751941048903" type="System">
                             <param id="0" name="Seconds">0.5</param>
                         </action>
@@ -1422,8 +1442,8 @@
                             <param id="1" name="Tag (optional)">&quot;logrado&quot;</param>
                         </action>
                         <action id="-3" name="Set position" sid="565019541762960" type="ladrilloCasa">
-                            <param id="0" name="X">877</param>
-                            <param id="1" name="Y">82</param>
+                            <param id="0" name="X">349</param>
+                            <param id="1" name="Y">1278</param>
                         </action>
                         <action id="-13" name="Set boolean" sid="649860348560742" type="ladrilloCasa">
                             <param id="0" name="Instance variable">activo</param>
@@ -2873,51 +2893,93 @@
             <sub-events>
                 <event-group description="" inactive="1" sid="525093234250369" title="resaltado_dia_1">
                     <sub-events>
-                        <event-block sid="170626004739345">
-                            <conditions>
-                                <condition id="1" name="Is overlapping another object" sid="262772194467521" type="sprControl">
-                                    <param id="0" name="Object">sResaltadoSemillas</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="298393017634993" type="semillas">
-                                    <param id="0" name="Animation">&quot;resaltado&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="828905964447807">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="461433761347516" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="820647531365522" type="semillas">
-                                    <param id="0" name="Animation">&quot;Default&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
                         <event-block sid="919864194499232">
                             <conditions>
                                 <condition id="1" name="Is overlapping another object" sid="462701507637909" type="sprControl">
                                     <param id="0" name="Object">sResaltadoHacha</param>
                                 </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="216271038812883" type="resaltado">
+                                    <param id="0" name="Unique ID">47</param>
+                                </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="550977859517448" type="hacha">
-                                    <param id="0" name="Animation">&quot;resaltado&quot;</param>
-                                    <param id="1" name="From">1</param>
+                                <action id="-3" name="Set position" sid="766200567797582" type="resaltado">
+                                    <param id="0" name="X">1240.793</param>
+                                    <param id="1" name="Y">107.868</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block sid="796272876403482">
                             <conditions>
                                 <condition id="-22" name="Else" sid="840958998720895" type="System" />
+                                <condition id="-14" name="Pick by unique ID" sid="921030551626983" type="resaltado">
+                                    <param id="0" name="Unique ID">47</param>
+                                </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="464346200851817" type="hacha">
-                                    <param id="0" name="Animation">&quot;Default&quot;</param>
-                                    <param id="1" name="From">1</param>
+                                <action id="-3" name="Set position" sid="125830874480229" type="resaltado">
+                                    <param id="0" name="X">950</param>
+                                    <param id="1" name="Y">-200</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="842728494012149">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="499004326863546" type="sprControl">
+                                    <param id="0" name="Object">sResaltadoArbol</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="562522112077925" type="resaltado">
+                                    <param id="0" name="Unique ID">236</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="702657233399826" type="resaltado">
+                                    <param id="0" name="X">454</param>
+                                    <param id="1" name="Y">942</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="567402669339280">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="668429493162646" type="System" />
+                                <condition id="-14" name="Pick by unique ID" sid="502108465986515" type="resaltado">
+                                    <param id="0" name="Unique ID">236</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="502918323594753" type="resaltado">
+                                    <param id="0" name="X">950</param>
+                                    <param id="1" name="Y">-200</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="118464801310092">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="786419172336156" type="sprControl">
+                                    <param id="0" name="Object">sResaltadoLadrillosChoza</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="291043713319007" type="resaltado">
+                                    <param id="0" name="Unique ID">237</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="405921932543820" type="resaltado">
+                                    <param id="0" name="X">57</param>
+                                    <param id="1" name="Y">775</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="317120736985702">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="756819279325943" type="System" />
+                                <condition id="-14" name="Pick by unique ID" sid="249311618589771" type="resaltado">
+                                    <param id="0" name="Unique ID">237</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="796443155541461" type="resaltado">
+                                    <param id="0" name="X">950</param>
+                                    <param id="1" name="Y">-200</param>
                                 </action>
                             </actions>
                         </event-block>

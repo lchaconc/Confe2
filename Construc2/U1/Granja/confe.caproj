@@ -25,6 +25,7 @@
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -245,14 +246,6 @@
             </object-type>
         </object-folder>
         <object-folder name="backgrounds">
-            <object-type name="bgShadow" sid="793716587266488">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="692911023956160" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\GRANJA\botones\base_botones2.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
             <object-type name="grass2" sid="535045527318294">
                 <plugin id="TiledBg" />
                 <texture original-source="C:\Users\logan24\Desktop\granja\granjagrass.png" />
@@ -317,14 +310,6 @@
             <object-type name="bgVerdeOscuro" sid="470863083271250">
                 <plugin id="TiledBg" />
                 <texture original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\GRANJA\bg_mision.png" />
-            </object-type>
-            <object-type name="bgShadow2" sid="870786487347096">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="452667510651588" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\GRANJA\botones\base_botones2.png" />
-                    </animation>
-                </animation-folder>
             </object-type>
         </object-folder>
         <object-folder name="system">
@@ -401,7 +386,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="447936978616775" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.503268" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\GRANJA\botones\btn_derecho.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\GRANJA\botones\btn_derecho.png">
                             <collision-poly>
                                 <point x="0.00320513" y="1" />
                                 <point x="0.00320513" y="0" />
@@ -425,6 +410,14 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="869514884136494" speed="5">
                         <frame duration="1" hotspotX="0.50431" hotspotY="0.504587" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\GRANJA\botones\btn_aceptar.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="controlesGeneral" sid="205285671087368">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="170895038848104" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Granja\Botones-Controles\NuevoControlGranja.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -2262,12 +2255,6 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="786127441794948" speed="5">
                         <frame duration="1" hotspotX="0.431818" hotspotY="0.505618" original-source="C:\Users\logan24\Desktop\recursos_CONFE\assetsfinales-20190418T001056Z-001\assetsGranja-05.png" />
-                    </animation>
-                    <animation framecount="4" loop="1" name="resaltado" pingpong="0" repeatcount="1" repeatto="0" sid="433585486537354" speed="10">
-                        <frame duration="1" hotspotX="0.39726" hotspotY="0.438596" original-source="C:\Users\logan24\Desktop\hacha.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\wamp\www\Confe2\Construc2\U1\Granja\Animations\hacha\Default\000.png" />
-                        <frame duration="1" hotspotX="0.39726" hotspotY="0.438596" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.505618" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -4939,6 +4926,19 @@
                 <plugin id="Particles" />
                 <texture />
             </object-type>
+            <object-type name="resaltado" sid="674401176948066">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Rotate" sid="897755798544024">
+                        <behavior id="Rotate" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="798278533591089" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Granja\Resaltados\luz_amariulla.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="sensores">
             <object-type name="sensorHuerta" sid="115644723619063">
@@ -4971,6 +4971,22 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="767783679034608" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="sResaltadoArbol" sid="278565598651628">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="693333885396003" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="sResaltadoLadrillosChoza" sid="246626582321673">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="801416762695372" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
