@@ -309,6 +309,22 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="ganchoMujerScout" sid="679403928846083">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="186969889660144" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ganchoMujerMochilera" sid="914045169321190">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="761347962471419" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="trajes-base">
             <object-type name="trajeHombreEntero" sid="337915889090845">
@@ -423,6 +439,12 @@
                                 <point x="1" y="0" />
                             </collision-poly>
                         </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="scout" pingpong="0" repeatcount="1" repeatto="0" sid="103016287602824" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Ropero_1\Asssets ropero_old\ROPERO MUJER\scoutMujer.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="mochilera" pingpong="0" repeatcount="1" repeatto="0" sid="547914088323972" speed="5">
+                        <frame duration="1" hotspotX="0.502994" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Ropero_1\Asssets ropero_old\ROPERO MUJER\mochilera.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -556,8 +578,10 @@
                 <member>ganchoMujerBiblico</member>
                 <member>ganchoMujerCasual</member>
                 <member>ganchoMujerGala</member>
+                <member>ganchoMujerMochilera</member>
                 <member>ganchoMujerPijama</member>
                 <member>ganchoMujerPlaya</member>
+                <member>ganchoMujerScout</member>
                 <member>ganchoMujerSport</member>
             </members>
             <behaviors>
