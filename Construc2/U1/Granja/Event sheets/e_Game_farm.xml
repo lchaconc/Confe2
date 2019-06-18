@@ -1143,16 +1143,53 @@
                             <param id="0" name="Object">tree1</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="355580387288718" type="tree1">
-                            <param id="0" name="Instance variable">colision</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="0" name="Call function" sid="107276297105229" type="Function">
-                            <param id="0" name="Name">&quot;abrirModalInv&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="122956267884976">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="819451542976067" type="inv_axe">
+                                    <param id="0" name="Instance variable">activo</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="355580387288718" type="tree1">
+                                    <param id="0" name="Instance variable">colision</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="107276297105229" type="Function">
+                                    <param id="0" name="Name">&quot;abrirModalInv&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="213897900105653">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="835502646127667" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="521382328889966" type="bgPergamino">
+                                    <param id="0" name="X">710</param>
+                                    <param id="1" name="Y">378</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="321754390667001" type="bgPergamino">
+                                    <param id="0" name="Width">497</param>
+                                    <param id="1" name="Height">143</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="872467194765069" type="txtNecesitas">
+                                    <param id="0" name="X">717</param>
+                                    <param id="1" name="Y">376</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="590656722053360" type="System">
+                                    <param id="0" name="Layer">&quot;shadow&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="211917607542613" type="System">
+                                    <param id="0" name="Layer">&quot;textos&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block any="1" sid="227478175441345">
                     <conditions>
@@ -1200,16 +1237,53 @@
                             <param id="0" name="Object">palita</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="871225440212243" type="palita">
-                            <param id="0" name="Instance variable">colision</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="0" name="Call function" sid="898008889245742" type="Function">
-                            <param id="0" name="Name">&quot;abrirModalInv&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="829333361043564">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="960120578554071" type="inv_semillas">
+                                    <param id="0" name="Instance variable">activo</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="871225440212243" type="palita">
+                                    <param id="0" name="Instance variable">colision</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="898008889245742" type="Function">
+                                    <param id="0" name="Name">&quot;abrirModalInv&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="532385427896085">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="123586670515874" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="960579826021505" type="bgPergamino">
+                                    <param id="0" name="X">710</param>
+                                    <param id="1" name="Y">378</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="866296931564193" type="bgPergamino">
+                                    <param id="0" name="Width">497</param>
+                                    <param id="1" name="Height">143</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="623800659387612" type="txtNecesitas">
+                                    <param id="0" name="X">717</param>
+                                    <param id="1" name="Y">376</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="242575675001704" type="System">
+                                    <param id="0" name="Layer">&quot;shadow&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="995720168550932" type="System">
+                                    <param id="0" name="Layer">&quot;textos&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block any="1" sid="416954338535460">
                     <conditions>
@@ -1328,6 +1402,16 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-9" name="Destroy" sid="557427594986356" type="sResaltadoSemillas" />
+                        <action id="-3" name="Set position" sid="409584581015894" type="resaltado">
+                            <param id="0" name="X">950</param>
+                            <param id="1" name="Y">-200</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="505274536757899" type="semillas">
+                            <param id="0" name="Object">particulas_blanco</param>
+                            <param id="1" name="Layer">&quot;main&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
                         <action id="-9" name="Destroy" sid="397466177302439" type="semillas" />
                         <action id="-15" name="Set visible" sid="247437411084205" type="inv_semillas">
                             <param id="0" name="Visibility">1</param>
@@ -1694,7 +1778,7 @@
                         <action id="-16" name="Wait" sid="654394905503521" type="System">
                             <param id="0" name="Seconds">2</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="658323790957519" type="textosMisiones">
+                        <action id="-15" name="Set visible" sid="658323790957519" type="txtMisiones">
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-15" name="Set visible" sid="517641524380359" type="btnAceptar">
@@ -1711,6 +1795,64 @@
                         <action id="-4" name="Set layer visible" sid="496048103728325" type="System">
                             <param id="0" name="Layer">&quot;textos&quot;</param>
                             <param id="1" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="883479496087193">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="930449098471373" type="Touch">
+                            <param id="0" name="Object">btnAceptar</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="217229214223961" type="System">
+                            <param id="0" name="Layer">&quot;textos&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="739437970414080" type="System">
+                            <param id="0" name="Layer">&quot;shadow&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="845784369085364" type="bgVerdeOscuro">
+                            <param id="0" name="X">-600</param>
+                            <param id="1" name="Y">-600</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="953108913784521" type="txtMisiones">
+                            <param id="0" name="X">-300</param>
+                            <param id="1" name="Y">-300</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="256575240440845" type="titulosDias">
+                            <param id="0" name="X">-300</param>
+                            <param id="1" name="Y">-300</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="621980900507432" type="btnAceptar">
+                            <param id="0" name="X">-300</param>
+                            <param id="1" name="Y">-300</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="399307939320405">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="869690498734043" type="Touch">
+                            <param id="0" name="Object">bgPergamino</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="767403003329209" type="System">
+                            <param id="0" name="Layer">&quot;textos&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="766169862167389" type="System">
+                            <param id="0" name="Layer">&quot;shadow&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="749911440801260" type="bgPergamino">
+                            <param id="0" name="X">-200</param>
+                            <param id="1" name="Y">-200</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="892860561343905" type="txtNecesitas">
+                            <param id="0" name="X">-200</param>
+                            <param id="1" name="Y">-200</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1803,6 +1945,14 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
+                        <action id="-3" name="Set position" sid="298679776182591" type="bgPergamino">
+                            <param id="0" name="X">693</param>
+                            <param id="1" name="Y">389</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="149769445056480" type="bgPergamino">
+                            <param id="0" name="X">595</param>
+                            <param id="1" name="Y">262</param>
+                        </action>
                         <action id="-4" name="Set layer visible" sid="367837464242725" type="System">
                             <param id="0" name="Layer">&quot;modal_papiro&quot;</param>
                             <param id="1" name="Visibility">1</param>
@@ -1812,7 +1962,7 @@
                             <param id="1" name="Visibility">1</param>
                         </action>
                         <action id="-16" name="Wait" sid="824469259001426" type="System">
-                            <param id="0" name="Seconds">5</param>
+                            <param id="0" name="Seconds">4</param>
                         </action>
                         <action id="-4" name="Set layer visible" sid="470513287920965" type="System">
                             <param id="0" name="Layer">&quot;modal_papiro&quot;</param>
@@ -1882,6 +2032,14 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
+                        <action id="-3" name="Set position" sid="558945506906701" type="bgPergamino">
+                            <param id="0" name="X">693</param>
+                            <param id="1" name="Y">389</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="116622494165943" type="bgPergamino">
+                            <param id="0" name="X">595</param>
+                            <param id="1" name="Y">262</param>
+                        </action>
                         <action id="-4" name="Set layer visible" sid="787602977180769" type="System">
                             <param id="0" name="Layer">&quot;modal_papiro&quot;</param>
                             <param id="1" name="Visibility">1</param>
@@ -1891,7 +2049,7 @@
                             <param id="1" name="Visibility">1</param>
                         </action>
                         <action id="-16" name="Wait" sid="492570452401823" type="System">
-                            <param id="0" name="Seconds">5</param>
+                            <param id="0" name="Seconds">4</param>
                         </action>
                         <action id="-4" name="Set layer visible" sid="710891182325095" type="System">
                             <param id="0" name="Layer">&quot;modal_papiro&quot;</param>
@@ -1960,6 +2118,14 @@
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="525714863273292" type="bgPergamino">
+                            <param id="0" name="X">693</param>
+                            <param id="1" name="Y">389</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="125136458218102" type="bgPergamino">
+                            <param id="0" name="X">595</param>
+                            <param id="1" name="Y">262</param>
                         </action>
                         <action id="-4" name="Set layer visible" sid="163584814164506" type="System">
                             <param id="0" name="Layer">&quot;modal_papiro&quot;</param>
@@ -2039,6 +2205,14 @@
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="119529739421421" type="bgPergamino">
+                            <param id="0" name="X">693</param>
+                            <param id="1" name="Y">389</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="820645446224716" type="bgPergamino">
+                            <param id="0" name="X">595</param>
+                            <param id="1" name="Y">262</param>
                         </action>
                         <action id="-4" name="Set layer visible" sid="983602219489774" type="System">
                             <param id="0" name="Layer">&quot;modal_papiro&quot;</param>
@@ -2125,6 +2299,14 @@
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="899568729769616" type="bgPergamino">
+                            <param id="0" name="X">693</param>
+                            <param id="1" name="Y">389</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="783176202315892" type="bgPergamino">
+                            <param id="0" name="X">595</param>
+                            <param id="1" name="Y">262</param>
                         </action>
                         <action id="-4" name="Set layer visible" sid="253686560128016" type="System">
                             <param id="0" name="Layer">&quot;modal_papiro&quot;</param>
@@ -2335,7 +2517,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="450460486822385" type="textosMisiones">
+                        <action id="4" name="Set animation" sid="450460486822385" type="txtMisiones">
                             <param id="0" name="Animation">&quot;m1&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -2351,6 +2533,22 @@
                             <param id="0" name="Layer">&quot;shadow&quot;</param>
                             <param id="1" name="Visibility">1</param>
                         </action>
+                        <action id="-3" name="Set position" sid="411963466815254" type="bgVerdeOscuro">
+                            <param id="0" name="X">320</param>
+                            <param id="1" name="Y">160</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="971972316873685" type="titulosDias">
+                            <param id="0" name="X">707</param>
+                            <param id="1" name="Y">230</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="899690930653838" type="txtMisiones">
+                            <param id="0" name="X">718</param>
+                            <param id="1" name="Y">352</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="825042905120792" type="btnAceptar">
+                            <param id="0" name="X">704</param>
+                            <param id="1" name="Y">480</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="779595577644140">
@@ -2360,7 +2558,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="146365449090467" type="textosMisiones">
+                        <action id="4" name="Set animation" sid="146365449090467" type="txtMisiones">
                             <param id="0" name="Animation">&quot;m2&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -2376,6 +2574,22 @@
                             <param id="0" name="Layer">&quot;shadow&quot;</param>
                             <param id="1" name="Visibility">1</param>
                         </action>
+                        <action id="-3" name="Set position" sid="332562975350425" type="bgVerdeOscuro">
+                            <param id="0" name="X">320</param>
+                            <param id="1" name="Y">160</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="659588894196709" type="titulosDias">
+                            <param id="0" name="X">707</param>
+                            <param id="1" name="Y">230</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="635071723632630" type="txtMisiones">
+                            <param id="0" name="X">718</param>
+                            <param id="1" name="Y">352</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="350169434733336" type="btnAceptar">
+                            <param id="0" name="X">704</param>
+                            <param id="1" name="Y">480</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="965449512199048">
@@ -2385,7 +2599,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="787112737447370" type="textosMisiones">
+                        <action id="4" name="Set animation" sid="787112737447370" type="txtMisiones">
                             <param id="0" name="Animation">&quot;m3&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -2401,6 +2615,22 @@
                             <param id="0" name="Layer">&quot;shadow&quot;</param>
                             <param id="1" name="Visibility">1</param>
                         </action>
+                        <action id="-3" name="Set position" sid="210245329915997" type="bgVerdeOscuro">
+                            <param id="0" name="X">320</param>
+                            <param id="1" name="Y">160</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="276494527553666" type="titulosDias">
+                            <param id="0" name="X">707</param>
+                            <param id="1" name="Y">230</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="808695991987463" type="txtMisiones">
+                            <param id="0" name="X">718</param>
+                            <param id="1" name="Y">352</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="442748851665812" type="btnAceptar">
+                            <param id="0" name="X">704</param>
+                            <param id="1" name="Y">480</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="591815337217468">
@@ -2410,7 +2640,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="985966160923004" type="textosMisiones">
+                        <action id="4" name="Set animation" sid="985966160923004" type="txtMisiones">
                             <param id="0" name="Animation">&quot;m4&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -2430,6 +2660,22 @@
                             <param id="0" name="Variable">status</param>
                             <param id="1" name="Value">&quot;text consigna4&quot;</param>
                         </action>
+                        <action id="-3" name="Set position" sid="330941429458449" type="bgVerdeOscuro">
+                            <param id="0" name="X">320</param>
+                            <param id="1" name="Y">160</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="109437636272820" type="titulosDias">
+                            <param id="0" name="X">707</param>
+                            <param id="1" name="Y">230</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="528619828393106" type="txtMisiones">
+                            <param id="0" name="X">718</param>
+                            <param id="1" name="Y">352</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="118761907984915" type="btnAceptar">
+                            <param id="0" name="X">704</param>
+                            <param id="1" name="Y">480</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="637795043500644">
@@ -2439,7 +2685,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="642689240911653" type="textosMisiones">
+                        <action id="4" name="Set animation" sid="642689240911653" type="txtMisiones">
                             <param id="0" name="Animation">&quot;m5&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -2459,6 +2705,22 @@
                             <param id="0" name="Variable">status</param>
                             <param id="1" name="Value">&quot;text consigna5&quot;</param>
                         </action>
+                        <action id="-3" name="Set position" sid="521379779790375" type="bgVerdeOscuro">
+                            <param id="0" name="X">320</param>
+                            <param id="1" name="Y">160</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="716527801588998" type="titulosDias">
+                            <param id="0" name="X">707</param>
+                            <param id="1" name="Y">230</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="540749763132747" type="txtMisiones">
+                            <param id="0" name="X">718</param>
+                            <param id="1" name="Y">352</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="663849408910229" type="btnAceptar">
+                            <param id="0" name="X">704</param>
+                            <param id="1" name="Y">480</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="160888402895259">
@@ -2468,7 +2730,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="492707226295156" type="textosMisiones">
+                        <action id="4" name="Set animation" sid="492707226295156" type="txtMisiones">
                             <param id="0" name="Animation">&quot;m6&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -2488,36 +2750,27 @@
                             <param id="0" name="Variable">status</param>
                             <param id="1" name="Value">&quot;text consigna6&quot;</param>
                         </action>
+                        <action id="-3" name="Set position" sid="946313601320771" type="bgVerdeOscuro">
+                            <param id="0" name="X">320</param>
+                            <param id="1" name="Y">160</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="983204112213680" type="titulosDias">
+                            <param id="0" name="X">707</param>
+                            <param id="1" name="Y">230</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="752932450242980" type="txtMisiones">
+                            <param id="0" name="X">718</param>
+                            <param id="1" name="Y">352</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="565407488261891" type="btnAceptar">
+                            <param id="0" name="X">704</param>
+                            <param id="1" name="Y">480</param>
+                        </action>
                         <action id="-15" name="Set visible" sid="357866647790476" type="compradores">
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="-15" name="Set visible" sid="138812773060006" type="carriots1">
                             <param id="0" name="Visibility">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="460636316549813" title="eventos_btnAceptar">
-            <sub-events>
-                <event-block sid="883479496087193">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="930449098471373" type="Touch">
-                            <param id="0" name="Object">btnAceptar</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-4" name="Set layer visible" sid="217229214223961" type="System">
-                            <param id="0" name="Layer">&quot;textos&quot;</param>
-                            <param id="1" name="Visibility">0</param>
-                        </action>
-                        <action id="-4" name="Set layer visible" sid="739437970414080" type="System">
-                            <param id="0" name="Layer">&quot;shadow&quot;</param>
-                            <param id="1" name="Visibility">0</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="135409676192036" type="txtInstruccionesDia">
-                            <param id="0" name="X">-320</param>
-                            <param id="1" name="Y">-416</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2923,33 +3176,61 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="962466573663856">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="208738720853075" type="sprControl">
+                                    <param id="0" name="Object">sResaltadoSemillas</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="850533862502237" type="resaltado">
+                                    <param id="0" name="Unique ID">236</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="101790229068718" type="resaltado">
+                                    <param id="0" name="X">1910</param>
+                                    <param id="1" name="Y">131</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="555627345470677">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="299009924445569" type="System" />
+                                <condition id="-14" name="Pick by unique ID" sid="897106945718378" type="resaltado">
+                                    <param id="0" name="Unique ID">236</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="969872937956788" type="resaltado">
+                                    <param id="0" name="X">950</param>
+                                    <param id="1" name="Y">-200</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="842728494012149">
                             <conditions>
                                 <condition id="1" name="Is overlapping another object" sid="499004326863546" type="sprControl">
                                     <param id="0" name="Object">sResaltadoArbol</param>
                                 </condition>
-                                <condition id="-14" name="Pick by unique ID" sid="562522112077925" type="resaltado">
-                                    <param id="0" name="Unique ID">236</param>
-                                </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="702657233399826" type="resaltado">
-                                    <param id="0" name="X">454</param>
-                                    <param id="1" name="Y">942</param>
+                                <action id="9" name="Set scale" sid="625315517342592" type="tree1">
+                                    <param id="0" name="Scale">1.3</param>
+                                </action>
+                                <action id="1" name="Set blend mode" sid="787742676057297" type="tree1">
+                                    <param id="0" name="Blend mode">1</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block sid="567402669339280">
                             <conditions>
                                 <condition id="-22" name="Else" sid="668429493162646" type="System" />
-                                <condition id="-14" name="Pick by unique ID" sid="502108465986515" type="resaltado">
-                                    <param id="0" name="Unique ID">236</param>
-                                </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="502918323594753" type="resaltado">
-                                    <param id="0" name="X">950</param>
-                                    <param id="1" name="Y">-200</param>
+                                <action id="9" name="Set scale" sid="995374480694407" type="tree1">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="1" name="Set blend mode" sid="910481040700177" type="tree1">
+                                    <param id="0" name="Blend mode">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -2958,28 +3239,54 @@
                                 <condition id="1" name="Is overlapping another object" sid="786419172336156" type="sprControl">
                                     <param id="0" name="Object">sResaltadoLadrillosChoza</param>
                                 </condition>
-                                <condition id="-14" name="Pick by unique ID" sid="291043713319007" type="resaltado">
-                                    <param id="0" name="Unique ID">237</param>
-                                </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="405921932543820" type="resaltado">
-                                    <param id="0" name="X">57</param>
-                                    <param id="1" name="Y">775</param>
+                                <action id="9" name="Set scale" sid="468543074889658" type="ladrilloCasa">
+                                    <param id="0" name="Scale">1.3</param>
+                                </action>
+                                <action id="1" name="Set blend mode" sid="795058548680388" type="ladrilloCasa">
+                                    <param id="0" name="Blend mode">1</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block sid="317120736985702">
                             <conditions>
                                 <condition id="-22" name="Else" sid="756819279325943" type="System" />
-                                <condition id="-14" name="Pick by unique ID" sid="249311618589771" type="resaltado">
-                                    <param id="0" name="Unique ID">237</param>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="717980013766462" type="ladrilloCasa">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="1" name="Set blend mode" sid="829843486691587" type="ladrilloCasa">
+                                    <param id="0" name="Blend mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="801998023570443">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="738015137540741" type="sprControl">
+                                    <param id="0" name="Object">sResaltadoPala</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="796443155541461" type="resaltado">
-                                    <param id="0" name="X">950</param>
-                                    <param id="1" name="Y">-200</param>
+                                <action id="9" name="Set scale" sid="577427837963281" type="palita">
+                                    <param id="0" name="Scale">1.3</param>
+                                </action>
+                                <action id="1" name="Set blend mode" sid="315473029468851" type="palita">
+                                    <param id="0" name="Blend mode">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="490701086616683">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="195375563402725" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="257186085954771" type="palita">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="1" name="Set blend mode" sid="216345984235275" type="palita">
+                                    <param id="0" name="Blend mode">0</param>
                                 </action>
                             </actions>
                         </event-block>
