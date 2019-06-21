@@ -1198,6 +1198,16 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-9" name="Destroy" sid="309428741880979" type="sResaltadoRegadera" />
+                        <action id="-3" name="Set position" sid="636667600772573" type="resaltado">
+                            <param id="0" name="X">950</param>
+                            <param id="1" name="Y">-200</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="195265173850693" type="regadera">
+                            <param id="0" name="Object">particulas_blanco</param>
+                            <param id="1" name="Layer">&quot;main&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
                         <action id="-9" name="Destroy" sid="677355654611130" type="regadera" />
                         <action id="-13" name="Set boolean" sid="360896425921623" type="inv_regadera">
                             <param id="0" name="Instance variable">activo</param>
@@ -1221,6 +1231,16 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-9" name="Destroy" sid="196096201313028" type="sResaltadoHeno" />
+                        <action id="-3" name="Set position" sid="391944045570013" type="resaltado">
+                            <param id="0" name="X">950</param>
+                            <param id="1" name="Y">-200</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="973817490969686" type="heno">
+                            <param id="0" name="Object">particulas_blanco</param>
+                            <param id="1" name="Layer">&quot;main&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
                         <action id="-9" name="Destroy" sid="322226907774933" type="heno" />
                         <action id="-13" name="Set boolean" sid="292716613444231" type="inv_heno">
                             <param id="0" name="Instance variable">activo</param>
@@ -1228,6 +1248,12 @@
                         </action>
                         <action id="-15" name="Set visible" sid="843831791787947" type="inv_heno">
                             <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="220219154779634" type="Audio">
+                            <param id="0" name="Audio file">obtenido</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;obtenido&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1813,9 +1839,9 @@
                             <param id="0" name="Layer">&quot;shadow&quot;</param>
                             <param id="1" name="Visibility">0</param>
                         </action>
-                        <action id="-3" name="Set position" sid="845784369085364" type="bgVerdeOscuro">
-                            <param id="0" name="X">-600</param>
-                            <param id="1" name="Y">-600</param>
+                        <action id="-3" name="Set position" sid="494364470447549" type="bgMisiones">
+                            <param id="0" name="X">-800</param>
+                            <param id="1" name="Y">-800</param>
                         </action>
                         <action id="-3" name="Set position" sid="953108913784521" type="txtMisiones">
                             <param id="0" name="X">-300</param>
@@ -2538,9 +2564,9 @@
                             <param id="0" name="Layer">&quot;shadow&quot;</param>
                             <param id="1" name="Visibility">1</param>
                         </action>
-                        <action id="-3" name="Set position" sid="411963466815254" type="bgVerdeOscuro">
-                            <param id="0" name="X">320</param>
-                            <param id="1" name="Y">160</param>
+                        <action id="-3" name="Set position" sid="311987697166347" type="bgMisiones">
+                            <param id="0" name="X">715</param>
+                            <param id="1" name="Y">364</param>
                         </action>
                         <action id="-3" name="Set position" sid="971972316873685" type="titulosDias">
                             <param id="0" name="X">707</param>
@@ -2579,9 +2605,9 @@
                             <param id="0" name="Layer">&quot;shadow&quot;</param>
                             <param id="1" name="Visibility">1</param>
                         </action>
-                        <action id="-3" name="Set position" sid="332562975350425" type="bgVerdeOscuro">
-                            <param id="0" name="X">320</param>
-                            <param id="1" name="Y">160</param>
+                        <action id="-3" name="Set position" sid="872020356424459" type="bgMisiones">
+                            <param id="0" name="X">715</param>
+                            <param id="1" name="Y">364</param>
                         </action>
                         <action id="-3" name="Set position" sid="659588894196709" type="titulosDias">
                             <param id="0" name="X">707</param>
@@ -2981,8 +3007,8 @@
                         <action id="-9" name="Destroy" sid="308736651037969" type="tree2" />
                         <action id="-9" name="Destroy" sid="103714129063285" type="ladrilloCasa" />
                         <action id="-3" name="Set position" sid="791195838333271" type="choza">
-                            <param id="0" name="X">832</param>
-                            <param id="1" name="Y">96</param>
+                            <param id="0" name="X">269</param>
+                            <param id="1" name="Y">1237</param>
                         </action>
                         <action id="-15" name="Set visible" sid="877384453632473" type="choza">
                             <param id="0" name="Visibility">1</param>
@@ -2996,8 +3022,8 @@
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="-3" name="Set position" sid="269292310759173" type="regadera">
-                            <param id="0" name="X">928</param>
-                            <param id="1" name="Y">1120</param>
+                            <param id="0" name="X">2352</param>
+                            <param id="1" name="Y">739</param>
                         </action>
                         <action id="-9" name="Destroy" sid="372528511589891" type="palita" />
                     </actions>
@@ -3149,7 +3175,71 @@
         </event-group>
         <event-group description="" sid="412111869142278" title="Resaltados_Objetos">
             <sub-events>
-                <event-group description="" inactive="1" sid="525093234250369" title="resaltado_dia_1">
+                <event-group description="" sid="965413138796975" title="Resaltado_dia_2">
+                    <sub-events>
+                        <event-block sid="606653840722776">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="288593089780177" type="sprControl">
+                                    <param id="0" name="Object">sResaltadoRegadera</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="959439669265927" type="resaltado">
+                                    <param id="0" name="Unique ID">237</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="778836906334668" type="resaltado">
+                                    <param id="0" name="X">2352</param>
+                                    <param id="1" name="Y">739</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="278921461438332">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="805855990832175" type="System" />
+                                <condition id="-14" name="Pick by unique ID" sid="366561783487593" type="resaltado">
+                                    <param id="0" name="Unique ID">237</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="787324591141749" type="resaltado">
+                                    <param id="0" name="X">950</param>
+                                    <param id="1" name="Y">-200</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="903199922796940">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="209742700586142" type="sprControl">
+                                    <param id="0" name="Object">sResaltadoHeno</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="770444823687493" type="resaltado">
+                                    <param id="0" name="Unique ID">228</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="976896566963562" type="resaltado">
+                                    <param id="0" name="X">2399</param>
+                                    <param id="1" name="Y">1008</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="772505440514536">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="933684057475437" type="System" />
+                                <condition id="-14" name="Pick by unique ID" sid="843081474917954" type="resaltado">
+                                    <param id="0" name="Unique ID">228</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="806049424034762" type="resaltado">
+                                    <param id="0" name="X">950</param>
+                                    <param id="1" name="Y">-200</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" inactive="1" sid="525093234250369" title="Resaltado_dia_1">
                     <sub-events>
                         <event-block sid="919864194499232">
                             <conditions>
