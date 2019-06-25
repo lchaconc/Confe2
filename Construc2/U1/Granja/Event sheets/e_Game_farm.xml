@@ -713,8 +713,12 @@
                                     <param id="1" name="Tag (optional)">&quot;corte&quot;</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="417909881766822" type="granero">
-                                    <param id="0" name="X">1740</param>
-                                    <param id="1" name="Y">163</param>
+                                    <param id="0" name="X">815.304</param>
+                                    <param id="1" name="Y">146.287</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="951439546634116" type="granero">
+                                    <param id="0" name="Animation">&quot;etapas&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="894426788059374" type="granero">
                                     <param id="0" name="Visibility">1</param>
@@ -724,6 +728,9 @@
                                     <param id="1" name="Value">1</param>
                                 </action>
                                 <action id="-9" name="Destroy" sid="745881319999521" type="ladrilloGranero" />
+                                <action id="-16" name="Wait" sid="986423614707854" type="System">
+                                    <param id="0" name="Seconds">5</param>
+                                </action>
                                 <action id="-3" name="Set position" sid="962922483261984" type="sprControl">
                                     <param id="0" name="X">1792</param>
                                     <param id="1" name="Y">340</param>
@@ -2507,7 +2514,7 @@
                     <actions>
                         <action id="-9" name="Set value" sid="136942028912433" type="System">
                             <param id="0" name="Variable">progreso</param>
-                            <param id="1" name="Value">1</param>
+                            <param id="1" name="Value">3</param>
                         </action>
                         <action id="-9" name="Set value" sid="296430774468666" type="System">
                             <param id="0" name="Variable">idUsuario</param>
@@ -3206,6 +3213,62 @@
             <sub-events>
                 <event-group description="" inactive="1" sid="487709750334322" title="Resaltado_dia_3">
                     <sub-events>
+                        <event-block sid="661256761333172">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="501389597555838" type="sprControl">
+                                    <param id="0" name="Object">sResaltadoLadrillosGranero</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="766623169253195" type="ladrilloGranero">
+                                    <param id="0" name="Scale">1.3</param>
+                                </action>
+                                <action id="1" name="Set blend mode" sid="331631679014747" type="ladrilloGranero">
+                                    <param id="0" name="Blend mode">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="561193711834649">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="307828775551685" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="986629746469936" type="ladrilloGranero">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="1" name="Set blend mode" sid="317632104271959" type="ladrilloGranero">
+                                    <param id="0" name="Blend mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="890475301295869">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="807454498835512" type="sprControl">
+                                    <param id="0" name="Object">sREsaltadoArena</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="938127775563203" type="arena">
+                                    <param id="0" name="Scale">1.3</param>
+                                </action>
+                                <action id="1" name="Set blend mode" sid="340780663868085" type="arena">
+                                    <param id="0" name="Blend mode">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="828778381563465">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="630606973972205" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="250823646798792" type="arena">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="1" name="Set blend mode" sid="722044706723662" type="arena">
+                                    <param id="0" name="Blend mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="222523631407904">
                             <conditions>
                                 <condition id="1" name="Is overlapping another object" sid="466804287944406" type="sprControl">
