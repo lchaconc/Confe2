@@ -686,7 +686,7 @@
                 </instance>
                 <instance type="sResaltadoLadrillosGranero" uid="248">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -708,7 +708,7 @@
                 </instance>
                 <instance type="sREsaltadoArena" uid="249">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -721,6 +721,28 @@
                         <z>0</z>
                         <width>153.311157227</width>
                         <height>252.015380859</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="sResaltadoOveja" uid="250">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>310.455993652</x>
+                        <y>365.937591553</y>
+                        <z>0</z>
+                        <width>252.964569092</width>
+                        <height>133.086730957</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -779,9 +801,9 @@
                 </instance>
                 <instance type="granero" uid="55">
                     <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>etapas</initial-animation>
+                        <initial-frame>5</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
@@ -797,14 +819,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>815.304016113</x>
-                        <y>146.28678894</y>
+                        <x>-271</x>
+                        <y>-526</y>
                         <z>0</z>
-                        <width>440.861816406</width>
-                        <height>224.596359253</height>
+                        <width>328</width>
+                        <height>240</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.504166663</hotspotY>
+                        <hotspotY>1</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1321,8 +1343,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>128</x>
-                        <y>270</y>
+                        <x>129.738128662</x>
+                        <y>265.657348633</y>
                         <z>0</z>
                         <width>192</width>
                         <height>64</height>
@@ -2450,8 +2472,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2502.538818359</x>
-                        <y>255.794952393</y>
+                        <x>2500</x>
+                        <y>255</y>
                         <z>0</z>
                         <width>38.987178802</width>
                         <height>38.987178802</height>
@@ -2570,8 +2592,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1859</x>
-                        <y>661</y>
+                        <x>1867</x>
+                        <y>666</y>
                         <z>0</z>
                         <width>128</width>
                         <height>64</height>
@@ -3916,8 +3938,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>800</x>
-                        <y>1231</y>
+                        <x>-627</x>
+                        <y>1206</y>
                         <z>0</z>
                         <width>356</width>
                         <height>180</height>
@@ -5056,7 +5078,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="animacionTrasquiladaElla" uid="127">
+                <instance type="animacionTrasquilada" uid="127">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -5066,8 +5088,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>236</x>
-                        <y>376</y>
+                        <x>149.133041382</x>
+                        <y>335.173034668</y>
                         <z>0</z>
                         <width>105.389076233</width>
                         <height>87.257621765</height>
@@ -5151,8 +5173,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>782</x>
-                        <y>-450</y>
+                        <x>968</x>
+                        <y>-573</y>
                         <z>0</z>
                         <width>332</width>
                         <height>332</height>
@@ -5763,8 +5785,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-1073</x>
-                        <y>-460</y>
+                        <x>-1354</x>
+                        <y>-87</y>
                         <z>0</z>
                         <width>960</width>
                         <height>128</height>
@@ -6254,7 +6276,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="inv_rasuradora" uid="132">
+                <instance type="inv_trasquiladora" uid="132">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>

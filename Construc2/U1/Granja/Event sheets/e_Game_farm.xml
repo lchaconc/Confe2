@@ -543,7 +543,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <comment>Día 3: Construir el granero</comment>
+                <comment>Día 3: Construir el granero - Arena</comment>
                 <event-block sid="207495070444908">
                     <conditions>
                         <condition id="17" name="On tap object" sid="857304954257125" type="Touch">
@@ -562,6 +562,7 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-9" name="Destroy" sid="457234783211504" type="sREsaltadoArena" />
                         <action id="-13" name="Set boolean" sid="705545166477983" type="inv_carretillo">
                             <param id="0" name="Instance variable">activo</param>
                             <param id="1" name="Value">0</param>
@@ -576,9 +577,13 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;corte&quot;</param>
                         </action>
+                        <action id="-7" name="Set size" sid="406668572495931" type="arena">
+                            <param id="0" name="Width">128</param>
+                            <param id="1" name="Height">64</param>
+                        </action>
                         <action id="-3" name="Set position" sid="834369535193872" type="arena">
-                            <param id="0" name="X">1632</param>
-                            <param id="1" name="Y">64</param>
+                            <param id="0" name="X">771</param>
+                            <param id="1" name="Y">193</param>
                         </action>
                         <action id="-13" name="Set boolean" sid="155290316776314" type="arena">
                             <param id="0" name="Instance variable">activo</param>
@@ -594,9 +599,9 @@
                 <event-block sid="570938205672704">
                     <conditions>
                         <condition id="17" name="On tap object" sid="512026168504387" type="Touch">
-                            <param id="0" name="Object">inv_rasuradora</param>
+                            <param id="0" name="Object">inv_trasquiladora</param>
                         </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="713216154709705" type="inv_rasuradora">
+                        <condition id="-8" name="Is boolean instance variable set" sid="713216154709705" type="inv_trasquiladora">
                             <param id="0" name="Instance variable">activo</param>
                         </condition>
                         <condition id="-8" name="Is boolean instance variable set" sid="524678849648436" type="oveja">
@@ -609,7 +614,8 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-13" name="Set boolean" sid="164109023244161" type="inv_rasuradora">
+                        <action id="-9" name="Destroy" sid="365872574681251" type="sResaltadoOveja" />
+                        <action id="-13" name="Set boolean" sid="164109023244161" type="inv_trasquiladora">
                             <param id="0" name="Instance variable">activo</param>
                             <param id="1" name="Value">0</param>
                         </action>
@@ -620,57 +626,127 @@
                         <action id="-16" name="Wait" sid="407284439315704" type="System">
                             <param id="0" name="Seconds">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="492838668052201" type="characterFem">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="515814382606772" type="animacionTrasquiladaElla">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="498278133374976" type="animacionTrasquiladaElla">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="0" name="Play" sid="622491310835081" type="Audio">
-                            <param id="0" name="Audio file">rasuradora</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;rasuradora&quot;</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="634259589094199" type="System">
-                            <param id="0" name="Seconds">2</param>
-                        </action>
-                        <action id="0" name="Play" sid="106018027215145" type="Audio">
-                            <param id="0" name="Audio file">oveja</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;rasuradora&quot;</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="476796369708780" type="System">
-                            <param id="0" name="Seconds">3.5</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="778989392843321" type="animacionTrasquiladaElla">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="722515969305314" type="characterFem">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="385125538746102" type="oveja">
-                            <param id="0" name="Animation">&quot;pelona&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="733052919395932" type="oveja">
-                            <param id="0" name="Instance variable">activo</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="569281198775564" type="System">
-                            <param id="0" name="Variable">status</param>
-                            <param id="1" name="Value">&quot;Oveja trasquilada&quot;</param>
-                        </action>
-                        <action id="0" name="Call function" sid="591025297273026" type="Function">
-                            <param id="0" name="Name">&quot;papiroFinDia3&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="919456872797031">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="559110714241833" type="System">
+                                    <param id="0" name="Variable">sexo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;m&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="492838668052201" type="characterFem">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="515814382606772" type="animacionTrasquilada">
+                                    <param id="0" name="Animation">&quot;ella&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="498278133374976" type="animacionTrasquilada">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="622491310835081" type="Audio">
+                                    <param id="0" name="Audio file">rasuradora</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;rasuradora&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="634259589094199" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="0" name="Play" sid="106018027215145" type="Audio">
+                                    <param id="0" name="Audio file">oveja</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;rasuradora&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="476796369708780" type="System">
+                                    <param id="0" name="Seconds">3.5</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="778989392843321" type="animacionTrasquilada">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="722515969305314" type="characterFem">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="385125538746102" type="oveja">
+                                    <param id="0" name="Animation">&quot;pelona&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="733052919395932" type="oveja">
+                                    <param id="0" name="Instance variable">activo</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="569281198775564" type="System">
+                                    <param id="0" name="Variable">status</param>
+                                    <param id="1" name="Value">&quot;Oveja trasquilada&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="591025297273026" type="Function">
+                                    <param id="0" name="Name">&quot;papiroFinDia3&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="565420375143776">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="728166195089289" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="494078769989616" type="characterMasc">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="353630070992386" type="animacionTrasquilada">
+                                    <param id="0" name="Animation">&quot;el&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="477784940553115" type="animacionTrasquilada">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="981785343579067" type="Audio">
+                                    <param id="0" name="Audio file">rasuradora</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;rasuradora&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="893815435217770" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="0" name="Play" sid="443427107505078" type="Audio">
+                                    <param id="0" name="Audio file">oveja</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;rasuradora&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="173214120991028" type="System">
+                                    <param id="0" name="Seconds">3.5</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="138496791441385" type="animacionTrasquilada">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="738515682783258" type="characterMasc">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="374418672972416" type="oveja">
+                                    <param id="0" name="Animation">&quot;pelona&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="811615575924103" type="oveja">
+                                    <param id="0" name="Instance variable">activo</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="562332582215581" type="System">
+                                    <param id="0" name="Variable">status</param>
+                                    <param id="1" name="Value">&quot;Oveja trasquilada&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="608182097040961" type="Function">
+                                    <param id="0" name="Name">&quot;papiroFinDia3&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <comment>Día 3: Construcción del granero</comment>
                 <event-block sid="433747736623392">
@@ -699,6 +775,7 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-9" name="Destroy" sid="956587268620265" type="baseGranero" />
                                 <action id="0" name="Call function" sid="681700766725494" type="Function">
                                     <param id="0" name="Name">&quot;cerarModalInventario&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
@@ -713,8 +790,8 @@
                                     <param id="1" name="Tag (optional)">&quot;corte&quot;</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="417909881766822" type="granero">
-                                    <param id="0" name="X">815.304</param>
-                                    <param id="1" name="Y">146.287</param>
+                                    <param id="0" name="X">849</param>
+                                    <param id="1" name="Y">249</param>
                                 </action>
                                 <action id="4" name="Set animation" sid="951439546634116" type="granero">
                                     <param id="0" name="Animation">&quot;etapas&quot;</param>
@@ -732,8 +809,8 @@
                                     <param id="0" name="Seconds">5</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="962922483261984" type="sprControl">
-                                    <param id="0" name="X">1792</param>
-                                    <param id="1" name="Y">340</param>
+                                    <param id="0" name="X">538</param>
+                                    <param id="1" name="Y">306</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="400430145992674" type="System">
                                     <param id="0" name="Variable">status</param>
@@ -1334,16 +1411,49 @@
                             <param id="0" name="Object">oveja</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="750957195324643" type="oveja">
-                            <param id="0" name="Instance variable">colision</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="0" name="Call function" sid="217532080742002" type="Function">
-                            <param id="0" name="Name">&quot;abrirModalInv&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="207854565820432">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="699112659243711" type="inv_trasquiladora">
+                                    <param id="0" name="Instance variable">activo</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="750957195324643" type="oveja">
+                                    <param id="0" name="Instance variable">colision</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="217532080742002" type="Function">
+                                    <param id="0" name="Name">&quot;abrirModalInv&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="154038878414410">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="611919456785524" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="902486448017285" type="bgPergamino">
+                                    <param id="0" name="X">710</param>
+                                    <param id="1" name="Y">378</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="436292358341838" type="bgPergamino">
+                                    <param id="0" name="Width">497</param>
+                                    <param id="1" name="Height">143</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="754868353791378" type="txtNecesitas">
+                                    <param id="0" name="X">717</param>
+                                    <param id="1" name="Y">376</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="147276106336709" type="System">
+                                    <param id="0" name="Layer">&quot;shadow&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block any="1" sid="835550516773034">
                     <conditions>
@@ -1367,20 +1477,50 @@
                         <condition id="0" name="On collision with another object" sid="543417444266446" type="sprControl">
                             <param id="0" name="Object">arena</param>
                         </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="743327048363004" type="inv_carretillo">
-                            <param id="0" name="Instance variable">activo</param>
-                        </condition>
                     </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="208285181166805" type="arena">
-                            <param id="0" name="Instance variable">colision</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="0" name="Call function" sid="668499686935473" type="Function">
-                            <param id="0" name="Name">&quot;abrirModalInv&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="483663775463155">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="536657044156743" type="inv_carretillo">
+                                    <param id="0" name="Instance variable">activo</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="208285181166805" type="arena">
+                                    <param id="0" name="Instance variable">colision</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="668499686935473" type="Function">
+                                    <param id="0" name="Name">&quot;abrirModalInv&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="381501113608661">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="652987379357964" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="739390775216509" type="bgPergamino">
+                                    <param id="0" name="X">710</param>
+                                    <param id="1" name="Y">378</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="434167731942495" type="bgPergamino">
+                                    <param id="0" name="Width">497</param>
+                                    <param id="1" name="Height">143</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="231713689148409" type="txtNecesitas">
+                                    <param id="0" name="X">717</param>
+                                    <param id="1" name="Y">376</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="131188052200908" type="System">
+                                    <param id="0" name="Layer">&quot;shadow&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block any="1" sid="720608550666010">
                     <conditions>
@@ -1499,10 +1639,10 @@
                             <param id="2" name="Image point">0</param>
                         </action>
                         <action id="-9" name="Destroy" sid="505092943124412" type="trasquiladora" />
-                        <action id="-15" name="Set visible" sid="101157986197127" type="inv_rasuradora">
+                        <action id="-15" name="Set visible" sid="101157986197127" type="inv_trasquiladora">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="-13" name="Set boolean" sid="351868425270794" type="inv_rasuradora">
+                        <action id="-13" name="Set boolean" sid="351868425270794" type="inv_trasquiladora">
                             <param id="0" name="Instance variable">activo</param>
                             <param id="1" name="Value">1</param>
                         </action>
@@ -1544,6 +1684,7 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-9" name="Destroy" sid="660616043417625" type="sResaltadoLadrillosGranero" />
                         <action id="-16" name="Wait" sid="915369268480526" type="System">
                             <param id="0" name="Seconds">0.5</param>
                         </action>
@@ -1553,9 +1694,13 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;logrado&quot;</param>
                         </action>
+                        <action id="-7" name="Set size" sid="340670784235807" type="ladrilloGranero">
+                            <param id="0" name="Width">98</param>
+                            <param id="1" name="Height">98</param>
+                        </action>
                         <action id="-3" name="Set position" sid="268186864838220" type="ladrilloGranero">
-                            <param id="0" name="X">1760</param>
-                            <param id="1" name="Y">96</param>
+                            <param id="0" name="X">913</param>
+                            <param id="1" name="Y">196</param>
                         </action>
                         <action id="-13" name="Set boolean" sid="617950627939283" type="ladrilloGranero">
                             <param id="0" name="Instance variable">activo</param>
@@ -1666,16 +1811,52 @@
                             <param id="0" name="Object">baseGranero</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="823238379425377" type="Function">
-                            <param id="0" name="Name">&quot;abrirModalInv&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="789910442489632" type="baseGranero">
-                            <param id="0" name="Instance variable">colision</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="141269919499959">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="670399593356404" type="arena">
+                                    <param id="0" name="Instance variable">activo</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="213070189094505" type="ladrilloGranero">
+                                    <param id="0" name="Instance variable">activo</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="823238379425377" type="Function">
+                                    <param id="0" name="Name">&quot;abrirModalInv&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="789910442489632" type="baseGranero">
+                                    <param id="0" name="Instance variable">colision</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="663804276289633">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="728094389995439" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="539938407205687" type="bgPergamino">
+                                    <param id="0" name="X">710</param>
+                                    <param id="1" name="Y">378</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="971079071027907" type="bgPergamino">
+                                    <param id="0" name="Width">497</param>
+                                    <param id="1" name="Height">143</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="606674347295704" type="txtNecesitas">
+                                    <param id="0" name="X">717</param>
+                                    <param id="1" name="Y">376</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="593654344445598" type="System">
+                                    <param id="0" name="Layer">&quot;shadow&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="132425847987467">
                     <conditions>
@@ -3213,6 +3394,34 @@
             <sub-events>
                 <event-group description="" inactive="1" sid="487709750334322" title="Resaltado_dia_3">
                     <sub-events>
+                        <event-block sid="818812741247444">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="812238444817929" type="sprControl">
+                                    <param id="0" name="Object">sResaltadoOveja</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="757866803437902" type="oveja">
+                                    <param id="0" name="Scale">1.3</param>
+                                </action>
+                                <action id="1" name="Set blend mode" sid="737251077339513" type="oveja">
+                                    <param id="0" name="Blend mode">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="202251922453245">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="500206342119659" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="560457196183394" type="oveja">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="1" name="Set blend mode" sid="711376574213136" type="oveja">
+                                    <param id="0" name="Blend mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="661256761333172">
                             <conditions>
                                 <condition id="1" name="Is overlapping another object" sid="501389597555838" type="sprControl">
