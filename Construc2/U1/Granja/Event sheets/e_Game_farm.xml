@@ -604,7 +604,7 @@
                         <condition id="-8" name="Is boolean instance variable set" sid="713216154709705" type="inv_trasquiladora">
                             <param id="0" name="Instance variable">activo</param>
                         </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="524678849648436" type="oveja">
+                        <condition id="-8" name="Is boolean instance variable set" sid="524678849648436" type="oveja2">
                             <param id="0" name="Instance variable">colision</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="164088059101899" type="System">
@@ -633,12 +633,19 @@
                                 <condition id="-14" name="Compare variable" sid="559110714241833" type="System">
                                     <param id="0" name="Variable">sexo</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;m&quot;</param>
+                                    <param id="2" name="Value">&quot;f&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="-15" name="Set visible" sid="492838668052201" type="characterFem">
                                     <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="999363959470876" type="oveja2">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="667712060465928" type="animacionTrasquilada">
+                                    <param id="0" name="X">239</param>
+                                    <param id="1" name="Y">372</param>
                                 </action>
                                 <action id="4" name="Set animation" sid="515814382606772" type="animacionTrasquilada">
                                     <param id="0" name="Animation">&quot;ella&quot;</param>
@@ -671,11 +678,11 @@
                                 <action id="-15" name="Set visible" sid="722515969305314" type="characterFem">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
-                                <action id="4" name="Set animation" sid="385125538746102" type="oveja">
+                                <action id="4" name="Set animation" sid="385125538746102" type="oveja2">
                                     <param id="0" name="Animation">&quot;pelona&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action id="-13" name="Set boolean" sid="733052919395932" type="oveja">
+                                <action id="-13" name="Set boolean" sid="733052919395932" type="oveja2">
                                     <param id="0" name="Instance variable">activo</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
@@ -696,6 +703,13 @@
                             <actions>
                                 <action id="-15" name="Set visible" sid="494078769989616" type="characterMasc">
                                     <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="519764374628419" type="oveja2">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="959770768584009" type="animacionTrasquilada">
+                                    <param id="0" name="X">239</param>
+                                    <param id="1" name="Y">372</param>
                                 </action>
                                 <action id="4" name="Set animation" sid="353630070992386" type="animacionTrasquilada">
                                     <param id="0" name="Animation">&quot;el&quot;</param>
@@ -728,11 +742,11 @@
                                 <action id="-15" name="Set visible" sid="738515682783258" type="characterMasc">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
-                                <action id="4" name="Set animation" sid="374418672972416" type="oveja">
+                                <action id="4" name="Set animation" sid="371133042872707" type="oveja2">
                                     <param id="0" name="Animation">&quot;pelona&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action id="-13" name="Set boolean" sid="811615575924103" type="oveja">
+                                <action id="-13" name="Set boolean" sid="742983300859909" type="oveja2">
                                     <param id="0" name="Instance variable">activo</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
@@ -1203,8 +1217,8 @@
                             <param id="1" name="From">1</param>
                         </action>
                         <action id="-3" name="Set position" sid="113961119569518" type="choza">
-                            <param id="0" name="X">800</param>
-                            <param id="1" name="Y">1213</param>
+                            <param id="0" name="X">780</param>
+                            <param id="1" name="Y">1232</param>
                         </action>
                         <action id="-15" name="Set visible" sid="298277511751768" type="tablasMadera">
                             <param id="0" name="Visibility">0</param>
@@ -1408,7 +1422,7 @@
                 <event-block any="1" sid="416954338535460">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="966719089022141" type="sprControl">
-                            <param id="0" name="Object">oveja</param>
+                            <param id="0" name="Object">oveja2</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -1420,7 +1434,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-13" name="Set boolean" sid="750957195324643" type="oveja">
+                                <action id="-13" name="Set boolean" sid="750957195324643" type="oveja2">
                                     <param id="0" name="Instance variable">colision</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
@@ -2347,7 +2361,7 @@
                         <condition id="0" name="On function" sid="269995977840049" type="Function">
                             <param id="0" name="Name">&quot;papiroFinDia3&quot;</param>
                         </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="315598346642312" type="oveja">
+                        <condition id="-8" name="Is boolean instance variable set" sid="315598346642312" type="oveja2">
                             <param id="0" name="Instance variable">activo</param>
                         </condition>
                         <condition id="-8" name="Is boolean instance variable set" sid="848146616292124" type="granero">
@@ -2703,7 +2717,7 @@
                         </action>
                         <action id="-9" name="Set value" sid="351719777995426" type="System">
                             <param id="0" name="Variable">sexo</param>
-                            <param id="1" name="Value">&quot;m&quot;</param>
+                            <param id="1" name="Value">&quot;f&quot;</param>
                         </action>
                         <action id="0" name="Play" sid="869889608108873" type="Audio">
                             <param id="0" name="Audio file">amazonas</param>
@@ -3223,7 +3237,7 @@
                         <action id="-9" name="Destroy" sid="195078416582647" type="tree2" />
                         <action id="-9" name="Destroy" sid="382117375207394" type="ladrilloCasa" />
                         <action id="-3" name="Set position" sid="996509354954757" type="choza">
-                            <param id="0" name="X">742</param>
+                            <param id="0" name="X">780</param>
                             <param id="1" name="Y">1232</param>
                         </action>
                         <action id="-9" name="Destroy" sid="522545969583269" type="semillas" />
@@ -3296,7 +3310,7 @@
                         <action id="-15" name="Set visible" sid="578048311657853" type="granero">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="4" name="Set animation" sid="243610307594919" type="oveja">
+                        <action id="4" name="Set animation" sid="243610307594919" type="oveja2">
                             <param id="0" name="Animation">&quot;pelona&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -3401,10 +3415,10 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="9" name="Set scale" sid="757866803437902" type="oveja">
+                                <action id="9" name="Set scale" sid="757866803437902" type="oveja2">
                                     <param id="0" name="Scale">1.3</param>
                                 </action>
-                                <action id="1" name="Set blend mode" sid="737251077339513" type="oveja">
+                                <action id="1" name="Set blend mode" sid="737251077339513" type="oveja2">
                                     <param id="0" name="Blend mode">1</param>
                                 </action>
                             </actions>
@@ -3414,10 +3428,10 @@
                                 <condition id="-22" name="Else" sid="500206342119659" type="System" />
                             </conditions>
                             <actions>
-                                <action id="9" name="Set scale" sid="560457196183394" type="oveja">
+                                <action id="9" name="Set scale" sid="560457196183394" type="oveja2">
                                     <param id="0" name="Scale">1</param>
                                 </action>
-                                <action id="1" name="Set blend mode" sid="711376574213136" type="oveja">
+                                <action id="1" name="Set blend mode" sid="711376574213136" type="oveja2">
                                     <param id="0" name="Blend mode">0</param>
                                 </action>
                             </actions>

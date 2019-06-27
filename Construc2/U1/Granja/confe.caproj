@@ -3363,7 +3363,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="120" loop="0" name="ella" pingpong="0" repeatcount="1" repeatto="0" sid="866078489102536" speed="20">
-                        <frame duration="1" hotspotX="0.480287" hotspotY="0.480519" original-source="D:\Users\lchaconc\Desktop\trasquilaella-20190516T133542Z-001\trasquilaella\trasquilaElla0001.png" />
+                        <frame duration="1" hotspotX="0.481132" hotspotY="0.482759" original-source="D:\Users\lchaconc\Desktop\trasquilaella-20190516T133542Z-001\trasquilaella\trasquilaElla0001.png" />
                         <frame duration="1" hotspotX="0.480287" hotspotY="0.480519" original-source="D:\Users\lchaconc\Desktop\trasquilaella-20190516T133542Z-001\trasquilaella\trasquilaElla0002.png" />
                         <frame duration="1" hotspotX="0.480287" hotspotY="0.482759" original-source="D:\Users\lchaconc\Desktop\trasquilaella-20190516T133542Z-001\trasquilaella\trasquilaElla0003.png" />
                         <frame duration="1" hotspotX="0.480287" hotspotY="0.482759" original-source="D:\Users\lchaconc\Desktop\trasquilaella-20190516T133542Z-001\trasquilaella\trasquilaElla0004.png" />
@@ -3485,7 +3485,7 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.478448" original-source="D:\Users\lchaconc\Desktop\trasquilaella-20190516T133542Z-001\trasquilaella\trasquilaElla0120.png" />
                     </animation>
                     <animation framecount="120" loop="0" name="el" pingpong="0" repeatcount="1" repeatto="0" sid="468860363081255" speed="20">
-                        <frame duration="1" hotspotX="0.481283" hotspotY="0.493421" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Granja\Animaciones\trasquilael\trasquilaEl0001.png" />
+                        <frame duration="1" hotspotX="0.481132" hotspotY="0.494253" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Granja\Animaciones\trasquilael\trasquilaEl0001.png" />
                         <frame duration="1" hotspotX="0.481283" hotspotY="0.493421" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Granja\Animaciones\trasquilael\trasquilaEl0002.png" />
                         <frame duration="1" hotspotX="0.481283" hotspotY="0.493421" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Granja\Animaciones\trasquilael\trasquilaEl0003.png" />
                         <frame duration="1" hotspotX="0.481283" hotspotY="0.493421" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Granja\Animaciones\trasquilael\trasquilaEl0004.png" />
@@ -4854,6 +4854,42 @@
                                 <point x="0" y="1" />
                                 <point x="0" y="0" />
                                 <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="oveja2" sid="864213512063335">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="colision" sid="807564228583585" type="boolean" />
+                    <instance-variable name="activo" sid="537520830530264" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Solid" sid="523687117898612">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="463001080817381" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.510417" original-source="C:\Users\logan24\Desktop\recursos_CONFE\assetsfinales-20190418T001056Z-001\assetsGranja-09.png">
+                            <collision-poly>
+                                <point x="0.458333" y="0.135417" />
+                                <point x="1" y="0.302083" />
+                                <point x="0.802083" y="0.802083" />
+                                <point x="0.208333" y="0.791667" />
+                                <point x="0" y="0.364583" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="pelona" pingpong="0" repeatcount="1" repeatto="0" sid="359590436529337" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\recursos_CONFE\assetsfinales-20190418T001056Z-001\assetsGranja-11.png">
+                            <collision-poly>
+                                <point x="0.416667" y="0.270833" />
+                                <point x="0.947917" y="0.28125" />
+                                <point x="0.739583" y="0.739583" />
+                                <point x="0.239583" y="0.760417" />
+                                <point x="0.0208333" y="0.270833" />
                             </collision-poly>
                         </frame>
                     </animation>
