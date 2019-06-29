@@ -872,6 +872,7 @@
                             <param id="0" name="Instance variable">activo</param>
                             <param id="1" name="Value">0</param>
                         </action>
+                        <action id="-9" name="Destroy" sid="115598047717226" type="sResaltadoVaca" />
                         <action id="0" name="Call function" sid="303382162113212" type="Function">
                             <param id="0" name="Name">&quot;cerarModalInventario&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
@@ -1061,7 +1062,7 @@
                         <condition id="-8" name="Is boolean instance variable set" sid="594013633866952" type="inv_balde_leche">
                             <param id="0" name="Instance variable">activo</param>
                         </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="245980842644030" type="mesa_rustica">
+                        <condition id="-8" name="Is boolean instance variable set" sid="245980842644030" type="mesaQueso">
                             <param id="0" name="Instance variable">colision</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="449170763148994" type="System">
@@ -1071,6 +1072,7 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-9" name="Destroy" sid="317975469908472" type="sResaltadoMesaQueso" />
                         <action id="-13" name="Set boolean" sid="933228314609749" type="inv_balde_leche">
                             <param id="0" name="Instance variable">activo</param>
                             <param id="1" name="Value">0</param>
@@ -1085,12 +1087,18 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;corte&quot;</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="455700588780966" type="queso">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
                         <action id="-13" name="Set boolean" sid="151519252582461" type="queso">
                             <param id="0" name="Instance variable">activo</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="603144265374474" type="queso2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="678547727628006" type="queso3">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="314112832307232" type="queso4">
+                            <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="-9" name="Set value" sid="424025711457807" type="System">
                             <param id="0" name="Variable">status</param>
@@ -1147,11 +1155,11 @@
                             <param id="0" name="Variable">status</param>
                             <param id="1" name="Value">&quot;Zanahorias cosechadas&quot;</param>
                         </action>
-                        <action id="-13" name="Set boolean" sid="309387925462406" type="carriot">
-                            <param id="0" name="Instance variable">cosechadas</param>
+                        <action id="-13" name="Set boolean" sid="502642173157906" type="comprador4">
+                            <param id="0" name="Instance variable">activo</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-13" name="Set boolean" sid="502642173157906" type="comprador4">
+                        <action id="-13" name="Set boolean" sid="553738668916589" type="carriots1">
                             <param id="0" name="Instance variable">activo</param>
                             <param id="1" name="Value">1</param>
                         </action>
@@ -1170,6 +1178,7 @@
                         <action behavior="Bullet" id="5" name="Set enabled" sid="409355203289201" type="carriot">
                             <param id="0" name="State">0</param>
                         </action>
+                        <action id="-9" name="Destroy" sid="380340696263477" type="carriot" />
                         <action id="0" name="Call function" sid="277473759045440" type="Function">
                             <param id="0" name="Name">&quot;papiroFinDia5&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
@@ -1486,16 +1495,49 @@
                             <param id="0" name="Object">cow2</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="473526385277133" type="cow2">
-                            <param id="0" name="Instance variable">colision</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="0" name="Call function" sid="668182519135533" type="Function">
-                            <param id="0" name="Name">&quot;abrirModalInv&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="431933276992149">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="954554829711789" type="inv_balde">
+                                    <param id="0" name="Instance variable">activo</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="473526385277133" type="cow2">
+                                    <param id="0" name="Instance variable">colision</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="668182519135533" type="Function">
+                                    <param id="0" name="Name">&quot;abrirModalInv&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="719847448182772">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="578283153097058" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="850367495854020" type="bgPergamino">
+                                    <param id="0" name="X">710</param>
+                                    <param id="1" name="Y">378</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="967805780414419" type="bgPergamino">
+                                    <param id="0" name="Width">497</param>
+                                    <param id="1" name="Height">143</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="371955222320743" type="txtNecesitas">
+                                    <param id="0" name="X">717</param>
+                                    <param id="1" name="Y">376</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="843295247833745" type="System">
+                                    <param id="0" name="Layer">&quot;shadow&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="807131861588179">
                     <conditions>
@@ -1904,21 +1946,54 @@
                             <param id="0" name="Object">sensorHuerta</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="615211424115472" type="Function">
-                            <param id="0" name="Name">&quot;abrirModalInv&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="459401952971582" type="sensorHuerta">
-                            <param id="0" name="Instance variable">colision</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="810004118510677">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="691563894900306" type="inv_canasta">
+                                    <param id="0" name="Instance variable">activo</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="615211424115472" type="Function">
+                                    <param id="0" name="Name">&quot;abrirModalInv&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="459401952971582" type="sensorHuerta">
+                                    <param id="0" name="Instance variable">colision</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="724997516660860">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="527182205610735" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="759102821440527" type="bgPergamino">
+                                    <param id="0" name="X">710</param>
+                                    <param id="1" name="Y">378</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="302170865717056" type="bgPergamino">
+                                    <param id="0" name="Width">497</param>
+                                    <param id="1" name="Height">143</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="528130251117566" type="txtNecesitas">
+                                    <param id="0" name="X">717</param>
+                                    <param id="1" name="Y">376</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="834124572554669" type="System">
+                                    <param id="0" name="Layer">&quot;shadow&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="712144393350691">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="363428536629416" type="sprControl">
-                            <param id="0" name="Object">mesa_rustica</param>
+                            <param id="0" name="Object">mesaQueso</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -1926,10 +2001,33 @@
                             <param id="0" name="Name">&quot;abrirModalInv&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
-                        <action id="-13" name="Set boolean" sid="876904683894023" type="mesa_rustica">
+                        <action id="-13" name="Set boolean" sid="876904683894023" type="mesaQueso">
                             <param id="0" name="Instance variable">colision</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                    </actions>
+                </event-block>
+                <event-block sid="915700393681874">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="881707462730892" type="sprControl">
+                            <param id="0" name="Object">canasta</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="205775321602209" type="sResaltadoCanasta" />
+                        <action id="0" name="Spawn another object" sid="568995955249034" type="canasta">
+                            <param id="0" name="Object">particulas_blanco</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="716969673601533" type="inv_canasta">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="891910304472088" type="inv_canasta">
+                            <param id="0" name="Instance variable">activo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="970540066997794" type="canasta" />
                     </actions>
                 </event-block>
                 <comment>Diàs 6: vender los quesos t zanahorias</comment>
@@ -1958,9 +2056,9 @@
                                 <action id="-15" name="Set visible" sid="501843670019263" type="queso">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="462817757449491" type="mesa_rustica">
+                                <action id="-10" name="Set value" sid="462817757449491" type="mesaQueso">
                                     <param id="0" name="Instance variable">quesosVendidos</param>
-                                    <param id="1" name="Value">mesa_rustica.quesosVendidos + 1</param>
+                                    <param id="1" name="Value">mesaQueso.quesosVendidos + 1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1991,9 +2089,9 @@
                                 <action id="-15" name="Set visible" sid="469939195788859" type="queso">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="449721402533254" type="mesa_rustica">
+                                <action id="-10" name="Set value" sid="449721402533254" type="mesaQueso">
                                     <param id="0" name="Instance variable">quesosVendidos</param>
-                                    <param id="1" name="Value">mesa_rustica.quesosVendidos + 1</param>
+                                    <param id="1" name="Value">mesaQueso.quesosVendidos + 1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -2024,9 +2122,9 @@
                                 <action id="-15" name="Set visible" sid="199922670081411" type="queso">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="990615821761816" type="mesa_rustica">
+                                <action id="-10" name="Set value" sid="990615821761816" type="mesaQueso">
                                     <param id="0" name="Instance variable">quesosVendidos</param>
-                                    <param id="1" name="Value">mesa_rustica.quesosVendidos + 1</param>
+                                    <param id="1" name="Value">mesaQueso.quesosVendidos + 1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -2093,7 +2191,7 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
-                        <condition id="-7" name="Compare instance variable" sid="695642982144266" type="mesa_rustica">
+                        <condition id="-7" name="Compare instance variable" sid="695642982144266" type="mesaQueso">
                             <param id="0" name="Instance variable">quesosVendidos</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">3</param>
@@ -2216,7 +2314,7 @@
                             <param id="0" name="Instance variable">colision</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action id="-13" name="Set boolean" sid="320517498564305" type="mesa_rustica">
+                        <action id="-13" name="Set boolean" sid="320517498564305" type="mesaQueso">
                             <param id="0" name="Instance variable">colision</param>
                             <param id="1" name="Value">0</param>
                         </action>
@@ -2557,8 +2655,8 @@
                         <condition id="-8" name="Is boolean instance variable set" sid="295646757057884" type="queso">
                             <param id="0" name="Instance variable">activo</param>
                         </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="248766725026679" type="carriot">
-                            <param id="0" name="Instance variable">cosechadas</param>
+                        <condition id="-8" name="Is boolean instance variable set" sid="477540565480116" type="carriots1">
+                            <param id="0" name="Instance variable">activo</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -2735,7 +2833,7 @@
                     <actions>
                         <action id="-9" name="Set value" sid="136942028912433" type="System">
                             <param id="0" name="Variable">progreso</param>
-                            <param id="1" name="Value">4</param>
+                            <param id="1" name="Value">5</param>
                         </action>
                         <action id="-9" name="Set value" sid="296430774468666" type="System">
                             <param id="0" name="Variable">idUsuario</param>
@@ -3185,6 +3283,10 @@
                             <param id="0" name="Name">&quot;activarInvDia5&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
+                        <action id="-12" name="Set group active" sid="880760436606364" type="System">
+                            <param id="0" name="Group name">&quot;Resaltado_dia_5&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
                         <action id="0" name="Call function" sid="813029136844311" type="Function">
                             <param id="0" name="Name">&quot;cargarTextoConsigna5&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
@@ -3377,18 +3479,23 @@
                             <param id="0" name="Instance variable">activo</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="164091478654617" type="inv_canasta">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="608075640104243" type="inv_canasta">
-                            <param id="0" name="Instance variable">activo</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
                         <action id="4" name="Set animation" sid="273565968568865" type="carriot">
                             <param id="0" name="Animation">&quot;listo&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
+                        <action id="-3" name="Set position" sid="562001791463592" type="queso">
+                            <param id="0" name="X">2272</param>
+                            <param id="1" name="Y">419</param>
+                        </action>
                         <action id="-9" name="Destroy" sid="953667648289155" type="baldeVacio" />
+                        <action id="-3" name="Set position" sid="537473703811288" type="mesaQueso">
+                            <param id="0" name="X">2268</param>
+                            <param id="1" name="Y">428</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="793763833097257" type="canasta">
+                            <param id="0" name="X">870</param>
+                            <param id="1" name="Y">1060</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="873110142892316">
@@ -3442,6 +3549,68 @@
         </event-group>
         <event-group description="" sid="412111869142278" title="Resaltados_Objetos">
             <sub-events>
+                <event-group description="" inactive="1" sid="737802282025266" title="Resaltado_dia_5">
+                    <sub-events>
+                        <event-block sid="357946616375005">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="190207348658499" type="sprControl">
+                                    <param id="0" name="Object">sResaltadoCanasta</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="840879384393895" type="resaltado">
+                                    <param id="0" name="Unique ID">257</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="977794297410005" type="resaltado">
+                                    <param id="0" name="Object">canasta</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="517715543754106">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="186070006025156" type="System" />
+                                <condition id="-14" name="Pick by unique ID" sid="216195933141505" type="resaltado">
+                                    <param id="0" name="Unique ID">257</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="529260816077766" type="resaltado">
+                                    <param id="0" name="X">950</param>
+                                    <param id="1" name="Y">-200</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="756033210090754">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="928676693701342" type="sprControl">
+                                    <param id="0" name="Object">sResaltadoMesaQueso</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set blend mode" sid="718038830816372" type="mesaQueso">
+                                    <param id="0" name="Blend mode">1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="345358787599141" type="mesaQueso">
+                                    <param id="0" name="Scale">1.4</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="791088988724107">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="118443218601683" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set blend mode" sid="596638389808946" type="mesaQueso">
+                                    <param id="0" name="Blend mode">0</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="884709688693177" type="mesaQueso">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
                 <event-group description="" inactive="1" sid="657180924355732" title="Resaltado_dia_4">
                     <sub-events>
                         <event-block sid="951663078150906">
@@ -3471,6 +3640,40 @@
                                 <action id="-3" name="Set position" sid="614355650162496" type="resaltado">
                                     <param id="0" name="X">950</param>
                                     <param id="1" name="Y">-200</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="909731653078518">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="619746803171626" type="sprControl">
+                                    <param id="0" name="Object">sResaltadoVaca</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="783495652413181" type="cow2">
+                                    <param id="0" name="Unique ID">28</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set blend mode" sid="535369789430921" type="cow2">
+                                    <param id="0" name="Blend mode">1</param>
+                                </action>
+                                <action disabled="1" id="9" name="Set scale" sid="307782244696087" type="cow2">
+                                    <param id="0" name="Scale">1.4</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="295050481148511">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="762883440699195" type="System" />
+                                <condition id="-14" name="Pick by unique ID" sid="762246919060952" type="cow2">
+                                    <param id="0" name="Unique ID">28</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set blend mode" sid="906907972860707" type="cow2">
+                                    <param id="0" name="Blend mode">0</param>
+                                </action>
+                                <action disabled="1" id="9" name="Set scale" sid="592835216572101" type="cow2">
+                                    <param id="0" name="Scale">1</param>
                                 </action>
                             </actions>
                         </event-block>
