@@ -577,6 +577,11 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;corte&quot;</param>
                         </action>
+                        <action id="0" name="Spawn another object" sid="706584187433766" type="arena">
+                            <param id="0" name="Object">particulas_rojo</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
                         <action id="-7" name="Set size" sid="406668572495931" type="arena">
                             <param id="0" name="Width">128</param>
                             <param id="1" name="Height">64</param>
@@ -686,6 +691,9 @@
                                     <param id="0" name="Instance variable">activo</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="-15" name="Set visible" sid="208657960304246" type="oveja2">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
                                 <action id="-9" name="Set value" sid="569281198775564" type="System">
                                     <param id="0" name="Variable">status</param>
                                     <param id="1" name="Value">&quot;Oveja trasquilada&quot;</param>
@@ -749,6 +757,9 @@
                                 <action id="-13" name="Set boolean" sid="742983300859909" type="oveja2">
                                     <param id="0" name="Instance variable">activo</param>
                                     <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="888933996486293" type="oveja2">
+                                    <param id="0" name="Visibility">1</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="562332582215581" type="System">
                                     <param id="0" name="Variable">status</param>
@@ -905,8 +916,8 @@
                                     <param id="0" name="Visibility">0</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="513182168962665" type="animacionOrdenada">
-                                    <param id="0" name="X">514</param>
-                                    <param id="1" name="Y">114</param>
+                                    <param id="0" name="X">2380</param>
+                                    <param id="1" name="Y">175</param>
                                 </action>
                                 <action id="4" name="Set animation" sid="740686650464542" type="animacionOrdenada">
                                     <param id="0" name="Animation">&quot;ella&quot;</param>
@@ -950,9 +961,9 @@
                                 <action id="-15" name="Set visible" sid="708943614929041" type="characterMasc">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="906124692603666" type="animacionOrdenada">
-                                    <param id="0" name="X">514</param>
-                                    <param id="1" name="Y">114</param>
+                                <action id="-3" name="Set position" sid="365171605403566" type="animacionOrdenada">
+                                    <param id="0" name="X">2380</param>
+                                    <param id="1" name="Y">175</param>
                                 </action>
                                 <action id="4" name="Set animation" sid="115660621392171" type="animacionOrdenada">
                                     <param id="0" name="Animation">&quot;el&quot;</param>
@@ -1675,6 +1686,16 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-9" name="Destroy" sid="595082874691285" type="sResaltadoBaldeVacio" />
+                        <action id="-3" name="Set position" sid="862787530835153" type="resaltado">
+                            <param id="0" name="X">950</param>
+                            <param id="1" name="Y">-200</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="707807923041963" type="baldeVacio">
+                            <param id="0" name="Object">particulas_blanco</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
                         <action id="-9" name="Destroy" sid="930608222531804" type="baldeVacio" />
                         <action id="-15" name="Set visible" sid="343901905178078" type="inv_balde">
                             <param id="0" name="Visibility">1</param>
@@ -1707,6 +1728,11 @@
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;logrado&quot;</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="155056545436997" type="ladrilloGranero">
+                            <param id="0" name="Object">particulas_rojo</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
                         </action>
                         <action id="-7" name="Set size" sid="340670784235807" type="ladrilloGranero">
                             <param id="0" name="Width">98</param>
@@ -2709,7 +2735,7 @@
                     <actions>
                         <action id="-9" name="Set value" sid="136942028912433" type="System">
                             <param id="0" name="Variable">progreso</param>
-                            <param id="1" name="Value">3</param>
+                            <param id="1" name="Value">4</param>
                         </action>
                         <action id="-9" name="Set value" sid="296430774468666" type="System">
                             <param id="0" name="Variable">idUsuario</param>
@@ -3124,6 +3150,10 @@
                             <param id="0" name="Name">&quot;activarInvDia4&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
+                        <action id="-12" name="Set group active" sid="147164786721116" type="System">
+                            <param id="0" name="Group name">&quot;Resaltado_dia_4&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
                         <action id="-12" name="Set group active" sid="494175434853019" type="System">
                             <param id="0" name="Group name">&quot;activar_dia_por_progreso&quot;</param>
                             <param id="1" name="State">0</param>
@@ -3303,20 +3333,26 @@
                         <action id="-9" name="Destroy" sid="418080587016238" type="carretillo" />
                         <action id="-9" name="Destroy" sid="898661295150829" type="arena" />
                         <action id="-9" name="Destroy" sid="990575694990445" type="ladrilloGranero" />
+                        <action id="-9" name="Destroy" sid="586516463322879" type="baseGranero" />
                         <action id="-3" name="Set position" sid="864525369152235" type="granero">
-                            <param id="0" name="X">1792</param>
-                            <param id="1" name="Y">160</param>
+                            <param id="0" name="X">837</param>
+                            <param id="1" name="Y">252</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="578048311657853" type="granero">
-                            <param id="0" name="Visibility">1</param>
+                        <action id="-7" name="Set size" sid="167635070506000" type="granero">
+                            <param id="0" name="Width">415</param>
+                            <param id="1" name="Height">240</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="578048311657853" type="granero">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                         <action id="4" name="Set animation" sid="243610307594919" type="oveja2">
                             <param id="0" name="Animation">&quot;pelona&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                         <action id="-3" name="Set position" sid="152421860636788" type="baldeVacio">
-                            <param id="0" name="X">1298</param>
-                            <param id="1" name="Y">1104</param>
+                            <param id="0" name="X">1795</param>
+                            <param id="1" name="Y">1356</param>
                         </action>
                         <action id="-15" name="Set visible" sid="687688014615367" type="inv_regadera">
                             <param id="0" name="Visibility">1</param>
@@ -3406,6 +3442,40 @@
         </event-group>
         <event-group description="" sid="412111869142278" title="Resaltados_Objetos">
             <sub-events>
+                <event-group description="" inactive="1" sid="657180924355732" title="Resaltado_dia_4">
+                    <sub-events>
+                        <event-block sid="951663078150906">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="253420139541971" type="sprControl">
+                                    <param id="0" name="Object">sResaltadoBaldeVacio</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="723662303656264" type="resaltado">
+                                    <param id="0" name="Unique ID">253</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="910262034145434" type="resaltado">
+                                    <param id="0" name="Object">baldeVacio</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="957290624661745">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="515993705732376" type="System" />
+                                <condition id="-14" name="Pick by unique ID" sid="302287278502567" type="resaltado">
+                                    <param id="0" name="Unique ID">253</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="614355650162496" type="resaltado">
+                                    <param id="0" name="X">950</param>
+                                    <param id="1" name="Y">-200</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
                 <event-group description="" inactive="1" sid="487709750334322" title="Resaltado_dia_3">
                     <sub-events>
                         <event-block sid="818812741247444">
