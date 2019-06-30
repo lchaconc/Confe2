@@ -3586,7 +3586,10 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="408380683939313" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.50542" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\GRANJA\compradora1.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\GRANJA\compradora1.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="lateral" pingpong="0" repeatcount="1" repeatto="0" sid="398994321136766" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Granja\Personajes\comprador1 lateral.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -3602,7 +3605,7 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="905532444005162" speed="5">
-                        <frame duration="1" hotspotX="0.500938" hotspotY="0.500695" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\GRANJA\comprador2.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\GRANJA\comprador2.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -3618,7 +3621,7 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="765106714503222" speed="8">
-                        <frame duration="1" hotspotX="0.501916" hotspotY="0.50271" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\GRANJA\compradora1.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\GRANJA\compradora1.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -3634,7 +3637,7 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="918142726037906" speed="10">
-                        <frame duration="1" hotspotX="0.500938" hotspotY="0.500695" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\GRANJA\comprador2.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\GRANJA\comprador2.png">
                             <collision-poly>
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
@@ -5383,6 +5386,22 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="dialogoQueso" sid="609685537161872">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="412163440833781" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Granja\dialogos\queso.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="dialogoSinDinero" sid="186274900979793">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="216854027399720" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Granja\dialogos\sin_dinero.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="inventario">
             <object-type name="inv_axe" sid="734554926233979">
@@ -5806,6 +5825,14 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="303150942645170" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="sComp1Izq" sid="475843115089280">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="469272509811163" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>

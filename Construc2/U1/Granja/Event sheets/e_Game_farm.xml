@@ -2036,16 +2036,13 @@
                         <condition id="0" name="On collision with another object" sid="935184732086085" type="sprControl">
                             <param id="0" name="Object">comprador1</param>
                         </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="525165125827202" type="comprador1">
-                            <param id="0" name="Instance variable">activo</param>
-                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="986965098678758">
+                        <event-block sid="550824529528864">
                             <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="336271086215299" type="queso">
-                                    <param id="0" name="Unique ID">162</param>
+                                <condition id="-8" name="Is boolean instance variable set" sid="674341637726342" type="comprador1">
+                                    <param id="0" name="Instance variable">activo</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -2053,7 +2050,16 @@
                                     <param id="0" name="Instance variable">activo</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="501843670019263" type="queso">
+                                <action id="-15" name="Set visible" sid="270558033874698" type="dialogoQueso">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="136205799322531" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="501843670019263" type="queso2">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="949510415579042" type="dialogoQueso">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="462817757449491" type="mesaQueso">
@@ -2062,69 +2068,21 @@
                                 </action>
                             </actions>
                         </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="331143000237750">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="120347722480081" type="sprControl">
-                            <param id="0" name="Object">comprador2</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="828725861041344" type="comprador2">
-                            <param id="0" name="Instance variable">activo</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="896483612380025">
+                        <event-block sid="868134380543192">
                             <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="801896136806254" type="queso">
-                                    <param id="0" name="Unique ID">165</param>
-                                </condition>
+                                <condition id="-22" name="Else" sid="889089328307561" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-13" name="Set boolean" sid="720287229552645" type="comprador2">
-                                    <param id="0" name="Instance variable">activo</param>
-                                    <param id="1" name="Value">0</param>
+                                <action id="-3" name="Set position" sid="272901971466678" type="dialogoSinDinero">
+                                    <param id="0" name="X">2294</param>
+                                    <param id="1" name="Y">158</param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="469939195788859" type="queso">
-                                    <param id="0" name="Visibility">0</param>
+                                <action id="-16" name="Wait" sid="689409364845854" type="System">
+                                    <param id="0" name="Seconds">2</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="449721402533254" type="mesaQueso">
-                                    <param id="0" name="Instance variable">quesosVendidos</param>
-                                    <param id="1" name="Value">mesaQueso.quesosVendidos + 1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="858728361209390">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="437555236963156" type="sprControl">
-                            <param id="0" name="Object">comprador3</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="634221734300154" type="comprador3">
-                            <param id="0" name="Instance variable">activo</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="780652951008155">
-                            <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="303819946569759" type="queso">
-                                    <param id="0" name="Unique ID">168</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-13" name="Set boolean" sid="842157890254697" type="comprador3">
-                                    <param id="0" name="Instance variable">activo</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="199922670081411" type="queso">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="990615821761816" type="mesaQueso">
-                                    <param id="0" name="Instance variable">quesosVendidos</param>
-                                    <param id="1" name="Value">mesaQueso.quesosVendidos + 1</param>
+                                <action id="-3" name="Set position" sid="532529523841271" type="dialogoSinDinero">
+                                    <param id="0" name="X">-600</param>
+                                    <param id="1" name="Y">-600</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -2833,7 +2791,7 @@
                     <actions>
                         <action id="-9" name="Set value" sid="136942028912433" type="System">
                             <param id="0" name="Variable">progreso</param>
-                            <param id="1" name="Value">5</param>
+                            <param id="1" name="Value">6</param>
                         </action>
                         <action id="-9" name="Set value" sid="296430774468666" type="System">
                             <param id="0" name="Variable">idUsuario</param>
@@ -3355,6 +3313,9 @@
                             <param id="0" name="X">618</param>
                             <param id="1" name="Y">1213</param>
                         </action>
+                        <action id="-15" name="Set visible" sid="259529950101076" type="ladrilloCasa">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="545636407333385">
@@ -3493,8 +3454,8 @@
                             <param id="1" name="Y">428</param>
                         </action>
                         <action id="-3" name="Set position" sid="793763833097257" type="canasta">
-                            <param id="0" name="X">870</param>
-                            <param id="1" name="Y">1060</param>
+                            <param id="0" name="X">873</param>
+                            <param id="1" name="Y">1074</param>
                         </action>
                     </actions>
                 </event-block>
@@ -3505,33 +3466,37 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="260042797072509" type="comprador1">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
                         <action id="-13" name="Set boolean" sid="255552158880529" type="comprador1">
                             <param id="0" name="Instance variable">activo</param>
                             <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="117287491140210" type="comprador2">
-                            <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="-13" name="Set boolean" sid="544106412737516" type="comprador2">
                             <param id="0" name="Instance variable">activo</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="245077121139968" type="comprador3">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
                         <action id="-13" name="Set boolean" sid="365099304638725" type="comprador3">
                             <param id="0" name="Instance variable">activo</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="370739590309344" type="comprador4">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
                         <action id="-13" name="Set boolean" sid="566336885220064" type="comprador4">
                             <param id="0" name="Instance variable">activo</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="429998050908513" type="comprador1">
+                            <param id="0" name="X">2261</param>
+                            <param id="1" name="Y">261</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="833784804878856" type="comprador2">
+                            <param id="0" name="X">1672</param>
+                            <param id="1" name="Y">1319</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="239355582087838" type="comprador3">
+                            <param id="0" name="X">402</param>
+                            <param id="1" name="Y">779</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="984579398467946" type="comprador4">
+                            <param id="0" name="X">1233</param>
+                            <param id="1" name="Y">942</param>
                         </action>
                         <action id="-15" name="Set visible" sid="129264889694970" type="queso">
                             <param id="0" name="Visibility">1</param>
@@ -3539,6 +3504,15 @@
                         <action id="-13" name="Set boolean" sid="872775061569444" type="queso">
                             <param id="0" name="Instance variable">activo</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="266173693949891" type="queso2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="123542130564975" type="queso3">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="294822848613041" type="queso4">
+                            <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="-15" name="Set visible" sid="779605695064114" type="carriots1">
                             <param id="0" name="Visibility">1</param>
@@ -3549,6 +3523,44 @@
         </event-group>
         <event-group description="" sid="412111869142278" title="Resaltados_Objetos">
             <sub-events>
+                <event-group description="Orientaciones de los compradores" sid="359386949364141" title="Resaltado_dia_6">
+                    <sub-events>
+                        <event-block sid="246302466164218">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="294333665197833" type="sprControl">
+                                    <param id="0" name="Object">sComp1Izq</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="676161774901497" type="comprador1">
+                                    <param id="0" name="Animation">&quot;lateral&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="445103324213675" type="comprador1">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="808744242839256" type="dialogoQueso">
+                                    <param id="0" name="X">2220</param>
+                                    <param id="1" name="Y">166</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="416195548906577">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="895692257397600" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="335189498896557" type="comprador1">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="121585103199471" type="comprador1">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
                 <event-group description="" inactive="1" sid="737802282025266" title="Resaltado_dia_5">
                     <sub-events>
                         <event-block sid="357946616375005">
