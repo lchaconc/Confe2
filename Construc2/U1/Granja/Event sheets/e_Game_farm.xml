@@ -2046,18 +2046,19 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-13" name="Set boolean" sid="147577053997590" type="comprador1">
-                                    <param id="0" name="Instance variable">activo</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
                                 <action id="-15" name="Set visible" sid="270558033874698" type="dialogoQueso">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="136205799322531" type="System">
-                                    <param id="0" name="Seconds">2</param>
+                                    <param id="0" name="Seconds">1</param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="501843670019263" type="queso2">
-                                    <param id="0" name="Visibility">0</param>
+                                <action id="4" name="Set animation" sid="501843670019263" type="queso2">
+                                    <param id="0" name="Animation">&quot;monedas&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="962725657701182" type="queso2">
+                                    <param id="0" name="Width">40</param>
+                                    <param id="1" name="Height">40</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="949510415579042" type="dialogoQueso">
                                     <param id="0" name="Visibility">0</param>
@@ -2065,6 +2066,10 @@
                                 <action id="-10" name="Set value" sid="462817757449491" type="mesaQueso">
                                     <param id="0" name="Instance variable">quesosVendidos</param>
                                     <param id="1" name="Value">mesaQueso.quesosVendidos + 1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="147577053997590" type="comprador1">
+                                    <param id="0" name="Instance variable">activo</param>
+                                    <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -2081,6 +2086,130 @@
                                     <param id="0" name="Seconds">2</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="532529523841271" type="dialogoSinDinero">
+                                    <param id="0" name="X">-600</param>
+                                    <param id="1" name="Y">-600</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="920926338994938">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="114977392653105" type="sprControl">
+                            <param id="0" name="Object">comprador2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="747006215034762">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="693855508315856" type="comprador2">
+                                    <param id="0" name="Instance variable">activo</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="910209692972894" type="dialogoQueso">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="415161833473731" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="809879352355088" type="queso3">
+                                    <param id="0" name="Animation">&quot;monedas&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="657908823033012" type="queso3">
+                                    <param id="0" name="Width">40</param>
+                                    <param id="1" name="Height">40</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="492475507452587" type="dialogoQueso">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="594963177013460" type="mesaQueso">
+                                    <param id="0" name="Instance variable">quesosVendidos</param>
+                                    <param id="1" name="Value">mesaQueso.quesosVendidos + 1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="824386617464216" type="comprador2">
+                                    <param id="0" name="Instance variable">activo</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="325844254105276">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="835924009879734" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="865351945156248" type="dialogoSinDinero">
+                                    <param id="0" name="X">1711</param>
+                                    <param id="1" name="Y">1196</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="207492640822279" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="999845371596443" type="dialogoSinDinero">
+                                    <param id="0" name="X">-600</param>
+                                    <param id="1" name="Y">-600</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="145186528226431">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="613280716058726" type="sprControl">
+                            <param id="0" name="Object">comprador3</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="288019142932767">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="623678163038557" type="comprador3">
+                                    <param id="0" name="Instance variable">activo</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="598764253802057" type="dialogoQueso">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="884723321465542" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="604381898056754" type="queso4">
+                                    <param id="0" name="Animation">&quot;monedas&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="102026473066854" type="queso4">
+                                    <param id="0" name="Width">40</param>
+                                    <param id="1" name="Height">40</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="918396540136965" type="dialogoQueso">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="998035280773472" type="mesaQueso">
+                                    <param id="0" name="Instance variable">quesosVendidos</param>
+                                    <param id="1" name="Value">mesaQueso.quesosVendidos + 1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="767449800081668" type="comprador3">
+                                    <param id="0" name="Instance variable">activo</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="451709517447191">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="978069054642262" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="383550387502624" type="dialogoSinDinero">
+                                    <param id="0" name="X">433</param>
+                                    <param id="1" name="Y">675</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="322378327727242" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="684609839273125" type="dialogoSinDinero">
                                     <param id="0" name="X">-600</param>
                                     <param id="1" name="Y">-600</param>
                                 </action>
@@ -3527,37 +3656,291 @@
                     <sub-events>
                         <event-block sid="246302466164218">
                             <conditions>
-                                <condition id="1" name="Is overlapping another object" sid="294333665197833" type="sprControl">
+                                <condition id="0" name="On collision with another object" sid="294333665197833" type="sprControl">
                                     <param id="0" name="Object">sComp1Izq</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="676161774901497" type="comprador1">
-                                    <param id="0" name="Animation">&quot;lateral&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="7" name="Set mirrored" sid="445103324213675" type="comprador1">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="808744242839256" type="dialogoQueso">
-                                    <param id="0" name="X">2220</param>
-                                    <param id="1" name="Y">166</param>
+                                <action id="0" name="Call function" sid="619441058175541" type="Function">
+                                    <param id="0" name="Name">&quot;comp1&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="416195548906577">
+                        <event-block sid="889945824781486">
                             <conditions>
-                                <condition id="-22" name="Else" sid="895692257397600" type="System" />
+                                <condition id="0" name="On collision with another object" sid="231241620023995" type="sprControl">
+                                    <param id="0" name="Object">sComp1Der</param>
+                                </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="335189498896557" type="comprador1">
-                                    <param id="0" name="Animation">&quot;Default&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="7" name="Set mirrored" sid="121585103199471" type="comprador1">
-                                    <param id="0" name="State">1</param>
+                                <action id="0" name="Call function" sid="278247524944456" type="Function">
+                                    <param id="0" name="Name">&quot;comp1&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
+                        </event-block>
+                        <event-block sid="424289246893782">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="849066129283668" type="sprControl">
+                                    <param id="0" name="Object">sComp2Izq</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="117554121588340" type="Function">
+                                    <param id="0" name="Name">&quot;comp2&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="824276318950380">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="294553336656201" type="sprControl">
+                                    <param id="0" name="Object">sComp2Izq</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="190857200712463" type="Function">
+                                    <param id="0" name="Name">&quot;comp2&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="921611510469754">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="461949729129056" type="sprControl">
+                                    <param id="0" name="Object">sComp3Izq</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="361012347152346" type="Function">
+                                    <param id="0" name="Name">&quot;comp3&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="156502261157870">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="288930676571938" type="sprControl">
+                                    <param id="0" name="Object">sComp3Der</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="207260434175812" type="Function">
+                                    <param id="0" name="Name">&quot;comp3&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="309533145266356">
+                            <conditions>
+                                <condition id="0" name="On function" sid="543002093024914" type="Function">
+                                    <param id="0" name="Name">&quot;comp1&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="271218183120525">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="396243557813279" type="sprControl">
+                                            <param id="0" name="Object">sComp1Izq</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="676161774901497" type="comprador1">
+                                            <param id="0" name="Animation">&quot;lateral&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="7" name="Set mirrored" sid="445103324213675" type="comprador1">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="808744242839256" type="dialogoQueso">
+                                            <param id="0" name="X">2220</param>
+                                            <param id="1" name="Y">166</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="766367627965559" type="System">
+                                            <param id="0" name="Seconds">2</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="388335975179771" type="comprador1">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="7" name="Set mirrored" sid="820332189823421" type="comprador1">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="701256672358470">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="633778459361162" type="sprControl">
+                                            <param id="0" name="Object">sComp1Der</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="844258544986545" type="comprador1">
+                                            <param id="0" name="Animation">&quot;lateral&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="7" name="Set mirrored" sid="911774957856400" type="comprador1">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="804514784751604" type="dialogoQueso">
+                                            <param id="0" name="X">2309</param>
+                                            <param id="1" name="Y">156</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="931061435423227" type="System">
+                                            <param id="0" name="Seconds">2</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="757489732516570" type="comprador1">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="7" name="Set mirrored" sid="870198739701575" type="comprador1">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="586430397753597">
+                            <conditions>
+                                <condition id="0" name="On function" sid="318101317496987" type="Function">
+                                    <param id="0" name="Name">&quot;comp2&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="663672084169439">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="416409033102731" type="sprControl">
+                                            <param id="0" name="Object">sComp2Izq</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="881000536517214" type="comprador2">
+                                            <param id="0" name="Animation">&quot;lateral&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="7" name="Set mirrored" sid="614886443656164" type="comprador2">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="527719496170005" type="dialogoQueso">
+                                            <param id="0" name="X">1634.334</param>
+                                            <param id="1" name="Y">1220.091</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="373915808147229" type="System">
+                                            <param id="0" name="Seconds">2</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="629099636207949" type="comprador2">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="7" name="Set mirrored" sid="136931879534367" type="comprador2">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="485514398951102">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="870827779179691" type="sprControl">
+                                            <param id="0" name="Object">sComp2Der</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="330293313623634" type="comprador2">
+                                            <param id="0" name="Animation">&quot;lateral&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="7" name="Set mirrored" sid="592328211542485" type="comprador2">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="238129832144931" type="dialogoQueso">
+                                            <param id="0" name="X">1709.818</param>
+                                            <param id="1" name="Y"> 1217.225</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="617137479651473" type="System">
+                                            <param id="0" name="Seconds">2</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="171986228871010" type="comprador2">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="7" name="Set mirrored" sid="250640052067892" type="comprador2">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="738647624925571">
+                            <conditions>
+                                <condition id="0" name="On function" sid="846686162119552" type="Function">
+                                    <param id="0" name="Name">&quot;comp3&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="916968706196111">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="847349019000779" type="sprControl">
+                                            <param id="0" name="Object">sComp3Izq</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="126669930421003" type="comprador3">
+                                            <param id="0" name="Animation">&quot;lateral&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="7" name="Set mirrored" sid="824483946532303" type="comprador3">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="270093551249993" type="dialogoQueso">
+                                            <param id="0" name="X">348</param>
+                                            <param id="1" name="Y">663</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="614013561224145" type="System">
+                                            <param id="0" name="Seconds">2</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="125187769264296" type="comprador3">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="7" name="Set mirrored" sid="785451133135853" type="comprador3">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="694542158782906">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="291012150090880" type="sprControl">
+                                            <param id="0" name="Object">sComp3Der</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="709078156571889" type="comprador3">
+                                            <param id="0" name="Animation">&quot;lateral&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="7" name="Set mirrored" sid="888709313106013" type="comprador3">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="955229382145388" type="dialogoQueso">
+                                            <param id="0" name="X">432</param>
+                                            <param id="1" name="Y">670</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="266452750161525" type="System">
+                                            <param id="0" name="Seconds">2</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="397267175795619" type="comprador3">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="7" name="Set mirrored" sid="293534029130296" type="comprador3">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>
