@@ -319,6 +319,96 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="bgModalMisiones" sid="244547121202345">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="769101257177336">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="d1" pingpong="0" repeatcount="1" repeatto="0" sid="671838737574279" speed="5">
+                        <frame duration="1" hotspotX="0.50069" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\d1.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0.139825" y="1" />
+                                <point x="0.141074" y="0.322581" />
+                                <point x="0.0224719" y="0.322581" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="d2" pingpong="0" repeatcount="1" repeatto="0" sid="995611805625951" speed="5">
+                        <frame duration="1" hotspotX="0.50069" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\d2.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.983448" y="0.0342857" />
+                                <point x="0.983448" y="0.965714" />
+                                <point x="0.14069" y="0.934286" />
+                                <point x="0.143448" y="0.357143" />
+                                <point x="0.00413793" y="0.348571" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="d3" pingpong="0" repeatcount="1" repeatto="0" sid="274099392241363" speed="5">
+                        <frame duration="1" hotspotX="0.50069" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\d3.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.49931" y="0.00857143" />
+                                <point x="0.983448" y="0.0342857" />
+                                <point x="0.997241" y="0.5" />
+                                <point x="0.983448" y="0.965714" />
+                                <point x="0.133793" y="0.968571" />
+                                <point x="0.133793" y="0.345714" />
+                                <point x="0" y="0.348571" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="d4" pingpong="0" repeatcount="1" repeatto="0" sid="541181190751431" speed="5">
+                        <frame duration="1" hotspotX="0.50069" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\d_base.png">
+                            <collision-poly>
+                                <point x="0.0165517" y="0.0342857" />
+                                <point x="0.49931" y="0.00857143" />
+                                <point x="0.983448" y="0.0342857" />
+                                <point x="0.997241" y="0.5" />
+                                <point x="0.983448" y="0.965714" />
+                                <point x="0.133793" y="0.991428" />
+                                <point x="0.125517" y="0.342857" />
+                                <point x="0.00413793" y="0.357143" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="d5" pingpong="0" repeatcount="1" repeatto="0" sid="882809019987190" speed="5">
+                        <frame duration="1" hotspotX="0.50069" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\d_base.png">
+                            <collision-poly>
+                                <point x="0.0165517" y="0.0342857" />
+                                <point x="0.49931" y="0.00857143" />
+                                <point x="0.983448" y="0.0342857" />
+                                <point x="0.997241" y="0.5" />
+                                <point x="0.983448" y="0.965714" />
+                                <point x="0.142069" y="0.951429" />
+                                <point x="0.131034" y="0.342857" />
+                                <point x="0.00551724" y="0.311429" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="d6" pingpong="0" repeatcount="1" repeatto="0" sid="368555184988206" speed="5">
+                        <frame duration="1" hotspotX="0.50069" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.0165517" y="0.0342857" />
+                                <point x="0.49931" y="0.00857143" />
+                                <point x="0.983448" y="0.0342857" />
+                                <point x="0.997241" y="0.5" />
+                                <point x="0.983448" y="0.965714" />
+                                <point x="0.142069" y="0.951429" />
+                                <point x="0.131034" y="0.342857" />
+                                <point x="0.00551724" y="0.311429" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="system">
             <object-type name="Touch" sid="579146676650647">
@@ -426,24 +516,6 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="170895038848104" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Granja\Botones-Controles\NuevoControlGranja.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-        </object-folder>
-        <object-folder name="visor">
-            <object-type name="progress_bar" sid="916072727061301">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="764224621909144" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\barra.jpg" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="barra_superior" sid="159975643191710">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="993379282887882" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.517241" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\GRANJA\barra_superior.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -3643,12 +3715,25 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="918142726037906" speed="10">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\GRANJA\comprador2.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Granja\Personajes\comprador 4 frente.png">
                             <collision-poly>
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                                 <point x="0" y="0" />
                                 <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="lateral" pingpong="0" repeatcount="1" repeatto="0" sid="741724652352914" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Granja\Personajes\comprador 4 lateral.png">
+                            <collision-poly>
+                                <point x="0.0866808" y="0.0575843" />
+                                <point x="0.498943" y="0" />
+                                <point x="0.801269" y="0.132022" />
+                                <point x="0.627907" y="0.752809" />
+                                <point x="0.498943" y="1" />
+                                <point x="0.340381" y="0.773876" />
+                                <point x="0.293869" y="0.5" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -3781,7 +3866,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="carriots1" sid="442075922541195">
+            <object-type name="zanahorias1" sid="442075922541195">
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable comment="cantidad de zanahorias venidads. 1 activa el total " name="vendido" sid="101870826568292" type="number" />
@@ -3790,6 +3875,20 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="224253642970680" speed="5">
                         <frame duration="1" hotspotX="0.496183" hotspotY="0.495146" original-source="C:\Users\logan24\Desktop\assets\carriots.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="monedas" pingpong="0" repeatcount="1" repeatto="0" sid="122216085307942" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Granja\Objetos\monedas compra.png">
+                            <collision-poly>
+                                <point x="0.104" y="0.104" />
+                                <point x="0.496" y="0.032" />
+                                <point x="0.704" y="0.296" />
+                                <point x="0.968" y="0.496" />
+                                <point x="0.888" y="0.888" />
+                                <point x="0.496" y="0.968" />
+                                <point x="0.296" y="0.704" />
+                                <point x="0.032" y="0.496" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -5328,7 +5427,7 @@
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="pelona" pingpong="0" repeatcount="1" repeatto="0" sid="359590436529337" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\recursos_CONFE\assetsfinales-20190418T001056Z-001\assetsGranja-11.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Granja\Animales\assetsGranja-10.png">
                             <collision-poly>
                                 <point x="0.416667" y="0.270833" />
                                 <point x="0.947917" y="0.28125" />
@@ -5401,11 +5500,14 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="dialogoQueso" sid="609685537161872">
+            <object-type name="dialogoCompra" sid="609685537161872">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="412163440833781" speed="5">
+                    <animation framecount="1" loop="0" name="queso" pingpong="0" repeatcount="1" repeatto="0" sid="412163440833781" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Granja\dialogos\queso.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="hortaliza" pingpong="0" repeatcount="1" repeatto="0" sid="904373861634250" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Granja\dialogos\hortalizas.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -5860,7 +5962,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="sComp2Izq" sid="976452578221569">
+            <object-type name="sComp4Izq" sid="976452578221569">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="938952562303310" speed="5">
@@ -5868,7 +5970,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="sComp2Der" sid="225285091007124">
+            <object-type name="sComp4Der" sid="225285091007124">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="157831899664139" speed="5">
@@ -5888,6 +5990,30 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="339702815227785" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="sDetenerModalMisiones" sid="154228459495646">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="540274456339170" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="sComp2Izq" sid="101392715660046">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="151368782997456" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="sComp2Der" sid="716184975938751">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="271965731765569" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
