@@ -2075,11 +2075,18 @@
                                     <param id="0" name="Instance variable">quesosVendidos</param>
                                     <param id="1" name="Value">mesaQueso.quesosVendidos + 1</param>
                                 </action>
+                                <action id="-13" name="Set boolean" sid="940645686407891" type="comprador1">
+                                    <param id="0" name="Instance variable">activoRebote</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="868134380543192">
                             <conditions>
                                 <condition id="-22" name="Else" sid="889089328307561" type="System" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="715420229364430" type="comprador1">
+                                    <param id="0" name="Instance variable">activoRebote</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" sid="272901971466678" type="dialogoSinDinero">
@@ -2137,11 +2144,18 @@
                                     <param id="0" name="Instance variable">quesosVendidos</param>
                                     <param id="1" name="Value">mesaQueso.quesosVendidos + 1</param>
                                 </action>
+                                <action id="-13" name="Set boolean" sid="829944729665504" type="comprador2">
+                                    <param id="0" name="Instance variable">activoRebote</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="325844254105276">
                             <conditions>
                                 <condition id="-22" name="Else" sid="835924009879734" type="System" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="304760592748128" type="comprador2">
+                                    <param id="0" name="Instance variable">activoRebote</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" sid="865351945156248" type="dialogoSinDinero">
@@ -2199,11 +2213,18 @@
                                     <param id="0" name="Instance variable">quesosVendidos</param>
                                     <param id="1" name="Value">mesaQueso.quesosVendidos + 1</param>
                                 </action>
+                                <action id="-13" name="Set boolean" sid="966908621927232" type="comprador3">
+                                    <param id="0" name="Instance variable">activoRebote</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="451709517447191">
                             <conditions>
                                 <condition id="-22" name="Else" sid="978069054642262" type="System" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="645253650396507" type="comprador3">
+                                    <param id="0" name="Instance variable">activoRebote</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" sid="383550387502624" type="dialogoSinDinero">
@@ -2265,11 +2286,18 @@
                                 <action id="-15" name="Set visible" sid="755530442935891" type="dialogoCompra">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
+                                <action id="-13" name="Set boolean" sid="482183139531800" type="comprador4">
+                                    <param id="0" name="Instance variable">activoRebote</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="822077267694070">
                             <conditions>
                                 <condition id="-22" name="Else" sid="329579085045333" type="System" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="121830203347810" type="comprador4">
+                                    <param id="0" name="Instance variable">activoRebote</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" sid="781531975374808" type="dialogoSinDinero">
