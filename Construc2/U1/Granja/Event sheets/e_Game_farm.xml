@@ -2335,18 +2335,30 @@
                         <action id="-16" name="Wait" sid="654394905503521" type="System">
                             <param id="0" name="Seconds">2</param>
                         </action>
+                        <action id="-4" name="Set layer visible" sid="961707496070128" type="System">
+                            <param id="0" name="Layer">&quot;shadow&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
                         <action id="-15" name="Set visible" sid="658323790957519" type="txtMisiones">
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-15" name="Set visible" sid="517641524380359" type="btnAceptar">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-3" name="Set position" sid="331782811774437" type="txtFinJuego">
-                            <param id="0" name="X">480</param>
-                            <param id="1" name="Y">192</param>
+                        <action id="-3" name="Set position" sid="537982271010748" type="bgFinJuego">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">0</param>
                         </action>
-                        <action id="-4" name="Set layer visible" sid="961707496070128" type="System">
-                            <param id="0" name="Layer">&quot;shadow&quot;</param>
+                        <action id="-7" name="Set size" sid="820725138619042" type="bgFinJuego">
+                            <param id="0" name="Width">1280</param>
+                            <param id="1" name="Height">720</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="245305701558400" type="txtFinCompleto">
+                            <param id="0" name="X">810</param>
+                            <param id="1" name="Y">356</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="635664964236487" type="System">
+                            <param id="0" name="Layer">&quot;modal_papiro&quot;</param>
                             <param id="1" name="Visibility">1</param>
                         </action>
                     </actions>
@@ -2425,6 +2437,31 @@
                         </action>
                         <action behavior="Bullet" id="0" name="Set speed" sid="533622896532381" type="bgModalMisiones">
                             <param id="0" name="Speed">bgModalMisiones.Bullet.Speed * -1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="954405532656500">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="559989836524389" type="Touch">
+                            <param id="0" name="Object">bgFinJuego</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="542964682943901" type="System">
+                            <param id="0" name="Layer">&quot;shadow&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="586895188129178" type="System">
+                            <param id="0" name="Layer">&quot;textos&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="438460375604969" type="System">
+                            <param id="0" name="Layer">&quot;modal_papiro&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="284319711600813" type="bgNegro">
+                            <param id="0" name="X">623</param>
+                            <param id="1" name="Y">276</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2994,7 +3031,7 @@
                     <actions>
                         <action id="-9" name="Set value" sid="136942028912433" type="System">
                             <param id="0" name="Variable">progreso</param>
-                            <param id="1" name="Value">3</param>
+                            <param id="1" name="Value">6</param>
                         </action>
                         <action id="-9" name="Set value" sid="296430774468666" type="System">
                             <param id="0" name="Variable">idUsuario</param>
@@ -3300,6 +3337,14 @@
                             <param id="0" name="Name">&quot;cargarTextoConsigna1&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
+                        <action id="-3" name="Set position" sid="192372491851026" type="bgFinJuego">
+                            <param id="0" name="X">-100</param>
+                            <param id="1" name="Y">-100</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="542758505355672" type="bgFinJuego">
+                            <param id="0" name="Width">50</param>
+                            <param id="1" name="Height">50</param>
+                        </action>
                         <action id="-12" name="Set group active" sid="638675165482477" type="System">
                             <param id="0" name="Group name">&quot;resaltado_dia_1&quot;</param>
                             <param id="1" name="State">1</param>
@@ -3334,6 +3379,10 @@
                         <action id="-12" name="Set group active" sid="492099111059087" type="System">
                             <param id="0" name="Group name">&quot;Resaltado_dia_2&quot;</param>
                             <param id="1" name="State">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="422351183175477" type="Function">
+                            <param id="0" name="Name">&quot;activarInvDia1&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action id="0" name="Call function" sid="446632525970365" type="Function">
                             <param id="0" name="Name">&quot;activarInvDia2&quot;</param>
@@ -3370,6 +3419,10 @@
                             <param id="0" name="Group name">&quot;Resaltado_dia_3&quot;</param>
                             <param id="1" name="State">1</param>
                         </action>
+                        <action id="0" name="Call function" sid="743403024105298" type="Function">
+                            <param id="0" name="Name">&quot;activarInvDia1&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                         <action id="0" name="Call function" sid="582189752392288" type="Function">
                             <param id="0" name="Name">&quot;activarInvDia2&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
@@ -3395,6 +3448,10 @@
                     <actions>
                         <action id="0" name="Call function" sid="225260405534059" type="Function">
                             <param id="0" name="Name">&quot;cargarTextoConsigna4&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="509150641363936" type="Function">
+                            <param id="0" name="Name">&quot;activarInvDia1&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action id="0" name="Call function" sid="457125697458645" type="Function">
@@ -3428,6 +3485,10 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Call function" sid="468403872597992" type="Function">
+                            <param id="0" name="Name">&quot;activarInvDia1&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                         <action id="0" name="Call function" sid="633045603867816" type="Function">
                             <param id="0" name="Name">&quot;activarInvDia2&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
@@ -3469,6 +3530,10 @@
                     <actions>
                         <action id="0" name="Call function" sid="371523235591259" type="Function">
                             <param id="0" name="Name">&quot;cargarTextoConsigna6&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="513421543286467" type="Function">
+                            <param id="0" name="Name">&quot;activarInvDia1&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action id="0" name="Call function" sid="598235613731609" type="Function">
@@ -3522,6 +3587,10 @@
                         </action>
                         <action id="-15" name="Set visible" sid="259529950101076" type="ladrilloCasa">
                             <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="208265895472727" type="bgNegro">
+                            <param id="0" name="X">-100</param>
+                            <param id="1" name="Y">-100</param>
                         </action>
                     </actions>
                 </event-block>
@@ -3729,6 +3798,10 @@
                             <param id="0" name="X">1233</param>
                             <param id="1" name="Y">974</param>
                         </action>
+                        <action id="-3" name="Set position" sid="311869764963002" type="mesaQueso">
+                            <param id="0" name="X">-600</param>
+                            <param id="1" name="Y">-600</param>
+                        </action>
                         <action id="-15" name="Set visible" sid="129264889694970" type="queso">
                             <param id="0" name="Visibility">1</param>
                         </action>
@@ -3749,6 +3822,10 @@
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="-9" name="Destroy" sid="195527015265730" type="canasta" />
+                        <action id="-3" name="Set position" sid="852383321764410" type="queso">
+                            <param id="0" name="X">-600</param>
+                            <param id="1" name="Y">-600</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
