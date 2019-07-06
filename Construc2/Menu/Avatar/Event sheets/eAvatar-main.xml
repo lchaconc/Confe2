@@ -22,11 +22,11 @@
                             <param id="0" name="Variable">isInicioLista</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action id="-9" name="Set value" sid="490305569017833" type="System">
+                        <action disabled="1" id="-9" name="Set value" sid="490305569017833" type="System">
                             <param id="0" name="Variable">sexo</param>
                             <param id="1" name="Value">WebStorage.SessionValue(&quot;sexo&quot;)</param>
                         </action>
-                        <action disabled="1" id="-9" name="Set value" sid="419065539935545" type="System">
+                        <action id="-9" name="Set value" sid="419065539935545" type="System">
                             <param id="0" name="Variable">sexo</param>
                             <param id="1" name="Value">&quot;m&quot;</param>
                         </action>
@@ -415,7 +415,7 @@
                         <condition id="-14" name="Compare variable" sid="481464708171595" type="System">
                             <param id="0" name="Variable">sexo</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;h&quot;</param>
+                            <param id="2" name="Value">&quot;m&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -446,7 +446,7 @@
                         <condition id="-14" name="Compare variable" sid="661898029567275" type="System">
                             <param id="0" name="Variable">sexo</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;m&quot;</param>
+                            <param id="2" name="Value">&quot;f&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -487,7 +487,7 @@
                             <param id="0" name="Key">&quot;avatarSeleccionado&quot;</param>
                             <param id="1" name="Value">avatarSeleccionado</param>
                         </action>
-                        <action id="7" name="Go to URL" sid="719433379246047" type="Browser">
+                        <action disabled="1" id="7" name="Go to URL" sid="719433379246047" type="Browser">
                             <param id="0" name="URL">&quot;http://localhost/c2/Menu/&quot;</param>
                             <param id="1" name="Target">0</param>
                         </action>

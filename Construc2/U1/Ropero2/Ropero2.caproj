@@ -1,0 +1,690 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Ropero2</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>3subbtu8xvytq</unique-id>
+    <saved-with-version>26500</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1280</width>
+        <height>720</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>Intro</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar only</prop>
+        <prop name="Orientations">Landscape</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">Firefox</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="Buttons">
+            <object-type name="btnMenu" sid="732249167386209">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="914755240897766" speed="5">
+                        <frame duration="1" hotspotX="0.504425" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\Ropero\btnOk.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btnNo" sid="905322978415367">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="259351938199830" speed="5">
+                        <frame duration="1" hotspotX="0.501639" hotspotY="0.501558" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Menu\sandalias\Asset 51@2x.png">
+                            <collision-poly>
+                                <point x="0.163934" y="0.155763" />
+                                <point x="0.498361" y="0.00311526" />
+                                <point x="0.855738" y="0.137072" />
+                                <point x="0.996721" y="0.498442" />
+                                <point x="0.819672" y="0.82866" />
+                                <point x="0.498361" y="0.978193" />
+                                <point x="0.154098" y="0.853583" />
+                                <point x="0.0196721" y="0.498442" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btnSi" sid="531504241464831">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="621261893711870" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Menu\sandalias\Asset 50@2x.png">
+                            <collision-poly>
+                                <point x="0.163399" y="0.15625" />
+                                <point x="0.5" y="0" />
+                                <point x="0.856209" y="0.1375" />
+                                <point x="0.996732" y="0.5" />
+                                <point x="0.820261" y="0.828125" />
+                                <point x="0.5" y="0.978125" />
+                                <point x="0.153595" y="0.853125" />
+                                <point x="0.0196078" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Backgrounds">
+            <object-type name="bgParedAzul" sid="329056225373995">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="983331292348736" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\Ropero\Asset 66fondoropero.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bgIntro" sid="999679203213762">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="731216842824639" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Menu\sandalias\Asset 58@2x.png">
+                            <collision-poly>
+                                <point x="0.145299" y="0.139019" />
+                                <point x="0.499389" y="0.00116822" />
+                                <point x="0.846154" y="0.147196" />
+                                <point x="0.979243" y="0.5" />
+                                <point x="0.835165" y="0.84229" />
+                                <point x="0.499389" y="0.977804" />
+                                <point x="0.164835" y="0.84229" />
+                                <point x="0.002442" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Sprites">
+            <object-type name="baseAvatarMasc" sid="844664004776136">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="blanco" pingpong="0" repeatcount="1" repeatto="0" sid="925043921039577" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\avatars seleccion\blanco.png">
+                            <collision-poly>
+                                <point x="0.13" y="0.0364706" />
+                                <point x="0.9175" y="0" />
+                                <point x="0.81125" y="0.979412" />
+                                <point x="0.2325" y="0.987647" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="moreno" pingpong="0" repeatcount="1" repeatto="0" sid="558741312269129" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\avatars seleccion\moreno.png">
+                            <collision-poly>
+                                <point x="0.101852" y="0.0317613" />
+                                <point x="0.5" y="0" />
+                                <point x="0.935185" y="0.0202117" />
+                                <point x="0.790123" y="0.499519" />
+                                <point x="0.737654" y="0.918191" />
+                                <point x="0.5" y="0.99615" />
+                                <point x="0.231481" y="0.927815" />
+                                <point x="0.441358" y="0.499519" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="negro" pingpong="0" repeatcount="1" repeatto="0" sid="982011340969398" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\avatars seleccion\negro.png">
+                            <collision-poly>
+                                <point x="0.101852" y="0.0317613" />
+                                <point x="0.5" y="0" />
+                                <point x="0.935185" y="0.0202117" />
+                                <point x="0.790123" y="0.499519" />
+                                <point x="0.737654" y="0.918191" />
+                                <point x="0.5" y="0.99615" />
+                                <point x="0.231481" y="0.927815" />
+                                <point x="0.441358" y="0.499519" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="baseAvatarFem" sid="198546040479328">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="blanco" pingpong="0" repeatcount="1" repeatto="0" sid="438528041512681" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\avatars seleccion\blanca.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="moreno" pingpong="0" repeatcount="1" repeatto="0" sid="520163174203852" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\avatars seleccion\morena.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="negro" pingpong="0" repeatcount="1" repeatto="0" sid="557500900555146" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\avatars seleccion\negra.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Texts">
+            <object-type name="txtMensaje" sid="302014227077744">
+                <plugin id="TextBox" />
+            </object-type>
+            <object-type name="txtNoCambiar" sid="281571610116782">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Controls" />
+        <object-folder name="System">
+            <object-type name="Touch" sid="948977961617129">
+                <plugin id="Touch" />
+            </object-type>
+            <object-type name="Function" sid="558381821082318">
+                <plugin id="Function" />
+            </object-type>
+            <object-type name="Browser" sid="334329033992119">
+                <plugin id="Browser" />
+            </object-type>
+            <object-type name="WebStorage" sid="836860356122927">
+                <plugin id="WebStorage" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Sensors" />
+        <object-folder name="trajesGancho">
+            <object-type name="ganchoHombreEntero" sid="582356287937269">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="348030524619014" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\1x\Asset 3.png">
+                            <collision-poly>
+                                <point x="0.0700483" y="0.263986" />
+                                <point x="0.5" y="0.0034965" />
+                                <point x="0.915459" y="0.263986" />
+                                <point x="0.995169" y="0.807692" />
+                                <point x="0.60628" y="1" />
+                                <point x="0.359903" y="1" />
+                                <point x="0" y="0.788462" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ganchoHombrePlaya" sid="354559139790424">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="185860544264318" speed="5">
+                        <frame duration="1" hotspotX="0.501502" hotspotY="0.500956" original-source="C:\Users\logan24\Desktop\1x\Asset 4.png">
+                            <collision-poly>
+                                <point x="0" y="0.328872" />
+                                <point x="0.498498" y="0.0152964" />
+                                <point x="1" y="0.330784" />
+                                <point x="0.84985" y="0.8413" />
+                                <point x="0.780781" y="1" />
+                                <point x="0.162162" y="0.998088" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ganchoHombreMochilero" sid="504096019831291">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="206841859298678" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500956" original-source="C:\Users\logan24\Desktop\1x\Asset 2.png">
+                            <collision-poly>
+                                <point x="0.0880952" y="0.290631" />
+                                <point x="0.5" y="0.00382409" />
+                                <point x="0.909524" y="0.294455" />
+                                <point x="1" y="0.76673" />
+                                <point x="0.645238" y="1" />
+                                <point x="0.338095" y="0.998088" />
+                                <point x="0.00714286" y="0.753346" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ganchoHombrePijama" sid="249834203836183">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="303462939496401" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\Ropero\Hombre\GANCHO Hombre pijama.png">
+                            <collision-poly>
+                                <point x="0" y="0.273316" />
+                                <point x="0.498498" y="0.0152964" />
+                                <point x="1" y="0.291101" />
+                                <point x="0.690781" y="1" />
+                                <point x="0.332162" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ganchoHombreBiblico" sid="703548444794071">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="698745729685165" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\Ropero\Hombre\GANCHO Hombre biblico.png">
+                            <collision-poly>
+                                <point x="0" y="0.273316" />
+                                <point x="0.498498" y="0.0152964" />
+                                <point x="1" y="0.291101" />
+                                <point x="0.690781" y="1" />
+                                <point x="0.332162" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ganchoHombreCasual" sid="140351686211491">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="772125233359474" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\Ropero\Hombre\GANCHO Hombre casual.png">
+                            <collision-poly>
+                                <point x="0" y="0.273316" />
+                                <point x="0.498498" y="0.0152964" />
+                                <point x="1" y="0.291101" />
+                                <point x="0.690781" y="1" />
+                                <point x="0.332162" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ganchoHombreScout" sid="299272553120104">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="750040005535268" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\Ropero\Hombre\GANCHO Hombre scout.png">
+                            <collision-poly>
+                                <point x="0" y="0.273316" />
+                                <point x="0.498498" y="0.0152964" />
+                                <point x="1" y="0.291101" />
+                                <point x="0.690781" y="1" />
+                                <point x="0.332162" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ganchoMujerPijama" sid="359729505265643">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="395736187516345" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503448" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\Ropero\Mujer\GANCHOmujerpijama.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ganchoMujerBiblico" sid="321809403557700">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="852625121106032" speed="5">
+                        <frame duration="1" hotspotX="0.500752" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\Ropero\Mujer\GANCHOmujerbiblica.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ganchoMujerSport" sid="694053476565736">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="934504013772831" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\Ropero\Mujer\GANCHOmujerdeportiva.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ganchoMujerGala" sid="334672150106964">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="682835930582783" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\Ropero\Mujer\GANCHOmujergala.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ganchoMujerPlaya" sid="380720314878799">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="764852087948562" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\Ropero\Mujer\GANCHOmujerplaya.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ganchoMujerCasual" sid="173075775648827">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="758863297441467" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\Ropero\Mujer\mujermoderna.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ganchoMujerScout" sid="679403928846083">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="186969889660144" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Ropero_1\MGanchoscoutRopero1.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ganchoMujerMochilera" sid="914045169321190">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="761347962471419" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Ropero_1\MganchomochileraRopero1.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="trajes-base">
+            <object-type name="trajeHombreEntero" sid="337915889090845">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="820288198244628" speed="5">
+                        <frame duration="1" hotspotX="0.528" hotspotY="0.187675" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\Ropero\Hombre\trajeEntero.png">
+                            <collision-poly>
+                                <point x="0.53168" y="0.00883219" />
+                                <point x="0.834711" y="0.00686948" />
+                                <point x="1" y="1" />
+                                <point x="0" y="0.925417" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="trajeHombrePlaya" sid="225591061218288">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="478431363361637" speed="5">
+                        <frame duration="1" hotspotX="0.529412" hotspotY="0.183381" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\Ropero\Hombre\Playa.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="trajeHombrePijama" sid="309618732473037">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="450751482518381" speed="5">
+                        <frame duration="1" hotspotX="0.527132" hotspotY="0.186224" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\Ropero\Hombre\Pijamahombre2.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="trajeHombreBiblico" sid="951331027427818">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="776181083176604" speed="5">
+                        <frame duration="1" hotspotX="0.52809" hotspotY="0.186969" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\Ropero\Hombre\Biblico.png">
+                            <collision-poly>
+                                <point x="0.53168" y="0.00883219" />
+                                <point x="0.834711" y="0.00686948" />
+                                <point x="1" y="1" />
+                                <point x="0" y="0.925417" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="trajeHombreCasual" sid="738661466537653">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="816349004354177" speed="5">
+                        <frame duration="1" hotspotX="0.526786" hotspotY="0.187332" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\Ropero\Hombre\Casual.png">
+                            <collision-poly>
+                                <point x="0.53168" y="0.00883219" />
+                                <point x="0.834711" y="0.00686948" />
+                                <point x="1" y="1" />
+                                <point x="0" y="0.925417" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="trajeMujer" sid="344491565421788">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="biblico" pingpong="0" repeatcount="1" repeatto="0" sid="217732733400913" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\Ropero\Mujer\Ropa biblica.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="pijama" pingpong="0" repeatcount="1" repeatto="0" sid="521087312250212" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501272" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\Ropero\Mujer\pijama.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="gala" pingpong="0" repeatcount="1" repeatto="0" sid="518867240561316" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\Ropero\Mujer\vestidogala.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="sport" pingpong="0" repeatcount="1" repeatto="0" sid="590332606693054" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\Ropero\Mujer\sport.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="playaNegra" pingpong="0" repeatcount="1" repeatto="0" sid="144816201183598" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\Ropero\Mujer\playanegra.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="playaBlanca" pingpong="0" repeatcount="1" repeatto="0" sid="667501167920718" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\Ropero\Mujer\playa blanca.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="casual" pingpong="0" repeatcount="1" repeatto="0" sid="755367782008336" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\Ropero\Mujer\casual.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="scout" pingpong="0" repeatcount="1" repeatto="0" sid="103016287602824" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Ropero_1\Asssets ropero_old\ROPERO MUJER\scoutMujer.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="mochilera" pingpong="0" repeatcount="1" repeatto="0" sid="547914088323972" speed="5">
+                        <frame duration="1" hotspotX="0.502994" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Ropero_1\Asssets ropero_old\ROPERO MUJER\mochilera.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="trajeHombreMochilero" sid="926444326294780">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="159349663416310" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Ropero_1\Asssets ropero_old\ROPERO HOMBRE\mochilero.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="trajeHombreScout" sid="892887110382352">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="509377510916533" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Ropero_1\Asssets ropero_old\ROPERO HOMBRE\scout.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Cabellos-Expresiones">
+            <object-type name="cabellos" sid="837030253382636">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="c1" pingpong="0" repeatcount="1" repeatto="0" sid="297824250605479" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Ropero_1\Asssets ropero_old\ROPERO HOMBRE\HOMBRE 18cabellos.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="c2" pingpong="0" repeatcount="1" repeatto="0" sid="658391370389760" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Ropero_1\Asssets ropero_old\ROPERO HOMBRE\HOMBRE 19cabellos.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="c3" pingpong="0" repeatcount="1" repeatto="0" sid="830967641707742" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Ropero_1\Asssets ropero_old\ROPERO HOMBRE\HOMBRE 21cabellos.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="c4" pingpong="0" repeatcount="1" repeatto="0" sid="762456676857490" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.505" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Ropero_1\Asssets ropero_old\ROPERO HOMBRE\HOMBRE 17cabellos.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="c5" pingpong="0" repeatcount="1" repeatto="0" sid="200996553951490" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Ropero_1\Asssets ropero_old\ROPERO HOMBRE\HOMBRE 16cabellos.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="c6" pingpong="0" repeatcount="1" repeatto="0" sid="266174210810180" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Ropero_1\Asssets ropero_old\ROPERO HOMBRE\HOMBRE 20cabellos.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="c7" pingpong="0" repeatcount="1" repeatto="0" sid="769388184724739" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Ropero_1\Asssets ropero_old\ROPERO HOMBRE\HOMBRE 22cabellos.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="m1" pingpong="0" repeatcount="1" repeatto="0" sid="823518500653774" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\avatars seleccion\femenino\cabello1.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="m2" pingpong="0" repeatcount="1" repeatto="0" sid="941950881687407" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Ropero_1\Asssets ropero_old\ROPERO MUJER\MUJER 24cabellos.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="m3" pingpong="0" repeatcount="1" repeatto="0" sid="975462349868150" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Ropero_1\Asssets ropero_old\ROPERO MUJER\MUJER 26cabellos.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="m4" pingpong="0" repeatcount="1" repeatto="0" sid="212708760918324" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Ropero_1\Asssets ropero_old\ROPERO MUJER\MUJER 23cabellos.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="m5" pingpong="0" repeatcount="1" repeatto="0" sid="423787118030582" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Ropero_1\Asssets ropero_old\ROPERO MUJER\MUJER 25cabellos.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="expresionesMasc" sid="510564034839099">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="triste" pingpong="0" repeatcount="1" repeatto="0" sid="604272091409827" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\avatars seleccion\Asset 31avatarbase.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="feliz" pingpong="0" repeatcount="1" repeatto="0" sid="929515445219532" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\avatars seleccion\Asset 33avatarbase.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="enojado" pingpong="0" repeatcount="1" repeatto="0" sid="994122301886582" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\avatars seleccion\Asset 32avatarbase.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="expresionesFem" sid="787018583553083">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="feliz" pingpong="0" repeatcount="1" repeatto="0" sid="279892656629134" speed="5">
+                        <frame duration="1" hotspotX="0.502415" hotspotY="0.503401" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\avatars seleccion\femenino\feliz.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="triste" pingpong="0" repeatcount="1" repeatto="0" sid="166939767875067" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\avatars seleccion\femenino\triste.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="sexy" pingpong="0" repeatcount="1" repeatto="0" sid="801639805524697" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\avatars seleccion\femenino\sexy.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+    </object-folder>
+    <families>
+        <family name="ganchoDragNDrop" plugin-id="Sprite" sid="520533466887575">
+            <members>
+                <member>ganchoHombreBiblico</member>
+                <member>ganchoHombreCasual</member>
+                <member>ganchoHombreEntero</member>
+                <member>ganchoHombreMochilero</member>
+                <member>ganchoHombrePijama</member>
+                <member>ganchoHombrePlaya</member>
+                <member>ganchoHombreScout</member>
+                <member>ganchoMujerBiblico</member>
+                <member>ganchoMujerCasual</member>
+                <member>ganchoMujerGala</member>
+                <member>ganchoMujerMochilera</member>
+                <member>ganchoMujerPijama</member>
+                <member>ganchoMujerPlaya</member>
+                <member>ganchoMujerScout</member>
+                <member>ganchoMujerSport</member>
+            </members>
+            <behaviors>
+                <behavior-type name="DragDrop" sid="133932914441866">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+        </family>
+    </families>
+    <layout-folder>
+        <layout>main.xml</layout>
+        <layout>Intro.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>eMain.xml</event-sheet>
+        <event-sheet>eIntro.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Function" uid="0" />
+        <global-instance type="Touch" uid="1">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Browser" uid="11" />
+        <global-instance type="WebStorage" uid="29" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

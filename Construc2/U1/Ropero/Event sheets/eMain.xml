@@ -3,9 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eMain</name>
     <events>
-        <variable constant="0" name="tipoAvatar" sid="794086621706205" static="0" type="number">0</variable>
-        <variable constant="0" name="expresion" sid="515570341785015" static="0" type="text">triste</variable>
-        <variable constant="0" name="sexo" sid="561508372494367" static="0" type="text">x</variable>
+        <variable constant="0" name="tipoAvatar" sid="794086621706205" static="0" type="number">1</variable>
+        <variable constant="0" name="sexo" sid="561508372494367" static="0" type="text">m</variable>
         <variable constant="0" name="aux" sid="264688356595490" static="0" type="text">nulo</variable>
         <event-group description="" sid="370034331693827" title="Setup">
             <sub-events>
@@ -25,7 +24,7 @@
                                 <condition id="-14" name="Compare variable" sid="870728674875839" type="System">
                                     <param id="0" name="Variable">sexo</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;h&quot;</param>
+                                    <param id="2" name="Value">&quot;m&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -478,10 +477,6 @@
                             <param id="0" name="Width">99</param>
                             <param id="1" name="Height">65</param>
                         </action>
-                        <action id="4" name="Set animation" sid="188487835365511" type="expresionesMasc">
-                            <param id="0" name="Animation">expresion</param>
-                            <param id="1" name="From">1</param>
-                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="588997750862193">
@@ -643,10 +638,6 @@
                         <action id="-7" name="Set size" sid="146335208274258" type="baseAvatarFem">
                             <param id="0" name="Width">140</param>
                             <param id="1" name="Height">540</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="147860081908620" type="expresionesFem">
-                            <param id="0" name="Animation">expresion</param>
-                            <param id="1" name="From">1</param>
                         </action>
                         <action id="-3" name="Set position" sid="757642985588253" type="expresionesFem">
                             <param id="0" name="X">334</param>
@@ -1082,15 +1073,11 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="993803718681475" type="System">
+                        <action disabled="1" id="-9" name="Set value" sid="993803718681475" type="System">
                             <param id="0" name="Variable">sexo</param>
                             <param id="1" name="Value">WebStorage.SessionValue(&quot;sexo&quot;)</param>
                         </action>
-                        <action id="-9" name="Set value" sid="142829536070866" type="System">
-                            <param id="0" name="Variable">expresion</param>
-                            <param id="1" name="Value">WebStorage.SessionValue(&quot;expresion&quot;)</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="208763682075643" type="System">
+                        <action disabled="1" id="-9" name="Set value" sid="208763682075643" type="System">
                             <param id="0" name="Variable">tipoAvatar</param>
                             <param id="1" name="Value">WebStorage.SessionValue(&quot;tipoAvatar&quot;)</param>
                         </action>
