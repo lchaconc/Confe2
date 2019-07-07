@@ -67,6 +67,10 @@
                                     <param id="0" name="Animation">&quot;m&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
+                                <action id="-12" name="Set group active" sid="736547434422716" type="System">
+                                    <param id="0" name="Group name">&quot;Arrastrar_gancho_Hombre&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="323155589292145">
@@ -114,13 +118,17 @@
                                     <param id="0" name="Animation">&quot;f&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
+                                <action id="-12" name="Set group active" sid="679864953736738" type="System">
+                                    <param id="0" name="Group name">&quot;Arrastrar_gancho_Mujer&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="421293411584205" title="arrastrar">
+        <event-group description="" inactive="1" sid="421293411584205" title="Arrastrar_gancho_Hombre">
             <sub-events>
                 <event-block sid="620077874021026">
                     <conditions>
@@ -215,30 +223,158 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="553623116566535">
+                        <event-block sid="885770580391388">
                             <conditions>
-                                <condition id="1" name="Is overlapping another object" sid="671074051936646" type="baseAvatarMasc">
+                                <condition id="1" name="Is overlapping another object" sid="696702357851354" type="baseAvatarMasc">
                                     <param id="0" name="Object">gancho4</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="495949454605163" type="Function">
+                                <action id="0" name="Call function" sid="553143571347298" type="Function">
                                     <param id="0" name="Name">&quot;AcomodarRopaOrigen&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
-                                <action id="4" name="Set animation" sid="604825108055271" type="trajeRopero">
+                                <action id="4" name="Set animation" sid="671675824136846" type="trajeRopero">
                                     <param id="0" name="Animation">&quot;m4&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="883853081600074" type="trajeRopero">
+                                <action id="-3" name="Set position" sid="188890690212702" type="trajeRopero">
                                     <param id="0" name="X">312.34</param>
                                     <param id="1" name="Y">504.41</param>
                                 </action>
-                                <action id="-7" name="Set size" sid="502448512915800" type="trajeRopero">
-                                    <param id="0" name="Width">99.253</param>
-                                    <param id="1" name="Height">396.27</param>
+                                <action id="-7" name="Set size" sid="243962737503618" type="trajeRopero">
+                                    <param id="0" name="Width">101.824</param>
+                                    <param id="1" name="Height">397.319</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="264621326741314" type="gancho4">
+                                <action id="-3" name="Set position" sid="592898217421568" type="gancho4">
+                                    <param id="0" name="X">-1500</param>
+                                    <param id="1" name="Y">-1500</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="619213030747677" title="Arrastrar_gancho_Mujer">
+            <sub-events>
+                <event-block sid="687413753965344">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="755873503380478" type="ganchoDragNDrop" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="104956300210167">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="440538313086168" type="baseAvatarFem">
+                                    <param id="0" name="Object">gancho1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="843086582641698" type="Function">
+                                    <param id="0" name="Name">&quot;AcomodarRopaOrigen&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="4" name="Set animation" sid="444707362905066" type="trajeRopero">
+                                    <param id="0" name="Animation">&quot;f1&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="405773237217430" type="trajeRopero">
+                                    <param id="0" name="X">343.292</param>
+                                    <param id="1" name="Y">489.094</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="400908165511658" type="trajeRopero">
+                                    <param id="0" name="Width">87.275</param>
+                                    <param id="1" name="Height">391.247</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="496264364754165" type="gancho1">
+                                    <param id="0" name="X">-1500</param>
+                                    <param id="1" name="Y">-1500</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="595968382903854">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="557833536455599" type="baseAvatarFem">
+                                    <param id="0" name="Object">gancho2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="736940926664121" type="Function">
+                                    <param id="0" name="Name">&quot;AcomodarRopaOrigen&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="4" name="Set animation" sid="936270294425621" type="trajeRopero">
+                                    <param id="0" name="Animation">&quot;f2&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="735637900306580" type="trajeRopero">
+                                    <param id="0" name="X">333.979</param>
+                                    <param id="1" name="Y">487.853</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="526577454484952" type="trajeRopero">
+                                    <param id="0" name="Width">64.239</param>
+                                    <param id="1" name="Height">389.317</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="842893322030396" type="gancho2">
+                                    <param id="0" name="X">-1500</param>
+                                    <param id="1" name="Y">-1500</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="462909518326520">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="850772941391460" type="baseAvatarFem">
+                                    <param id="0" name="Object">gancho3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="357518629939908" type="Function">
+                                    <param id="0" name="Name">&quot;AcomodarRopaOrigen&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="4" name="Set animation" sid="893053311654813" type="trajeRopero">
+                                    <param id="0" name="Animation">&quot;f3&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="885845524508833" type="trajeRopero">
+                                    <param id="0" name="X">334.979</param>
+                                    <param id="1" name="Y">488.853</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="120618249002083" type="trajeRopero">
+                                    <param id="0" name="Width">67.159</param>
+                                    <param id="1" name="Height">393.177</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="277379915463179" type="gancho3">
+                                    <param id="0" name="X">-1500</param>
+                                    <param id="1" name="Y">-1500</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="172950815624529">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="103839129294114" type="baseAvatarFem">
+                                    <param id="0" name="Object">gancho4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="262460324887760" type="Function">
+                                    <param id="0" name="Name">&quot;AcomodarRopaOrigen&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="4" name="Set animation" sid="325261962782125" type="trajeRopero">
+                                    <param id="0" name="Animation">&quot;f4&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="830439046784374" type="trajeRopero">
+                                    <param id="0" name="X">333.979</param>
+                                    <param id="1" name="Y">490.301</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="248654814993875" type="trajeRopero">
+                                    <param id="0" name="Width">64.239</param>
+                                    <param id="1" name="Height">392.904</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="451267266219663" type="gancho4">
                                     <param id="0" name="X">-1500</param>
                                     <param id="1" name="Y">-1500</param>
                                 </action>
