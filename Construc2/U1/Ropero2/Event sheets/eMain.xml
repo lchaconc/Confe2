@@ -5,8 +5,6 @@
     <events>
         <variable constant="0" name="tipoTraje" sid="563079436958226" static="0" type="text"></variable>
         <variable constant="0" name="tipoAvatar" sid="794086621706205" static="0" type="number">2</variable>
-        <variable constant="0" name="sexo" sid="561508372494367" static="0" type="text">m</variable>
-        <variable constant="0" name="aux" sid="264688356595490" static="0" type="text">nulo</variable>
         <event-group description="" sid="370034331693827" title="Setup">
             <sub-events>
                 <event-block sid="250151715630644">
@@ -29,7 +27,7 @@
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                                 <action id="0" name="Call function" sid="996954836854887" type="Function">
-                                    <param id="0" name="Name">&quot;caracteristicasHombre&quot;</param>
+                                    <param id="0" name="Name">&quot;caracteristicasHombre2&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
@@ -44,7 +42,7 @@
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                                 <action id="0" name="Call function" sid="659127049756387" type="Function">
-                                    <param id="0" name="Name">&quot;caracteristicasMujer&quot;</param>
+                                    <param id="0" name="Name">&quot;caracteristicasMujer2&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
@@ -285,15 +283,355 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="-9" name="Set value" sid="993803718681475" type="System">
-                            <param id="0" name="Variable">sexo</param>
-                            <param id="1" name="Value">WebStorage.SessionValue(&quot;sexo&quot;)</param>
-                        </action>
                         <action disabled="1" id="-9" name="Set value" sid="208763682075643" type="System">
                             <param id="0" name="Variable">tipoAvatar</param>
                             <param id="1" name="Value">WebStorage.SessionValue(&quot;tipoAvatar&quot;)</param>
                         </action>
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Personalizacion de caracteristicas como color de piel, cabello y expresiones tanto de hombre como de mujer" sid="982834042856974" title="caracteristicas_avatar2">
+            <sub-events>
+                <event-block sid="446130102421642">
+                    <conditions>
+                        <condition id="0" name="On function" sid="755098878531210" type="Function">
+                            <param id="0" name="Name">&quot;caracteristicasHombre2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="342877790485029" type="baseAvatarFem">
+                            <param id="0" name="X">-140</param>
+                            <param id="1" name="Y">522</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="988323325347461" type="baseAvatarMasc">
+                            <param id="0" name="X">317</param>
+                            <param id="1" name="Y">424</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="689742882373851" type="baseAvatarMasc">
+                            <param id="0" name="Width">155</param>
+                            <param id="1" name="Height">540</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="711422819660081" type="expresionesFem">
+                            <param id="0" name="X">-600</param>
+                            <param id="1" name="Y">-600</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="409455647772809" type="expresionesMasc">
+                            <param id="0" name="X">296</param>
+                            <param id="1" name="Y">240</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="737547060114024" type="expresionesMasc">
+                            <param id="0" name="Width">99</param>
+                            <param id="1" name="Height">65</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="200344170663948">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="492053394026875" type="System">
+                                    <param id="0" name="Variable">tipoAvatar</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="932169354909367" type="cabellos">
+                                    <param id="0" name="Animation">&quot;c1&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="471114067153364" type="cabellos">
+                                    <param id="0" name="X">314.877</param>
+                                    <param id="1" name="Y">183.364</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="754468871161434" type="cabellos">
+                                    <param id="0" name="Width">190.36</param>
+                                    <param id="1" name="Height">127.199</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="738705601312530" type="baseAvatarMasc">
+                                    <param id="0" name="Animation">&quot;moreno&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="268439783573124">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="563279261879839" type="System">
+                                    <param id="0" name="Variable">tipoAvatar</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="814337667527535" type="cabellos">
+                                    <param id="0" name="Animation">&quot;c2&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="817273566263240" type="cabellos">
+                                    <param id="0" name="X">306.636</param>
+                                    <param id="1" name="Y">180.342</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="373083781719074" type="cabellos">
+                                    <param id="0" name="Width">176.376</param>
+                                    <param id="1" name="Height">135.681</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="876745624671693" type="baseAvatarMasc">
+                                    <param id="0" name="Animation">&quot;blanco&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="913013106214955">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="598590708513689" type="System">
+                                    <param id="0" name="Variable">tipoAvatar</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="671027391480088" type="cabellos">
+                                    <param id="0" name="Animation">&quot;c3&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="960838415887589" type="cabellos">
+                                    <param id="0" name="X">321.055</param>
+                                    <param id="1" name="Y">161.894</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="332502802502654" type="cabellos">
+                                    <param id="0" name="Width">208.608</param>
+                                    <param id="1" name="Height">150.525</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="867835189388336" type="baseAvatarMasc">
+                                    <param id="0" name="Animation">&quot;negro&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="395061002239363">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="360134193354494" type="System">
+                                    <param id="0" name="Variable">tipoAvatar</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="687547459365480" type="cabellos">
+                                    <param id="0" name="Animation">&quot;c4&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="955005240138557" type="cabellos">
+                                    <param id="0" name="X">300.034</param>
+                                    <param id="1" name="Y">205.628</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="716984078686456" type="cabellos">
+                                    <param id="0" name="Width">222.179</param>
+                                    <param id="1" name="Height">154.766</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="705657838329042" type="baseAvatarMasc">
+                                    <param id="0" name="Animation">&quot;blanco&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="774098213716237">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="733576617142407" type="System">
+                                    <param id="0" name="Variable">tipoAvatar</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="414403338228841" type="cabellos">
+                                    <param id="0" name="Animation">&quot;c5&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="950546554284352" type="cabellos">
+                                    <param id="0" name="X">330.144</param>
+                                    <param id="1" name="Y">177.638</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="909059487991835" type="cabellos">
+                                    <param id="0" name="Width">182.84</param>
+                                    <param id="1" name="Height">156.313</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="170939698467505" type="baseAvatarMasc">
+                                    <param id="0" name="Animation">&quot;moreno&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="548937020796698">
+                    <conditions>
+                        <condition id="0" name="On function" sid="451440575190498" type="Function">
+                            <param id="0" name="Name">&quot;caracteristicasMujer2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="373817166909155" type="expresionesMasc">
+                            <param id="0" name="X">-800</param>
+                            <param id="1" name="Y">-800</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="627468571601248" type="baseAvatarMasc">
+                            <param id="0" name="X">-1500</param>
+                            <param id="1" name="Y">-1500</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="272295301943208" type="baseAvatarFem">
+                            <param id="0" name="X">338</param>
+                            <param id="1" name="Y">408</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="686018327407897" type="baseAvatarFem">
+                            <param id="0" name="Width">140</param>
+                            <param id="1" name="Height">540</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="409402969346955" type="expresionesFem">
+                            <param id="0" name="X">334</param>
+                            <param id="1" name="Y">230</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="348156913125821" type="expresionesFem">
+                            <param id="0" name="Width">65</param>
+                            <param id="1" name="Height">56</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="404793579488222">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="512118417225094" type="System">
+                                    <param id="0" name="Variable">tipoAvatar</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="480251657859481" type="cabellos">
+                                    <param id="0" name="Animation">&quot;m1&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="239843303342276" type="cabellos">
+                                    <param id="0" name="X">356.024</param>
+                                    <param id="1" name="Y">211.241</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="157391783982676" type="cabellos">
+                                    <param id="0" name="Width">127.685</param>
+                                    <param id="1" name="Height">144.961</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="855568949653343" type="baseAvatarFem">
+                                    <param id="0" name="Animation">&quot;blanco&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="163005097267812">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="575283892955280" type="System">
+                                    <param id="0" name="Variable">tipoAvatar</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="381324438012989" type="cabellos">
+                                    <param id="0" name="Animation">&quot;m2&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="960939418911821" type="cabellos">
+                                    <param id="0" name="X">374.805</param>
+                                    <param id="1" name="Y">160.592</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="135980734972400" type="cabellos">
+                                    <param id="0" name="Width">187.678 </param>
+                                    <param id="1" name="Height">170.016</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="828848955607922" type="baseAvatarFem">
+                                    <param id="0" name="Animation">&quot;negro&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="821405400317829">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="518064211977385" type="System">
+                                    <param id="0" name="Variable">tipoAvatar</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="253756421117329" type="cabellos">
+                                    <param id="0" name="Animation">&quot;m3&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="598187202696588" type="cabellos">
+                                    <param id="0" name="X">350.251</param>
+                                    <param id="1" name="Y">241.029</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="157655022677561" type="cabellos">
+                                    <param id="0" name="Width">116.391</param>
+                                    <param id="1" name="Height">207.905</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="371607538831119" type="baseAvatarFem">
+                                    <param id="0" name="Animation">&quot;blanco&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="324487555368908">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="893572401924831" type="System">
+                                    <param id="0" name="Variable">tipoAvatar</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="559994866810334" type="cabellos">
+                                    <param id="0" name="Animation">&quot;m4&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="339981543785695" type="cabellos">
+                                    <param id="0" name="X">348.362</param>
+                                    <param id="1" name="Y">262.502</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="561268977102390" type="cabellos">
+                                    <param id="0" name="Width">107.75</param>
+                                    <param id="1" name="Height">255.276</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="763099771724744" type="baseAvatarFem">
+                                    <param id="0" name="Animation">&quot;blanco&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="235356730716950">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="562907808928551" type="System">
+                                    <param id="0" name="Variable">tipoAvatar</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="436721687589674" type="cabellos">
+                                    <param id="0" name="Animation">&quot;m5&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="855407521703857" type="cabellos">
+                                    <param id="0" name="X">372.738 </param>
+                                    <param id="1" name="Y">163.758</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="160788473714829" type="cabellos">
+                                    <param id="0" name="Width">209.031</param>
+                                    <param id="1" name="Height">153.459</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="800873598946504" type="baseAvatarFem">
+                                    <param id="0" name="Animation">&quot;blanco&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>

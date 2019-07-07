@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eIntro</name>
     <events>
+        <variable constant="0" name="sexo" sid="962488319439102" static="0" type="text">m</variable>
         <event-group description="" sid="263255998581646" title="Eventos_Botones">
             <sub-events>
                 <event-block sid="729069601463023">
@@ -28,15 +29,15 @@
                     <actions>
                         <action id="-9" name="Set value" sid="700042987201512" type="System">
                             <param id="0" name="Variable">tipoAvatar</param>
-                            <param id="1" name="Value">1</param>
+                            <param id="1" name="Value">2</param>
                         </action>
                         <action id="-9" name="Set value" sid="158928322865735" type="System">
                             <param id="0" name="Variable">sexo</param>
-                            <param id="1" name="Value">&quot;m&quot;</param>
+                            <param id="1" name="Value">&quot;f&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="341057992003159" type="System">
                             <param id="0" name="Variable">tipoTraje</param>
-                            <param id="1" name="Value">&quot;pijama&quot;</param>
+                            <param id="1" name="Value">&quot;playaNegra&quot;</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -50,7 +51,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="748915856105716" type="Function">
-                                    <param id="0" name="Name">&quot;caracteristicasHombre&quot;</param>
+                                    <param id="0" name="Name">&quot;caracteristicasHombre1&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                                 <action id="-12" name="Set group active" sid="693561501476007" type="System">
@@ -72,7 +73,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="464883810268932" type="Function">
-                                    <param id="0" name="Name">&quot;caracteristicasMujer&quot;</param>
+                                    <param id="0" name="Name">&quot;caracteristicasMujer1&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                                 <action id="-12" name="Set group active" sid="697999350252015" type="System">
@@ -441,7 +442,7 @@
                 <event-block sid="189499531840693">
                     <conditions>
                         <condition id="0" name="On function" sid="494559682821679" type="Function">
-                            <param id="0" name="Name">&quot;caracteristicasHombre&quot;</param>
+                            <param id="0" name="Name">&quot;caracteristicasHombre1&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -611,7 +612,7 @@
                 <event-block sid="620916130511505">
                     <conditions>
                         <condition id="0" name="On function" sid="412102621483551" type="Function">
-                            <param id="0" name="Name">&quot;caracteristicasMujer&quot;</param>
+                            <param id="0" name="Name">&quot;caracteristicasMujer1&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
