@@ -47,6 +47,28 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="bgIntro" uid="34">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>639</x>
+                        <y>358</y>
+                        <z>0</z>
+                        <width>1284</width>
+                        <height>722</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="baseAvatarFem" uid="40">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -91,111 +113,9 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="bgIntro" uid="34">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1088</x>
-                        <y>180</y>
-                        <z>0</z>
-                        <width>200</width>
-                        <height>200</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="txtMensaje" uid="35">
-                    <properties>
-                        <text>Todavìa no estás preparado para vestir de apostol...</text>
-                        <placeholder></placeholder>
-                        <tooltip></tooltip>
-                        <initial-visibility>Visible</initial-visibility>
-                        <enabled>Yes</enabled>
-                        <read-only>No</read-only>
-                        <spell-check>No</spell-check>
-                        <type>Text</type>
-                        <auto-font-size>Yes</auto-font-size>
-                        <id-optional></id-optional>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>587</x>
-                        <y>147</y>
-                        <z>0</z>
-                        <width>351</width>
-                        <height>74</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                    </world>
-                </instance>
-                <instance type="txtNoCambiar" uid="36">
-                    <properties>
-                        <text>Asì estoy estoy bien. Deseo quedarme con mi traje que elegí</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-32,400,0</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Right</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>586</x>
-                        <y>389</y>
-                        <z>0</z>
-                        <width>525</width>
-                        <height>103</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="txtNoCambiar" uid="37">
-                    <properties>
-                        <text>Cambiar el traje que elegí por uno que se me presente a continuación</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-32,400,0</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Right</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>618</x>
-                        <y>560</y>
-                        <z>0</z>
-                        <width>525</width>
-                        <height>108</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="btnNo" uid="38">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -203,11 +123,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1173</x>
-                        <y>432</y>
+                        <x>973</x>
+                        <y>490</y>
                         <z>0</z>
-                        <width>50.893264771</width>
-                        <height>53.563076019</height>
+                        <width>229</width>
+                        <height>70</height>
                         <depth>0</depth>
                         <hotspotX>0.501639366</hotspotX>
                         <hotspotY>0.501557648</hotspotY>
@@ -217,7 +137,7 @@
                 </instance>
                 <instance type="btnSi" uid="39">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -225,11 +145,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1186</x>
-                        <y>609</y>
+                        <x>688</x>
+                        <y>489</y>
                         <z>0</z>
-                        <width>46.928070068</width>
-                        <height>49.075107574</height>
+                        <width>283</width>
+                        <height>67</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -475,6 +395,28 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="txtMensajes" uid="7">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>816</x>
+                        <y>319</y>
+                        <z>0</z>
+                        <width>529</width>
+                        <height>215</height>
+                        <depth>0</depth>
+                        <hotspotX>0.500945151</hotspotX>
+                        <hotspotY>0.502325594</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
