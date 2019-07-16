@@ -541,6 +541,9 @@
                             <param id="0" name="Name">&quot;papiroFinDia2&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
+                        <action id="-15" name="Set visible" sid="308929416843094" type="inv_heno">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <comment>Día 3: Construir el granero - Arena</comment>
@@ -832,10 +835,6 @@
                                 <action id="-9" name="Destroy" sid="745881319999521" type="ladrilloGranero" />
                                 <action id="-16" name="Wait" sid="986423614707854" type="System">
                                     <param id="0" name="Seconds">5</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="962922483261984" type="sprControl">
-                                    <param id="0" name="X">538</param>
-                                    <param id="1" name="Y">306</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="400430145992674" type="System">
                                     <param id="0" name="Variable">status</param>
@@ -1303,14 +1302,6 @@
                                 <condition id="-22" name="Else" sid="835502646127667" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="521382328889966" type="bgPergamino">
-                                    <param id="0" name="X">710</param>
-                                    <param id="1" name="Y">378</param>
-                                </action>
-                                <action id="-7" name="Set size" sid="321754390667001" type="bgPergamino">
-                                    <param id="0" name="Width">497</param>
-                                    <param id="1" name="Height">143</param>
-                                </action>
                                 <action id="-3" name="Set position" sid="872467194765069" type="txtNecesitas">
                                     <param id="0" name="X">717</param>
                                     <param id="1" name="Y">376</param>
@@ -1356,6 +1347,7 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>Dia 2</comment>
                 <event-block any="1" sid="752926648305320">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="609339428105414" type="sprControl">
@@ -1419,14 +1411,6 @@
                                 <condition id="-22" name="Else" sid="123586670515874" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="960579826021505" type="bgPergamino">
-                                    <param id="0" name="X">710</param>
-                                    <param id="1" name="Y">378</param>
-                                </action>
-                                <action id="-7" name="Set size" sid="866296931564193" type="bgPergamino">
-                                    <param id="0" name="Width">497</param>
-                                    <param id="1" name="Height">143</param>
-                                </action>
                                 <action id="-3" name="Set position" sid="623800659387612" type="txtNecesitas">
                                     <param id="0" name="X">717</param>
                                     <param id="1" name="Y">376</param>
@@ -1469,14 +1453,6 @@
                                 <condition id="-22" name="Else" sid="611919456785524" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="902486448017285" type="bgPergamino">
-                                    <param id="0" name="X">710</param>
-                                    <param id="1" name="Y">378</param>
-                                </action>
-                                <action id="-7" name="Set size" sid="436292358341838" type="bgPergamino">
-                                    <param id="0" name="Width">497</param>
-                                    <param id="1" name="Height">143</param>
-                                </action>
                                 <action id="-3" name="Set position" sid="754868353791378" type="txtNecesitas">
                                     <param id="0" name="X">717</param>
                                     <param id="1" name="Y">376</param>
@@ -1489,7 +1465,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block any="1" sid="835550516773034">
+                <event-block sid="835550516773034">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="149982312278977" type="sprControl">
                             <param id="0" name="Object">cow2</param>
@@ -1497,18 +1473,18 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="431933276992149">
+                        <event-block any="1" sid="730036940470369">
                             <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="954554829711789" type="inv_balde">
+                                <condition id="-8" name="Is boolean instance variable set" sid="128129481521898" type="inv_heno">
                                     <param id="0" name="Instance variable">activo</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-13" name="Set boolean" sid="473526385277133" type="cow2">
+                                <action id="-13" name="Set boolean" sid="484225064112230" type="cow2">
                                     <param id="0" name="Instance variable">colision</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="0" name="Call function" sid="668182519135533" type="Function">
+                                <action id="0" name="Call function" sid="714657409738496" type="Function">
                                     <param id="0" name="Name">&quot;abrirModalInv&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
@@ -1517,21 +1493,65 @@
                         <event-block sid="719847448182772">
                             <conditions>
                                 <condition id="-22" name="Else" sid="578283153097058" type="System" />
+                                <condition id="-14" name="Compare variable" sid="827922565181708" type="System">
+                                    <param id="0" name="Variable">progreso</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="850367495854020" type="bgPergamino">
-                                    <param id="0" name="X">710</param>
-                                    <param id="1" name="Y">378</param>
-                                </action>
-                                <action id="-7" name="Set size" sid="967805780414419" type="bgPergamino">
-                                    <param id="0" name="Width">497</param>
-                                    <param id="1" name="Height">143</param>
-                                </action>
                                 <action id="-3" name="Set position" sid="371955222320743" type="txtNecesitas">
                                     <param id="0" name="X">717</param>
                                     <param id="1" name="Y">376</param>
                                 </action>
                                 <action id="-4" name="Set layer visible" sid="843295247833745" type="System">
+                                    <param id="0" name="Layer">&quot;shadow&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="426568949684967">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="563694151636760" type="sprControl">
+                            <param id="0" name="Object">cow2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="693738932652822">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="696611223118341" type="inv_balde">
+                                    <param id="0" name="Instance variable">activo</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="714526670353468" type="cow2">
+                                    <param id="0" name="Instance variable">colision</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="310834734490586" type="Function">
+                                    <param id="0" name="Name">&quot;abrirModalInv&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="958307585588313">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="885327071814538" type="System" />
+                                <condition id="-14" name="Compare variable" sid="414690682120311" type="System">
+                                    <param id="0" name="Variable">progreso</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="910641011676695" type="txtNecesitas">
+                                    <param id="0" name="X">717</param>
+                                    <param id="1" name="Y">376</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="521170688893169" type="System">
                                     <param id="0" name="Layer">&quot;shadow&quot;</param>
                                     <param id="1" name="Visibility">1</param>
                                 </action>
@@ -1569,14 +1589,6 @@
                                 <condition id="-22" name="Else" sid="652987379357964" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="739390775216509" type="bgPergamino">
-                                    <param id="0" name="X">710</param>
-                                    <param id="1" name="Y">378</param>
-                                </action>
-                                <action id="-7" name="Set size" sid="434167731942495" type="bgPergamino">
-                                    <param id="0" name="Width">497</param>
-                                    <param id="1" name="Height">143</param>
-                                </action>
                                 <action id="-3" name="Set position" sid="231713689148409" type="txtNecesitas">
                                     <param id="0" name="X">717</param>
                                     <param id="1" name="Y">376</param>
@@ -1867,14 +1879,6 @@
                                 <condition id="-22" name="Else" sid="516673963939113" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="326283866172191" type="bgPergamino">
-                                    <param id="0" name="X">710</param>
-                                    <param id="1" name="Y">378</param>
-                                </action>
-                                <action id="-7" name="Set size" sid="237585853717623" type="bgPergamino">
-                                    <param id="0" name="Width">497</param>
-                                    <param id="1" name="Height">143</param>
-                                </action>
                                 <action id="-3" name="Set position" sid="545850177275186" type="txtNecesitas">
                                     <param id="0" name="X">717</param>
                                     <param id="1" name="Y">376</param>
@@ -1920,14 +1924,6 @@
                                 <condition id="-22" name="Else" sid="728094389995439" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="539938407205687" type="bgPergamino">
-                                    <param id="0" name="X">710</param>
-                                    <param id="1" name="Y">378</param>
-                                </action>
-                                <action id="-7" name="Set size" sid="971079071027907" type="bgPergamino">
-                                    <param id="0" name="Width">497</param>
-                                    <param id="1" name="Height">143</param>
-                                </action>
                                 <action id="-3" name="Set position" sid="606674347295704" type="txtNecesitas">
                                     <param id="0" name="X">717</param>
                                     <param id="1" name="Y">376</param>
@@ -1948,18 +1944,18 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="810004118510677">
+                        <event-block sid="665490751835779">
                             <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="691563894900306" type="inv_canasta">
+                                <condition id="-8" name="Is boolean instance variable set" sid="317023295040834" type="inv_regadera">
                                     <param id="0" name="Instance variable">activo</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="615211424115472" type="Function">
+                                <action id="0" name="Call function" sid="596502315895324" type="Function">
                                     <param id="0" name="Name">&quot;abrirModalInv&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
-                                <action id="-13" name="Set boolean" sid="459401952971582" type="sensorHuerta">
+                                <action id="-13" name="Set boolean" sid="406074263640642" type="sensorHuerta">
                                     <param id="0" name="Instance variable">colision</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
@@ -1968,21 +1964,112 @@
                         <event-block sid="724997516660860">
                             <conditions>
                                 <condition id="-22" name="Else" sid="527182205610735" type="System" />
+                                <condition id="-14" name="Compare variable" sid="290333452395907" type="System">
+                                    <param id="0" name="Variable">progreso</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="759102821440527" type="bgPergamino">
-                                    <param id="0" name="X">710</param>
-                                    <param id="1" name="Y">378</param>
-                                </action>
-                                <action id="-7" name="Set size" sid="302170865717056" type="bgPergamino">
-                                    <param id="0" name="Width">497</param>
-                                    <param id="1" name="Height">143</param>
-                                </action>
                                 <action id="-3" name="Set position" sid="528130251117566" type="txtNecesitas">
                                     <param id="0" name="X">717</param>
                                     <param id="1" name="Y">376</param>
                                 </action>
                                 <action id="-4" name="Set layer visible" sid="834124572554669" type="System">
+                                    <param id="0" name="Layer">&quot;shadow&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="252485335700594">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="922329536694974" type="sprControl">
+                            <param id="0" name="Object">sensorHuerta</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="166812908430419">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="189952789313766" type="inv_regadera">
+                                    <param id="0" name="Instance variable">activo2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="278942770097687" type="Function">
+                                    <param id="0" name="Name">&quot;abrirModalInv&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="514658208859850" type="sensorHuerta">
+                                    <param id="0" name="Instance variable">colision</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="982590677694491">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="127506104920592" type="System" />
+                                <condition id="-14" name="Compare variable" sid="423121346461647" type="System">
+                                    <param id="0" name="Variable">progreso</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="434534256324694" type="txtNecesitas">
+                                    <param id="0" name="X">717</param>
+                                    <param id="1" name="Y">376</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="881495427373957" type="System">
+                                    <param id="0" name="Layer">&quot;shadow&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="470738948496384">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="325447845891288" type="sprControl">
+                            <param id="0" name="Object">sensorHuerta</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="705606626133295">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="164375104667068" type="inv_canasta">
+                                    <param id="0" name="Instance variable">activo</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="261743565847683" type="Function">
+                                    <param id="0" name="Name">&quot;abrirModalInv&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="614684564976041" type="sensorHuerta">
+                                    <param id="0" name="Instance variable">colision</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="863669443710864">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="828465590043455" type="System" />
+                                <condition id="-14" name="Compare variable" sid="862741981156949" type="System">
+                                    <param id="0" name="Variable">progreso</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="631167216478517" type="txtNecesitas">
+                                    <param id="0" name="X">717</param>
+                                    <param id="1" name="Y">376</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="937819990705580" type="System">
                                     <param id="0" name="Layer">&quot;shadow&quot;</param>
                                     <param id="1" name="Visibility">1</param>
                                 </action>
@@ -2423,17 +2510,13 @@
                 <event-block sid="399307939320405">
                     <conditions>
                         <condition id="3" name="On touched object" sid="869690498734043" type="Touch">
-                            <param id="0" name="Object">bgPergamino</param>
+                            <param id="0" name="Object">txtNecesitas</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-4" name="Set layer visible" sid="766169862167389" type="System">
                             <param id="0" name="Layer">&quot;shadow&quot;</param>
                             <param id="1" name="Visibility">0</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="749911440801260" type="bgPergamino">
-                            <param id="0" name="X">-200</param>
-                            <param id="1" name="Y">-200</param>
                         </action>
                         <action id="-3" name="Set position" sid="892860561343905" type="txtNecesitas">
                             <param id="0" name="X">-200</param>
@@ -3059,7 +3142,7 @@
                     <actions>
                         <action id="-9" name="Set value" sid="136942028912433" type="System">
                             <param id="0" name="Variable">progreso</param>
-                            <param id="1" name="Value">1</param>
+                            <param id="1" name="Value">4</param>
                         </action>
                         <action id="-9" name="Set value" sid="296430774468666" type="System">
                             <param id="0" name="Variable">idUsuario</param>
@@ -3698,6 +3781,14 @@
                         <action id="-3" name="Set position" sid="756161321566322" type="arena">
                             <param id="0" name="X">1867</param>
                             <param id="1" name="Y">670</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="925361624346189" type="oveja2">
+                            <param id="0" name="X">239</param>
+                            <param id="1" name="Y">372</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="430327313772187" type="ladrilloGranero">
+                            <param id="0" name="X">2509.563</param>
+                            <param id="1" name="Y">254.045</param>
                         </action>
                     </actions>
                 </event-block>
@@ -4760,5 +4851,6 @@
                 </event-group>
             </sub-events>
         </event-group>
+        <comment></comment>
     </events>
 </c2eventsheet>
