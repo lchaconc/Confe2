@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Usuario</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+            body {
+                background-color: black;
+                color:brown;                
+            }
+          
+    
+    </style>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#btnIngresar").click(function (e) { 
+                e.preventDefault();                
+                sessionStorage.setItem("id_usuario", $("#selUsusario").val() );
+                sessionStorage.setItem("sexo", retornarSexo ($("#selUsusario").val()) );
+                window.location.assign("./preload.html");
+            });
+            
+        });
+
+        function retornarSexo(usuario) {
+            let sexo;
+            switch (usuario) {
+                case "felipe@correo.de":
+                    sexo="m";
+                break;
+                case "jimena@correo.de":
+                    sexo="f";
+                break;
+                
+                case "ana@correo.de":
+                    sexo="f";
+                break;            
+                default:
+                    sexo="0";
+                break;
+            }
+            return sexo;
+        }
+    
+    
+    </script>
+    
+</head>
+<body>
+
+<div class="container mt-5">
+
+    <div class="row">
+        <div class="col-4  offset-4" >
+            <img  class="img-fluid"  src="./assets/img/logo.png" alt="logo" >
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-4 offset-4">
+                <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text" for="selUsusario">Ususario</label>
+                        </div>
+                        <select class="custom-select" id="selUsusario">
+                          <option selected disabled >Seleccione...</option>
+                          <option value="felipe@correo.de">felipe@correo.de</option>
+                          <option value="jimena@correo.de">jimena@correo.de </option>
+                          <option value="ana@correo.de">ana@correo.de</option>
+                        </select>
+                      </div>
+                      
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 offset-4 text-center">
+                <button type="button" class="btn btn-outline-info" id="btnIngresar" >Ingresar</button>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+    
+</body>
+</html>
