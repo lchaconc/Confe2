@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>ePreload</name>
     <events>
+        <variable comment="boolenao" constant="0" name="activo_j01granja" sid="215966133924489" static="0" type="text">nulo</variable>
         <variable constant="0" name="isFirstTime" sid="151443005306942" static="0" type="number">1</variable>
         <event-block sid="258257201921075">
             <conditions>
@@ -14,5 +15,22 @@
                 </action>
             </actions>
         </event-block>
+        <event-group description="" sid="388095472028400" title="Cargar_Estados">
+            <sub-events>
+                <event-block sid="558828747391368">
+                    <conditions>
+                        <condition id="0" name="On function" sid="920195285301625" type="Function">
+                            <param id="0" name="Name">&quot;estadoJuegos&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="140969452704596" type="System">
+                            <param id="0" name="Variable">activo_j01granja</param>
+                            <param id="1" name="Value">WebStorage.SessionValue(&quot;activo_j01granja&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

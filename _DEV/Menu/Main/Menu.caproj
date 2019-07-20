@@ -12,9 +12,9 @@
     <used-plugins>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
-        <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
     </used-plugins>
     <used-behaviors />
     <used-effects />
@@ -262,8 +262,8 @@
             <object-type name="Browser" sid="310670933015733">
                 <plugin id="Browser" />
             </object-type>
-            <object-type name="LocalStorage" sid="298499100656917">
-                <plugin id="LocalStorage" />
+            <object-type name="WebStorage" sid="467643631603563">
+                <plugin id="WebStorage" />
             </object-type>
         </object-folder>
         <object-folder name="Sensors" />
@@ -311,7 +311,7 @@
             </properties>
         </global-instance>
         <global-instance type="Browser" uid="21" />
-        <global-instance type="LocalStorage" uid="37" />
+        <global-instance type="WebStorage" uid="37" />
     </global-instances>
     <sounds-folder />
     <music-folder />
