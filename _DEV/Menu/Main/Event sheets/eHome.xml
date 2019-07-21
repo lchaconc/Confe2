@@ -3,16 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eHome</name>
     <events>
-        <event-group description="" sid="370034331693827" title="Setup">
-            <sub-events>
-                <event-block sid="250151715630644">
-                    <conditions>
-                        <condition id="-2" name="On start of layout" sid="113989134144720" type="System" />
-                    </conditions>
-                    <actions />
-                </event-block>
-            </sub-events>
-        </event-group>
         <event-group description="" sid="545420417498187" title="Botones_Unidades">
             <sub-events>
                 <event-block sid="334735540154439">
@@ -28,43 +18,35 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="545350866579797">
+                <event-block sid="781586505696310">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="339167844658024" type="Touch">
+                        <condition id="3" name="On touched object" sid="969749267439486" type="Touch">
                             <param id="0" name="Object">btnU1</param>
                         </condition>
                     </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="783893233826258">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="117416160131707" type="System">
-                                    <param id="0" name="Variable">isFirstTime</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="658379071815759" type="System">
-                                    <param id="0" name="Variable">isFirstTime</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="-2" name="Go to layout" sid="846193684338638" type="System">
-                                    <param id="0" name="Layout">Objetos</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="368146997110881">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="294942957623954" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-2" name="Go to layout" sid="269669215344388" type="System">
-                                    <param id="0" name="Layout">SubMenu</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="352616568014331" type="System">
+                            <param id="0" name="Layout">SubMenu</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="228136816677519" title="Activar_Unidades">
+            <sub-events>
+                <event-block sid="134344636701217">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="297129430898503" type="System">
+                            <param id="0" name="Variable">activo_c01ropero1</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;true&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set blend mode" sid="236114403822606" type="btnU1">
+                            <param id="0" name="Blend mode">0</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

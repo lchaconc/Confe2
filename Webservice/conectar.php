@@ -2,14 +2,16 @@
 function conectarDB(){
 
         $servidor = "localhost";
-        $usuario = "user_confe_games";
+        $usuario = "u211168474_confe";
+		//u211168474_confe
         $password = "Confe123*";
-        $bd = "confe_game";
+        $bd = "u211168474_confe";
+		//u211168474_confe
 
     $conexion = mysqli_connect($servidor, $usuario, $password,$bd);
 
         if($conexion){
-            //echo "Conexión satisfactoria";
+            //echo "Conexion satisfactoria";
         }else{
             echo 'Ha sucedido un error inexperado en la conexion de la base de datos
 ';

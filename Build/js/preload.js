@@ -9,15 +9,14 @@ $(document).ready(function () {
 
 
 
-function setup () {    
-    console.log("setup");    
+function setup () {        
     const sexo = sessionStorage.getItem("sexo");
     const idUsusario = sessionStorage.getItem("id_usuario");
 
     console.log("idUsusario",idUsusario );
     console.log("Sexo", sexo); 
     
- 
+    
 
 
     fetch( urlGetEstadoJuegos + idUsusario )
@@ -31,13 +30,16 @@ function setup () {
       // Examine the text in the response
       response.json().then(function(data) {
         console.log(data);
-        guardarDatosSesion(data);
+        guardarDatosSesion(data); 
+        window.location.assign("./modulos/menu/index.html");       
       });
     }
   )
   .catch(function(err) {
     console.log('Fetch Error :-S', err);
   });
+
+  
 
 }
 
@@ -50,5 +52,8 @@ function guardarDatosSesion(array) {
         sessionStorage.setItem( "terminado_" + array[index].id_juego,   array[index].terminado );
         
     }
+   
+   
+
     
 }

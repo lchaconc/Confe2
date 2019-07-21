@@ -19,18 +19,78 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="199779665079946" title="Btn_Unidad1">
+        <event-group description="" sid="199779665079946" title="Abrir_Juegos_U1">
             <sub-events>
                 <event-block sid="241480781912158">
                     <conditions>
                         <condition id="3" name="On touched object" sid="502185254737914" type="Touch">
-                            <param id="0" name="Object">u1Ropero1</param>
+                            <param id="0" name="Object">btn1</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="7" name="Go to URL" sid="525352204399974" type="Browser">
                             <param id="0" name="URL">&quot;http://localhost/c2/Ropero/&quot;</param>
                             <param id="1" name="Target">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="899223742576917" title="Activar_Unidad1">
+            <sub-events>
+                <event-block sid="150375709438536">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="620797851857741" type="System">
+                            <param id="0" name="Variable">activo_c01ropero1</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;true&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set blend mode" sid="901554121618272" type="btn1">
+                            <param id="0" name="Blend mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="875031625205955">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="579843715372296" type="System">
+                            <param id="0" name="Variable">activo_r01emociones</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;true&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set blend mode" sid="307054158461449" type="btn2">
+                            <param id="0" name="Blend mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="374511055010218">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="232170373576858" type="System">
+                            <param id="0" name="Variable">activo_j01granja</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;true&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set blend mode" sid="539363917113328" type="btn3">
+                            <param id="0" name="Blend mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="523963007750944">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="189036164488725" type="System">
+                            <param id="0" name="Variable">activo_c02ropero2</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;true&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set blend mode" sid="898169562830503" type="btn4">
+                            <param id="0" name="Blend mode">0</param>
                         </action>
                     </actions>
                 </event-block>
