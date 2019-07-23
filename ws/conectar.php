@@ -1,12 +1,7 @@
 <?php
 function conectarDB(){
 
-        $servidor = "localhost";
-        $usuario = "u211168474_confe";
-		//u211168474_confe
-        $password = "Confe123*";
-        $bd = "u211168474_confe";
-		//u211168474_confe
+        require 'parametros.php';
 
     $conexion = mysqli_connect($servidor, $usuario, $password,$bd);
 

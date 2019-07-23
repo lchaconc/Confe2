@@ -2,14 +2,13 @@
 header ("Content-Type: application/json");
 header("Access-Control-Allow-Origin: *");
 
-$id_grupo = $_GET['id_grupo'];
-//echo $id_grupo;
+$id_usr = $_GET['id_usr'];
 
-$sql = "SELECT * FROM desbloqueados WHERE id_grupo = '".$id_grupo."'";
+$sql = "SELECT * FROM avatar WHERE id_usr = '".$id_usr."'";
+
 //echo $sql; 
 
-//sleep(1);
-
+sleep(1);
 
 include "conectar.php";
 function desconectar($conexion){
