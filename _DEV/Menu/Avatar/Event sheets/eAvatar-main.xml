@@ -3,10 +3,12 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eAvatar-main</name>
     <events>
-        <variable comment="h: Hombre - m: Mujer" constant="0" name="sexo" sid="327830480643913" static="0" type="text">x</variable>
+        <variable constant="0" name="urlRequest" sid="347718486553086" static="0" type="text"></variable>
+        <variable constant="0" name="idUsr" sid="210024116486443" static="0" type="text"></variable>
+        <variable comment="m: Masculino - f: Femenino" constant="0" name="sexo" sid="327830480643913" static="0" type="text">f</variable>
         <variable constant="0" name="isFinLista" sid="654288113613225" static="0" type="number">0</variable>
         <variable comment="0 falso / 1 verdero" constant="0" name="isInicioLista" sid="901388738268504" static="0" type="number">0</variable>
-        <variable constant="0" name="avatarSeleccionado" sid="161729942656353" static="0" type="number">0</variable>
+        <variable constant="0" name="tipoAvatar" sid="161729942656353" static="0" type="number">0</variable>
         <event-group description="" sid="370034331693827" title="Setup_main">
             <sub-events>
                 <event-block sid="250151715630644">
@@ -22,13 +24,17 @@
                             <param id="0" name="Variable">isInicioLista</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action disabled="1" id="-9" name="Set value" sid="490305569017833" type="System">
+                        <action id="-9" name="Set value" sid="490305569017833" type="System">
                             <param id="0" name="Variable">sexo</param>
                             <param id="1" name="Value">WebStorage.SessionValue(&quot;sexo&quot;)</param>
                         </action>
-                        <action id="-9" name="Set value" sid="419065539935545" type="System">
+                        <action id="-9" name="Set value" sid="114115723024018" type="System">
                             <param id="0" name="Variable">sexo</param>
-                            <param id="1" name="Value">&quot;f&quot;</param>
+                            <param id="1" name="Value">WebStorage.SessionValue(&quot;sexo&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="949714379645104" type="System">
+                            <param id="0" name="Variable">idUsr</param>
+                            <param id="1" name="Value">WebStorage.SessionValue(&quot;id_usr&quot;)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -122,7 +128,7 @@
                             </conditions>
                             <actions>
                                 <action id="-9" name="Set value" sid="955313056475944" type="System">
-                                    <param id="0" name="Variable">avatarSeleccionado</param>
+                                    <param id="0" name="Variable">tipoAvatar</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="932182624760398" type="luz">
@@ -176,7 +182,7 @@
                             </conditions>
                             <actions>
                                 <action id="-9" name="Set value" sid="531530622198745" type="System">
-                                    <param id="0" name="Variable">avatarSeleccionado</param>
+                                    <param id="0" name="Variable">tipoAvatar</param>
                                     <param id="1" name="Value">2</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="721911159987121" type="luz">
@@ -230,7 +236,7 @@
                             </conditions>
                             <actions>
                                 <action id="-9" name="Set value" sid="878333074032143" type="System">
-                                    <param id="0" name="Variable">avatarSeleccionado</param>
+                                    <param id="0" name="Variable">tipoAvatar</param>
                                     <param id="1" name="Value">3</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="866428796847597" type="luz">
@@ -284,7 +290,7 @@
                             </conditions>
                             <actions>
                                 <action id="-9" name="Set value" sid="952439352044369" type="System">
-                                    <param id="0" name="Variable">avatarSeleccionado</param>
+                                    <param id="0" name="Variable">tipoAvatar</param>
                                     <param id="1" name="Value">4</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="681969541145366" type="luz">
@@ -336,7 +342,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="-9" name="Set value" sid="233481624836558" type="System">
-                                            <param id="0" name="Variable">avatarSeleccionado</param>
+                                            <param id="0" name="Variable">tipoAvatar</param>
                                             <param id="1" name="Value">5</param>
                                         </action>
                                         <action id="-15" name="Set visible" sid="999398289664453" type="luz">
@@ -474,21 +480,25 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="726087135606376" title="CambioLayout">
+        <event-group description="" sid="726087135606376" title="Enviar_Datos_ajax_Salir_A_Menu">
             <sub-events>
                 <event-block sid="339053854454359">
                     <conditions>
                         <condition id="3" name="On touched object" sid="323450968362832" type="Touch">
-                            <param id="0" name="Object">btnGoCustom</param>
+                            <param id="0" name="Object">btnGoMenu</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="1" name="Set session value" sid="693228568306923" type="WebStorage">
-                            <param id="0" name="Key">&quot;avatarSeleccionado&quot;</param>
-                            <param id="1" name="Value">avatarSeleccionado</param>
+                        <action id="-9" name="Set value" sid="930443598126592" type="System">
+                            <param id="0" name="Variable">urlRequest</param>
+                            <param id="1" name="Value">&quot;http://localhost/Confe2/ws/set_avatar.php?id_usr=&quot;&amp; idUsr&amp;&quot;&amp;tipo_avatar=&quot;&amp;tipoAvatar&amp;&quot;&amp;tipo_traje=nulo&quot;</param>
                         </action>
-                        <action disabled="1" id="7" name="Go to URL" sid="719433379246047" type="Browser">
-                            <param id="0" name="URL">&quot;http://localhost/c2/Menu/&quot;</param>
+                        <action id="0" name="Request URL" sid="843700634486011" type="AJAX">
+                            <param id="0" name="Tag">&quot;envioTipoAvatar&quot;</param>
+                            <param id="1" name="URL">urlRequest</param>
+                        </action>
+                        <action id="7" name="Go to URL" sid="719433379246047" type="Browser">
+                            <param id="0" name="URL">&quot;http://localhost/Confe2/Build/modulos/menu/index.html&quot;</param>
                             <param id="1" name="Target">0</param>
                         </action>
                     </actions>

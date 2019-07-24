@@ -1,0 +1,31 @@
+﻿{
+	"version": 1563943179,
+	"fileList": [
+		"data.js",
+		"c2runtime.js",
+		"jquery-2.1.1.min.js",
+		"offlineClient.js",
+		"images/btnderecho-sheet0.png",
+		"images/btnizquierdo-sheet0.png",
+		"images/btngomenu-sheet0.png",
+		"images/btnguardar-sheet0.png",
+		"images/bgmain-sheet0.png",
+		"images/avatar1-sheet0.png",
+		"images/avatar2-sheet0.png",
+		"images/avatar3-sheet0.png",
+		"images/avatar4-sheet0.png",
+		"images/luz-sheet0.png",
+		"images/baseavatar-sheet0.png",
+		"images/baseavatar-sheet1.png",
+		"images/avatar5-sheet0.png",
+		"images/snsactivo-sheet0.png",
+		"images/snsavatar1-sheet0.png",
+		"images/snsavatarultimo-sheet0.png",
+		"icon-16.png",
+		"icon-32.png",
+		"icon-114.png",
+		"icon-128.png",
+		"icon-256.png",
+		"loading-logo.png"
+	]
+}

@@ -10,6 +10,7 @@
     <unique-id>3subbtu8xvytq</unique-id>
     <saved-with-version>26500</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -64,7 +65,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="btnGoCustom" sid="205320093527910">
+            <object-type name="btnGoMenu" sid="205320093527910">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="804886611750036" speed="5">
@@ -232,6 +233,9 @@
             <object-type name="Browser" sid="473194535164450">
                 <plugin id="Browser" />
             </object-type>
+            <object-type name="AJAX" sid="577967314946050">
+                <plugin id="AJAX" />
+            </object-type>
         </object-folder>
         <object-folder name="Sensors">
             <object-type name="snsActivo" sid="874574398729654">
@@ -276,6 +280,7 @@
         </global-instance>
         <global-instance type="WebStorage" uid="34" />
         <global-instance type="Browser" uid="36" />
+        <global-instance type="AJAX" uid="14" />
     </global-instances>
     <sounds-folder />
     <music-folder />
