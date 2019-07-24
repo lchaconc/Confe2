@@ -1,4 +1,4 @@
-const url_set_estado_juegos = "../confe_ws/set_estado_juegos.php";
+const url_set_estado_juegos = "../confe_ws/activar_juegos.php";
 
 $(document).ready(function () {
 

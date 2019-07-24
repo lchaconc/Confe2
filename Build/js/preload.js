@@ -25,9 +25,7 @@ function setup () {
       if (response.status !== 200) {
         console.log('Error:', response.status);
         return;
-      }
-
-      // Examine the text in the response
+      }      
       response.json().then(function(data) {
         console.log(data);
         guardarDatosSesion(data); 
