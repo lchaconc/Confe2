@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eMain</name>
     <events>
+        <variable constant="0" name="urlRequest" sid="287281726276053" static="0" type="text"></variable>
         <variable constant="0" name="tipoTraje" sid="563079436958226" static="0" type="text"></variable>
         <variable constant="0" name="tipoAvatar" sid="794086621706205" static="0" type="number">0</variable>
         <event-group description="" sid="370034331693827" title="Setup">
@@ -437,6 +438,10 @@
                                     <param id="0" name="X">-1500</param>
                                     <param id="1" name="Y">-1500</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="694186861020024" type="System">
+                                    <param id="0" name="Variable">tipoTraje</param>
+                                    <param id="1" name="Value">&quot;hombre1&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="506293608934659">
@@ -465,6 +470,10 @@
                                 <action id="-3" name="Set position" sid="536948691653431" type="gancho2">
                                     <param id="0" name="X">-1500</param>
                                     <param id="1" name="Y">-1500</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="300193978401980" type="System">
+                                    <param id="0" name="Variable">tipoTraje</param>
+                                    <param id="1" name="Value">&quot;hombre2&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -495,6 +504,10 @@
                                     <param id="0" name="X">-1500</param>
                                     <param id="1" name="Y">-1500</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="165818631143475" type="System">
+                                    <param id="0" name="Variable">tipoTraje</param>
+                                    <param id="1" name="Value">&quot;hombre3&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="885770580391388">
@@ -523,6 +536,10 @@
                                 <action id="-3" name="Set position" sid="592898217421568" type="gancho4">
                                     <param id="0" name="X">-1500</param>
                                     <param id="1" name="Y">-1500</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="908573825507926" type="System">
+                                    <param id="0" name="Variable">tipoTraje</param>
+                                    <param id="1" name="Value">&quot;hombre4&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -565,6 +582,10 @@
                                     <param id="0" name="X">-1500</param>
                                     <param id="1" name="Y">-1500</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="566769541792115" type="System">
+                                    <param id="0" name="Variable">tipoTraje</param>
+                                    <param id="1" name="Value">&quot;mujer1&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="595968382903854">
@@ -593,6 +614,10 @@
                                 <action id="-3" name="Set position" sid="842893322030396" type="gancho2">
                                     <param id="0" name="X">-1500</param>
                                     <param id="1" name="Y">-1500</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="540894006217062" type="System">
+                                    <param id="0" name="Variable">tipoTraje</param>
+                                    <param id="1" name="Value">&quot;mujer2&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -623,6 +648,10 @@
                                     <param id="0" name="X">-1500</param>
                                     <param id="1" name="Y">-1500</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="838043992275665" type="System">
+                                    <param id="0" name="Variable">tipoTraje</param>
+                                    <param id="1" name="Value">&quot;mujer3&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="172950815624529">
@@ -652,13 +681,17 @@
                                     <param id="0" name="X">-1500</param>
                                     <param id="1" name="Y">-1500</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="771527925212955" type="System">
+                                    <param id="0" name="Variable">tipoTraje</param>
+                                    <param id="1" name="Value">&quot;mujer4&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="708973977331450" title="Boton_Home">
+        <event-group description="" sid="708973977331450" title="Boton_Home_Ajax">
             <sub-events>
                 <event-block sid="448312571995200">
                     <conditions>
@@ -667,8 +700,69 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="4" name="Set animation" sid="119587005308927" type="txtEspera">
+                            <param id="0" name="Animation">&quot;espere&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="414230360398639" type="System">
+                            <param id="0" name="Layer">&quot;sombra&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="161251893580676" type="System">
+                            <param id="0" name="Layer">&quot;textos&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="1" name="Set session value" sid="846124947631383" type="WebStorage">
+                            <param id="0" name="Key">&quot;tipo_traje&quot;</param>
+                            <param id="1" name="Value">tipoTraje</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="354636918668094" type="System">
+                            <param id="0" name="Variable">urlRequest</param>
+                            <param id="1" name="Value">&quot;http://localhost/Confe2/ws/set_avatar.php?id_usr=&quot;&amp; idUsr&amp;&quot;&amp;tipo_avatar=&quot;&amp;tipoAvatar&amp;&quot;&amp;tipo_traje=&quot;&amp;tipoTraje</param>
+                        </action>
+                        <action id="0" name="Request URL" sid="651646696859383" type="AJAX">
+                            <param id="0" name="Tag">&quot;AjaxAvatar&quot;</param>
+                            <param id="1" name="URL">urlRequest</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="483354438088398">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="953028869482696" type="AJAX">
+                            <param id="0" name="Tag">&quot;AjaxAvatar&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
                         <action id="7" name="Go to URL" sid="372044641486890" type="Browser">
-                            <param id="0" name="URL">&quot;http://localhost/c2/Menu/&quot;</param>
+                            <param id="0" name="URL">&quot;http://localhost/Confe2/Build/modulos/menu/index.html&quot;</param>
+                            <param id="1" name="Target">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="444811838324935">
+                    <conditions>
+                        <condition id="1" name="On error" sid="375004086765913" type="AJAX">
+                            <param id="0" name="Tag">&quot;AjaxAvatar&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="351836559254828" type="txtEspera">
+                            <param id="0" name="Animation">&quot;error&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="435377419153042" type="System">
+                            <param id="0" name="Layer">&quot;sombra&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="953359931257861" type="System">
+                            <param id="0" name="Layer">&quot;textos&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="603552239998670" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="7" name="Go to URL" sid="169645887300973" type="Browser">
+                            <param id="0" name="URL">&quot;http://localhost/Confe2/Build/modulos/menu/index.html&quot;</param>
                             <param id="1" name="Target">0</param>
                         </action>
                     </actions>

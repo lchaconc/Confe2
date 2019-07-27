@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.7.9
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: Jul 23, 2019 at 04:25 AM
--- Server version: 10.2.23-MariaDB
--- PHP Version: 7.2.18
+-- Servidor: 127.0.0.1:3306
+-- Tiempo de generación: 27-07-2019 a las 21:00:45
+-- Versión del servidor: 5.7.21
+-- Versión de PHP: 7.1.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,40 +19,43 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `u211168474_confe`
+-- Base de datos: `u211168474_confe`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `avatar`
+-- Estructura de tabla para la tabla `avatar`
 --
 
-CREATE TABLE `avatar` (
-  `id_avatar` int(11) NOT NULL,
+DROP TABLE IF EXISTS `avatar`;
+CREATE TABLE IF NOT EXISTS `avatar` (
+  `id_avatar` int(11) NOT NULL AUTO_INCREMENT,
   `tipo_avatar` int(11) NOT NULL,
   `tipo_traje` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL,
   `sexo` varchar(8) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `id_usr` varchar(128) CHARACTER SET utf8mb4 NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `id_usr` varchar(128) CHARACTER SET utf8mb4 NOT NULL,
+  PRIMARY KEY (`id_avatar`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `avatar`
+-- Volcado de datos para la tabla `avatar`
 --
 
 INSERT INTO `avatar` (`id_avatar`, `tipo_avatar`, `tipo_traje`, `sexo`, `id_usr`) VALUES
-(1, 1, 'biblico', 'm', 'felipe@correo.de'),
-(2, 1, 'scout', 'f', 'jimena@correo.de'),
-(3, 0, ' ', 'f', 'ana@correo.de');
+(1, 0, '', 'm', 'felipe@correo.de'),
+(2, 0, '', 'f', 'jimena@correo.de'),
+(3, 0, '', 'f', 'ana@correo.de');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `estado_juegos`
+-- Estructura de tabla para la tabla `estado_juegos`
 --
 
-CREATE TABLE `estado_juegos` (
-  `id_estado` int(11) NOT NULL,
+DROP TABLE IF EXISTS `estado_juegos`;
+CREATE TABLE IF NOT EXISTS `estado_juegos` (
+  `id_estado` int(11) NOT NULL AUTO_INCREMENT,
   `id_grupo` varchar(128) NOT NULL,
   `id_usr` varchar(128) NOT NULL,
   `unidad` int(11) NOT NULL,
@@ -60,11 +63,12 @@ CREATE TABLE `estado_juegos` (
   `etiqueta` varchar(128) NOT NULL,
   `activo` varchar(8) NOT NULL COMMENT 'boolean',
   `avance` int(11) NOT NULL,
-  `terminado` varchar(8) NOT NULL COMMENT 'boole'
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `terminado` varchar(8) NOT NULL COMMENT 'boole',
+  PRIMARY KEY (`id_estado`)
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `estado_juegos`
+-- Volcado de datos para la tabla `estado_juegos`
 --
 
 INSERT INTO `estado_juegos` (`id_estado`, `id_grupo`, `id_usr`, `unidad`, `id_juego`, `etiqueta`, `activo`, `avance`, `terminado`) VALUES
@@ -77,38 +81,6 @@ INSERT INTO `estado_juegos` (`id_estado`, `id_grupo`, `id_usr`, `unidad`, `id_ju
 (7, 'moravia122', 'felipe@correo.de', 2, 'r0203bienaventuranzas', 'Bienaventuranzas', 'false', 0, 'false'),
 (8, 'moravia122', 'felipe@correo.de', 2, 'j0204flappybird', 'Falppy Bird', 'false', 0, 'false'),
 (9, 'moravia122', 'felipe@correo.de', 3, 'j0305acompanajesus', 'Acompaña a Jesús', 'false', 0, 'false');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `avatar`
---
-ALTER TABLE `avatar`
-  ADD PRIMARY KEY (`id_avatar`);
-
---
--- Indexes for table `estado_juegos`
---
-ALTER TABLE `estado_juegos`
-  ADD PRIMARY KEY (`id_estado`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `avatar`
---
-ALTER TABLE `avatar`
-  MODIFY `id_avatar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `estado_juegos`
---
-ALTER TABLE `estado_juegos`
-  MODIFY `id_estado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

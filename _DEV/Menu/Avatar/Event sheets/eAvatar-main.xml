@@ -497,6 +497,10 @@
                             <param id="0" name="Variable">urlRequest</param>
                             <param id="1" name="Value">&quot;http://localhost/Confe2/ws/set_avatar.php?id_usr=&quot;&amp; idUsr&amp;&quot;&amp;tipo_avatar=&quot;&amp;tipoAvatar&amp;&quot;&amp;tipo_traje=nulo&quot;</param>
                         </action>
+                        <action id="1" name="Set session value" sid="172456295863565" type="WebStorage">
+                            <param id="0" name="Key">&quot;tipo_avatar&quot;</param>
+                            <param id="1" name="Value">tipoAvatar</param>
+                        </action>
                         <action id="0" name="Request URL" sid="843700634486011" type="AJAX">
                             <param id="0" name="Tag">&quot;envioTipoAvatar&quot;</param>
                             <param id="1" name="URL">urlRequest</param>

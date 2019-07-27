@@ -10,6 +10,7 @@
     <unique-id>3subbtu8xvytq</unique-id>
     <saved-with-version>26500</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -108,18 +109,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="731216842824639" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\lchaconc\Desktop\img\modal cambio.png">
-                            <collision-poly>
-                                <point x="0.145299" y="0.139019" />
-                                <point x="0.499389" y="0.00116822" />
-                                <point x="0.846154" y="0.147196" />
-                                <point x="0.979243" y="0.5" />
-                                <point x="0.835165" y="0.84229" />
-                                <point x="0.499389" y="0.977804" />
-                                <point x="0.164835" y="0.84229" />
-                                <point x="0.002442" y="0.5" />
-                            </collision-poly>
-                        </frame>
+                        <frame duration="1" hotspotX="0.500813" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Ropero_2\back1modal2.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -283,6 +273,17 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="txtEspera" sid="573428672988068">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="espere" pingpong="0" repeatcount="1" repeatto="0" sid="328224435875272" speed="5">
+                        <frame duration="1" hotspotX="0.500835" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\espere.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="error" pingpong="0" repeatcount="1" repeatto="0" sid="618714696039880" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\error.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="System">
             <object-type name="Touch" sid="948977961617129">
@@ -296,6 +297,9 @@
             </object-type>
             <object-type name="WebStorage" sid="836860356122927">
                 <plugin id="WebStorage" />
+            </object-type>
+            <object-type name="AJAX" sid="576778213175147">
+                <plugin id="AJAX" />
             </object-type>
         </object-folder>
         <object-folder name="Sensors" />
@@ -675,6 +679,7 @@
         </global-instance>
         <global-instance type="Browser" uid="11" />
         <global-instance type="WebStorage" uid="29" />
+        <global-instance type="AJAX" uid="14" />
     </global-instances>
     <sounds-folder />
     <music-folder />

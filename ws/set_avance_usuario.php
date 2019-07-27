@@ -13,7 +13,7 @@ echo $idUsuario;
 echo $idJuego;
 echo $progreso;
 
-
+sleep(1);
 
 
 // Create connection

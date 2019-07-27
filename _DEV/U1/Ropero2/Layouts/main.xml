@@ -579,10 +579,10 @@
             </instances>
             <effects />
         </layer>
-        <layer name="shadows" sid="749149878687014">
-            <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
-            <transparent>1</transparent>
+        <layer name="sombra" sid="749149878687014">
+            <initially-visible>0</initially-visible>
+            <background-color>0,0,0</background-color>
+            <transparent>0</transparent>
             <parallax>
                 <x>1</x>
                 <y>1</y>
@@ -597,8 +597,8 @@
             <instances />
             <effects />
         </layer>
-        <layer name="texts" sid="154389160531096">
-            <initially-visible>1</initially-visible>
+        <layer name="textos" sid="154389160531096">
+            <initially-visible>0</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
             <parallax>
@@ -612,7 +612,30 @@
             <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <instances />
+            <instances>
+                <instance type="txtEspera" uid="15">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>663</x>
+                        <y>368</y>
+                        <z>0</z>
+                        <width>599</width>
+                        <height>118</height>
+                        <depth>0</depth>
+                        <hotspotX>0.500834703</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
             <effects />
         </layer>
     </layers>

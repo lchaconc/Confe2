@@ -5,7 +5,7 @@ $tipo_avatar = $_GET['tipo_avatar'];
 $tipo_traje = $_GET['tipo_traje'];
 
 require 'parametros.php';
-
+sleep(1);
 
 // Create connection
 $conn = new mysqli($servidor, $usuario, $password, $bd);
