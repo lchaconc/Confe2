@@ -3,8 +3,11 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eMain</name>
     <events>
-        <variable constant="0" name="tipoAvatar" sid="794086621706205" static="0" type="number">1</variable>
-        <variable constant="0" name="sexo" sid="561508372494367" static="0" type="text">m</variable>
+        <variable constant="0" name="tipoTraje" sid="983804149924029" static="0" type="text"></variable>
+        <variable constant="0" name="ajaxRequest" sid="681878595913390" static="0" type="text"></variable>
+        <variable constant="0" name="idUsr" sid="255301873215455" static="0" type="text"></variable>
+        <variable constant="0" name="tipoAvatar" sid="794086621706205" static="0" type="number">0</variable>
+        <variable constant="0" name="sexo" sid="561508372494367" static="0" type="text"></variable>
         <variable constant="0" name="aux" sid="264688356595490" static="0" type="text">nulo</variable>
         <event-group description="" sid="370034331693827" title="Setup">
             <sub-events>
@@ -13,15 +16,35 @@
                         <condition id="-2" name="On start of layout" sid="113989134144720" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="792862395255489" type="Function">
-                            <param id="0" name="Name">&quot;cargarValores&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
+                        <action id="-9" name="Set value" sid="993803718681475" type="System">
+                            <param id="0" name="Variable">sexo</param>
+                            <param id="1" name="Value">WebStorage.SessionValue(&quot;sexo&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="208763682075643" type="System">
+                            <param id="0" name="Variable">tipoAvatar</param>
+                            <param id="1" name="Value">WebStorage.SessionValue(&quot;tipo_avatar&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="663627752572228" type="System">
+                            <param id="0" name="Variable">idUsr</param>
+                            <param id="1" name="Value">WebStorage.SessionValue(&quot;id_usr&quot;)</param>
+                        </action>
+                        <action disabled="1" id="-9" name="Set value" sid="148073063466415" type="System">
+                            <param id="0" name="Variable">sexo</param>
+                            <param id="1" name="Value">&quot;m&quot;</param>
+                        </action>
+                        <action disabled="1" id="-9" name="Set value" sid="835528493640961" type="System">
+                            <param id="0" name="Variable">tipoAvatar</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                        <action disabled="1" id="-9" name="Set value" sid="668231171170183" type="System">
+                            <param id="0" name="Variable">idUsr</param>
+                            <param id="1" name="Value">&quot;felipe@correo.de&quot;</param>
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="872427692924450">
+                        <event-block sid="512632373101800">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="870728674875839" type="System">
+                                <condition id="-14" name="Compare variable" sid="758991553028774" type="System">
                                     <param id="0" name="Variable">sexo</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;m&quot;</param>
@@ -38,9 +61,9 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="323155589292145">
+                        <event-block sid="108497666485724">
                             <conditions>
-                                <condition id="-22" name="Else" sid="736178187823267" type="System" />
+                                <condition id="-22" name="Else" sid="490126957791607" type="System" />
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="217445652615801" type="Function">
@@ -101,6 +124,10 @@
                                     <param id="0" name="X">-100</param>
                                     <param id="1" name="Y">-100</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="194006514772461" type="System">
+                                    <param id="0" name="Variable">tipoTraje</param>
+                                    <param id="1" name="Value">&quot;entero&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="740732907904388">
@@ -121,6 +148,10 @@
                                 <action id="-3" name="Set position" sid="455843467104675" type="ganchoHombreMochilero">
                                     <param id="0" name="X">-100</param>
                                     <param id="1" name="Y">-100</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="820579300675779" type="System">
+                                    <param id="0" name="Variable">tipoTraje</param>
+                                    <param id="1" name="Value">&quot;mochilero&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -143,6 +174,10 @@
                                     <param id="0" name="X">-100</param>
                                     <param id="1" name="Y">-100</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="594035892673765" type="System">
+                                    <param id="0" name="Variable">tipoTraje</param>
+                                    <param id="1" name="Value">&quot;playa&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="104084906355045">
@@ -163,6 +198,10 @@
                                 <action id="-3" name="Set position" sid="739524472361745" type="ganchoHombrePijama">
                                     <param id="0" name="X">-100</param>
                                     <param id="1" name="Y">-100</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="130010093156360" type="System">
+                                    <param id="0" name="Variable">tipoTraje</param>
+                                    <param id="1" name="Value">&quot;pijama&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -185,6 +224,10 @@
                                     <param id="0" name="X">-100</param>
                                     <param id="1" name="Y">-100</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="464966316523090" type="System">
+                                    <param id="0" name="Variable">tipoTraje</param>
+                                    <param id="1" name="Value">&quot;biblico&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="594261361292298">
@@ -205,6 +248,10 @@
                                 <action id="-3" name="Set position" sid="964018732891489" type="ganchoHombreCasual">
                                     <param id="0" name="X">-100</param>
                                     <param id="1" name="Y">-100</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="523855160722541" type="System">
+                                    <param id="0" name="Variable">tipoTraje</param>
+                                    <param id="1" name="Value">&quot;casual&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -227,13 +274,17 @@
                                     <param id="0" name="X">-100</param>
                                     <param id="1" name="Y">-100</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="529396264134000" type="System">
+                                    <param id="0" name="Variable">tipoTraje</param>
+                                    <param id="1" name="Value">&quot;scout&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="708973977331450" title="Boton_Home">
+        <event-group description="" sid="708973977331450" title="Boton_Home_Datos_AJAX">
             <sub-events>
                 <event-block sid="448312571995200">
                     <conditions>
@@ -242,8 +293,57 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-4" name="Set layer visible" sid="892729182114623" type="System">
+                            <param id="0" name="Layer">&quot;shadows&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="213275747286352" type="txtEspere">
+                            <param id="0" name="Animation">&quot;espere&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="992424298450601" type="System">
+                            <param id="0" name="Layer">&quot;texts&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="708749322199928" type="System">
+                            <param id="0" name="Variable">ajaxRequest</param>
+                            <param id="1" name="Value">&quot;http://localhost/Confe2/ws/set_avatar.php?id_usr=&quot;&amp; idUsr&amp;&quot;&amp;tipo_avatar=&quot;&amp;tipoAvatar&amp;&quot;&amp;tipo_traje=&quot;&amp;tipoTraje</param>
+                        </action>
+                        <action id="0" name="Request URL" sid="683962762667546" type="AJAX">
+                            <param id="0" name="Tag">&quot;requestAvatar&quot;</param>
+                            <param id="1" name="URL">ajaxRequest</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="554415749834676">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="671598884721375" type="AJAX">
+                            <param id="0" name="Tag">&quot;requestAvatar&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
                         <action id="7" name="Go to URL" sid="372044641486890" type="Browser">
-                            <param id="0" name="URL">&quot;http://localhost/c2/Menu/&quot;</param>
+                            <param id="0" name="URL">&quot;http://localhost/Confe2/Build/modulos/menu/index.html&quot;</param>
+                            <param id="1" name="Target">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="460382811260631">
+                    <conditions>
+                        <condition id="1" name="On error" sid="277687891745634" type="AJAX">
+                            <param id="0" name="Tag">&quot;requestAvatar&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="273011442020844" type="txtEspere">
+                            <param id="0" name="Animation">&quot;error&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="579960281011442" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="7" name="Go to URL" sid="937527942745631" type="Browser">
+                            <param id="0" name="URL">&quot;http://localhost/Confe2/Build/modulos/menu/index.html&quot;</param>
                             <param id="1" name="Target">0</param>
                         </action>
                     </actions>
@@ -823,6 +923,10 @@
                                     <param id="0" name="X">-200</param>
                                     <param id="1" name="Y">-200</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="422988062290435" type="System">
+                                    <param id="0" name="Variable">tipoTraje</param>
+                                    <param id="1" name="Value">&quot;pijama&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="855145907500140">
@@ -851,6 +955,10 @@
                                 <action id="-3" name="Set position" sid="345760563011133" type="ganchoMujerSport">
                                     <param id="0" name="X">-200</param>
                                     <param id="1" name="Y">-200</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="397087746766047" type="System">
+                                    <param id="0" name="Variable">tipoTraje</param>
+                                    <param id="1" name="Value">&quot;sport&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -881,6 +989,10 @@
                                     <param id="0" name="X">-200</param>
                                     <param id="1" name="Y">-200</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="882862823637638" type="System">
+                                    <param id="0" name="Variable">tipoTraje</param>
+                                    <param id="1" name="Value">&quot;biblico&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="191838963621704">
@@ -909,6 +1021,10 @@
                                 <action id="-3" name="Set position" sid="231573708825292" type="ganchoMujerGala">
                                     <param id="0" name="X">-200</param>
                                     <param id="1" name="Y">-200</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="723786315125050" type="System">
+                                    <param id="0" name="Variable">tipoTraje</param>
+                                    <param id="1" name="Value">&quot;gala&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -939,6 +1055,10 @@
                                     <param id="0" name="X">-200</param>
                                     <param id="1" name="Y">-200</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="862613073945630" type="System">
+                                    <param id="0" name="Variable">tipoTraje</param>
+                                    <param id="1" name="Value">&quot;casual&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="820241094382912">
@@ -968,6 +1088,10 @@
                                     <param id="0" name="X">-200</param>
                                     <param id="1" name="Y">-200</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="782659987633409" type="System">
+                                    <param id="0" name="Variable">tipoTraje</param>
+                                    <param id="1" name="Value">&quot;scout&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="942622344488899">
@@ -996,6 +1120,10 @@
                                 <action id="-3" name="Set position" sid="399095855507021" type="ganchoMujerMochilera">
                                     <param id="0" name="X">-200</param>
                                     <param id="1" name="Y">-200</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="432654667621222" type="System">
+                                    <param id="0" name="Variable">tipoTraje</param>
+                                    <param id="1" name="Value">&quot;mochilera&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1037,6 +1165,10 @@
                                             <param id="0" name="Width">144.295</param>
                                             <param id="1" name="Height">487.373</param>
                                         </action>
+                                        <action id="-9" name="Set value" sid="910787518622211" type="System">
+                                            <param id="0" name="Variable">tipoTraje</param>
+                                            <param id="1" name="Value">&quot;playaNegra&quot;</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="120532722138582">
@@ -1056,32 +1188,15 @@
                                             <param id="0" name="Width">67.191</param>
                                             <param id="1" name="Height">440.472</param>
                                         </action>
+                                        <action id="-9" name="Set value" sid="795169125611562" type="System">
+                                            <param id="0" name="Variable">tipoTraje</param>
+                                            <param id="1" name="Value">&quot;playaBlanca&quot;</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
                         </event-block>
                     </sub-events>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="999977084202986" title="Cargar_Valores_WebStorage">
-            <sub-events>
-                <event-block sid="478467534674781">
-                    <conditions>
-                        <condition id="0" name="On function" sid="867347328686265" type="Function">
-                            <param id="0" name="Name">&quot;cargarValores&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action disabled="1" id="-9" name="Set value" sid="993803718681475" type="System">
-                            <param id="0" name="Variable">sexo</param>
-                            <param id="1" name="Value">WebStorage.SessionValue(&quot;sexo&quot;)</param>
-                        </action>
-                        <action disabled="1" id="-9" name="Set value" sid="208763682075643" type="System">
-                            <param id="0" name="Variable">tipoAvatar</param>
-                            <param id="1" name="Value">WebStorage.SessionValue(&quot;tipoAvatar&quot;)</param>
-                        </action>
-                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

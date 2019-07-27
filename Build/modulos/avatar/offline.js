@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1563943179,
+	"version": 1564195853,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -18,6 +18,7 @@
 		"images/baseavatar-sheet0.png",
 		"images/baseavatar-sheet1.png",
 		"images/avatar5-sheet0.png",
+		"images/txtespere-sheet0.png",
 		"images/snsactivo-sheet0.png",
 		"images/snsavatar1-sheet0.png",
 		"images/snsavatarultimo-sheet0.png",

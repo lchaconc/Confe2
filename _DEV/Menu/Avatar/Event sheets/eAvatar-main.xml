@@ -5,7 +5,7 @@
     <events>
         <variable constant="0" name="urlRequest" sid="347718486553086" static="0" type="text"></variable>
         <variable constant="0" name="idUsr" sid="210024116486443" static="0" type="text"></variable>
-        <variable comment="m: Masculino - f: Femenino" constant="0" name="sexo" sid="327830480643913" static="0" type="text">f</variable>
+        <variable comment="m: Masculino - f: Femenino" constant="0" name="sexo" sid="327830480643913" static="0" type="text"></variable>
         <variable constant="0" name="isFinLista" sid="654288113613225" static="0" type="number">0</variable>
         <variable comment="0 falso / 1 verdero" constant="0" name="isInicioLista" sid="901388738268504" static="0" type="number">0</variable>
         <variable constant="0" name="tipoAvatar" sid="161729942656353" static="0" type="number">0</variable>
@@ -24,11 +24,15 @@
                             <param id="0" name="Variable">isInicioLista</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action id="-9" name="Set value" sid="490305569017833" type="System">
-                            <param id="0" name="Variable">sexo</param>
-                            <param id="1" name="Value">WebStorage.SessionValue(&quot;sexo&quot;)</param>
+                        <action disabled="1" id="-9" name="Set value" sid="713440524080848" type="System">
+                            <param id="0" name="Variable">idUsr</param>
+                            <param id="1" name="Value">&quot;felipe@correo.de&quot;</param>
                         </action>
-                        <action id="-9" name="Set value" sid="114115723024018" type="System">
+                        <action disabled="1" id="-9" name="Set value" sid="601693162784247" type="System">
+                            <param id="0" name="Variable">sexo</param>
+                            <param id="1" name="Value">&quot;m&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="490305569017833" type="System">
                             <param id="0" name="Variable">sexo</param>
                             <param id="1" name="Value">WebStorage.SessionValue(&quot;sexo&quot;)</param>
                         </action>
@@ -497,7 +501,68 @@
                             <param id="0" name="Tag">&quot;envioTipoAvatar&quot;</param>
                             <param id="1" name="URL">urlRequest</param>
                         </action>
+                        <action id="-3" name="Set position" sid="761111898022010" type="btnGoMenu">
+                            <param id="0" name="X">-500</param>
+                            <param id="1" name="Y">-500</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="707360189622975" type="System">
+                            <param id="0" name="Layer">&quot;shadows&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="978196175310211" type="txtEspere">
+                            <param id="0" name="Animation">&quot;success&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="217797212618550" type="System">
+                            <param id="0" name="Layer">&quot;texts&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="788400771675197">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="399370651165532" type="AJAX">
+                            <param id="0" name="Tag">&quot;envioTipoAvatar&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="676264411189710" type="System">
+                            <param id="0" name="Variable">urlRequest</param>
+                            <param id="1" name="Value">&quot;Enviado&quot;</param>
+                        </action>
                         <action id="7" name="Go to URL" sid="719433379246047" type="Browser">
+                            <param id="0" name="URL">&quot;http://localhost/Confe2/Build/modulos/menu/index.html&quot;</param>
+                            <param id="1" name="Target">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="194575266602660">
+                    <conditions>
+                        <condition id="1" name="On error" sid="213518652883035" type="AJAX">
+                            <param id="0" name="Tag">&quot;envioTipoAvatar&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="922037253609788" type="System">
+                            <param id="0" name="Variable">urlRequest</param>
+                            <param id="1" name="Value">&quot;Error&quot;</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="194189501444839" type="System">
+                            <param id="0" name="Layer">&quot;shadows&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="998097992337404" type="txtEspere">
+                            <param id="0" name="Animation">&quot;error&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="249362060001615" type="System">
+                            <param id="0" name="Layer">&quot;texts&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="899473474610485" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="7" name="Go to URL" sid="321695878340116" type="Browser">
                             <param id="0" name="URL">&quot;http://localhost/Confe2/Build/modulos/menu/index.html&quot;</param>
                             <param id="1" name="Target">0</param>
                         </action>

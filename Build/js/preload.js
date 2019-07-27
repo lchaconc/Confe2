@@ -11,13 +11,15 @@ $(document).ready(function () {
 
 function setup () {        
     const sexo = sessionStorage.getItem("sexo");
-    const idUsusario = sessionStorage.getItem("id_usuario");
-
-    console.log("idUsusario",idUsusario );
-    console.log("Sexo", sexo); 
+    const idUsusario = sessionStorage.getItem("id_usr");
+    const tipoAvatar = sessionStorage.getItem("tipo_avatar");
+    const tipoTraje = sessionStorage.getItem("tipo_traje");
     
+    console.log("idUsusario", idUsusario );
+    console.log("Sexo", sexo);
+    console.log("tipoAvatar", tipoAvatar );
+    console.log("tipoTraje", tipoTraje);   
     
-
 
     fetch( urlGetEstadoJuegos + idUsusario )
   .then(
