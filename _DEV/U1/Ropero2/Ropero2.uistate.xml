@@ -13,9 +13,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="0">main</layout>
         <layout order="2">Intro</layout>
         <layout order="4">mantener</layout>
+        <layout order="6">Aviso</layout>
         <event-sheet order="1">eMain</event-sheet>
-        <event-sheet order="3">eIntro</event-sheet>
-        <event-sheet active="1" order="5">eMantener</event-sheet>
+        <event-sheet active="1" order="3">eIntro</event-sheet>
+        <event-sheet order="5">eMantener</event-sheet>
+        <event-sheet order="7">eAviso</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -28,10 +30,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
-        <folder expanded="0" path="object-folder/Buttons/" />
+        <folder expanded="1" path="object-folder/Buttons/" />
         <folder expanded="0" path="object-folder/Backgrounds/" />
         <folder expanded="0" path="object-folder/Sprites/" />
-        <folder expanded="1" path="object-folder/Texts/" />
+        <folder expanded="0" path="object-folder/Texts/" />
         <folder expanded="0" path="object-folder/System/" />
         <folder expanded="1" path="object-folder/Sensors/" />
         <folder expanded="0" path="object-folder/trajes-gancho/" />
@@ -54,6 +56,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/avatarHumilde/" />
         <folder expanded="1" path="animation-folder/txtMensajes/" />
         <folder expanded="1" path="animation-folder/txtEspera/" />
+        <folder expanded="1" path="animation-folder/txtAvisoNoAcceso/" />
         <folder expanded="1" path="animation-folder/gancho1/" />
         <folder expanded="1" path="animation-folder/gancho2/" />
         <folder expanded="1" path="animation-folder/gancho3/" />

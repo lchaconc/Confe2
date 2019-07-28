@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1564260824,
+	"version": 1564283429,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -16,6 +16,7 @@
 		"images/avatarhumilde-sheet0.png",
 		"images/txtmensajes-sheet0.png",
 		"images/txtespera-sheet0.png",
+		"images/txtavisonoacceso-sheet0.png",
 		"images/gancho1-sheet0.png",
 		"images/gancho2-sheet0.png",
 		"images/gancho3-sheet0.png",

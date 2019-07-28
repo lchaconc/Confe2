@@ -284,6 +284,24 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="txtAvisoNoAcceso" sid="194689043245934">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="buscarAvatar" pingpong="0" repeatcount="1" repeatto="0" sid="984672234692968" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\escoge_avatar.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="oportunidadPerdida" pingpong="0" repeatcount="1" repeatto="0" sid="979789755145216" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502058" original-source="C:\Users\logan24\Desktop\oportunidad.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="0.996104" y="0.987654" />
+                                <point x="0.0038961" y="0.987654" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="System">
             <object-type name="Touch" sid="948977961617129">
@@ -664,11 +682,13 @@
         <layout>main.xml</layout>
         <layout>Intro.xml</layout>
         <layout>mantener.xml</layout>
+        <layout>Aviso.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>eMain.xml</event-sheet>
         <event-sheet>eIntro.xml</event-sheet>
         <event-sheet>eMantener.xml</event-sheet>
+        <event-sheet>eAviso.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Function" uid="0" />

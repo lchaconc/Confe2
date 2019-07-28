@@ -28,6 +28,10 @@
                             <param id="0" name="Variable">idUsr</param>
                             <param id="1" name="Value">WebStorage.SessionValue(&quot;id_usr&quot;)</param>
                         </action>
+                        <action id="-9" name="Set value" sid="821596115666160" type="System">
+                            <param id="0" name="Variable">tipoTraje</param>
+                            <param id="1" name="Value">WebStorage.SessionValue(&quot;tipo_traje&quot;)</param>
+                        </action>
                         <action disabled="1" id="-9" name="Set value" sid="148073063466415" type="System">
                             <param id="0" name="Variable">sexo</param>
                             <param id="1" name="Value">&quot;m&quot;</param>
@@ -39,6 +43,10 @@
                         <action disabled="1" id="-9" name="Set value" sid="668231171170183" type="System">
                             <param id="0" name="Variable">idUsr</param>
                             <param id="1" name="Value">&quot;felipe@correo.de&quot;</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="444406325969171" type="System">
+                            <param id="0" name="Group name">&quot;validarAcceso&quot;</param>
+                            <param id="1" name="State">1</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -1201,6 +1209,275 @@
                             </sub-events>
                         </event-block>
                     </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Si tipo traje es igual a uno humilde o uno de los de segundo ropero  la aplicaciòn lo detecta y lo envia a otra pantalla para retronar al menu" inactive="1" sid="584087508701365" title="validarAcceso">
+            <sub-events>
+                <event-block sid="577316987558352">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="120956535029621" type="System">
+                            <param id="0" name="Variable">tipoTraje</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;mujerHumilde1&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="586919487609991" type="System">
+                            <param id="0" name="Layout">Aviso</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="175601594044929">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="534463111743152" type="System">
+                            <param id="0" name="Variable">tipoTraje</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;mujerHumilde2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="671775378177378" type="System">
+                            <param id="0" name="Layout">Aviso</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="243531536126269">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="831012676892530" type="System">
+                            <param id="0" name="Variable">tipoTraje</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;mujerHumilde3&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="674898823708694" type="System">
+                            <param id="0" name="Layout">Aviso</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="497211570818846">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="365233176191822" type="System">
+                            <param id="0" name="Variable">tipoTraje</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;mujerHumilde4&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="748155011386664" type="System">
+                            <param id="0" name="Layout">Aviso</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="585385554311745">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="524020989556071" type="System">
+                            <param id="0" name="Variable">tipoTraje</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;mujerHumilde5&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="436273416854603" type="System">
+                            <param id="0" name="Layout">Aviso</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="760883327714359">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="821030696417810" type="System">
+                            <param id="0" name="Variable">tipoTraje</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;hombreHumilde1&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="771709438870141" type="System">
+                            <param id="0" name="Layout">Aviso</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="625264554491599">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="720526705645974" type="System">
+                            <param id="0" name="Variable">tipoTraje</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;hombreHumilde2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="102377632225622" type="System">
+                            <param id="0" name="Layout">Aviso</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="784636183908164">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="440063763118427" type="System">
+                            <param id="0" name="Variable">tipoTraje</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;hombreHumilde3&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="289035652121642" type="System">
+                            <param id="0" name="Layout">Aviso</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="221668972411046">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="570731515823574" type="System">
+                            <param id="0" name="Variable">tipoTraje</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;hombreHumilde4&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="242069688379454" type="System">
+                            <param id="0" name="Layout">Aviso</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="262122913366293">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="654415964782288" type="System">
+                            <param id="0" name="Variable">tipoTraje</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;hombreHumilde5&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="100271299921551" type="System">
+                            <param id="0" name="Layout">Aviso</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="590316844821983">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="836309147407477" type="System">
+                            <param id="0" name="Variable">tipoTraje</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;mujer1&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="919410356441643" type="System">
+                            <param id="0" name="Layout">Aviso</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="473000885096610">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="453275797256255" type="System">
+                            <param id="0" name="Variable">tipoTraje</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;mujer2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="435402113344568" type="System">
+                            <param id="0" name="Layout">Aviso</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="689885941024008">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="299390359903481" type="System">
+                            <param id="0" name="Variable">tipoTraje</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;mujer3&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="506482162118977" type="System">
+                            <param id="0" name="Layout">Aviso</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="129962592065853">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="489458800403040" type="System">
+                            <param id="0" name="Variable">tipoTraje</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;mujer4&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="583502820869492" type="System">
+                            <param id="0" name="Layout">Aviso</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="726261804440504">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="968909288829130" type="System">
+                            <param id="0" name="Variable">tipoTraje</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;hombre1&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="649918110470759" type="System">
+                            <param id="0" name="Layout">Aviso</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="379800628304618">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="858255000014496" type="System">
+                            <param id="0" name="Variable">tipoTraje</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;hombre2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="663058651484809" type="System">
+                            <param id="0" name="Layout">Aviso</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="720543987875512">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="293987237352135" type="System">
+                            <param id="0" name="Variable">tipoTraje</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;hombre3&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="147224040964872" type="System">
+                            <param id="0" name="Layout">Aviso</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="659873592290908">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="221301921934837" type="System">
+                            <param id="0" name="Variable">tipoTraje</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;hombre4&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="963397841349546" type="System">
+                            <param id="0" name="Layout">Aviso</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="271191234168084">
+                    <conditions>
+                        <condition id="-15" name="Is group active" sid="641886375838726" type="System">
+                            <param id="0" name="Group name">&quot;validarAcceso&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="517523263738904" type="System">
+                            <param id="0" name="Group name">&quot;validarAcceso&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
