@@ -1,5 +1,6 @@
 //Const URL servidor
 const urlGetEstadoJuegos = "https://elpatioviveros.com/test/confe_ws/get_estado_juegos.php?id_usr=";
+const urlGetObjetos = "http://localhost/Confe2/ws/get_objetos.php?id_usr=";
 
 
 $(document).ready(function () {
@@ -19,9 +20,20 @@ function setup () {
     console.log("Sexo", sexo);
     console.log("tipoAvatar", tipoAvatar );
     console.log("tipoTraje", tipoTraje);   
-    
+   
+    //urlGetEstadoJuegos + idUsusario
 
-    fetch( urlGetEstadoJuegos + idUsusario )
+    /*
+        guardarDatosSesion(data); 
+        window.location.assign("./modulos/menu/index.html");       
+    */
+
+}
+
+
+function getJson(url, mCallBack ) {
+  
+  fetch( url )
   .then(
     function(response) {
       if (response.status !== 200) {
@@ -30,18 +42,17 @@ function setup () {
       }      
       response.json().then(function(data) {
         console.log(data);
-        guardarDatosSesion(data); 
-        window.location.assign("./modulos/menu/index.html");       
+        mCallBack();        
       });
     }
   )
   .catch(function(err) {
     console.log('Fetch Error :-S', err);
-  });
-
-  
-
+  });  
 }
+
+
+
 
 
 function guardarDatosSesion(array) {
