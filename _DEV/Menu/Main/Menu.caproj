@@ -10,6 +10,7 @@
     <unique-id>3subbtu8xvytq</unique-id>
     <saved-with-version>26500</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -51,54 +52,6 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="865617803866754" speed="5">
                         <frame duration="1" hotspotX="0.502645" hotspotY="0.502591" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\menu\avatar.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="btnU1" sid="506847365743129">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="162086533118140" speed="5">
-                        <frame duration="1" hotspotX="0.502564" hotspotY="0.47479" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\menu\unidad1.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="btnU2" sid="291927361122472">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="182036255894136" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.474654" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\menu\unidad2.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="btnU3" sid="877122688208291">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="818736280724148" speed="5">
-                        <frame duration="1" hotspotX="0.502347" hotspotY="0.47644" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\menu\unidad3.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="btnU4" sid="932400660337421">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="513732503134904" speed="5">
-                        <frame duration="1" hotspotX="0.502591" hotspotY="0.478261" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\menu\unidad4.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="btnU5" sid="876780267892392">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="268759159269003" speed="5">
-                        <frame duration="1" hotspotX="0.502513" hotspotY="0.479381" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\menu\unidad5.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="btnU6" sid="411554914074523">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="467025614774731" speed="5">
-                        <frame duration="1" hotspotX="0.502564" hotspotY="0.481675" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\menu\unidad6.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -146,6 +99,14 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="670236226660850" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btnU1" sid="745105738256774">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="841309755770762" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
@@ -265,6 +226,9 @@
             <object-type name="WebStorage" sid="467643631603563">
                 <plugin id="WebStorage" />
             </object-type>
+            <object-type name="AJAX" sid="759461436283232">
+                <plugin id="AJAX" />
+            </object-type>
         </object-folder>
         <object-folder name="Sensors" />
         <object-folder name="Fx">
@@ -283,6 +247,56 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="274633313596862" speed="5">
                         <frame duration="1" hotspotX="0.568182" hotspotY="0.666667" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\menu\unidades\u1.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Iconos">
+            <object-type name="icoU1" sid="506847365743129">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="162086533118140" speed="5">
+                        <frame duration="1" hotspotX="0.502564" hotspotY="0.47479" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\menu\unidad1.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="icoU2" sid="291927361122472">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="182036255894136" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.474654" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\menu\unidad2.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="icoU3" sid="877122688208291">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="818736280724148" speed="5">
+                        <frame duration="1" hotspotX="0.502347" hotspotY="0.47644" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\menu\unidad3.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="icoU4" sid="932400660337421">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="513732503134904" speed="5">
+                        <frame duration="1" hotspotX="0.502591" hotspotY="0.478261" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\menu\unidad4.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="icoU5" sid="876780267892392">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="268759159269003" speed="5">
+                        <frame duration="1" hotspotX="0.502513" hotspotY="0.479381" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\menu\unidad5.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="icoU6" sid="411554914074523">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="467025614774731" speed="5">
+                        <frame duration="1" hotspotX="0.502564" hotspotY="0.481675" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\menu\unidad6.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -312,6 +326,7 @@
         </global-instance>
         <global-instance type="Browser" uid="21" />
         <global-instance type="WebStorage" uid="37" />
+        <global-instance type="AJAX" uid="39" />
     </global-instances>
     <sounds-folder />
     <music-folder />

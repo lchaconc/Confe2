@@ -20,19 +20,19 @@ function setup () {
     console.log("Sexo", sexo);
     console.log("tipoAvatar", tipoAvatar );
     console.log("tipoTraje", tipoTraje);   
-   
-    //urlGetEstadoJuegos + idUsusario
 
-    /*
-        guardarDatosSesion(data); 
-        window.location.assign("./modulos/menu/index.html");       
-    */
+    getJson(urlGetEstadoJuegos + idUsusario, function (data) {
+          guardarDatosSesion(data);            
+            getJson (urlGetObjetos + idUsusario, function (data) { 
+              guardarDatosObjetos(data);
+             window.location.assign("./modulos/menu/index.html");
+            })
+     } )
 
 }
 
 
-function getJson(url, mCallBack ) {
-  
+function getJson(url, mCallBack ) {  
   fetch( url )
   .then(
     function(response) {
@@ -40,9 +40,9 @@ function getJson(url, mCallBack ) {
         console.log('Error:', response.status);
         return;
       }      
-      response.json().then(function(data) {
-        console.log(data);
-        mCallBack();        
+      response.json().then(function(data) {       
+        //console.log(data);
+        mCallBack(data);        
       });
     }
   )
@@ -54,7 +54,6 @@ function getJson(url, mCallBack ) {
 
 
 
-
 function guardarDatosSesion(array) {
     const limite = array.length;
     for (let index = 0; index < limite; index++) {
@@ -62,9 +61,16 @@ function guardarDatosSesion(array) {
         sessionStorage.setItem( "avance_" + array[index].id_juego,   array[index].avance );
         sessionStorage.setItem( "terminado_" + array[index].id_juego,   array[index].terminado );
         
-    }
-   
-   
+    }        
+}
 
-    
+
+
+function guardarDatosObjetos(array) {
+  const limite = array.length;
+  for (let index = 0; index < limite; index++) {
+      sessionStorage.setItem( "obj_" + array[index].etiqueta,   array[index].visible);           
+  }
+  console.log( "sandalias:", sessionStorage.getItem("obj_sandalias"));
+  
 }

@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eHome</name>
     <events>
+        <variable constant="0" name="urlRequest" sid="937810381686555" static="0" type="text"></variable>
         <event-group description="" sid="545420417498187" title="Botones_Unidades">
             <sub-events>
                 <event-block sid="334735540154439">
@@ -24,11 +25,50 @@
                             <param id="0" name="Object">btnU1</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-2" name="Go to layout" sid="352616568014331" type="System">
-                            <param id="0" name="Layout">SubMenu</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="763789430844775">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="166754291853833" type="System">
+                                    <param id="0" name="Variable">obj_sandalias</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;true&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="111308985045693" type="System">
+                                    <param id="0" name="Variable">urlRequest</param>
+                                    <param id="1" name="Value">&quot;http://localhost/Confe2/ws/set_objetos.php?id_usr=&quot; &amp; idUsr &amp; &quot;&amp;etiqueta=sandalias&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="859295098305008" type="System">
+                                    <param id="0" name="Variable">obj_sandalias</param>
+                                    <param id="1" name="Value">&quot;false&quot;</param>
+                                </action>
+                                <action id="14" name="Log" sid="353562864403230" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">urlRequest</param>
+                                </action>
+                                <action id="1" name="Set session value" sid="175059952239124" type="WebStorage">
+                                    <param id="0" name="Key">&quot;obj_sandalias&quot;</param>
+                                    <param id="1" name="Value">obj_sandalias</param>
+                                </action>
+                                <action id="0" name="Request URL" sid="281891952705876" type="AJAX">
+                                    <param id="0" name="Tag">&quot;ObjetoSandalias&quot;</param>
+                                    <param id="1" name="URL">urlRequest</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="588983688179653">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="486494280232755" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="452847786865755" type="System">
+                                    <param id="0" name="Layout">SubMenu</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -43,8 +83,56 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="1" name="Set blend mode" sid="236114403822606" type="btnU1">
+                        <action id="1" name="Set blend mode" sid="236114403822606" type="icoU1">
                             <param id="0" name="Blend mode">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="313514298498035" type="btnU1">
+                            <param id="0" name="X">445</param>
+                            <param id="1" name="Y">288</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="247329695676035">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="172445911852364" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="385434875345020" type="btnU1">
+                            <param id="0" name="X">-600</param>
+                            <param id="1" name="Y">-600</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="474994713274378" title="Callback_Ajax_Ocultar_Objetos">
+            <sub-events>
+                <event-block sid="690833975857662">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="127574648153697" type="AJAX">
+                            <param id="0" name="Tag">&quot;ObjetoSandalias&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="352616568014331" type="System">
+                            <param id="0" name="Layout">Objetos</param>
+                        </action>
+                        <action id="14" name="Log" sid="806522019024435" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">AJAX.LastData</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="827593344661264">
+                    <conditions>
+                        <condition id="1" name="On error" sid="597691141574444" type="AJAX">
+                            <param id="0" name="Tag">&quot;ObjetoSandalias&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Log" sid="981588949611034" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">AJAX.LastData</param>
                         </action>
                     </actions>
                 </event-block>

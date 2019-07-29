@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>ePreload</name>
     <events>
+        <variable constant="0" name="idUsr" sid="511059337815373" static="0" type="text"></variable>
+        <variable constant="0" name="obj_sandalias" sid="447703612982633" static="0" type="text"></variable>
         <variable constant="0" name="activo_c02ropero2" sid="989497556330762" static="0" type="text"></variable>
         <variable constant="0" name="activo_c01ropero1" sid="599661027721435" static="0" type="text"></variable>
         <variable constant="0" name="activo_r01emociones" sid="262634711365080" static="0" type="text"></variable>
@@ -13,6 +15,18 @@
                 <condition id="-2" name="On start of layout" sid="726903254019225" type="System" />
             </conditions>
             <actions>
+                <action disabled="1" id="-9" name="Set value" sid="149010222984668" type="System">
+                    <param id="0" name="Variable">activo_c01ropero1</param>
+                    <param id="1" name="Value">&quot;true&quot;</param>
+                </action>
+                <action disabled="1" id="-9" name="Set value" sid="989160956358062" type="System">
+                    <param id="0" name="Variable">obj_sandalias</param>
+                    <param id="1" name="Value">&quot;true&quot;</param>
+                </action>
+                <action disabled="1" id="-9" name="Set value" sid="702113058819088" type="System">
+                    <param id="0" name="Variable">idUsr</param>
+                    <param id="1" name="Value">&quot;felipe@correo.de&quot;</param>
+                </action>
                 <action id="-9" name="Set value" sid="495402256927030" type="System">
                     <param id="0" name="Variable">activo_c01ropero1</param>
                     <param id="1" name="Value">WebStorage.SessionValue(&quot;activo_c01ropero1&quot;)</param>
@@ -28,6 +42,14 @@
                 <action id="-9" name="Set value" sid="364505736141400" type="System">
                     <param id="0" name="Variable">activo_c02ropero2</param>
                     <param id="1" name="Value">WebStorage.SessionValue(&quot;activo_c02ropero2&quot;)</param>
+                </action>
+                <action id="-9" name="Set value" sid="495146729694829" type="System">
+                    <param id="0" name="Variable">obj_sandalias</param>
+                    <param id="1" name="Value">WebStorage.SessionValue(&quot;obj_sandalias&quot;)</param>
+                </action>
+                <action id="-9" name="Set value" sid="722457096451689" type="System">
+                    <param id="0" name="Variable">idUsr</param>
+                    <param id="1" name="Value">WebStorage.SessionValue(&quot;id_usr&quot;)</param>
                 </action>
                 <action id="-2" name="Go to layout" sid="619145828608203" type="System">
                     <param id="0" name="Layout">Home</param>
