@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>eMensaje</name>
+    <events>
+        <event-block sid="459065838870744">
+            <conditions>
+                <condition id="3" name="On touched object" sid="647385129967512" type="Touch">
+                    <param id="0" name="Object">btnGoMenu</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Go to URL" sid="326413735352866" type="Browser">
+                    <param id="0" name="URL">&quot;http://localhost/Confe2/Build/modulos/menu/index.html&quot;</param>
+                    <param id="1" name="Target">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -8,12 +8,13 @@
     <author-website>http://</author-website>
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>3subbtu8xvytq</unique-id>
-    <saved-with-version>26500</saved-with-version>
+    <saved-with-version>26900</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
     </used-plugins>
@@ -30,7 +31,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
-    <first-layout>Avatar-main</first-layout>
+    <first-layout>Main</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -231,6 +232,9 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="txtMensaje" sid="587128537382136">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
         <object-folder name="System">
             <object-type name="Touch" sid="948977961617129">
@@ -278,10 +282,12 @@
     </object-folder>
     <families />
     <layout-folder>
-        <layout>Avatar-main.xml</layout>
+        <layout>Main.xml</layout>
+        <layout>Mensaje.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>eAvatar-main.xml</event-sheet>
+        <event-sheet>eMain.xml</event-sheet>
+        <event-sheet>eMensaje.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Function" uid="0" />

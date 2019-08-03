@@ -1,0 +1,879 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>eMain</name>
+    <events>
+        <variable constant="0" name="tipoTraje" sid="107500820395788" static="0" type="text"></variable>
+        <variable constant="0" name="urlRequest" sid="347718486553086" static="0" type="text"></variable>
+        <variable constant="0" name="idUsr" sid="210024116486443" static="0" type="text"></variable>
+        <variable comment="m: Masculino - f: Femenino" constant="0" name="sexo" sid="327830480643913" static="0" type="text"></variable>
+        <variable constant="0" name="isFinLista" sid="654288113613225" static="0" type="number">0</variable>
+        <variable comment="0 falso / 1 verdero" constant="0" name="isInicioLista" sid="901388738268504" static="0" type="number">0</variable>
+        <variable constant="0" name="tipoAvatar" sid="161729942656353" static="0" type="number">0</variable>
+        <event-group description="" sid="370034331693827" title="Setup_main">
+            <sub-events>
+                <event-block sid="250151715630644">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="113989134144720" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="939347095797292" type="System">
+                            <param id="0" name="Variable">isFinLista</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="560680179915752" type="System">
+                            <param id="0" name="Variable">isInicioLista</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action disabled="1" id="-9" name="Set value" sid="713440524080848" type="System">
+                            <param id="0" name="Variable">idUsr</param>
+                            <param id="1" name="Value">&quot;felipe@correo.de&quot;</param>
+                        </action>
+                        <action disabled="1" id="-9" name="Set value" sid="601693162784247" type="System">
+                            <param id="0" name="Variable">sexo</param>
+                            <param id="1" name="Value">&quot;m&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="490305569017833" type="System">
+                            <param id="0" name="Variable">sexo</param>
+                            <param id="1" name="Value">WebStorage.SessionValue(&quot;sexo&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="949714379645104" type="System">
+                            <param id="0" name="Variable">idUsr</param>
+                            <param id="1" name="Value">WebStorage.SessionValue(&quot;id_usr&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="926219890209224" type="System">
+                            <param id="0" name="Variable">tipoTraje</param>
+                            <param id="1" name="Value">WebStorage.SessionValue(&quot;tipo_traje&quot;)</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="912776349544432" type="System">
+                            <param id="0" name="Group name">&quot;Validar_acceso&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="704634817361514" title="Desplazar">
+            <sub-events>
+                <event-block sid="882263141604584">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="817773526791046" type="Touch">
+                            <param id="0" name="Object">btnDerecho</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="337587832922133" type="System">
+                            <param id="0" name="Variable">isInicioLista</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="843930237249445" type="System">
+                            <param id="0" name="Variable">isFinLista</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="514909169987250" type="avatar1">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="366584628671753" type="avatar2">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="520856318638070" type="avatar3">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="587532738108166" type="avatar4">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="486226379386159" type="avatar5">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="167018979354396">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="356394245277479" type="Touch">
+                            <param id="0" name="Object">btnIzquierdo</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="296799681707628" type="System">
+                            <param id="0" name="Variable">isFinLista</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="105122096253084" type="System">
+                            <param id="0" name="Variable">isInicioLista</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="774420845997067" type="avatar1">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="224274584156052" type="avatar2">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="746782513306027" type="avatar3">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="126805296129672" type="avatar4">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="303384342156125" type="avatar5">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="973361871378019" title="Resaltar_activo">
+            <sub-events>
+                <event-block sid="737404885504110">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="602515201500815" type="snsActivo">
+                            <param id="0" name="Object">avatar1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="552984909221858">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="817986246079409" type="luz">
+                                    <param id="0" name="Unique ID">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="955313056475944" type="System">
+                                    <param id="0" name="Variable">tipoAvatar</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="932182624760398" type="luz">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="915681929930158" type="avatar1">
+                                    <param id="0" name="Scale">1.1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="854545505716492">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="513611284267984" type="snsActivo">
+                            <param id="0" name="Object">avatar1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="648846499108977">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="941483546880673" type="luz">
+                                    <param id="0" name="Unique ID">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="270380382444219" type="luz">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="119309397337961" type="avatar1">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="603980102053866">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="453368978584850" type="snsActivo">
+                            <param id="0" name="Object">avatar2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="251270802258998">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="594869848317048" type="luz">
+                                    <param id="0" name="Unique ID">11</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="531530622198745" type="System">
+                                    <param id="0" name="Variable">tipoAvatar</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="721911159987121" type="luz">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="618767701099366" type="avatar2">
+                                    <param id="0" name="Scale">1.1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="592880145813466">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="611855795452919" type="snsActivo">
+                            <param id="0" name="Object">avatar2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="277556971248887">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="933271772338218" type="luz">
+                                    <param id="0" name="Unique ID">11</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="805525860007104" type="luz">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="658402076283875" type="avatar2">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="344371135143863">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="685335777307881" type="snsActivo">
+                            <param id="0" name="Object">avatar3</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="530319619749801">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="833708716120340" type="luz">
+                                    <param id="0" name="Unique ID">12</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="878333074032143" type="System">
+                                    <param id="0" name="Variable">tipoAvatar</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="866428796847597" type="luz">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="557320465935290" type="avatar3">
+                                    <param id="0" name="Scale">1.1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="130411791361245">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="715528218777031" type="snsActivo">
+                            <param id="0" name="Object">avatar3</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="748850025010829">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="738766403690515" type="luz">
+                                    <param id="0" name="Unique ID">12</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="902999112550330" type="luz">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="635569919096126" type="avatar3">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="171072783352544">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="390914422865734" type="snsActivo">
+                            <param id="0" name="Object">avatar4</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="854839985065370">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="251904838278915" type="luz">
+                                    <param id="0" name="Unique ID">13</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="952439352044369" type="System">
+                                    <param id="0" name="Variable">tipoAvatar</param>
+                                    <param id="1" name="Value">4</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="681969541145366" type="luz">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="621112498291890" type="avatar4">
+                                    <param id="0" name="Scale">1.1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="497377618884742">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="314753622666898" type="snsActivo">
+                            <param id="0" name="Object">avatar4</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="646428029931189">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="314823456157206" type="luz">
+                                    <param id="0" name="Unique ID">13</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="857142795764919" type="luz">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="223090799999658" type="avatar4">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="505764884054992">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="365305566801914" type="snsActivo">
+                                    <param id="0" name="Object">avatar5</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="452078321029160">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="574335904629669" type="luz">
+                                            <param id="0" name="Unique ID">38</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="233481624836558" type="System">
+                                            <param id="0" name="Variable">tipoAvatar</param>
+                                            <param id="1" name="Value">5</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="999398289664453" type="luz">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="9" name="Set scale" sid="544485612243324" type="avatar5">
+                                            <param id="0" name="Scale">1.1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="810331607025429">
+                            <conditions>
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="797085800634655" type="snsActivo">
+                                    <param id="0" name="Object">avatar5</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="275111459805673">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="984598877079063" type="luz">
+                                            <param id="0" name="Unique ID">38</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="286682195715072" type="luz">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="9" name="Set scale" sid="304947399542760" type="avatar5">
+                                            <param id="0" name="Scale">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Cuando se llega al elemento 0 o se llega al ultimo elemento de los avatar se desactivan los botones de desplazamiento para evitar que se pierdan en pantalla los avatar" sid="759399647716988" title="Verificar_extremos_lista">
+            <sub-events>
+                <event-block sid="123216584514055">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="150553843693428" type="snsAvatar1">
+                            <param id="0" name="Object">avatar1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="558593006797813" type="System">
+                            <param id="0" name="Variable">isInicioLista</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="259747770154587">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="631654328087678" type="snsAvatarUltimo">
+                            <param id="0" name="Object">avatar5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="488813566080741" type="System">
+                            <param id="0" name="Variable">isFinLista</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="952993258919362" title="Determinar_genero">
+            <sub-events>
+                <event-block sid="136355492019167">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="481464708171595" type="System">
+                            <param id="0" name="Variable">sexo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;m&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="489211856337700" type="avatar1">
+                            <param id="0" name="Animation">&quot;masc&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="253613970064217" type="avatar2">
+                            <param id="0" name="Animation">&quot;masc&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="754247087537024" type="avatar3">
+                            <param id="0" name="Animation">&quot;masc&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="514274493264459" type="avatar4">
+                            <param id="0" name="Animation">&quot;masc&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="427172907758895" type="avatar5">
+                            <param id="0" name="Animation">&quot;masc&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="279210052991571">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="661898029567275" type="System">
+                            <param id="0" name="Variable">sexo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;f&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="168415400291527" type="avatar1">
+                            <param id="0" name="Animation">&quot;fem&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="677831416745848" type="avatar2">
+                            <param id="0" name="Animation">&quot;fem&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="874269199094890" type="avatar3">
+                            <param id="0" name="Animation">&quot;fem&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="617359785647300" type="avatar4">
+                            <param id="0" name="Animation">&quot;fem&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="793522089028026" type="avatar5">
+                            <param id="0" name="Animation">&quot;fem&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="726087135606376" title="Enviar_Datos_ajax_Salir_A_Menu">
+            <sub-events>
+                <event-block sid="339053854454359">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="323450968362832" type="Touch">
+                            <param id="0" name="Object">btnGoMenu</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="930443598126592" type="System">
+                            <param id="0" name="Variable">urlRequest</param>
+                            <param id="1" name="Value">&quot;http://localhost/Confe2/ws/set_avatar.php?id_usr=&quot;&amp; idUsr&amp;&quot;&amp;tipo_avatar=&quot;&amp;tipoAvatar&amp;&quot;&amp;tipo_traje=nulo&quot;</param>
+                        </action>
+                        <action id="1" name="Set session value" sid="172456295863565" type="WebStorage">
+                            <param id="0" name="Key">&quot;tipo_avatar&quot;</param>
+                            <param id="1" name="Value">tipoAvatar</param>
+                        </action>
+                        <action id="0" name="Request URL" sid="843700634486011" type="AJAX">
+                            <param id="0" name="Tag">&quot;envioTipoAvatar&quot;</param>
+                            <param id="1" name="URL">urlRequest</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="761111898022010" type="btnGoMenu">
+                            <param id="0" name="X">-500</param>
+                            <param id="1" name="Y">-500</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="707360189622975" type="System">
+                            <param id="0" name="Layer">&quot;shadows&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="978196175310211" type="txtEspere">
+                            <param id="0" name="Animation">&quot;success&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="217797212618550" type="System">
+                            <param id="0" name="Layer">&quot;texts&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="788400771675197">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="399370651165532" type="AJAX">
+                            <param id="0" name="Tag">&quot;envioTipoAvatar&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="676264411189710" type="System">
+                            <param id="0" name="Variable">urlRequest</param>
+                            <param id="1" name="Value">&quot;Enviado&quot;</param>
+                        </action>
+                        <action id="7" name="Go to URL" sid="719433379246047" type="Browser">
+                            <param id="0" name="URL">&quot;http://localhost/Confe2/Build/modulos/menu/index.html&quot;</param>
+                            <param id="1" name="Target">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="194575266602660">
+                    <conditions>
+                        <condition id="1" name="On error" sid="213518652883035" type="AJAX">
+                            <param id="0" name="Tag">&quot;envioTipoAvatar&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="922037253609788" type="System">
+                            <param id="0" name="Variable">urlRequest</param>
+                            <param id="1" name="Value">&quot;Error&quot;</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="194189501444839" type="System">
+                            <param id="0" name="Layer">&quot;shadows&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="998097992337404" type="txtEspere">
+                            <param id="0" name="Animation">&quot;error&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="249362060001615" type="System">
+                            <param id="0" name="Layer">&quot;texts&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="899473474610485" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="7" name="Go to URL" sid="321695878340116" type="Browser">
+                            <param id="0" name="URL">&quot;http://localhost/Confe2/Build/modulos/menu/index.html&quot;</param>
+                            <param id="1" name="Target">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="290917641231055" title="Validar_acceso">
+            <sub-events>
+                <event-block sid="348852236533191">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="869187397965474" type="System">
+                            <param id="0" name="Variable">tipoTraje</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;hombre1&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="922944764824809" type="System">
+                            <param id="0" name="Group name">&quot;Validar_acceso&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="590156642584207" type="System">
+                            <param id="0" name="Layout">Mensaje</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="232965505819733">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="253646224262937" type="System">
+                            <param id="0" name="Variable">tipoTraje</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;hombre2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="969509206693749" type="System">
+                            <param id="0" name="Group name">&quot;Validar_acceso&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="340465516269276" type="System">
+                            <param id="0" name="Layout">Mensaje</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="366634777961158">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="359282905572607" type="System">
+                            <param id="0" name="Variable">tipoTraje</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;hombre3&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="344706443571715" type="System">
+                            <param id="0" name="Group name">&quot;Validar_acceso&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="539911452521285" type="System">
+                            <param id="0" name="Layout">Mensaje</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="864293062953952">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="987319907315674" type="System">
+                            <param id="0" name="Variable">tipoTraje</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;hombre4&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="990990123570012" type="System">
+                            <param id="0" name="Group name">&quot;Validar_acceso&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="739245344298493" type="System">
+                            <param id="0" name="Layout">Mensaje</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="652660568940760">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="762510607290072" type="System">
+                            <param id="0" name="Variable">tipoTraje</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;mujer1&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="392262183396261" type="System">
+                            <param id="0" name="Group name">&quot;Validar_acceso&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="485255595517321" type="System">
+                            <param id="0" name="Layout">Mensaje</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="465459570155024">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="918703502089893" type="System">
+                            <param id="0" name="Variable">tipoTraje</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;mujer2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="396029863482168" type="System">
+                            <param id="0" name="Group name">&quot;Validar_acceso&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="636427683391878" type="System">
+                            <param id="0" name="Layout">Mensaje</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="611538156816300">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="598292557968849" type="System">
+                            <param id="0" name="Variable">tipoTraje</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;mujer3&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="507639287565412" type="System">
+                            <param id="0" name="Group name">&quot;Validar_acceso&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="137595992182215" type="System">
+                            <param id="0" name="Layout">Mensaje</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="630947338635878">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="350806326528830" type="System">
+                            <param id="0" name="Variable">tipoTraje</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;mujer4&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="277416699479841" type="System">
+                            <param id="0" name="Group name">&quot;Validar_acceso&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="656486135559322" type="System">
+                            <param id="0" name="Layout">Mensaje</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="853962733187007">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="288680843897297" type="System">
+                            <param id="0" name="Variable">tipoTraje</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;mujerHumilde1&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="439315790157722" type="System">
+                            <param id="0" name="Group name">&quot;Validar_acceso&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="480385836523671" type="System">
+                            <param id="0" name="Layout">Mensaje</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="897955318032617">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="714221487309869" type="System">
+                            <param id="0" name="Variable">tipoTraje</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;mujerHumilde2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="360255025324009" type="System">
+                            <param id="0" name="Group name">&quot;Validar_acceso&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="963267459106109" type="System">
+                            <param id="0" name="Layout">Mensaje</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="330565637879632">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="705777093205817" type="System">
+                            <param id="0" name="Variable">tipoTraje</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;mujerHumilde3&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="638228993319773" type="System">
+                            <param id="0" name="Group name">&quot;Validar_acceso&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="513908045512453" type="System">
+                            <param id="0" name="Layout">Mensaje</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="479027643874982">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="212739373228642" type="System">
+                            <param id="0" name="Variable">tipoTraje</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;mujerHumilde4&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="547649113889300" type="System">
+                            <param id="0" name="Group name">&quot;Validar_acceso&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="602544675055034" type="System">
+                            <param id="0" name="Layout">Mensaje</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="519311736372688">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="769202184342078" type="System">
+                            <param id="0" name="Variable">tipoTraje</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;hombreHumilde1&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="108849834760249" type="System">
+                            <param id="0" name="Group name">&quot;Validar_acceso&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="522991634503259" type="System">
+                            <param id="0" name="Layout">Mensaje</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="918951474600905">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="873508865223756" type="System">
+                            <param id="0" name="Variable">tipoTraje</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;hombreHumilde2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="954587119207454" type="System">
+                            <param id="0" name="Group name">&quot;Validar_acceso&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="348352096486077" type="System">
+                            <param id="0" name="Layout">Mensaje</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="348281653424905">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="162907352952104" type="System">
+                            <param id="0" name="Variable">tipoTraje</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;hombreHumilde3&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="275133065886949" type="System">
+                            <param id="0" name="Group name">&quot;Validar_acceso&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="119903379487843" type="System">
+                            <param id="0" name="Layout">Mensaje</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="989621294947105">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="260530518581343" type="System">
+                            <param id="0" name="Variable">tipoTraje</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;hombreHumilde4&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="294594597106011" type="System">
+                            <param id="0" name="Group name">&quot;Validar_acceso&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="220818866279541" type="System">
+                            <param id="0" name="Layout">Mensaje</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
