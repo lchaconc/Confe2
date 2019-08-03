@@ -8,7 +8,7 @@
     <author-website>http://</author-website>
     <app-id>com.solaris.confe</app-id>
     <unique-id>1oe5m24r5irl4</unique-id>
-    <saved-with-version>26500</saved-with-version>
+    <saved-with-version>26900</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
@@ -636,8 +636,13 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="cow" sid="660107163587294">
+            <object-type name="vacaCafe" sid="660107163587294">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="colision" sid="465263939551193" type="boolean" />
+                    <instance-variable name="activoComida" sid="107700677674735" type="boolean" />
+                    <instance-variable name="activoOrdenar" sid="596685473286100" type="boolean" />
+                </instance-variables>
                 <animation-folder>
                     <animation framecount="150" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="472015088811572" speed="25">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Desktop\recursos_CONFE\assetsfinales-20190418T001056Z-001\Animaciones\vacaparda\vaca10001.png">
@@ -1856,7 +1861,7 @@
                 </behaviors>
                 <texture original-source="C:\Users\mima\Desktop\CONFE\granja128w\granjafence128.png" />
             </object-type>
-            <object-type name="cow2" sid="325519050870160">
+            <object-type name="vacaBlanca" sid="325519050870160">
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="colision" sid="242549258316617" type="boolean" />
@@ -5528,6 +5533,51 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="monedaOro" sid="852968079664638">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="542233196980267" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Granja\Objetos\monedas.png">
+                            <collision-poly>
+                                <point x="0.120419" y="0.125683" />
+                                <point x="0.5" y="0.0546448" />
+                                <point x="0.719895" y="0.29235" />
+                                <point x="0.971204" y="0.5" />
+                                <point x="0.897906" y="0.893443" />
+                                <point x="0.5" y="0.961749" />
+                                <point x="0.0366492" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="monedasPlata" sid="526221114769942">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="805283306506075" speed="5">
+                        <frame duration="1" hotspotX="0.504" hotspotY="0.504" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Granja\Objetos\monedas compra.png">
+                            <collision-poly>
+                                <point x="0.104" y="0.104" />
+                                <point x="0.496" y="0.032" />
+                                <point x="0.704" y="0.296" />
+                                <point x="0.968" y="0.496" />
+                                <point x="0.888" y="0.888" />
+                                <point x="0.496" y="0.968" />
+                                <point x="0.296" y="0.704" />
+                                <point x="0.032" y="0.496" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="jesus" sid="194553131822561">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="867494436945436" speed="5">
+                        <frame duration="1" hotspotX="0.503906" hotspotY="0.503906" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Menu\sandalias\Asset 58@2x.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="inventario">
             <object-type name="inv_axe" sid="734554926233979">
@@ -5648,14 +5698,6 @@
             </object-type>
             <object-type name="txtConsignas" sid="633791259052584">
                 <plugin id="Text" />
-            </object-type>
-            <object-type name="jesus" sid="194553131822561">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="867494436945436" speed="5">
-                        <frame duration="1" hotspotX="0.50303" hotspotY="0.50303" original-source="C:\Users\logan24\Desktop\assets\jesus.png" />
-                    </animation>
-                </animation-folder>
             </object-type>
             <object-type name="txtVisorDebug" sid="905191564860653">
                 <plugin id="Text" />
@@ -5806,6 +5848,25 @@
                                 <point x="0.5" y="1" />
                                 <point x="0.03407" y="0.898352" />
                                 <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="txtMisionGeneral" sid="696505562493031">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="261919644696348" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502075" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Granja\Textos\misiongranja.png">
+                            <collision-poly>
+                                <point x="0.00776398" y="0.0414938" />
+                                <point x="0.5" y="0.360996" />
+                                <point x="0.97205" y="0.149378" />
+                                <point x="0.96972" y="0.497925" />
+                                <point x="0.913043" y="0.53527" />
+                                <point x="0.5" y="0.908714" />
+                                <point x="0.0807453" y="0.568465" />
+                                <point x="0.0248447" y="0.497925" />
                             </collision-poly>
                         </frame>
                     </animation>

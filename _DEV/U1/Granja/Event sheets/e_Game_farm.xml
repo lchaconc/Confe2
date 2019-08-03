@@ -4,7 +4,7 @@
     <name>e_Game_farm</name>
     <events>
         <variable comment="ultima direccion registrada. Funciona con el método desplazaraAtras" constant="0" name="orientacionActual" sid="735267580446441" static="0" type="text">null</variable>
-        <variable constant="1" name="URLGUARDARAVANCE" sid="923403895803467" static="0" type="text">https://elpatioviveros.com/test/confe_ws/set_avance_usuario.php?</variable>
+        <variable constant="1" name="URLGUARDARAVANCE" sid="923403895803467" static="0" type="text">http://localhost/Confe2/ws/set_avance_usuario.php?</variable>
         <variable constant="0" name="status" sid="136760279146205" static="0" type="text">nulo</variable>
         <event-group description="" sid="390927723385015" title="mainChar">
             <sub-events>
@@ -317,7 +317,7 @@
                             <param id="0" name="Instance variable">colision</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="308153252407650" type="System">
-                            <param id="0" name="Variable">progreso</param>
+                            <param id="0" name="Variable">avance</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
@@ -393,7 +393,7 @@
                             <param id="0" name="Instance variable">colision</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="816116221873263" type="System">
-                            <param id="0" name="Variable">progreso</param>
+                            <param id="0" name="Variable">avance</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
@@ -452,7 +452,7 @@
                             <param id="0" name="Instance variable">colision</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="826763012124751" type="System">
-                            <param id="0" name="Variable">progreso</param>
+                            <param id="0" name="Variable">avance</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
                         </condition>
@@ -503,11 +503,11 @@
                         <condition id="-8" name="Is boolean instance variable set" sid="960852515199768" type="inv_heno">
                             <param id="0" name="Instance variable">activo</param>
                         </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="849870773411598" type="cow2">
+                        <condition id="-8" name="Is boolean instance variable set" sid="849870773411598" type="vacaCafe">
                             <param id="0" name="Instance variable">colision</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="678973825345922" type="System">
-                            <param id="0" name="Variable">progreso</param>
+                            <param id="0" name="Variable">avance</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
                         </condition>
@@ -527,7 +527,7 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;vaca&quot;</param>
                         </action>
-                        <action id="-13" name="Set boolean" sid="210906625734951" type="cow2">
+                        <action id="-13" name="Set boolean" sid="210906625734951" type="vacaCafe">
                             <param id="0" name="Instance variable">activoComida</param>
                             <param id="1" name="Value">1</param>
                         </action>
@@ -557,7 +557,7 @@
                             <param id="0" name="Instance variable">colision</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="503841046786061" type="System">
-                            <param id="0" name="Variable">progreso</param>
+                            <param id="0" name="Variable">avance</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">3</param>
                         </condition>
@@ -614,7 +614,7 @@
                             <param id="0" name="Instance variable">colision</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="164088059101899" type="System">
-                            <param id="0" name="Variable">progreso</param>
+                            <param id="0" name="Variable">avance</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">3</param>
                         </condition>
@@ -795,7 +795,7 @@
                                     <param id="0" name="Instance variable">activo</param>
                                 </condition>
                                 <condition id="-14" name="Compare variable" sid="670944900029126" type="System">
-                                    <param id="0" name="Variable">progreso</param>
+                                    <param id="0" name="Variable">avance</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">3</param>
                                 </condition>
@@ -855,11 +855,11 @@
                         <condition id="-8" name="Is boolean instance variable set" sid="448879778684880" type="inv_balde">
                             <param id="0" name="Instance variable">activo</param>
                         </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="955419682009929" type="cow2">
+                        <condition id="-8" name="Is boolean instance variable set" sid="955419682009929" type="vacaCafe">
                             <param id="0" name="Instance variable">colision</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="383307278342260" type="System">
-                            <param id="0" name="Variable">progreso</param>
+                            <param id="0" name="Variable">avance</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">4</param>
                         </condition>
@@ -877,7 +877,7 @@
                         <action id="-16" name="Wait" sid="969281765062529" type="System">
                             <param id="0" name="Seconds">0.5</param>
                         </action>
-                        <action id="-13" name="Set boolean" sid="476641152136501" type="cow2">
+                        <action id="-13" name="Set boolean" sid="476641152136501" type="vacaCafe">
                             <param id="0" name="Instance variable">activoOrdenar</param>
                             <param id="1" name="Value">1</param>
                         </action>
@@ -907,7 +907,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="700899956024491" type="cow2">
+                                <action id="-15" name="Set visible" sid="700899956024491" type="vacaCafe">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="613369780721921" type="characterFem">
@@ -936,7 +936,7 @@
                                 <action id="-16" name="Wait" sid="212565664492337" type="System">
                                     <param id="0" name="Seconds">5</param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="682458813389076" type="cow2">
+                                <action id="-15" name="Set visible" sid="682458813389076" type="vacaCafe">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="706386813160856" type="animacionOrdenada">
@@ -953,7 +953,7 @@
                                 <condition id="-22" name="Else" sid="585416288056742" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="760290220999980" type="cow2">
+                                <action id="-15" name="Set visible" sid="760290220999980" type="vacaCafe">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="708943614929041" type="characterMasc">
@@ -982,7 +982,7 @@
                                 <action id="-16" name="Wait" sid="169523610468135" type="System">
                                     <param id="0" name="Seconds">5</param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="838000881798569" type="cow2">
+                                <action id="-15" name="Set visible" sid="838000881798569" type="vacaCafe">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="253069466351665" type="animacionOrdenada">
@@ -1009,7 +1009,7 @@
                             <param id="0" name="Instance variable">colision</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="311456649344919" type="System">
-                            <param id="0" name="Variable">progreso</param>
+                            <param id="0" name="Variable">avance</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">4</param>
                         </condition>
@@ -1063,7 +1063,7 @@
                             <param id="0" name="Instance variable">colision</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="449170763148994" type="System">
-                            <param id="0" name="Variable">progreso</param>
+                            <param id="0" name="Variable">avance</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">5</param>
                         </condition>
@@ -1135,7 +1135,7 @@
                             <param id="0" name="Instance variable">colision</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="180454048701700" type="System">
-                            <param id="0" name="Variable">progreso</param>
+                            <param id="0" name="Variable">avance</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">5</param>
                         </condition>
@@ -1201,7 +1201,7 @@
                             <param id="0" name="Instance variable">colision</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="990662634282832" type="System">
-                            <param id="0" name="Variable">progreso</param>
+                            <param id="0" name="Variable">avance</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
@@ -1469,7 +1469,7 @@
                 <event-block sid="835550516773034">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="149982312278977" type="sprControl">
-                            <param id="0" name="Object">cow2</param>
+                            <param id="0" name="Object">vacaCafe</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -1481,7 +1481,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-13" name="Set boolean" sid="484225064112230" type="cow2">
+                                <action id="-13" name="Set boolean" sid="484225064112230" type="vacaCafe">
                                     <param id="0" name="Instance variable">colision</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
@@ -1495,7 +1495,7 @@
                             <conditions>
                                 <condition id="-22" name="Else" sid="578283153097058" type="System" />
                                 <condition id="-14" name="Compare variable" sid="827922565181708" type="System">
-                                    <param id="0" name="Variable">progreso</param>
+                                    <param id="0" name="Variable">avance</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">2</param>
                                 </condition>
@@ -1516,7 +1516,7 @@
                 <event-block sid="426568949684967">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="563694151636760" type="sprControl">
-                            <param id="0" name="Object">cow2</param>
+                            <param id="0" name="Object">vacaCafe</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -1528,7 +1528,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-13" name="Set boolean" sid="714526670353468" type="cow2">
+                                <action id="-13" name="Set boolean" sid="714526670353468" type="vacaCafe">
                                     <param id="0" name="Instance variable">colision</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
@@ -1542,7 +1542,7 @@
                             <conditions>
                                 <condition id="-22" name="Else" sid="885327071814538" type="System" />
                                 <condition id="-14" name="Compare variable" sid="414690682120311" type="System">
-                                    <param id="0" name="Variable">progreso</param>
+                                    <param id="0" name="Variable">avance</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">4</param>
                                 </condition>
@@ -1966,7 +1966,7 @@
                             <conditions>
                                 <condition id="-22" name="Else" sid="527182205610735" type="System" />
                                 <condition id="-14" name="Compare variable" sid="290333452395907" type="System">
-                                    <param id="0" name="Variable">progreso</param>
+                                    <param id="0" name="Variable">avance</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">2</param>
                                 </condition>
@@ -2013,7 +2013,7 @@
                             <conditions>
                                 <condition id="-22" name="Else" sid="127506104920592" type="System" />
                                 <condition id="-14" name="Compare variable" sid="423121346461647" type="System">
-                                    <param id="0" name="Variable">progreso</param>
+                                    <param id="0" name="Variable">avance</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">4</param>
                                 </condition>
@@ -2060,7 +2060,7 @@
                             <conditions>
                                 <condition id="-22" name="Else" sid="828465590043455" type="System" />
                                 <condition id="-14" name="Compare variable" sid="862741981156949" type="System">
-                                    <param id="0" name="Variable">progreso</param>
+                                    <param id="0" name="Variable">avance</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">5</param>
                                 </condition>
@@ -2537,6 +2537,10 @@
                             <param id="0" name="Layer">&quot;shadow&quot;</param>
                             <param id="1" name="Visibility">0</param>
                         </action>
+                        <action id="-4" name="Set layer visible" sid="534156845195718" type="System">
+                            <param id="0" name="Layer">&quot;textos&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
                         <action id="-3" name="Set position" sid="494364470447549" type="bgMisiones">
                             <param id="0" name="X">-800</param>
                             <param id="1" name="Y">-800</param>
@@ -2733,11 +2737,19 @@
                             <param id="0" name="Layer">&quot;shadow&quot;</param>
                             <param id="1" name="Visibility">1</param>
                         </action>
+                        <action id="-4" name="Set layer visible" sid="308677998535604" type="System">
+                            <param id="0" name="Layer">&quot;textos&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
                         <action id="-16" name="Wait" sid="824469259001426" type="System">
-                            <param id="0" name="Seconds">4</param>
+                            <param id="0" name="Seconds">3</param>
                         </action>
                         <action id="-4" name="Set layer visible" sid="220100242237656" type="System">
                             <param id="0" name="Layer">&quot;shadow&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="930095095276429" type="System">
+                            <param id="0" name="Layer">&quot;textos&quot;</param>
                             <param id="1" name="Visibility">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="830548155527258" type="System">
@@ -2751,8 +2763,8 @@
                             <param id="1" name="Tag (optional)">&quot;ambiente2&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="236879684431188" type="System">
-                            <param id="0" name="Variable">progreso</param>
-                            <param id="1" name="Value">progreso + 1</param>
+                            <param id="0" name="Variable">avance</param>
+                            <param id="1" name="Value">avance + 1</param>
                         </action>
                         <action id="0" name="Call function" sid="650563230888358" type="Function">
                             <param id="0" name="Name">&quot;ajaxGuardarDia&quot;</param>
@@ -2769,7 +2781,7 @@
                         <condition id="0" name="On function" sid="604234150398808" type="Function">
                             <param id="0" name="Name">&quot;papiroFinDia2&quot;</param>
                         </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="118848171172641" type="cow2">
+                        <condition id="-8" name="Is boolean instance variable set" sid="118848171172641" type="vacaBlanca">
                             <param id="0" name="Instance variable">activoComida</param>
                         </condition>
                         <condition id="-8" name="Is boolean instance variable set" sid="793423358296734" type="sensorHuerta">
@@ -2813,11 +2825,19 @@
                             <param id="0" name="Layer">&quot;shadow&quot;</param>
                             <param id="1" name="Visibility">1</param>
                         </action>
+                        <action id="-4" name="Set layer visible" sid="857270724136338" type="System">
+                            <param id="0" name="Layer">&quot;textos&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
                         <action id="-16" name="Wait" sid="492570452401823" type="System">
-                            <param id="0" name="Seconds">4</param>
+                            <param id="0" name="Seconds">3</param>
                         </action>
                         <action id="-4" name="Set layer visible" sid="474301697086612" type="System">
                             <param id="0" name="Layer">&quot;shadow&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="598123029989241" type="System">
+                            <param id="0" name="Layer">&quot;textos&quot;</param>
                             <param id="1" name="Visibility">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="579348906111394" type="System">
@@ -2831,8 +2851,8 @@
                             <param id="1" name="Tag (optional)">&quot;ambiente&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="655874126943404" type="System">
-                            <param id="0" name="Variable">progreso</param>
-                            <param id="1" name="Value">progreso + 1</param>
+                            <param id="0" name="Variable">avance</param>
+                            <param id="1" name="Value">avance + 1</param>
                         </action>
                         <action id="0" name="Call function" sid="930518358593460" type="Function">
                             <param id="0" name="Name">&quot;ajaxGuardarDia&quot;</param>
@@ -2893,11 +2913,19 @@
                             <param id="0" name="Layer">&quot;shadow&quot;</param>
                             <param id="1" name="Visibility">1</param>
                         </action>
+                        <action id="-4" name="Set layer visible" sid="796165666203962" type="System">
+                            <param id="0" name="Layer">&quot;textos&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
                         <action id="-16" name="Wait" sid="151838650467136" type="System">
-                            <param id="0" name="Seconds">5</param>
+                            <param id="0" name="Seconds">3</param>
                         </action>
                         <action id="-4" name="Set layer visible" sid="723195074689161" type="System">
                             <param id="0" name="Layer">&quot;shadow&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="551792294801201" type="System">
+                            <param id="0" name="Layer">&quot;textos&quot;</param>
                             <param id="1" name="Visibility">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="588014324506342" type="System">
@@ -2911,8 +2939,8 @@
                             <param id="1" name="Tag (optional)">&quot;ambiente&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="320298019335986" type="System">
-                            <param id="0" name="Variable">progreso</param>
-                            <param id="1" name="Value">progreso + 1</param>
+                            <param id="0" name="Variable">avance</param>
+                            <param id="1" name="Value">avance + 1</param>
                         </action>
                         <action id="0" name="Call function" sid="863820661068163" type="Function">
                             <param id="0" name="Name">&quot;ajaxGuardarDia&quot;</param>
@@ -2932,7 +2960,7 @@
                         <condition id="-8" name="Is boolean instance variable set" sid="742730558851679" type="sensorHuerta">
                             <param id="0" name="Instance variable">activoRegado2</param>
                         </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="495308842386751" type="cow2">
+                        <condition id="-8" name="Is boolean instance variable set" sid="495308842386751" type="vacaBlanca">
                             <param id="0" name="Instance variable">activoOrdenar</param>
                         </condition>
                     </conditions>
@@ -2973,11 +3001,19 @@
                             <param id="0" name="Layer">&quot;shadow&quot;</param>
                             <param id="1" name="Visibility">1</param>
                         </action>
+                        <action id="-4" name="Set layer visible" sid="873406315807782" type="System">
+                            <param id="0" name="Layer">&quot;textos&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
                         <action id="-16" name="Wait" sid="602588738958943" type="System">
                             <param id="0" name="Seconds">3</param>
                         </action>
                         <action id="-4" name="Set layer visible" sid="404970295255174" type="System">
                             <param id="0" name="Layer">&quot;shadow&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="636761367372565" type="System">
+                            <param id="0" name="Layer">&quot;textos&quot;</param>
                             <param id="1" name="Visibility">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="744077109815703" type="System">
@@ -2991,8 +3027,8 @@
                             <param id="1" name="Tag (optional)">&quot;ambiente&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="755897015072447" type="System">
-                            <param id="0" name="Variable">progreso</param>
-                            <param id="1" name="Value">progreso + 1</param>
+                            <param id="0" name="Variable">avance</param>
+                            <param id="1" name="Value">avance + 1</param>
                         </action>
                         <action id="0" name="Call function" sid="500696524619581" type="Function">
                             <param id="0" name="Name">&quot;ajaxGuardarDia&quot;</param>
@@ -3057,11 +3093,19 @@
                             <param id="0" name="Layer">&quot;shadow&quot;</param>
                             <param id="1" name="Visibility">1</param>
                         </action>
+                        <action id="-4" name="Set layer visible" sid="137509484442522" type="System">
+                            <param id="0" name="Layer">&quot;textos&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
                         <action id="-16" name="Wait" sid="778489662981236" type="System">
                             <param id="0" name="Seconds">3</param>
                         </action>
                         <action id="-4" name="Set layer visible" sid="710087648999780" type="System">
                             <param id="0" name="Layer">&quot;shadow&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="504480494872239" type="System">
+                            <param id="0" name="Layer">&quot;textos&quot;</param>
                             <param id="1" name="Visibility">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="616487963905179" type="System">
@@ -3075,8 +3119,8 @@
                             <param id="1" name="Tag (optional)">&quot;ambiente&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="734287787070376" type="System">
-                            <param id="0" name="Variable">progreso</param>
-                            <param id="1" name="Value">progreso + 1</param>
+                            <param id="0" name="Variable">avance</param>
+                            <param id="1" name="Value">avance + 1</param>
                         </action>
                         <action id="0" name="Call function" sid="110911606356278" type="Function">
                             <param id="0" name="Name">&quot;ajaxGuardarDia&quot;</param>
@@ -3188,18 +3232,6 @@
                         <condition id="-2" name="On start of layout" sid="703592176193939" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="136942028912433" type="System">
-                            <param id="0" name="Variable">progreso</param>
-                            <param id="1" name="Value">6</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="296430774468666" type="System">
-                            <param id="0" name="Variable">idUsuario</param>
-                            <param id="1" name="Value">&quot;felipe@correo.de&quot;</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="351719777995426" type="System">
-                            <param id="0" name="Variable">sexo</param>
-                            <param id="1" name="Value">&quot;m&quot;</param>
-                        </action>
                         <action id="0" name="Play" sid="869889608108873" type="Audio">
                             <param id="0" name="Audio file">amazonas</param>
                             <param id="2" name="Loop">1</param>
@@ -3214,11 +3246,8 @@
                             <param id="0" name="Group name">&quot;activar_dia_por_progreso&quot;</param>
                             <param id="1" name="State">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="524833769036517" type="compradores">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
                         <action id="0" name="Set text" sid="840193910797994" type="txtVisorDebug">
-                            <param id="0" name="Text">progreso</param>
+                            <param id="0" name="Text">avance</param>
                         </action>
                     </actions>
                 </event-block>
@@ -3243,7 +3272,7 @@
                         </action>
                         <action id="0" name="Request URL" sid="582517534288729" type="AJAX">
                             <param id="0" name="Tag">&quot;seguimientoDia&quot;</param>
-                            <param id="1" name="URL">URLGUARDARAVANCE &amp; &quot;id_usuario=&quot;&amp; idUsuario &amp;&quot;  &amp;id_juego=granja01&quot; &amp; &quot;&amp;progreso=&quot; &amp; progreso</param>
+                            <param id="1" name="URL">URLGUARDARAVANCE &amp; &quot;id_usr=&quot;&amp; idUsr &amp;&quot;  &amp;id_juego=j01granja&quot; &amp; &quot;&amp;avance=&quot; &amp; avance</param>
                         </action>
                     </actions>
                 </event-block>
@@ -3268,6 +3297,10 @@
                         </action>
                         <action id="-4" name="Set layer visible" sid="486660322983143" type="System">
                             <param id="0" name="Layer">&quot;shadow&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="358112550817992" type="System">
+                            <param id="0" name="Layer">&quot;textos&quot;</param>
                             <param id="1" name="Visibility">1</param>
                         </action>
                         <action id="-3" name="Set position" sid="311987697166347" type="bgMisiones">
@@ -3307,6 +3340,10 @@
                             <param id="0" name="Layer">&quot;shadow&quot;</param>
                             <param id="1" name="Visibility">1</param>
                         </action>
+                        <action id="-4" name="Set layer visible" sid="629865691559160" type="System">
+                            <param id="0" name="Layer">&quot;textos&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
                         <action id="-3" name="Set position" sid="523881698935761" type="bgMisiones">
                             <param id="0" name="X">609</param>
                             <param id="1" name="Y">380</param>
@@ -3342,6 +3379,10 @@
                         </action>
                         <action id="-4" name="Set layer visible" sid="528915220079871" type="System">
                             <param id="0" name="Layer">&quot;shadow&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="972211144175898" type="System">
+                            <param id="0" name="Layer">&quot;textos&quot;</param>
                             <param id="1" name="Visibility">1</param>
                         </action>
                         <action id="-3" name="Set position" sid="782538929385861" type="bgMisiones">
@@ -3381,6 +3422,10 @@
                             <param id="0" name="Layer">&quot;shadow&quot;</param>
                             <param id="1" name="Visibility">1</param>
                         </action>
+                        <action id="-4" name="Set layer visible" sid="143122393061130" type="System">
+                            <param id="0" name="Layer">&quot;textos&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
                         <action id="-3" name="Set position" sid="956494293844846" type="bgMisiones">
                             <param id="0" name="X">609</param>
                             <param id="1" name="Y">380</param>
@@ -3416,6 +3461,10 @@
                         </action>
                         <action id="-4" name="Set layer visible" sid="859205355404625" type="System">
                             <param id="0" name="Layer">&quot;shadow&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="207185853778093" type="System">
+                            <param id="0" name="Layer">&quot;textos&quot;</param>
                             <param id="1" name="Visibility">1</param>
                         </action>
                         <action id="-3" name="Set position" sid="614450964229438" type="bgMisiones">
@@ -3455,6 +3504,10 @@
                             <param id="0" name="Layer">&quot;shadow&quot;</param>
                             <param id="1" name="Visibility">1</param>
                         </action>
+                        <action id="-4" name="Set layer visible" sid="878346414003194" type="System">
+                            <param id="0" name="Layer">&quot;textos&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
                         <action id="-3" name="Set position" sid="129572296811987" type="bgMisiones">
                             <param id="0" name="X">609</param>
                             <param id="1" name="Y">380</param>
@@ -3486,7 +3539,7 @@
                 <event-block sid="238978244471494">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="356874238067165" type="System">
-                            <param id="0" name="Variable">progreso</param>
+                            <param id="0" name="Variable">avance</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
@@ -3521,7 +3574,7 @@
                 <event-block sid="808814278373279">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="468944392353737" type="System">
-                            <param id="0" name="Variable">progreso</param>
+                            <param id="0" name="Variable">avance</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
                         </condition>
@@ -3556,7 +3609,7 @@
                 <event-block sid="407528685136556">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="599729916918497" type="System">
-                            <param id="0" name="Variable">progreso</param>
+                            <param id="0" name="Variable">avance</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">3</param>
                         </condition>
@@ -3599,7 +3652,7 @@
                 <event-block sid="171613325640108">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="888924375907231" type="System">
-                            <param id="0" name="Variable">progreso</param>
+                            <param id="0" name="Variable">avance</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">4</param>
                         </condition>
@@ -3638,7 +3691,7 @@
                 <event-block sid="194545177234435">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="783370412591206" type="System">
-                            <param id="0" name="Variable">progreso</param>
+                            <param id="0" name="Variable">avance</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">5</param>
                         </condition>
@@ -3681,7 +3734,7 @@
                 <event-block sid="591468458545826">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="730650028479583" type="System">
-                            <param id="0" name="Variable">progreso</param>
+                            <param id="0" name="Variable">avance</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">6</param>
                         </condition>
@@ -4513,15 +4566,15 @@
                                 <condition id="1" name="Is overlapping another object" sid="619746803171626" type="sprControl">
                                     <param id="0" name="Object">sResaltadoVaca</param>
                                 </condition>
-                                <condition id="-14" name="Pick by unique ID" sid="783495652413181" type="cow2">
+                                <condition id="-14" name="Pick by unique ID" sid="783495652413181" type="vacaBlanca">
                                     <param id="0" name="Unique ID">28</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="1" name="Set blend mode" sid="535369789430921" type="cow2">
+                                <action id="1" name="Set blend mode" sid="535369789430921" type="vacaBlanca">
                                     <param id="0" name="Blend mode">1</param>
                                 </action>
-                                <action disabled="1" id="9" name="Set scale" sid="307782244696087" type="cow2">
+                                <action disabled="1" id="9" name="Set scale" sid="307782244696087" type="vacaBlanca">
                                     <param id="0" name="Scale">1.4</param>
                                 </action>
                             </actions>
@@ -4529,15 +4582,15 @@
                         <event-block sid="295050481148511">
                             <conditions>
                                 <condition id="-22" name="Else" sid="762883440699195" type="System" />
-                                <condition id="-14" name="Pick by unique ID" sid="762246919060952" type="cow2">
+                                <condition id="-14" name="Pick by unique ID" sid="762246919060952" type="vacaBlanca">
                                     <param id="0" name="Unique ID">28</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="1" name="Set blend mode" sid="906907972860707" type="cow2">
+                                <action id="1" name="Set blend mode" sid="906907972860707" type="vacaBlanca">
                                     <param id="0" name="Blend mode">0</param>
                                 </action>
-                                <action disabled="1" id="9" name="Set scale" sid="592835216572101" type="cow2">
+                                <action disabled="1" id="9" name="Set scale" sid="592835216572101" type="vacaBlanca">
                                     <param id="0" name="Scale">1</param>
                                 </action>
                             </actions>
@@ -4906,6 +4959,5 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <comment></comment>
     </events>
 </c2eventsheet>

@@ -1183,13 +1183,18 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="cow" uid="56">
+                <instance type="vacaCafe" uid="56">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <colision>false</colision>
+                        <activoComida>false</activoComida>
+                        <activoOrdenar>false</activoOrdenar>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -2553,7 +2558,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="cow2" uid="28">
+                <instance type="vacaBlanca" uid="28">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2575,8 +2580,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2380</x>
-                        <y>175</y>
+                        <x>2496</x>
+                        <y>80</y>
                         <z>0</z>
                         <width>100</width>
                         <height>74</height>
@@ -3191,7 +3196,7 @@
                 </instance>
                 <instance type="comprador1" uid="163">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -3224,7 +3229,7 @@
                 </instance>
                 <instance type="comprador2" uid="166">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -3257,7 +3262,7 @@
                 </instance>
                 <instance type="comprador3" uid="169">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -3290,7 +3295,7 @@
                 </instance>
                 <instance type="comprador4" uid="161">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -4666,7 +4671,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="cow2" uid="124">
+                <instance type="vacaBlanca" uid="124">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -4700,18 +4705,23 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="cow" uid="167">
+                <instance type="vacaCafe" uid="167">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <colision>false</colision>
+                        <activoComida>false</activoComida>
+                        <activoOrdenar>false</activoOrdenar>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2158.831054688</x>
-                        <y>97.625595093</y>
+                        <x>2375</x>
+                        <y>157</y>
                         <z>0</z>
                         <width>90</width>
                         <height>65</height>
@@ -5239,7 +5249,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="cow2" uid="235">
+                <instance type="vacaBlanca" uid="235">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -6486,7 +6496,7 @@
                     <behavior-instances>
                         <behavior-instance type="Bullet">
                             <properties>
-                                <speed>400</speed>
+                                <speed>800</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>No</bounce-off-solids>
@@ -6953,7 +6963,7 @@
             <effects />
         </layer>
         <layer name="textos" sid="418486384728696">
-            <initially-visible>1</initially-visible>
+            <initially-visible>0</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
             <parallax>
