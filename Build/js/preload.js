@@ -1,5 +1,5 @@
 //Const URL servidor
-const urlGetEstadoJuegos = "https://elpatioviveros.com/test/confe_ws/get_estado_juegos.php?id_usr=";
+const urlGetEstadoJuegos = "http://localhost/Confe2/ws/get_estado_juegos.php?id_usr=";
 const urlGetObjetos = "http://localhost/Confe2/ws/get_objetos.php?id_usr=";
 
 
@@ -22,7 +22,14 @@ function setup () {
     console.log("tipoTraje", tipoTraje);   
 
     getJson(urlGetEstadoJuegos + idUsusario, function (data) {
-          guardarDatosSesion(data);            
+		console.log("estado juegos")
+          guardarDatosSesion(data); 
+		  
+		  //test	
+		  var activoRopero2 = sessionStorage.getItem("activo_c02ropero2");
+		  console.log("************activoRopero2", activoRopero2);
+		  
+		  
             getJson (urlGetObjetos + idUsusario, function (data) { 
               guardarDatosObjetos(data);
              window.location.assign("./modulos/menu/index.html");
@@ -55,6 +62,9 @@ function getJson(url, mCallBack ) {
 
 
 function guardarDatosSesion(array) {
+	
+	console.log(array);
+	
     const limite = array.length;
     for (let index = 0; index < limite; index++) {
         sessionStorage.setItem( "activo_" + array[index].id_juego,   array[index].activo );

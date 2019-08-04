@@ -10,9 +10,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="1">Game_farm</layout>
+        <layout active="1" order="1">Game_farm</layout>
         <layout order="2">Splash</layout>
-        <event-sheet active="1" order="0">e_Game_farm</event-sheet>
+        <event-sheet order="0">e_Game_farm</event-sheet>
+        <event-sheet order="3">e_Splash</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -30,12 +31,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="object-folder/logos/" />
         <folder expanded="0" path="object-folder/backgrounds/" />
         <folder expanded="0" path="object-folder/system/" />
-        <folder expanded="1" path="object-folder/btn/" />
+        <folder expanded="0" path="object-folder/btn/" />
         <folder expanded="0" path="object-folder/objects_4directions/" />
         <folder expanded="0" path="object-folder/inventario/" />
         <folder expanded="0" path="object-folder/texts/" />
         <folder expanded="0" path="object-folder/particulas/" />
         <folder expanded="0" path="object-folder/sensores/" />
+        <folder expanded="1" path="object-folder/Visores/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="0" path="file-folder/" />
@@ -162,5 +164,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/sDetenerModalMisiones/" />
         <folder expanded="1" path="animation-folder/sComp2Izq/" />
         <folder expanded="1" path="animation-folder/sComp2Der/" />
+        <folder expanded="1" path="animation-folder/statusQueso/" />
+        <folder expanded="1" path="animation-folder/statusHortaliza/" />
+        <folder expanded="1" path="animation-folder/statusMonedas/" />
+        <folder expanded="1" path="animation-folder/equis/" />
+        <folder expanded="1" path="animation-folder/cantMonedas/" />
+        <folder expanded="1" path="animation-folder/cantQueso/" />
+        <folder expanded="1" path="animation-folder/cantHortalizas/" />
     </folders-expanded>
 </c2uistate>

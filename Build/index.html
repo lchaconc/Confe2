@@ -24,9 +24,12 @@
     const urlGetAvatar = "http://localhost/Confe2/ws/get_avatar.php?id_usr="; 
 
         $(document).ready(function () {
+		sessionStorage.clear();
+		
             $("#btnIngresar").click(function (e) {
                 $(this).text("Cargando...");
-                $(this).prop("disabled", true);                
+                $(this).prop("disabled", true); 
+								
                 loadApp($("#selUsusario").val() );
             });
             

@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>ePreload</name>
     <events>
+        <variable constant="0" name="terminado_c02ropero2" sid="187359254102028" static="0" type="text"></variable>
         <variable constant="0" name="idUsr" sid="511059337815373" static="0" type="text"></variable>
         <variable constant="0" name="obj_sandalias" sid="447703612982633" static="0" type="text"></variable>
         <variable constant="0" name="activo_c02ropero2" sid="989497556330762" static="0" type="text"></variable>
@@ -26,6 +27,10 @@
                 <action disabled="1" id="-9" name="Set value" sid="702113058819088" type="System">
                     <param id="0" name="Variable">idUsr</param>
                     <param id="1" name="Value">&quot;felipe@correo.de&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="859768022967335" type="System">
+                    <param id="0" name="Variable">terminado_c02ropero2</param>
+                    <param id="1" name="Value">WebStorage.SessionValue(&quot;terminado_c02ropero2&quot;)</param>
                 </action>
                 <action id="-9" name="Set value" sid="495402256927030" type="System">
                     <param id="0" name="Variable">activo_c01ropero1</param>
