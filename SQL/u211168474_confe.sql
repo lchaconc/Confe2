@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 27-07-2019 a las 21:00:45
--- Versión del servidor: 5.7.21
--- Versión de PHP: 7.1.16
+-- Tiempo de generación: 08-08-2019 a las 14:00:31
+-- Versión del servidor: 5.7.19
+-- Versión de PHP: 5.6.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -81,6 +81,28 @@ INSERT INTO `estado_juegos` (`id_estado`, `id_grupo`, `id_usr`, `unidad`, `id_ju
 (7, 'moravia122', 'felipe@correo.de', 2, 'r0203bienaventuranzas', 'Bienaventuranzas', 'false', 0, 'false'),
 (8, 'moravia122', 'felipe@correo.de', 2, 'j0204flappybird', 'Falppy Bird', 'false', 0, 'false'),
 (9, 'moravia122', 'felipe@correo.de', 3, 'j0305acompanajesus', 'Acompaña a Jesús', 'false', 0, 'false');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `objetos`
+--
+
+DROP TABLE IF EXISTS `objetos`;
+CREATE TABLE IF NOT EXISTS `objetos` (
+  `id_objetos` int(11) NOT NULL AUTO_INCREMENT,
+  `id_usr` varchar(128) NOT NULL,
+  `etiqueta` varchar(64) NOT NULL,
+  `visible` varchar(32) NOT NULL,
+  PRIMARY KEY (`id_objetos`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `objetos`
+--
+
+INSERT INTO `objetos` (`id_objetos`, `id_usr`, `etiqueta`, `visible`) VALUES
+(1, 'felipe@correo.de', 'sandalias', 'true');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
