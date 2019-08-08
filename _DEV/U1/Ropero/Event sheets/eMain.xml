@@ -45,40 +45,42 @@
                             <param id="1" name="Value">&quot;felipe@correo.de&quot;</param>
                         </action>
                     </actions>
-                </event-block>
-                <event-block sid="233393533452375">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="724857690438558" type="System">
-                            <param id="0" name="Variable">sexo</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;m&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="151678530917642" type="Function">
-                            <param id="0" name="Name">&quot;AcomodarRopaOrigenHombre&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="0" name="Call function" sid="739894015901048" type="Function">
-                            <param id="0" name="Name">&quot;caracteristicasHombre&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="649838264476287">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="372454884859219" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="131741009346651" type="Function">
-                            <param id="0" name="Name">&quot;AcomodarRopaOrigenMujer&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="0" name="Call function" sid="261511193258767" type="Function">
-                            <param id="0" name="Name">&quot;caracteristicasMujer&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
+                    <sub-events>
+                        <event-block sid="454583579948852">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="200892752708303" type="System">
+                                    <param id="0" name="Variable">sexo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;m&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="151678530917642" type="Function">
+                                    <param id="0" name="Name">&quot;AcomodarRopaOrigenHombre&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="739894015901048" type="Function">
+                                    <param id="0" name="Name">&quot;caracteristicasHombre&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="705449809716451">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="246001124854714" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="131741009346651" type="Function">
+                                    <param id="0" name="Name">&quot;AcomodarRopaOrigenMujer&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="261511193258767" type="Function">
+                                    <param id="0" name="Name">&quot;caracteristicasMujer&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -319,10 +321,6 @@
                             <param id="0" name="Tag">&quot;requestAvatar&quot;</param>
                             <param id="1" name="URL">ajaxRequest</param>
                         </action>
-                        <action id="0" name="Request URL" sid="943649469883521" type="AJAX">
-                            <param id="0" name="Tag">&quot;actualizarAvanceRopero1&quot;</param>
-                            <param id="1" name="URL">&quot;http://localhost/Confe2/ws/set_avance_usuario.php?id_usr=&quot; &amp; idUsr &amp; &quot;&amp;id_juego=c01ropero1&amp;avance=1&amp;terminado=true&quot;</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="554415749834676">
@@ -332,9 +330,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="7" name="Go to URL" sid="372044641486890" type="Browser">
-                            <param id="0" name="URL">&quot;http://localhost/Confe2/Build/modulos/menu/index.html&quot;</param>
-                            <param id="1" name="Target">0</param>
+                        <action id="0" name="Request URL" sid="943649469883521" type="AJAX">
+                            <param id="0" name="Tag">&quot;actualizarAvanceRopero1&quot;</param>
+                            <param id="1" name="URL">&quot;http://localhost/Confe2/ws/set_avance_usuario.php?id_usr=&quot; &amp; idUsr &amp; &quot;&amp;id_juego=c01ropero1&amp;avance=1&amp;terminado=true&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -353,6 +351,19 @@
                             <param id="0" name="Seconds">2</param>
                         </action>
                         <action id="7" name="Go to URL" sid="937527942745631" type="Browser">
+                            <param id="0" name="URL">&quot;http://localhost/Confe2/Build/modulos/menu/index.html&quot;</param>
+                            <param id="1" name="Target">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="778094871310205">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="769141359780995" type="AJAX">
+                            <param id="0" name="Tag">&quot;actualizarAvanceRopero1&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Go to URL" sid="372044641486890" type="Browser">
                             <param id="0" name="URL">&quot;http://localhost/Confe2/Build/modulos/menu/index.html&quot;</param>
                             <param id="1" name="Target">0</param>
                         </action>
