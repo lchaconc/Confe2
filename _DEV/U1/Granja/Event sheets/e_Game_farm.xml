@@ -2623,27 +2623,24 @@
                 <event-block sid="900021376653788">
                     <conditions>
                         <condition id="3" name="On touched object" sid="522831439801985" type="Touch">
+                            <param id="0" name="Object">btnVerMisiones</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="810288536732105" type="bgModalMisiones">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="216889025130041">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="741908444394936" type="Touch">
                             <param id="0" name="Object">bgModalMisiones</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Bullet" id="5" name="Set enabled" sid="247558079834648" type="bgModalMisiones">
-                            <param id="0" name="State">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="525136677709797">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="354051457697866" type="bgModalMisiones">
-                            <param id="0" name="Object">sDetenerModalMisiones</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Bullet" id="5" name="Set enabled" sid="667475046071626" type="bgModalMisiones">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action behavior="Bullet" id="0" name="Set speed" sid="533622896532381" type="bgModalMisiones">
-                            <param id="0" name="Speed">bgModalMisiones.Bullet.Speed * -1</param>
+                        <action behavior="Physics" id="12" name="Set world gravity" sid="500955427662911" type="bgModalMisiones">
+                            <param id="0" name="Gravity">-40</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2676,6 +2673,21 @@
                         <action id="7" name="Go to URL" sid="740647448618235" type="Browser">
                             <param id="0" name="URL">&quot;http://localhost/c2/Menu/&quot;</param>
                             <param id="1" name="Target">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="794460165879052">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="230205268552350" type="bgModalMisiones">
+                            <param id="0" name="Object">sLimiteTop</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="576836914387958" type="bgModalMisiones">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                        <action behavior="Physics" id="12" name="Set world gravity" sid="203088677111839" type="bgModalMisiones">
+                            <param id="0" name="Gravity">50</param>
                         </action>
                     </actions>
                 </event-block>

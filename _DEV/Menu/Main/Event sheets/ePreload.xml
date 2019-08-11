@@ -3,14 +3,15 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>ePreload</name>
     <events>
-        <variable constant="0" name="terminado_avatar01" sid="102978168485415" static="0" type="text"></variable>
-        <variable constant="0" name="terminado_c02ropero2" sid="187359254102028" static="0" type="text"></variable>
+        <variable constant="0" name="tAvatar01" sid="102978168485415" static="0" type="text"></variable>
+        <variable constant="0" name="tC02ropero2" sid="187359254102028" static="0" type="text"></variable>
+        <variable constant="0" name="tc02ropero1" sid="315437529702915" static="0" type="text"></variable>
         <variable constant="0" name="idUsr" sid="511059337815373" static="0" type="text"></variable>
-        <variable constant="0" name="obj_sandalias" sid="447703612982633" static="0" type="text"></variable>
-        <variable constant="0" name="activo_c02ropero2" sid="989497556330762" static="0" type="text"></variable>
-        <variable constant="0" name="activo_c01ropero1" sid="599661027721435" static="0" type="text"></variable>
-        <variable constant="0" name="activo_r01emociones" sid="262634711365080" static="0" type="text"></variable>
-        <variable comment="boolenao" constant="0" name="activo_j01granja" sid="215966133924489" static="0" type="text"></variable>
+        <variable constant="0" name="objSandalias" sid="447703612982633" static="0" type="text"></variable>
+        <variable constant="0" name="aC02ropero2" sid="989497556330762" static="0" type="text"></variable>
+        <variable constant="0" name="aC01ropero1" sid="599661027721435" static="0" type="text"></variable>
+        <variable constant="0" name="aR01emociones" sid="262634711365080" static="0" type="text"></variable>
+        <variable comment="boolenao" constant="0" name="aJ01granja" sid="215966133924489" static="0" type="text"></variable>
         <comment>CArga el estado de los juegos del sessionstorage</comment>
         <event-block sid="127484288316554">
             <conditions>
@@ -18,43 +19,35 @@
             </conditions>
             <actions>
                 <action disabled="1" id="-9" name="Set value" sid="149010222984668" type="System">
-                    <param id="0" name="Variable">activo_c01ropero1</param>
+                    <param id="0" name="Variable">aC01ropero1</param>
                     <param id="1" name="Value">&quot;true&quot;</param>
                 </action>
                 <action disabled="1" id="-9" name="Set value" sid="989160956358062" type="System">
-                    <param id="0" name="Variable">obj_sandalias</param>
+                    <param id="0" name="Variable">objSandalias</param>
                     <param id="1" name="Value">&quot;true&quot;</param>
                 </action>
                 <action disabled="1" id="-9" name="Set value" sid="702113058819088" type="System">
                     <param id="0" name="Variable">idUsr</param>
                     <param id="1" name="Value">&quot;felipe@correo.de&quot;</param>
                 </action>
-                <action id="-9" name="Set value" sid="553641621093952" type="System">
-                    <param id="0" name="Variable">terminado_avatar01</param>
-                    <param id="1" name="Value">WebStorage.SessionValue(&quot;terminado_avatar01&quot;)</param>
-                </action>
-                <action id="-9" name="Set value" sid="859768022967335" type="System">
-                    <param id="0" name="Variable">terminado_c02ropero2</param>
-                    <param id="1" name="Value">WebStorage.SessionValue(&quot;terminado_c02ropero2&quot;)</param>
-                </action>
                 <action id="-9" name="Set value" sid="495402256927030" type="System">
-                    <param id="0" name="Variable">activo_c01ropero1</param>
+                    <param id="0" name="Variable">aC01ropero1</param>
                     <param id="1" name="Value">WebStorage.SessionValue(&quot;activo_c01ropero1&quot;)</param>
                 </action>
                 <action id="-9" name="Set value" sid="140969452704596" type="System">
-                    <param id="0" name="Variable">activo_j01granja</param>
+                    <param id="0" name="Variable">aJ01granja</param>
                     <param id="1" name="Value">WebStorage.SessionValue(&quot;activo_j01granja&quot;)</param>
                 </action>
                 <action id="-9" name="Set value" sid="348595448567473" type="System">
-                    <param id="0" name="Variable">activo_r01emociones</param>
+                    <param id="0" name="Variable">aR01emociones</param>
                     <param id="1" name="Value">WebStorage.SessionValue(&quot;activo_r01emociones&quot;)</param>
                 </action>
                 <action id="-9" name="Set value" sid="364505736141400" type="System">
-                    <param id="0" name="Variable">activo_c02ropero2</param>
+                    <param id="0" name="Variable">aC02ropero2</param>
                     <param id="1" name="Value">WebStorage.SessionValue(&quot;activo_c02ropero2&quot;)</param>
                 </action>
                 <action id="-9" name="Set value" sid="495146729694829" type="System">
-                    <param id="0" name="Variable">obj_sandalias</param>
+                    <param id="0" name="Variable">objSandalias</param>
                     <param id="1" name="Value">WebStorage.SessionValue(&quot;obj_sandalias&quot;)</param>
                 </action>
                 <action id="-9" name="Set value" sid="722457096451689" type="System">

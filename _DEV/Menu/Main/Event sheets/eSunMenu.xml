@@ -21,24 +21,47 @@
         </event-group>
         <event-group description="" sid="199779665079946" title="Abrir_Juegos_U1">
             <sub-events>
+                <comment>Ropero 1</comment>
                 <event-block sid="241480781912158">
                     <conditions>
                         <condition id="3" name="On touched object" sid="502185254737914" type="Touch">
                             <param id="0" name="Object">btn1</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="898141554967571" type="System">
+                            <param id="0" name="Variable">tAvatar01</param>
+                            <param id="1" name="Value">WebStorage.SessionValue(&quot;terminado_avatar01&quot;)</param>
+                        </action>
+                        <action id="14" name="Log" sid="920939301010512" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;***  Terminado avatar01: &quot; &amp; tAvatar01</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="311268179053761" type="System">
+                            <param id="0" name="Variable">tC02ropero2</param>
+                            <param id="1" name="Value">WebStorage.SessionValue(&quot;terminado_c01ropero1&quot;)</param>
+                        </action>
+                        <action id="14" name="Log" sid="451222181533063" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;***  Terminado Ropero 2: &quot; &amp; tC02ropero2</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="915228188314271">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="486215831868580" type="System">
-                                    <param id="0" name="Variable">activo_c01ropero1</param>
+                                    <param id="0" name="Variable">aC01ropero1</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;true&quot;</param>
                                 </condition>
                                 <condition id="-14" name="Compare variable" sid="784520550737958" type="System">
-                                    <param id="0" name="Variable">terminado_avatar01</param>
+                                    <param id="0" name="Variable">tAvatar01</param>
                                     <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;true&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="353249454076379" type="System">
+                                    <param id="0" name="Variable">tC02ropero2</param>
+                                    <param id="1" name="Comparison">1</param>
                                     <param id="2" name="Value">&quot;true&quot;</param>
                                 </condition>
                             </conditions>
@@ -56,19 +79,20 @@
                             <actions>
                                 <action id="14" name="Log" sid="356598439140522" type="Browser">
                                     <param id="0" name="Type">1</param>
-                                    <param id="1" name="Message">&quot;Acceso denegado&quot;</param>
+                                    <param id="1" name="Message">&quot;Acceso denegado Ropero 1&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment>Granja</comment>
                 <event-block sid="275802294392881">
                     <conditions>
                         <condition id="3" name="On touched object" sid="611352949267676" type="Touch">
                             <param id="0" name="Object">btn3</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="218836594973571" type="System">
-                            <param id="0" name="Variable">activo_j01granja</param>
+                            <param id="0" name="Variable">aJ01granja</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;true&quot;</param>
                         </condition>
@@ -80,23 +104,82 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>Ropero 2</comment>
                 <event-block sid="191235990851265">
                     <conditions>
                         <condition id="3" name="On touched object" sid="725740793969240" type="Touch">
                             <param id="0" name="Object">btn4</param>
                         </condition>
-                        <condition id="-14" name="Compare variable" sid="861299849793814" type="System">
-                            <param id="0" name="Variable">activo_c02ropero2</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;true&quot;</param>
-                        </condition>
                     </conditions>
                     <actions>
-                        <action id="7" name="Go to URL" sid="638968261485819" type="Browser">
-                            <param id="0" name="URL">&quot;http://localhost/Confe2/Build/modulos/ropero2/&quot;</param>
-                            <param id="1" name="Target">0</param>
+                        <action id="-9" name="Set value" sid="887381966711047" type="System">
+                            <param id="0" name="Variable">tAvatar01</param>
+                            <param id="1" name="Value">WebStorage.SessionValue(&quot;terminado_avatar01&quot;)</param>
+                        </action>
+                        <action id="14" name="Log" sid="932120397654601" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;***  Terminado Avatar: &quot; &amp; tAvatar01</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="508584362819711" type="System">
+                            <param id="0" name="Variable">tc02ropero1</param>
+                            <param id="1" name="Value">WebStorage.SessionValue(&quot;terminado_c02ropero1&quot;)</param>
+                        </action>
+                        <action id="14" name="Log" sid="147487995849102" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;***  Terminado ropero 1: &quot; &amp; tC02ropero2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="493119712177745" type="System">
+                            <param id="0" name="Variable">tC02ropero2</param>
+                            <param id="1" name="Value">WebStorage.SessionValue(&quot;terminado_c02ropero2&quot;)</param>
+                        </action>
+                        <action id="14" name="Log" sid="574925741790647" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;***  Terminado Ropero 2: &quot; &amp; tC02ropero2</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="252998513405280">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="288606976159984" type="System">
+                                    <param id="0" name="Variable">aC02ropero2</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;true&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="492164465540705" type="System">
+                                    <param id="0" name="Variable">tAvatar01</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;true&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="710993073315486" type="System">
+                                    <param id="0" name="Variable">tc02ropero1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;true&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="989694302819802" type="System">
+                                    <param id="0" name="Variable">tC02ropero2</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;true&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Go to URL" sid="638968261485819" type="Browser">
+                                    <param id="0" name="URL">&quot;http://localhost/Confe2/Build/modulos/ropero2/&quot;</param>
+                                    <param id="1" name="Target">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="489127956469924">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="611378300593062" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="544083769884015" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;Acceso denegado Ropero 2&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -105,7 +188,7 @@
                 <event-block sid="150375709438536">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="620797851857741" type="System">
-                            <param id="0" name="Variable">activo_c01ropero1</param>
+                            <param id="0" name="Variable">aC01ropero1</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;true&quot;</param>
                         </condition>
@@ -119,7 +202,7 @@
                 <event-block sid="875031625205955">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="579843715372296" type="System">
-                            <param id="0" name="Variable">activo_r01emociones</param>
+                            <param id="0" name="Variable">aR01emociones</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;true&quot;</param>
                         </condition>
@@ -133,7 +216,7 @@
                 <event-block sid="374511055010218">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="232170373576858" type="System">
-                            <param id="0" name="Variable">activo_j01granja</param>
+                            <param id="0" name="Variable">aJ01granja</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;true&quot;</param>
                         </condition>
@@ -147,7 +230,7 @@
                 <event-block sid="523963007750944">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="189036164488725" type="System">
-                            <param id="0" name="Variable">activo_c02ropero2</param>
+                            <param id="0" name="Variable">aC02ropero2</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;true&quot;</param>
                         </condition>

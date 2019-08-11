@@ -26,6 +26,7 @@
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -308,20 +309,18 @@
             <object-type name="bgModalMisiones" sid="244547121202345">
                 <plugin id="Sprite" />
                 <behaviors>
-                    <behavior-type name="Bullet" sid="769101257177336">
-                        <behavior id="Bullet" />
+                    <behavior-type name="Physics" sid="491611629581811">
+                        <behavior id="Physics" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="d1" pingpong="0" repeatcount="1" repeatto="0" sid="671838737574279" speed="5">
-                        <frame duration="1" hotspotX="0.500417" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\img\Picture1.png">
+                        <frame duration="1" hotspotX="0.500963" hotspotY="0.753285" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Granja\Fondos\Asset 212.png">
                             <collision-poly>
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
-                                <point x="1" y="1" />
-                                <point x="0.139825" y="1" />
-                                <point x="0.141074" y="0.322581" />
-                                <point x="0.0224719" y="0.322581" />
+                                <point x="0.00161551" y="0.00223714" />
+                                <point x="0.998384" y="0.00223714" />
+                                <point x="0.998384" y="1" />
+                                <point x="0" y="1" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -521,6 +520,14 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="170895038848104" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Granja\Botones-Controles\NuevoControlGranja.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btnVerMisiones" sid="849973002540415">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="442831694716591" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -6134,6 +6141,11 @@
             </object-type>
             <object-type name="sDetenerModalMisiones" sid="154228459495646">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Physics" sid="258495574332610">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="540274456339170" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -6152,6 +6164,14 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="271965731765569" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="sLimiteTop" sid="799451554767639">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="730467526470980" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>

@@ -11,18 +11,45 @@
                         <condition id="3" name="On touched object" sid="770530493776624" type="Touch">
                             <param id="0" name="Object">btnAvatar</param>
                         </condition>
-                        <condition id="-14" name="Compare variable" sid="874642622386941" type="System">
-                            <param id="0" name="Variable">terminado_c02ropero2</param>
-                            <param id="1" name="Comparison">1</param>
-                            <param id="2" name="Value">&quot;true&quot;</param>
-                        </condition>
                     </conditions>
                     <actions>
-                        <action id="7" name="Go to URL" sid="381091024336164" type="Browser">
-                            <param id="0" name="URL">&quot;http://localhost/Confe2/Build/modulos/avatar/&quot;</param>
-                            <param id="1" name="Target">0</param>
+                        <action id="-9" name="Set value" sid="449336753125794" type="System">
+                            <param id="0" name="Variable">tC02ropero2</param>
+                            <param id="1" name="Value">WebStorage.SessionValue(&quot;terminado_c02ropero2&quot;)</param>
+                        </action>
+                        <action id="14" name="Log" sid="354109557904557" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;*** Ropero 2 terminado: &quot; &amp; tC02ropero2</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="992852933016279">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="420892190512074" type="System">
+                                    <param id="0" name="Variable">tC02ropero2</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;true&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Go to URL" sid="381091024336164" type="Browser">
+                                    <param id="0" name="URL">&quot;http://localhost/Confe2/Build/modulos/avatar/&quot;</param>
+                                    <param id="1" name="Target">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="913737938915342">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="823611969951762" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="820446225984130" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;Acceso Denegado Avatar&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="781586505696310">
                     <conditions>
@@ -35,7 +62,7 @@
                         <event-block sid="763789430844775">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="166754291853833" type="System">
-                                    <param id="0" name="Variable">obj_sandalias</param>
+                                    <param id="0" name="Variable">objSandalias</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;true&quot;</param>
                                 </condition>
@@ -46,16 +73,16 @@
                                     <param id="1" name="Value">&quot;http://localhost/Confe2/ws/set_objetos.php?id_usr=&quot; &amp; idUsr &amp; &quot;&amp;etiqueta=sandalias&quot;</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="859295098305008" type="System">
-                                    <param id="0" name="Variable">obj_sandalias</param>
+                                    <param id="0" name="Variable">objSandalias</param>
                                     <param id="1" name="Value">&quot;false&quot;</param>
                                 </action>
-                                <action id="14" name="Log" sid="353562864403230" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="353562864403230" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">urlRequest</param>
                                 </action>
                                 <action id="1" name="Set session value" sid="175059952239124" type="WebStorage">
                                     <param id="0" name="Key">&quot;obj_sandalias&quot;</param>
-                                    <param id="1" name="Value">obj_sandalias</param>
+                                    <param id="1" name="Value">objSandalias</param>
                                 </action>
                                 <action id="0" name="Request URL" sid="281891952705876" type="AJAX">
                                     <param id="0" name="Tag">&quot;ObjetoSandalias&quot;</param>
@@ -82,7 +109,7 @@
                 <event-block sid="134344636701217">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="297129430898503" type="System">
-                            <param id="0" name="Variable">activo_c01ropero1</param>
+                            <param id="0" name="Variable">aC01ropero1</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;true&quot;</param>
                         </condition>
