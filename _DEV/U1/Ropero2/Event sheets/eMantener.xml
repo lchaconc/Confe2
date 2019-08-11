@@ -235,77 +235,134 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-group description="" sid="429960392315041" title="Boton_Home_Ajax2">
+        <event-group description="" sid="102511386139402" title="Boton_Home_Ajax2">
             <sub-events>
-                <event-block sid="314854578008538">
+                <event-block sid="639673046851841">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="104055778202084" type="Touch">
+                        <condition id="3" name="On touched object" sid="150022941311083" type="Touch">
                             <param id="0" name="Object">btnMenu</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="341413684798265" type="txtEspera">
+                        <action id="4" name="Set animation" sid="784676049460174" type="txtEspera">
                             <param id="0" name="Animation">&quot;espere&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-4" name="Set layer visible" sid="676544768433298" type="System">
+                        <action id="-4" name="Set layer visible" sid="602833904959840" type="System">
                             <param id="0" name="Layer">&quot;sombra&quot;</param>
                             <param id="1" name="Visibility">1</param>
                         </action>
-                        <action id="-4" name="Set layer visible" sid="535647788607458" type="System">
+                        <action id="-4" name="Set layer visible" sid="894978604994504" type="System">
                             <param id="0" name="Layer">&quot;textos&quot;</param>
                             <param id="1" name="Visibility">1</param>
                         </action>
-                        <action id="1" name="Set session value" sid="715448455221186" type="WebStorage">
+                        <action id="1" name="Set session value" sid="721639463226975" type="WebStorage">
                             <param id="0" name="Key">&quot;tipo_traje&quot;</param>
                             <param id="1" name="Value">tipoTraje</param>
                         </action>
-                        <action id="-9" name="Set value" sid="284405836812005" type="System">
+                        <action id="-9" name="Set value" sid="306635317529388" type="System">
                             <param id="0" name="Variable">urlRequest</param>
                             <param id="1" name="Value">&quot;http://localhost/Confe2/ws/set_avatar.php?id_usr=&quot;&amp; idUsr&amp;&quot;&amp;tipo_avatar=&quot;&amp;tipoAvatar&amp;&quot;&amp;tipo_traje=&quot;&amp;tipoTraje</param>
                         </action>
-                        <action id="0" name="Request URL" sid="807963035732980" type="AJAX">
+                        <action id="0" name="Request URL" sid="706003152061158" type="AJAX">
                             <param id="0" name="Tag">&quot;AjaxAvatar&quot;</param>
                             <param id="1" name="URL">urlRequest</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="861960244352339">
+                <event-block sid="262775748474185">
                     <conditions>
-                        <condition id="0" name="On completed" sid="858823321876201" type="AJAX">
+                        <condition id="0" name="On completed" sid="911824785613871" type="AJAX">
                             <param id="0" name="Tag">&quot;AjaxAvatar&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="7" name="Go to URL" sid="769779079380830" type="Browser">
+                        <action id="14" name="Log" sid="562515542553663" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;*** Avatar actualizado satisfactoriamente&quot;</param>
+                        </action>
+                        <action id="1" name="Set session value" sid="929414392522016" type="WebStorage">
+                            <param id="0" name="Key">&quot;terminado_c02ropero2&quot;</param>
+                            <param id="1" name="Value">&quot;true&quot;</param>
+                        </action>
+                        <action id="0" name="Request URL" sid="407175749628158" type="AJAX">
+                            <param id="0" name="Tag">&quot;roperoTerminado&quot;</param>
+                            <param id="1" name="URL">&quot;http://localhost/Confe2/ws/set_avance_usuario.php?id_usr=&quot;&amp; idUsr &amp;&quot;&amp;id_juego=c02ropero2&amp;avance=1&amp;terminado=true&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="271461778822526">
+                    <conditions>
+                        <condition id="1" name="On error" sid="511322388035529" type="AJAX">
+                            <param id="0" name="Tag">&quot;AjaxAvatar&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Log" sid="739529809624055" type="Browser">
+                            <param id="0" name="Type">2</param>
+                            <param id="1" name="Message">AJAX.LastData</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="446209542259799" type="txtEspera">
+                            <param id="0" name="Animation">&quot;error&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="189323993525771" type="System">
+                            <param id="0" name="Layer">&quot;sombra&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="492559231904256" type="System">
+                            <param id="0" name="Layer">&quot;textos&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="729743000475909" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="7" name="Go to URL" sid="783202637969413" type="Browser">
                             <param id="0" name="URL">&quot;http://localhost/Confe2/Build/modulos/menu/index.html&quot;</param>
                             <param id="1" name="Target">0</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="249438133741460">
+                <event-block sid="905441293045771">
                     <conditions>
-                        <condition id="1" name="On error" sid="581230494417428" type="AJAX">
-                            <param id="0" name="Tag">&quot;AjaxAvatar&quot;</param>
+                        <condition id="1" name="On error" sid="484213161393196" type="AJAX">
+                            <param id="0" name="Tag">&quot;roperoTerminado&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="506821102865828" type="txtEspera">
+                        <action id="14" name="Log" sid="197459555777410" type="Browser">
+                            <param id="0" name="Type">2</param>
+                            <param id="1" name="Message">AJAX.LastData</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="505655464476562" type="txtEspera">
                             <param id="0" name="Animation">&quot;error&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-4" name="Set layer visible" sid="248235594947215" type="System">
+                        <action id="-4" name="Set layer visible" sid="427581143830992" type="System">
                             <param id="0" name="Layer">&quot;sombra&quot;</param>
                             <param id="1" name="Visibility">1</param>
                         </action>
-                        <action id="-4" name="Set layer visible" sid="389548624788056" type="System">
+                        <action id="-4" name="Set layer visible" sid="380443382982982" type="System">
                             <param id="0" name="Layer">&quot;textos&quot;</param>
                             <param id="1" name="Visibility">1</param>
                         </action>
-                        <action id="-16" name="Wait" sid="273940294191971" type="System">
+                        <action id="-16" name="Wait" sid="801727557458807" type="System">
                             <param id="0" name="Seconds">2</param>
                         </action>
-                        <action id="7" name="Go to URL" sid="786491872595765" type="Browser">
+                        <action id="7" name="Go to URL" sid="478761851743407" type="Browser">
+                            <param id="0" name="URL">&quot;http://localhost/Confe2/Build/modulos/menu/index.html&quot;</param>
+                            <param id="1" name="Target">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="860940190519434">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="385743812660523" type="AJAX">
+                            <param id="0" name="Tag">&quot;roperoTerminado&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Go to URL" sid="694027812041289" type="Browser">
                             <param id="0" name="URL">&quot;http://localhost/Confe2/Build/modulos/menu/index.html&quot;</param>
                             <param id="1" name="Target">0</param>
                         </action>

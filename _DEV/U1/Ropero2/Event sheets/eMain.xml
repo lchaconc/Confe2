@@ -733,9 +733,17 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="7" name="Go to URL" sid="372044641486890" type="Browser">
-                            <param id="0" name="URL">&quot;http://localhost/Confe2/Build/modulos/menu/index.html&quot;</param>
-                            <param id="1" name="Target">0</param>
+                        <action id="14" name="Log" sid="842381761202653" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;*** Avatar actualizado satisfactoriamente&quot;</param>
+                        </action>
+                        <action id="1" name="Set session value" sid="361010117960658" type="WebStorage">
+                            <param id="0" name="Key">&quot;terminado_c02ropero2&quot;</param>
+                            <param id="1" name="Value">&quot;true&quot;</param>
+                        </action>
+                        <action id="0" name="Request URL" sid="166649085224508" type="AJAX">
+                            <param id="0" name="Tag">&quot;roperoTerminado&quot;</param>
+                            <param id="1" name="URL">&quot;http://localhost/Confe2/ws/set_avance_usuario.php?id_usr=&quot;&amp; idUsr &amp;&quot;&amp;id_juego=c02ropero2&amp;avance=1&amp;terminado=true&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -746,6 +754,10 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="14" name="Log" sid="577674081257906" type="Browser">
+                            <param id="0" name="Type">2</param>
+                            <param id="1" name="Message">AJAX.LastData</param>
+                        </action>
                         <action id="4" name="Set animation" sid="351836559254828" type="txtEspera">
                             <param id="0" name="Animation">&quot;error&quot;</param>
                             <param id="1" name="From">1</param>
@@ -762,6 +774,51 @@
                             <param id="0" name="Seconds">2</param>
                         </action>
                         <action id="7" name="Go to URL" sid="169645887300973" type="Browser">
+                            <param id="0" name="URL">&quot;http://localhost/Confe2/Build/modulos/menu/index.html&quot;</param>
+                            <param id="1" name="Target">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="498215179950633">
+                    <conditions>
+                        <condition id="1" name="On error" sid="992934901443222" type="AJAX">
+                            <param id="0" name="Tag">&quot;roperoTerminado&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Log" sid="388077112079050" type="Browser">
+                            <param id="0" name="Type">2</param>
+                            <param id="1" name="Message">AJAX.LastData</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="369222618524674" type="txtEspera">
+                            <param id="0" name="Animation">&quot;error&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="396752453281528" type="System">
+                            <param id="0" name="Layer">&quot;sombra&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="299198174311740" type="System">
+                            <param id="0" name="Layer">&quot;textos&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="709578297213685" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="7" name="Go to URL" sid="497419096645909" type="Browser">
+                            <param id="0" name="URL">&quot;http://localhost/Confe2/Build/modulos/menu/index.html&quot;</param>
+                            <param id="1" name="Target">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="975882423563188">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="978973252288547" type="AJAX">
+                            <param id="0" name="Tag">&quot;roperoTerminado&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Go to URL" sid="372044641486890" type="Browser">
                             <param id="0" name="URL">&quot;http://localhost/Confe2/Build/modulos/menu/index.html&quot;</param>
                             <param id="1" name="Target">0</param>
                         </action>
