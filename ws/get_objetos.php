@@ -1,6 +1,8 @@
 <?php
-header ("Content-Type: application/json");
-header("Access-Control-Allow-Origin: *");
+header('Access-Control-Allow-Origin: *');
+header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method");
+header ("Content-Type: application/json; charset=utf-8"  );
+$method = $_SERVER['REQUEST_METHOD'];
 
 $id_usr = $_GET['id_usr'];
 
@@ -18,8 +20,7 @@ function desconectar($conexion){
         if($close){
             //echo 'Desconexión relizada';
         }else{
-            echo 'Ha sucedido un error inexperado en la desconexion de la base de datos
-';
+            echo 'Ha sucedido un error inexperado en la desconexion de la base de datos';
         }
 
     return $close;

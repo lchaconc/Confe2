@@ -530,10 +530,6 @@
                             <param id="0" name="Layer">&quot;texts&quot;</param>
                             <param id="1" name="Visibility">1</param>
                         </action>
-                        <action id="0" name="Request URL" sid="895028337960941" type="AJAX">
-                            <param id="0" name="Tag">&quot;AvatarTerminado&quot;</param>
-                            <param id="1" name="URL">&quot;http://localhost/Confe2/ws/set_avance_usuario.php?id_usr=&quot; &amp; idUsr  &amp; &quot;&amp;id_juego=avatar01&amp;avance=1&amp;terminado=true&quot;</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="788400771675197">
@@ -543,13 +539,25 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="676264411189710" type="System">
-                            <param id="0" name="Variable">urlRequest</param>
-                            <param id="1" name="Value">&quot;Enviado&quot;</param>
+                        <action id="1" name="Set session value" sid="310917360324703" type="WebStorage">
+                            <param id="0" name="Key">&quot;terminado_avatar&quot;</param>
+                            <param id="1" name="Value">&quot;true&quot;</param>
                         </action>
-                        <action id="7" name="Go to URL" sid="719433379246047" type="Browser">
-                            <param id="0" name="URL">&quot;http://localhost/Confe2/Build/modulos/menu/index.html&quot;</param>
-                            <param id="1" name="Target">0</param>
+                        <action id="14" name="Log" sid="700768270812669" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;******Envio satisfactorio tipo avatar&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="447157189607088" type="System">
+                            <param id="0" name="Variable">urlRequest</param>
+                            <param id="1" name="Value">&quot;http://localhost/Confe2/ws/set_avance_usuario.php?id_usr=&quot; &amp; idUsr  &amp; &quot;&amp;id_juego=avatar01&amp;avance=1&amp;terminado=true&quot;</param>
+                        </action>
+                        <action id="14" name="Log" sid="228791520524195" type="Browser">
+                            <param id="0" name="Type">1</param>
+                            <param id="1" name="Message">urlRequest</param>
+                        </action>
+                        <action id="0" name="Request URL" sid="895028337960941" type="AJAX">
+                            <param id="0" name="Tag">&quot;AvatarTerminado&quot;</param>
+                            <param id="1" name="URL">urlRequest</param>
                         </action>
                     </actions>
                 </event-block>
@@ -580,6 +588,58 @@
                             <param id="0" name="Seconds">2</param>
                         </action>
                         <action id="7" name="Go to URL" sid="321695878340116" type="Browser">
+                            <param id="0" name="URL">&quot;http://localhost/Confe2/Build/modulos/menu/index.html&quot;</param>
+                            <param id="1" name="Target">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="121565758238135">
+                    <conditions>
+                        <condition id="1" name="On error" sid="544601466741192" type="AJAX">
+                            <param id="0" name="Tag">&quot;AvatarTerminado&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="183173715049772" type="System">
+                            <param id="0" name="Layer">&quot;shadows&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="749112513427598" type="txtEspere">
+                            <param id="0" name="Animation">&quot;error&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="795512658731877" type="System">
+                            <param id="0" name="Layer">&quot;texts&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="14" name="Log" sid="496775697159809" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">AJAX.LastData</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="685214851392583" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="7" name="Go to URL" sid="937306663350954" type="Browser">
+                            <param id="0" name="URL">&quot;http://localhost/Confe2/Build/modulos/menu/index.html&quot;</param>
+                            <param id="1" name="Target">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="435174446269214">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="166304598944588" type="AJAX">
+                            <param id="0" name="Tag">&quot;AvatarTerminado&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Log" sid="609899872283587" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;******Envio satisfactorio avatar terminado&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="661467476826869" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="7" name="Go to URL" sid="719433379246047" type="Browser">
                             <param id="0" name="URL">&quot;http://localhost/Confe2/Build/modulos/menu/index.html&quot;</param>
                             <param id="1" name="Target">0</param>
                         </action>
