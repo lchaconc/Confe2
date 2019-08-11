@@ -539,10 +539,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="1" name="Set session value" sid="310917360324703" type="WebStorage">
-                            <param id="0" name="Key">&quot;terminado_avatar&quot;</param>
-                            <param id="1" name="Value">&quot;true&quot;</param>
-                        </action>
                         <action id="14" name="Log" sid="700768270812669" type="Browser">
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">&quot;******Envio satisfactorio tipo avatar&quot;</param>
@@ -551,7 +547,11 @@
                             <param id="0" name="Variable">urlRequest</param>
                             <param id="1" name="Value">&quot;http://localhost/Confe2/ws/set_avance_usuario.php?id_usr=&quot; &amp; idUsr  &amp; &quot;&amp;id_juego=avatar01&amp;avance=1&amp;terminado=true&quot;</param>
                         </action>
-                        <action id="14" name="Log" sid="228791520524195" type="Browser">
+                        <action id="1" name="Set session value" sid="310917360324703" type="WebStorage">
+                            <param id="0" name="Key">&quot;terminado_avatar01&quot;</param>
+                            <param id="1" name="Value">&quot;true&quot;</param>
+                        </action>
+                        <action disabled="1" id="14" name="Log" sid="228791520524195" type="Browser">
                             <param id="0" name="Type">1</param>
                             <param id="1" name="Message">urlRequest</param>
                         </action>
@@ -613,7 +613,7 @@
                             <param id="1" name="Visibility">1</param>
                         </action>
                         <action id="14" name="Log" sid="496775697159809" type="Browser">
-                            <param id="0" name="Type">0</param>
+                            <param id="0" name="Type">1</param>
                             <param id="1" name="Message">AJAX.LastData</param>
                         </action>
                         <action id="-16" name="Wait" sid="685214851392583" type="System">
