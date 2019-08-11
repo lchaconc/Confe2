@@ -6523,17 +6523,13 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
-                        <behavior-instance type="Physics">
+                        <behavior-instance type="Bullet">
                             <properties>
-                                <immovable>No</immovable>
-                                <collision-mask>Use collision polygon</collision-mask>
-                                <prevent-rotation>Yes</prevent-rotation>
-                                <density>1</density>
-                                <friction>0.5</friction>
-                                <elasticity>0.2</elasticity>
-                                <linear-damping>0</linear-damping>
-                                <angular-damping>0.01</angular-damping>
-                                <bullet>No</bullet>
+                                <speed>400</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>No</set-angle>
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -6541,19 +6537,19 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>596</x>
-                        <y>299</y>
+                        <x>641</x>
+                        <y>-78</y>
                         <z>0</z>
-                        <width>596.222900391</width>
-                        <height>245.696685791</height>
+                        <width>262.307434082</width>
+                        <height>558.466796875</height>
                         <depth>0</depth>
-                        <hotspotX>0.50096339</hotspotX>
-                        <hotspotY>0.753284693</hotspotY>
-                        <angle>0</angle>
+                        <hotspotX>0.246715322</hotspotX>
+                        <hotspotY>0.50096339</hotspotY>
+                        <angle>-1.570796371</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="sDetenerModalMisiones" uid="268">
+                <instance type="sLimiteAbajo" uid="268">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -6579,8 +6575,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>644</x>
-                        <y>684</y>
+                        <x>659</x>
+                        <y>441</y>
                         <z>0</z>
                         <width>98</width>
                         <height>740</height>
@@ -6799,8 +6795,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>386</x>
-                        <y>57</y>
+                        <x>294</x>
+                        <y>47</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -6821,8 +6817,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>596</x>
-                        <y>-50</y>
+                        <x>589</x>
+                        <y>-369</y>
                         <z>0</z>
                         <width>789</width>
                         <height>170</height>

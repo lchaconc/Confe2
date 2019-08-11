@@ -2627,8 +2627,11 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Physics" id="27" name="Set enabled" sid="810288536732105" type="bgModalMisiones">
-                            <param id="0" name="Mode">1</param>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="913751719838449" type="bgModalMisiones">
+                            <param id="0" name="Speed">bgModalMisiones.Bullet.Speed * -1</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="810288536732105" type="bgModalMisiones">
+                            <param id="0" name="State">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2639,8 +2642,11 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Physics" id="12" name="Set world gravity" sid="500955427662911" type="bgModalMisiones">
-                            <param id="0" name="Gravity">-40</param>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="500955427662911" type="bgModalMisiones">
+                            <param id="0" name="Speed">bgModalMisiones.Bullet.Speed * -1</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="983352802384773" type="bgModalMisiones">
+                            <param id="0" name="State">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2683,11 +2689,20 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Physics" id="27" name="Set enabled" sid="576836914387958" type="bgModalMisiones">
-                            <param id="0" name="Mode">0</param>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="576836914387958" type="bgModalMisiones">
+                            <param id="0" name="State">0</param>
                         </action>
-                        <action behavior="Physics" id="12" name="Set world gravity" sid="203088677111839" type="bgModalMisiones">
-                            <param id="0" name="Gravity">50</param>
+                    </actions>
+                </event-block>
+                <event-block sid="390842993455025">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="415867869631637" type="bgModalMisiones">
+                            <param id="0" name="Object">sLimiteAbajo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="123399224446833" type="bgModalMisiones">
+                            <param id="0" name="State">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2812,12 +2827,6 @@
                             <param id="0" name="Variable">status</param>
                             <param id="1" name="Value">&quot;Ocultando  papiro dia 1&quot;</param>
                         </action>
-                        <action id="0" name="Play" sid="903156611890546" type="Audio">
-                            <param id="0" name="Audio file">timescapes</param>
-                            <param id="2" name="Loop">1</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;ambiente2&quot;</param>
-                        </action>
                         <action id="-9" name="Set value" sid="236879684431188" type="System">
                             <param id="0" name="Variable">avance</param>
                             <param id="1" name="Value">avance + 1</param>
@@ -2851,9 +2860,6 @@
                         </action>
                         <action id="-16" name="Wait" sid="534263660054099" type="System">
                             <param id="0" name="Seconds">3</param>
-                        </action>
-                        <action id="6" name="Stop" sid="449836093221730" type="Audio">
-                            <param id="0" name="Tag">&quot;ambiente2&quot;</param>
                         </action>
                         <action id="-7" name="Set size" sid="730805887952406" type="bgPergamino">
                             <param id="0" name="Width">595</param>
@@ -2900,12 +2906,6 @@
                             <param id="0" name="Variable">status</param>
                             <param id="1" name="Value">&quot;Ocultando  papiro dia 2&quot;</param>
                         </action>
-                        <action id="0" name="Play" sid="881073736251690" type="Audio">
-                            <param id="0" name="Audio file">amazonas</param>
-                            <param id="2" name="Loop">1</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;ambiente&quot;</param>
-                        </action>
                         <action id="-9" name="Set value" sid="655874126943404" type="System">
                             <param id="0" name="Variable">avance</param>
                             <param id="1" name="Value">avance + 1</param>
@@ -2939,13 +2939,6 @@
                         </action>
                         <action id="-16" name="Wait" sid="700741200532121" type="System">
                             <param id="0" name="Seconds">3</param>
-                        </action>
-                        <action disabled="1" id="6" name="Stop" sid="892091603179560" type="Audio">
-                            <param id="0" name="Tag">&quot;ambiente2&quot;</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="389348553587494" type="System">
-                            <param id="0" name="Variable">status</param>
-                            <param id="1" name="Value">&quot;Mostrando papiro dia 3&quot;</param>
                         </action>
                         <action id="0" name="Play" sid="714557791816951" type="Audio">
                             <param id="0" name="Audio file">Finish1</param>
@@ -2988,12 +2981,6 @@
                             <param id="0" name="Variable">status</param>
                             <param id="1" name="Value">&quot;Ocultando  papiro dia 3&quot;</param>
                         </action>
-                        <action disabled="1" id="0" name="Play" sid="288851993993429" type="Audio">
-                            <param id="0" name="Audio file">amazonas</param>
-                            <param id="2" name="Loop">1</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;ambiente&quot;</param>
-                        </action>
                         <action id="-9" name="Set value" sid="320298019335986" type="System">
                             <param id="0" name="Variable">avance</param>
                             <param id="1" name="Value">avance + 1</param>
@@ -3027,9 +3014,6 @@
                         </action>
                         <action id="-16" name="Wait" sid="586638675365725" type="System">
                             <param id="0" name="Seconds">3</param>
-                        </action>
-                        <action disabled="1" id="6" name="Stop" sid="643503545132412" type="Audio">
-                            <param id="0" name="Tag">&quot;ambiente2&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="801708346487377" type="System">
                             <param id="0" name="Variable">status</param>
@@ -3076,12 +3060,6 @@
                             <param id="0" name="Variable">status</param>
                             <param id="1" name="Value">&quot;Ocultando  papiro dia 4&quot;</param>
                         </action>
-                        <action disabled="1" id="0" name="Play" sid="927251864173611" type="Audio">
-                            <param id="0" name="Audio file">amazonas</param>
-                            <param id="2" name="Loop">1</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;ambiente&quot;</param>
-                        </action>
                         <action id="-9" name="Set value" sid="755897015072447" type="System">
                             <param id="0" name="Variable">avance</param>
                             <param id="1" name="Value">avance + 1</param>
@@ -3115,9 +3093,6 @@
                         </action>
                         <action id="-16" name="Wait" sid="427343161647719" type="System">
                             <param id="0" name="Seconds">3</param>
-                        </action>
-                        <action disabled="1" id="6" name="Stop" sid="802930056872637" type="Audio">
-                            <param id="0" name="Tag">&quot;ambiente2&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="773147831869049" type="System">
                             <param id="0" name="Variable">status</param>
@@ -3167,12 +3142,6 @@
                         <action id="-9" name="Set value" sid="616487963905179" type="System">
                             <param id="0" name="Variable">status</param>
                             <param id="1" name="Value">&quot;Ocultando  papiro dia 5&quot;</param>
-                        </action>
-                        <action disabled="1" id="0" name="Play" sid="272951005490297" type="Audio">
-                            <param id="0" name="Audio file">amazonas</param>
-                            <param id="2" name="Loop">1</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;ambiente&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="734287787070376" type="System">
                             <param id="0" name="Variable">avance</param>
@@ -3288,12 +3257,6 @@
                         <condition id="-2" name="On start of layout" sid="703592176193939" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Play" sid="869889608108873" type="Audio">
-                            <param id="0" name="Audio file">amazonas</param>
-                            <param id="2" name="Loop">1</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;ambiente&quot;</param>
-                        </action>
                         <action id="-9" name="Set value" sid="240941407476784" type="System">
                             <param id="0" name="Variable">status</param>
                             <param id="1" name="Value">&quot;loaded&quot;</param>
@@ -3628,6 +3591,12 @@
                         <action id="-12" name="Set group active" sid="683525278052082" type="System">
                             <param id="0" name="Group name">&quot;activar_dia_por_progreso&quot;</param>
                             <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="364121674365850" type="Audio">
+                            <param id="0" name="Audio file">granja1</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                     </actions>
                 </event-block>
