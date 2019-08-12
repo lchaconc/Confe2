@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>eSunMenu</name>
+    <name>eSubMenu</name>
     <events>
         <event-group description="" sid="701117620132210" title="Boton_Home">
             <sub-events>
@@ -82,6 +82,56 @@
                                     <param id="1" name="Message">&quot;Acceso denegado Ropero 1&quot;</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="129554729583815">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="982060833658376" type="System">
+                                            <param id="0" name="Variable">tAvatar01</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;false&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="429920794185310" type="txtAccesoDenegado">
+                                            <param id="0" name="Animation">&quot;faltaAvatar&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="773137517782300" type="txtAccesoDenegado">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="442968209095434" type="System">
+                                            <param id="0" name="Seconds">4</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="355789670980861" type="txtAccesoDenegado">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="183701249406565">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="205512826405538" type="System">
+                                            <param id="0" name="Variable">tC02ropero2</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;true&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="695446727393250" type="txtAccesoDenegado">
+                                            <param id="0" name="Animation">&quot;pasoPorRopero2&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="176280720104323" type="txtAccesoDenegado">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="838784284903335" type="System">
+                                            <param id="0" name="Seconds">4</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="882832308012029" type="txtAccesoDenegado">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -178,8 +228,99 @@
                                     <param id="1" name="Message">&quot;Acceso denegado Ropero 2&quot;</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="479417293966425">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="495369619691205" type="System">
+                                            <param id="0" name="Variable">tAvatar01</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;false&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="218239545457277" type="txtAccesoDenegado">
+                                            <param id="0" name="Animation">&quot;primeroAvataryRopero&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="845170378602065" type="txtAccesoDenegado">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="602388027009557" type="System">
+                                            <param id="0" name="Seconds">4</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="211057582166979" type="txtAccesoDenegado">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="233187254965143">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="433662806688226" type="System">
+                                            <param id="0" name="Variable">tC02ropero1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;false&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="973386054039355" type="txtAccesoDenegado">
+                                            <param id="0" name="Animation">&quot;primeroAvataryRopero&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="527606412245765" type="txtAccesoDenegado">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="158068627369338" type="System">
+                                            <param id="0" name="Seconds">4</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="854275800580548" type="txtAccesoDenegado">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="408235923936671">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="895894124225084" type="System">
+                                            <param id="0" name="Variable">tC02ropero2</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;true&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="888924206814614" type="txtAccesoDenegado">
+                                            <param id="0" name="Animation">&quot;ropero2Terminado&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="881826159174694" type="txtAccesoDenegado">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="452837801310191" type="System">
+                                            <param id="0" name="Seconds">4</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="460818461471936" type="txtAccesoDenegado">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <comment>Reto: Selfie</comment>
+                <event-block sid="422543068700335">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="205842605431087" type="Touch">
+                            <param id="0" name="Object">btn2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="149843759671369" type="System">
+                            <param id="0" name="Variable">retoAmostrar</param>
+                            <param id="1" name="Value">&quot;selfie&quot;</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="222090207103614" type="System">
+                            <param id="0" name="Layout">Retos</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

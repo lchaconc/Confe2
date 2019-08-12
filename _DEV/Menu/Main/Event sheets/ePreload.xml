@@ -3,11 +3,13 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>ePreload</name>
     <events>
+        <variable constant="0" name="retoAmostrar" sid="635973351178707" static="0" type="text"></variable>
         <variable constant="0" name="tAvatar01" sid="102978168485415" static="0" type="text"></variable>
         <variable constant="0" name="tC02ropero1" sid="315437529702915" static="0" type="text"></variable>
         <variable constant="0" name="tC02ropero2" sid="187359254102028" static="0" type="text"></variable>
         <variable constant="0" name="idUsr" sid="511059337815373" static="0" type="text"></variable>
         <variable constant="0" name="objSandalias" sid="447703612982633" static="0" type="text"></variable>
+        <variable constant="0" name="aAvatar01" sid="719941229150603" static="0" type="text"></variable>
         <variable constant="0" name="aC02ropero2" sid="989497556330762" static="0" type="text"></variable>
         <variable constant="0" name="aC01ropero1" sid="599661027721435" static="0" type="text"></variable>
         <variable constant="0" name="aR01emociones" sid="262634711365080" static="0" type="text"></variable>
@@ -20,7 +22,7 @@
             <actions>
                 <action id="14" name="Log" sid="828477818261393" type="Browser">
                     <param id="0" name="Type">0</param>
-                    <param id="1" name="Message">&quot;+++  MENU v5.0 +++&quot;</param>
+                    <param id="1" name="Message">&quot;+++  MENU v6.5 +++&quot;</param>
                 </action>
                 <action disabled="1" id="-9" name="Set value" sid="149010222984668" type="System">
                     <param id="0" name="Variable">aC01ropero1</param>
@@ -50,9 +52,29 @@
                     <param id="0" name="Variable">aC02ropero2</param>
                     <param id="1" name="Value">WebStorage.SessionValue(&quot;activo_c02ropero2&quot;)</param>
                 </action>
+                <action id="14" name="Log" sid="857294794451867" type="Browser">
+                    <param id="0" name="Type">0</param>
+                    <param id="1" name="Message">&quot;-Estado activo de Ropero 2: &quot; &amp; aC02ropero2</param>
+                </action>
+                <action id="-9" name="Set value" sid="652555701772637" type="System">
+                    <param id="0" name="Variable">aAvatar01</param>
+                    <param id="1" name="Value">WebStorage.SessionValue(&quot;activo_avatar01&quot;)</param>
+                </action>
                 <action id="-9" name="Set value" sid="495146729694829" type="System">
                     <param id="0" name="Variable">objSandalias</param>
                     <param id="1" name="Value">WebStorage.SessionValue(&quot;obj_sandalias&quot;)</param>
+                </action>
+                <action id="-9" name="Set value" sid="403126818588191" type="System">
+                    <param id="0" name="Variable">tAvatar01</param>
+                    <param id="1" name="Value">WebStorage.SessionValue(&quot;terminado_avatar01&quot;)</param>
+                </action>
+                <action id="-9" name="Set value" sid="251433893716241" type="System">
+                    <param id="0" name="Variable">tC02ropero1</param>
+                    <param id="1" name="Value">WebStorage.SessionValue(&quot;terminado_c01ropero1&quot;)</param>
+                </action>
+                <action id="-9" name="Set value" sid="922573638426878" type="System">
+                    <param id="0" name="Variable">tC02ropero2</param>
+                    <param id="1" name="Value">WebStorage.SessionValue(&quot;terminado_c02ropero2&quot;)</param>
                 </action>
                 <action id="-9" name="Set value" sid="722457096451689" type="System">
                     <param id="0" name="Variable">idUsr</param>

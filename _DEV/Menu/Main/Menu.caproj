@@ -50,8 +50,22 @@
             <object-type name="btnAvatar" sid="941694740385331">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="865617803866754" speed="5">
+                    <animation framecount="1" loop="0" name="abierto" pingpong="0" repeatcount="1" repeatto="0" sid="865617803866754" speed="5">
                         <frame duration="1" hotspotX="0.502645" hotspotY="0.502591" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\menu\avatar.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="cerrado" pingpong="0" repeatcount="1" repeatto="0" sid="344289869420425" speed="5">
+                        <frame duration="1" hotspotX="0.502645" hotspotY="0.502591" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Menu\simbolos y menu abierto\1x\avatarcandado.png">
+                            <collision-poly>
+                                <point x="0.164021" y="0.160622" />
+                                <point x="0.497355" y="0.0207254" />
+                                <point x="0.830688" y="0.165803" />
+                                <point x="0.978836" y="0.497409" />
+                                <point x="0.835979" y="0.839378" />
+                                <point x="0.497355" y="0.984456" />
+                                <point x="0.153439" y="0.849741" />
+                                <point x="0" y="0.497409" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -159,6 +173,31 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="bgReto" sid="672318433584484">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="155709777738244" speed="5">
+                        <frame duration="1" hotspotX="0.497667" hotspotY="0.497925" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Menu\MenuRetos\backretosmenuretos.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bgTextoReto" sid="406606051228101">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="662476636803347" speed="5">
+                        <frame duration="1" hotspotX="0.500522" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Menu\MenuRetos\frntecartaretosmenuretos.png">
+                            <collision-poly>
+                                <point x="0.0135841" y="0.176768" />
+                                <point x="0.807471" y="0.108586" />
+                                <point x="0.804075" y="3.49246e-010" />
+                                <point x="0.967607" y="0.00505051" />
+                                <point x="1" y="0.900673" />
+                                <point x="0.0240334" y="0.993266" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Sprites">
             <object-type name="sandalias" sid="378089074337998">
@@ -211,6 +250,34 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="txtAccesoDenegado" sid="519518706979269">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="avatar" pingpong="0" repeatcount="1" repeatto="0" sid="997559936468853" speed="5">
+                        <frame duration="1" hotspotX="0.501353" hotspotY="0.588235" original-source="C:\Users\logan24\Desktop\denegado_avatar.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="pasoPorRopero2" pingpong="0" repeatcount="1" repeatto="0" sid="702854031879024" speed="5">
+                        <frame duration="1" hotspotX="0.497525" hotspotY="0.584615" original-source="C:\Users\logan24\Desktop\denegado1_ropero1.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="faltaAvatar" pingpong="0" repeatcount="1" repeatto="0" sid="537055521012659" speed="5">
+                        <frame duration="1" hotspotX="0.497666" hotspotY="0.584615" original-source="C:\Users\logan24\Desktop\falta_Avatar.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="primeroAvataryRopero" pingpong="0" repeatcount="1" repeatto="0" sid="400576158140081" speed="5">
+                        <frame duration="1" hotspotX="0.497331" hotspotY="0.584615" original-source="C:\Users\logan24\Desktop\antesAvataryRopero.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="ropero2Terminado" pingpong="0" repeatcount="1" repeatto="0" sid="118996881063448" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.584615" original-source="C:\Users\logan24\Desktop\ropero2Terminado.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="txtRetos" sid="202169307050749">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="selfie" pingpong="0" repeatcount="1" repeatto="0" sid="690034603566151" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501597" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Menu\MenuRetos\textoretoselfiemenuretos.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Controls" />
         <object-folder name="System">
@@ -255,8 +322,33 @@
             <object-type name="icoU1" sid="506847365743129">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="162086533118140" speed="5">
-                        <frame duration="1" hotspotX="0.502564" hotspotY="0.47479" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\menu\unidad1.png" />
+                    <animation framecount="1" loop="0" name="abierto" pingpong="0" repeatcount="1" repeatto="0" sid="162086533118140" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.475962" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Menu\simbolos y menu abierto\1x\u1_Open.png">
+                            <collision-poly>
+                                <point x="0.164948" y="0.153846" />
+                                <point x="0.5" y="0.00480769" />
+                                <point x="0.845361" y="0.144231" />
+                                <point x="0.974227" y="0.5" />
+                                <point x="0.793814" y="0.807692" />
+                                <point x="0.5" y="1" />
+                                <point x="0.216495" y="0.798077" />
+                                <point x="0.0309278" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="cerrado" pingpong="0" repeatcount="1" repeatto="0" sid="801904171426472" speed="5">
+                        <frame duration="1" hotspotX="0.502591" hotspotY="0.502008" original-source="C:\Users\logan24\Desktop\recursos_CONFE\Menu\Asset 22.png">
+                            <collision-poly>
+                                <point x="0.305699" y="0.236948" />
+                                <point x="0.497409" y="0.0522088" />
+                                <point x="0.715026" y="0.220884" />
+                                <point x="0.968912" y="0.497992" />
+                                <point x="0.932642" y="0.947791" />
+                                <point x="0.497409" y="0.955823" />
+                                <point x="0.186529" y="0.855422" />
+                                <point x="0" y="0.497992" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -309,13 +401,15 @@
         <layout>Objetos.xml</layout>
         <layout>AvanceAmistad.xml</layout>
         <layout>Preload.xml</layout>
+        <layout>Retos.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>eHome.xml</event-sheet>
-        <event-sheet>eSunMenu.xml</event-sheet>
+        <event-sheet>eSubMenu.xml</event-sheet>
         <event-sheet>eObjetos.xml</event-sheet>
         <event-sheet>eAvanceAmistad.xml</event-sheet>
         <event-sheet>ePreload.xml</event-sheet>
+        <event-sheet>eRetos.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Function" uid="0" />

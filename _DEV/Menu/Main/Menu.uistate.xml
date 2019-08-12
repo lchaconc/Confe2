@@ -14,9 +14,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="2">SubMenu</layout>
         <layout order="4">Preload</layout>
         <layout order="6">Objetos</layout>
+        <layout order="7">Retos</layout>
         <event-sheet order="1">eHome</event-sheet>
-        <event-sheet order="3">eSunMenu</event-sheet>
+        <event-sheet order="3">eSubMenu</event-sheet>
         <event-sheet active="1" order="5">ePreload</event-sheet>
+        <event-sheet order="8">eRetos</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -27,12 +29,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <families-expanded root="1" />
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
-        <folder expanded="1" path="object-folder/Buttons/" />
+        <folder expanded="0" path="object-folder/Buttons/" />
         <folder expanded="0" path="object-folder/Backgrounds/" />
         <folder expanded="0" path="object-folder/Sprites/" />
-        <folder expanded="0" path="object-folder/Texts/" />
+        <folder expanded="1" path="object-folder/Texts/" />
         <folder expanded="1" path="object-folder/Controls/" />
-        <folder expanded="1" path="object-folder/System/" />
+        <folder expanded="0" path="object-folder/System/" />
         <folder expanded="1" path="object-folder/Sensors/" />
         <folder expanded="0" path="object-folder/Fx/" />
         <folder expanded="0" path="object-folder/Unidades/" />
@@ -55,12 +57,16 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/bgSunMenu/" />
         <folder expanded="1" path="animation-folder/bgSecundario/" />
         <folder expanded="1" path="animation-folder/bgSecundario2/" />
+        <folder expanded="1" path="animation-folder/bgReto/" />
+        <folder expanded="1" path="animation-folder/bgTextoReto/" />
         <folder expanded="1" path="animation-folder/sandalias/" />
         <folder expanded="1" path="animation-folder/fondoRedondo/" />
         <folder expanded="1" path="animation-folder/barraAvance/" />
         <folder expanded="1" path="animation-folder/txtSandalias/" />
         <folder expanded="1" path="animation-folder/txtTituloSandalias/" />
         <folder expanded="1" path="animation-folder/txtAmistad1/" />
+        <folder expanded="1" path="animation-folder/txtAccesoDenegado/" />
+        <folder expanded="1" path="animation-folder/txtRetos/" />
         <folder expanded="1" path="animation-folder/luzAmarilla/" />
         <folder expanded="1" path="animation-folder/u1/" />
         <folder expanded="1" path="animation-folder/icoU1/" />
