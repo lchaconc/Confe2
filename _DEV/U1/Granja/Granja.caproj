@@ -315,12 +315,12 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="d1" pingpong="0" repeatcount="1" repeatto="0" sid="671838737574279" speed="5">
-                        <frame duration="1" hotspotX="0.246715" hotspotY="0.500963" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Granja\Fondos\Asset 212.png">
+                        <frame duration="1" hotspotX="0.499299" hotspotY="0.246609" original-source="C:\Users\logan24\Desktop\mision1.png">
                             <collision-poly>
-                                <point x="0.997763" y="0.00161551" />
-                                <point x="0.997763" y="0.998384" />
-                                <point x="0" y="0.998384" />
-                                <point x="0" y="0" />
+                                <point x="0.998384" y="0.997763" />
+                                <point x="0.001616" y="0.997763" />
+                                <point x="0.001616" y="0" />
+                                <point x="1" y="0" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -527,6 +527,20 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="442831694716591" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btnAudio" sid="558812121756925">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="encendido" sid="632797845104530" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="encendido" pingpong="0" repeatcount="1" repeatto="0" sid="574968015246688" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="apagado" pingpong="0" repeatcount="1" repeatto="0" sid="613208914399051" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
@@ -6213,16 +6227,22 @@
             <object-type name="cantMonedas" sid="311269815970161">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="679044914384507" speed="5">
+                    <animation framecount="1" loop="0" name="n4" pingpong="0" repeatcount="1" repeatto="0" sid="679044914384507" speed="5">
                         <frame duration="1" hotspotX="0.529412" hotspotY="0.517241" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Granja\Botones-Controles\Asset 15Granja.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="n0" pingpong="0" repeatcount="1" repeatto="0" sid="872543829205962" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
             <object-type name="cantQueso" sid="813659904572289">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="462298441998298" speed="5">
+                    <animation framecount="1" loop="0" name="n5" pingpong="0" repeatcount="1" repeatto="0" sid="462298441998298" speed="5">
                         <frame duration="1" hotspotX="0.526316" hotspotY="0.517241" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_1\Granja\Botones-Controles\Asset 14Granja.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="n1" pingpong="0" repeatcount="1" repeatto="0" sid="268344638632230" speed="5">
+                        <frame duration="1" hotspotX="0.525641" hotspotY="0.670588" />
                     </animation>
                 </animation-folder>
             </object-type>
