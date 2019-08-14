@@ -13,7 +13,7 @@
             <actions>
                 <action id="14" name="Log" sid="811100121514223" type="Browser">
                     <param id="0" name="Type">0</param>
-                    <param id="1" name="Message">&quot;+++ Granja  v5.0 ***&quot;</param>
+                    <param id="1" name="Message">&quot;+++ Granja  v5.5 ***&quot;</param>
                 </action>
                 <action id="4" name="Preload" sid="389639860107865" type="Audio">
                     <param id="0" name="Audio file">corte</param>
@@ -45,6 +45,9 @@
                 <action id="4" name="Preload" sid="207789128218174" type="Audio">
                     <param id="0" name="Audio file">granja1</param>
                 </action>
+                <action id="4" name="Preload" sid="521688743586982" type="Audio">
+                    <param id="0" name="Audio file">granja2</param>
+                </action>
                 <action id="-9" name="Set value" sid="991340027834568" type="System">
                     <param id="0" name="Variable">avance</param>
                     <param id="1" name="Value">int(WebStorage.SessionValue(&quot;avance_j01granja&quot;))</param>
@@ -57,15 +60,15 @@
                     <param id="0" name="Variable">sexo</param>
                     <param id="1" name="Value">WebStorage.SessionValue(&quot;sexo&quot;)</param>
                 </action>
-                <action id="-9" name="Set value" sid="656466285407106" type="System">
+                <action disabled="1" id="-9" name="Set value" sid="656466285407106" type="System">
                     <param id="0" name="Variable">avance</param>
-                    <param id="1" name="Value">1</param>
+                    <param id="1" name="Value">2</param>
                 </action>
-                <action id="-9" name="Set value" sid="109115504744173" type="System">
+                <action disabled="1" id="-9" name="Set value" sid="109115504744173" type="System">
                     <param id="0" name="Variable">idUsr</param>
                     <param id="1" name="Value">&quot;pepito&quot;</param>
                 </action>
-                <action id="-9" name="Set value" sid="575814755813115" type="System">
+                <action disabled="1" id="-9" name="Set value" sid="575814755813115" type="System">
                     <param id="0" name="Variable">sexo</param>
                     <param id="1" name="Value">&quot;f&quot;</param>
                 </action>

@@ -492,6 +492,10 @@
                             <param id="0" name="Name">&quot;papiroFinDia2&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
+                        <action id="14" name="Log" sid="761111398333791" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;*** Sensor huyerta &quot; &amp; sensorHuerta.activoRegado1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <comment>Día 2: Alimentar Vacas</comment>
@@ -2542,6 +2546,7 @@
                         <action id="-16" name="Wait" sid="654394905503521" type="System">
                             <param id="0" name="Seconds">2</param>
                         </action>
+                        <action id="33" name="Stop all" sid="392385055851485" type="Audio" />
                         <action id="-4" name="Set layer visible" sid="961707496070128" type="System">
                             <param id="0" name="Layer">&quot;shadow&quot;</param>
                             <param id="1" name="Visibility">1</param>
@@ -2780,11 +2785,9 @@
                             <param id="0" name="Variable">status</param>
                             <param id="1" name="Value">&quot;fin dia 1&quot;</param>
                         </action>
+                        <action id="33" name="Stop all" sid="893683452268932" type="Audio" />
                         <action id="-16" name="Wait" sid="764293698008964" type="System">
                             <param id="0" name="Seconds">3</param>
-                        </action>
-                        <action id="6" name="Stop" sid="903009088513995" type="Audio">
-                            <param id="0" name="Tag">&quot;ambiente&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="809864917103703" type="System">
                             <param id="0" name="Variable">status</param>
@@ -2850,7 +2853,7 @@
                         <condition id="0" name="On function" sid="604234150398808" type="Function">
                             <param id="0" name="Name">&quot;papiroFinDia2&quot;</param>
                         </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="118848171172641" type="vacaBlanca">
+                        <condition id="-8" name="Is boolean instance variable set" sid="118848171172641" type="vacaCafe">
                             <param id="0" name="Instance variable">activoComida</param>
                         </condition>
                         <condition id="-8" name="Is boolean instance variable set" sid="793423358296734" type="sensorHuerta">
@@ -2858,10 +2861,11 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="886088986079856" type="System">
-                            <param id="0" name="Variable">status</param>
-                            <param id="1" name="Value">&quot;fin dia 2&quot;</param>
+                        <action id="14" name="Log" sid="952128215397612" type="Browser">
+                            <param id="0" name="Type">1</param>
+                            <param id="1" name="Message">&quot;Comprobando fin dia 2&quot;</param>
                         </action>
+                        <action id="33" name="Stop all" sid="725600120746256" type="Audio" />
                         <action id="-16" name="Wait" sid="534263660054099" type="System">
                             <param id="0" name="Seconds">3</param>
                         </action>
@@ -2941,6 +2945,7 @@
                             <param id="0" name="Variable">status</param>
                             <param id="1" name="Value">&quot;fin dia 3&quot;</param>
                         </action>
+                        <action id="33" name="Stop all" sid="192335947086073" type="Audio" />
                         <action id="-16" name="Wait" sid="700741200532121" type="System">
                             <param id="0" name="Seconds">3</param>
                         </action>
@@ -3016,6 +3021,7 @@
                             <param id="0" name="Variable">status</param>
                             <param id="1" name="Value">&quot;fin dia 4&quot;</param>
                         </action>
+                        <action id="33" name="Stop all" sid="257923150775058" type="Audio" />
                         <action id="-16" name="Wait" sid="586638675365725" type="System">
                             <param id="0" name="Seconds">3</param>
                         </action>
@@ -3095,6 +3101,7 @@
                             <param id="0" name="Variable">status</param>
                             <param id="1" name="Value">&quot;fin dia 5&quot;</param>
                         </action>
+                        <action id="33" name="Stop all" sid="292011164845865" type="Audio" />
                         <action id="-16" name="Wait" sid="427343161647719" type="System">
                             <param id="0" name="Seconds">3</param>
                         </action>
@@ -5076,7 +5083,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Play" sid="377730698929917" type="Audio">
-                                            <param id="0" name="Audio file">amazonas</param>
+                                            <param id="0" name="Audio file">granja2</param>
                                             <param id="2" name="Loop">1</param>
                                             <param id="3" name="Volume">0</param>
                                             <param id="1" name="Tag (optional)">&quot;granja2&quot;</param>
@@ -5093,11 +5100,65 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Play" sid="234211447344044" type="Audio">
+                                        <action id="0" name="Play" sid="318686109013206" type="Audio">
                                             <param id="0" name="Audio file">granja1</param>
                                             <param id="2" name="Loop">1</param>
                                             <param id="3" name="Volume">0</param>
-                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                            <param id="1" name="Tag (optional)">&quot;granja1&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="504698929136585">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="170552746431017" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="546828001511750" type="System">
+                                            <param id="0" name="Variable">avance</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">4</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="707933921482336" type="Audio">
+                                            <param id="0" name="Audio file">granja2</param>
+                                            <param id="2" name="Loop">1</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;granja2&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="857003390782075">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="636152880369036" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="376791512320939" type="System">
+                                            <param id="0" name="Variable">avance</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="915107497579188" type="Audio">
+                                            <param id="0" name="Audio file">granja1</param>
+                                            <param id="2" name="Loop">1</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;granja1&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="365999668833123">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="696141528295483" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="127481586747296" type="System">
+                                            <param id="0" name="Variable">avance</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">6</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="563471912135377" type="Audio">
+                                            <param id="0" name="Audio file">granja2</param>
+                                            <param id="2" name="Loop">1</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;granja2&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -5114,6 +5175,7 @@
                                 <action id="6" name="Stop" sid="311350359074444" type="Audio">
                                     <param id="0" name="Tag">&quot;granja2&quot;</param>
                                 </action>
+                                <action id="33" name="Stop all" sid="561212472847446" type="Audio" />
                             </actions>
                         </event-block>
                     </sub-events>
