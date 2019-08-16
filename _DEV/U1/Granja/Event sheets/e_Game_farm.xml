@@ -1095,14 +1095,9 @@
                             <param id="0" name="Instance variable">activo</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="603144265374474" type="queso2">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="678547727628006" type="queso3">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="314112832307232" type="queso4">
-                            <param id="0" name="Visibility">1</param>
+                        <action id="4" name="Set animation" sid="138325413256644" type="cantQueso">
+                            <param id="0" name="Animation">&quot;n3&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                         <action id="-9" name="Set value" sid="424025711457807" type="System">
                             <param id="0" name="Variable">status</param>
@@ -1166,6 +1161,10 @@
                         <action id="-13" name="Set boolean" sid="553738668916589" type="zanahorias1">
                             <param id="0" name="Instance variable">activo</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="710580162391742" type="cantHortalizas">
+                            <param id="0" name="Animation">&quot;n1&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="161933641420337" type="carriot">
                             <param id="0" name="Angle">random(0,360)</param>
@@ -2192,27 +2191,13 @@
                                 <action id="-16" name="Wait" sid="136205799322531" type="System">
                                     <param id="0" name="Seconds">2.5</param>
                                 </action>
-                                <action id="4" name="Set animation" sid="501843670019263" type="queso2">
-                                    <param id="0" name="Animation">&quot;monedas&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="-7" name="Set size" sid="962725657701182" type="queso2">
-                                    <param id="0" name="Width">40</param>
-                                    <param id="1" name="Height">40</param>
-                                </action>
-                                <action id="9" name="Set scale" sid="738316186896766" type="queso2">
-                                    <param id="0" name="Scale">2</param>
-                                </action>
-                                <action id="0" name="Spawn another object" sid="716864849343596" type="queso2">
+                                <action id="0" name="Spawn another object" sid="716864849343596" type="cantMonedas">
                                     <param id="0" name="Object">particulas_rojo</param>
                                     <param id="1" name="Layer">&quot;controls&quot;</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="458905351192792" type="System">
                                     <param id="0" name="Seconds">0.5</param>
-                                </action>
-                                <action id="9" name="Set scale" sid="157026896896161" type="queso2">
-                                    <param id="0" name="Scale">1</param>
                                 </action>
                                 <action id="4" name="Set animation" sid="608692486593450" type="dialogoCompra">
                                     <param id="0" name="Animation">&quot;queso&quot;</param>
@@ -2279,27 +2264,13 @@
                                 <action id="-16" name="Wait" sid="415161833473731" type="System">
                                     <param id="0" name="Seconds">2.5</param>
                                 </action>
-                                <action id="4" name="Set animation" sid="809879352355088" type="queso3">
-                                    <param id="0" name="Animation">&quot;monedas&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="-7" name="Set size" sid="657908823033012" type="queso3">
-                                    <param id="0" name="Width">40</param>
-                                    <param id="1" name="Height">40</param>
-                                </action>
-                                <action id="9" name="Set scale" sid="550056481767434" type="queso3">
-                                    <param id="0" name="Scale">2</param>
-                                </action>
-                                <action id="0" name="Spawn another object" sid="164161478685516" type="queso3">
+                                <action id="0" name="Spawn another object" sid="164161478685516" type="cantMonedas">
                                     <param id="0" name="Object">particulas_rojo</param>
                                     <param id="1" name="Layer">&quot;controls&quot;</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="328269117396506" type="System">
                                     <param id="0" name="Seconds">0.5</param>
-                                </action>
-                                <action id="9" name="Set scale" sid="637212337755944" type="queso3">
-                                    <param id="0" name="Scale">1</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="492475507452587" type="dialogoCompra">
                                     <param id="0" name="Visibility">0</param>
@@ -2362,27 +2333,13 @@
                                 <action id="-16" name="Wait" sid="884723321465542" type="System">
                                     <param id="0" name="Seconds">2.5</param>
                                 </action>
-                                <action id="4" name="Set animation" sid="604381898056754" type="queso4">
-                                    <param id="0" name="Animation">&quot;monedas&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="-7" name="Set size" sid="102026473066854" type="queso4">
-                                    <param id="0" name="Width">40</param>
-                                    <param id="1" name="Height">40</param>
-                                </action>
-                                <action id="9" name="Set scale" sid="138573206602841" type="queso4">
-                                    <param id="0" name="Scale">2</param>
-                                </action>
-                                <action id="0" name="Spawn another object" sid="682202534594180" type="queso4">
+                                <action id="0" name="Spawn another object" sid="682202534594180" type="cantMonedas">
                                     <param id="0" name="Object">particulas_rojo</param>
                                     <param id="1" name="Layer">&quot;controls&quot;</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="476494391255207" type="System">
                                     <param id="0" name="Seconds">0.5</param>
-                                </action>
-                                <action id="9" name="Set scale" sid="383676255053938" type="queso4">
-                                    <param id="0" name="Scale">1</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="918396540136965" type="dialogoCompra">
                                     <param id="0" name="Visibility">0</param>
@@ -4048,24 +4005,17 @@
                             <param id="0" name="X">-600</param>
                             <param id="1" name="Y">-600</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="129264889694970" type="queso">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
                         <action id="-13" name="Set boolean" sid="872775061569444" type="queso">
                             <param id="0" name="Instance variable">activo</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="266173693949891" type="queso2">
-                            <param id="0" name="Visibility">1</param>
+                        <action id="4" name="Set animation" sid="871349883914099" type="cantHortalizas">
+                            <param id="0" name="Animation">&quot;n1&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="123542130564975" type="queso3">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="294822848613041" type="queso4">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="779605695064114" type="zanahorias1">
-                            <param id="0" name="Visibility">1</param>
+                        <action id="4" name="Set animation" sid="781522512479873" type="cantQueso">
+                            <param id="0" name="Animation">&quot;n3&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                         <action id="-9" name="Destroy" sid="195527015265730" type="canasta" />
                         <action id="-3" name="Set position" sid="852383321764410" type="queso">
