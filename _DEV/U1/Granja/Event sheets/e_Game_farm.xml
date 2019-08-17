@@ -2191,10 +2191,9 @@
                                 <action id="-16" name="Wait" sid="136205799322531" type="System">
                                     <param id="0" name="Seconds">2.5</param>
                                 </action>
-                                <action id="0" name="Spawn another object" sid="716864849343596" type="cantMonedas">
-                                    <param id="0" name="Object">particulas_rojo</param>
-                                    <param id="1" name="Layer">&quot;controls&quot;</param>
-                                    <param id="2" name="Image point">0</param>
+                                <action id="0" name="Call function" sid="369199672083915" type="Function">
+                                    <param id="0" name="Name">&quot;venderQueso&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                                 <action id="-16" name="Wait" sid="458905351192792" type="System">
                                     <param id="0" name="Seconds">0.5</param>
@@ -2205,10 +2204,6 @@
                                 </action>
                                 <action id="-15" name="Set visible" sid="949510415579042" type="dialogoCompra">
                                     <param id="0" name="Visibility">0</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="462817757449491" type="mesaQueso">
-                                    <param id="0" name="Instance variable">quesosVendidos</param>
-                                    <param id="1" name="Value">mesaQueso.quesosVendidos + 1</param>
                                 </action>
                                 <action id="-13" name="Set boolean" sid="940645686407891" type="comprador1">
                                     <param id="0" name="Instance variable">activoRebote</param>
@@ -2264,20 +2259,15 @@
                                 <action id="-16" name="Wait" sid="415161833473731" type="System">
                                     <param id="0" name="Seconds">2.5</param>
                                 </action>
-                                <action id="0" name="Spawn another object" sid="164161478685516" type="cantMonedas">
-                                    <param id="0" name="Object">particulas_rojo</param>
-                                    <param id="1" name="Layer">&quot;controls&quot;</param>
-                                    <param id="2" name="Image point">0</param>
+                                <action id="0" name="Call function" sid="618381155710533" type="Function">
+                                    <param id="0" name="Name">&quot;venderQueso&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                                 <action id="-16" name="Wait" sid="328269117396506" type="System">
                                     <param id="0" name="Seconds">0.5</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="492475507452587" type="dialogoCompra">
                                     <param id="0" name="Visibility">0</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="594963177013460" type="mesaQueso">
-                                    <param id="0" name="Instance variable">quesosVendidos</param>
-                                    <param id="1" name="Value">mesaQueso.quesosVendidos + 1</param>
                                 </action>
                                 <action id="-13" name="Set boolean" sid="829944729665504" type="comprador2">
                                     <param id="0" name="Instance variable">activoRebote</param>
@@ -2333,20 +2323,15 @@
                                 <action id="-16" name="Wait" sid="884723321465542" type="System">
                                     <param id="0" name="Seconds">2.5</param>
                                 </action>
-                                <action id="0" name="Spawn another object" sid="682202534594180" type="cantMonedas">
-                                    <param id="0" name="Object">particulas_rojo</param>
-                                    <param id="1" name="Layer">&quot;controls&quot;</param>
-                                    <param id="2" name="Image point">0</param>
+                                <action id="0" name="Call function" sid="715900939100348" type="Function">
+                                    <param id="0" name="Name">&quot;venderQueso&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                                 <action id="-16" name="Wait" sid="476494391255207" type="System">
                                     <param id="0" name="Seconds">0.5</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="918396540136965" type="dialogoCompra">
                                     <param id="0" name="Visibility">0</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="998035280773472" type="mesaQueso">
-                                    <param id="0" name="Instance variable">quesosVendidos</param>
-                                    <param id="1" name="Value">mesaQueso.quesosVendidos + 1</param>
                                 </action>
                                 <action id="-13" name="Set boolean" sid="966908621927232" type="comprador3">
                                     <param id="0" name="Instance variable">activoRebote</param>
@@ -2405,19 +2390,6 @@
                                 </action>
                                 <action id="-16" name="Wait" sid="382073507188395" type="System">
                                     <param id="0" name="Seconds">2.5</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="267874225646302" type="zanahorias1">
-                                    <param id="0" name="Animation">&quot;monedas&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="-7" name="Set size" sid="811948009422867" type="zanahorias1">
-                                    <param id="0" name="Width">40</param>
-                                    <param id="1" name="Height">40</param>
-                                </action>
-                                <action id="0" name="Spawn another object" sid="894627815664769" type="zanahorias1">
-                                    <param id="0" name="Object">particulas_rojo</param>
-                                    <param id="1" name="Layer">&quot;controls&quot;</param>
-                                    <param id="2" name="Image point">0</param>
                                 </action>
                                 <action id="-11" name="Add to" sid="285334186892768" type="zanahorias1">
                                     <param id="0" name="Instance variable">vendido</param>
@@ -2628,7 +2600,7 @@
                             <param id="0" name="Seconds">1.0</param>
                         </action>
                         <action id="7" name="Go to URL" sid="740647448618235" type="Browser">
-                            <param id="0" name="URL">&quot;http://localhost/c2/Menu/&quot;</param>
+                            <param id="0" name="URL">&quot;http://localhost/Confe2/Build/modulos/menu/index.html&quot;</param>
                             <param id="1" name="Target">0</param>
                         </action>
                     </actions>
@@ -5111,6 +5083,109 @@
                                     <param id="0" name="Tag">&quot;granja06&quot;</param>
                                 </action>
                                 <action id="33" name="Stop all" sid="561212472847446" type="Audio" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="328815217989237" title="Vender_quesos_hortalizas">
+            <sub-events>
+                <event-block sid="444999761821766">
+                    <conditions>
+                        <condition id="0" name="On function" sid="669064960678706" type="Function">
+                            <param id="0" name="Name">&quot;venderQueso&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="462817757449491" type="mesaQueso">
+                            <param id="0" name="Instance variable">quesosVendidos</param>
+                            <param id="1" name="Value">mesaQueso.quesosVendidos + 1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="697966917073605">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="853891238466015" type="mesaQueso">
+                                    <param id="0" name="Instance variable">quesosVendidos</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="499229567876384" type="cantQueso">
+                                    <param id="0" name="Animation">&quot;n2&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="819014015868807" type="cantMonedas">
+                                    <param id="0" name="Animation">&quot;n1&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="909429335241460" type="cantMonedas">
+                                    <param id="0" name="Object">particulasFx</param>
+                                    <param id="1" name="Layer">&quot;controls&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="115198291146669">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="532150226797478" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="633355627287405" type="mesaQueso">
+                                    <param id="0" name="Instance variable">quesosVendidos</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="673912469505144" type="cantQueso">
+                                    <param id="0" name="Animation">&quot;n1&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="111316516721616" type="cantMonedas">
+                                    <param id="0" name="Object">particulas_rojo</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="445531625622007" type="cantMonedas">
+                                    <param id="0" name="Animation">&quot;n2&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="611577779915178" type="cantMonedas">
+                                    <param id="0" name="Object">particulasFx</param>
+                                    <param id="1" name="Layer">&quot;controls&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="316172630805164">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="634806745510677" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="944199023929498" type="mesaQueso">
+                                    <param id="0" name="Instance variable">quesosVendidos</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="670440743689805" type="cantQueso">
+                                    <param id="0" name="Animation">&quot;n0&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="723463081825879" type="cantMonedas">
+                                    <param id="0" name="Object">particulas_rojo</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="576130890483157" type="cantMonedas">
+                                    <param id="0" name="Animation">&quot;n3&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="926597876017768" type="cantMonedas">
+                                    <param id="0" name="Object">particulasFx</param>
+                                    <param id="1" name="Layer">&quot;controls&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
