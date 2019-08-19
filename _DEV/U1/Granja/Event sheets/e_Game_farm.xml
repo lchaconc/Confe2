@@ -4,7 +4,8 @@
     <name>e_Game_farm</name>
     <events>
         <variable comment="ultima direccion registrada. Funciona con el método desplazaraAtras" constant="0" name="orientacionActual" sid="735267580446441" static="0" type="text">null</variable>
-        <variable constant="1" name="URLGUARDARAVANCE" sid="923403895803467" static="0" type="text">http://localhost/Confe2/ws/set_avance_usuario.php?</variable>
+        <variable constant="1" name="URLGUARDARAVANCE" sid="923403895803467" static="0" type="text">https://elpatioviveros.com/test/confe_ws/set_avance_usuario.php?</variable>
+        <variable constant="1" name="URLGUARDARAVANCE2" sid="476578641235071" static="0" type="text">http://localhost/Confe2/ws/set_avance_usuario.php?</variable>
         <variable constant="0" name="status" sid="136760279146205" static="0" type="text">nulo</variable>
         <event-group description="" sid="390927723385015" title="mainChar">
             <sub-events>
@@ -2600,7 +2601,7 @@
                             <param id="0" name="Seconds">1.0</param>
                         </action>
                         <action id="7" name="Go to URL" sid="740647448618235" type="Browser">
-                            <param id="0" name="URL">&quot;http://localhost/Confe2/Build/modulos/menu/index.html&quot;</param>
+                            <param id="0" name="URL">&quot;../menu/&quot;</param>
                             <param id="1" name="Target">0</param>
                         </action>
                     </actions>

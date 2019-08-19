@@ -17,6 +17,10 @@
                         <condition id="-2" name="On start of layout" sid="113989134144720" type="System" />
                     </conditions>
                     <actions>
+                        <action id="14" name="Log" sid="773715458328881" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;*** Avatar 5.0.1 ***&quot;</param>
+                        </action>
                         <action id="-9" name="Set value" sid="939347095797292" type="System">
                             <param id="0" name="Variable">isFinLista</param>
                             <param id="1" name="Value">0</param>
@@ -502,9 +506,13 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="930443598126592" type="System">
+                        <action disabled="1" id="-9" name="Set value" sid="930443598126592" type="System">
                             <param id="0" name="Variable">urlRequest</param>
                             <param id="1" name="Value">&quot;http://localhost/Confe2/ws/set_avatar.php?id_usr=&quot;&amp; idUsr&amp;&quot;&amp;tipo_avatar=&quot;&amp;tipoAvatar&amp;&quot;&amp;tipo_traje=nulo&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="235895623914464" type="System">
+                            <param id="0" name="Variable">urlRequest</param>
+                            <param id="1" name="Value">&quot;https://elpatioviveros.com/test/confe_ws/set_avatar.php?id_usr=&quot;&amp; idUsr&amp;&quot;&amp;tipo_avatar=&quot;&amp;tipoAvatar&amp;&quot;&amp;tipo_traje=nulo&quot;</param>
                         </action>
                         <action id="1" name="Set session value" sid="172456295863565" type="WebStorage">
                             <param id="0" name="Key">&quot;tipo_avatar&quot;</param>
@@ -543,17 +551,17 @@
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">&quot;******Envio satisfactorio tipo avatar&quot;</param>
                         </action>
-                        <action id="-9" name="Set value" sid="447157189607088" type="System">
+                        <action disabled="1" id="-9" name="Set value" sid="447157189607088" type="System">
                             <param id="0" name="Variable">urlRequest</param>
                             <param id="1" name="Value">&quot;http://localhost/Confe2/ws/set_avance_usuario.php?id_usr=&quot; &amp; idUsr  &amp; &quot;&amp;id_juego=avatar01&amp;avance=1&amp;terminado=true&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="665348799004434" type="System">
+                            <param id="0" name="Variable">urlRequest</param>
+                            <param id="1" name="Value">&quot;https://elpatioviveros.com/test/confe_ws/set_avance_usuario.php?id_usr=&quot; &amp; idUsr  &amp; &quot;&amp;id_juego=avatar01&amp;avance=1&amp;terminado=true&quot;</param>
                         </action>
                         <action id="1" name="Set session value" sid="310917360324703" type="WebStorage">
                             <param id="0" name="Key">&quot;terminado_avatar01&quot;</param>
                             <param id="1" name="Value">&quot;true&quot;</param>
-                        </action>
-                        <action disabled="1" id="14" name="Log" sid="228791520524195" type="Browser">
-                            <param id="0" name="Type">1</param>
-                            <param id="1" name="Message">urlRequest</param>
                         </action>
                         <action id="0" name="Request URL" sid="895028337960941" type="AJAX">
                             <param id="0" name="Tag">&quot;AvatarTerminado&quot;</param>
@@ -588,7 +596,7 @@
                             <param id="0" name="Seconds">2</param>
                         </action>
                         <action id="7" name="Go to URL" sid="321695878340116" type="Browser">
-                            <param id="0" name="URL">&quot;http://localhost/Confe2/Build/modulos/menu/index.html&quot;</param>
+                            <param id="0" name="URL">&quot;../menu/&quot;</param>
                             <param id="1" name="Target">0</param>
                         </action>
                     </actions>
@@ -619,8 +627,8 @@
                         <action id="-16" name="Wait" sid="685214851392583" type="System">
                             <param id="0" name="Seconds">2</param>
                         </action>
-                        <action id="7" name="Go to URL" sid="937306663350954" type="Browser">
-                            <param id="0" name="URL">&quot;http://localhost/Confe2/Build/modulos/menu/index.html&quot;</param>
+                        <action id="7" name="Go to URL" sid="279885377889484" type="Browser">
+                            <param id="0" name="URL">&quot;../menu/&quot;</param>
                             <param id="1" name="Target">0</param>
                         </action>
                     </actions>
@@ -639,8 +647,8 @@
                         <action id="-16" name="Wait" sid="661467476826869" type="System">
                             <param id="0" name="Seconds">1</param>
                         </action>
-                        <action id="7" name="Go to URL" sid="719433379246047" type="Browser">
-                            <param id="0" name="URL">&quot;http://localhost/Confe2/Build/modulos/menu/index.html&quot;</param>
+                        <action id="7" name="Go to URL" sid="302217255965678" type="Browser">
+                            <param id="0" name="URL">&quot;../menu/&quot;</param>
                             <param id="1" name="Target">0</param>
                         </action>
                     </actions>

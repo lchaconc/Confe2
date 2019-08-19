@@ -1,7 +1,11 @@
 //Const URL servidor
+
+/*
 const urlGetEstadoJuegos = "http://localhost/Confe2/ws/get_estado_juegos.php?id_usr=";
 const urlGetObjetos = "http://localhost/Confe2/ws/get_objetos.php?id_usr=";
-
+*/
+const urlGetEstadoJuegos = "https://elpatioviveros.com/test/confe_ws/get_estado_juegos.php?id_usr=";
+const urlGetObjetos = "https://elpatioviveros.com/test/confe_ws/get_objetos.php?id_usr=";
 
 $(document).ready(function () {
     console.log("Ready");    
