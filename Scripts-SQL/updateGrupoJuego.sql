@@ -1,0 +1,1 @@
+update juego.grupoJuego set activo = 1
