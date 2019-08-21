@@ -3,9 +3,10 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eMain</name>
     <events>
+        <variable constant="0" name="urlAvanceRoperoTerminado" sid="171968268902526" static="0" type="text">http://localhost:60874/api/Juego/AvanceJuego/?idJuego=C01ropero1&amp;terminado=true&amp;avance=1&amp;idUsuario=</variable>
         <variable constant="0" name="tipoTraje" sid="983804149924029" static="0" type="text"></variable>
-        <variable constant="0" name="ajaxRequest" sid="681878595913390" static="0" type="text"></variable>
-        <variable constant="0" name="idUsr" sid="255301873215455" static="0" type="text"></variable>
+        <variable constant="0" name="urlActualizarAvatar" sid="681878595913390" static="0" type="text">http://localhost:60874/api/Juego/AsignaAvatar/?idUsuario=</variable>
+        <variable constant="0" name="idUsuario" sid="255301873215455" static="0" type="text"></variable>
         <variable constant="0" name="tipoAvatar" sid="794086621706205" static="0" type="number">0</variable>
         <variable constant="0" name="sexo" sid="561508372494367" static="0" type="text"></variable>
         <variable constant="0" name="aux" sid="264688356595490" static="0" type="text">nulo</variable>
@@ -18,7 +19,7 @@
                     <actions>
                         <action id="14" name="Log" sid="537814214783010" type="Browser">
                             <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;+++ Ropero 1 v5.6.1  +++&quot;</param>
+                            <param id="1" name="Message">&quot;+++ Ropero 1 v7.0  +++&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="993803718681475" type="System">
                             <param id="0" name="Variable">sexo</param>
@@ -26,15 +27,15 @@
                         </action>
                         <action id="-9" name="Set value" sid="208763682075643" type="System">
                             <param id="0" name="Variable">tipoAvatar</param>
-                            <param id="1" name="Value">WebStorage.SessionValue(&quot;tipo_avatar&quot;)</param>
+                            <param id="1" name="Value">WebStorage.SessionValue(&quot;tipoAvatar&quot;)</param>
                         </action>
                         <action id="-9" name="Set value" sid="663627752572228" type="System">
-                            <param id="0" name="Variable">idUsr</param>
-                            <param id="1" name="Value">WebStorage.SessionValue(&quot;id_usr&quot;)</param>
+                            <param id="0" name="Variable">idUsuario</param>
+                            <param id="1" name="Value">WebStorage.SessionValue(&quot;idUsuario&quot;)</param>
                         </action>
                         <action id="-9" name="Set value" sid="821596115666160" type="System">
                             <param id="0" name="Variable">tipoTraje</param>
-                            <param id="1" name="Value">WebStorage.SessionValue(&quot;tipo_traje&quot;)</param>
+                            <param id="1" name="Value">WebStorage.SessionValue(&quot;tipoTraje&quot;)</param>
                         </action>
                         <action disabled="1" id="-9" name="Set value" sid="148073063466415" type="System">
                             <param id="0" name="Variable">sexo</param>
@@ -45,7 +46,7 @@
                             <param id="1" name="Value">3</param>
                         </action>
                         <action disabled="1" id="-9" name="Set value" sid="668231171170183" type="System">
-                            <param id="0" name="Variable">idUsr</param>
+                            <param id="0" name="Variable">idUsuario</param>
                             <param id="1" name="Value">&quot;felipe@correo.de&quot;</param>
                         </action>
                     </actions>
@@ -55,7 +56,7 @@
                                 <condition id="-14" name="Compare variable" sid="200892752708303" type="System">
                                     <param id="0" name="Variable">sexo</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;m&quot;</param>
+                                    <param id="2" name="Value">&quot;M&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -314,16 +315,12 @@
                             <param id="1" name="Visibility">1</param>
                         </action>
                         <action id="1" name="Set session value" sid="551979618868499" type="WebStorage">
-                            <param id="0" name="Key">&quot;tipo_traje&quot;</param>
+                            <param id="0" name="Key">&quot;tipoTraje&quot;</param>
                             <param id="1" name="Value">tipoTraje</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="708749322199928" type="System">
-                            <param id="0" name="Variable">ajaxRequest</param>
-                            <param id="1" name="Value">&quot;https://elpatioviveros.com/test/confe_ws/set_avatar.php?id_usr=&quot;&amp; idUsr&amp;&quot;&amp;tipo_avatar=&quot;&amp;tipoAvatar&amp;&quot;&amp;tipo_traje=&quot;&amp;tipoTraje</param>
                         </action>
                         <action id="0" name="Request URL" sid="683962762667546" type="AJAX">
                             <param id="0" name="Tag">&quot;requestAvatar&quot;</param>
-                            <param id="1" name="URL">ajaxRequest</param>
+                            <param id="1" name="URL">urlActualizarAvatar &amp; idUsuario &amp; &quot;&amp;tipoAvatar=&quot; &amp; tipoAvatar &amp; &quot;&amp;tipoTraje=&quot; &amp; tipoTraje &amp; &quot;&amp;sexo=&quot; &amp; sexo</param>
                         </action>
                     </actions>
                 </event-block>
@@ -340,7 +337,7 @@
                         </action>
                         <action id="0" name="Request URL" sid="943649469883521" type="AJAX">
                             <param id="0" name="Tag">&quot;terminadoRopero1&quot;</param>
-                            <param id="1" name="URL">&quot;https://elpatioviveros.com/test/confe_ws/set_avance_usuario.php?id_usr=&quot; &amp; idUsr &amp; &quot;&amp;id_juego=c01ropero1&amp;avance=1&amp;terminado=true&quot;</param>
+                            <param id="1" name="URL">urlAvanceRoperoTerminado &amp; idUsuario</param>
                         </action>
                     </actions>
                 </event-block>

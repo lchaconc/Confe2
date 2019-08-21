@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eHome</name>
     <events>
-        <variable constant="0" name="urlRequest" sid="937810381686555" static="0" type="text"></variable>
+        <variable constant="0" name="urlDesactivarObjetoSandalias" sid="937810381686555" static="0" type="text">http://localhost:60874/api/Juego/ActualizaObjetos/?idObjeto=1&amp;idPersona=</variable>
         <event-group description="" sid="545420417498187" title="Botones_Unidades">
             <sub-events>
                 <event-block sid="334735540154439">
@@ -14,19 +14,19 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="449336753125794" type="System">
-                            <param id="0" name="Variable">tC02ropero2</param>
-                            <param id="1" name="Value">WebStorage.SessionValue(&quot;terminado_c02ropero2&quot;)</param>
+                            <param id="0" name="Variable">terminadoC02ropero2</param>
+                            <param id="1" name="Value">WebStorage.SessionValue(&quot;terminadoC02ropero2&quot;)</param>
                         </action>
                         <action id="14" name="Log" sid="354109557904557" type="Browser">
                             <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;*** Ropero 2 terminado: &quot; &amp; tC02ropero2</param>
+                            <param id="1" name="Message">&quot;*** Ropero 2 terminado: &quot; &amp; terminadoC02ropero2</param>
                         </action>
                     </actions>
                     <sub-events>
                         <event-block sid="992852933016279">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="420892190512074" type="System">
-                                    <param id="0" name="Variable">tC02ropero2</param>
+                                    <param id="0" name="Variable">terminadoC02ropero2</param>
                                     <param id="1" name="Comparison">1</param>
                                     <param id="2" name="Value">&quot;true&quot;</param>
                                 </condition>
@@ -75,38 +75,31 @@
                         <event-block sid="763789430844775">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="166754291853833" type="System">
-                                    <param id="0" name="Variable">objSandalias</param>
+                                    <param id="0" name="Variable">objetoSandalias</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;true&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action disabled="1" id="-9" name="Set value" sid="644396811278875" type="System">
-                                    <param id="0" name="Variable">urlRequest</param>
-                                    <param id="1" name="Value">&quot;http://localhost/Confe2/ws/set_objetos.php?id_usr=&quot; &amp; idUsr &amp; &quot;&amp;etiqueta=sandalias&quot;</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="111308985045693" type="System">
-                                    <param id="0" name="Variable">urlRequest</param>
-                                    <param id="1" name="Value">&quot;https://elpatioviveros.com/test/confe_ws/set_objetos.php?id_usr=&quot; &amp; idUsr &amp; &quot;&amp;etiqueta=sandalias&quot;</param>
-                                </action>
                                 <action id="-9" name="Set value" sid="859295098305008" type="System">
-                                    <param id="0" name="Variable">objSandalias</param>
+                                    <param id="0" name="Variable">objetoSandalias</param>
                                     <param id="1" name="Value">&quot;false&quot;</param>
                                 </action>
                                 <action disabled="1" id="14" name="Log" sid="353562864403230" type="Browser">
                                     <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">urlRequest</param>
+                                    <param id="1" name="Message">urlDesactivarObjetoSandalias</param>
                                 </action>
                                 <action id="1" name="Set session value" sid="175059952239124" type="WebStorage">
-                                    <param id="0" name="Key">&quot;obj_sandalias&quot;</param>
-                                    <param id="1" name="Value">objSandalias</param>
+                                    <param id="0" name="Key">&quot;objSandalias&quot;</param>
+                                    <param id="1" name="Value">objetoSandalias</param>
                                 </action>
                                 <action id="0" name="Request URL" sid="281891952705876" type="AJAX">
                                     <param id="0" name="Tag">&quot;ObjetoSandalias&quot;</param>
-                                    <param id="1" name="URL">urlRequest</param>
+                                    <param id="1" name="URL">urlDesactivarObjetoSandalias &amp; idUsuario</param>
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>En caso de que ya ha abierto la unidad 1 anteriormente</comment>
                         <event-block sid="588983688179653">
                             <conditions>
                                 <condition id="-22" name="Else" sid="486494280232755" type="System" />
@@ -126,7 +119,7 @@
                 <event-block sid="134344636701217">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="297129430898503" type="System">
-                            <param id="0" name="Variable">aC01ropero1</param>
+                            <param id="0" name="Variable">activoC01ropero1</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;true&quot;</param>
                         </condition>
@@ -160,12 +153,12 @@
                 <event-block sid="107591580207996">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="565986284038117" type="System">
-                            <param id="0" name="Variable">aAvatar01</param>
+                            <param id="0" name="Variable">activoAvatar01</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;true&quot;</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="863372973372671" type="System">
-                            <param id="0" name="Variable">tC02ropero2</param>
+                            <param id="0" name="Variable">terminadoC02ropero2</param>
                             <param id="1" name="Comparison">1</param>
                             <param id="2" name="Value">&quot;true&quot;</param>
                         </condition>
@@ -203,7 +196,7 @@
                             <param id="0" name="Layout">Objetos</param>
                         </action>
                         <action id="14" name="Log" sid="806522019024435" type="Browser">
-                            <param id="0" name="Type">0</param>
+                            <param id="0" name="Type">1</param>
                             <param id="1" name="Message">AJAX.LastData</param>
                         </action>
                     </actions>
@@ -215,9 +208,12 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-2" name="Go to layout" sid="395155088994017" type="System">
+                            <param id="0" name="Layout">Objetos</param>
+                        </action>
                         <action id="14" name="Log" sid="981588949611034" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">AJAX.LastData</param>
+                            <param id="0" name="Type">2</param>
+                            <param id="1" name="Message">&quot;Error actualizando sandalias&quot; &amp; AJAX.LastData</param>
                         </action>
                     </actions>
                 </event-block>

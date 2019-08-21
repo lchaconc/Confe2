@@ -36,16 +36,10 @@ function setup () {
 
     getJson(urlGetEstadoJuegos + idUsusario, function (data) {
 		console.log("estado juegos")
-          guardarDatosSesion(data); 
-		  
-		  //test	
-		  var activoRopero2 = sessionStorage.getItem("activo_c02ropero2");
-		  console.log("************activoRopero2", activoRopero2);
-		  
-		  
+          guardarDatosSesion(data); 	  			  		
             getJson (urlGetObjetos + idUsusario, function (data) { 
               guardarDatosObjetos(data);
-             //window.location.assign("./modulos/menu/index.html");
+              window.location.assign("./modulos/menu/index.html");
             })
      } )
 
@@ -60,8 +54,7 @@ function getJson(url, mCallBack ) {
         console.log('Error:', response.status);
         return;
       }      
-      response.json().then(function(data) {       
-        //console.log(data);
+      response.json().then(function(data) {               
         mCallBack(data);        
       });
     }
@@ -74,10 +67,8 @@ function getJson(url, mCallBack ) {
 
 
 
-function guardarDatosSesion(array) {
-	
-	console.log(array);
-	
+function guardarDatosSesion(array) {	
+	console.log(array);	
     const limite = array.length;
     for (let index = 0; index < limite; index++) {		
         sessionStorage.setItem( "activo" + array[index].idJuego,   array[index].activo );
