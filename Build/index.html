@@ -59,10 +59,11 @@ function  loadApp (idUsusario) {
 
 
 function guardarDatosAvatar (obj) {
-    sessionStorage.setItem("id_usr", obj.id_usr );
+//Camibar con el nuevo serivicio
+    sessionStorage.setItem("idUsuario", obj.id_usr );
     sessionStorage.setItem("sexo", obj.sexo );
-    sessionStorage.setItem("tipo_avatar", obj.tipo_avatar );
-    sessionStorage.setItem("tipo_traje", obj.tipo_traje );
+    sessionStorage.setItem("tipoAvatar", obj.tipo_avatar );
+    sessionStorage.setItem("tipoTraje", obj.tipo_traje );
 }
     
     

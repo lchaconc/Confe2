@@ -25,9 +25,9 @@ $(document).ready(function () {
 
 function setup () {        
     const sexo = sessionStorage.getItem("sexo");
-    const idUsusario = sessionStorage.getItem("id_usr");
-    const tipoAvatar = sessionStorage.getItem("tipo_avatar");
-    const tipoTraje = sessionStorage.getItem("tipo_traje");
+    const idUsusario = sessionStorage.getItem("idUsuario");
+    const tipoAvatar = sessionStorage.getItem("tipoAvatar");
+    const tipoTraje = sessionStorage.getItem("tipoTraje");
     
     console.log("idUsusario", idUsusario );
     console.log("Sexo", sexo);
@@ -45,7 +45,7 @@ function setup () {
 		  
             getJson (urlGetObjetos + idUsusario, function (data) { 
               guardarDatosObjetos(data);
-             window.location.assign("./modulos/menu/index.html");
+             //window.location.assign("./modulos/menu/index.html");
             })
      } )
 
@@ -79,21 +79,21 @@ function guardarDatosSesion(array) {
 	console.log(array);
 	
     const limite = array.length;
-    for (let index = 0; index < limite; index++) {
-        sessionStorage.setItem( "activo_" + array[index].id_juego,   array[index].activo );
-        sessionStorage.setItem( "avance_" + array[index].id_juego,   array[index].avance );
-        sessionStorage.setItem( "terminado_" + array[index].id_juego,   array[index].terminado );
-        
+    for (let index = 0; index < limite; index++) {		
+        sessionStorage.setItem( "activo" + array[index].idJuego,   array[index].activo );
+        sessionStorage.setItem( "avance" + array[index].idJuego,   array[index].avance );
+        sessionStorage.setItem( "terminado" + array[index].idJuego,   array[index].terminando );        
     }        
 }
 
 
 
 function guardarDatosObjetos(array) {
+	
   const limite = array.length;
   for (let index = 0; index < limite; index++) {
-      sessionStorage.setItem( "obj_" + array[index].etiqueta,   array[index].visible);           
+      sessionStorage.setItem( "objeto" + array[index].etiqueta,   array[index].activo);           
   }
-  console.log( "sandalias:", sessionStorage.getItem("obj_sandalias"));
+  console.log( "sandalias:", sessionStorage.getItem("objetoSandalias"));
   
 }
