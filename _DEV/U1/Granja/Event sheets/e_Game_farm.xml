@@ -4,8 +4,6 @@
     <name>e_Game_farm</name>
     <events>
         <variable comment="ultima direccion registrada. Funciona con el método desplazaraAtras" constant="0" name="orientacionActual" sid="735267580446441" static="0" type="text">null</variable>
-        <variable constant="1" name="URLGUARDARAVANCE" sid="923403895803467" static="0" type="text">https://elpatioviveros.com/test/confe_ws/set_avance_usuario.php?</variable>
-        <variable constant="1" name="URLGUARDARAVANCE2" sid="476578641235071" static="0" type="text">http://localhost/Confe2/ws/set_avance_usuario.php?</variable>
         <variable constant="0" name="status" sid="136760279146205" static="0" type="text">nulo</variable>
         <event-group description="" sid="390927723385015" title="mainChar">
             <sub-events>
@@ -31,7 +29,7 @@
                                 <condition id="-14" name="Compare variable" sid="333177814081502" type="System">
                                     <param id="0" name="Variable">sexo</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;f&quot;</param>
+                                    <param id="2" name="Value">&quot;F&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -75,7 +73,7 @@
                                 <condition id="-14" name="Compare variable" sid="694407925098344" type="System">
                                     <param id="0" name="Variable">sexo</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;f&quot;</param>
+                                    <param id="2" name="Value">&quot;F&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -119,7 +117,7 @@
                                 <condition id="-14" name="Compare variable" sid="831200225178392" type="System">
                                     <param id="0" name="Variable">sexo</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;f&quot;</param>
+                                    <param id="2" name="Value">&quot;F&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -163,7 +161,7 @@
                                 <condition id="-14" name="Compare variable" sid="701698698248743" type="System">
                                     <param id="0" name="Variable">sexo</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;f&quot;</param>
+                                    <param id="2" name="Value">&quot;F&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -197,7 +195,7 @@
                                 <condition id="-14" name="Compare variable" sid="416271185204049" type="System">
                                     <param id="0" name="Variable">sexo</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;f&quot;</param>
+                                    <param id="2" name="Value">&quot;F&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -278,7 +276,7 @@
                         <condition id="-14" name="Compare variable" sid="410934404651702" type="System">
                             <param id="0" name="Variable">sexo</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;f&quot;</param>
+                            <param id="2" name="Value">&quot;F&quot;</param>
                         </condition>
                         <condition id="-1" name="Every tick" sid="599065944905738" type="System" />
                     </conditions>
@@ -3221,7 +3219,7 @@
                         </action>
                         <action id="0" name="Request URL" sid="582517534288729" type="AJAX">
                             <param id="0" name="Tag">&quot;seguimientoDia&quot;</param>
-                            <param id="1" name="URL">URLGUARDARAVANCE &amp; &quot;id_usr=&quot;&amp; idUsr &amp;&quot;  &amp;id_juego=j01granja&quot; &amp; &quot;&amp;avance=&quot; &amp; avance</param>
+                            <param id="1" name="URL">urlAvanceJuego &amp; avance &amp; &quot;&amp;idUsuario=&quot; &amp; idUsuario</param>
                         </action>
                     </actions>
                 </event-block>
