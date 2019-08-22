@@ -212,7 +212,7 @@
                         <condition id="-14" name="Compare variable" sid="709811339230185" type="System">
                             <param id="0" name="Variable">sexo</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;m&quot;</param>
+                            <param id="2" name="Value">&quot;M&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -257,20 +257,8 @@
                             <param id="1" name="Visibility">1</param>
                         </action>
                         <action id="1" name="Set session value" sid="721639463226975" type="WebStorage">
-                            <param id="0" name="Key">&quot;tipo_traje&quot;</param>
+                            <param id="0" name="Key">&quot;tipoTraje&quot;</param>
                             <param id="1" name="Value">tipoTraje</param>
-                        </action>
-                        <action disabled="1" id="-9" name="Set value" sid="306635317529388" type="System">
-                            <param id="0" name="Variable">urlRequest</param>
-                            <param id="1" name="Value">&quot;http://localhost/Confe2/ws/set_avatar.php?id_usr=&quot;&amp; idUsr&amp;&quot;&amp;tipo_avatar=&quot;&amp;tipoAvatar&amp;&quot;&amp;tipo_traje=&quot;&amp;tipoTraje</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="492696856576273" type="System">
-                            <param id="0" name="Variable">urlRequest</param>
-                            <param id="1" name="Value">&quot;https://elpatioviveros.com/test/confe_ws/set_avatar.php?id_usr=&quot;&amp; idUsr&amp;&quot;&amp;tipo_avatar=&quot;&amp;tipoAvatar&amp;&quot;&amp;tipo_traje=&quot;&amp;tipoTraje</param>
-                        </action>
-                        <action id="0" name="Request URL" sid="706003152061158" type="AJAX">
-                            <param id="0" name="Tag">&quot;AjaxAvatar&quot;</param>
-                            <param id="1" name="URL">urlRequest</param>
                         </action>
                     </actions>
                 </event-block>
@@ -286,16 +274,12 @@
                             <param id="1" name="Message">&quot;*** Avatar actualizado satisfactoriamente&quot;</param>
                         </action>
                         <action id="1" name="Set session value" sid="929414392522016" type="WebStorage">
-                            <param id="0" name="Key">&quot;terminado_c02ropero2&quot;</param>
+                            <param id="0" name="Key">&quot;terminadoC02ropero2&quot;</param>
                             <param id="1" name="Value">&quot;true&quot;</param>
-                        </action>
-                        <action disabled="1" id="0" name="Request URL" sid="407175749628158" type="AJAX">
-                            <param id="0" name="Tag">&quot;roperoTerminado&quot;</param>
-                            <param id="1" name="URL">&quot;http://localhost/Confe2/ws/set_avance_usuario.php?id_usr=&quot;&amp; idUsr &amp;&quot;&amp;id_juego=c02ropero2&amp;avance=1&amp;terminado=true&quot;</param>
                         </action>
                         <action id="0" name="Request URL" sid="502524130299459" type="AJAX">
                             <param id="0" name="Tag">&quot;roperoTerminado&quot;</param>
-                            <param id="1" name="URL">&quot;https://elpatioviveros.com/test/confe_ws/set_avance_usuario.php?id_usr=&quot;&amp; idUsr &amp;&quot;&amp;id_juego=c02ropero2&amp;avance=1&amp;terminado=true&quot;</param>
+                            <param id="1" name="URL">urlRopero2Terminado &amp; idUsuario</param>
                         </action>
                     </actions>
                 </event-block>

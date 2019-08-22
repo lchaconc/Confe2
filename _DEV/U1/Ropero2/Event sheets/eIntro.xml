@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eIntro</name>
     <events>
-        <variable constant="0" name="idUsr" sid="211420365357288" static="0" type="text"></variable>
+        <variable constant="0" name="idUsuario" sid="211420365357288" static="0" type="text"></variable>
         <variable constant="0" name="sexo" sid="962488319439102" static="0" type="text"></variable>
         <event-group description="" sid="263255998581646" title="Eventos_Botones">
             <sub-events>
@@ -42,11 +42,11 @@
                     <actions>
                         <action id="14" name="Log" sid="699122943604725" type="Browser">
                             <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;+++ Ropero 2 v5.6.2 +++&quot;</param>
+                            <param id="1" name="Message">&quot;+++ Ropero 2 v 7.0 +++&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="927730882898060" type="System">
-                            <param id="0" name="Variable">idUsr</param>
-                            <param id="1" name="Value">WebStorage.SessionValue(&quot;id_usr&quot;)</param>
+                            <param id="0" name="Variable">idUsuario</param>
+                            <param id="1" name="Value">WebStorage.SessionValue(&quot;idUsuario&quot;)</param>
                         </action>
                         <action id="-9" name="Set value" sid="603604069866562" type="System">
                             <param id="0" name="Variable">sexo</param>
@@ -54,14 +54,14 @@
                         </action>
                         <action id="-9" name="Set value" sid="429694228613351" type="System">
                             <param id="0" name="Variable">tipoAvatar</param>
-                            <param id="1" name="Value">WebStorage.SessionValue(&quot;tipo_avatar&quot;)</param>
+                            <param id="1" name="Value">WebStorage.SessionValue(&quot;tipoAvatar&quot;)</param>
                         </action>
                         <action id="-9" name="Set value" sid="300416170531094" type="System">
                             <param id="0" name="Variable">tipoTraje</param>
-                            <param id="1" name="Value">WebStorage.SessionValue(&quot;tipo_traje&quot;)</param>
+                            <param id="1" name="Value">WebStorage.SessionValue(&quot;tipoTraje&quot;)</param>
                         </action>
                         <action disabled="1" id="-9" name="Set value" sid="203670786613499" type="System">
-                            <param id="0" name="Variable">idUsr</param>
+                            <param id="0" name="Variable">idUsuario</param>
                             <param id="1" name="Value">&quot;felipe@correo.de&quot;</param>
                         </action>
                         <action disabled="1" id="-9" name="Set value" sid="571658734010454" type="System">
@@ -83,7 +83,7 @@
                                 <condition id="-14" name="Compare variable" sid="311028982177610" type="System">
                                     <param id="0" name="Variable">sexo</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;m&quot;</param>
+                                    <param id="2" name="Value">&quot;M&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -870,5 +870,7 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <variable constant="0" name="urlRopero2Terminado" sid="303349569344613" static="0" type="text">http://localhost:60874/api/Juego/AvanceJuego/?idJuego=C02ropero2&amp;terminado=true&amp;avance=1&amp;idUsuario=</variable>
+        <variable constant="0" name="urlAsignarAvatar" sid="545922047009325" static="0" type="text">http://localhost:60874/api/Juego/AsignaAvatar/?idUsuario=</variable>
     </events>
 </c2eventsheet>
