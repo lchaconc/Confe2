@@ -3202,6 +3202,7 @@
         </event-group>
         <event-group description="Ajax que envia el dia que conlcuye el jugador" sid="759214904434431" title="Ajax_Guardar_progreso_dia">
             <sub-events>
+                <variable constant="0" name="avanceJuego" sid="963765534488146" static="0" type="text"></variable>
                 <event-block sid="354903972110397">
                     <conditions>
                         <condition id="0" name="On function" sid="310916442241739" type="Function">
@@ -3217,9 +3218,51 @@
                             <param id="0" name="X">-900</param>
                             <param id="1" name="Y">-900</param>
                         </action>
+                        <action id="-9" name="Set value" sid="404923321337752" type="System">
+                            <param id="0" name="Variable">avanceJuego</param>
+                            <param id="1" name="Value">urlAvanceJuego  &amp; &quot;false&quot;   &amp;   &quot;&amp;avance=&quot; &amp;  avance &amp; &quot;&amp;idUsuario=&quot; &amp; idUsuario</param>
+                        </action>
+                        <action id="14" name="Log" sid="784292871356336" type="Browser">
+                            <param id="0" name="Type">1</param>
+                            <param id="1" name="Message">avanceJuego</param>
+                        </action>
                         <action id="0" name="Request URL" sid="582517534288729" type="AJAX">
                             <param id="0" name="Tag">&quot;seguimientoDia&quot;</param>
-                            <param id="1" name="URL">urlAvanceJuego &amp; avance &amp; &quot;&amp;idUsuario=&quot; &amp; idUsuario</param>
+                            <param id="1" name="URL">avanceJuego</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="872594813726983">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="480881962729398" type="AJAX">
+                            <param id="0" name="Tag">&quot;seguimientoDia&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Log" sid="100508502505158" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;***Datos enviados de forma satisfactoria.&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="318092387371516" type="System">
+                            <param id="0" name="Variable">avanceJuego</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="564448275876220">
+                    <conditions>
+                        <condition id="1" name="On error" sid="525242944218500" type="AJAX">
+                            <param id="0" name="Tag">&quot;seguimientoDia&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Log" sid="315492657369255" type="Browser">
+                            <param id="0" name="Type">2</param>
+                            <param id="1" name="Message">&quot;Error al intentar actualizar datos&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="139615007240776" type="System">
+                            <param id="0" name="Variable">avanceJuego</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
                         </action>
                     </actions>
                 </event-block>
