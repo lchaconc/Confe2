@@ -642,7 +642,7 @@
                                 <condition id="-14" name="Compare variable" sid="559110714241833" type="System">
                                     <param id="0" name="Variable">sexo</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;f&quot;</param>
+                                    <param id="2" name="Value">&quot;F&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -906,7 +906,7 @@
                                 <condition id="-14" name="Compare variable" sid="765410063257270" type="System">
                                     <param id="0" name="Variable">sexo</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;f&quot;</param>
+                                    <param id="2" name="Value">&quot;F&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -2501,6 +2501,10 @@
                             <param id="0" name="Layer">&quot;modal_papiro&quot;</param>
                             <param id="1" name="Visibility">1</param>
                         </action>
+                        <action id="-12" name="Set group active" sid="260047873570097" type="System">
+                            <param id="0" name="Group name">&quot;Ajax_juego_terminado&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="883479496087193">
@@ -3268,6 +3272,74 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="Se envia juego terminado en true" inactive="1" sid="297489907348507" title="Ajax_juego_terminado">
+            <sub-events>
+                <variable constant="0" name="avanceJuego" sid="815234541396911" static="0" type="text"></variable>
+                <event-block sid="126221560648966">
+                    <conditions>
+                        <condition id="0" name="On function" sid="547799467746973" type="Function">
+                            <param id="0" name="Name">&quot;ajaxGuardarDia&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="215515198539633" type="txtMisionCompleta">
+                            <param id="0" name="X">-900</param>
+                            <param id="1" name="Y">-900</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="381443517163030" type="bgPergamino">
+                            <param id="0" name="X">-900</param>
+                            <param id="1" name="Y">-900</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="380580120591194" type="System">
+                            <param id="0" name="Variable">avanceJuego</param>
+                            <param id="1" name="Value">urlAvanceJuego  &amp; &quot;true&quot;   &amp;   &quot;&amp;avance=&quot; &amp;  1 &amp; &quot;&amp;idUsuario=&quot; &amp; idUsuario</param>
+                        </action>
+                        <action id="14" name="Log" sid="148590883052189" type="Browser">
+                            <param id="0" name="Type">1</param>
+                            <param id="1" name="Message">avanceJuego</param>
+                        </action>
+                        <action id="0" name="Request URL" sid="132837176867840" type="AJAX">
+                            <param id="0" name="Tag">&quot;seguimientoDia&quot;</param>
+                            <param id="1" name="URL">avanceJuego</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="942115084614531">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="522476800822302" type="AJAX">
+                            <param id="0" name="Tag">&quot;seguimientoDia&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Log" sid="893571117070585" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;***Datos enviados de forma satisfactoria.&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="858967545610410" type="System">
+                            <param id="0" name="Variable">avanceJuego</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="849562572526597">
+                    <conditions>
+                        <condition id="1" name="On error" sid="200340256874249" type="AJAX">
+                            <param id="0" name="Tag">&quot;seguimientoDia&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Log" sid="672710498139215" type="Browser">
+                            <param id="0" name="Type">2</param>
+                            <param id="1" name="Message">&quot;Error al intentar actualizar datos&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="302216007036806" type="System">
+                            <param id="0" name="Variable">avanceJuego</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="796789269403613" title="Cargar_textos">
             <sub-events>
                 <event-block sid="634440117969043">
@@ -3862,8 +3934,8 @@
                             <param id="1" name="Y">1281</param>
                         </action>
                         <action id="-3" name="Set position" sid="326584722819423" type="carretillo">
-                            <param id="0" name="X">2478</param>
-                            <param id="1" name="Y">1357</param>
+                            <param id="0" name="X">1602</param>
+                            <param id="1" name="Y">752</param>
                         </action>
                         <action id="-3" name="Set position" sid="775421539684147" type="baseGranero">
                             <param id="0" name="X">703</param>
