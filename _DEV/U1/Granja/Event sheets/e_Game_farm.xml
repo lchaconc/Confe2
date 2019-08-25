@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>e_Game_farm</name>
     <events>
+        <variable constant="0" name="parametroAjaxJuegoTerminado" sid="306596436772234" static="0" type="text"></variable>
         <variable comment="ultima direccion registrada. Funciona con el método desplazaraAtras" constant="0" name="orientacionActual" sid="735267580446441" static="0" type="text">null</variable>
         <variable constant="0" name="status" sid="136760279146205" static="0" type="text">nulo</variable>
         <event-group description="" sid="390927723385015" title="mainChar">
@@ -2208,6 +2209,10 @@
                                     <param id="0" name="Instance variable">activoRebote</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="0" name="Call function" sid="780352294536651" type="Function">
+                                    <param id="0" name="Name">&quot;verificarCondicionesParaFinJuego&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="868134380543192">
@@ -2271,6 +2276,10 @@
                                 <action id="-13" name="Set boolean" sid="829944729665504" type="comprador2">
                                     <param id="0" name="Instance variable">activoRebote</param>
                                     <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="843696268785126" type="Function">
+                                    <param id="0" name="Name">&quot;verificarCondicionesParaFinJuego&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
@@ -2336,6 +2345,10 @@
                                     <param id="0" name="Instance variable">activoRebote</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="0" name="Call function" sid="374477010582091" type="Function">
+                                    <param id="0" name="Name">&quot;verificarCondicionesParaFinJuego&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="451709517447191">
@@ -2394,12 +2407,20 @@
                                     <param id="0" name="Instance variable">vendido</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="4" name="Set animation" sid="794621115255151" type="cantHortalizas">
+                                    <param id="0" name="Animation">&quot;n0&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
                                 <action id="-15" name="Set visible" sid="755530442935891" type="dialogoCompra">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
                                 <action id="-13" name="Set boolean" sid="482183139531800" type="comprador4">
                                     <param id="0" name="Instance variable">activoRebote</param>
                                     <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="998232637305503" type="Function">
+                                    <param id="0" name="Name">&quot;verificarCondicionesParaFinJuego&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
@@ -2453,57 +2474,6 @@
                         <action id="0" name="Call function" sid="651570589566266" type="Function">
                             <param id="0" name="Name">&quot;abrirModalInv&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>Fin del juego</comment>
-                <event-block sid="277787561122518">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="443293178840056" type="zanahorias1">
-                            <param id="0" name="Instance variable">vendido</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="695642982144266" type="mesaQueso">
-                            <param id="0" name="Instance variable">quesosVendidos</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">3</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-16" name="Wait" sid="654394905503521" type="System">
-                            <param id="0" name="Seconds">2</param>
-                        </action>
-                        <action id="33" name="Stop all" sid="392385055851485" type="Audio" />
-                        <action id="-4" name="Set layer visible" sid="961707496070128" type="System">
-                            <param id="0" name="Layer">&quot;shadow&quot;</param>
-                            <param id="1" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="658323790957519" type="txtMisiones">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="517641524380359" type="btnAceptar">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="537982271010748" type="bgFinJuego">
-                            <param id="0" name="X">0</param>
-                            <param id="1" name="Y">0</param>
-                        </action>
-                        <action id="-7" name="Set size" sid="820725138619042" type="bgFinJuego">
-                            <param id="0" name="Width">1280</param>
-                            <param id="1" name="Height">720</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="245305701558400" type="txtFinCompleto">
-                            <param id="0" name="X">810</param>
-                            <param id="1" name="Y">356</param>
-                        </action>
-                        <action id="-4" name="Set layer visible" sid="635664964236487" type="System">
-                            <param id="0" name="Layer">&quot;modal_papiro&quot;</param>
-                            <param id="1" name="Visibility">1</param>
-                        </action>
-                        <action id="-12" name="Set group active" sid="260047873570097" type="System">
-                            <param id="0" name="Group name">&quot;Ajax_juego_terminado&quot;</param>
-                            <param id="1" name="State">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2629,6 +2599,57 @@
                     <actions>
                         <action behavior="Bullet" id="5" name="Set enabled" sid="123399224446833" type="bgModalMisiones">
                             <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="857436516185748">
+                    <conditions>
+                        <condition id="0" name="On function" sid="280531463917967" type="Function">
+                            <param id="0" name="Name">&quot;verificarCondicionesParaFinJuego&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="704571552199895" type="zanahorias1">
+                            <param id="0" name="Instance variable">vendido</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="601859484644059" type="mesaQueso">
+                            <param id="0" name="Instance variable">quesosVendidos</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="878293863303089" type="System">
+                            <param id="0" name="Variable">status</param>
+                            <param id="1" name="Value">&quot;Juego terminado&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="654394905503521" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="616593949793042" type="Function">
+                            <param id="0" name="Name">&quot;terminarJuegoEnServidor&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-9" name="Set value" sid="944175100927443" type="System">
+                            <param id="0" name="Variable">status</param>
+                            <param id="1" name="Value">&quot;Inicio Ajax terminado&quot;</param>
+                        </action>
+                        <action id="33" name="Stop all" sid="449375228896496" type="Audio" />
+                        <action id="-9" name="Set value" sid="380580120591194" type="System">
+                            <param id="0" name="Variable">parametroAjaxJuegoTerminado</param>
+                            <param id="1" name="Value">urlAvanceJuego  &amp; &quot;true&quot;   &amp;   &quot;&amp;avance=&quot; &amp;  1 &amp; &quot;&amp;idUsuario=&quot; &amp; idUsuario</param>
+                        </action>
+                        <action id="14" name="Log" sid="148590883052189" type="Browser">
+                            <param id="0" name="Type">1</param>
+                            <param id="1" name="Message">parametroAjaxJuegoTerminado</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="211892083587113" type="System">
+                            <param id="0" name="Variable">status</param>
+                            <param id="1" name="Value">parametroAjaxJuegoTerminado</param>
+                        </action>
+                        <action id="0" name="Request URL" sid="132837176867840" type="AJAX">
+                            <param id="0" name="Tag">&quot;JuegoTerminado&quot;</param>
+                            <param id="1" name="URL">parametroAjaxJuegoTerminado</param>
                         </action>
                     </actions>
                 </event-block>
@@ -3272,16 +3293,49 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Se envia juego terminado en true" inactive="1" sid="297489907348507" title="Ajax_juego_terminado">
+        <event-group description="Se envia juego terminado en true" sid="297489907348507" title="Ajax_juego_terminado">
             <sub-events>
-                <variable constant="0" name="avanceJuego" sid="815234541396911" static="0" type="text"></variable>
-                <event-block sid="126221560648966">
+                <event-block sid="942115084614531">
                     <conditions>
-                        <condition id="0" name="On function" sid="547799467746973" type="Function">
-                            <param id="0" name="Name">&quot;ajaxGuardarDia&quot;</param>
+                        <condition id="0" name="On completed" sid="522476800822302" type="AJAX">
+                            <param id="0" name="Tag">&quot;JuegoTerminado&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-9" name="Set value" sid="638268053250218" type="System">
+                            <param id="0" name="Variable">status</param>
+                            <param id="1" name="Value">&quot;***Datos enviados de forma satisfactoria.&quot;</param>
+                        </action>
+                        <action id="14" name="Log" sid="893571117070585" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">status</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="202102274562327" type="System">
+                            <param id="0" name="Layer">&quot;shadow&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="790961612560091" type="txtMisiones">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="521514083860802" type="btnAceptar">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="700804073289050" type="bgFinJuego">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="804166151330332" type="bgFinJuego">
+                            <param id="0" name="Width">1280</param>
+                            <param id="1" name="Height">720</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="708254168809494" type="txtFinCompleto">
+                            <param id="0" name="X">810</param>
+                            <param id="1" name="Y">356</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="240028712317290" type="System">
+                            <param id="0" name="Layer">&quot;modal_papiro&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
                         <action id="-3" name="Set position" sid="215515198539633" type="txtMisionCompleta">
                             <param id="0" name="X">-900</param>
                             <param id="1" name="Y">-900</param>
@@ -3290,51 +3344,56 @@
                             <param id="0" name="X">-900</param>
                             <param id="1" name="Y">-900</param>
                         </action>
-                        <action id="-9" name="Set value" sid="380580120591194" type="System">
-                            <param id="0" name="Variable">avanceJuego</param>
-                            <param id="1" name="Value">urlAvanceJuego  &amp; &quot;true&quot;   &amp;   &quot;&amp;avance=&quot; &amp;  1 &amp; &quot;&amp;idUsuario=&quot; &amp; idUsuario</param>
-                        </action>
-                        <action id="14" name="Log" sid="148590883052189" type="Browser">
-                            <param id="0" name="Type">1</param>
-                            <param id="1" name="Message">avanceJuego</param>
-                        </action>
-                        <action id="0" name="Request URL" sid="132837176867840" type="AJAX">
-                            <param id="0" name="Tag">&quot;seguimientoDia&quot;</param>
-                            <param id="1" name="URL">avanceJuego</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="942115084614531">
-                    <conditions>
-                        <condition id="0" name="On completed" sid="522476800822302" type="AJAX">
-                            <param id="0" name="Tag">&quot;seguimientoDia&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="14" name="Log" sid="893571117070585" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;***Datos enviados de forma satisfactoria.&quot;</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="858967545610410" type="System">
-                            <param id="0" name="Variable">avanceJuego</param>
-                            <param id="1" name="Value">&quot;&quot;</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="849562572526597">
                     <conditions>
                         <condition id="1" name="On error" sid="200340256874249" type="AJAX">
-                            <param id="0" name="Tag">&quot;seguimientoDia&quot;</param>
+                            <param id="0" name="Tag">&quot;JuegoTerminado&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-9" name="Set value" sid="770864564062312" type="System">
+                            <param id="0" name="Variable">status</param>
+                            <param id="1" name="Value">&quot;Error al intentar actualizar datos&quot;</param>
+                        </action>
                         <action id="14" name="Log" sid="672710498139215" type="Browser">
                             <param id="0" name="Type">2</param>
-                            <param id="1" name="Message">&quot;Error al intentar actualizar datos&quot;</param>
+                            <param id="1" name="Message">status</param>
                         </action>
-                        <action id="-9" name="Set value" sid="302216007036806" type="System">
-                            <param id="0" name="Variable">avanceJuego</param>
-                            <param id="1" name="Value">&quot;&quot;</param>
+                        <action id="-4" name="Set layer visible" sid="312015207971566" type="System">
+                            <param id="0" name="Layer">&quot;shadow&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="186547962635595" type="txtMisiones">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="777099445175842" type="btnAceptar">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="641332572853892" type="bgFinJuego">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="115029898665584" type="bgFinJuego">
+                            <param id="0" name="Width">1280</param>
+                            <param id="1" name="Height">720</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="448668240420490" type="txtFinCompleto">
+                            <param id="0" name="X">810</param>
+                            <param id="1" name="Y">356</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="120487594572223" type="System">
+                            <param id="0" name="Layer">&quot;modal_papiro&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="515972909741856" type="txtMisionCompleta">
+                            <param id="0" name="X">-900</param>
+                            <param id="1" name="Y">-900</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="443945919842344" type="bgPergamino">
+                            <param id="0" name="X">-900</param>
+                            <param id="1" name="Y">-900</param>
                         </action>
                     </actions>
                 </event-block>
