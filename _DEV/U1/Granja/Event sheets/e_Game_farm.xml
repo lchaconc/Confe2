@@ -2257,6 +2257,10 @@
                                     <param id="0" name="Instance variable">activo</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="592116924919278" type="System">
+                                    <param id="0" name="Variable">status</param>
+                                    <param id="1" name="Value">&quot;colision comprador 2&quot;</param>
+                                </action>
                                 <action id="-15" name="Set visible" sid="910209692972894" type="dialogoCompra">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
@@ -2269,6 +2273,10 @@
                                 </action>
                                 <action id="-16" name="Wait" sid="328269117396506" type="System">
                                     <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="342093294391922" type="dialogoCompra">
+                                    <param id="0" name="Animation">&quot;queso&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="492475507452587" type="dialogoCompra">
                                     <param id="0" name="Visibility">0</param>
@@ -4047,8 +4055,8 @@
                             <param id="1" name="From">1</param>
                         </action>
                         <action id="-3" name="Set position" sid="152421860636788" type="baldeVacio">
-                            <param id="0" name="X">1795</param>
-                            <param id="1" name="Y">1356</param>
+                            <param id="0" name="X">1985</param>
+                            <param id="1" name="Y">1359</param>
                         </action>
                         <action id="-15" name="Set visible" sid="687688014615367" type="inv_regadera">
                             <param id="0" name="Visibility">1</param>
@@ -4114,6 +4122,9 @@
                             <param id="0" name="Animation">&quot;d6&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
+                        <action id="-15" name="Set visible" sid="540360803610122" type="carriot">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
                         <action id="-13" name="Set boolean" sid="255552158880529" type="comprador1">
                             <param id="0" name="Instance variable">activo</param>
                             <param id="1" name="Value">1</param>
@@ -4162,6 +4173,9 @@
                             <param id="0" name="Animation">&quot;n3&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
+                        <action id="-15" name="Set visible" sid="581415476459565" type="inv_balde_leche">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
                         <action id="-9" name="Destroy" sid="195527015265730" type="canasta" />
                         <action id="-3" name="Set position" sid="852383321764410" type="queso">
                             <param id="0" name="X">-600</param>
@@ -4208,6 +4222,10 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-9" name="Set value" sid="679348370464892" type="System">
+                                    <param id="0" name="Variable">status</param>
+                                    <param id="1" name="Value">&quot;comprador 2 - izquierda&quot;</param>
+                                </action>
                                 <action id="0" name="Call function" sid="117554121588340" type="Function">
                                     <param id="0" name="Name">&quot;comp2&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
@@ -4221,6 +4239,10 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-3" name="Set position" sid="221058962748713" type="dialogoCompra">
+                                    <param id="0" name="X">1699</param>
+                                    <param id="1" name="Y">1182</param>
+                                </action>
                                 <action id="0" name="Call function" sid="190857200712463" type="Function">
                                     <param id="0" name="Name">&quot;comp2&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
@@ -4400,7 +4422,7 @@
                                 <event-block sid="485514398951102">
                                     <conditions>
                                         <condition id="1" name="Is overlapping another object" sid="870827779179691" type="sprControl">
-                                            <param id="0" name="Object">sComp4Der</param>
+                                            <param id="0" name="Object">sComp2Der</param>
                                         </condition>
                                     </conditions>
                                     <actions>
