@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eIntro</name>
     <events>
+        <variable constant="0" name="apiJuegos" sid="918391783953201" static="0" type="text"></variable>
         <variable constant="0" name="idUsuario" sid="211420365357288" static="0" type="text"></variable>
         <variable constant="0" name="sexo" sid="962488319439102" static="0" type="text"></variable>
         <event-group description="" sid="263255998581646" title="Eventos_Botones">
@@ -42,7 +43,7 @@
                     <actions>
                         <action id="14" name="Log" sid="699122943604725" type="Browser">
                             <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;+++ Ropero 2 v 1.7.2 +++&quot;</param>
+                            <param id="1" name="Message">&quot;+++ Ropero 2 v 1.8 +++&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="927730882898060" type="System">
                             <param id="0" name="Variable">idUsuario</param>
@@ -60,6 +61,10 @@
                             <param id="0" name="Variable">tipoTraje</param>
                             <param id="1" name="Value">WebStorage.SessionValue(&quot;tipoTraje&quot;)</param>
                         </action>
+                        <action id="-9" name="Set value" sid="177243331900746" type="System">
+                            <param id="0" name="Variable">apiJuegos</param>
+                            <param id="1" name="Value">WebStorage.SessionValue(&quot;apiJuegos&quot;)</param>
+                        </action>
                         <action disabled="1" id="-9" name="Set value" sid="203670786613499" type="System">
                             <param id="0" name="Variable">idUsuario</param>
                             <param id="1" name="Value">&quot;felipe@correo.de&quot;</param>
@@ -75,6 +80,22 @@
                         <action disabled="1" id="-9" name="Set value" sid="130626554201738" type="System">
                             <param id="0" name="Variable">tipoTraje</param>
                             <param id="1" name="Value">&quot;scout&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="996710170526455" type="System">
+                            <param id="0" name="Variable">urlAsignarAvatar</param>
+                            <param id="1" name="Value">apiJuegos &amp; &quot;AsignaAvatar/?idUsuario=&quot;</param>
+                        </action>
+                        <action id="14" name="Log" sid="411844768341024" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;urlAsignarAvatar:  &quot; &amp; urlAsignarAvatar</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="330701799158047" type="System">
+                            <param id="0" name="Variable">urlRopero2Terminado</param>
+                            <param id="1" name="Value">apiJuegos &amp; &quot;AvanceJuego/?idJuego=C02ropero2&amp;terminado=true&amp;avance=1&amp;idUsuario=&quot;</param>
+                        </action>
+                        <action id="14" name="Log" sid="960472294668144" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;urlRopero2Terminado &quot; &amp; urlRopero2Terminado</param>
                         </action>
                     </actions>
                     <sub-events>
