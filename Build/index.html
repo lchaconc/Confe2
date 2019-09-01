@@ -64,6 +64,11 @@ function guardarDatosAvatar (obj) {
     sessionStorage.setItem("sexo", obj.sexo );
     sessionStorage.setItem("tipoAvatar", obj.tipo_avatar );
     sessionStorage.setItem("tipoTraje", obj.tipo_traje );
+	//alamcena la url del servidor para pruebas
+	const apiJuegos = "http://localhost:60874/api/Juego/";
+	sessionStorage.setItem("apiJuegos", apiJuegos );
+	
+	
 }
     
     

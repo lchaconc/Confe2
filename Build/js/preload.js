@@ -1,3 +1,6 @@
+"use strict";
+
+
 //Const URL servidor
 
 /* mis servicios loales
@@ -12,8 +15,11 @@ const urlGetObjetos = "https://elpatioviveros.com/test/confe_ws/get_objetos.php?
 
 
 // servisios IIS Locales
-const urlGetEstadoJuegos = "http://localhost:60874/api/Juego/listaEstadoJuegos/?idUsuario=";
-const urlGetObjetos = "http://localhost:60874/api/Juego/ObtieneObjetos/?idUsuario=";
+//var urlGetEstadoJuegos = "http://localhost:60874/api/Juego/listaEstadoJuegos/?idUsuario=";
+//var urlGetObjetos = "http://localhost:60874/api/Juego/ObtieneObjetos/?idUsuario=";
+// Almacena url servisios IIS seviudor
+var urlGetEstadoJuegos;
+var urlGetObjetos;
 
 
 $(document).ready(function () {
@@ -25,19 +31,28 @@ $(document).ready(function () {
 
 function setup () {        
     const sexo = sessionStorage.getItem("sexo");
-    const idUsusario = sessionStorage.getItem("idUsuario");
+    const idUsuario = sessionStorage.getItem("idUsuario");
     const tipoAvatar = sessionStorage.getItem("tipoAvatar");
     const tipoTraje = sessionStorage.getItem("tipoTraje");
+	const apiJuegos = sessionStorage.getItem("apiJuegos");
+	
+	//Forma cadena para los dos servicios con los que se coencta preload:
+	urlGetEstadoJuegos = apiJuegos + "listaEstadoJuegos/?idUsuario=";
+	urlGetObjetos = apiJuegos + "ObtieneObjetos/?idUsuario=";
+	
+	
     
-    console.log("idUsusario", idUsusario );
+    console.log("idUsuario", idUsuario );
     console.log("Sexo", sexo);
     console.log("tipoAvatar", tipoAvatar );
-    console.log("tipoTraje", tipoTraje);   
+    console.log("tipoTraje", tipoTraje);  
+	console.log("urlGetEstadoJuegos", urlGetEstadoJuegos + idUsuario );  
+	console.log("urlGetObjetos", urlGetObjetos + idUsuario);  	
 
-    getJson(urlGetEstadoJuegos + idUsusario, function (data) {
+    getJson(urlGetEstadoJuegos + idUsuario, function (data) {
 		console.log("estado juegos")
           guardarDatosSesion(data); 	  			  		
-            getJson (urlGetObjetos + idUsusario, function (data) { 
+            getJson (urlGetObjetos + idUsuario, function (data) { 
               guardarDatosObjetos(data);
               window.location.assign("./modulos/menu/index.html");
             })
