@@ -312,15 +312,41 @@
                             <param id="0" name="Object">btn2</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="149843759671369" type="System">
-                            <param id="0" name="Variable">retoAmostrar</param>
-                            <param id="1" name="Value">&quot;selfie&quot;</param>
-                        </action>
-                        <action id="-2" name="Go to layout" sid="222090207103614" type="System">
-                            <param id="0" name="Layout">Retos</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="357843456989002">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="803893873148069" type="System">
+                                    <param id="0" name="Variable">activoR01emociones</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;true&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="149843759671369" type="System">
+                                    <param id="0" name="Variable">retoAmostrar</param>
+                                    <param id="1" name="Value">&quot;selfie&quot;</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="222090207103614" type="System">
+                                    <param id="0" name="Layout">Retos</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="605772914092830">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="686663500032631" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="705184744799148" type="txtAccesoDenegado">
+                                    <param id="0" name="Animation">&quot;actividadDenegada&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="143702350624762" type="txtAccesoDenegado">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>

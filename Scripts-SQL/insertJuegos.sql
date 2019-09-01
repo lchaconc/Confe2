@@ -8,3 +8,4 @@ insert into juego.juego (idJuego,idUnidad,etiqueta) values ('C01ropero1', 1, 'Ro
 insert into juego.juego (idJuego,idUnidad,etiqueta) values ('C02ropero2', 1, 'Ropero2' )
 insert into juego.juego (idJuego,idUnidad,etiqueta) values ('J01granja', 1, 'Granja' )
 insert into juego.juego (idJuego,idUnidad,etiqueta) values ('Avatar01', 1, 'Avatar' )
+insert into juego.juego (idJuego,idUnidad,etiqueta) values ('R01emociones', 1, 'Emociones' )
