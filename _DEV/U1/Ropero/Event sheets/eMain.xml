@@ -3,14 +3,15 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eMain</name>
     <events>
-        <variable constant="0" name="urlAvanceRoperoTerminado" sid="171968268902526" static="0" type="text">http://localhost:60874/api/Juego/AvanceJuego/?idJuego=C01ropero1&amp;terminado=true&amp;avance=1&amp;idUsuario=</variable>
+        <variable constant="0" name="apiJuegos" sid="560052464382588" static="0" type="text"></variable>
+        <variable constant="0" name="urlAvanceRoperoTerminado" sid="171968268902526" static="0" type="text"></variable>
         <variable constant="0" name="tipoTraje" sid="983804149924029" static="0" type="text"></variable>
-        <variable constant="0" name="urlActualizarAvatar" sid="681878595913390" static="0" type="text">http://localhost:60874/api/Juego/AsignaAvatar/?idUsuario=</variable>
+        <variable constant="0" name="urlActualizarAvatar" sid="681878595913390" static="0" type="text"></variable>
         <variable constant="0" name="idUsuario" sid="255301873215455" static="0" type="text"></variable>
         <variable constant="0" name="tipoAvatar" sid="794086621706205" static="0" type="number">0</variable>
         <variable constant="0" name="sexo" sid="561508372494367" static="0" type="text"></variable>
         <variable constant="0" name="aux" sid="264688356595490" static="0" type="text">nulo</variable>
-        <event-group description="" sid="370034331693827" title="Setup">
+        <event-group description="" sid="370034331693827" title="loadMain">
             <sub-events>
                 <event-block sid="250151715630644">
                     <conditions>
@@ -19,7 +20,7 @@
                     <actions>
                         <action id="14" name="Log" sid="537814214783010" type="Browser">
                             <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;+++ Ropero 1 v7.0  +++&quot;</param>
+                            <param id="1" name="Message">&quot;+++ Ropero 1 v1.8  +++&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="993803718681475" type="System">
                             <param id="0" name="Variable">sexo</param>
@@ -37,6 +38,18 @@
                             <param id="0" name="Variable">tipoTraje</param>
                             <param id="1" name="Value">WebStorage.SessionValue(&quot;tipoTraje&quot;)</param>
                         </action>
+                        <action id="-9" name="Set value" sid="742731762289561" type="System">
+                            <param id="0" name="Variable">apiJuegos</param>
+                            <param id="1" name="Value">WebStorage.SessionValue(&quot;apiJuegos&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="491512402631907" type="System">
+                            <param id="0" name="Variable">urlAvanceRoperoTerminado</param>
+                            <param id="1" name="Value">apiJuegos &amp; &quot;AvanceJuego/?idJuego=C01ropero1&amp;terminado=true&amp;avance=1&amp;idUsuario=&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="232138204179650" type="System">
+                            <param id="0" name="Variable">urlActualizarAvatar</param>
+                            <param id="1" name="Value">apiJuegos &amp; &quot;AsignaAvatar/?idUsuario=&quot;</param>
+                        </action>
                         <action disabled="1" id="-9" name="Set value" sid="148073063466415" type="System">
                             <param id="0" name="Variable">sexo</param>
                             <param id="1" name="Value">&quot;m&quot;</param>
@@ -48,6 +61,14 @@
                         <action disabled="1" id="-9" name="Set value" sid="668231171170183" type="System">
                             <param id="0" name="Variable">idUsuario</param>
                             <param id="1" name="Value">&quot;felipe@correo.de&quot;</param>
+                        </action>
+                        <action id="14" name="Log" sid="563317269043595" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;----urlActualizarAvatar:  &quot; &amp; urlActualizarAvatar</param>
+                        </action>
+                        <action id="14" name="Log" sid="264333830089225" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;----urlAvanceRoperoTerminado:  &quot; &amp; urlAvanceRoperoTerminado</param>
                         </action>
                     </actions>
                     <sub-events>
