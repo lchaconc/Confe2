@@ -3,7 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eMain</name>
     <events>
-        <variable constant="0" name="urlRequestAsignarAvatar" sid="347718486553086" static="0" type="text">http://localhost:60874/api/Juego/AsignaAvatar/?</variable>
+        <variable constant="0" name="apiJuegos" sid="557905341838418" static="0" type="text"></variable>
+        <variable constant="0" name="urlRequestAsignarAvatar" sid="347718486553086" static="0" type="text"></variable>
         <variable constant="0" name="urlRequestAvatarTerminado" sid="301998882408096" static="0" type="text">http://localhost:60874/api/Juego/AvanceJuego/?idJuego=avatar01&amp;terminado=true&amp;avance=1&amp;idUsuario=</variable>
         <variable constant="0" name="tipoTraje" sid="107500820395788" static="0" type="text"></variable>
         <variable constant="0" name="idUsuario" sid="210024116486443" static="0" type="text"></variable>
@@ -11,7 +12,7 @@
         <variable constant="0" name="isFinLista" sid="654288113613225" static="0" type="number">0</variable>
         <variable comment="0 falso / 1 verdero" constant="0" name="isInicioLista" sid="901388738268504" static="0" type="number">0</variable>
         <variable constant="0" name="tipoAvatar" sid="161729942656353" static="0" type="number">0</variable>
-        <event-group description="" sid="370034331693827" title="Setup_main">
+        <event-group description="" sid="370034331693827" title="loadMain">
             <sub-events>
                 <event-block sid="250151715630644">
                     <conditions>
@@ -20,7 +21,7 @@
                     <actions>
                         <action id="14" name="Log" sid="773715458328881" type="Browser">
                             <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;*** Avatar 7.0 ***&quot;</param>
+                            <param id="1" name="Message">&quot;*** Avatar 1.7 ***&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="939347095797292" type="System">
                             <param id="0" name="Variable">isFinLista</param>
@@ -49,6 +50,26 @@
                         <action id="-9" name="Set value" sid="926219890209224" type="System">
                             <param id="0" name="Variable">tipoTraje</param>
                             <param id="1" name="Value">WebStorage.SessionValue(&quot;tipoTraje&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="280656776294028" type="System">
+                            <param id="0" name="Variable">apiJuegos</param>
+                            <param id="1" name="Value">WebStorage.SessionValue(&quot;apiJuegos&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="981330096056786" type="System">
+                            <param id="0" name="Variable">urlRequestAsignarAvatar</param>
+                            <param id="1" name="Value">apiJuegos &amp; &quot;AsignaAvatar/?&quot;</param>
+                        </action>
+                        <action id="14" name="Log" sid="894283872483039" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;--- urlRequestAsignarAvatar: &quot; &amp;  urlRequestAsignarAvatar</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="790219642213566" type="System">
+                            <param id="0" name="Variable">urlRequestAvatarTerminado</param>
+                            <param id="1" name="Value">apiJuegos &amp; &quot;AvanceJuego/?idJuego=avatar01&amp;terminado=true&amp;avance=1&amp;idUsuario=&quot;</param>
+                        </action>
+                        <action id="14" name="Log" sid="638028940134176" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;--- urlRequestAvatarTerminado: &quot; &amp; urlRequestAvatarTerminado</param>
                         </action>
                         <action id="14" name="Log" sid="111056976113952" type="Browser">
                             <param id="0" name="Type">0</param>
