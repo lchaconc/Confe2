@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eHome</name>
     <events>
-        <variable constant="0" name="urlDesactivarObjetoSandalias" sid="937810381686555" static="0" type="text">http://localhost:60874/api/Juego/ActualizaObjetos/?idObjeto=1&amp;idPersona=</variable>
+        <variable constant="0" name="urlDesactivarObjetoSandalias" sid="937810381686555" static="0" type="text"></variable>
         <event-group description="" sid="545420417498187" title="Botones_Unidades">
             <sub-events>
                 <event-block sid="334735540154439">
@@ -214,6 +214,25 @@
                         <action id="14" name="Log" sid="981588949611034" type="Browser">
                             <param id="0" name="Type">2</param>
                             <param id="1" name="Message">&quot;Error actualizando sandalias&quot; &amp; AJAX.LastData</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="435218975739692" title="loadHome">
+            <sub-events>
+                <event-block sid="898825699150202">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="244146444779139" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="277680785188610" type="System">
+                            <param id="0" name="Variable">urlDesactivarObjetoSandalias</param>
+                            <param id="1" name="Value">apiJuegos &amp; &quot;ActualizaObjetos/?idObjeto=1&amp;idPersona=&quot;</param>
+                        </action>
+                        <action id="14" name="Log" sid="738737839184855" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;---- Url desactivar sandalias objeto: &quot; &amp; urlDesactivarObjetoSandalias</param>
                         </action>
                     </actions>
                 </event-block>
