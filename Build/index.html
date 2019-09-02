@@ -47,7 +47,12 @@ function  loadApp (idUsusario) {
                     response.json().then(function(data) {
                         console.log(data);
                         guardarDatosAvatar(data[0] ); 
-                        window.location.assign("./preload.html");
+                        //window.location.assign("./preload.html");
+						const tmpUrl = "http://construtecdeleste.com/test/preload.html?sexo=M&apiJuegos=http://localhost:60874/api/Juego/&idUsuario=1026&tipoAvatar=3&tipoTraje=biblico";
+						console.log (tmpUrl);
+						window.location.assign(tmpUrl);
+						
+						
                     });
                     }
                 )
@@ -65,7 +70,7 @@ function guardarDatosAvatar (obj) {
     sessionStorage.setItem("tipoAvatar", obj.tipo_avatar );
     sessionStorage.setItem("tipoTraje", obj.tipo_traje );
 	//alamcena la url del servidor para pruebas
-	const apiJuegos = "http://localhost:60874/api/Juego/";
+	const apiJuegos = "http://localhost:60874/api/Juego/";	
 	sessionStorage.setItem("apiJuegos", apiJuegos );
 	
 	

@@ -29,14 +29,29 @@ $(document).ready(function () {
 
 
 
-function setup () {        
-    const sexo = sessionStorage.getItem("sexo");
+function setup () {
+
+	var str = window.location.href,
+    url = new URL(str);
+    console.log(url);   
+    /* obtiene parametros de la url */
+	const sexo = url.searchParams.get("sexo");
+	const idUsuario = url.searchParams.get("idUsuario");
+	const tipoAvatar = url.searchParams.get("tipoAvatar");
+	const tipoTraje = url.searchParams.get("tipoTraje");
+	const apiJuegos = url.searchParams.get("apiJuegos");	
+	
+/*   
+	const sexo = sessionStorage.getItem("sexo");
     const idUsuario = sessionStorage.getItem("idUsuario");
     const tipoAvatar = sessionStorage.getItem("tipoAvatar");
     const tipoTraje = sessionStorage.getItem("tipoTraje");
 	const apiJuegos = sessionStorage.getItem("apiJuegos");
-	
+*/
+
+
 	//Forma cadena para los dos servicios con los que se coencta preload:
+	
 	urlGetEstadoJuegos = apiJuegos + "listaEstadoJuegos/?idUsuario=";
 	urlGetObjetos = apiJuegos + "ObtieneObjetos/?idUsuario=";
 	
