@@ -10,8 +10,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="0">main</layout>
-        <event-sheet order="1">eMain</event-sheet>
+        <layout order="0">Main</layout>
+        <layout order="2">Fin</layout>
+        <layout order="5">Splash</layout>
+        <event-sheet active="1" order="1">eMain</event-sheet>
+        <event-sheet order="3">eFin</event-sheet>
+        <event-sheet order="4">eIntro</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -20,17 +24,17 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="1" name="Configuration Settings" />
     </properties>
     <families-expanded root="1">
-        <family expanded="0" name="arrastrable" />
+        <family expanded="0" name="Arrastrable" />
+        <family expanded="0" name="Sensores" />
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
-        <folder expanded="0" path="object-folder/Buttons/" />
+        <folder expanded="1" path="object-folder/Buttons/" />
         <folder expanded="0" path="object-folder/Backgrounds/" />
         <folder expanded="1" path="object-folder/Sprites/" />
-        <folder expanded="1" path="object-folder/Texts/" />
-        <folder expanded="1" path="object-folder/Controls/" />
+        <folder expanded="0" path="object-folder/Texts/" />
         <folder expanded="0" path="object-folder/System/" />
-        <folder expanded="1" path="object-folder/Sensors/" />
+        <folder expanded="0" path="object-folder/Sensors/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />
@@ -49,6 +53,20 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/icoAmigos/" />
         <folder expanded="1" path="animation-folder/icoGym/" />
         <folder expanded="1" path="animation-folder/icoBaile/" />
+        <folder expanded="1" path="animation-folder/btnSiguiente/" />
         <folder expanded="1" path="animation-folder/bgMain/" />
+        <folder expanded="1" path="animation-folder/bgSplash/" />
+        <folder expanded="1" path="animation-folder/bgIntro/" />
+        <folder expanded="1" path="animation-folder/txtREsultado/" />
+        <folder expanded="1" path="animation-folder/sns01/" />
+        <folder expanded="1" path="animation-folder/sns2/" />
+        <folder expanded="1" path="animation-folder/sns3/" />
+        <folder expanded="1" path="animation-folder/sns4/" />
+        <folder expanded="1" path="animation-folder/sns5/" />
+        <folder expanded="1" path="animation-folder/sns6/" />
+        <folder expanded="1" path="animation-folder/sns7/" />
+        <folder expanded="1" path="animation-folder/sns8/" />
+        <folder expanded="1" path="animation-folder/sns9/" />
+        <folder expanded="1" path="animation-folder/sns10/" />
     </folders-expanded>
 </c2uistate>
