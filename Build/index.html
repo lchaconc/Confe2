@@ -30,13 +30,20 @@
             $("#btnIngresar").click(function (e) {
                 $(this).text("Cargando...");
                 $(this).prop("disabled", true); 
-								
-                loadApp($("#selUsusario").val() );
+				//Ingresa por param el id del usuario				
+                loadApp(1026 );
             });
             
         });
         
-function  loadApp (idUsusario) {                      
+function  loadApp (idUsusario) {
+    
+    //envia id usuario 1026 al preload y la url del servidor en apiJuego
+    sessionStorage.setItem("idUsuario", 1026);
+    //Servidor en la nube:
+    sessionStorage.setItem("apiJuegos", "https://confeapp.com/api/Juego/");
+    
+
             fetch( urlGetAvatar + idUsusario )
                 .then(
                     function(response) {
@@ -58,15 +65,10 @@ function  loadApp (idUsusario) {
         }
 
 
-function guardarDatosAvatar (obj) {
-//Camibar con el nuevo serivicio
-    sessionStorage.setItem("idUsuario", obj.id_usr );
+function guardarDatosAvatar (obj) {        
     sessionStorage.setItem("sexo", obj.sexo );
     sessionStorage.setItem("tipoAvatar", obj.tipo_avatar );
     sessionStorage.setItem("tipoTraje", obj.tipo_traje );
-	//alamcena la url del servidor para pruebas
-	const apiJuegos = "http://localhost:60874/api/Juego/";
-	sessionStorage.setItem("apiJuegos", apiJuegos );
 	
 	
 }
@@ -85,24 +87,7 @@ function guardarDatosAvatar (obj) {
         </div>
     </div>
     <br>
-    <div class="row">
-        <div class="col-4 offset-4">
-                <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                          <label class="input-group-text" for="selUsusario">Ususario</label>
-                        </div>
-                        <select class="custom-select" id="selUsusario">
-                          <option selected disabled >Seleccione...</option>
-                          <option value=1026>luis@correo.de</option>
-                          <option value="oscar.wong@correo.de"> Oscar Wong </option>
-						  <option value="jimena@correo.de">jimena@correo.de </option>
-                          <option value="ana@correo.de">ana@correo.de</option>
-						  
-                        </select>
-                      </div>
-                      
-        </div>
-    </div>
+
     <div class="row">
         <div class="col-4 offset-4 text-center">
                 <button type="button" class="btn btn-outline-info" id="btnIngresar" >Ingresar</button>

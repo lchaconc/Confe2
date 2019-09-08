@@ -34,7 +34,11 @@ function setup () {
     const idUsuario = sessionStorage.getItem("idUsuario");
     const tipoAvatar = sessionStorage.getItem("tipoAvatar");
     const tipoTraje = sessionStorage.getItem("tipoTraje");
-	const apiJuegos = sessionStorage.getItem("apiJuegos");
+    const apiJuegos = sessionStorage.getItem("apiJuegos");
+
+    console.log("apiJuegos:", apiJuegos );
+    
+    
 	
 	//Forma cadena para los dos servicios con los que se coencta preload:
 	urlGetEstadoJuegos = apiJuegos + "listaEstadoJuegos/?idUsuario=";
