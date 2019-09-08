@@ -14,7 +14,7 @@ const urlGetObjetos = "https://elpatioviveros.com/test/confe_ws/get_objetos.php?
 */
 
 
-// servisios IIS Locales
+// servicios IIS Locales
 //var urlGetEstadoJuegos = "http://localhost:60874/api/Juego/listaEstadoJuegos/?idUsuario=";
 //var urlGetObjetos = "http://localhost:60874/api/Juego/ObtieneObjetos/?idUsuario=";
 // Almacena url servisios IIS seviudor
