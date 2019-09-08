@@ -55,6 +55,12 @@ function  loadApp (idUsusario) {
                         console.log(data);
                         guardarDatosAvatar(data[0] ); 
                         window.location.assign("./preload.html");
+
+                        //Parametros URL
+                        const tmpUrl = "preload.html?sexo=M&apiJuegos=https://confeapp.com/api/Juego/&idUsuario=1026&tipoAvatar=3&tipoTraje=biblico";
+						console.log (tmpUrl);
+						window.location.assign(tmpUrl);
+
                     });
                     }
                 )

@@ -23,19 +23,49 @@ var urlGetObjetos;
 
 
 $(document).ready(function () {
-    console.log("Ready");    
+   // console.log("Ready");    
     setup();
 });
 
 
 
-function setup () {        
+function setup () { 
+  
+  var str = window.location.href,
+    url = new URL(str);
+    console.log(url);   
+    /* obtiene parametros de la url */
+	const sexo = url.searchParams.get("sexo");
+	const idUsuario = url.searchParams.get("idUsuario");
+	const tipoAvatar = url.searchParams.get("tipoAvatar");
+	const tipoTraje = url.searchParams.get("tipoTraje");
+	const apiJuegos = url.searchParams.get("apiJuegos");
+
+	//Logs de los parametros
+	console.log("idUsuario", idUsuario );
+    console.log("Sexo", sexo);
+    console.log("tipoAvatar", tipoAvatar );
+    console.log("tipoTraje", tipoTraje);  
+	console.log("urlGetEstadoJuegos", urlGetEstadoJuegos + idUsuario );  
+  console.log("urlGetObjetos", urlGetObjetos + idUsuario); 
+  
+
+  sessionStorage.setItem("sexo", sexo);
+	sessionStorage.setItem("idUsuario", idUsuario);
+	sessionStorage.setItem("tipoAvatar", tipoAvatar);
+	sessionStorage.setItem("tipoTraje", tipoTraje);
+	sessionStorage.setItem("apiJuegos", apiJuegos);
+  
+
+
+
+/* Se deshabilita obtener datos de  session:
     const sexo = sessionStorage.getItem("sexo");
     const idUsuario = sessionStorage.getItem("idUsuario");
     const tipoAvatar = sessionStorage.getItem("tipoAvatar");
     const tipoTraje = sessionStorage.getItem("tipoTraje");
     const apiJuegos = sessionStorage.getItem("apiJuegos");
-
+*/
     console.log("apiJuegos:", apiJuegos );
     
     
