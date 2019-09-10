@@ -21,8 +21,20 @@
 
     <script>
     "use strict";
-    const urlGetAvatar = "http://localhost/Confe2/ws/get_avatar.php?id_usr="; 
-	//const urlGetAvatar = "https://elpatioviveros.com/test/confe_ws/get_avatar.php?id_usr="; 
+	
+	//********************************* Parametro api juegos Y id usuario	
+	/*
+	const apiJuegos = "https://confeapp.com/api/Juego/";	
+	*/
+	
+	const apiJuegos = "http://localhost:60874/api/Juego/";
+	
+	const idUsusario = 1026;
+	/*
+	*********************************************************************
+	*/
+	
+    
 
         $(document).ready(function () {
 		sessionStorage.clear();
@@ -31,52 +43,23 @@
                 $(this).text("Cargando...");
                 $(this).prop("disabled", true); 
 				//Ingresa por param el id del usuario				
-                loadApp(1026 );
+                loadApp( );
             });
             
         });
         
-function  loadApp (idUsusario) {
+function  loadApp () {
     
-    //envia id usuario 1026 al preload y la url del servidor en apiJuego
-    sessionStorage.setItem("idUsuario", 1026);
-    //Servidor en la nube:
-    sessionStorage.setItem("apiJuegos", "https://confeapp.com/api/Juego/");
     
-
-            fetch( urlGetAvatar + idUsusario )
-                .then(
-                    function(response) {
-                    if (response.status !== 200) {
-                        console.log('Error:', response.status);
-                        return;
-                    }                    
-                    response.json().then(function(data) {
-                        console.log(data);
-                        guardarDatosAvatar(data[0] ); 
-                        window.location.assign("./preload.html");
-
-                        //Parametros URL
-                        const tmpUrl = "preload.html?sexo=M&apiJuegos=https://confeapp.com/api/Juego/&idUsuario=1026&tipoAvatar=3&tipoTraje=biblico";
-						console.log (tmpUrl);
-						window.location.assign(tmpUrl);
-
-                    });
-                    }
-                )
-                .catch(function(err) {
-                    console.log('Fetch Error :-S', err);
-                });
-
+    sessionStorage.setItem("idUsuario", idUsusario);
+    sessionStorage.setItem("apiJuegos", apiJuegos);
+	
+	//envia id usuario al preload y la url del servidor en apiJuego
+		const tmpUrl = "preload.html?sexo=M&apiJuegos="+apiJuegos+"&idUsuario="+idUsusario+"&tipoAvatar=3&tipoTraje=biblico";
+		console.log (tmpUrl);
+		window.location.assign(tmpUrl);             
         }
 
-
-function guardarDatosAvatar (obj) {        
-    sessionStorage.setItem("sexo", obj.sexo );
-    sessionStorage.setItem("tipoAvatar", obj.tipo_avatar );
-    sessionStorage.setItem("tipoTraje", obj.tipo_traje );
-	
-}
     
     
     </script>
