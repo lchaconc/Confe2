@@ -25,9 +25,9 @@
                     <param id="0" name="Type">0</param>
                     <param id="1" name="Message">&quot;+++  MENU v1.9 +++&quot;</param>
                 </action>
-                <action id="-9" name="Set value" sid="722457096451689" type="System">
-                    <param id="0" name="Variable">idUsuario</param>
-                    <param id="1" name="Value">WebStorage.SessionValue(&quot;idUsuario&quot;)</param>
+                <action id="14" name="Log" sid="428233909731289" type="Browser">
+                    <param id="0" name="Type">0</param>
+                    <param id="1" name="Message">&quot;Estado  ACTIVO de los juegos&quot;</param>
                 </action>
                 <action id="-9" name="Set value" sid="652555701772637" type="System">
                     <param id="0" name="Variable">activoAvatar01</param>
@@ -49,25 +49,17 @@
                     <param id="0" name="Variable">activoR01emociones</param>
                     <param id="1" name="Value">WebStorage.SessionValue(&quot;activoR01emociones&quot;)</param>
                 </action>
-                <action disabled="1" id="-9" name="Set value" sid="702113058819088" type="System">
-                    <param id="0" name="Variable">idUsuario</param>
-                    <param id="1" name="Value">&quot;felipe@correo.de&quot;</param>
+                <action id="14" name="Log" sid="892960789636522" type="Browser">
+                    <param id="0" name="Type">0</param>
+                    <param id="1" name="Message">&quot;OBJETOS&quot;</param>
                 </action>
                 <action id="-9" name="Set value" sid="495146729694829" type="System">
                     <param id="0" name="Variable">objetoSandalias</param>
                     <param id="1" name="Value">WebStorage.SessionValue(&quot;objetoSandalias&quot;)</param>
                 </action>
-                <action id="-9" name="Set value" sid="149010222984668" type="System">
-                    <param id="0" name="Variable">activoC01ropero1</param>
-                    <param id="1" name="Value">&quot;true&quot;</param>
-                </action>
-                <action id="-9" name="Set value" sid="989160956358062" type="System">
-                    <param id="0" name="Variable">objetoSandalias</param>
-                    <param id="1" name="Value">&quot;true&quot;</param>
-                </action>
-                <action id="14" name="Log" sid="857294794451867" type="Browser">
+                <action id="14" name="Log" sid="636361437891473" type="Browser">
                     <param id="0" name="Type">0</param>
-                    <param id="1" name="Message">&quot;-Estado activo de Ropero 2: &quot; &amp; activoC02ropero2</param>
+                    <param id="1" name="Message">&quot;Estado TERMINADO de los juesgo&quot;</param>
                 </action>
                 <action id="-9" name="Set value" sid="403126818588191" type="System">
                     <param id="0" name="Variable">terminadoAvatar01</param>
@@ -81,9 +73,17 @@
                     <param id="0" name="Variable">terminadoC02ropero2</param>
                     <param id="1" name="Value">WebStorage.SessionValue(&quot;terminadoC02ropero2&quot;)</param>
                 </action>
+                <action id="14" name="Log" sid="230485722717927" type="Browser">
+                    <param id="0" name="Type">0</param>
+                    <param id="1" name="Message">&quot;BÁSICA&quot;</param>
+                </action>
                 <action id="-9" name="Set value" sid="215263154772731" type="System">
                     <param id="0" name="Variable">apiJuegos</param>
                     <param id="1" name="Value">WebStorage.SessionValue(&quot;apiJuegos&quot;)</param>
+                </action>
+                <action id="-9" name="Set value" sid="722457096451689" type="System">
+                    <param id="0" name="Variable">idUsuario</param>
+                    <param id="1" name="Value">WebStorage.SessionValue(&quot;idUsuario&quot;)</param>
                 </action>
                 <action id="-2" name="Go to layout" sid="619145828608203" type="System">
                     <param id="0" name="Layout">Home</param>
