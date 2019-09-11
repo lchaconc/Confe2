@@ -33,11 +33,11 @@ insert into juego.juego (idJuego,idUnidad,etiqueta)
 values ('R02bienaventuranzas', 2, 'Bienaventuranzas' )
 
 insert into juego.juego (idJuego,idUnidad,etiqueta) 
-values ('J02flappybird', 2, 'Lógralo si puedes'
+values ('J02flappybird', 2, 'Lógralo si puedes')
 
 insert into juego.juego (idJuego,idUnidad,etiqueta) 
-values ('R02exitofracaso', 2, 'Éxito Fracaso'
+values ('R02exitofracaso', 2, 'Éxito Fracaso')
 
 insert into juego.juego (idJuego,idUnidad,etiqueta) 
-values ('J02acompanajesus', 2, 'Acompaña a jesús'
+values ('J02acompanajesus', 2, 'Acompaña a jesús')
 

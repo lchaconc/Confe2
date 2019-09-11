@@ -4,7 +4,7 @@
     <name>eHome</name>
     <events>
         <variable constant="0" name="urlDesactivarObjetoSandalias" sid="937810381686555" static="0" type="text"></variable>
-        <event-group description="" sid="545420417498187" title="Botones_Unidades">
+        <event-group description="" sid="545420417498187" title="Evento clic  de botones  por unidades">
             <sub-events>
                 <event-block sid="334735540154439">
                     <conditions>
@@ -114,7 +114,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="228136816677519" title="Activar_Unidades">
+        <event-group description="" sid="228136816677519" title="Activar Unidad 1">
             <sub-events>
                 <event-block any="1" sid="134344636701217">
                     <conditions>
@@ -165,32 +165,54 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="107591580207996">
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="120793452756586" title="Activar Unidad 2">
+            <sub-events>
+                <event-block any="1" sid="552456041329408">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="565986284038117" type="System">
-                            <param id="0" name="Variable">activoAvatar01</param>
+                        <condition id="-14" name="Compare variable" sid="406294844645733" type="System">
+                            <param id="0" name="Variable">activoC01ropero1</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;true&quot;</param>
                         </condition>
-                        <condition id="-14" name="Compare variable" sid="863372973372671" type="System">
-                            <param id="0" name="Variable">terminadoC02ropero2</param>
-                            <param id="1" name="Comparison">1</param>
+                        <condition id="-14" name="Compare variable" sid="561200459430840" type="System">
+                            <param id="0" name="Variable">activoC02ropero2</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;true&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="725270095033759" type="System">
+                            <param id="0" name="Variable">activoJ01granja</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;true&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="798561350645557" type="System">
+                            <param id="0" name="Variable">activoR01emociones</param>
+                            <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;true&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="792081213601932" type="btnAvatar">
+                        <action id="-3" name="Set position" sid="204323159849764" type="btnU1">
+                            <param id="0" name="X">445</param>
+                            <param id="1" name="Y">288</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="111199790373978" type="icoU1">
                             <param id="0" name="Animation">&quot;abierto&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="257546190291945">
+                <event-block sid="886913733096083">
                     <conditions>
-                        <condition id="-22" name="Else" sid="598768537562443" type="System" />
+                        <condition id="-22" name="Else" sid="336010245496252" type="System" />
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="385910160684877" type="btnAvatar">
+                        <action id="-3" name="Set position" sid="179135145810417" type="btnU1">
+                            <param id="0" name="X">-600</param>
+                            <param id="1" name="Y">-600</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="480261635952710" type="icoU1">
                             <param id="0" name="Animation">&quot;cerrado&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -234,7 +256,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="435218975739692" title="loadHome">
+        <event-group description="" sid="435218975739692" title="Cargar Home">
             <sub-events>
                 <event-block sid="898825699150202">
                     <conditions>
@@ -248,6 +270,41 @@
                         <action id="14" name="Log" sid="738737839184855" type="Browser">
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">&quot;---- Url desactivar sandalias objeto: &quot; &amp; urlDesactivarObjetoSandalias</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="207991113527132" title="Activar Avatar 1">
+            <sub-events>
+                <event-block sid="107591580207996">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="565986284038117" type="System">
+                            <param id="0" name="Variable">activoAvatar01</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;true&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="863372973372671" type="System">
+                            <param id="0" name="Variable">terminadoC02ropero2</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">&quot;true&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="792081213601932" type="btnAvatar">
+                            <param id="0" name="Animation">&quot;abierto&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="257546190291945">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="598768537562443" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="385910160684877" type="btnAvatar">
+                            <param id="0" name="Animation">&quot;cerrado&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
