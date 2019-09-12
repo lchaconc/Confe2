@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Flappy_bird</name>
+    <description>Beta de Flappy bird</description>
+    <version>1.0.0.0</version>
+    <author>Lus Ch C</author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.logan24.flappy_bird</app-id>
+    <unique-id>3subbtu8xvytq</unique-id>
+    <saved-with-version>26900</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>400</width>
+        <height>500</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>menu</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar only</prop>
+        <prop name="Orientations">Portrait</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">Firefox</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="Buttons">
+            <object-type name="btnPlay" sid="905145881755178">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="245460638023253" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Asset 14flappy.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Backgrounds">
+            <object-type name="day" sid="367773516472876">
+                <plugin id="TiledBg" />
+                <texture original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Asset 7flappy.png" />
+            </object-type>
+            <object-type name="suelo" sid="516226443735220">
+                <plugin id="TiledBg" />
+                <texture original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Asset 6flappy.png" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Sprites">
+            <object-type name="player" sid="513840176431530">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Platform" sid="358199882196519">
+                        <behavior id="Platform" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="3" loop="1" name="vuelo" pingpong="0" repeatcount="1" repeatto="0" sid="538623889330172" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\FlapPyBird-master\FlapPyBird-master\assets\sprites\bluebird-downflap.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\FlapPyBird-master\FlapPyBird-master\assets\sprites\bluebird-midflap.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\FlapPyBird-master\FlapPyBird-master\assets\sprites\bluebird-upflap.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="cayendo" pingpong="0" repeatcount="1" repeatto="0" sid="603654015168031" speed="5">
+                        <frame duration="1" hotspotX="0.502538" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Asset 11flappy.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="tubo2" sid="176371551389594">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="389022680831169" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Users\logan24\Desktop\verde.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="0.961538" y="0.5" />
+                                <point x="0.961538" y="0.99375" />
+                                <point x="0.0384615" y="0.99375" />
+                                <point x="0.0384615" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="tubo1" sid="736773190848243">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="632672116549327" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Desktop\cafe.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0.0384616" y="0.5" />
+                                <point x="0.0384616" y="0.00625002" />
+                                <point x="0.961538" y="0.00625002" />
+                                <point x="0.961538" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="pajaroMuerto" sid="707308330743260">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Physics" sid="637731687229617">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="cayendo" pingpong="0" repeatcount="1" repeatto="0" sid="212947713621527" speed="1">
+                        <frame duration="1" hotspotX="0.502538" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Asset 11flappy.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="caido" pingpong="0" repeatcount="1" repeatto="0" sid="186065845747698" speed="5">
+                        <frame duration="1" hotspotX="0.502538" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Asset 12flappy.png">
+                            <collision-poly>
+                                <point x="0.15736" y="0.402597" />
+                                <point x="0.497462" y="0.207792" />
+                                <point x="0.918782" y="0.207792" />
+                                <point x="0.994924" y="0.493506" />
+                                <point x="0.918782" y="0.792208" />
+                                <point x="0.497462" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0.152284" y="0.493506" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Texts">
+            <object-type name="txtMisPuntos" sid="217959466791061">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="txtPuntaje" sid="265755609292529">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="txtMisRecord" sid="415816389011783">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="txtTitulo" sid="909369376919631">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="598279878197822" speed="5">
+                        <frame duration="1" hotspotX="0.500838" hotspotY="0.501976" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Asset 10flappy.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Controls" />
+        <object-folder name="System">
+            <object-type name="Touch" sid="948977961617129">
+                <plugin id="Touch" />
+            </object-type>
+            <object-type name="Function" sid="558381821082318">
+                <plugin id="Function" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Sensors">
+            <object-type name="snsGround" sid="382919421385345">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Physics" sid="117094465236407">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="109905686228556" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="snsGround2" sid="865228529464902">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Physics" sid="267921645184335">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="151258095157354" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>main.xml</layout>
+        <layout>menu.xml</layout>
+        <layout>Muerto.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>eMain.xml</event-sheet>
+        <event-sheet>eMenu.xml</event-sheet>
+        <event-sheet>eMuerto.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Function" uid="0" />
+        <global-instance type="Touch" uid="1">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
