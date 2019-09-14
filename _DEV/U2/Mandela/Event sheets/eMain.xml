@@ -3,6 +3,9 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eMain</name>
     <events>
+        <variable constant="0" name="puntaje" sid="989619513848056" static="0" type="number">0</variable>
+        <variable constant="0" name="tiempoRestante" sid="940580334795136" static="0" type="number">35</variable>
+        <variable constant="0" name="i" sid="351872383875707" static="0" type="number">0</variable>
         <event-group description="" sid="370034331693827" title="Setup">
             <sub-events>
                 <event-block sid="250151715630644">
@@ -10,6 +13,22 @@
                         <condition id="-2" name="On start of layout" sid="113989134144720" type="System" />
                     </conditions>
                     <actions />
+                </event-block>
+                <event-block sid="963949311619031">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="958746262757830" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="272755503476690" type="txtTiempoRestante">
+                            <param id="0" name="Text">tiempoRestante</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="231429283961239" type="System">
+                            <param id="0" name="Variable">tiempoRestante</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
@@ -28,54 +47,588 @@
                         <action behavior="Physics" id="27" name="Set enabled" sid="805562048689893" type="foto1">
                             <param id="0" name="Mode">0</param>
                         </action>
-                        <action id="-3" name="Set position" sid="416509401144381" type="foto1">
-                            <param id="0" name="X">540</param>
-                            <param id="1" name="Y">120</param>
-                        </action>
-                        <action id="-8" name="Set angle" sid="663031901427781" type="foto1">
-                            <param id="0" name="Angle">0</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="351501614918547" type="System">
-                            <param id="0" name="Seconds">1.0</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="285834857668946" type="marca">
-                            <param id="0" name="Animation">&quot;incorrecto&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="505047924463270" type="marca">
-                            <param id="0" name="Visibility">1</param>
+                        <action id="-10" name="Add to" sid="883184044069865" type="System">
+                            <param id="0" name="Variable">i</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="768774615664084">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="715430899615558" type="System">
+                                    <param id="0" name="Variable">i</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="416509401144381" type="foto1">
+                                    <param id="0" name="X">354</param>
+                                    <param id="1" name="Y">277</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="663031901427781" type="foto1">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="351501614918547" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="285834857668946" type="marca">
+                                    <param id="0" name="Animation">&quot;incorrecto&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="505047924463270" type="marca">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="961613477581769" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="808001074265453" type="marca">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="872652186030936" type="foto1">
+                                    <param id="0" name="Animation">&quot;B&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="632463395975219" type="foto2">
+                                    <param id="0" name="Animation">&quot;B&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="371078197366907" type="Function">
+                                    <param id="0" name="Name">&quot;tarjeta1&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="930334994917633">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="169467680973706" type="System" />
+                                <condition id="-14" name="Compare variable" sid="993558179058669" type="System">
+                                    <param id="0" name="Variable">i</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="347664313581694" type="System">
+                                    <param id="0" name="Variable">puntaje</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="520552913727667" type="foto1">
+                                    <param id="0" name="X">354</param>
+                                    <param id="1" name="Y">277</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="291619434178779" type="foto1">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="725637031278303" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="743673711428998" type="marca">
+                                    <param id="0" name="Animation">&quot;correcto&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="385256379805683" type="marca">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="978397626196243" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="703543943537549" type="marca">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="640716488471025" type="foto1">
+                                    <param id="0" name="Animation">&quot;C&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="305084829548061" type="foto2">
+                                    <param id="0" name="Animation">&quot;C&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="177342963533603" type="Function">
+                                    <param id="0" name="Name">&quot;tarjeta1&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="115336089621927">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="836467612883971" type="System" />
+                                <condition id="-14" name="Compare variable" sid="123048014947113" type="System">
+                                    <param id="0" name="Variable">i</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="762972931123871" type="System">
+                                    <param id="0" name="Variable">puntaje</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="709203000829307" type="foto1">
+                                    <param id="0" name="X">354</param>
+                                    <param id="1" name="Y">277</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="649572427671572" type="foto1">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="403487252756028" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="901188691019198" type="marca">
+                                    <param id="0" name="Animation">&quot;correcto&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="110662057343334" type="marca">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="205690404678018" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="106124378765772" type="marca">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="568165217402292" type="foto1">
+                                    <param id="0" name="Animation">&quot;D&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="206564160026723" type="foto2">
+                                    <param id="0" name="Animation">&quot;D&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="658471084321466" type="Function">
+                                    <param id="0" name="Name">&quot;tarjeta1&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="962769725408926">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="428268577187649" type="System" />
+                                <condition id="-14" name="Compare variable" sid="398085952794382" type="System">
+                                    <param id="0" name="Variable">i</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="322632058014080" type="foto1">
+                                    <param id="0" name="X">354</param>
+                                    <param id="1" name="Y">277</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="745068541779454" type="foto1">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="152174648905378" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="727209780599257" type="marca">
+                                    <param id="0" name="Animation">&quot;incorrecto&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="321438841013695" type="marca">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="939629645554604" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="522010808410749" type="marca">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="763836462349319" type="foto1">
+                                    <param id="0" name="Animation">&quot;E&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="477644890277221" type="foto2">
+                                    <param id="0" name="Animation">&quot;E&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="185483170883793" type="Function">
+                                    <param id="0" name="Name">&quot;tarjeta1&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="313255184086010">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="117445000890694" type="System" />
+                                <condition id="-14" name="Compare variable" sid="380709369602149" type="System">
+                                    <param id="0" name="Variable">i</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="812892137808780" type="foto1">
+                                    <param id="0" name="X">354</param>
+                                    <param id="1" name="Y">277</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="571748937961911" type="foto1">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="340250253655306" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="248337631300861" type="marca">
+                                    <param id="0" name="Animation">&quot;incorrecto&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="808110353172679" type="marca">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="571914285192543" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="496542141493072" type="marca">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="273011934789761" type="System">
+                                    <param id="0" name="Layout">Fin</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
-                <event-block sid="389086724312237">
+                <event-block sid="791786925853593">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="658309346211196" type="Touch">
+                        <condition id="3" name="On touched object" sid="912187204662358" type="Touch">
                             <param id="0" name="Object">foto2</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="425573938353910" type="foto1">
+                        <action id="-15" name="Set visible" sid="127574236953915" type="foto1">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action behavior="Physics" id="27" name="Set enabled" sid="422161662717974" type="foto2">
+                        <action behavior="Physics" id="27" name="Set enabled" sid="510804826049895" type="foto2">
                             <param id="0" name="Mode">0</param>
                         </action>
-                        <action id="-3" name="Set position" sid="671343910231616" type="foto2">
-                            <param id="0" name="X">540</param>
-                            <param id="1" name="Y">120</param>
+                        <action id="-10" name="Add to" sid="278895743361359" type="System">
+                            <param id="0" name="Variable">i</param>
+                            <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-8" name="Set angle" sid="522304881788121" type="foto2">
-                            <param id="0" name="Angle">0</param>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="596654081697786">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="615121871472373" type="System">
+                                    <param id="0" name="Variable">i</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="580514002635325" type="System">
+                                    <param id="0" name="Variable">puntaje</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="435759755306560" type="foto2">
+                                    <param id="0" name="X">354</param>
+                                    <param id="1" name="Y">277</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="425264467515451" type="foto2">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="166176439592190" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="870398745047689" type="marca">
+                                    <param id="0" name="Animation">&quot;correcto&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="484901372176230" type="marca">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="681530977213966" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="150059685990895" type="marca">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="103962340068707" type="foto2">
+                                    <param id="0" name="Animation">&quot;B&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="161896434197273" type="foto1">
+                                    <param id="0" name="Animation">&quot;B&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="160440536390646" type="Function">
+                                    <param id="0" name="Name">&quot;tarjeta2&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="537280323720605">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="555136147041587" type="System" />
+                                <condition id="-14" name="Compare variable" sid="766819758354738" type="System">
+                                    <param id="0" name="Variable">i</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="974024336852022" type="foto2">
+                                    <param id="0" name="X">354</param>
+                                    <param id="1" name="Y">277</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="462131071600572" type="foto2">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="408145658682559" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="729285936978888" type="marca">
+                                    <param id="0" name="Animation">&quot;incorrecto&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="146058399913851" type="marca">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="817338488457439" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="495283003397677" type="marca">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="848694732454829" type="foto2">
+                                    <param id="0" name="Animation">&quot;C&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="364882018453311" type="foto1">
+                                    <param id="0" name="Animation">&quot;C&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="772603081975785" type="Function">
+                                    <param id="0" name="Name">&quot;tarjeta2&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="944397123409004">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="753038174291902" type="System" />
+                                <condition id="-14" name="Compare variable" sid="466082360830168" type="System">
+                                    <param id="0" name="Variable">i</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="539553192188735" type="foto2">
+                                    <param id="0" name="X">354</param>
+                                    <param id="1" name="Y">277</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="894257400542494" type="foto2">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="491994520422381" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="942190655944434" type="marca">
+                                    <param id="0" name="Animation">&quot;incorrecto&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="407160202111912" type="marca">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="222241257134027" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="606082589833151" type="marca">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="602208474003873" type="foto2">
+                                    <param id="0" name="Animation">&quot;D&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="835070683503047" type="foto1">
+                                    <param id="0" name="Animation">&quot;D&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="823879348142060" type="Function">
+                                    <param id="0" name="Name">&quot;tarjeta2&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="932030502719686">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="123341897662490" type="System" />
+                                <condition id="-14" name="Compare variable" sid="284851455792297" type="System">
+                                    <param id="0" name="Variable">i</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="261188961351438" type="System">
+                                    <param id="0" name="Variable">puntaje</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="591614296668295" type="foto2">
+                                    <param id="0" name="X">354</param>
+                                    <param id="1" name="Y">277</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="283523696037702" type="foto2">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="310093816129690" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="995538669642088" type="marca">
+                                    <param id="0" name="Animation">&quot;correcto&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="214638064202831" type="marca">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="946522565457126" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="733188387204677" type="marca">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="735980169612949" type="foto2">
+                                    <param id="0" name="Animation">&quot;E&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="116835155044687" type="foto1">
+                                    <param id="0" name="Animation">&quot;E&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="242971699753875" type="Function">
+                                    <param id="0" name="Name">&quot;tarjeta2&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="343420808346918">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="856683456146815" type="System" />
+                                <condition id="-14" name="Compare variable" sid="751029129072148" type="System">
+                                    <param id="0" name="Variable">i</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="473273228549785" type="System">
+                                    <param id="0" name="Variable">puntaje</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="624019077206379" type="foto2">
+                                    <param id="0" name="X">354</param>
+                                    <param id="1" name="Y">277</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="644944583863791" type="foto2">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="418891365905372" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="234209476694207" type="marca">
+                                    <param id="0" name="Animation">&quot;correcto&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="776940344238876" type="marca">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="482874652100042" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="436783998492690" type="marca">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="772671662458825" type="System">
+                                    <param id="0" name="Layout">Fin</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="130473211620242" title="Acomodar Tarjetas">
+            <sub-events>
+                <event-block sid="360230473048525">
+                    <conditions>
+                        <condition id="0" name="On function" sid="630060183107008" type="Function">
+                            <param id="0" name="Name">&quot;tarjeta1&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="264243204760347" type="foto1">
+                            <param id="0" name="X">643</param>
+                            <param id="1" name="Y">0</param>
                         </action>
-                        <action id="-16" name="Wait" sid="106828582860132" type="System">
-                            <param id="0" name="Seconds">1.0</param>
+                        <action id="-8" name="Set angle" sid="523794781670145" type="foto1">
+                            <param id="0" name="Angle">28</param>
                         </action>
-                        <action id="4" name="Set animation" sid="914788854679621" type="marca">
-                            <param id="0" name="Animation">&quot;correcto&quot;</param>
-                            <param id="1" name="From">1</param>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="618343197939509" type="foto2">
+                            <param id="0" name="Mode">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="204281637915313" type="marca">
+                        <action id="-3" name="Set position" sid="787301164557193" type="foto2">
+                            <param id="0" name="X">65</param>
+                            <param id="1" name="Y">46</param>
+                        </action>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="190103017028524" type="foto1">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="429679945217526" type="foto2">
                             <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="309972722340478" type="foto2">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="889367685650555">
+                    <conditions>
+                        <condition id="0" name="On function" sid="631619129787356" type="Function">
+                            <param id="0" name="Name">&quot;tarjeta2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="978966820266957" type="foto2">
+                            <param id="0" name="X">65</param>
+                            <param id="1" name="Y">46</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="162259486543587" type="foto2">
+                            <param id="0" name="Angle">336</param>
+                        </action>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="191954395988620" type="foto1">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="380623783058196" type="foto1">
+                            <param id="0" name="X">643</param>
+                            <param id="1" name="Y">0</param>
+                        </action>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="707590187688151" type="foto1">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="651215411601175" type="foto1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="373680354663222" type="foto2">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="659678157206370" title="Estado del juego">
+            <sub-events>
+                <event-block sid="235614834948302">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="301600927219072" type="System">
+                            <param id="0" name="Variable">tiempoRestante</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="598769689214054" type="System">
+                            <param id="0" name="Layout">Fin</param>
                         </action>
                     </actions>
                 </event-block>

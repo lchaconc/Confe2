@@ -12,6 +12,7 @@
     <used-plugins>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
@@ -22,8 +23,8 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>1280</width>
-        <height>720</height>
+        <width>720</width>
+        <height>1280</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
@@ -46,7 +47,40 @@
     </configuration-settings>
     <object-folder>
         <object-folder name="Buttons" />
-        <object-folder name="Backgrounds" />
+        <object-folder name="Backgrounds">
+            <object-type name="bgMain" sid="825270901570097">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="724227683804854" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Mandela\pantallajuego.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bgSpalsh" sid="498086023655181">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="190556428335012" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Mandela\back.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bgInstrucciones" sid="161700227710189">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="651450534061125" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Mandela\instrucciones2.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bgFin" sid="538331126403433">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="479085355879401" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Mandela\instrucciones.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-folder name="Sprites">
             <object-type name="foto1" sid="638243353350453">
                 <plugin id="Sprite" />
@@ -56,8 +90,55 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="620844799002503" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\foto1.png" />
+                    <animation framecount="1" loop="0" name="A" pingpong="0" repeatcount="1" repeatto="0" sid="620844799002503" speed="5">
+                        <frame duration="1" hotspotX="0.50096" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Mandela\marcoimagen.png">
+                            <collision-poly>
+                                <point x="0.00959693" y="0.00791139" />
+                                <point x="0.984645" y="0.0126582" />
+                                <point x="0.980806" y="0.984177" />
+                                <point x="0.0172745" y="0.985759" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="B" pingpong="0" repeatcount="1" repeatto="0" sid="183409840592896" speed="5">
+                        <frame duration="1" hotspotX="0.50096" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.00959693" y="0.00791139" />
+                                <point x="0.984645" y="0.0126582" />
+                                <point x="0.980806" y="0.984177" />
+                                <point x="0.0172745" y="0.985759" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="C" pingpong="0" repeatcount="1" repeatto="0" sid="780642602495259" speed="5">
+                        <frame duration="1" hotspotX="0.50096" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.00959693" y="0.00791139" />
+                                <point x="0.984645" y="0.0126582" />
+                                <point x="0.980806" y="0.984177" />
+                                <point x="0.0172745" y="0.985759" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="D" pingpong="0" repeatcount="1" repeatto="0" sid="101601621866291" speed="5">
+                        <frame duration="1" hotspotX="0.50096" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.00959693" y="0.00791139" />
+                                <point x="0.984645" y="0.0126582" />
+                                <point x="0.980806" y="0.984177" />
+                                <point x="0.0172745" y="0.985759" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="E" pingpong="0" repeatcount="1" repeatto="0" sid="113194570851844" speed="5">
+                        <frame duration="1" hotspotX="0.50096" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.00959693" y="0.00791139" />
+                                <point x="0.984645" y="0.0126582" />
+                                <point x="0.980806" y="0.984177" />
+                                <point x="0.0172745" y="0.985759" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -69,8 +150,55 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="936186349736019" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\foto2.png" />
+                    <animation framecount="1" loop="0" name="A" pingpong="0" repeatcount="1" repeatto="0" sid="936186349736019" speed="5">
+                        <frame duration="1" hotspotX="0.50096" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Mandela\marcoimagen.png">
+                            <collision-poly>
+                                <point x="0.00959693" y="0.00791139" />
+                                <point x="0.984645" y="0.0126582" />
+                                <point x="0.980806" y="0.984177" />
+                                <point x="0.0172745" y="0.985759" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="B" pingpong="0" repeatcount="1" repeatto="0" sid="494633051315967" speed="5">
+                        <frame duration="1" hotspotX="0.50096" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.00959693" y="0.00791139" />
+                                <point x="0.984645" y="0.0126582" />
+                                <point x="0.980806" y="0.984177" />
+                                <point x="0.0172745" y="0.985759" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="C" pingpong="0" repeatcount="1" repeatto="0" sid="943724275100411" speed="5">
+                        <frame duration="1" hotspotX="0.50096" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.00959693" y="0.00791139" />
+                                <point x="0.984645" y="0.0126582" />
+                                <point x="0.980806" y="0.984177" />
+                                <point x="0.0172745" y="0.985759" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="D" pingpong="0" repeatcount="1" repeatto="0" sid="641065323274841" speed="5">
+                        <frame duration="1" hotspotX="0.50096" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.00959693" y="0.00791139" />
+                                <point x="0.984645" y="0.0126582" />
+                                <point x="0.980806" y="0.984177" />
+                                <point x="0.0172745" y="0.985759" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="E" pingpong="0" repeatcount="1" repeatto="0" sid="909038735273305" speed="5">
+                        <frame duration="1" hotspotX="0.50096" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.00959693" y="0.00791139" />
+                                <point x="0.984645" y="0.0126582" />
+                                <point x="0.980806" y="0.984177" />
+                                <point x="0.0172745" y="0.985759" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -86,7 +214,14 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder name="Texts" />
+        <object-folder name="Texts">
+            <object-type name="txtTiempoRestante" sid="414931748176132">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="txtPuntos" sid="277526632667921">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
         <object-folder name="Controls" />
         <object-folder name="System">
             <object-type name="Touch" sid="948977961617129">
@@ -119,11 +254,13 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="245500784768549" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501272" original-source="C:\Users\logan24\Desktop\monticulo.png">
                             <collision-poly>
-                                <point x="0.476" y="0" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
+                                <point x="0" y="0.615776" />
+                                <point x="0.61942" y="0.592876" />
+                                <point x="0.775116" y="4.65661e-010" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -133,10 +270,16 @@
     </object-folder>
     <families />
     <layout-folder>
+        <layout>Splash.xml</layout>
         <layout>main.xml</layout>
+        <layout>Instrucciones.xml</layout>
+        <layout>Fin.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>eMain.xml</event-sheet>
+        <event-sheet>eSpalsh.xml</event-sheet>
+        <event-sheet>eInstrucciones.xml</event-sheet>
+        <event-sheet>eFin.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Function" uid="0" />
