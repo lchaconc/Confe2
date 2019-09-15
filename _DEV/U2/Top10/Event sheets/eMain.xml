@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eMain</name>
     <events>
-        <variable constant="0" name="LugarJesus" sid="163972236690441" static="0" type="number">0</variable>
+        <variable constant="0" name="lugarJesus" sid="163972236690441" static="0" type="number">0</variable>
         <event-group description="" sid="370034331693827" title="Setup">
             <sub-events>
                 <event-block sid="250151715630644">
@@ -34,7 +34,7 @@
                             </conditions>
                             <actions>
                                 <action id="-9" name="Set value" sid="534439559019280" type="System">
-                                    <param id="0" name="Variable">LugarJesus</param>
+                                    <param id="0" name="Variable">lugarJesus</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
@@ -47,7 +47,7 @@
                             </conditions>
                             <actions>
                                 <action id="-9" name="Set value" sid="512577455789652" type="System">
-                                    <param id="0" name="Variable">LugarJesus</param>
+                                    <param id="0" name="Variable">lugarJesus</param>
                                     <param id="1" name="Value">2</param>
                                 </action>
                             </actions>
@@ -60,7 +60,7 @@
                             </conditions>
                             <actions>
                                 <action id="-9" name="Set value" sid="927015848079893" type="System">
-                                    <param id="0" name="Variable">LugarJesus</param>
+                                    <param id="0" name="Variable">lugarJesus</param>
                                     <param id="1" name="Value">3</param>
                                 </action>
                             </actions>
@@ -73,7 +73,7 @@
                             </conditions>
                             <actions>
                                 <action id="-9" name="Set value" sid="895444494816237" type="System">
-                                    <param id="0" name="Variable">LugarJesus</param>
+                                    <param id="0" name="Variable">lugarJesus</param>
                                     <param id="1" name="Value">4</param>
                                 </action>
                             </actions>
@@ -86,7 +86,7 @@
                             </conditions>
                             <actions>
                                 <action id="-9" name="Set value" sid="234700707872520" type="System">
-                                    <param id="0" name="Variable">LugarJesus</param>
+                                    <param id="0" name="Variable">lugarJesus</param>
                                     <param id="1" name="Value">5</param>
                                 </action>
                             </actions>
@@ -99,7 +99,7 @@
                             </conditions>
                             <actions>
                                 <action id="-9" name="Set value" sid="340773021757541" type="System">
-                                    <param id="0" name="Variable">LugarJesus</param>
+                                    <param id="0" name="Variable">lugarJesus</param>
                                     <param id="1" name="Value">6</param>
                                 </action>
                             </actions>
@@ -112,7 +112,7 @@
                             </conditions>
                             <actions>
                                 <action id="-9" name="Set value" sid="690214441049153" type="System">
-                                    <param id="0" name="Variable">LugarJesus</param>
+                                    <param id="0" name="Variable">lugarJesus</param>
                                     <param id="1" name="Value">7</param>
                                 </action>
                             </actions>
@@ -125,7 +125,7 @@
                             </conditions>
                             <actions>
                                 <action id="-9" name="Set value" sid="335255439907049" type="System">
-                                    <param id="0" name="Variable">LugarJesus</param>
+                                    <param id="0" name="Variable">lugarJesus</param>
                                     <param id="1" name="Value">8</param>
                                 </action>
                             </actions>
@@ -138,7 +138,7 @@
                             </conditions>
                             <actions>
                                 <action id="-9" name="Set value" sid="627180662628052" type="System">
-                                    <param id="0" name="Variable">LugarJesus</param>
+                                    <param id="0" name="Variable">lugarJesus</param>
                                     <param id="1" name="Value">9</param>
                                 </action>
                             </actions>
@@ -151,7 +151,7 @@
                             </conditions>
                             <actions>
                                 <action id="-9" name="Set value" sid="270343759891017" type="System">
-                                    <param id="0" name="Variable">LugarJesus</param>
+                                    <param id="0" name="Variable">lugarJesus</param>
                                     <param id="1" name="Value">10</param>
                                 </action>
                             </actions>
@@ -172,6 +172,22 @@
                         <action id="-2" name="Go to layout" sid="278937943204064" type="System">
                             <param id="0" name="Layout">Fin</param>
                         </action>
+                        <action id="14" name="Log" sid="508726324488727" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;Lugar de jesús &quot; &amp; lugarJesus</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="se coloca en top al objeto acutal que está siendo arrastrado" sid="846288886897146" title="Teaer al frente objeto">
+            <sub-events>
+                <event-block sid="854783367948213">
+                    <conditions>
+                        <condition behavior="DragDrop" id="0" name="Is dragging" sid="722432891206165" type="Arrastrable" />
+                    </conditions>
+                    <actions>
+                        <action id="-24" name="Move to top" sid="813684754072193" type="Arrastrable" />
                     </actions>
                 </event-block>
             </sub-events>

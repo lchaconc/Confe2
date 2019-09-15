@@ -10,6 +10,7 @@
     <unique-id>3subbtu8xvytq</unique-id>
     <saved-with-version>26900</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
@@ -250,6 +251,9 @@
             <object-type name="Function" sid="558381821082318">
                 <plugin id="Function" />
             </object-type>
+            <object-type name="Browser" sid="731618330686550">
+                <plugin id="Browser" />
+            </object-type>
         </object-folder>
         <object-folder name="Sensors">
             <object-type name="sns01" sid="753808807767908">
@@ -390,6 +394,7 @@
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
+        <global-instance type="Browser" uid="30" />
     </global-instances>
     <sounds-folder />
     <music-folder />
