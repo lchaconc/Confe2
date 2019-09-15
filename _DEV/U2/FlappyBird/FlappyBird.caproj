@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
-    <name>Flappy_bird</name>
+    <name>FlappyBird</name>
     <description>Beta de Flappy bird</description>
     <version>1.0.0.0</version>
     <author>Lus Ch C</author>
@@ -30,7 +30,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
-    <first-layout>menu</first-layout>
+    <first-layout>Splash</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -66,6 +66,22 @@
             <object-type name="suelo" sid="516226443735220">
                 <plugin id="TiledBg" />
                 <texture original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Asset 6flappy.png" />
+            </object-type>
+            <object-type name="bgSpalsh" sid="255836862735450">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="450925707206026" speed="5">
+                        <frame duration="1" hotspotX="0.501312" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Pantallas\img1.jpeg" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bgTap" sid="909177799086461">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="197452857066538" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500756" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Pantallas\img2.jpeg" />
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
         <object-folder name="Sprites">
@@ -207,14 +223,18 @@
     </object-folder>
     <families />
     <layout-folder>
-        <layout>main.xml</layout>
-        <layout>menu.xml</layout>
+        <layout>Splash.xml</layout>
+        <layout>Menu.xml</layout>
+        <layout>Tap.xml</layout>
+        <layout>Main.xml</layout>
         <layout>Muerto.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>eMain.xml</event-sheet>
         <event-sheet>eMenu.xml</event-sheet>
         <event-sheet>eMuerto.xml</event-sheet>
+        <event-sheet>eTap.xml</event-sheet>
+        <event-sheet>eSplash.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Function" uid="0" />
