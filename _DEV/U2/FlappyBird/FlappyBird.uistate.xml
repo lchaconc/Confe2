@@ -10,13 +10,15 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">Main</layout>
+        <layout order="0">Tap</layout>
+        <layout order="1">Splash</layout>
         <layout order="2">Menu</layout>
-        <layout order="4">Muerto</layout>
-        <layout active="1" order="6">Splash</layout>
-        <event-sheet order="1">eMain</event-sheet>
+        <layout order="5">Fallidos</layout>
+        <layout order="6">Main</layout>
         <event-sheet order="3">eMenu</event-sheet>
-        <event-sheet order="5">eMuerto</event-sheet>
+        <event-sheet order="4">eSplash</event-sheet>
+        <event-sheet order="7">eMain</event-sheet>
+        <event-sheet active="1" order="8">eFallidos</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -41,13 +43,23 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
         <folder expanded="1" path="animation-folder/btnPlay/" />
-        <folder expanded="1" path="animation-folder/bgSpalsh/" />
         <folder expanded="1" path="animation-folder/bgTap/" />
         <folder expanded="1" path="animation-folder/player/" />
         <folder expanded="1" path="animation-folder/tubo2/" />
         <folder expanded="1" path="animation-folder/tubo1/" />
         <folder expanded="1" path="animation-folder/pajaroMuerto/" />
+        <folder expanded="1" path="animation-folder/nube1/" />
+        <folder expanded="1" path="animation-folder/nube2/" />
+        <folder expanded="1" path="animation-folder/nube3/" />
         <folder expanded="1" path="animation-folder/txtTitulo/" />
+        <folder expanded="1" path="animation-folder/txtNoLograste/" />
+        <folder expanded="1" path="animation-folder/txtTap/" />
+        <folder expanded="1" path="animation-folder/txtTienes/" />
+        <folder expanded="1" path="animation-folder/txtPts/" />
+        <folder expanded="1" path="animation-folder/txtPuntos/" />
+        <folder expanded="1" path="animation-folder/txtRecord/" />
+        <folder expanded="1" path="animation-folder/txtPuntos2/" />
+        <folder expanded="1" path="animation-folder/txtFallidos/" />
         <folder expanded="1" path="animation-folder/snsGround/" />
         <folder expanded="1" path="animation-folder/snsGround2/" />
     </folders-expanded>

@@ -59,7 +59,7 @@
             </object-type>
         </object-folder>
         <object-folder name="Backgrounds">
-            <object-type name="day" sid="367773516472876">
+            <object-type name="bgCielo" sid="367773516472876">
                 <plugin id="TiledBg" />
                 <texture original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Asset 7flappy.png" />
             </object-type>
@@ -67,19 +67,11 @@
                 <plugin id="TiledBg" />
                 <texture original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Asset 6flappy.png" />
             </object-type>
-            <object-type name="bgSpalsh" sid="255836862735450">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="450925707206026" speed="5">
-                        <frame duration="1" hotspotX="0.501312" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Pantallas\img1.jpeg" />
-                    </animation>
-                </animation-folder>
-            </object-type>
             <object-type name="bgTap" sid="909177799086461">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="197452857066538" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.500756" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Pantallas\img2.jpeg" />
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="811680174255315" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -163,9 +155,33 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="nube1" sid="513728414386066">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="266949852360392" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Asset 9flappy.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="nube2" sid="579625596578537">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="735402792559771" speed="5">
+                        <frame duration="1" hotspotX="0.503226" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Asset 2flappy.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="nube3" sid="863660907686736">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="380560812701600" speed="5">
+                        <frame duration="1" hotspotX="0.502008" hotspotY="0.505155" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Asset 4flappy.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Texts">
-            <object-type name="txtMisPuntos" sid="217959466791061">
+            <object-type name="txtMisPuntos1" sid="217959466791061">
                 <plugin id="Text" />
             </object-type>
             <object-type name="txtPuntaje" sid="265755609292529">
@@ -179,6 +195,128 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="598279878197822" speed="5">
                         <frame duration="1" hotspotX="0.500838" hotspotY="0.501976" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Asset 10flappy.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="txtNoLograste" sid="928474576482815">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="549175842618963" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502924" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Textos-Numeros\Asset 13flappy.png">
+                            <collision-poly>
+                                <point x="0.116601" y="0.345029" />
+                                <point x="0.5" y="0.625731" />
+                                <point x="0.86166" y="0.409357" />
+                                <point x="0.84585" y="0.497076" />
+                                <point x="0.976285" y="0.929825" />
+                                <point x="0.0158103" y="0.953216" />
+                                <point x="0.126482" y="0.497076" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="txtTap" sid="182524988862687">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="184354850633523" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Textos-Numeros\Asset 1flappy.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="txtTienes" sid="402110406022117">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="894662872372282" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.518519" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Textos-Numeros\Asset 33flappy.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="txtPts" sid="961356126386073">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="938548317472210" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.518519" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Textos-Numeros\Asset 32flappy.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="txtPuntos" sid="825150993786600">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="N1" pingpong="0" repeatcount="1" repeatto="0" sid="221046138983032" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.509091" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Textos-Numeros\Asset 31flappy.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="N2" pingpong="0" repeatcount="1" repeatto="0" sid="775476101990765" speed="5">
+                        <frame duration="1" hotspotX="0.509091" hotspotY="0.509091" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Textos-Numeros\Asset 30flappy.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="N3" pingpong="0" repeatcount="1" repeatto="0" sid="779483999647973" speed="5">
+                        <frame duration="1" hotspotX="0.509091" hotspotY="0.509091" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Textos-Numeros\Asset 29flappy.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="N4" pingpong="0" repeatcount="1" repeatto="0" sid="611112954107215" speed="5">
+                        <frame duration="1" hotspotX="0.509091" hotspotY="0.509091" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Textos-Numeros\Asset 28flappy.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="N5" pingpong="0" repeatcount="1" repeatto="0" sid="869920949186541" speed="5">
+                        <frame duration="1" hotspotX="0.509091" hotspotY="0.509091" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Textos-Numeros\Asset 27flappy.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="N6" pingpong="0" repeatcount="1" repeatto="0" sid="703860874195238" speed="5">
+                        <frame duration="1" hotspotX="0.509091" hotspotY="0.509091" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Textos-Numeros\Asset 26flappy.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="N7" pingpong="0" repeatcount="1" repeatto="0" sid="406820689825855" speed="5">
+                        <frame duration="1" hotspotX="0.509091" hotspotY="0.509091" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Textos-Numeros\Asset 25flappy.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="N8" pingpong="0" repeatcount="1" repeatto="0" sid="519427874219287" speed="5">
+                        <frame duration="1" hotspotX="0.509091" hotspotY="0.509091" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Textos-Numeros\Asset 24flappy.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="N9" pingpong="0" repeatcount="1" repeatto="0" sid="473343015459386" speed="5">
+                        <frame duration="1" hotspotX="0.509091" hotspotY="0.509091" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Textos-Numeros\Asset 23flappy.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="txtRecord" sid="118921058221028">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="187002583695173" speed="5">
+                        <frame duration="1" hotspotX="0.502924" hotspotY="0.518519" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Textos-Numeros\Asset 21flappy.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="txtPuntos2" sid="789724781891034">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="N1" pingpong="0" repeatcount="1" repeatto="0" sid="855419383418792" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.509091" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Textos-Numeros\Asset 31flappy.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="N2" pingpong="0" repeatcount="1" repeatto="0" sid="207622353176841" speed="5">
+                        <frame duration="1" hotspotX="0.509091" hotspotY="0.509091" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Textos-Numeros\Asset 30flappy.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="N3" pingpong="0" repeatcount="1" repeatto="0" sid="510464310158121" speed="5">
+                        <frame duration="1" hotspotX="0.509091" hotspotY="0.509091" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Textos-Numeros\Asset 29flappy.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="N4" pingpong="0" repeatcount="1" repeatto="0" sid="139176763619884" speed="5">
+                        <frame duration="1" hotspotX="0.509091" hotspotY="0.509091" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Textos-Numeros\Asset 28flappy.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="N5" pingpong="0" repeatcount="1" repeatto="0" sid="752940821076196" speed="5">
+                        <frame duration="1" hotspotX="0.509091" hotspotY="0.509091" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Textos-Numeros\Asset 27flappy.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="N6" pingpong="0" repeatcount="1" repeatto="0" sid="868168874120953" speed="5">
+                        <frame duration="1" hotspotX="0.509091" hotspotY="0.509091" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Textos-Numeros\Asset 26flappy.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="N7" pingpong="0" repeatcount="1" repeatto="0" sid="841612429459973" speed="5">
+                        <frame duration="1" hotspotX="0.509091" hotspotY="0.509091" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Textos-Numeros\Asset 25flappy.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="N8" pingpong="0" repeatcount="1" repeatto="0" sid="990252588613674" speed="5">
+                        <frame duration="1" hotspotX="0.509091" hotspotY="0.509091" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Textos-Numeros\Asset 24flappy.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="N9" pingpong="0" repeatcount="1" repeatto="0" sid="754679769667639" speed="5">
+                        <frame duration="1" hotspotX="0.509091" hotspotY="0.509091" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Textos-Numeros\Asset 23flappy.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="txtFallidos" sid="268543423988880">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="517564883906946" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Flappy\Textos-Numeros\fallidos.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -228,6 +366,7 @@
         <layout>Tap.xml</layout>
         <layout>Main.xml</layout>
         <layout>Muerto.xml</layout>
+        <layout>Fallidos.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>eMain.xml</event-sheet>
@@ -235,6 +374,7 @@
         <event-sheet>eMuerto.xml</event-sheet>
         <event-sheet>eTap.xml</event-sheet>
         <event-sheet>eSplash.xml</event-sheet>
+        <event-sheet>eFallidos.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Function" uid="0" />

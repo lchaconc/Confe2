@@ -8,6 +8,14 @@
                 <condition id="-2" name="On start of layout" sid="888840254576303" type="System" />
             </conditions>
             <actions>
+                <action id="-4" name="Set layer visible" sid="197882975408136" type="System">
+                    <param id="0" name="Layer">&quot;Texto&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="483750004470044" type="System">
+                    <param id="0" name="Layer">&quot;Sombra&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
                 <action behavior="Physics" id="27" name="Set enabled" sid="840562578956711" type="pajaroMuerto">
                     <param id="0" name="Mode">1</param>
                 </action>
@@ -24,8 +32,19 @@
                     <param id="0" name="Animation">&quot;caido&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
+                <action id="-16" name="Wait" sid="683006414196730" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="899428422455035" type="System">
+                    <param id="0" name="Layer">&quot;Texto&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="566306881616161" type="System">
+                    <param id="0" name="Layer">&quot;Sombra&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
                 <action id="-16" name="Wait" sid="725914190138403" type="System">
-                    <param id="0" name="Seconds">1.0</param>
+                    <param id="0" name="Seconds">1</param>
                 </action>
                 <action id="-2" name="Go to layout" sid="187164057828615" type="System">
                     <param id="0" name="Layout">Menu</param>

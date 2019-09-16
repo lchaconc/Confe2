@@ -19,6 +19,10 @@
                             <param id="0" name="Variable">puntaje</param>
                             <param id="1" name="Value">0</param>
                         </action>
+                        <action id="-10" name="Add to" sid="511938336540142" type="System">
+                            <param id="0" name="Variable">intentos</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                         <action id="4" name="Set animation" sid="779766172914847" type="player">
                             <param id="0" name="Animation">&quot;vuelo&quot;</param>
                             <param id="1" name="From">1</param>
@@ -141,8 +145,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-2" name="Go to layout" sid="205277843494432" type="System">
-                            <param id="0" name="Layout">Muerto</param>
+                        <action id="0" name="Call function" sid="623705648973856" type="Function">
+                            <param id="0" name="Name">&quot;salirMain&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
@@ -179,6 +184,44 @@
                             <param id="1" name="Value">puntaje</param>
                         </action>
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="si tiene menos de 5 intentos lo dirige a menù, caso contrario lo direcciona a  intentos fallidos" sid="122984563268981" title="Salir de Main">
+            <sub-events>
+                <event-block sid="934570603140010">
+                    <conditions>
+                        <condition id="0" name="On function" sid="182091698140578" type="Function">
+                            <param id="0" name="Name">&quot;salirMain&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="776545687915708">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="977839265731698" type="System">
+                                    <param id="0" name="Variable">intentos</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="492590831415991" type="System">
+                                    <param id="0" name="Layout">Fallidos</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="661380263324306">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="419957670983398" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="205277843494432" type="System">
+                                    <param id="0" name="Layout">Muerto</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
