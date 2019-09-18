@@ -3,7 +3,215 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eMenu</name>
     <events>
+        <variable constant="0" name="decenas" sid="736169486700883" static="0" type="number">0</variable>
+        <variable constant="0" name="unidades" sid="165274940101652" static="0" type="number">0</variable>
         <event-group description="" sid="106479516665652" title="Setup_Menu">
+            <sub-events>
+                <event-block sid="727741195974023">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="340300478632653" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="302765227215981">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="367312059761049" type="System">
+                                    <param id="0" name="Variable">puntaje</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">9</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="478896855659788" type="Function">
+                                    <param id="0" name="Name">&quot;menoresQue10&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="742007550995193">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="531045581540560" type="System" />
+                                <condition id="-14" name="Compare variable" sid="587747260014295" type="System">
+                                    <param id="0" name="Variable">puntaje</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="291952575500741" type="System">
+                                    <param id="0" name="Variable">puntaje</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">19</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="401187741971472" type="System">
+                                    <param id="0" name="Variable">unidades</param>
+                                    <param id="1" name="Value">puntaje - 10</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="696931657640501" type="System">
+                                    <param id="0" name="Variable">decenas</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="733646395890022" type="Function">
+                                    <param id="0" name="Name">&quot;mayoresQue10&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="186757970233334">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="743336490400128" type="System" />
+                                <condition id="-14" name="Compare variable" sid="863405789531667" type="System">
+                                    <param id="0" name="Variable">puntaje</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">20</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="185215988268018" type="System">
+                                    <param id="0" name="Variable">puntaje</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">29</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="428055143536496" type="System">
+                                    <param id="0" name="Variable">unidades</param>
+                                    <param id="1" name="Value">puntaje - 20</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="704226198978633" type="System">
+                                    <param id="0" name="Variable">decenas</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                                <action id="0" name="Call function" sid="645110471544517" type="Function">
+                                    <param id="0" name="Name">&quot;mayoresQue10&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="373643616488519">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="495179836230269" type="System" />
+                                <condition id="-14" name="Compare variable" sid="673569444394113" type="System">
+                                    <param id="0" name="Variable">puntaje</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">30</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="663121035836655" type="System">
+                                    <param id="0" name="Variable">puntaje</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">39</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="587582541675879" type="System">
+                                    <param id="0" name="Variable">unidades</param>
+                                    <param id="1" name="Value">puntaje - 30</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="111798393539154" type="System">
+                                    <param id="0" name="Variable">decenas</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                                <action id="0" name="Call function" sid="728479817760967" type="Function">
+                                    <param id="0" name="Name">&quot;mayoresQue10&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="924147689489085">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="952860091412474" type="System" />
+                                <condition id="-14" name="Compare variable" sid="462353050669343" type="System">
+                                    <param id="0" name="Variable">puntaje</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">40</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="422646042508179" type="System">
+                                    <param id="0" name="Variable">puntaje</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">49</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="891444271273458" type="System">
+                                    <param id="0" name="Variable">unidades</param>
+                                    <param id="1" name="Value">puntaje - 40</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="778642524987112" type="System">
+                                    <param id="0" name="Variable">decenas</param>
+                                    <param id="1" name="Value">4</param>
+                                </action>
+                                <action id="0" name="Call function" sid="126351920992661" type="Function">
+                                    <param id="0" name="Name">&quot;mayoresQue10&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="883757870573446">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="368187019513959" type="System" />
+                                <condition id="-14" name="Compare variable" sid="909899822451088" type="System">
+                                    <param id="0" name="Variable">puntaje</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">50</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="695104991348088" type="System">
+                                    <param id="0" name="Variable">puntaje</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">59</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="402590853130873" type="System">
+                                    <param id="0" name="Variable">unidades</param>
+                                    <param id="1" name="Value">puntaje - 50</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="377712788100926" type="System">
+                                    <param id="0" name="Variable">decenas</param>
+                                    <param id="1" name="Value">5</param>
+                                </action>
+                                <action id="0" name="Call function" sid="662713976768369" type="Function">
+                                    <param id="0" name="Name">&quot;mayoresQue10&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="766871012074287" title="Cargar Numeros">
+            <sub-events>
+                <event-block sid="244804092512116">
+                    <conditions>
+                        <condition id="0" name="On function" sid="514855055184889" type="Function">
+                            <param id="0" name="Name">&quot;menoresQue10&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="902201337659130" type="txtPuntosUnidades">
+                            <param id="0" name="Animation">&quot;N&quot; &amp; puntaje</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="654457147931916">
+                    <conditions>
+                        <condition id="0" name="On function" sid="408448873526447" type="Function">
+                            <param id="0" name="Name">&quot;mayoresQue10&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="454964871022402" type="txtPuntosUnidades">
+                            <param id="0" name="Animation">&quot;N&quot; &amp; unidades</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="701775131261100" type="txtPuntosDecenas">
+                            <param id="0" name="Animation">&quot;N&quot; &amp; decenas</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="824949181666299" title="Evento Boton Play">
             <sub-events>
                 <event-block sid="894281385740263">
                     <conditions>
@@ -11,285 +219,29 @@
                             <param id="0" name="Object">txtTap</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-2" name="Go to layout" sid="354384323499415" type="System">
-                            <param id="0" name="Layout">Main</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="346498040545169">
-                    <conditions>
-                        <condition id="-2" name="On start of layout" sid="812875010171977" type="System" />
-                    </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="423798094376969">
+                        <event-block sid="213410975052940">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="580698336725845" type="System">
-                                    <param id="0" name="Variable">puntaje</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="172479679032045" type="txtPuntos">
-                                    <param id="0" name="Animation">&quot;N1&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="270765930925578">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="172782148565634" type="System">
-                                    <param id="0" name="Variable">puntaje</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">2</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="370332445235407" type="txtPuntos">
-                                    <param id="0" name="Animation">&quot;N2&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="391170633821888">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="835381549002682" type="System">
-                                    <param id="0" name="Variable">puntaje</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">3</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="813351537642235" type="txtPuntos">
-                                    <param id="0" name="Animation">&quot;N3&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="545496981497631">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="665235895416679" type="System">
-                                    <param id="0" name="Variable">puntaje</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">4</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="401731479190555" type="txtPuntos">
-                                    <param id="0" name="Animation">&quot;N4&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="468184496223822">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="370282183288059" type="System">
-                                    <param id="0" name="Variable">puntaje</param>
-                                    <param id="1" name="Comparison">0</param>
+                                <condition id="-14" name="Compare variable" sid="874069276371483" type="System">
+                                    <param id="0" name="Variable">intentos</param>
+                                    <param id="1" name="Comparison">3</param>
                                     <param id="2" name="Value">5</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="275390797222628" type="txtPuntos">
-                                    <param id="0" name="Animation">&quot;N5&quot;</param>
-                                    <param id="1" name="From">1</param>
+                                <action id="-2" name="Go to layout" sid="354384323499415" type="System">
+                                    <param id="0" name="Layout">Main</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="616609679094245">
+                        <event-block sid="389402885850993">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="129899142159698" type="System">
-                                    <param id="0" name="Variable">puntaje</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">6</param>
-                                </condition>
+                                <condition id="-22" name="Else" sid="140447115402734" type="System" />
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="511375984985271" type="txtPuntos">
-                                    <param id="0" name="Animation">&quot;N6&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="502088821251893">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="771724385744327" type="System">
-                                    <param id="0" name="Variable">puntaje</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">7</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="425607452514575" type="txtPuntos">
-                                    <param id="0" name="Animation">&quot;N7&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="456779235594161">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="591423773242222" type="System">
-                                    <param id="0" name="Variable">puntaje</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">8</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="621381539893483" type="txtPuntos">
-                                    <param id="0" name="Animation">&quot;N8&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="765890791704990">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="663793860078804" type="System">
-                                    <param id="0" name="Variable">puntaje</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">9</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="398926630534123" type="txtPuntos">
-                                    <param id="0" name="Animation">&quot;N9&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="900391761017310">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="394944337299800" type="System">
-                                    <param id="0" name="Variable">record</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="567755929401931" type="txtPuntos2">
-                                    <param id="0" name="Animation">&quot;N1&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="498599912076471">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="861613193669021" type="System">
-                                    <param id="0" name="Variable">record</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">2</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="430134847813326" type="txtPuntos2">
-                                    <param id="0" name="Animation">&quot;N2&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="318886446881401">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="476619794911410" type="System">
-                                    <param id="0" name="Variable">record</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">3</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="853934910812497" type="txtPuntos2">
-                                    <param id="0" name="Animation">&quot;N3&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="656237141066319">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="125747287914583" type="System">
-                                    <param id="0" name="Variable">record</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">4</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="684232300148791" type="txtPuntos2">
-                                    <param id="0" name="Animation">&quot;N4&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="499487776619656">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="580020563399571" type="System">
-                                    <param id="0" name="Variable">record</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">5</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="289954196968236" type="txtPuntos2">
-                                    <param id="0" name="Animation">&quot;N5&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="786774259066624">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="125817773655059" type="System">
-                                    <param id="0" name="Variable">record</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">6</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="758546999917442" type="txtPuntos2">
-                                    <param id="0" name="Animation">&quot;N6&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="990927791405140">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="746083485886936" type="System">
-                                    <param id="0" name="Variable">record</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">7</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="516252039694164" type="txtPuntos2">
-                                    <param id="0" name="Animation">&quot;N7&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="322045452592051">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="478639382196007" type="System">
-                                    <param id="0" name="Variable">record</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">8</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="437478138379538" type="txtPuntos2">
-                                    <param id="0" name="Animation">&quot;N8&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="212228696130876">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="517299259040897" type="System">
-                                    <param id="0" name="Variable">record</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">9</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="713499317518045" type="txtPuntos2">
-                                    <param id="0" name="Animation">&quot;N9&quot;</param>
-                                    <param id="1" name="From">1</param>
+                                <action id="-2" name="Go to layout" sid="397876521492413" type="System">
+                                    <param id="0" name="Layout">Fallidos</param>
                                 </action>
                             </actions>
                         </event-block>
