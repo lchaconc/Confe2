@@ -1,0 +1,511 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ePrincipal</name>
+    <events>
+        <event-group description="" sid="113639644737802" title="Por_siempre">
+            <sub-events>
+                <event-block sid="629276838965178">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="497276033038167" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="165797438499855" type="spriteJesus">
+                            <param id="0" name="Object">ctrlSprite</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="770857879170805">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="109754526259830" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="456367670373472" type="txtConsignas">
+                            <param id="0" name="Object">letrero</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="264440058633374" type="jesus">
+                            <param id="0" name="Object">letrero</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="332361253078251" title="control_sprite">
+            <sub-events>
+                <event-block sid="865745877717089">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="217858008195920" type="Touch">
+                            <param id="0" name="Object">btnRight</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="224126600213903" type="ctrlSprite">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="977851028181367" type="spriteJesus">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="370586651126942">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="817498612739680" type="Touch">
+                            <param id="0" name="Object">btnLeft</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="639552737824030" type="ctrlSprite">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="780279687856389" type="spriteJesus">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="932241338663850">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="880211039189340" type="Touch">
+                            <param id="0" name="Object">btnUp</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="685034965129729" type="ctrlSprite">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="354441133378066" type="spriteJesus">
+                            <param id="0" name="Animation">&quot;jump&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="285480620711280">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="975706618375848" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="403162771899100" type="spriteJesus">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="246838477344424">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="984854585256645" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="253881794472569" type="spriteJesus">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="884031602610634">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="637052810753759" type="Keyboard">
+                            <param id="0" name="Key">38</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="170437970639587" title="Animations_sprite_y_rotulos">
+            <sub-events>
+                <event-block sid="415365016496837">
+                    <conditions>
+                        <condition behavior="Platform" id="4" name="Is falling" sid="778711164536873" type="ctrlSprite" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="538205620385249" type="spriteJesus">
+                            <param id="0" name="Animation">&quot;jump&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="754706738954383">
+                    <conditions>
+                        <condition behavior="Platform" id="0" name="Is moving" sid="227858585275671" type="ctrlSprite" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="402018975658768" type="spriteJesus">
+                            <param id="0" name="Animation">&quot;run&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="194137443874865">
+                    <conditions>
+                        <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="993911537130196" type="ctrlSprite" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="393040735382507" type="spriteJesus">
+                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="621142543694467">
+                    <conditions>
+                        <condition behavior="Platform" id="3" name="Is jumping" sid="870206487279457" type="ctrlSprite" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="574211467651152" type="spriteJesus">
+                            <param id="0" name="Animation">&quot;jump&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="297943520096461">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="127458488734585" type="Touch">
+                            <param id="0" name="Object">btnAceptar</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="409237131605633" type="btnAceptar">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="932364600741457" type="letrero">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="720857442111797" type="letrero">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="843943329157500" type="letrero">
+                            <param id="0" name="Instance variable">activo</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="849871347301157" title="Sensores">
+            <sub-events>
+                <event-block sid="296726408707067">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="548053145950717" type="ctrlSprite">
+                            <param id="0" name="Object">sensorCaida</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="790119410091207" type="Audio">
+                            <param id="0" name="Audio file">caida</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="880979843988864" type="ctrlSprite">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="298437502879025" type="spriteJesus">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="298667440589968" type="ctrlSprite">
+                            <param id="0" name="Instance variable">vidas</param>
+                            <param id="1" name="Value">ctrlSprite.vidas - 1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="266414278197446" type="txtVidas">
+                            <param id="0" name="Text">ctrlSprite.vidas</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="544241968754246">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="333654669220989" type="ctrlSprite">
+                                    <param id="0" name="Instance variable">vidas</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="977575265527927" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="108790224932784" type="ctrlSprite">
+                                    <param id="0" name="X">128</param>
+                                    <param id="1" name="Y">160</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="900155333115915" type="ctrlSprite">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="778349795706429" type="spriteJesus">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="587864687838740">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="506823725011049" type="sensorReten">
+                            <param id="0" name="Object">letrero</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="336215809909067" type="letrero">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="962349186213615">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="802255181927163" type="letrero">
+                                    <param id="0" name="Instance variable">activo</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="344175503735139" type="btnAceptar">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>FIN DEL JUEGO</comment>
+                <event-block sid="597050026190750">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="815126539232255" type="ctrlSprite">
+                            <param id="0" name="Object">sensorFinJuego</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="101382316753375" type="luzAmarilla">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="170576002955493" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="548551427181500" type="particulas_blanco">
+                            <param id="0" name="Object">ctrlSprite</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="745627466995829" type="ctrlSprite">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="255882677956717" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="928611167157475" type="ctrlSprite">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="456861142703396" type="bgNegro">
+                            <param id="0" name="X">7520</param>
+                            <param id="1" name="Y">-32</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="231740419043014" type="bgNegro" />
+                        <action id="-16" name="Wait" sid="396784031520714" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="781209515785139" type="System">
+                            <param id="0" name="Layout">FinDeJuego</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="322774359884925" title="on_Load">
+            <sub-events>
+                <event-block sid="288689659712528">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="527127508875947" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="307390109958386" type="sensores">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="687622220998573" type="Audio">
+                            <param id="0" name="Audio file">MattOglseby</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;fondo1&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="621763358523414" type="txtVidas">
+                            <param id="0" name="Text">ctrlSprite.vidas</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="295069936565181" type="letrero">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="143033719149921" type="letrero">
+                            <param id="0" name="Angle">90</param>
+                        </action>
+                        <action disabled="1" id="-3" name="Set position" sid="468064776699335" type="ctrlSprite">
+                            <param id="0" name="X">176</param>
+                            <param id="1" name="Y">160</param>
+                        </action>
+                        <action disabled="1" id="-3" name="Set position" sid="593547729717013" type="ctrlSprite">
+                            <param id="0" name="X">7504</param>
+                            <param id="1" name="Y">512</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="509714760924478" title="Interacciones">
+            <sub-events>
+                <event-block sid="916702020485236">
+                    <conditions />
+                    <actions>
+                        <action behavior="Platform" id="13" name="Set double-jump" sid="151780059189475" type="ctrlSprite">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="187221162624488" title="Enemigos - animaciones - interacciones">
+            <sub-events>
+                <event-block sid="489055790072715">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="940247922685779" type="serpiente">
+                            <param id="0" name="Instance variable">direccion</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;izquierda&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="486814397943009" type="serpiente">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="815485958648411" type="serpiente">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="468792670214500">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="873544578165730" type="serpiente">
+                            <param id="0" name="Instance variable">direccion</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;derecha&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="838190591472732" type="serpiente">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="724488010211253" type="serpiente">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="140599052316809">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="737835748232780" type="serpiente">
+                            <param id="0" name="Object">snsReboteEnemigo</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="583265088448086">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="226721020691233" type="serpiente">
+                                    <param id="0" name="Instance variable">direccion</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;izquierda&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="441537397033759" type="serpiente">
+                                    <param id="0" name="Instance variable">direccion</param>
+                                    <param id="1" name="Value">&quot;derecha&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="416050109001961">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="312455420201050" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="650732145929381" type="serpiente">
+                                    <param id="0" name="Instance variable">direccion</param>
+                                    <param id="1" name="Value">&quot;izquierda&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="364813648870537">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="368085622930796" type="ctrlSprite">
+                            <param id="0" name="Object">serpiente</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="135959236656119">
+                            <conditions>
+                                <condition behavior="Platform" id="4" name="Is falling" sid="514714704933069" type="ctrlSprite" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="470851907390367" type="serpiente" />
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="993910200970394" type="ctrlSprite">
+                                    <param id="0" name="Vector Y">-700</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="288496337959814">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="698675288715932" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Flash" id="0" name="Flash" sid="862125453468965" type="spriteJesus">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">1.0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="494410180575958">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="580986933817116" type="ctrlSprite">
+                            <param id="0" name="Object">snsActivarRomano</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="319755208171356" type="snsActivarRomano" />
+                        <action id="-16" name="Wait" sid="273041985786711" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="604704965371206" type="romano">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="919426411381832" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="349850175029980" type="romano">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="699080507797704" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="896128775712834" type="romano" />
+                    </actions>
+                </event-block>
+                <event-block sid="822065151050332">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="440468460592669" type="ctrlSprite">
+                            <param id="0" name="Object">romano</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="355428487289931" type="spriteJesus">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
