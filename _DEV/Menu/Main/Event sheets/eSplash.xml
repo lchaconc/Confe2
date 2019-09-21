@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>ePreload</name>
+    <name>eSplash</name>
     <events>
         <variable comment="url del servidor api" constant="0" name="apiJuegos" sid="835257952309818" static="0" type="text"></variable>
         <variable constant="0" name="retoAmostrar" sid="635973351178707" static="0" type="text"></variable>
@@ -15,6 +15,12 @@
         <variable constant="0" name="activoC01ropero1" sid="599661027721435" static="0" type="text"></variable>
         <variable constant="0" name="activoR01emociones" sid="262634711365080" static="0" type="text"></variable>
         <variable comment="boolenao" constant="0" name="activoJ01granja" sid="215966133924489" static="0" type="text"></variable>
+        <variable constant="0" name="activoJ02top10" sid="563578678271726" static="0" type="text"></variable>
+        <variable constant="0" name="activoJ02mandela" sid="195571571752590" static="0" type="text"></variable>
+        <variable constant="0" name="activoJ02acompanajesus" sid="423130582687574" static="0" type="text"></variable>
+        <variable constant="0" name="activoR02exitofracaso" sid="632425617390250" static="0" type="text"></variable>
+        <variable constant="0" name="activoJ02flappybird" sid="847128946243669" static="0" type="text"></variable>
+        <variable constant="0" name="activoR02bienaventuranzas" sid="889474531094339" static="0" type="text"></variable>
         <comment>CArga el estado de los juegos del sessionstorage</comment>
         <event-block sid="127484288316554">
             <conditions>
@@ -48,6 +54,30 @@
                 <action id="-9" name="Set value" sid="348595448567473" type="System">
                     <param id="0" name="Variable">activoR01emociones</param>
                     <param id="1" name="Value">WebStorage.SessionValue(&quot;activoR01emociones&quot;)</param>
+                </action>
+                <action id="-9" name="Set value" sid="413161727893411" type="System">
+                    <param id="0" name="Variable">activoJ02top10</param>
+                    <param id="1" name="Value">WebStorage.SessionValue(&quot;activoJ02top10&quot;)</param>
+                </action>
+                <action id="-9" name="Set value" sid="650837483730418" type="System">
+                    <param id="0" name="Variable">activoJ02mandela</param>
+                    <param id="1" name="Value">WebStorage.SessionValue(&quot;activoJ02mandela&quot;)</param>
+                </action>
+                <action id="-9" name="Set value" sid="504596693263995" type="System">
+                    <param id="0" name="Variable">activoR02bienaventuranzas</param>
+                    <param id="1" name="Value">WebStorage.SessionValue(&quot;activoR02bienaventuranzas&quot;)</param>
+                </action>
+                <action id="-9" name="Set value" sid="664838585462127" type="System">
+                    <param id="0" name="Variable">activoJ02flappybird</param>
+                    <param id="1" name="Value">WebStorage.SessionValue(&quot;activoJ02flappybird&quot;)</param>
+                </action>
+                <action id="-9" name="Set value" sid="770266651897955" type="System">
+                    <param id="0" name="Variable">activoR02exitofracaso</param>
+                    <param id="1" name="Value">WebStorage.SessionValue(&quot;activoR02exitofracaso&quot;)</param>
+                </action>
+                <action id="-9" name="Set value" sid="430405686326446" type="System">
+                    <param id="0" name="Variable">activoJ02acompanajesus</param>
+                    <param id="1" name="Value">WebStorage.SessionValue(&quot;activoJ02acompanajesus&quot;)</param>
                 </action>
                 <action id="14" name="Log" sid="892960789636522" type="Browser">
                     <param id="0" name="Type">0</param>
