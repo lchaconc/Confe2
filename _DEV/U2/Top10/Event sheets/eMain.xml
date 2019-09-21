@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eMain</name>
     <events>
+        <variable constant="0" name="iteraciones" sid="559970995498191" static="0" type="number">0</variable>
         <variable constant="0" name="lugarJesus" sid="163972236690441" static="0" type="number">0</variable>
         <event-group description="" sid="370034331693827" title="Setup">
             <sub-events>
@@ -24,7 +25,12 @@
                     <conditions>
                         <condition behavior="DragDrop" id="2" name="On drop" sid="394132914873671" type="Arrastrable" />
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-10" name="Add to" sid="128487084015572" type="System">
+                            <param id="0" name="Variable">iteraciones</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="376824143150632">
                             <conditions>
@@ -160,7 +166,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="492188282018496" title="Boton Siguiente">
+        <event-group description="" sid="492188282018496" title="Boton Siguiente - Boton cerrar modal">
             <sub-events>
                 <event-block sid="432473764130492">
                     <conditions>
@@ -168,13 +174,57 @@
                             <param id="0" name="Object">btnSiguiente</param>
                         </condition>
                     </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="795833350907088">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="366492034623889" type="System">
+                                    <param id="0" name="Variable">iteraciones</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="278937943204064" type="System">
+                                    <param id="0" name="Layout">Fin</param>
+                                </action>
+                                <action id="14" name="Log" sid="508726324488727" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;Lugar de jesús &quot; &amp; lugarJesus</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="674563704128838">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="842150990684810" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="627204438665526" type="System">
+                                    <param id="0" name="Layer">&quot;shadows&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="920673209498732" type="txtDebesCompletar">
+                                    <param id="0" name="X">660</param>
+                                    <param id="1" name="Y">320</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="470756750163675">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="180495122921718" type="Touch">
+                            <param id="0" name="Object">txtDebesCompletar</param>
+                        </condition>
+                    </conditions>
                     <actions>
-                        <action id="-2" name="Go to layout" sid="278937943204064" type="System">
-                            <param id="0" name="Layout">Fin</param>
+                        <action id="-4" name="Set layer visible" sid="814346451502067" type="System">
+                            <param id="0" name="Layer">&quot;shadows&quot;</param>
+                            <param id="1" name="Visibility">0</param>
                         </action>
-                        <action id="14" name="Log" sid="508726324488727" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;Lugar de jesús &quot; &amp; lugarJesus</param>
+                        <action id="-3" name="Set position" sid="318811934619110" type="txtDebesCompletar">
+                            <param id="0" name="X">-300</param>
+                            <param id="1" name="Y">-300</param>
                         </action>
                     </actions>
                 </event-block>
