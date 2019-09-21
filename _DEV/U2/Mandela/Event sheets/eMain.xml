@@ -4,7 +4,7 @@
     <name>eMain</name>
     <events>
         <variable constant="0" name="puntaje" sid="989619513848056" static="0" type="number">0</variable>
-        <variable constant="0" name="tiempoRestante" sid="940580334795136" static="0" type="number">35</variable>
+        <variable constant="0" name="tiempoRestante" sid="940580334795136" static="0" type="number">30</variable>
         <variable constant="0" name="i" sid="351872383875707" static="0" type="number">0</variable>
         <event-group description="" sid="370034331693827" title="Setup">
             <sub-events>
@@ -500,6 +500,9 @@
                         <action behavior="Physics" id="27" name="Set enabled" sid="309972722340478" type="foto2">
                             <param id="0" name="Mode">1</param>
                         </action>
+                        <action id="0" name="Set text" sid="594909530411571" type="txtIteracion">
+                            <param id="0" name="Text">i + 1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="889367685650555">
@@ -531,6 +534,9 @@
                         </action>
                         <action behavior="Physics" id="27" name="Set enabled" sid="373680354663222" type="foto2">
                             <param id="0" name="Mode">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="617673477291992" type="txtIteracion">
+                            <param id="0" name="Text">i + 1</param>
                         </action>
                     </actions>
                 </event-block>
