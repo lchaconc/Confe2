@@ -19254,5 +19254,7 @@ cr.getObjectRefTable = function () { return [
 	cr.plugins_.AJAX.prototype.exps.LastData,
 	cr.plugins_.AJAX.prototype.cnds.OnError,
 	cr.system_object.prototype.cnds.OnLayoutStart,
-	cr.plugins_.Sprite.prototype.acts.SetEffect
+	cr.plugins_.Function.prototype.cnds.OnFunction,
+	cr.plugins_.Sprite.prototype.acts.SetEffect,
+	cr.plugins_.Function.prototype.acts.CallFunction
 ];};

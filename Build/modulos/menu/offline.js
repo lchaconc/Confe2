@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1568572901,
+	"version": 1569098726,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -14,6 +14,8 @@
 		"images/btnhome-sheet0.png",
 		"images/btnsiguiente-sheet0.png",
 		"images/btnu1-sheet0.png",
+		"images/btn5-sheet0.png",
+		"images/btn6-sheet0.png",
 		"images/bgmain-sheet0.png",
 		"images/bgsunmenu-sheet0.png",
 		"images/bgsecundario-sheet0.png",
@@ -33,6 +35,7 @@
 		"images/icou1-sheet0.png",
 		"images/icou1-sheet1.png",
 		"images/icou2-sheet0.png",
+		"images/icou2-sheet1.png",
 		"images/icou3-sheet0.png",
 		"images/icou4-sheet0.png",
 		"images/icou5-sheet0.png",
