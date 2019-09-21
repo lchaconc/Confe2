@@ -19,7 +19,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="199779665079946" title="Abrir Juegos Unidad 1">
+        <event-group description="" sid="199779665079946" title="Evento Clic para abrir Juegos Unidad 1">
             <sub-events>
                 <comment>Ropero 1</comment>
                 <event-block sid="241480781912158">
@@ -350,61 +350,247 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="899223742576917" title="Activar_Unidad1">
+        <event-group description="" sid="899223742576917" title="Activar Juegos de las unidades">
             <sub-events>
-                <event-block sid="150375709438536">
+                <event-block sid="699261734635974">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="620797851857741" type="System">
-                            <param id="0" name="Variable">activoC01ropero1</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;true&quot;</param>
+                        <condition id="0" name="On function" sid="766680526869085" type="Function">
+                            <param id="0" name="Name">&quot;activarUnidad1&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="1" name="Set blend mode" sid="901554121618272" type="btn1">
-                            <param id="0" name="Blend mode">0</param>
+                        <action id="4" name="Set animation" sid="826372509130326" type="btn1">
+                            <param id="0" name="Animation">&quot;Ropero1&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="556951076982240" type="btn2">
+                            <param id="0" name="Animation">&quot;Emociones&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="485246804704887" type="btn3">
+                            <param id="0" name="Animation">&quot;Granja&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="907706191538888" type="btn4">
+                            <param id="0" name="Animation">&quot;Ropero2&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="288700798143381" type="btn5">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="310765462763853" type="btn6">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="523963007750944">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="189036164488725" type="System">
+                                    <param id="0" name="Variable">activoC02ropero2</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;true&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set blend mode" sid="898169562830503" type="btn4">
+                                    <param id="0" name="Blend mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="374511055010218">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="232170373576858" type="System">
+                                    <param id="0" name="Variable">activoJ01granja</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;true&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set blend mode" sid="539363917113328" type="btn3">
+                                    <param id="0" name="Blend mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="875031625205955">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="579843715372296" type="System">
+                                    <param id="0" name="Variable">activoR01emociones</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;true&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set blend mode" sid="307054158461449" type="btn2">
+                                    <param id="0" name="Blend mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="150375709438536">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="620797851857741" type="System">
+                                    <param id="0" name="Variable">activoC01ropero1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;true&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set blend mode" sid="901554121618272" type="btn1">
+                                    <param id="0" name="Blend mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="889086613950244">
+                    <conditions>
+                        <condition id="0" name="On function" sid="506706986715422" type="Function">
+                            <param id="0" name="Name">&quot;activarUnidad2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="163562988163419" type="btn1">
+                            <param id="0" name="Animation">&quot;Top10&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="603743806982521" type="btn2">
+                            <param id="0" name="Animation">&quot;Mandela&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="759237365740599" type="btn3">
+                            <param id="0" name="Animation">&quot;Bienaventuranzas&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="677952893862910" type="btn4">
+                            <param id="0" name="Animation">&quot;Vuela&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="578921410085347" type="btn5">
+                            <param id="0" name="Animation">&quot;ExitoFracaso&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="290614586068573" type="btn6">
+                            <param id="0" name="Animation">&quot;AcompanaJesus&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="539003318736139">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="154441642846506" type="System">
+                                    <param id="0" name="Variable">activoJ02top10</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;true&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set blend mode" sid="410715197802340" type="btn1">
+                                    <param id="0" name="Blend mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="796180595877778">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="109614431979436" type="System">
+                                    <param id="0" name="Variable">activoJ02mandela</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;true&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set blend mode" sid="171907509615761" type="btn2">
+                                    <param id="0" name="Blend mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="418040420722638">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="240127275664916" type="System">
+                                    <param id="0" name="Variable">activoR02bienaventuranzas</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;true&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set blend mode" sid="675926864254852" type="btn3">
+                                    <param id="0" name="Blend mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="277513458369908">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="858508521903390" type="System">
+                                    <param id="0" name="Variable">activoJ02flappybird</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;true&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set blend mode" sid="279857756528155" type="btn4">
+                                    <param id="0" name="Blend mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="831468396480802">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="762963267436291" type="System">
+                                    <param id="0" name="Variable">activoR02exitofracaso</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;true&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set blend mode" sid="229246865810020" type="btn5">
+                                    <param id="0" name="Blend mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="999867769778322">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="319873921512076" type="System">
+                                    <param id="0" name="Variable">activoJ02acompanajesus</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;true&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set blend mode" sid="585404850110456" type="btn6">
+                                    <param id="0" name="Blend mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="214115080810687" title="cargar pantalla eSubMenu">
+            <sub-events>
+                <event-block sid="231761418210422">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="719369579698662" type="System">
+                            <param id="0" name="Variable">unidadSeleccionada</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="922090525464096" type="Function">
+                            <param id="0" name="Name">&quot;activarUnidad1&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="875031625205955">
+                <event-block sid="257424968356765">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="579843715372296" type="System">
-                            <param id="0" name="Variable">activoR01emociones</param>
+                        <condition id="-14" name="Compare variable" sid="342665794706936" type="System">
+                            <param id="0" name="Variable">unidadSeleccionada</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;true&quot;</param>
+                            <param id="2" name="Value">2</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="1" name="Set blend mode" sid="307054158461449" type="btn2">
-                            <param id="0" name="Blend mode">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="374511055010218">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="232170373576858" type="System">
-                            <param id="0" name="Variable">activoJ01granja</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;true&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="1" name="Set blend mode" sid="539363917113328" type="btn3">
-                            <param id="0" name="Blend mode">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="523963007750944">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="189036164488725" type="System">
-                            <param id="0" name="Variable">activoC02ropero2</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;true&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="1" name="Set blend mode" sid="898169562830503" type="btn4">
-                            <param id="0" name="Blend mode">0</param>
+                        <action id="0" name="Call function" sid="999328405767167" type="Function">
+                            <param id="0" name="Name">&quot;activarUnidad2&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
