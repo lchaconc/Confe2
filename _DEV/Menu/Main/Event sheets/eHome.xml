@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eHome</name>
     <events>
+        <variable comment="unidad que selecciona el usuario en el home. Se pasa el parámetro hacia el sub menu para que despliegue los botones correspondientes" constant="0" name="unidadSeleccionada" sid="533241838028923" static="0" type="number">0</variable>
         <variable constant="0" name="urlDesactivarObjetoSandalias" sid="937810381686555" static="0" type="text"></variable>
         <event-group description="" sid="545420417498187" title="Evento clic  de botones  por unidades">
             <sub-events>
@@ -90,7 +91,7 @@
                                     <param id="1" name="Message">urlDesactivarObjetoSandalias</param>
                                 </action>
                                 <action id="1" name="Set session value" sid="175059952239124" type="WebStorage">
-                                    <param id="0" name="Key">&quot;objSandalias&quot;</param>
+                                    <param id="0" name="Key">&quot;objetoSandalias&quot;</param>
                                     <param id="1" name="Value">objetoSandalias</param>
                                 </action>
                                 <action id="0" name="Request URL" sid="281891952705876" type="AJAX">
@@ -106,6 +107,50 @@
                             </conditions>
                             <actions>
                                 <action id="-2" name="Go to layout" sid="452847786865755" type="System">
+                                    <param id="0" name="Layout">SubMenu</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="545728862156833">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="562722215595949" type="Touch">
+                            <param id="0" name="Object">btnU2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="373301517598452">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="389405288269960" type="System">
+                                    <param id="0" name="Variable">objetoEstrella</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;true&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="746832845978111" type="System">
+                                    <param id="0" name="Variable">objetoEstrella</param>
+                                    <param id="1" name="Value">&quot;false&quot;</param>
+                                </action>
+                                <action id="1" name="Set session value" sid="469340111320006" type="WebStorage">
+                                    <param id="0" name="Key">&quot;objetoEstrella&quot;</param>
+                                    <param id="1" name="Value">objetoEstrella</param>
+                                </action>
+                                <action disabled="1" id="0" name="Request URL" sid="509977291673394" type="AJAX">
+                                    <param id="0" name="Tag">&quot;objetoEstrella&quot;</param>
+                                    <param id="1" name="URL">urlDesactivarObjetoSandalias &amp; idUsuario</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>En caso de que ya ha abierto la unidad 2 anteriormente</comment>
+                        <event-block sid="391052340832050">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="795999842981629" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="112442975690477" type="System">
                                     <param id="0" name="Layout">SubMenu</param>
                                 </action>
                             </actions>
@@ -172,32 +217,32 @@
                 <event-block any="1" sid="552456041329408">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="406294844645733" type="System">
-                            <param id="0" name="Variable">activoC01ropero1</param>
+                            <param id="0" name="Variable">activoJ02top10</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;true&quot;</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="561200459430840" type="System">
-                            <param id="0" name="Variable">activoC02ropero2</param>
+                            <param id="0" name="Variable">activoJ02mandela</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;true&quot;</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="725270095033759" type="System">
-                            <param id="0" name="Variable">activoJ01granja</param>
+                            <param id="0" name="Variable">activoJ02flappybird</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;true&quot;</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="798561350645557" type="System">
-                            <param id="0" name="Variable">activoR01emociones</param>
+                            <param id="0" name="Variable">activoJ02acompanajesus</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;true&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Set position" sid="204323159849764" type="btnU1">
-                            <param id="0" name="X">445</param>
-                            <param id="1" name="Y">288</param>
+                        <action id="-3" name="Set position" sid="204323159849764" type="btnU2">
+                            <param id="0" name="X">727</param>
+                            <param id="1" name="Y">415</param>
                         </action>
-                        <action id="4" name="Set animation" sid="111199790373978" type="icoU1">
+                        <action id="4" name="Set animation" sid="111199790373978" type="icoU2">
                             <param id="0" name="Animation">&quot;abierto&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -208,11 +253,11 @@
                         <condition id="-22" name="Else" sid="336010245496252" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-3" name="Set position" sid="179135145810417" type="btnU1">
+                        <action id="-3" name="Set position" sid="179135145810417" type="btnU2">
                             <param id="0" name="X">-600</param>
                             <param id="1" name="Y">-600</param>
                         </action>
-                        <action id="4" name="Set animation" sid="480261635952710" type="icoU1">
+                        <action id="4" name="Set animation" sid="480261635952710" type="icoU2">
                             <param id="0" name="Animation">&quot;cerrado&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -220,7 +265,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="474994713274378" title="Callback_Ajax_Ocultar_Objetos">
+        <event-group description="" sid="474994713274378" title="Callback Ajax de ocultar objetos">
             <sub-events>
                 <event-block sid="690833975857662">
                     <conditions>
