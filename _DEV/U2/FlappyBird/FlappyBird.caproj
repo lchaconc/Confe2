@@ -1,15 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
     <name>FlappyBird</name>
-    <description>Beta de Flappy bird</description>
-    <version>1.0.0.0</version>
+    <description>Vuela si puedes</description>
+    <version>1.0.1.2</version>
     <author>Lus Ch C</author>
     <author-email></author-email>
     <author-website>http://</author-website>
-    <app-id>com.logan24.flappy_bird</app-id>
+    <app-id>com.logan24.vuela_si_puedes</app-id>
     <unique-id>3subbtu8xvytq</unique-id>
     <saved-with-version>26900</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
@@ -72,6 +73,14 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="811680174255315" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="montana" sid="117253385308078">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="386649889368924" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\montana.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -313,7 +322,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="517564883906946" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\AGOTADO.png" />
+                        <frame duration="1" hotspotX="0.500484" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\fallidos.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -360,6 +369,9 @@
             </object-type>
             <object-type name="Function" sid="558381821082318">
                 <plugin id="Function" />
+            </object-type>
+            <object-type name="Audio" sid="334843432008130">
+                <plugin id="Audio" />
             </object-type>
         </object-folder>
         <object-folder name="Sensors">
@@ -415,9 +427,27 @@
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
+        <global-instance type="Audio" uid="45">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
     </global-instances>
-    <sounds-folder />
-    <music-folder />
+    <sounds-folder>
+        <file name="golpe.ogg" />
+    </sounds-folder>
+    <music-folder>
+        <file name="Ninja_Tortoise.ogg" />
+    </music-folder>
     <files-folder>
         <file-folder name="Icons">
             <file name="icon-16.png" />

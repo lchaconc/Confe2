@@ -27,6 +27,12 @@
                             <param id="0" name="Animation">&quot;vuelo&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
+                        <action id="0" name="Play" sid="675273268183983" type="Audio">
+                            <param id="0" name="Audio file">Ninja_Tortoise</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;fondo&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -70,6 +76,15 @@
                         <action id="0" name="Set text" sid="592656560732575" type="txtPuntaje">
                             <param id="0" name="Text">puntaje</param>
                         </action>
+                        <action id="-1" name="Set X" sid="543775488686321" type="nube1">
+                            <param id="0" name="X">nube1.X - (velocidad  - 2 ) * dt</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="682600434892806" type="nube2">
+                            <param id="0" name="X">nube2.X - (velocidad  - 50 ) * dt</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="871990795975683" type="montana">
+                            <param id="0" name="X">montana.X - velocidad * dt</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="493382674176198">
@@ -107,6 +122,41 @@
                         <action id="-9" name="Destroy" sid="383622844853565" type="tubo1" />
                     </actions>
                 </event-block>
+                <event-block sid="472547307750615">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="501907414579497" type="nube1">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="X co-ordinate">-50</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="772089908494918" type="nube1" />
+                    </actions>
+                </event-block>
+                <event-block sid="673075011868141">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="752185051929536" type="nube2">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="X co-ordinate">-50</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="684999223896512" type="nube2" />
+                    </actions>
+                </event-block>
+                <event-block sid="316665250225345">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="598762937613385" type="montana">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="X co-ordinate">-400</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="666135015775136" type="montana">
+                            <param id="0" name="X">500</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="731289067006300">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="644386530338493" type="System">
@@ -122,9 +172,21 @@
                         </action>
                         <action id="-3" name="Create object" sid="797029339220290" type="System">
                             <param id="0" name="Object to create">tubo2</param>
-                            <param id="1" name="Layer">&quot;main&quot;</param>
+                            <param id="1" name="Layer">&quot;Fondo2&quot;</param>
                             <param id="2" name="X">450</param>
                             <param id="3" name="Y">tubo1.Y + 140</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="652635143948548" type="System">
+                            <param id="0" name="Object to create">nube1</param>
+                            <param id="1" name="Layer">&quot;Fondo2&quot;</param>
+                            <param id="2" name="X">500</param>
+                            <param id="3" name="Y">random(100,300)</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="418803930326210" type="System">
+                            <param id="0" name="Object to create">nube2</param>
+                            <param id="1" name="Layer">&quot;Fondo2&quot;</param>
+                            <param id="2" name="X">500</param>
+                            <param id="3" name="Y">random(100,300)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -134,10 +196,10 @@
             <sub-events>
                 <event-block any="1" sid="184804146877563">
                     <conditions>
-                        <condition disabled="1" id="0" name="On collision with another object" sid="686970091251902" type="player">
+                        <condition id="0" name="On collision with another object" sid="686970091251902" type="player">
                             <param id="0" name="Object">tubo1</param>
                         </condition>
-                        <condition disabled="1" id="0" name="On collision with another object" sid="421099131399249" type="player">
+                        <condition id="0" name="On collision with another object" sid="421099131399249" type="player">
                             <param id="0" name="Object">tubo2</param>
                         </condition>
                         <condition id="0" name="On collision with another object" sid="841431347709296" type="player">
@@ -145,6 +207,15 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="6" name="Stop" sid="711652983778565" type="Audio">
+                            <param id="0" name="Tag">&quot;fondo&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="741378418694059" type="Audio">
+                            <param id="0" name="Audio file">golpe</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;golpe&quot;</param>
+                        </action>
                         <action id="-2" name="Go to layout" sid="205277843494432" type="System">
                             <param id="0" name="Layout">Muerto</param>
                         </action>
