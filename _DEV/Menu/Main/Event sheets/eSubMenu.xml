@@ -19,7 +19,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="199779665079946" title="Evento Clic para abrir Juegos Unidad 1">
+        <event-group description="" inactive="1" sid="199779665079946" title="Evento Clic para abrir Juegos Unidad 1">
             <sub-events>
                 <comment>Ropero 1</comment>
                 <event-block sid="241480781912158">
@@ -350,6 +350,302 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" inactive="1" sid="505059159505181" title="Evento Clic para abrir Juegos Unidad 2">
+            <sub-events>
+                <comment>Top 10</comment>
+                <event-block sid="435366737259908">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="388345065459253" type="Touch">
+                            <param id="0" name="Object">btn1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="644336374692417">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="898241461285356" type="System">
+                                    <param id="0" name="Variable">activoJ02top10</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;true&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Go to URL" sid="529250626106448" type="Browser">
+                                    <param id="0" name="URL">&quot;../u2/top10/&quot;</param>
+                                    <param id="1" name="Target">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="467760088661132">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="609473126647987" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="706048587991707" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;Acceso denegado Ropero 1&quot;</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="324592796806081" type="txtAccesoDenegado">
+                                    <param id="0" name="Animation">&quot;actividadDenegada&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="547254996638101" type="txtAccesoDenegado">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="917442262874830" type="System">
+                                    <param id="0" name="Seconds">1.5</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="931097933609652" type="txtAccesoDenegado">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Mandela</comment>
+                <event-block sid="602286014390434">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="453929635333396" type="Touch">
+                            <param id="0" name="Object">btn2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="967788355132122">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="697289295340341" type="System">
+                                    <param id="0" name="Variable">activoJ02mandela</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;true&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Go to URL" sid="104850805767032" type="Browser">
+                                    <param id="0" name="URL">&quot;../u2/mandela/&quot;</param>
+                                    <param id="1" name="Target">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="771298627921049">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="103642258900925" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="983826026045983" type="txtAccesoDenegado">
+                                    <param id="0" name="Animation">&quot;actividadDenegada&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="595835559941709" type="txtAccesoDenegado">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="810467049187761" type="System">
+                                    <param id="0" name="Seconds">1.5</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="620063037795985" type="txtAccesoDenegado">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Bienaventuranzas</comment>
+                <event-block sid="301487538459910">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="120780687410941" type="Touch">
+                            <param id="0" name="Object">btn3</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="518983841167276">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="542688999140515" type="System">
+                                    <param id="0" name="Variable">activoR02bienaventuranzas</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;true&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="528648857063039" type="System">
+                                    <param id="0" name="Variable">retoAmostrar</param>
+                                    <param id="1" name="Value">&quot;bienaventuranzas&quot;</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="580064116991861" type="System">
+                                    <param id="0" name="Layout">Retos</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="156232950418242">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="229684040995597" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="338242387744860" type="txtAccesoDenegado">
+                                    <param id="0" name="Animation">&quot;actividadDenegada&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="608293754972149" type="txtAccesoDenegado">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="442079504448917" type="System">
+                                    <param id="0" name="Seconds">1.5</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="545937441904376" type="txtAccesoDenegado">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Vuela si puedes</comment>
+                <event-block sid="551079398099371">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="872864941437622" type="Touch">
+                            <param id="0" name="Object">btn4</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="679932635211764">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="306997095705693" type="System">
+                                    <param id="0" name="Variable">activoJ02flappybird</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;true&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Go to URL" sid="595042741934902" type="Browser">
+                                    <param id="0" name="URL">&quot;../u2/flappybird/&quot;</param>
+                                    <param id="1" name="Target">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="181174635597579">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="359053908811527" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="452631592768670" type="txtAccesoDenegado">
+                                    <param id="0" name="Animation">&quot;actividadDenegada&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="474199843673016" type="txtAccesoDenegado">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="935919881163822" type="System">
+                                    <param id="0" name="Seconds">1.5</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="772094556801860" type="txtAccesoDenegado">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Exito fracaso (No se han proporcionado insumos)</comment>
+                <event-block sid="870442893675983">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="787004720678771" type="Touch">
+                            <param id="0" name="Object">btn5</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="329392307278426">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="252807944302572" type="System">
+                                    <param id="0" name="Variable">activoR02exitofracaso</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;true&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="285664675244360" type="txtAccesoDenegado">
+                                    <param id="0" name="Animation">&quot;actividadDenegada&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="329247847269090" type="txtAccesoDenegado">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="439290885859540" type="System">
+                                    <param id="0" name="Seconds">1.5</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="838985095828722" type="txtAccesoDenegado">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="167486831553186">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="846536816531462" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="806662503328576" type="txtAccesoDenegado">
+                                    <param id="0" name="Animation">&quot;actividadDenegada&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="338911331491837" type="txtAccesoDenegado">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="874154100114642" type="System">
+                                    <param id="0" name="Seconds">1.5</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="236407003771638" type="txtAccesoDenegado">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Acompaña a jesus</comment>
+                <event-block sid="344213353118004">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="643185180081579" type="Touch">
+                            <param id="0" name="Object">btn6</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="922889279590299">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="636126533147023" type="System">
+                                    <param id="0" name="Variable">activoJ02acompanajesus</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;true&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Go to URL" sid="378493182075290" type="Browser">
+                                    <param id="0" name="URL">&quot;../u2/acompanajesus/&quot;</param>
+                                    <param id="1" name="Target">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="985655429599599">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="263479934943911" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="652744604656109" type="txtAccesoDenegado">
+                                    <param id="0" name="Animation">&quot;actividadDenegada&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="783766292604905" type="txtAccesoDenegado">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="930785880804494" type="System">
+                                    <param id="0" name="Seconds">1.5</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="643515356191170" type="txtAccesoDenegado">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="899223742576917" title="Activar Juegos de las unidades">
             <sub-events>
                 <event-block sid="699261734635974">
@@ -562,7 +858,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="214115080810687" title="cargar pantalla eSubMenu">
+        <event-group description="" sid="214115080810687" title="Iniciar pantalla eSubMenu">
             <sub-events>
                 <event-block sid="231761418210422">
                     <conditions>
@@ -576,6 +872,10 @@
                         <action id="0" name="Call function" sid="922090525464096" type="Function">
                             <param id="0" name="Name">&quot;activarUnidad1&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="968470095659358" type="System">
+                            <param id="0" name="Group name">&quot;Evento Clic para abrir Juegos Unidad 1&quot;</param>
+                            <param id="1" name="State">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -591,6 +891,10 @@
                         <action id="0" name="Call function" sid="999328405767167" type="Function">
                             <param id="0" name="Name">&quot;activarUnidad2&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="665415027673316" type="System">
+                            <param id="0" name="Group name">&quot;Evento Clic para abrir Juegos Unidad 2&quot;</param>
+                            <param id="1" name="State">1</param>
                         </action>
                     </actions>
                 </event-block>

@@ -19233,8 +19233,8 @@ cr.getObjectRefTable = function () { return [
 	cr.plugins_.Browser,
 	cr.plugins_.Function,
 	cr.plugins_.Touch,
-	cr.plugins_.WebStorage,
 	cr.plugins_.Sprite,
+	cr.plugins_.WebStorage,
 	cr.system_object.prototype.cnds.IsGroupActive,
 	cr.plugins_.Touch.prototype.cnds.OnTouchObject,
 	cr.system_object.prototype.acts.SetVar,
@@ -19256,5 +19256,6 @@ cr.getObjectRefTable = function () { return [
 	cr.system_object.prototype.cnds.OnLayoutStart,
 	cr.plugins_.Function.prototype.cnds.OnFunction,
 	cr.plugins_.Sprite.prototype.acts.SetEffect,
-	cr.plugins_.Function.prototype.acts.CallFunction
+	cr.plugins_.Function.prototype.acts.CallFunction,
+	cr.system_object.prototype.acts.SetGroupActive
 ];};
