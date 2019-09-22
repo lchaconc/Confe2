@@ -10,9 +10,12 @@
     <unique-id>3subbtu8xvytq</unique-id>
     <saved-with-version>26900</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
@@ -151,6 +154,42 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="btnOpciones" sid="982393896494141">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="valor" sid="120583454275142" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Base" pingpong="0" repeatcount="1" repeatto="0" sid="997208959146765" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Top10\Fondos\seleccion_sin_marcar.png">
+                            <collision-poly>
+                                <point x="0.0325671" y="0.146552" />
+                                <point x="0.5" y="0.87931" />
+                                <point x="0.804598" y="0.87931" />
+                                <point x="0.222222" y="0.5" />
+                                <point x="0.990421" y="0.956897" />
+                                <point x="0.5" y="0.956897" />
+                                <point x="0.0325671" y="0.853448" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Marcada" pingpong="0" repeatcount="1" repeatto="0" sid="848727921534354" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Top10\Fondos\seleccion_marcada.png">
+                            <collision-poly>
+                                <point x="0.0335145" y="0.150407" />
+                                <point x="0.5" y="0.878049" />
+                                <point x="0.804348" y="0.878049" />
+                                <point x="0.22192" y="0.5" />
+                                <point x="0.990942" y="0.95935" />
+                                <point x="0.5" y="0.95935" />
+                                <point x="0.0326087" y="0.853659" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Backgrounds">
             <object-type name="bgMain" sid="808849638163090">
@@ -251,6 +290,92 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="txtPreguntas" sid="502994574462970">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="P1" pingpong="0" repeatcount="1" repeatto="0" sid="751181501962068" speed="5">
+                        <frame duration="1" hotspotX="1" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Top10\Textos\p1.png">
+                            <collision-poly>
+                                <point x="0.239175" y="0.679245" />
+                                <point x="0.494845" y="0.132075" />
+                                <point x="0.931959" y="0.125786" />
+                                <point x="0.298969" y="0.528302" />
+                                <point x="0.950515" y="0.987421" />
+                                <point x="0.494845" y="0.433962" />
+                                <point x="0.0556701" y="0.937107" />
+                                <point x="0.241237" y="0.528302" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="P2" pingpong="0" repeatcount="1" repeatto="0" sid="946395339219138" speed="5">
+                        <frame duration="1" hotspotX="1" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Top10\Textos\p2.png">
+                            <collision-poly>
+                                <point x="0.494604" y="0.314286" />
+                                <point x="0.940647" y="0.0857143" />
+                                <point x="0.971223" y="0.518367" />
+                                <point x="0.956835" y="0.991837" />
+                                <point x="0.494604" y="0.97551" />
+                                <point x="0.18705" y="0.640816" />
+                                <point x="0.00359712" y="0.518367" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="P3" pingpong="0" repeatcount="1" repeatto="0" sid="500882316515690" speed="5">
+                        <frame duration="1" hotspotX="1" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Top10\Textos\p3.png">
+                            <collision-poly>
+                                <point x="0.0678808" y="0.194969" />
+                                <point x="0.498344" y="0.18239" />
+                                <point x="0.94702" y="0.125786" />
+                                <point x="0.718543" y="0.528302" />
+                                <point x="0.960265" y="0.987421" />
+                                <point x="0.498344" y="0.981132" />
+                                <point x="0.182119" y="0.433962" />
+                                <point x="0.0149007" y="0.528302" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="P4" pingpong="0" repeatcount="1" repeatto="0" sid="886183966472019" speed="5">
+                        <frame duration="1" hotspotX="1" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Top10\Textos\p4.png">
+                            <collision-poly>
+                                <point x="0.0797101" y="0.213836" />
+                                <point x="0.498188" y="0.132075" />
+                                <point x="0.942029" y="0.125786" />
+                                <point x="0.387681" y="0.528302" />
+                                <point x="0.956522" y="0.987421" />
+                                <point x="0.498188" y="0.72956" />
+                                <point x="0.0398551" y="0.987421" />
+                                <point x="0.0163043" y="0.528302" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="P5" pingpong="0" repeatcount="1" repeatto="0" sid="638481316092629" speed="5">
+                        <frame duration="1" hotspotX="1" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Top10\Textos\p5.png">
+                            <collision-poly>
+                                <point x="0.155136" y="0.125" />
+                                <point x="0.496855" y="0.0396825" />
+                                <point x="0.930818" y="0.0376984" />
+                                <point x="0.234801" y="0.496032" />
+                                <point x="0.865828" y="0.892857" />
+                                <point x="0.496855" y="0.902778" />
+                                <point x="0.24109" y="0.785714" />
+                                <point x="0.213836" y="0.496032" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="txtOpcion1" sid="227725876636063">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="txtOpcion2" sid="691893154102909">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="txtOpcion3" sid="633655195339397">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="txtOpcion4" sid="633834312874376">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
         <object-folder name="System">
             <object-type name="Touch" sid="948977961617129">
@@ -261,6 +386,12 @@
             </object-type>
             <object-type name="Browser" sid="731618330686550">
                 <plugin id="Browser" />
+            </object-type>
+            <object-type global="1" name="Array" sid="794140610381627">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type name="AJAX" sid="728514928296183">
+                <plugin id="AJAX" />
             </object-type>
         </object-folder>
         <object-folder name="Sensors">
@@ -388,12 +519,14 @@
         <layout>Splash.xml</layout>
         <layout>Main.xml</layout>
         <layout>Fin.xml</layout>
+        <layout>Preguntas.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>eMain.xml</event-sheet>
         <event-sheet>eSplash.xml</event-sheet>
         <event-sheet>eIntro.xml</event-sheet>
         <event-sheet>eFin.xml</event-sheet>
+        <event-sheet>ePreguntas.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Function" uid="0" />
@@ -403,6 +536,7 @@
             </properties>
         </global-instance>
         <global-instance type="Browser" uid="30" />
+        <global-instance type="AJAX" uid="42" />
     </global-instances>
     <sounds-folder />
     <music-folder />
@@ -415,5 +549,6 @@
             <file name="icon-256.png" />
             <file name="loading-logo.png" />
         </file-folder>
+        <file name="opciones.txt" />
     </files-folder>
 </c2project>

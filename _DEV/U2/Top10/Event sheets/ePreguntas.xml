@@ -1,0 +1,558 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ePreguntas</name>
+    <events>
+        <variable constant="0" name="inicioOpcionActual" sid="282248322446098" static="0" type="number">0</variable>
+        <variable constant="0" name="pregunta" sid="914262562474183" static="0" type="number">1</variable>
+        <event-group description="" sid="209830819890668" title="Iniciar Preguntas">
+            <sub-events>
+                <event-block sid="350057433944733">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="591258968404506" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="820715912528358" type="Function">
+                            <param id="0" name="Name">&quot;cargarOpciones&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="181747828144389" type="Function">
+                            <param id="0" name="Name">&quot;pregunta&quot; &amp; pregunta</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="385145669597184" title="Seleccionar opcion">
+            <sub-events>
+                <variable constant="0" name="opcion" sid="618618986375663" static="0" type="number">0</variable>
+                <event-block sid="345295223928258">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="385668092156650" type="Touch">
+                            <param id="0" name="Object">btnOpciones</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="893645085850903" type="System">
+                            <param id="0" name="Variable">opcion</param>
+                            <param id="1" name="Value">btnOpciones.UID</param>
+                        </action>
+                        <action id="14" name="Log" sid="515629583475582" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;opcion &quot;  &amp; opcion</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="221481610491514">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="640789597321534" type="btnOpciones">
+                                    <param id="0" name="Unique ID">opcion</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="947904729566003" type="btnOpciones">
+                                    <param id="0" name="Animation">&quot;Marcada&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="14" name="Log" sid="101983652593443" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;valor &quot;  &amp; btnOpciones.valor</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="675541285125870" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="475976950838737" type="System">
+                                    <param id="0" name="Variable">pregunta</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="743571502233523">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="573559685572651" type="System">
+                                            <param id="0" name="Variable">pregunta</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="590582598110850" type="Function">
+                                            <param id="0" name="Name">&quot;pregunta&quot; &amp; pregunta</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="441714690837236" type="Function">
+                                            <param id="0" name="Name">&quot;cargarTextos&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="226176468789963">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="685116155973257" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="14" name="Log" sid="217768338678678" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;FIN&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="823256239731339" title="Cargar valores de opciones (pesos)">
+            <sub-events>
+                <event-block sid="334224965550850">
+                    <conditions>
+                        <condition id="0" name="On function" sid="612922442998223" type="Function">
+                            <param id="0" name="Name">&quot;pregunta1&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="511815071896152" type="txtPreguntas">
+                            <param id="0" name="Animation">&quot;P&quot;&amp; pregunta</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="810022257557216" type="btnOpciones">
+                            <param id="0" name="Animation">&quot;Base&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="236379864616263">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="112905716400375" type="btnOpciones">
+                                    <param id="0" name="Unique ID">32</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="340031739305981" type="btnOpciones">
+                                    <param id="0" name="Instance variable">valor</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="687031302936375">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="681749101180263" type="btnOpciones">
+                                    <param id="0" name="Unique ID">33</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="285203123342090" type="btnOpciones">
+                                    <param id="0" name="Instance variable">valor</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="168410894147681">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="594946632438919" type="btnOpciones">
+                                    <param id="0" name="Unique ID">34</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="948477322185640" type="btnOpciones">
+                                    <param id="0" name="Instance variable">valor</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="732908603385537">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="129841051464126" type="btnOpciones">
+                                    <param id="0" name="Unique ID">35</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="710918805240834" type="btnOpciones">
+                                    <param id="0" name="Instance variable">valor</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="356366954206775">
+                    <conditions>
+                        <condition id="0" name="On function" sid="526078629880853" type="Function">
+                            <param id="0" name="Name">&quot;pregunta2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="417104040909141" type="txtPreguntas">
+                            <param id="0" name="Animation">&quot;P&quot;&amp; pregunta</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="911817193332434" type="btnOpciones">
+                            <param id="0" name="Animation">&quot;Base&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="933321519158930">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="292658942213319" type="btnOpciones">
+                                    <param id="0" name="Unique ID">32</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="541915659491622" type="btnOpciones">
+                                    <param id="0" name="Instance variable">valor</param>
+                                    <param id="1" name="Value">4</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="829692725579721">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="775666500722328" type="btnOpciones">
+                                    <param id="0" name="Unique ID">33</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="831027203537866" type="btnOpciones">
+                                    <param id="0" name="Instance variable">valor</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="756468551064423">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="175337894050366" type="btnOpciones">
+                                    <param id="0" name="Unique ID">34</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="510943644384007" type="btnOpciones">
+                                    <param id="0" name="Instance variable">valor</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="747158419642903">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="551929063130065" type="btnOpciones">
+                                    <param id="0" name="Unique ID">35</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="681703527681524" type="btnOpciones">
+                                    <param id="0" name="Instance variable">valor</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="552358807322762">
+                    <conditions>
+                        <condition id="0" name="On function" sid="463050158624819" type="Function">
+                            <param id="0" name="Name">&quot;pregunta3&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="406362271706321" type="txtPreguntas">
+                            <param id="0" name="Animation">&quot;P&quot;&amp; pregunta</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="384502906415309" type="btnOpciones">
+                            <param id="0" name="Animation">&quot;Base&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="125301062609659">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="673299551542086" type="btnOpciones">
+                                    <param id="0" name="Unique ID">32</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="120028847213443" type="btnOpciones">
+                                    <param id="0" name="Instance variable">valor</param>
+                                    <param id="1" name="Value">4</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="691516174720992">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="752444846130862" type="btnOpciones">
+                                    <param id="0" name="Unique ID">33</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="586943141669664" type="btnOpciones">
+                                    <param id="0" name="Instance variable">valor</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="306573672978346">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="932549017846169" type="btnOpciones">
+                                    <param id="0" name="Unique ID">34</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="447447302540269" type="btnOpciones">
+                                    <param id="0" name="Instance variable">valor</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="558098954506824">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="792535477865620" type="btnOpciones">
+                                    <param id="0" name="Unique ID">35</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="429340716898413" type="btnOpciones">
+                                    <param id="0" name="Instance variable">valor</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="445825971063230">
+                    <conditions>
+                        <condition id="0" name="On function" sid="930263702049522" type="Function">
+                            <param id="0" name="Name">&quot;pregunta4&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="670357942885127" type="txtPreguntas">
+                            <param id="0" name="Animation">&quot;P&quot;&amp; pregunta</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="947658063459469" type="btnOpciones">
+                            <param id="0" name="Animation">&quot;Base&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="228862714630892">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="378828520391217" type="btnOpciones">
+                                    <param id="0" name="Unique ID">32</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="806713007520717" type="btnOpciones">
+                                    <param id="0" name="Instance variable">valor</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="588734817559771">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="682240501192178" type="btnOpciones">
+                                    <param id="0" name="Unique ID">33</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="721122461461499" type="btnOpciones">
+                                    <param id="0" name="Instance variable">valor</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="139849495800507">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="727884921108334" type="btnOpciones">
+                                    <param id="0" name="Unique ID">34</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="998428766200206" type="btnOpciones">
+                                    <param id="0" name="Instance variable">valor</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="104131169799074">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="674471759906784" type="btnOpciones">
+                                    <param id="0" name="Unique ID">35</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="708762409879104" type="btnOpciones">
+                                    <param id="0" name="Instance variable">valor</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="631321003456805">
+                    <conditions>
+                        <condition id="0" name="On function" sid="724096000847268" type="Function">
+                            <param id="0" name="Name">&quot;pregunta5&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="737498524088371" type="txtPreguntas">
+                            <param id="0" name="Animation">&quot;P&quot;&amp; pregunta</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="182174294037051" type="btnOpciones">
+                            <param id="0" name="Animation">&quot;Base&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="211989409333516">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="637772051374341" type="btnOpciones">
+                                    <param id="0" name="Unique ID">32</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="632204362853883" type="btnOpciones">
+                                    <param id="0" name="Instance variable">valor</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="824114362286406">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="783676634595292" type="btnOpciones">
+                                    <param id="0" name="Unique ID">33</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="843624280821718" type="btnOpciones">
+                                    <param id="0" name="Instance variable">valor</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="268102190546032">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="372680953847468" type="btnOpciones">
+                                    <param id="0" name="Unique ID">34</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="804211571448246" type="btnOpciones">
+                                    <param id="0" name="Instance variable">valor</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="760571254957025">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="474374789530345" type="btnOpciones">
+                                    <param id="0" name="Unique ID">35</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="922871058176459" type="btnOpciones">
+                                    <param id="0" name="Instance variable">valor</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="862535741316860" title="Cargar textos de opciones (Ajax)">
+            <sub-events>
+                <event-block sid="757605857874615">
+                    <conditions>
+                        <condition id="0" name="On function" sid="699055070842161" type="Function">
+                            <param id="0" name="Name">&quot;cargarOpciones&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Request project file" sid="401405276858024" type="AJAX">
+                            <param id="0" name="Tag">&quot;ajaxOpciones&quot;</param>
+                            <param id="1" name="File">opciones.txt</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <variable constant="0" name="x" sid="761947080159529" static="0" type="number">0</variable>
+                <variable constant="1" name="limiteOpciones" sid="369495913108674" static="0" type="number">20</variable>
+                <event-block sid="475154423807251">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="965407545181838" type="AJAX">
+                            <param id="0" name="Tag">&quot;ajaxOpciones&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Log" sid="636019409384919" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">AJAX.LastData</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="251187743103774">
+                            <conditions>
+                                <condition id="-10" name="For" sid="462454887871028" type="System">
+                                    <param id="0" name="Name">&quot;por cada opcion&quot;</param>
+                                    <param id="1" name="Start index">1</param>
+                                    <param id="2" name="End index">LIMITEOPCIONES</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Set at X" sid="242396405010422" type="Array">
+                                    <param id="0" name="X">x</param>
+                                    <param id="1" name="Value">tokenat(AJAX.LastData, x, &quot;;&quot;   )</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="849948116128868" type="System">
+                                    <param id="0" name="Variable">x</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="660614858676875">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="955123045683667" type="Function">
+                                    <param id="0" name="Name">&quot;cargarTextos&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="273906443264983">
+                    <conditions>
+                        <condition id="0" name="On function" sid="645762669046511" type="Function">
+                            <param id="0" name="Name">&quot;cargarTextos&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Log" sid="809746367026917" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;****Inicio opcion actual en Carga de textos:&quot; &amp; inicioOpcionActual</param>
+                        </action>
+                        <action id="0" name="Set text" sid="635430623711540" type="txtOpcion1">
+                            <param id="0" name="Text">Array.At(  inicioOpcionActual   )</param>
+                        </action>
+                        <action id="0" name="Set text" sid="423278119132032" type="txtOpcion2">
+                            <param id="0" name="Text">Array.At( inicioOpcionActual + 1 ) </param>
+                        </action>
+                        <action id="0" name="Set text" sid="699605754883182" type="txtOpcion3">
+                            <param id="0" name="Text">Array.At( inicioOpcionActual + 2) </param>
+                        </action>
+                        <action id="0" name="Set text" sid="431654979127859" type="txtOpcion4">
+                            <param id="0" name="Text">Array.At( inicioOpcionActual + 3) </param>
+                        </action>
+                        <action id="-9" name="Set value" sid="499829687557974" type="System">
+                            <param id="0" name="Variable">inicioOpcionActual</param>
+                            <param id="1" name="Value">inicioOpcionActual + 4</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
