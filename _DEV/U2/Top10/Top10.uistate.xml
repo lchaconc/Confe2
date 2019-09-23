@@ -12,12 +12,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <open-tabs>
         <layout order="0">Main</layout>
         <layout order="2">Fin</layout>
-        <layout order="5">Splash</layout>
-        <layout order="6">Preguntas</layout>
+        <layout active="1" order="4">Splash</layout>
+        <layout order="5">Preguntas</layout>
         <event-sheet order="1">eMain</event-sheet>
         <event-sheet order="3">eFin</event-sheet>
-        <event-sheet order="4">eIntro</event-sheet>
-        <event-sheet active="1" order="7">ePreguntas</event-sheet>
+        <event-sheet order="6">ePreguntas</event-sheet>
+        <event-sheet order="7">eSplash</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -31,8 +31,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
-        <folder expanded="0" path="object-folder/Buttons/" />
-        <folder expanded="0" path="object-folder/Backgrounds/" />
+        <folder expanded="1" path="object-folder/Buttons/" />
+        <folder expanded="1" path="object-folder/Backgrounds/" />
         <folder expanded="1" path="object-folder/Sprites/" />
         <folder expanded="1" path="object-folder/Texts/" />
         <folder expanded="1" path="object-folder/System/" />
@@ -57,10 +57,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/icoBaile/" />
         <folder expanded="1" path="animation-folder/btnSiguiente/" />
         <folder expanded="1" path="animation-folder/btnOpciones/" />
+        <folder expanded="1" path="animation-folder/btnSiguiente2/" />
         <folder expanded="1" path="animation-folder/bgMain/" />
         <folder expanded="1" path="animation-folder/bgSplash/" />
         <folder expanded="1" path="animation-folder/bgIntro/" />
-        <folder expanded="1" path="animation-folder/txtREsultado/" />
+        <folder expanded="1" path="animation-folder/bgLiso/" />
+        <folder expanded="1" path="animation-folder/bgBlanco/" />
         <folder expanded="1" path="animation-folder/txtDebesCompletar/" />
         <folder expanded="1" path="animation-folder/txtPreguntas/" />
         <folder expanded="1" path="animation-folder/sns01/" />

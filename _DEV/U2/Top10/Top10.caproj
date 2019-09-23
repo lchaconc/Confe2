@@ -2,7 +2,7 @@
 <c2project>
     <name>Top10</name>
     <description></description>
-    <version>1.0.0.0</version>
+    <version>1.0.1.2</version>
     <author></author>
     <author-email></author-email>
     <author-website>http://</author-website>
@@ -190,6 +190,14 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="btnSiguiente2" sid="530882998321422">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="876255927242243" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Backgrounds">
             <object-type name="bgMain" sid="808849638163090">
@@ -223,65 +231,34 @@
                     </animation>
                 </animation-folder>
             </object-type>
-        </object-folder>
-        <object-folder name="Sprites" />
-        <object-folder name="Texts">
-            <object-type name="txtREsultado" sid="419597836698386">
+            <object-type name="bgLiso" sid="305728426804207">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="uno" pingpong="0" repeatcount="1" repeatto="0" sid="284418428828124" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\alto.png">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="661667796256106" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Top10\Fondos\pantallaValoracionU2.png">
                             <collision-poly>
-                                <point x="0.0138249" y="0.117647" />
-                                <point x="0.5" y="0.343137" />
-                                <point x="0.960829" y="0.333333" />
-                                <point x="0.983871" y="0.5" />
-                                <point x="0.965438" y="0.705882" />
-                                <point x="0.0357143" y="0.696078" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                    <animation framecount="1" loop="0" name="dos" pingpong="0" repeatcount="1" repeatto="0" sid="626376661438734" speed="5">
-                        <frame duration="1" hotspotX="0.500589" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\segundo.png">
-                            <collision-poly>
-                                <point x="0.01649" y="0.134615" />
-                                <point x="0.978799" y="0.173077" />
-                                <point x="0.975265" y="0.5" />
-                                <point x="0.958775" y="0.663462" />
-                                <point x="0.057715" y="0.528846" />
-                                <point x="0.0235571" y="0.5" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                    <animation framecount="1" loop="0" name="tres" pingpong="0" repeatcount="1" repeatto="0" sid="452814308578159" speed="5">
-                        <frame duration="1" hotspotX="0.500448" hotspotY="0.504348" original-source="C:\Users\logan24\Desktop\tercero.png">
-                            <collision-poly>
-                                <point x="0.0170098" y="0.165217" />
-                                <point x="0.499552" y="0.278261" />
-                                <point x="0.970457" y="0.286957" />
-                                <point x="0.979409" y="0.495652" />
-                                <point x="0.958818" y="0.6" />
-                                <point x="0.499552" y="0.869565" />
-                                <point x="0.0393912" y="0.617391" />
-                                <point x="0.0134288" y="0.495652" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                    <animation framecount="1" loop="0" name="cuatro" pingpong="0" repeatcount="1" repeatto="0" sid="539467596561490" speed="5">
-                        <frame duration="1" hotspotX="0.500593" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\cuarto.png">
-                            <collision-poly>
-                                <point x="0.0142349" y="0.117647" />
-                                <point x="0.499407" y="0.352941" />
-                                <point x="0.958482" y="0.343137" />
-                                <point x="0.975089" y="0.5" />
-                                <point x="0.964413" y="0.705882" />
-                                <point x="0.499407" y="0.72549" />
-                                <point x="0.0367734" y="0.696078" />
+                                <point x="0.000779423" y="0.248963" />
+                                <point x="0.505066" y="0.00138313" />
+                                <point x="0.999221" y="0.268326" />
+                                <point x="0.999221" y="0.73029" />
+                                <point x="0.505066" y="0.997234" />
+                                <point x="0.000779423" y="0.749654" />
                             </collision-poly>
                         </frame>
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="bgBlanco" sid="149847662601514">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="492676136753977" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Sprites" />
+        <object-folder name="Texts">
             <object-type name="txtDebesCompletar" sid="966835492369857">
                 <plugin id="Sprite" />
                 <animation-folder>
@@ -374,6 +351,9 @@
                 <plugin id="Text" />
             </object-type>
             <object-type name="txtOpcion4" sid="633834312874376">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="txtResultadoDePruebas" sid="834302670607976">
                 <plugin id="Text" />
             </object-type>
         </object-folder>
