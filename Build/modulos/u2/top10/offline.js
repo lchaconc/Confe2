@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1569042650,
+	"version": 1569217163,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -18,17 +18,23 @@
 		"images/icogym-sheet0.png",
 		"images/icobaile-sheet0.png",
 		"images/btnsiguiente-sheet0.png",
+		"images/btnopciones-sheet0.png",
+		"images/btnsiguiente2-sheet0.png",
 		"images/bgmain-sheet0.png",
 		"images/bgsplash-sheet0.png",
 		"images/bgintro-sheet0.png",
-		"images/txtresultado-sheet0.png",
+		"images/bgliso-sheet0.png",
+		"images/bgblanco-sheet0.png",
 		"images/txtdebescompletar-sheet0.png",
+		"images/txtpreguntas-sheet0.png",
+		"images/txtpreguntas-sheet1.png",
 		"images/sns01-sheet0.png",
 		"icon-16.png",
 		"icon-32.png",
 		"icon-114.png",
 		"icon-128.png",
 		"icon-256.png",
-		"loading-logo.png"
+		"loading-logo.png",
+		"opciones.txt"
 	]
 }
