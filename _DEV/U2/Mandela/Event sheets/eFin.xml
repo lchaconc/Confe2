@@ -11,6 +11,22 @@
                 <action id="0" name="Set text" sid="308441596118548" type="txtPuntos">
                     <param id="0" name="Text">&quot;Has obtenido &quot; &amp; puntaje &amp; &quot; puntos&quot;</param>
                 </action>
+                <action id="-15" name="Set visible" sid="722518164902262" type="marca">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="113689675388332">
+            <conditions>
+                <condition id="3" name="On touched object" sid="980649328933045" type="Touch">
+                    <param id="0" name="Object">marca</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Go to URL" sid="786691327356086" type="Browser">
+                    <param id="0" name="URL">&quot;../../menu&quot;</param>
+                    <param id="1" name="Target">0</param>
+                </action>
             </actions>
         </event-block>
     </events>
