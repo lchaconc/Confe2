@@ -114,6 +114,7 @@ function guardarDatosObjetos(array) {
   for (let index = 0; index < limite; index++) {
       sessionStorage.setItem( "objeto" + array[index].etiqueta,   array[index].activo);           
   }
-  console.log( "sandalias:", sessionStorage.getItem("objetoSandalias"));
+  console.log( "Sandalias:", sessionStorage.getItem("objetoSandalias"));
+  console.log( "Estrella:", sessionStorage.getItem("objetoEstrella"));
   
 }

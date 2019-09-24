@@ -15,5 +15,56 @@
                 </action>
             </actions>
         </event-block>
+        <event-group description="" sid="403561287527109" title="Inicio Pantalla AvanceAmistad">
+            <sub-events>
+                <event-block sid="624232255634664">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="307128234156249" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="876999621142055">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="304317778978935" type="System">
+                                    <param id="0" name="Variable">unidadSeleccionada</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="283032614613049" type="objEstrella">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="503139936821829" type="barraAvanceAmistad">
+                                    <param id="0" name="Animation">&quot;Nivel1&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="338871192193675">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="679665145196662" type="System">
+                                    <param id="0" name="Variable">unidadSeleccionada</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="988601003584124" type="objEstrella">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="321276948526793" type="objEstrella">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="453143822451742" type="barraAvanceAmistad">
+                                    <param id="0" name="Animation">&quot;Nivel2&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

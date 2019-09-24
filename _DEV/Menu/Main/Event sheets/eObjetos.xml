@@ -15,5 +15,60 @@
                 </action>
             </actions>
         </event-block>
+        <event-group description="" sid="763267811155410" title="Inicio Pantalla Objetos">
+            <sub-events>
+                <event-block sid="191880494384044">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="158439404838616" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="171985176810912">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="821952744764599" type="System">
+                                    <param id="0" name="Variable">unidadSeleccionada</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="204197703276072" type="objSandalias">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="668968909491470" type="txtNombreObjeto">
+                                    <param id="0" name="Text">&quot;Sandalias del peregrino&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="372049582791717" type="txtDescripcionObjeto">
+                                    <param id="0" name="Text">&quot;Recibe las sandalias del peregrino, pues hoy inicia tu caminar haqcia una vida plena en la fé&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="314012903685188">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="182556261599238" type="System">
+                                    <param id="0" name="Variable">unidadSeleccionada</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="983566044467229" type="objSandalias">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="770707180184575" type="objEstrella">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="990889143283079" type="txtNombreObjeto">
+                                    <param id="0" name="Text">&quot;Estrella&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="965025735131258" type="txtDescripcionObjeto">
+                                    <param id="0" name="Text">&quot;Simboliza el crecimiento como persona y el paso que ha dado en autoestima y aceptación personal.&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

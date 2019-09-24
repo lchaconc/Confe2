@@ -4,7 +4,8 @@
     <name>eHome</name>
     <events>
         <variable comment="unidad que selecciona el usuario en el home. Se pasa el parámetro hacia el sub menu para que despliegue los botones correspondientes" constant="0" name="unidadSeleccionada" sid="533241838028923" static="0" type="number">0</variable>
-        <variable constant="0" name="urlDesactivarObjetoSandalias" sid="937810381686555" static="0" type="text"></variable>
+        <variable comment="Sanadalias (id 2)" constant="0" name="urlDesactivarSandalias" sid="937810381686555" static="0" type="text">apiJuegos &amp; &quot;ActualizaObjetos/?idObjeto=2&amp;idPersona=&quot;</variable>
+        <variable comment="Estrella id = 3" constant="0" name="urlDesactivarEstrella" sid="507476110535778" static="0" type="text">apiJuegos &amp; &quot;ActualizaObjetos/?idObjeto=3&amp;idPersona=&quot;</variable>
         <event-group description="" sid="545420417498187" title="Evento clic  de botones  por unidades">
             <sub-events>
                 <event-block sid="334735540154439">
@@ -91,17 +92,17 @@
                                     <param id="0" name="Variable">objetoSandalias</param>
                                     <param id="1" name="Value">&quot;false&quot;</param>
                                 </action>
-                                <action disabled="1" id="14" name="Log" sid="353562864403230" type="Browser">
+                                <action id="14" name="Log" sid="353562864403230" type="Browser">
                                     <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">urlDesactivarObjetoSandalias</param>
+                                    <param id="1" name="Message">urlDesactivarSandalias</param>
                                 </action>
                                 <action id="1" name="Set session value" sid="175059952239124" type="WebStorage">
                                     <param id="0" name="Key">&quot;objetoSandalias&quot;</param>
                                     <param id="1" name="Value">objetoSandalias</param>
                                 </action>
                                 <action id="0" name="Request URL" sid="281891952705876" type="AJAX">
-                                    <param id="0" name="Tag">&quot;ObjetoSandalias&quot;</param>
-                                    <param id="1" name="URL">urlDesactivarObjetoSandalias &amp; idUsuario</param>
+                                    <param id="0" name="Tag">&quot;objetoSandalias&quot;</param>
+                                    <param id="1" name="URL">urlDesactivarSandalias &amp; idUsuario</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -148,9 +149,9 @@
                                     <param id="0" name="Key">&quot;objetoEstrella&quot;</param>
                                     <param id="1" name="Value">objetoEstrella</param>
                                 </action>
-                                <action disabled="1" id="0" name="Request URL" sid="509977291673394" type="AJAX">
+                                <action id="0" name="Request URL" sid="509977291673394" type="AJAX">
                                     <param id="0" name="Tag">&quot;objetoEstrella&quot;</param>
-                                    <param id="1" name="URL">urlDesactivarObjetoSandalias &amp; idUsuario</param>
+                                    <param id="1" name="URL">urlDesactivarEstrella &amp; idUsuario</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -280,7 +281,7 @@
                 <event-block sid="690833975857662">
                     <conditions>
                         <condition id="0" name="On completed" sid="127574648153697" type="AJAX">
-                            <param id="0" name="Tag">&quot;ObjetoSandalias&quot;</param>
+                            <param id="0" name="Tag">&quot;objetoSandalias&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -296,7 +297,7 @@
                 <event-block sid="827593344661264">
                     <conditions>
                         <condition id="1" name="On error" sid="597691141574444" type="AJAX">
-                            <param id="0" name="Tag">&quot;ObjetoSandalias&quot;</param>
+                            <param id="0" name="Tag">&quot;objetoSandalias&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -306,6 +307,38 @@
                         <action id="14" name="Log" sid="981588949611034" type="Browser">
                             <param id="0" name="Type">2</param>
                             <param id="1" name="Message">&quot;Error actualizando sandalias&quot; &amp; AJAX.LastData</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="766664701052250">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="202194328524617" type="AJAX">
+                            <param id="0" name="Tag">&quot;objetoEstrella&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="678290468269701" type="System">
+                            <param id="0" name="Layout">Objetos</param>
+                        </action>
+                        <action id="14" name="Log" sid="238905257620537" type="Browser">
+                            <param id="0" name="Type">1</param>
+                            <param id="1" name="Message">AJAX.LastData</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="456267141744470">
+                    <conditions>
+                        <condition id="1" name="On error" sid="164642454486306" type="AJAX">
+                            <param id="0" name="Tag">&quot;objetoEstrella&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="159193851829026" type="System">
+                            <param id="0" name="Layout">Objetos</param>
+                        </action>
+                        <action id="14" name="Log" sid="371794704769524" type="Browser">
+                            <param id="0" name="Type">2</param>
+                            <param id="1" name="Message">&quot;Error actualizando estrella&quot; &amp; AJAX.LastData</param>
                         </action>
                     </actions>
                 </event-block>
@@ -319,12 +352,12 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="277680785188610" type="System">
-                            <param id="0" name="Variable">urlDesactivarObjetoSandalias</param>
+                            <param id="0" name="Variable">urlDesactivarSandalias</param>
                             <param id="1" name="Value">apiJuegos &amp; &quot;ActualizaObjetos/?idObjeto=1&amp;idPersona=&quot;</param>
                         </action>
                         <action id="14" name="Log" sid="738737839184855" type="Browser">
                             <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;---- Url desactivar sandalias objeto: &quot; &amp; urlDesactivarObjetoSandalias</param>
+                            <param id="1" name="Message">&quot;---- Url desactivar sandalias objeto: &quot; &amp; urlDesactivarSandalias</param>
                         </action>
                     </actions>
                 </event-block>

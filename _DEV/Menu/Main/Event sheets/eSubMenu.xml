@@ -543,66 +543,11 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <comment>Exito fracaso (No se han proporcionado insumos)</comment>
-                <event-block sid="870442893675983">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="787004720678771" type="Touch">
-                            <param id="0" name="Object">btn5</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="329392307278426">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="252807944302572" type="System">
-                                    <param id="0" name="Variable">activoR02exitofracaso</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;true&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="285664675244360" type="txtAccesoDenegado">
-                                    <param id="0" name="Animation">&quot;actividadDenegada&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="329247847269090" type="txtAccesoDenegado">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="439290885859540" type="System">
-                                    <param id="0" name="Seconds">1.5</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="838985095828722" type="txtAccesoDenegado">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="167486831553186">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="846536816531462" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="806662503328576" type="txtAccesoDenegado">
-                                    <param id="0" name="Animation">&quot;actividadDenegada&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="338911331491837" type="txtAccesoDenegado">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="874154100114642" type="System">
-                                    <param id="0" name="Seconds">1.5</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="236407003771638" type="txtAccesoDenegado">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
                 <comment>Acompaña a jesus</comment>
                 <event-block sid="344213353118004">
                     <conditions>
                         <condition id="3" name="On touched object" sid="643185180081579" type="Touch">
-                            <param id="0" name="Object">btn6</param>
+                            <param id="0" name="Object">btn5</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -761,12 +706,11 @@
                             <param id="1" name="From">1</param>
                         </action>
                         <action id="4" name="Set animation" sid="578921410085347" type="btn5">
-                            <param id="0" name="Animation">&quot;ExitoFracaso&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="290614586068573" type="btn6">
                             <param id="0" name="Animation">&quot;AcompanaJesus&quot;</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="437369654882391" type="btn6">
+                            <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -826,20 +770,6 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="831468396480802">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="762963267436291" type="System">
-                                    <param id="0" name="Variable">activoR02exitofracaso</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;true&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="1" name="Set blend mode" sid="229246865810020" type="btn5">
-                                    <param id="0" name="Blend mode">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
                         <event-block sid="999867769778322">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="319873921512076" type="System">
@@ -849,7 +779,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="1" name="Set blend mode" sid="585404850110456" type="btn6">
+                                <action id="1" name="Set blend mode" sid="229246865810020" type="btn5">
                                     <param id="0" name="Blend mode">0</param>
                                 </action>
                             </actions>
@@ -869,6 +799,9 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Set text" sid="853881751637233" type="txtVisorUnidad">
+                            <param id="0" name="Text">&quot;U1&quot;</param>
+                        </action>
                         <action id="0" name="Call function" sid="922090525464096" type="Function">
                             <param id="0" name="Name">&quot;activarUnidad1&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
@@ -888,6 +821,9 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Set text" sid="808233910158582" type="txtVisorUnidad">
+                            <param id="0" name="Text">&quot;U2&quot;</param>
+                        </action>
                         <action id="0" name="Call function" sid="999328405767167" type="Function">
                             <param id="0" name="Name">&quot;activarUnidad2&quot;</param>
                             <param id="1" name="Parameter {n}"></param>

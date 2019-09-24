@@ -14,6 +14,7 @@
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
     </used-plugins>
@@ -192,27 +193,27 @@
             <object-type name="btn5" sid="213063590730409">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="ExitoFracaso" pingpong="0" repeatcount="1" repeatto="0" sid="432096956615562" speed="5">
-                        <frame duration="1" hotspotX="0.501002" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Menu\Botones menu\exito_fracaso.png" />
+                    <animation framecount="1" loop="0" name="AcompanaJesus" pingpong="0" repeatcount="1" repeatto="0" sid="432096956615562" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503185" original-source="C:\wamp\www\Confe2\_DEV\Menu\Main\Animations\btn6\AcompanaJesus\000.png">
+                            <collision-poly>
+                                <point x="0.033557" y="0.0636943" />
+                                <point x="0.5" y="0.0127389" />
+                                <point x="0.973154" y="0.0509554" />
+                                <point x="0.993289" y="0.496815" />
+                                <point x="0.973154" y="0.949045" />
+                                <point x="0.5" y="0.987261" />
+                                <point x="0.0268456" y="0.949045" />
+                                <point x="0.00671141" y="0.496815" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
             <object-type name="btn6" sid="345254717106356">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="AcompanaJesus" pingpong="0" repeatcount="1" repeatto="0" sid="951185098146834" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.503185" original-source="C:\Users\logan24\Desktop\BTN\ruta de.png">
-                            <collision-poly>
-                                <point x="0.022779" y="0.0636943" />
-                                <point x="0.498861" y="0.0127389" />
-                                <point x="0.979499" y="0.0573248" />
-                                <point x="0.993166" y="0.496815" />
-                                <point x="0.979499" y="0.942675" />
-                                <point x="0.498861" y="0.987261" />
-                                <point x="0.022779" y="0.936306" />
-                                <point x="0.00683371" y="0.496815" />
-                            </collision-poly>
-                        </frame>
+                    <animation framecount="1" loop="0" name="Inicio" pingpong="0" repeatcount="1" repeatto="0" sid="991579915881452" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -290,49 +291,59 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder name="Sprites">
-            <object-type name="sandalias" sid="378089074337998">
+        <object-folder name="Objetos">
+            <object-type name="visorObjetos" sid="378089074337998">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="802085614407772" speed="5">
+                    <animation framecount="1" loop="0" name="Sandalias" pingpong="0" repeatcount="1" repeatto="0" sid="802085614407772" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.50173" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\inicio juegos\Asset 49inicio.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Estrella" pingpong="0" repeatcount="1" repeatto="0" sid="959590927106383" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501608" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Menu\Oobjetos (Simbolos)\estrella.png" />
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="fondoRedondo" sid="313534486120095">
+            <object-type name="objSandalias" sid="313534486120095">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="854675685902167" speed="5">
-                        <frame duration="1" hotspotX="0.501639" hotspotY="0.501558" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\inicio juegos\Asset 51inicio.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503106" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Menu\Oobjetos (Simbolos)\sandaliasmenuBTN.png" />
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="barraAvance" sid="430209969570552">
+            <object-type name="barraAvanceAmistad" sid="430209969570552">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="avance1" pingpong="0" repeatcount="1" repeatto="0" sid="117096229486543" speed="5">
-                        <frame duration="1" hotspotX="0.500971" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\inicio juegos\Asset 57@2x.png" />
+                    <animation framecount="1" loop="0" name="Nivel1" pingpong="0" repeatcount="1" repeatto="0" sid="117096229486543" speed="5">
+                        <frame duration="1" hotspotX="0.501938" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\inicio juegos\Asset 57@2x.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Nivel2" pingpong="0" repeatcount="1" repeatto="0" sid="246885029214634" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Menu\Entrega objetos y progreso\Asset 56@2x.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Nivel3" pingpong="0" repeatcount="1" repeatto="0" sid="130051295110923" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Menu\Entrega objetos y progreso\Asset 55@2x.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Nivel4" pingpong="0" repeatcount="1" repeatto="0" sid="677228173889451" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Menu\Entrega objetos y progreso\Asset 54@2x.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Nivel5" pingpong="0" repeatcount="1" repeatto="0" sid="347849362710089" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Menu\Entrega objetos y progreso\Asset 53@2x.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Nivel6" pingpong="0" repeatcount="1" repeatto="0" sid="927046089400352" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Menu\Entrega objetos y progreso\Asset 52@2x.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="objEstrella" sid="900338889247887">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="703206271870304" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503106" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Menu\Oobjetos (Simbolos)\estrellamenuBTN.png" />
                     </animation>
                 </animation-folder>
             </object-type>
         </object-folder>
         <object-folder name="Texts">
-            <object-type name="txtSandalias" sid="257918641298354">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="643519359645197" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\inicio juegos\Asset 60inicio.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="txtTituloSandalias" sid="982423779224050">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="203671218815531" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.506849" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\inicio juegos\Asset 59inicio.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
             <object-type name="txtAmistad1" sid="771119745911215">
                 <plugin id="Sprite" />
                 <animation-folder>
@@ -375,8 +386,16 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="txtNombreObjeto" sid="696568040957154">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="txtDescripcionObjeto" sid="215662939821159">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="txtVisorUnidad" sid="742831556981493">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
-        <object-folder name="Controls" />
         <object-folder name="System">
             <object-type name="Touch" sid="948977961617129">
                 <plugin id="Touch" />
@@ -401,16 +420,6 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="451992501402395" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\menu\luz_amariulla.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-        </object-folder>
-        <object-folder name="Unidades">
-            <object-type name="u1" sid="479349908335032">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Unidad1" pingpong="0" repeatcount="1" repeatto="0" sid="274633313596862" speed="5">
-                        <frame duration="1" hotspotX="0.568182" hotspotY="0.666667" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\menu\unidades\u1.png" />
                     </animation>
                 </animation-folder>
             </object-type>
