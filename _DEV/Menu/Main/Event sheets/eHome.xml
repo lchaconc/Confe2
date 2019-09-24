@@ -4,8 +4,8 @@
     <name>eHome</name>
     <events>
         <variable comment="unidad que selecciona el usuario en el home. Se pasa el parámetro hacia el sub menu para que despliegue los botones correspondientes" constant="0" name="unidadSeleccionada" sid="533241838028923" static="0" type="number">0</variable>
-        <variable comment="Sanadalias (id 2)" constant="0" name="urlDesactivarSandalias" sid="937810381686555" static="0" type="text">apiJuegos &amp; &quot;ActualizaObjetos/?idObjeto=2&amp;idPersona=&quot;</variable>
-        <variable comment="Estrella id = 3" constant="0" name="urlDesactivarEstrella" sid="507476110535778" static="0" type="text">apiJuegos &amp; &quot;ActualizaObjetos/?idObjeto=3&amp;idPersona=&quot;</variable>
+        <variable comment="Sanadalias (id 2)" constant="0" name="urlDesactivarSandalias" sid="937810381686555" static="0" type="text"></variable>
+        <variable comment="Estrella id = 3" constant="0" name="urlDesactivarEstrella" sid="507476110535778" static="0" type="text"></variable>
         <event-group description="" sid="545420417498187" title="Evento clic  de botones  por unidades">
             <sub-events>
                 <event-block sid="334735540154439">
@@ -102,7 +102,7 @@
                                 </action>
                                 <action id="0" name="Request URL" sid="281891952705876" type="AJAX">
                                     <param id="0" name="Tag">&quot;objetoSandalias&quot;</param>
-                                    <param id="1" name="URL">urlDesactivarSandalias &amp; idUsuario</param>
+                                    <param id="1" name="URL">urlDesactivarSandalias</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -151,7 +151,7 @@
                                 </action>
                                 <action id="0" name="Request URL" sid="509977291673394" type="AJAX">
                                     <param id="0" name="Tag">&quot;objetoEstrella&quot;</param>
-                                    <param id="1" name="URL">urlDesactivarEstrella &amp; idUsuario</param>
+                                    <param id="1" name="URL">urlDesactivarEstrella</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -289,8 +289,8 @@
                             <param id="0" name="Layout">Objetos</param>
                         </action>
                         <action id="14" name="Log" sid="806522019024435" type="Browser">
-                            <param id="0" name="Type">1</param>
-                            <param id="1" name="Message">AJAX.LastData</param>
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">  &quot;**** Desactivado objeto sandalias &quot; &amp;  AJAX.LastData</param>
                         </action>
                     </actions>
                 </event-block>
@@ -321,8 +321,8 @@
                             <param id="0" name="Layout">Objetos</param>
                         </action>
                         <action id="14" name="Log" sid="238905257620537" type="Browser">
-                            <param id="0" name="Type">1</param>
-                            <param id="1" name="Message">AJAX.LastData</param>
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;Desactivada Estrella: &quot; &amp;   AJAX.LastData</param>
                         </action>
                     </actions>
                 </event-block>
@@ -353,11 +353,19 @@
                     <actions>
                         <action id="-9" name="Set value" sid="277680785188610" type="System">
                             <param id="0" name="Variable">urlDesactivarSandalias</param>
-                            <param id="1" name="Value">apiJuegos &amp; &quot;ActualizaObjetos/?idObjeto=1&amp;idPersona=&quot;</param>
+                            <param id="1" name="Value">apiJuegos &amp; &quot;ActualizaObjetos/?idObjeto=2&amp;idPersona=&quot; &amp; idUsuario</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="355045464676540" type="System">
+                            <param id="0" name="Variable">urlDesactivarSandalias</param>
+                            <param id="1" name="Value">apiJuegos &amp; &quot;ActualizaObjetos/?idObjeto=3&amp;idPersona=&quot; &amp; idUsuario</param>
                         </action>
                         <action id="14" name="Log" sid="738737839184855" type="Browser">
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">&quot;---- Url desactivar sandalias objeto: &quot; &amp; urlDesactivarSandalias</param>
+                        </action>
+                        <action id="14" name="Log" sid="480127595685150" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;---- Url desactivar estrella objeto: &quot; &amp; urlDesactivarEstrella</param>
                         </action>
                     </actions>
                 </event-block>
