@@ -3,11 +3,12 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eMain</name>
     <events>
+        <variable constant="0" name="limiteX" sid="964612660163986" static="0" type="number">1300</variable>
         <variable constant="0" name="record" sid="450790520940447" static="0" type="number">0</variable>
         <variable constant="0" name="puntaje" sid="469398093608250" static="0" type="number">0</variable>
         <variable constant="0" name="salto" sid="465286816214649" static="0" type="number">500</variable>
-        <variable comment="tiempo entre generación de un par de tubos y sus sucesores" constant="0" name="tiempoGeneracion" sid="136227174366459" static="0" type="number">1</variable>
-        <variable comment="velocidad del suelo 300" constant="0" name="velocidad" sid="650993365875738" static="0" type="number">300</variable>
+        <variable comment="tiempo entre generación de un par de tubos y sus sucesores" constant="0" name="tiempoGeneracion" sid="136227174366459" static="0" type="number">2</variable>
+        <variable comment="velocidad del suelo 300" constant="0" name="velocidad" sid="650993365875738" static="0" type="number">200</variable>
         <event-group description="" sid="370034331693827" title="Setup">
             <sub-events>
                 <event-block sid="762363318866948">
@@ -91,7 +92,7 @@
                     <conditions>
                         <condition id="-1" name="Compare X" sid="978416145468149" type="suelo">
                             <param id="0" name="Comparison">3</param>
-                            <param id="1" name="X co-ordinate">-400</param>
+                            <param id="1" name="X co-ordinate">-600</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -153,7 +154,7 @@
                     </conditions>
                     <actions>
                         <action id="-1" name="Set X" sid="666135015775136" type="montana">
-                            <param id="0" name="X">500</param>
+                            <param id="0" name="X">limiteX</param>
                         </action>
                     </actions>
                 </event-block>
@@ -167,25 +168,25 @@
                         <action id="-3" name="Create object" sid="201434629618248" type="System">
                             <param id="0" name="Object to create">tubo1</param>
                             <param id="1" name="Layer">&quot;main&quot;</param>
-                            <param id="2" name="X">450</param>
+                            <param id="2" name="X">limiteX</param>
                             <param id="3" name="Y">random(50,250)</param>
                         </action>
                         <action id="-3" name="Create object" sid="797029339220290" type="System">
                             <param id="0" name="Object to create">tubo2</param>
                             <param id="1" name="Layer">&quot;Fondo2&quot;</param>
-                            <param id="2" name="X">450</param>
+                            <param id="2" name="X">limiteX</param>
                             <param id="3" name="Y">tubo1.Y + 140</param>
                         </action>
                         <action id="-3" name="Create object" sid="652635143948548" type="System">
                             <param id="0" name="Object to create">nube1</param>
                             <param id="1" name="Layer">&quot;Fondo2&quot;</param>
-                            <param id="2" name="X">500</param>
+                            <param id="2" name="X">limiteX</param>
                             <param id="3" name="Y">random(100,300)</param>
                         </action>
                         <action id="-3" name="Create object" sid="418803930326210" type="System">
                             <param id="0" name="Object to create">nube2</param>
                             <param id="1" name="Layer">&quot;Fondo2&quot;</param>
-                            <param id="2" name="X">500</param>
+                            <param id="2" name="X">limiteX</param>
                             <param id="3" name="Y">random(100,300)</param>
                         </action>
                     </actions>
