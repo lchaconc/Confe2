@@ -2,5 +2,17 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eFallidos</name>
-    <events />
+    <events>
+        <event-block sid="161862476336639">
+            <conditions>
+                <condition id="0" name="On any touch start" sid="722318029602934" type="Touch" />
+            </conditions>
+            <actions>
+                <action id="7" name="Go to URL" sid="536112737081700" type="Browser">
+                    <param id="0" name="URL">&quot;../../menu/index.html&quot;</param>
+                    <param id="1" name="Target">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>

@@ -211,12 +211,12 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="824949181666299" title="Evento Boton Play">
+        <event-group description="" sid="824949181666299" title="Evento Botones">
             <sub-events>
                 <event-block sid="894281385740263">
                     <conditions>
                         <condition id="3" name="On touched object" sid="763836235248413" type="Touch">
-                            <param id="0" name="Object">txtTap</param>
+                            <param id="0" name="Object">bgTap</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -246,6 +246,19 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="818582196934105">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="304429890814215" type="Touch">
+                            <param id="0" name="Object">btnHome</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Go to URL" sid="171820714553276" type="Browser">
+                            <param id="0" name="URL">&quot;../../menu/index.html&quot;</param>
+                            <param id="1" name="Target">0</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

@@ -10,14 +10,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">Main</layout>
-        <layout order="2">Fallidos</layout>
-        <layout order="3">Splash</layout>
-        <layout order="5">Menu</layout>
-        <layout order="6">Tap</layout>
-        <layout order="7">Muerto</layout>
-        <event-sheet active="1" order="1">eMain</event-sheet>
-        <event-sheet order="4">eSplash</event-sheet>
+        <layout active="1" order="0">Fallidos</layout>
+        <layout order="2">Menu</layout>
+        <event-sheet order="1">eFallidos</event-sheet>
+        <event-sheet order="3">eMenu</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -42,6 +38,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
         <folder expanded="1" path="animation-folder/btnPlay/" />
+        <folder expanded="1" path="animation-folder/btnHome/" />
         <folder expanded="1" path="animation-folder/bgTap/" />
         <folder expanded="1" path="animation-folder/montana/" />
         <folder expanded="1" path="animation-folder/bgCielo2/" />

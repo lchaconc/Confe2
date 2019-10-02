@@ -8,7 +8,7 @@
         <variable constant="0" name="puntaje" sid="469398093608250" static="0" type="number">0</variable>
         <variable constant="0" name="salto" sid="465286816214649" static="0" type="number">500</variable>
         <variable comment="tiempo entre generación de un par de tubos y sus sucesores" constant="0" name="tiempoGeneracion" sid="136227174366459" static="0" type="number">2</variable>
-        <variable comment="velocidad del suelo 300" constant="0" name="velocidad" sid="650993365875738" static="0" type="number">200</variable>
+        <variable comment="velocidad del suelo 300" constant="0" name="velocidad" sid="650993365875738" static="0" type="number">250</variable>
         <event-group description="" sid="370034331693827" title="Setup">
             <sub-events>
                 <event-block sid="762363318866948">
@@ -175,7 +175,7 @@
                             <param id="0" name="Object to create">tubo2</param>
                             <param id="1" name="Layer">&quot;Fondo2&quot;</param>
                             <param id="2" name="X">limiteX</param>
-                            <param id="3" name="Y">tubo1.Y + 140</param>
+                            <param id="3" name="Y">tubo1.Y + 150</param>
                         </action>
                         <action id="-3" name="Create object" sid="652635143948548" type="System">
                             <param id="0" name="Object to create">nube1</param>
