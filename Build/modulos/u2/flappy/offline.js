@@ -1,15 +1,17 @@
 ﻿{
-	"version": 1569037438,
+	"version": 1569979271,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
 		"jquery-2.1.1.min.js",
 		"offlineClient.js",
 		"images/btnplay-sheet0.png",
+		"images/btnhome-sheet0.png",
 		"images/bgcielo.png",
 		"images/suelo.png",
 		"images/bgtap-sheet0.png",
 		"images/montana-sheet0.png",
+		"images/bgcielo2-sheet0.png",
 		"images/player-sheet0.png",
 		"images/tubo2-sheet0.png",
 		"images/tubo1-sheet0.png",
