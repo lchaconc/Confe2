@@ -7,7 +7,7 @@
         <variable constant="0" name="urlAvanceJuego" sid="776261702862791" static="0" type="text">http://localhost:60874/api/Juego/AvanceJuego/?idJuego=J01granja&amp;terminado=</variable>
         <variable comment="sigla de sexo del avatar. f: Femenino, m: Masculino" constant="0" name="sexo" sid="177159572759459" static="0" type="text">x</variable>
         <variable comment="guarda id fomrato integer de usuario desde session storage" constant="0" name="idUsuario" sid="757215105972641" static="0" type="text">null</variable>
-        <variable comment="prograso del usuario" constant="0" name="avance" sid="485139064955151" static="0" type="number">0</variable>
+        <variable comment="prograso del usuario" constant="0" name="avance" sid="485139064955151" static="0" type="number">1</variable>
         <event-block sid="850646477373350">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="182059395750369" type="System" />
@@ -15,7 +15,7 @@
             <actions>
                 <action id="14" name="Log" sid="811100121514223" type="Browser">
                     <param id="0" name="Type">0</param>
-                    <param id="1" name="Message">&quot;+++ Granja  v 1.8.1***&quot;</param>
+                    <param id="1" name="Message">&quot;+++ Granja  v 1.8.2***&quot;</param>
                 </action>
                 <action id="4" name="Preload" sid="389639860107865" type="Audio">
                     <param id="0" name="Audio file">corte</param>
@@ -68,6 +68,10 @@
                     <param id="0" name="Type">0</param>
                     <param id="1" name="Message">&quot;--- urlAvanceJuego &quot; &amp; urlAvanceJuego</param>
                 </action>
+                <action id="14" name="Log" sid="756831991423354" type="Browser">
+                    <param id="0" name="Type">0</param>
+                    <param id="1" name="Message">&quot;1 ****Avance &quot; &amp; avance</param>
+                </action>
                 <action disabled="1" id="-9" name="Set value" sid="656466285407106" type="System">
                     <param id="0" name="Variable">avance</param>
                     <param id="1" name="Value">6</param>
@@ -83,10 +87,41 @@
                 <action id="-16" name="Wait" sid="558502197717510" type="System">
                     <param id="0" name="Seconds">1</param>
                 </action>
-                <action id="-2" name="Go to layout" sid="879100289292626" type="System">
-                    <param id="0" name="Layout">Game_farm</param>
-                </action>
             </actions>
+            <sub-events>
+                <event-block sid="933317310677911">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="750409025033512" type="System">
+                            <param id="0" name="Variable">avance</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="727505990752921" type="System">
+                            <param id="0" name="Variable">avance</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="14" name="Log" sid="123260590147023" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;2 ****Avance &quot; &amp; avance</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="879100289292626" type="System">
+                            <param id="0" name="Layout">Game_farm</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="163168506943531">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="134840362601914" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="363164624036405" type="System">
+                            <param id="0" name="Layout">Game_farm</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>
