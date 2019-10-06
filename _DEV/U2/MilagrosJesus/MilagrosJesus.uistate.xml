@@ -11,8 +11,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">Splash</layout>
-        <layout active="1" order="1">Principal</layout>
-        <event-sheet order="2">ePrincipal</event-sheet>
+        <layout order="1">Principal</layout>
+        <event-sheet active="1" order="2">ePrincipal</event-sheet>
+        <event-sheet order="3">eSpalsh</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -20,7 +21,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="0" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
-    <families-expanded root="1">
+    <families-expanded root="0">
         <family expanded="0" name="sensores" />
     </families-expanded>
     <folders-expanded>
@@ -34,15 +35,15 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="object-folder/visor/" />
         <folder expanded="0" path="object-folder/inventario/" />
         <folder expanded="0" path="object-folder/texts/" />
-        <folder expanded="1" path="object-folder/Efectos/" />
-        <folder expanded="1" path="object-folder/sensores/" />
+        <folder expanded="0" path="object-folder/Efectos/" />
+        <folder expanded="0" path="object-folder/sensores/" />
         <folder expanded="0" path="object-folder/Baldosas/" />
         <folder expanded="0" path="object-folder/Ambiente/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="0" path="file-folder/" />
         <folder expanded="0" path="sound-folder/" />
-        <folder expanded="1" path="music-folder/" />
+        <folder expanded="0" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
         <folder expanded="1" path="animation-folder/spriteJesus/" />
         <folder expanded="1" path="animation-folder/ctrlSprite/" />
@@ -75,10 +76,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/corazonVida/" />
         <folder expanded="1" path="animation-folder/invFuego/" />
         <folder expanded="1" path="animation-folder/invAgua/" />
-        <folder expanded="1" path="animation-folder/invPaloma/" />
+        <folder expanded="1" path="animation-folder/invPaloma1/" />
         <folder expanded="1" path="animation-folder/invNube/" />
         <folder expanded="1" path="animation-folder/invAceite/" />
         <folder expanded="1" path="animation-folder/invSello/" />
+        <folder expanded="1" path="animation-folder/invPaloma2/" />
+        <folder expanded="1" path="animation-folder/invPaloma3/" />
         <folder expanded="1" path="animation-folder/jesus/" />
         <folder expanded="1" path="animation-folder/luzBlanca/" />
         <folder expanded="1" path="animation-folder/explosion_colores/" />
@@ -88,7 +91,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/sensorCaida/" />
         <folder expanded="1" path="animation-folder/sensorAnticaida/" />
         <folder expanded="1" path="animation-folder/sensorColisionArriba/" />
-        <folder expanded="1" path="animation-folder/sensorLimiteHorizontal/" />
         <folder expanded="1" path="animation-folder/sensorReten/" />
         <folder expanded="1" path="animation-folder/sensorLimiteVertival/" />
         <folder expanded="1" path="animation-folder/sensorFinJuego/" />

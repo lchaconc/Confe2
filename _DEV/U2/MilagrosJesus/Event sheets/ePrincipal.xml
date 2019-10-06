@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>ePrincipal</name>
     <events>
-        <event-group description="" sid="113639644737802" title="Por_siempre">
+        <event-group description="" sid="332361253078251" title="control_sprite">
             <sub-events>
                 <event-block sid="629276838965178">
                     <conditions>
@@ -16,25 +16,6 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="770857879170805">
-                    <conditions>
-                        <condition id="-1" name="Every tick" sid="109754526259830" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-4" name="Set position to another object" sid="456367670373472" type="txtConsignas">
-                            <param id="0" name="Object">letrero</param>
-                            <param id="1" name="Image point (optional)">0</param>
-                        </action>
-                        <action id="-4" name="Set position to another object" sid="264440058633374" type="jesus">
-                            <param id="0" name="Object">letrero</param>
-                            <param id="1" name="Image point (optional)">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="332361253078251" title="control_sprite">
-            <sub-events>
                 <event-block sid="865745877717089">
                     <conditions>
                         <condition id="4" name="Is touching object" sid="217858008195920" type="Touch">
@@ -382,11 +363,60 @@
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="-9" name="Destroy" sid="565095933859497" type="cajaRoja" />
+                        <action id="0" name="Play" sid="948373632906585" type="Audio">
+                            <param id="0" name="Audio file">Explosion1</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="376947780760551">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="399736223967134" type="spriteJesus">
+                            <param id="0" name="Object">cajaCafe</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="239181384500158" type="paloma">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="468965729692049" type="cajaCafe" />
+                        <action id="-15" name="Set visible" sid="415132593614261" type="luzBlanca">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="110507756101580" type="luzBlanca">
+                            <param id="0" name="Object">paloma</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="569502792580524" type="Audio">
+                            <param id="0" name="Audio file">item1</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="520972010227420" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="188216498493969" type="luzBlanca">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="880011273094411" type="paloma">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="927497296203786" type="ctrlSprite">
+                            <param id="0" name="Instance variable">palomas</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="284820555886110" type="Function">
+                            <param id="0" name="Name">&quot;cazarPalomas&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="187221162624488" title="Enemigos - animaciones - interacciones">
+        <event-group description="" sid="187221162624488" title="Interacciones Personaje - Enemigos">
             <sub-events>
                 <event-block sid="489055790072715">
                     <conditions>
@@ -532,6 +562,66 @@
                             <param id="2" name="Duration">1.0</param>
                         </action>
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="768530592096997" title="GUI - Inventario">
+            <sub-events>
+                <event-block sid="302653535956802">
+                    <conditions>
+                        <condition id="0" name="On function" sid="693282520758343" type="Function">
+                            <param id="0" name="Name">&quot;cazarPalomas&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="616814883491316">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="854660145262088" type="ctrlSprite">
+                                    <param id="0" name="Instance variable">palomas</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set blend mode" sid="722365286493276" type="invPaloma1">
+                                    <param id="0" name="Blend mode">0</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="300016909968243" type="invPaloma1">
+                                    <param id="0" name="Scale">1.5</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="727816402017235" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="563246483096990" type="invPaloma1">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="553775961682730">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="914544838514106" type="ctrlSprite">
+                                    <param id="0" name="Instance variable">palomas</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set blend mode" sid="884888009710709" type="invPaloma2">
+                                    <param id="0" name="Blend mode">0</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="295011758535083" type="invPaloma2">
+                                    <param id="0" name="Scale">1.5</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="449795466328133" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="447534610741703" type="invPaloma2">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
