@@ -115,7 +115,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="170437970639587" title="Animations_sprite_y_rotulos">
+        <event-group description="" sid="170437970639587" title="Animaciones Personaje">
             <sub-events>
                 <event-block sid="415365016496837">
                     <conditions>
@@ -132,12 +132,20 @@
                     <conditions>
                         <condition behavior="Platform" id="0" name="Is moving" sid="227858585275671" type="ctrlSprite" />
                     </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="402018975658768" type="spriteJesus">
-                            <param id="0" name="Animation">&quot;run&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="488794167600018">
+                            <conditions>
+                                <condition behavior="Platform" id="3" inverted="1" name="Is jumping" sid="982024823240557" type="ctrlSprite" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="402018975658768" type="spriteJesus">
+                                    <param id="0" name="Animation">&quot;run&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="194137443874865">
                     <conditions>
@@ -156,7 +164,18 @@
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="574211467651152" type="spriteJesus">
-                            <param id="0" name="Animation">&quot;jump&quot;</param>
+                            <param id="0" name="Animation">&quot;corriendoAsaltar&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="736478402088109">
+                    <conditions>
+                        <condition behavior="Platform" id="4" name="Is falling" sid="842210444497023" type="ctrlSprite" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="328086980955207" type="spriteJesus">
+                            <param id="0" name="Animation">&quot;cayendo&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
@@ -346,14 +365,23 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="509714760924478" title="Interacciones">
+        <event-group description="" sid="509714760924478" title="Interacciones Personaje - Ambiente">
             <sub-events>
-                <event-block sid="916702020485236">
-                    <conditions />
+                <event-block sid="186160106432015">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="494111832779115" type="spriteJesus">
+                            <param id="0" name="Object">cajaRoja</param>
+                        </condition>
+                    </conditions>
                     <actions>
-                        <action behavior="Platform" id="13" name="Set double-jump" sid="151780059189475" type="ctrlSprite">
-                            <param id="0" name="State">1</param>
+                        <action id="4" name="Set animation" sid="667782692305917" type="explosionB">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
+                        <action id="-15" name="Set visible" sid="352672273684396" type="explosionB">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="565095933859497" type="cajaRoja" />
                     </actions>
                 </event-block>
             </sub-events>

@@ -90,19 +90,13 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Jesus\Saltar\Jesus__0006_salto2.png" />
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Jesus\Saltar\Jesus__0007_salto1.png" />
                     </animation>
-                    <animation framecount="12" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="743604234073830" speed="12">
+                    <animation framecount="1" loop="0" name="corriendoAsaltar" pingpong="0" repeatcount="0" repeatto="0" sid="216251930294898" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    </animation>
+                    <animation framecount="3" loop="0" name="cayendo" pingpong="0" repeatcount="1" repeatto="0" sid="656732607113502" speed="4">
+                        <frame duration="1" hotspotX="0.503817" hotspotY="1" />
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.501695" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.501718" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.501608" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.501629" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.501629" hotspotY="1" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -640,7 +634,7 @@
                 <plugin id="Text" />
             </object-type>
         </object-folder>
-        <object-folder name="particulas">
+        <object-folder name="Efectos">
             <object-type name="particulas_rojo" sid="385512792799643">
                 <plugin id="Particles" />
                 <texture original-source="D:\Users\lchaconc\Desktop\projectile_glow_orange.png" />
@@ -672,7 +666,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="explosionEspacial1" sid="699922806346972">
+            <object-type name="explosionA" sid="699922806346972">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="34" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="296863774064285" speed="16">
@@ -742,6 +736,78 @@
                                 <point x="1" y="1" />
                             </collision-poly>
                         </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="explosionB" sid="469901915241006">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="65" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="184163785230437" speed="20">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -927,6 +993,29 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="zacateRocaGris" sid="311614394896709">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="493572338091924">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="564687932985326" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Ambiente\plataformagrisMilagros.png">
+                            <collision-poly>
+                                <point x="0.0133333" y="0.0120482" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.493976" />
+                                <point x="0.933333" y="0.939759" />
+                                <point x="0.493333" y="0.975904" />
+                                <point x="0.0933333" y="0.915663" />
+                                <point x="0.0133333" y="0.493976" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Ambiente">
             <object-type name="Palmera" sid="981415768674489">
@@ -970,6 +1059,64 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="792537887239400" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Ambiente\flecha2Milagros.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="flechaDerecha" sid="467322968047696">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="741642325258650" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.505882" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Ambiente\flecha3Milagros.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="cajaCafe" sid="690069732087971">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="375641711106346" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Ambiente\cajacafeMilagros.png">
+                            <collision-poly>
+                                <point x="0.0169492" y="0.0181818" />
+                                <point x="0.983051" y="0.0181818" />
+                                <point x="1" y="0.490909" />
+                                <point x="0.966102" y="0.963636" />
+                                <point x="0.491525" y="0.981818" />
+                                <point x="0.0338983" y="0.963636" />
+                                <point x="0" y="0.490909" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="cajaRoja" sid="496142809359467">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="655138820964142" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Ambiente\cajarojaMilagros.png">
+                            <collision-poly>
+                                <point x="0.0166667" y="0.0181818" />
+                                <point x="0.983333" y="0.0181818" />
+                                <point x="0.966667" y="0.963636" />
+                                <point x="0.5" y="0.981818" />
+                                <point x="0.0333333" y="0.963636" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="cajaTurquesa" sid="589400786921601">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="487562243311538" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Ambiente\cajaturquesaMilagros.png">
+                            <collision-poly>
+                                <point x="0.0166667" y="0.0181818" />
+                                <point x="0.983333" y="0.0181818" />
+                                <point x="0.966667" y="0.963636" />
+                                <point x="0.5" y="0.981818" />
+                                <point x="0.0333333" y="0.963636" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
