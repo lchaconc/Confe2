@@ -98,6 +98,12 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
                     </animation>
+                    <animation framecount="4" loop="0" name="Orando" pingpong="0" repeatcount="1" repeatto="0" sid="444484855307586" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Jesus\Orar\Asset 58jesusora.png" />
+                        <frame duration="1" hotspotX="0.503401" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Jesus\Orar\Asset 59jesusora.png" />
+                        <frame duration="1" hotspotX="0.502674" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Jesus\Orar\Asset 60jesusora.png" />
+                        <frame duration="1" hotspotX="0.50289" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Jesus\Orar\Asset 61jesusora.png" />
+                    </animation>
                 </animation-folder>
             </object-type>
             <object-type name="ctrlSprite" sid="180039339925438">
@@ -105,6 +111,7 @@
                 <instance-variables>
                     <instance-variable name="vidas" sid="651130063913702" type="number" />
                     <instance-variable name="palomas" sid="547416241095817" type="number" />
+                    <instance-variable name="haciendoMilagro" sid="230760391385960" type="boolean" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Platform" sid="580809431457455">
@@ -195,6 +202,14 @@
                                 <point x="1" y="0" />
                             </collision-poly>
                         </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="virgenMaria" sid="338516961341258">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="396928707318574" speed="5">
+                        <frame duration="1" hotspotX="0.432624" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -423,6 +438,40 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="869514884136494" speed="5">
                         <frame duration="1" hotspotX="0.505376" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\assets\aceptar.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btnZonaMilagro" sid="277802539737689">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="id" sid="865545286142968" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="956736187717032" speed="5">
+                        <frame duration="1" hotspotX="0.502618" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Botones\zona-milagro.png">
+                            <collision-poly>
+                                <point x="0.0471204" y="0.166667" />
+                                <point x="0.497382" y="0.111111" />
+                                <point x="0.95288" y="0.166667" />
+                                <point x="0.968586" y="0.5" />
+                                <point x="0.95288" y="0.833333" />
+                                <point x="0.497382" y="0.888889" />
+                                <point x="0.0471204" y="0.833333" />
+                                <point x="0.0314136" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.502618" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Botones\zona-milagro2.png">
+                            <collision-poly>
+                                <point x="0.0471204" y="0.166667" />
+                                <point x="0.497382" y="0.111111" />
+                                <point x="0.95288" y="0.166667" />
+                                <point x="0.968586" y="0.5" />
+                                <point x="0.95288" y="0.833333" />
+                                <point x="0.497382" y="0.888889" />
+                                <point x="0.0471204" y="0.833333" />
+                                <point x="0.0314136" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -908,6 +957,14 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="snsMilagro1" sid="648132680414401">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="522587388772987" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Baldosas">
             <object-type name="bldPiedraTierraZacate" sid="989683256860276">
@@ -1070,6 +1127,9 @@
             </object-type>
             <object-type name="cajaCafe" sid="690069732087971">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="id" sid="251723951277485" type="number" />
+                </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="375641711106346" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Ambiente\cajacafeMilagros.png">
@@ -1113,6 +1173,25 @@
                                 <point x="0.966667" y="0.963636" />
                                 <point x="0.5" y="0.981818" />
                                 <point x="0.0333333" y="0.963636" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="tinajas" sid="522324155177110">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="971019990126738" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Ambiente\tinajasCanaanMilagros.png">
+                            <collision-poly>
+                                <point x="0.115789" y="0.189655" />
+                                <point x="0.5" y="0.00862069" />
+                                <point x="0.884211" y="0.189655" />
+                                <point x="0.952632" y="0.5" />
+                                <point x="0.952632" y="0.922414" />
+                                <point x="0.5" y="0.991379" />
+                                <point x="0.0421053" y="0.931035" />
+                                <point x="0.0473684" y="0.5" />
                             </collision-poly>
                         </frame>
                     </animation>

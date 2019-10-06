@@ -131,6 +131,9 @@
                 <event-block sid="194137443874865">
                     <conditions>
                         <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="993911537130196" type="ctrlSprite" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="183221320865826" type="ctrlSprite">
+                            <param id="0" name="Instance variable">haciendoMilagro</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="393040735382507" type="spriteJesus">
@@ -378,41 +381,60 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="239181384500158" type="paloma">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="468965729692049" type="cajaCafe" />
-                        <action id="-15" name="Set visible" sid="415132593614261" type="luzBlanca">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-4" name="Set position to another object" sid="110507756101580" type="luzBlanca">
-                            <param id="0" name="Object">paloma</param>
-                            <param id="1" name="Image point (optional)">0</param>
-                        </action>
-                        <action id="0" name="Play" sid="569502792580524" type="Audio">
-                            <param id="0" name="Audio file">item1</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="520972010227420" type="System">
-                            <param id="0" name="Seconds">1.0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="188216498493969" type="luzBlanca">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="880011273094411" type="paloma">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-11" name="Add to" sid="927497296203786" type="ctrlSprite">
-                            <param id="0" name="Instance variable">palomas</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="0" name="Call function" sid="284820555886110" type="Function">
-                            <param id="0" name="Name">&quot;cazarPalomas&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
+                        <action id="-10" name="Set value" sid="358596104380703" type="cajaCafe">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Value">cajaCafe.UID</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="486191408133216">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="123033872496400" type="cajaCafe">
+                                    <param id="0" name="Unique ID">cajaCafe.id</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="636414630268586" type="paloma">
+                                    <param id="0" name="Object">cajaCafe</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="239181384500158" type="paloma">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="468965729692049" type="cajaCafe" />
+                                <action id="-15" name="Set visible" sid="415132593614261" type="luzBlanca">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="110507756101580" type="luzBlanca">
+                                    <param id="0" name="Object">paloma</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="0" name="Play" sid="569502792580524" type="Audio">
+                                    <param id="0" name="Audio file">item1</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="520972010227420" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="188216498493969" type="luzBlanca">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="880011273094411" type="paloma">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-11" name="Add to" sid="927497296203786" type="ctrlSprite">
+                                    <param id="0" name="Instance variable">palomas</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="284820555886110" type="Function">
+                                    <param id="0" name="Name">&quot;cazarPalomas&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -560,6 +582,73 @@
                             <param id="0" name="&apos;On&apos; time">0.1</param>
                             <param id="1" name="&apos;Off&apos; time">0.1</param>
                             <param id="2" name="Duration">1.0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="946244786104024" title="Ineraccion Personaje - Sensores">
+            <sub-events>
+                <event-block sid="558911017042035">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="378296457978194" type="ctrlSprite">
+                            <param id="0" name="Object">snsMilagro1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="129425042351220" type="snsMilagro1" />
+                        <action id="-15" name="Set visible" sid="894300959209367" type="btnZonaMilagro">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="705472792600524" title="Interaccion Usuario - Juego (Milagros)">
+            <sub-events>
+                <event-block sid="501096522694591">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="461039326476326" type="Touch">
+                            <param id="0" name="Object">btnZonaMilagro</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="392342972095095" type="btnZonaMilagro">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="578465298353949" type="ctrlSprite">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="891023079660114" type="ctrlSprite">
+                            <param id="0" name="Instance variable">haciendoMilagro</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="652317442711525" type="spriteJesus">
+                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="576700591967714" type="virgenMaria">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="445196012250128" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="775571118018649" type="spriteJesus">
+                            <param id="0" name="Animation">&quot;Orando&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="575536584555723" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="971952164970099" type="ctrlSprite">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="701232317812064" type="ctrlSprite">
+                            <param id="0" name="Instance variable">haciendoMilagro</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="388488547650599" type="virgenMaria">
+                            <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
                 </event-block>
