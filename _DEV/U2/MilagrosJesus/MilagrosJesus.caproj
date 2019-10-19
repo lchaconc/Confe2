@@ -112,6 +112,7 @@
                     <instance-variable name="vidas" sid="651130063913702" type="number" />
                     <instance-variable name="palomas" sid="547416241095817" type="number" />
                     <instance-variable name="haciendoMilagro" sid="230760391385960" type="boolean" />
+                    <instance-variable comment="Número de milagro que hace cuando colisiona con cada sensor de milagro" name="milagro" sid="949309576166064" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Platform" sid="580809431457455">
@@ -339,6 +340,14 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="908178305042155" speed="5">
                         <frame duration="1" hotspotX="0.500273" hotspotY="0.501002" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Ambiente\ciudadCANAANMilagros.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bfPiedraGris" sid="286103657112286">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="374527302159509" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Ambiente\Asset 46Milagros.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -876,6 +885,14 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="rayoMilagro" sid="503967906554660">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="338299634613050" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Efectos\rayo_milagro.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="sensores">
             <object-type name="sensorCaida" sid="115644723619063">
@@ -961,6 +978,14 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="522587388772987" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="snsMilagro2" sid="582468577119604">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="553145142097318" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
@@ -1068,6 +1093,39 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="564687932985326" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Ambiente\plataformagrisMilagros.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="desierto" sid="699690557226583">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="146356780260772">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="967857846542668" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Ambiente\desierto1.png">
+                            <collision-poly>
+                                <point x="0.0111111" y="0.0111111" />
+                                <point x="0.988889" y="0.0111111" />
+                                <point x="1" y="1" />
+                                <point x="0.0111111" y="0.988889" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="desiertoBase" sid="956096455813218">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="193648239357260">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="757743384965624" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Ambiente\murosNaranjaMilagros.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1194,6 +1252,22 @@
                                 <point x="0.0473684" y="0.5" />
                             </collision-poly>
                         </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="arbol1" sid="644311549462439">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="525390115120093" speed="5">
+                        <frame duration="1" hotspotX="0.501818" hotspotY="0.498462" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Ambiente\arbolPanesyPecesMilagros.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="rotuloBetshaida" sid="870070757425901">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="966294060009510" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Ambiente\BethsaidaMilagros.png" />
                     </animation>
                 </animation-folder>
             </object-type>
