@@ -621,6 +621,10 @@
                             <param id="0" name="Instance variable">milagro</param>
                             <param id="1" name="Value">2</param>
                         </action>
+                        <action id="-13" name="Set boolean" sid="738761248723211" type="ctrlSprite">
+                            <param id="0" name="Instance variable">colisionHabilitada</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -648,17 +652,6 @@
                             <param id="0" name="Animation">&quot;idle&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-16" name="Wait" sid="445196012250128" type="System">
-                            <param id="0" name="Seconds">2</param>
-                        </action>
-                        <action id="-4" name="Set position to another object" sid="297557289709030" type="rayoMilagro">
-                            <param id="0" name="Object">spriteJesus</param>
-                            <param id="1" name="Image point (optional)">0</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="775571118018649" type="spriteJesus">
-                            <param id="0" name="Animation">&quot;Orando&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="963289813342757">
@@ -674,6 +667,17 @@
                                     <param id="0" name="Visibility">1</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="575536584555723" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="297557289709030" type="rayoMilagro">
+                                    <param id="0" name="Object">spriteJesus</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="775571118018649" type="spriteJesus">
+                                    <param id="0" name="Animation">&quot;Orando&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="730587368259520" type="System">
                                     <param id="0" name="Seconds">2</param>
                                 </action>
                                 <action behavior="Platform" id="11" name="Set enabled" sid="971952164970099" type="ctrlSprite">
@@ -692,7 +696,122 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="884378164051413">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="943692660161575" type="ctrlSprite">
+                                    <param id="0" name="Instance variable">milagro</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="630188158285909" type="discipulo">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="958930223348861" type="discipulo">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="657518178042395">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="597572558280131" type="discipulo">
+                            <param id="0" name="Object">spriteJesus</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="575840118601269" type="ctrlSprite">
+                            <param id="0" name="Instance variable">colisionHabilitada</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="309925313136256" type="ctrlSprite">
+                            <param id="0" name="Instance variable">colisionHabilitada</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="922211892355898" type="discipulo">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="642710318503030" type="canastaPanes">
+                            <param id="0" name="Object">discipulo</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="444275273086144" type="canastaPEces">
+                            <param id="0" name="Object">spriteJesus</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="611254218950946" type="canastaPanes">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="811237806241114" type="canastaPEces">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="375055318188806" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="834350201375395" type="rayoMilagro">
+                            <param id="0" name="Object">spriteJesus</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="327825827773896" type="spriteJesus">
+                            <param id="0" name="Animation">&quot;Orando&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="161390727009945" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="711155421620889" type="panes">
+                            <param id="0" name="Object">canastaPanes</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="900376853428150" type="peces">
+                            <param id="0" name="Object">canastaPEces</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="975863820437456" type="panes">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="709271059125378" type="peces">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="515249549977740" type="panes">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="409078144786729" type="peces">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="861116792571312" type="System">
+                            <param id="0" name="Seconds">2.5</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="860294519905056" type="canastaPanes">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="710092464826739" type="canastaPEces">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="943816072760512" type="panes">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="959381297826931" type="peces">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="875833494383911" type="rayoMilagro">
+                            <param id="0" name="X">-500</param>
+                            <param id="1" name="Y">-500</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="350519343676689" type="ctrlSprite">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="142593870446724" type="ctrlSprite">
+                            <param id="0" name="Instance variable">haciendoMilagro</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="928525658387676" type="discipulo">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

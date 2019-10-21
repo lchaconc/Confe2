@@ -113,6 +113,7 @@
                     <instance-variable name="palomas" sid="547416241095817" type="number" />
                     <instance-variable name="haciendoMilagro" sid="230760391385960" type="boolean" />
                     <instance-variable comment="Número de milagro que hace cuando colisiona con cada sensor de milagro" name="milagro" sid="949309576166064" type="number" />
+                    <instance-variable name="colisionHabilitada" sid="730694336852284" type="boolean" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Platform" sid="580809431457455">
@@ -211,6 +212,19 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="396928707318574" speed="5">
                         <frame duration="1" hotspotX="0.432624" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="discipulo" sid="761058797587368">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="739515722981827">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="266020070460656" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -486,114 +500,6 @@
             </object-type>
         </object-folder>
         <object-folder name="Objetos">
-            <object-type name="sandalias" sid="103332291014519">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="877934667539446" speed="5">
-                        <frame duration="1" hotspotX="0.501089" hotspotY="0.501089" original-source="C:\Users\logan24\Desktop\mariposa_thumb.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="fuego" sid="261603413167412">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="50" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="468882588913498" speed="20">
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.502618" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.50237" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.502222" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.502222" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.502128" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.502203" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.502488" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.502488" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.502347" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.502488" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.502392" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.502164" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.502242" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.501754" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.501792" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.502203" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.502645" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.503067" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.502674" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.502222" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.502994" hotspotY="1" />
-                        <frame duration="1" hotspotX="0.502994" hotspotY="1" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="agua" sid="246354746175781">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="12" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="939319449146772" speed="12">
-                        <frame duration="1" hotspotX="0.509317" hotspotY="0.598253" />
-                        <frame duration="1" hotspotX="0.509317" hotspotY="0.596491" />
-                        <frame duration="1" hotspotX="0.509317" hotspotY="0.598253" />
-                        <frame duration="1" hotspotX="0.509317" hotspotY="0.601732" />
-                        <frame duration="1" hotspotX="0.509317" hotspotY="0.60515" />
-                        <frame duration="1" hotspotX="0.509317" hotspotY="0.608511" />
-                        <frame duration="1" hotspotX="0.509317" hotspotY="0.610169" />
-                        <frame duration="1" hotspotX="0.509317" hotspotY="0.606838" />
-                        <frame duration="1" hotspotX="0.509317" hotspotY="0.6" />
-                        <frame duration="1" hotspotX="0.509317" hotspotY="0.603448" />
-                        <frame duration="1" hotspotX="0.509317" hotspotY="0.6" />
-                        <frame duration="1" hotspotX="0.509317" hotspotY="0.6" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="aceite" sid="713132005821705">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="431034666011276" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\lchaconc\Dropbox\ChaconPrado\CONFE\nuevas\olive.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="nube" sid="130539140817208">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="890504065314252" speed="5">
-                        <frame duration="1" hotspotX="0.493671" hotspotY="0.596491" original-source="D:\Users\lchaconc\Dropbox\ChaconPrado\CONFE\nuevas\nube2.gif" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="sello" sid="437048506193198">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="762058534281184" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\lchaconc\Dropbox\ChaconPrado\CONFE\nuevas\post-office.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
             <object-type name="paloma" sid="122271415197957">
                 <plugin id="Sprite" />
                 <animation-folder>
@@ -624,51 +530,11 @@
             </object-type>
         </object-folder>
         <object-folder name="inventario">
-            <object-type name="invFuego" sid="169955312036439">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="228262980143901" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\recursos_CONFE\platform01\fire.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="invAgua" sid="445949821522762">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="649235461185097" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\lchaconc\Dropbox\ChaconPrado\CONFE\nuevas\drop.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
             <object-type name="invPaloma1" sid="415192306182619">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="552806144266457" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Animaciones\Paloma\U2_0000_palomalasarriba.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="invNube" sid="890959128542334">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="216112486824705" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\lchaconc\Dropbox\ChaconPrado\CONFE\nuevas\cloud.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="invAceite" sid="683309785672488">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="619823819449513" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\lchaconc\Dropbox\ChaconPrado\CONFE\nuevas\engine-oil.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="invSello" sid="758127918464379">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="161699880491039" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\lchaconc\Dropbox\ChaconPrado\CONFE\nuevas\ribbon.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1268,6 +1134,46 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="966294060009510" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Ambiente\BethsaidaMilagros.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="canastaPanes" sid="578412474411368">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="653881585750644" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="canastaPEces" sid="847583787831321">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="648860855545603" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="panes" sid="931050430165531">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="901565995093021" speed="3">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Animaciones\Panes\pan1.png" />
+                        <frame duration="1" hotspotX="0.503401" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Animaciones\Panes\pan2.png" />
+                        <frame duration="1" hotspotX="0.502347" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Animaciones\Panes\pan3.png" />
+                        <frame duration="1" hotspotX="0.501672" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Animaciones\Panes\pan4.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Animaciones\Panes\pan5.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="peces" sid="753551987642259">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="873278092052731" speed="3">
+                        <frame duration="1" hotspotX="0.507463" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Animaciones\Peces\pez1.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Animaciones\Peces\pez2.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Animaciones\Peces\pez3.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Animaciones\Peces\pez4.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Animaciones\Peces\pez5.png" />
                     </animation>
                 </animation-folder>
             </object-type>
