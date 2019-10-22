@@ -25,6 +25,7 @@
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Persist" version="1">Persist</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
@@ -121,6 +122,9 @@
                     </behavior-type>
                     <behavior-type name="ScrollTo" sid="841888225199513">
                         <behavior id="scrollto" />
+                    </behavior-type>
+                    <behavior-type name="Persist" sid="231115551273450">
+                        <behavior id="Persist" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
@@ -225,6 +229,19 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="266020070460656" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="desconocido" sid="262566769070355">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="660083764434897">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="892256244833039" speed="5">
+                        <frame duration="1" hotspotX="0.503704" hotspotY="1" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -364,6 +381,10 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Ambiente\Asset 46Milagros.png" />
                     </animation>
                 </animation-folder>
+            </object-type>
+            <object-type name="bgNoche" sid="892584811506127">
+                <plugin id="TiledBg" />
+                <texture original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Fondos\cielonocheMilagros.png" />
             </object-type>
         </object-folder>
         <object-folder name="system">
@@ -856,6 +877,22 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="snsMilagro3" sid="571824333434081">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="653446447030020" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="snsFinNivel1" sid="516294707816361">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="342586699097734" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Baldosas">
             <object-type name="bldPiedraTierraZacate" sid="989683256860276">
@@ -992,6 +1029,29 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="757743384965624" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Ambiente\murosNaranjaMilagros.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bldNoche" sid="273419757097261">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="329572418792560">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="729220533243605" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Baldosas\plataformanocheMilagros.png">
+                            <collision-poly>
+                                <point x="0.0133333" y="0.0121951" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.5" />
+                                <point x="0.933333" y="0.939024" />
+                                <point x="0.493333" y="0.97561" />
+                                <point x="0.0933333" y="0.914634" />
+                                <point x="0.0133333" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1191,13 +1251,15 @@
     </families>
     <layout-folder>
         <layout>Splash.xml</layout>
-        <layout>Principal.xml</layout>
+        <layout>Nivel1.xml</layout>
         <layout>FinDeJuego.xml</layout>
+        <layout>Nivel2.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>eSpalsh.xml</event-sheet>
-        <event-sheet>ePrincipal.xml</event-sheet>
+        <event-sheet>eNivel1.xml</event-sheet>
         <event-sheet>eFindeJuego.xml</event-sheet>
+        <event-sheet>eNivel2.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="5">

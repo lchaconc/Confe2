@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>ePrincipal</name>
+    <name>eNivel1</name>
     <events>
         <event-group description="" sid="332361253078251" title="control_sprite">
             <sub-events>
@@ -188,7 +188,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="849871347301157" title="Sensores">
+        <event-group description="" sid="849871347301157" title="Sensores (Caida - letrero - fin nivel 1)">
             <sub-events>
                 <event-block sid="296726408707067">
                     <conditions>
@@ -270,43 +270,39 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <comment>FIN DEL JUEGO</comment>
-                <event-block sid="597050026190750">
+                <comment>FIN DEL NIVEL 1</comment>
+                <event-block sid="905352102502275">
                     <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="815126539232255" type="ctrlSprite">
-                            <param id="0" name="Object">sensorFinJuego</param>
+                        <condition id="0" name="On collision with another object" sid="582830677554714" type="ctrlSprite">
+                            <param id="0" name="Object">snsFinNivel1</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="101382316753375" type="luzAmarilla">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="170576002955493" type="System">
-                            <param id="0" name="Seconds">0.5</param>
-                        </action>
-                        <action id="-4" name="Set position to another object" sid="548551427181500" type="particulas_blanco">
-                            <param id="0" name="Object">ctrlSprite</param>
-                            <param id="1" name="Image point (optional)">0</param>
-                        </action>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="745627466995829" type="ctrlSprite">
+                        <action behavior="Platform" id="7" name="Simulate control" sid="590995336954379" type="ctrlSprite">
                             <param id="0" name="Control">2</param>
                         </action>
-                        <action id="-16" name="Wait" sid="255882677956717" type="System">
-                            <param id="0" name="Seconds">0.5</param>
+                        <action behavior="Platform" id="4" name="Set jump strength" sid="824236279163042" type="ctrlSprite">
+                            <param id="0" name="Jump strength">1600</param>
                         </action>
-                        <action behavior="Platform" id="11" name="Set enabled" sid="928611167157475" type="ctrlSprite">
-                            <param id="0" name="State">0</param>
+                        <action id="-16" name="Wait" sid="956384481070317" type="System">
+                            <param id="0" name="Seconds">1.0</param>
                         </action>
-                        <action id="-3" name="Set position" sid="456861142703396" type="bgNegro">
-                            <param id="0" name="X">7520</param>
-                            <param id="1" name="Y">-32</param>
+                        <action behavior="Platform" id="0" name="Set ignoring input" sid="528852143633225" type="ctrlSprite">
+                            <param id="0" name="Input">1</param>
                         </action>
-                        <action behavior="Fade" id="1" name="Start fade" sid="231740419043014" type="bgNegro" />
-                        <action id="-16" name="Wait" sid="396784031520714" type="System">
-                            <param id="0" name="Seconds">2</param>
+                        <action id="-15" name="Set visible" sid="291209091424372" type="spriteJesus">
+                            <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-2" name="Go to layout" sid="781209515785139" type="System">
-                            <param id="0" name="Layout">FinDeJuego</param>
+                        <action id="-3" name="Set position" sid="976947402771944" type="bgNegro">
+                            <param id="0" name="X">14200</param>
+                            <param id="1" name="Y">0</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="868342291159136" type="bgNegro" />
+                        <action id="-16" name="Wait" sid="158706904551874" type="System">
+                            <param id="0" name="Seconds">5</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="605121136063956" type="System">
+                            <param id="0" name="Layout">Nivel2</param>
                         </action>
                     </actions>
                 </event-block>
@@ -627,6 +623,27 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="753536756998784">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="712014576596443" type="ctrlSprite">
+                            <param id="0" name="Object">snsMilagro3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="356074144175418" type="snsMilagro3" />
+                        <action id="-15" name="Set visible" sid="852869047131149" type="btnZonaMilagro">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="976492057721138" type="ctrlSprite">
+                            <param id="0" name="Instance variable">milagro</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="329630209519860" type="ctrlSprite">
+                            <param id="0" name="Instance variable">colisionHabilitada</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="705472792600524" title="Interaccion Usuario - Juego (Milagros)">
@@ -709,6 +726,23 @@
                                     <param id="0" name="Visibility">1</param>
                                 </action>
                                 <action behavior="Bullet" id="5" name="Set enabled" sid="958930223348861" type="discipulo">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="509326937216073">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="982288351183632" type="ctrlSprite">
+                                    <param id="0" name="Instance variable">milagro</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="308001049459100" type="desconocido">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="322179831541124" type="desconocido">
                                     <param id="0" name="State">1</param>
                                 </action>
                             </actions>
@@ -811,6 +845,51 @@
                         <action id="-15" name="Set visible" sid="928525658387676" type="discipulo">
                             <param id="0" name="Visibility">0</param>
                         </action>
+                    </actions>
+                </event-block>
+                <event-block sid="924403467058388">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="314641387731597" type="desconocido">
+                            <param id="0" name="Object">spriteJesus</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="451530943997733" type="ctrlSprite">
+                            <param id="0" name="Instance variable">colisionHabilitada</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="700540446376425" type="ctrlSprite">
+                            <param id="0" name="Instance variable">colisionHabilitada</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="433739894157208" type="desconocido">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="991549196894530" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="993782944109880" type="rayoMilagro">
+                            <param id="0" name="Object">spriteJesus</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="636777954343740" type="spriteJesus">
+                            <param id="0" name="Animation">&quot;Orando&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="706517083616629" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="859656771837561" type="rayoMilagro">
+                            <param id="0" name="X">-500</param>
+                            <param id="1" name="Y">-500</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="503323602112165" type="ctrlSprite">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="680037130848312" type="ctrlSprite">
+                            <param id="0" name="Instance variable">haciendoMilagro</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="907427196062688" type="desconocido" />
                     </actions>
                 </event-block>
             </sub-events>
