@@ -245,6 +245,14 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="lazaro" sid="831059284344036">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="365553795165062" speed="5">
+                        <frame duration="1" hotspotX="0.504762" hotspotY="0.502242" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\LazaroMilagros.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="logos">
             <object-type name="logoConfe" sid="834312970915883">
@@ -407,7 +415,7 @@
                 <plugin id="Keyboard" />
             </object-type>
         </object-folder>
-        <object-folder name="btn">
+        <object-folder name="Botones">
             <object-type name="btnClose" sid="546241411165846">
                 <plugin id="Sprite" />
                 <animation-folder>
@@ -592,6 +600,9 @@
                 <plugin id="Text" />
             </object-type>
             <object-type name="txtGameOver" sid="635366855347008">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="txtGUI" sid="692320040800115">
                 <plugin id="Text" />
             </object-type>
         </object-folder>
@@ -780,6 +791,19 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="niebla" sid="801239065509095">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="879123517045237">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="180797611570876" speed="5">
+                        <frame duration="1" hotspotX="0.502283" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Efectos\nieblaFrenteLazaroMilagros.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="sensores">
             <object-type name="sensorCaida" sid="115644723619063">
@@ -821,7 +845,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="sensorReten" sid="918889967479866">
+            <object-type name="snsReten" sid="918889967479866">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="426049731197013" speed="5">
@@ -889,6 +913,22 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="342586699097734" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="snsMilagro4" sid="619089085840687">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="384905300667690" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="snsLimiteX" sid="820087176749222">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="710696389623673" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
@@ -1234,6 +1274,38 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Animaciones\Peces\pez3.png" />
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Animaciones\Peces\pez4.png" />
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Animaciones\Peces\pez5.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="cueva" sid="960551934570372">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="859326326006219" speed="5">
+                        <frame duration="1" hotspotX="0.500911" hotspotY="0.501754" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Ambiente\TumbalazaroMilagros.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="piedra" sid="285708561689605">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="603959663776749">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="918253542531435" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502283" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Ambiente\PiedraLazaroMilagros.png">
+                            <collision-poly>
+                                <point x="0.0841584" y="0.0776256" />
+                                <point x="0.5" y="0.00913242" />
+                                <point x="0.831683" y="0.155251" />
+                                <point x="0.965347" y="0.497717" />
+                                <point x="0.89604" y="0.90411" />
+                                <point x="0.5" y="1" />
+                                <point x="0.0990099" y="0.908676" />
+                                <point x="0.0594059" y="0.497717" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>

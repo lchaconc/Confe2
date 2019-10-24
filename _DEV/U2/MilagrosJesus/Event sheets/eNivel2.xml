@@ -188,5 +188,92 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="624431204071054" title="Ineraccion Personaje - Sensores2">
+            <sub-events>
+                <event-block sid="904016001533987">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="195424520675098" type="ctrlSprite">
+                            <param id="0" name="Object">snsMilagro4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="897422028223788" type="snsMilagro4" />
+                        <action id="-15" name="Set visible" sid="142722445505958" type="btnZonaMilagro">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="411689855534691" type="ctrlSprite">
+                            <param id="0" name="Instance variable">milagro</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="111403493664497" type="ctrlSprite">
+                            <param id="0" name="Instance variable">colisionHabilitada</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="446489503535123" title="Interaccion Usuario - Juego (Milagros)2">
+            <sub-events>
+                <event-block sid="171841214162771">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="893056453893253" type="Touch">
+                            <param id="0" name="Object">btnZonaMilagro</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="967790328373394" type="btnZonaMilagro">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="252710748658986" type="ctrlSprite">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="352763278138508" type="ctrlSprite">
+                            <param id="0" name="Instance variable">haciendoMilagro</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="273882099882002" type="spriteJesus">
+                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="691209469287099">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="510019354313491" type="ctrlSprite">
+                                    <param id="0" name="Instance variable">milagro</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="219702960113601" type="piedra">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="984136488737515" type="niebla">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="117599275167583" type="niebla" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="748809361425130">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="136145768183094" type="piedra">
+                            <param id="0" name="Object">snsLimiteX</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="552906637890250" type="piedra">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="587330166579319" type="lazaro">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
