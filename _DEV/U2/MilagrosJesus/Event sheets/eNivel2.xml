@@ -312,5 +312,42 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="833339162513278" title="on_Load2">
+            <sub-events>
+                <event-block sid="720630847587954">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="418002755215662" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="971522501564573" type="sensores">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="861634108269973" type="Audio">
+                            <param id="0" name="Audio file">Voodoo_Like_You_Do</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;fondo2&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="286000727276639" type="txtVidas">
+                            <param id="0" name="Text">ctrlSprite.vidas</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="318254779414365" type="letrero">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="883216865925070" type="letrero">
+                            <param id="0" name="Angle">90</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="894716908292750" type="ctrlSprite">
+                            <param id="0" name="X">160</param>
+                            <param id="1" name="Y">350</param>
+                        </action>
+                        <action disabled="1" id="-3" name="Set position" sid="660264284414844" type="ctrlSprite">
+                            <param id="0" name="X">7504</param>
+                            <param id="1" name="Y">512</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
