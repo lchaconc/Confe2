@@ -28,6 +28,7 @@
         <behavior author="Scirra" id="Persist" version="1">Persist</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -247,9 +248,41 @@
             </object-type>
             <object-type name="lazaro" sid="831059284344036">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="606310242454015">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="365553795165062" speed="5">
                         <frame duration="1" hotspotX="0.504762" hotspotY="0.502242" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\LazaroMilagros.png" />
+                    </animation>
+                    <animation framecount="4" loop="0" name="celebrando" pingpong="1" repeatcount="2" repeatto="0" sid="903414746565791" speed="4">
+                        <frame duration="1" hotspotX="0.504762" hotspotY="0.502242" />
+                        <frame duration="1" hotspotX="0.497758" hotspotY="0.504762">
+                            <collision-poly>
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.495238" hotspotY="0.497758">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.502242" hotspotY="0.495238">
+                            <collision-poly>
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -368,6 +401,11 @@
             </object-type>
             <object-type name="bgAgua" sid="809560959670846">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="165974342227033">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="624979796071592" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.508772" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Ambiente\AguaPatronMilagros.png" />
@@ -1304,6 +1342,40 @@
                                 <point x="0.5" y="1" />
                                 <point x="0.0990099" y="0.908676" />
                                 <point x="0.0594059" y="0.497717" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ola1" sid="850294335878046">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="501124046330031">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="464211211969569" speed="2">
+                        <frame duration="1" hotspotX="0.501859" hotspotY="0.502463" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Ambiente\OlasMilagros.png">
+                            <collision-poly>
+                                <point x="0.0483271" y="0.157635" />
+                                <point x="0.356877" y="0.00985224" />
+                                <point x="0.581784" y="0.426108" />
+                                <point x="0.992565" y="0.55665" />
+                                <point x="0.69145" y="0.990148" />
+                                <point x="0.267658" y="0.935961" />
+                                <point x="0.0223048" y="0.576355" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.497537" hotspotY="0.501859">
+                            <collision-poly>
+                                <point x="0.842365" y="0.0483271" />
+                                <point x="0.990148" y="0.356877" />
+                                <point x="0.573892" y="0.581784" />
+                                <point x="0.44335" y="0.992565" />
+                                <point x="0.00985223" y="0.69145" />
+                                <point x="0.0640395" y="0.267658" />
+                                <point x="0.423645" y="0.0223048" />
                             </collision-poly>
                         </frame>
                     </animation>
