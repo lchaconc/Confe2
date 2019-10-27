@@ -340,7 +340,7 @@
                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="143033719149921" type="letrero">
                             <param id="0" name="Angle">90</param>
                         </action>
-                        <action disabled="1" id="-3" name="Set position" sid="468064776699335" type="ctrlSprite">
+                        <action id="-3" name="Set position" sid="468064776699335" type="ctrlSprite">
                             <param id="0" name="X">176</param>
                             <param id="1" name="Y">160</param>
                         </action>
@@ -443,75 +443,29 @@
         </event-group>
         <event-group description="" sid="187221162624488" title="Interacciones Personaje - Enemigos">
             <sub-events>
-                <event-block sid="489055790072715">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="940247922685779" type="serpiente">
-                            <param id="0" name="Instance variable">direccion</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;izquierda&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="486814397943009" type="serpiente">
-                            <param id="0" name="Control">0</param>
-                        </action>
-                        <action id="7" name="Set mirrored" sid="815485958648411" type="serpiente">
-                            <param id="0" name="State">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="468792670214500">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="873544578165730" type="serpiente">
-                            <param id="0" name="Instance variable">direccion</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;derecha&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="838190591472732" type="serpiente">
-                            <param id="0" name="Control">1</param>
-                        </action>
-                        <action id="7" name="Set mirrored" sid="724488010211253" type="serpiente">
-                            <param id="0" name="State">0</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="140599052316809">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="737835748232780" type="serpiente">
+                        <condition id="0" name="On collision with another object" sid="737835748232780" type="ctrSerpiente">
                             <param id="0" name="Object">snsReboteEnemigo</param>
                         </condition>
                     </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="583265088448086">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="226721020691233" type="serpiente">
-                                    <param id="0" name="Instance variable">direccion</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;izquierda&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="441537397033759" type="serpiente">
-                                    <param id="0" name="Instance variable">direccion</param>
-                                    <param id="1" name="Value">&quot;derecha&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="416050109001961">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="312455420201050" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="650732145929381" type="serpiente">
-                                    <param id="0" name="Instance variable">direccion</param>
-                                    <param id="1" name="Value">&quot;izquierda&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                    <actions>
+                        <action id="-10" name="Set value" sid="123643750077462" type="ctrSerpiente">
+                            <param id="0" name="Instance variable">direccion</param>
+                            <param id="1" name="Value">ctrSerpiente.direccion * -1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="137667166950223">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="152854677419929" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="979755728361260" type="serpiente">
+                            <param id="0" name="Object">ctrSerpiente</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="364813648870537">
                     <conditions>
@@ -585,6 +539,36 @@
                             <param id="0" name="&apos;On&apos; time">0.1</param>
                             <param id="1" name="&apos;Off&apos; time">0.1</param>
                             <param id="2" name="Duration">1.0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="329225825262033">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="442334651824730" type="ctrSerpiente">
+                            <param id="0" name="Instance variable">direccion</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="994293199025507" type="ctrSerpiente">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="815485958648411" type="serpiente">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="210385662571825">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="480705927712142" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="939616810019596" type="ctrSerpiente">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="834959165679540" type="serpiente">
+                            <param id="0" name="State">0</param>
                         </action>
                     </actions>
                 </event-block>
