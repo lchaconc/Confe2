@@ -11,9 +11,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">Splash</layout>
-        <layout active="1" order="1">Nivel1</layout>
+        <layout order="1">Nivel1</layout>
         <layout order="3">Nivel2</layout>
-        <event-sheet order="2">eNivel1</event-sheet>
+        <event-sheet active="1" order="2">eNivel1</event-sheet>
         <event-sheet order="4">eNivel2</event-sheet>
         <event-sheet order="5">eSpalsh</event-sheet>
     </open-tabs>
@@ -23,8 +23,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="0" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
-    <families-expanded root="0">
-        <family expanded="0" name="sensores" />
+    <families-expanded root="1">
+        <family expanded="0" name="famSensores" />
+        <family expanded="1" name="famSerpiente" />
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
@@ -41,6 +42,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="object-folder/sensores/" />
         <folder expanded="0" path="object-folder/Baldosas/" />
         <folder expanded="0" path="object-folder/Ambiente/" />
+        <folder expanded="1" path="object-folder/Contenedores/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="0" path="file-folder/" />
@@ -48,7 +50,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
         <folder expanded="1" path="animation-folder/spriteJesus/" />
-        <folder expanded="1" path="animation-folder/ctrlSprite/" />
+        <folder expanded="1" path="animation-folder/ctrlJugador/" />
         <folder expanded="1" path="animation-folder/serpiente/" />
         <folder expanded="1" path="animation-folder/romano/" />
         <folder expanded="1" path="animation-folder/virgenMaria/" />
@@ -88,20 +90,19 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/explosionB/" />
         <folder expanded="1" path="animation-folder/rayoMilagro/" />
         <folder expanded="1" path="animation-folder/niebla/" />
-        <folder expanded="1" path="animation-folder/sensorCaida/" />
+        <folder expanded="1" path="animation-folder/snsCaida/" />
         <folder expanded="1" path="animation-folder/sensorAnticaida/" />
-        <folder expanded="1" path="animation-folder/sensorColisionArriba/" />
-        <folder expanded="1" path="animation-folder/snsReten/" />
-        <folder expanded="1" path="animation-folder/sensorLimiteVertival/" />
+        <folder expanded="1" path="animation-folder/snsRetenModal/" />
         <folder expanded="1" path="animation-folder/sensorFinJuego/" />
-        <folder expanded="1" path="animation-folder/snsReboteEnemigo/" />
+        <folder expanded="1" path="animation-folder/snsReboteSerpiente/" />
         <folder expanded="1" path="animation-folder/snsActivarRomano/" />
         <folder expanded="1" path="animation-folder/snsMilagro1/" />
         <folder expanded="1" path="animation-folder/snsMilagro2/" />
         <folder expanded="1" path="animation-folder/snsMilagro3/" />
         <folder expanded="1" path="animation-folder/snsFinNivel1/" />
         <folder expanded="1" path="animation-folder/snsMilagro4/" />
-        <folder expanded="1" path="animation-folder/snsLimiteX/" />
+        <folder expanded="1" path="animation-folder/snsMoverFamiliaSerpiente/" />
+        <folder expanded="1" path="animation-folder/snsEntradaPueblo/" />
         <folder expanded="1" path="animation-folder/bldPiedraTierraZacate/" />
         <folder expanded="1" path="animation-folder/bldTorre1/" />
         <folder expanded="1" path="animation-folder/bldTorre2/" />
@@ -131,5 +132,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/cueva/" />
         <folder expanded="1" path="animation-folder/piedra/" />
         <folder expanded="1" path="animation-folder/ola1/" />
+        <folder expanded="1" path="animation-folder/cntSerpiente/" />
     </folders-expanded>
 </c2uistate>

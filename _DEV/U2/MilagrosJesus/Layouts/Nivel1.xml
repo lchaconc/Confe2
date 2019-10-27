@@ -15193,6 +15193,28 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="cntSerpiente" uid="821">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2040</x>
+                        <y>496</y>
+                        <z>0</z>
+                        <width>624</width>
+                        <height>160</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="luzBlanca" uid="152">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -15344,7 +15366,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ctrlSprite" uid="185">
+                <instance type="ctrlJugador" uid="185">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -15357,6 +15379,7 @@
                         <haciendoMilagro>false</haciendoMilagro>
                         <milagro>0</milagro>
                         <colisionHabilitada>false</colisionHabilitada>
+                        <puebloActual></puebloActual>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -15378,7 +15401,6 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Persist" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -15412,50 +15434,6 @@
                         <height>321.10345459</height>
                         <depth>0</depth>
                         <hotspotX>0.453658551</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="sensorLimiteVertival" uid="31">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>3887</x>
-                        <y>-734</y>
-                        <z>0</z>
-                        <width>144</width>
-                        <height>48</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="sensorLimiteVertival" uid="32">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>4384</x>
-                        <y>-674</y>
-                        <z>0</z>
-                        <width>176</width>
-                        <height>48</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -15512,6 +15490,12 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <activa>true</activa>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -16263,7 +16247,7 @@
                 </instance>
                 <instance type="ctrSerpiente" uid="822">
                     <properties>
-                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -16272,6 +16256,7 @@
                         <direccion>1</direccion>
                     </instance-variables>
                     <behavior-instances>
+                        <behavior-instance type="Pin" />
                         <behavior-instance type="Platform">
                             <properties>
                                 <max-speed>200</max-speed>
@@ -16321,7 +16306,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="sensorCaida" uid="176">
+                <instance type="snsCaida" uid="176">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -16377,28 +16362,6 @@
                         <z>0</z>
                         <width>256</width>
                         <height>32</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="sensorColisionArriba" uid="226">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1968</x>
-                        <y>-208</y>
-                        <z>0</z>
-                        <width>16</width>
-                        <height>64</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -16464,20 +16427,23 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="snsReboteEnemigo" uid="111">
+                <instance type="snsReboteSerpiente" uid="111">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2316.491699219</x>
+                        <x>2340.491699219</x>
                         <y>416.920562744</y>
                         <z>0</z>
-                        <width>80</width>
+                        <width>32</width>
                         <height>160</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -16486,21 +16452,24 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="snsReboteEnemigo" uid="55">
+                <instance type="snsReboteSerpiente" uid="55">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1792</x>
-                        <y>416</y>
+                        <x>1744</x>
+                        <y>424</y>
                         <z>0</z>
-                        <width>128</width>
-                        <height>192</height>
+                        <width>32</width>
+                        <height>176</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -16611,6 +16580,78 @@
                         <z>0</z>
                         <width>112</width>
                         <height>320</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="snsMoverFamiliaSerpiente" uid="823">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>9408</x>
+                        <y>512</y>
+                        <z>0</z>
+                        <width>48</width>
+                        <height>160</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="snsEntradaPueblo" uid="824">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <nombrePueblo>Canaan</nombrePueblo>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>6176</x>
+                        <y>520</y>
+                        <z>0</z>
+                        <width>48</width>
+                        <height>160</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="snsEntradaPueblo" uid="31">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <nombrePueblo>prueba</nombrePueblo>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>4048</x>
+                        <y>512</y>
+                        <z>0</z>
+                        <width>48</width>
+                        <height>160</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -17033,7 +17074,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="snsReten" uid="19">
+                <instance type="snsRetenModal" uid="19">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -17104,7 +17145,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="snsReten" uid="28">
+                <instance type="snsRetenModal" uid="28">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>

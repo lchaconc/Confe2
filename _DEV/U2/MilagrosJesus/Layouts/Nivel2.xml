@@ -6009,7 +6009,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="ctrlSprite" uid="617">
+                <instance type="ctrlJugador" uid="617">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -6022,6 +6022,7 @@
                         <haciendoMilagro>false</haciendoMilagro>
                         <milagro>0</milagro>
                         <colisionHabilitada>false</colisionHabilitada>
+                        <puebloActual></puebloActual>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -6043,7 +6044,6 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Persist" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -6155,7 +6155,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="sensorCaida" uid="624">
+                <instance type="snsCaida" uid="624">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -6262,28 +6262,6 @@
                         <z>0</z>
                         <width>160</width>
                         <height>336</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="snsLimiteX" uid="659">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>3056</x>
-                        <y>288</y>
-                        <z>0</z>
-                        <width>96</width>
-                        <height>400</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

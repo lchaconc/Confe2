@@ -11,7 +11,7 @@
                     </conditions>
                     <actions>
                         <action id="-4" name="Set position to another object" sid="427185716649732" type="spriteJesus">
-                            <param id="0" name="Object">ctrlSprite</param>
+                            <param id="0" name="Object">ctrlJugador</param>
                             <param id="1" name="Image point (optional)">0</param>
                         </action>
                     </actions>
@@ -23,7 +23,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="960922357116295" type="ctrlSprite">
+                        <action behavior="Platform" id="7" name="Simulate control" sid="960922357116295" type="ctrlJugador">
                             <param id="0" name="Control">1</param>
                         </action>
                         <action id="7" name="Set mirrored" sid="739362649298519" type="spriteJesus">
@@ -38,7 +38,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="264988676820450" type="ctrlSprite">
+                        <action behavior="Platform" id="7" name="Simulate control" sid="264988676820450" type="ctrlJugador">
                             <param id="0" name="Control">0</param>
                         </action>
                         <action id="7" name="Set mirrored" sid="165144086688029" type="spriteJesus">
@@ -53,7 +53,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="182072666267417" type="ctrlSprite">
+                        <action behavior="Platform" id="7" name="Simulate control" sid="182072666267417" type="ctrlJugador">
                             <param id="0" name="Control">2</param>
                         </action>
                         <action id="4" name="Set animation" sid="363448588010876" type="spriteJesus">
@@ -100,7 +100,7 @@
             <sub-events>
                 <event-block sid="415039650993005">
                     <conditions>
-                        <condition behavior="Platform" id="4" name="Is falling" sid="212724553350211" type="ctrlSprite" />
+                        <condition behavior="Platform" id="4" name="Is falling" sid="212724553350211" type="ctrlJugador" />
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="202614897791040" type="spriteJesus">
@@ -111,13 +111,13 @@
                 </event-block>
                 <event-block sid="525092025512706">
                     <conditions>
-                        <condition behavior="Platform" id="0" name="Is moving" sid="236056475213068" type="ctrlSprite" />
+                        <condition behavior="Platform" id="0" name="Is moving" sid="236056475213068" type="ctrlJugador" />
                     </conditions>
                     <actions />
                     <sub-events>
                         <event-block sid="321734167229716">
                             <conditions>
-                                <condition behavior="Platform" id="3" inverted="1" name="Is jumping" sid="105790446535055" type="ctrlSprite" />
+                                <condition behavior="Platform" id="3" inverted="1" name="Is jumping" sid="105790446535055" type="ctrlJugador" />
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="866714282876509" type="spriteJesus">
@@ -130,8 +130,8 @@
                 </event-block>
                 <event-block sid="599513849095102">
                     <conditions>
-                        <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="417401175688388" type="ctrlSprite" />
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="366416659037082" type="ctrlSprite">
+                        <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="417401175688388" type="ctrlJugador" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="366416659037082" type="ctrlJugador">
                             <param id="0" name="Instance variable">haciendoMilagro</param>
                         </condition>
                     </conditions>
@@ -144,7 +144,7 @@
                 </event-block>
                 <event-block sid="769499415048263">
                     <conditions>
-                        <condition behavior="Platform" id="3" name="Is jumping" sid="938730607758140" type="ctrlSprite" />
+                        <condition behavior="Platform" id="3" name="Is jumping" sid="938730607758140" type="ctrlJugador" />
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="464719861451221" type="spriteJesus">
@@ -155,7 +155,7 @@
                 </event-block>
                 <event-block sid="913104525897266">
                     <conditions>
-                        <condition behavior="Platform" id="4" name="Is falling" sid="281542878900443" type="ctrlSprite" />
+                        <condition behavior="Platform" id="4" name="Is falling" sid="281542878900443" type="ctrlJugador" />
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="274416225624743" type="spriteJesus">
@@ -192,7 +192,7 @@
             <sub-events>
                 <event-block sid="904016001533987">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="195424520675098" type="ctrlSprite">
+                        <condition id="0" name="On collision with another object" sid="195424520675098" type="ctrlJugador">
                             <param id="0" name="Object">snsMilagro4</param>
                         </condition>
                     </conditions>
@@ -201,11 +201,11 @@
                         <action id="-15" name="Set visible" sid="142722445505958" type="btnZonaMilagro">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="-10" name="Set value" sid="411689855534691" type="ctrlSprite">
+                        <action id="-10" name="Set value" sid="411689855534691" type="ctrlJugador">
                             <param id="0" name="Instance variable">milagro</param>
                             <param id="1" name="Value">4</param>
                         </action>
-                        <action id="-13" name="Set boolean" sid="111403493664497" type="ctrlSprite">
+                        <action id="-13" name="Set boolean" sid="111403493664497" type="ctrlJugador">
                             <param id="0" name="Instance variable">colisionHabilitada</param>
                             <param id="1" name="Value">1</param>
                         </action>
@@ -225,10 +225,10 @@
                         <action id="-15" name="Set visible" sid="967790328373394" type="btnZonaMilagro">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action behavior="Platform" id="11" name="Set enabled" sid="252710748658986" type="ctrlSprite">
+                        <action behavior="Platform" id="11" name="Set enabled" sid="252710748658986" type="ctrlJugador">
                             <param id="0" name="State">0</param>
                         </action>
-                        <action id="-13" name="Set boolean" sid="352763278138508" type="ctrlSprite">
+                        <action id="-13" name="Set boolean" sid="352763278138508" type="ctrlJugador">
                             <param id="0" name="Instance variable">haciendoMilagro</param>
                             <param id="1" name="Value">1</param>
                         </action>
@@ -240,7 +240,7 @@
                     <sub-events>
                         <event-block sid="691209469287099">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="510019354313491" type="ctrlSprite">
+                                <condition id="-7" name="Compare instance variable" sid="510019354313491" type="ctrlJugador">
                                     <param id="0" name="Instance variable">milagro</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">4</param>
@@ -273,11 +273,7 @@
                     </sub-events>
                 </event-block>
                 <event-block sid="748809361425130">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="136145768183094" type="piedra">
-                            <param id="0" name="Object">snsLimiteX</param>
-                        </condition>
-                    </conditions>
+                    <conditions />
                     <actions>
                         <action behavior="Bullet" id="5" name="Set enabled" sid="552906637890250" type="piedra">
                             <param id="0" name="State">0</param>
@@ -293,14 +289,14 @@
                             <param id="0" name="Animation">&quot;celebrando&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action behavior="Platform" id="11" name="Set enabled" sid="769348299059384" type="ctrlSprite">
+                        <action behavior="Platform" id="11" name="Set enabled" sid="769348299059384" type="ctrlJugador">
                             <param id="0" name="State">1</param>
                         </action>
                         <action id="-3" name="Set position" sid="836441948923090" type="rayoMilagro">
                             <param id="0" name="X">-500</param>
                             <param id="1" name="Y">-500</param>
                         </action>
-                        <action id="-13" name="Set boolean" sid="918390191464161" type="ctrlSprite">
+                        <action id="-13" name="Set boolean" sid="918390191464161" type="ctrlJugador">
                             <param id="0" name="Instance variable">haciendoMilagro</param>
                             <param id="1" name="Value">0</param>
                         </action>
@@ -319,7 +315,7 @@
                         <condition id="-2" name="On start of layout" sid="418002755215662" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="971522501564573" type="sensores">
+                        <action id="-15" name="Set visible" sid="971522501564573" type="famSensores">
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="0" name="Play" sid="861634108269973" type="Audio">
@@ -329,7 +325,7 @@
                             <param id="1" name="Tag (optional)">&quot;fondo2&quot;</param>
                         </action>
                         <action id="0" name="Set text" sid="286000727276639" type="txtVidas">
-                            <param id="0" name="Text">ctrlSprite.vidas</param>
+                            <param id="0" name="Text">ctrlJugador.vidas</param>
                         </action>
                         <action behavior="Bullet" id="5" name="Set enabled" sid="318254779414365" type="letrero">
                             <param id="0" name="State">1</param>
@@ -337,11 +333,11 @@
                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="883216865925070" type="letrero">
                             <param id="0" name="Angle">90</param>
                         </action>
-                        <action id="-3" name="Set position" sid="894716908292750" type="ctrlSprite">
+                        <action id="-3" name="Set position" sid="894716908292750" type="ctrlJugador">
                             <param id="0" name="X">160</param>
                             <param id="1" name="Y">350</param>
                         </action>
-                        <action disabled="1" id="-3" name="Set position" sid="660264284414844" type="ctrlSprite">
+                        <action disabled="1" id="-3" name="Set position" sid="660264284414844" type="ctrlJugador">
                             <param id="0" name="X">7504</param>
                             <param id="1" name="Y">512</param>
                         </action>

@@ -25,7 +25,7 @@
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
-        <behavior author="Scirra" id="Persist" version="1">Persist</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
@@ -108,7 +108,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="ctrlSprite" sid="180039339925438">
+            <object-type name="ctrlJugador" sid="180039339925438">
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="vidas" sid="651130063913702" type="number" />
@@ -116,6 +116,7 @@
                     <instance-variable name="haciendoMilagro" sid="230760391385960" type="boolean" />
                     <instance-variable comment="Número de milagro que hace cuando colisiona con cada sensor de milagro" name="milagro" sid="949309576166064" type="number" />
                     <instance-variable name="colisionHabilitada" sid="730694336852284" type="boolean" />
+                    <instance-variable name="puebloActual" sid="881182173002957" type="string" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Platform" sid="580809431457455">
@@ -123,9 +124,6 @@
                     </behavior-type>
                     <behavior-type name="ScrollTo" sid="841888225199513">
                         <behavior id="scrollto" />
-                    </behavior-type>
-                    <behavior-type name="Persist" sid="231115551273450">
-                        <behavior id="Persist" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
@@ -136,6 +134,9 @@
             </object-type>
             <object-type name="serpiente" sid="205225710939435">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="activa" sid="230653661302678" type="boolean" />
+                </instance-variables>
                 <animation-folder>
                     <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="371850627303922" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
@@ -852,7 +853,7 @@
             </object-type>
         </object-folder>
         <object-folder name="sensores">
-            <object-type name="sensorCaida" sid="115644723619063">
+            <object-type name="snsCaida" sid="115644723619063">
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="colision" sid="599084499057089" type="boolean" />
@@ -883,26 +884,10 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="sensorColisionArriba" sid="683454234800459">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="686732840346228" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="snsReten" sid="918889967479866">
+            <object-type name="snsRetenModal" sid="918889967479866">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="426049731197013" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="sensorLimiteVertival" sid="156731893843925">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="965341515921504" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
@@ -915,7 +900,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="snsReboteEnemigo" sid="547254985387389">
+            <object-type name="snsReboteSerpiente" sid="547254985387389">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="316025779929663" speed="5">
@@ -971,10 +956,21 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="snsLimiteX" sid="820087176749222">
+            <object-type name="snsMoverFamiliaSerpiente" sid="791905583112862">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="710696389623673" speed="5">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="934436702612717" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="snsEntradaPueblo" sid="165597902925447">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="nombrePueblo" sid="408985376242313" type="string" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="119181780678442" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
@@ -1390,15 +1386,36 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-folder name="Contenedores">
+            <object-type name="cntSerpiente" sid="208250832831337">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="608192978616161" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
     </object-folder>
     <families>
-        <family name="sensores" plugin-id="Sprite" sid="719851249785450">
+        <family name="famSensores" plugin-id="Sprite" sid="719851249785450">
             <members>
                 <member>limites</member>
                 <member>sensorAnticaida</member>
-                <member>sensorCaida</member>
-                <member>sensorColisionArriba</member>
+                <member>snsCaida</member>
             </members>
+        </family>
+        <family name="famSerpiente" plugin-id="Sprite" sid="714076305762860">
+            <members>
+                <member>ctrSerpiente</member>
+                <member>serpiente</member>
+                <member>snsReboteSerpiente</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Pin" sid="895118924236700">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
         </family>
     </families>
     <layout-folder>
