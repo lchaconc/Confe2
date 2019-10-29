@@ -340,7 +340,7 @@
                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="143033719149921" type="letrero">
                             <param id="0" name="Angle">90</param>
                         </action>
-                        <action disabled="1" id="-3" name="Set position" sid="468064776699335" type="ctrlJugador">
+                        <action id="-3" name="Set position" sid="468064776699335" type="ctrlJugador">
                             <param id="0" name="X">176</param>
                             <param id="1" name="Y">160</param>
                         </action>
@@ -348,7 +348,7 @@
                             <param id="0" name="X">1744</param>
                             <param id="1" name="Y">424</param>
                         </action>
-                        <action id="-3" name="Set position" sid="663855469987200" type="ctrlJugador">
+                        <action disabled="1" id="-3" name="Set position" sid="663855469987200" type="ctrlJugador">
                             <param id="0" name="X">9120</param>
                             <param id="1" name="Y">544</param>
                         </action>
@@ -698,22 +698,22 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="438858349561877">
+                        <event-block sid="821844241754647">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="612343642819347" type="ctrlJugador">
-                                    <param id="0" name="Instance variable">puebloActual</param>
+                                <condition id="-7" name="Compare instance variable" sid="895426373899933" type="snsMoverFamiliaSerpiente">
+                                    <param id="0" name="Instance variable">contador</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Canaan&quot;</param>
+                                    <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="112369973575363" type="cntSerpiente">
-                                    <param id="0" name="X">9920</param>
-                                    <param id="1" name="Y">595</param>
+                                <action id="4" name="Set animation" sid="307109085355430" type="serpiente">
+                                    <param id="0" name="Animation">&quot;Serpiente2&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
-                                <action id="14" name="Log" sid="623920703042326" type="Browser">
-                                    <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">&quot;1 pos serpienbte X: &quot;  &amp; serpiente.X &amp; &quot; Y: &quot; &amp; serpiente.Y</param>
+                                <action id="-3" name="Set position" sid="112369973575363" type="cntSerpiente">
+                                    <param id="0" name="X">5680</param>
+                                    <param id="1" name="Y">520</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="249016819854529" type="System">
                                     <param id="0" name="Seconds">0.5</param>
@@ -725,7 +725,100 @@
                                 </action>
                                 <action id="14" name="Log" sid="645218579550896" type="Browser">
                                     <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot; 1 pos serpienbte X: &quot;  &amp; serpiente.X &amp; &quot; Y: &quot; &amp; serpiente.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="823535598463738">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="225999595950638" type="snsMoverFamiliaSerpiente">
+                                    <param id="0" name="Instance variable">contador</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="427428599564840" type="serpiente">
+                                    <param id="0" name="Animation">&quot;Serpiente1&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="669576544576057" type="cntSerpiente">
+                                    <param id="0" name="X">7808</param>
+                                    <param id="1" name="Y">350</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="311902430406495" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action behavior="Pin" id="1" name="Unpin" sid="864524331103691" type="famSerpiente" />
+                                <action id="-24" name="Move to top" sid="883188380896491" type="famSerpiente" />
+                                <action behavior="Platform" id="11" name="Set enabled" sid="244155770174515" type="ctrSerpiente">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="14" name="Log" sid="136673571495031" type="Browser">
+                                    <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot; 2 pos serpienbte X: &quot;  &amp; serpiente.X &amp; &quot; Y: &quot; &amp; serpiente.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="922092807561735">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="304509517539244" type="snsMoverFamiliaSerpiente">
+                                    <param id="0" name="Instance variable">contador</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="142393992280595" type="serpiente">
+                                    <param id="0" name="Animation">&quot;Serpiente1&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="278079364702591" type="cntSerpiente">
+                                    <param id="0" name="X">10096</param>
+                                    <param id="1" name="Y">450</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="803835649459249" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action behavior="Pin" id="1" name="Unpin" sid="473663579095705" type="famSerpiente" />
+                                <action id="-24" name="Move to top" sid="993765214807647" type="famSerpiente" />
+                                <action behavior="Platform" id="11" name="Set enabled" sid="593755495725319" type="ctrSerpiente">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="14" name="Log" sid="524464103189395" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot; 3 pos serpienbte X: &quot;  &amp; serpiente.X &amp; &quot; Y: &quot; &amp; serpiente.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="216768352453667">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="927320144454032" type="snsMoverFamiliaSerpiente">
+                                    <param id="0" name="Instance variable">contador</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="996594721273130" type="serpiente">
+                                    <param id="0" name="Animation">&quot;Serpiente1&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="842160931030500" type="cntSerpiente">
+                                    <param id="0" name="X">13072</param>
+                                    <param id="1" name="Y">300</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="884267041207745" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action behavior="Pin" id="1" name="Unpin" sid="698262167277915" type="famSerpiente" />
+                                <action id="-24" name="Move to top" sid="301384512057728" type="famSerpiente" />
+                                <action behavior="Platform" id="11" name="Set enabled" sid="122065293345728" type="ctrSerpiente">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="14" name="Log" sid="203082767860874" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot; 4 pos serpienbte X: &quot;  &amp; serpiente.X &amp; &quot; Y: &quot; &amp; serpiente.Y</param>
                                 </action>
                             </actions>
                         </event-block>
