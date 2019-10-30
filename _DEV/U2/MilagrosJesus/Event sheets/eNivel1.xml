@@ -349,8 +349,8 @@
                             <param id="1" name="Y">424</param>
                         </action>
                         <action id="-3" name="Set position" sid="663855469987200" type="ctrlJugador">
-                            <param id="0" name="X">9120</param>
-                            <param id="1" name="Y">544</param>
+                            <param id="0" name="X">7888</param>
+                            <param id="1" name="Y">416</param>
                         </action>
                         <action behavior="Pin" id="0" name="Pin to object" sid="549759902431098" type="famSerpiente">
                             <param id="0" name="Pin to">cntSerpiente</param>
@@ -610,7 +610,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="946244786104024" title="Ineraccion Personaje - Sensores">
+        <event-group description="" sid="946244786104024" title="Ineraccion Personaje - Sensores (milagros)">
             <sub-events>
                 <event-block sid="558911017042035">
                     <conditions>
@@ -873,36 +873,19 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-3" name="Set position" sid="956828171999541" type="virgenMaria">
+                                    <param id="0" name="X">8368</param>
+                                    <param id="1" name="Y">656</param>
+                                </action>
                                 <action id="-15" name="Set visible" sid="576700591967714" type="virgenMaria">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="575536584555723" type="System">
-                                    <param id="0" name="Seconds">2</param>
-                                </action>
-                                <action id="-4" name="Set position to another object" sid="297557289709030" type="rayoMilagro">
-                                    <param id="0" name="Object">spriteJesus</param>
-                                    <param id="1" name="Image point (optional)">0</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="775571118018649" type="spriteJesus">
-                                    <param id="0" name="Animation">&quot;Orando&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="730587368259520" type="System">
-                                    <param id="0" name="Seconds">2</param>
-                                </action>
-                                <action behavior="Platform" id="11" name="Set enabled" sid="971952164970099" type="ctrlJugador">
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="845823723271182" type="virgenMaria">
                                     <param id="0" name="State">1</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="729832032616025" type="rayoMilagro">
-                                    <param id="0" name="X">-500</param>
-                                    <param id="1" name="Y">-500</param>
-                                </action>
-                                <action id="-13" name="Set boolean" sid="701232317812064" type="ctrlJugador">
-                                    <param id="0" name="Instance variable">haciendoMilagro</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="388488547650599" type="virgenMaria">
-                                    <param id="0" name="Visibility">0</param>
+                                <action id="4" name="Set animation" sid="274376239543726" type="virgenMaria">
+                                    <param id="0" name="Animation">&quot;Caminando&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -941,6 +924,64 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="484248343048895">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="864265439297308" type="virgenMaria">
+                            <param id="0" name="Object">spriteJesus</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="365157456573497" type="virgenMaria">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="331799722076226" type="virgenMaria">
+                            <param id="0" name="Animation">&quot;Orando&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="198366534286435" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="647056344242036" type="virgenMaria">
+                            <param id="0" name="X">virgenMaria.X - 50</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="403466882925817" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="775571118018649" type="spriteJesus">
+                            <param id="0" name="Animation">&quot;Orando&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="961311870302145" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="297557289709030" type="rayoMilagro">
+                            <param id="0" name="Object">spriteJesus</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="730587368259520" type="System">
+                            <param id="0" name="Seconds">2.5</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="729832032616025" type="rayoMilagro">
+                            <param id="0" name="X">-500</param>
+                            <param id="1" name="Y">-500</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="308858256242335" type="spriteJesus">
+                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="971952164970099" type="ctrlJugador">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="701232317812064" type="ctrlJugador">
+                            <param id="0" name="Instance variable">haciendoMilagro</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="349710320959108" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="388488547650599" type="virgenMaria" />
+                    </actions>
                 </event-block>
                 <event-block sid="657518178042395">
                     <conditions>
