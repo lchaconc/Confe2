@@ -11,9 +11,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">Splash</layout>
-        <layout order="1">Nivel1</layout>
+        <layout active="1" order="1">Nivel1</layout>
         <layout order="3">Nivel2</layout>
-        <event-sheet active="1" order="2">eNivel1</event-sheet>
+        <event-sheet order="2">eNivel1</event-sheet>
         <event-sheet order="4">eNivel2</event-sheet>
         <event-sheet order="5">eSpalsh</event-sheet>
     </open-tabs>
@@ -25,21 +25,21 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </properties>
     <families-expanded root="1">
         <family expanded="0" name="famSensores" />
-        <family expanded="1" name="famSerpiente" />
+        <family expanded="0" name="famSerpiente" />
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
-        <folder expanded="0" path="object-folder/Personajes/" />
+        <folder expanded="1" path="object-folder/Personajes/" />
         <folder expanded="0" path="object-folder/logos/" />
         <folder expanded="0" path="object-folder/Fondos/" />
-        <folder expanded="1" path="object-folder/system/" />
+        <folder expanded="0" path="object-folder/system/" />
         <folder expanded="0" path="object-folder/Botones/" />
         <folder expanded="0" path="object-folder/Objetos/" />
-        <folder expanded="0" path="object-folder/visor/" />
-        <folder expanded="0" path="object-folder/inventario/" />
-        <folder expanded="0" path="object-folder/texts/" />
+        <folder expanded="1" path="object-folder/visor/" />
+        <folder expanded="0" path="object-folder/GUI/" />
+        <folder expanded="0" path="object-folder/Textos/" />
         <folder expanded="0" path="object-folder/Efectos/" />
-        <folder expanded="1" path="object-folder/sensores/" />
+        <folder expanded="0" path="object-folder/sensores/" />
         <folder expanded="0" path="object-folder/Baldosas/" />
         <folder expanded="0" path="object-folder/Ambiente/" />
         <folder expanded="0" path="object-folder/Contenedores/" />
@@ -47,7 +47,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="event-folder/" />
         <folder expanded="0" path="file-folder/" />
         <folder expanded="0" path="sound-folder/" />
-        <folder expanded="1" path="music-folder/" />
+        <folder expanded="0" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
         <folder expanded="1" path="animation-folder/spriteJesus/" />
         <folder expanded="1" path="animation-folder/ctrlJugador/" />
@@ -78,10 +78,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/btnZonaMilagro/" />
         <folder expanded="1" path="animation-folder/paloma/" />
         <folder expanded="1" path="animation-folder/progress_bar/" />
-        <folder expanded="1" path="animation-folder/corazonVida/" />
-        <folder expanded="1" path="animation-folder/invPaloma1/" />
-        <folder expanded="1" path="animation-folder/invPaloma2/" />
-        <folder expanded="1" path="animation-folder/invPaloma3/" />
+        <folder expanded="1" path="animation-folder/guiPaloma/" />
+        <folder expanded="1" path="animation-folder/guiContadorPaloma/" />
+        <folder expanded="1" path="animation-folder/guiCorazonVida1/" />
+        <folder expanded="1" path="animation-folder/guiCorazonVida2/" />
+        <folder expanded="1" path="animation-folder/guiCorazonVida3/" />
+        <folder expanded="1" path="animation-folder/guiBaseBarra/" />
+        <folder expanded="1" path="animation-folder/guiBarraSalud/" />
         <folder expanded="1" path="animation-folder/jesus/" />
         <folder expanded="1" path="animation-folder/luzBlanca/" />
         <folder expanded="1" path="animation-folder/explosion_colores/" />

@@ -361,7 +361,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="509714760924478" title="Interacciones Personaje - Ambiente">
+        <event-group description="" sid="509714760924478" title="Interacciones Personaje - Ambiente: cajas">
             <sub-events>
                 <event-block sid="186160106432015">
                     <conditions>
@@ -445,9 +445,8 @@
                                     <param id="0" name="Instance variable">palomas</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="0" name="Call function" sid="284820555886110" type="Function">
-                                    <param id="0" name="Name">&quot;cazarPalomas&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
+                                <action id="0" name="Set text" sid="975438919506853" type="txtPalomas">
+                                    <param id="0" name="Text">ctrlJugador.palomas</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -521,6 +520,13 @@
                                     <param id="0" name="&apos;On&apos; time">0.1</param>
                                     <param id="1" name="&apos;Off&apos; time">0.1</param>
                                     <param id="2" name="Duration">1.0</param>
+                                </action>
+                                <action id="-12" name="Subtract from" sid="540689726494374" type="ctrlJugador">
+                                    <param id="0" name="Instance variable">salud</param>
+                                    <param id="1" name="Value">32</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="225271806843970" type="guiBarraSalud">
+                                    <param id="0" name="Width">ctrlJugador.salud</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1128,63 +1134,30 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="768530592096997" title="GUI - Inventario">
+        <event-group description="" sid="768530592096997" title="GUI - Inventario" />
+        <event-group description="" sid="740053127096908" title="Restar vidas jugador">
             <sub-events>
-                <event-block sid="302653535956802">
+                <event-block sid="208819235768184">
                     <conditions>
-                        <condition id="0" name="On function" sid="693282520758343" type="Function">
-                            <param id="0" name="Name">&quot;cazarPalomas&quot;</param>
+                        <condition id="-7" name="Compare instance variable" sid="394126667323878" type="ctrlJugador">
+                            <param id="0" name="Instance variable">salud</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="616814883491316">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="854660145262088" type="ctrlJugador">
-                                    <param id="0" name="Instance variable">palomas</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="1" name="Set blend mode" sid="722365286493276" type="invPaloma1">
-                                    <param id="0" name="Blend mode">0</param>
-                                </action>
-                                <action id="9" name="Set scale" sid="300016909968243" type="invPaloma1">
-                                    <param id="0" name="Scale">1.5</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="727816402017235" type="System">
-                                    <param id="0" name="Seconds">0.5</param>
-                                </action>
-                                <action id="9" name="Set scale" sid="563246483096990" type="invPaloma1">
-                                    <param id="0" name="Scale">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="553775961682730">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="914544838514106" type="ctrlJugador">
-                                    <param id="0" name="Instance variable">palomas</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">2</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="1" name="Set blend mode" sid="884888009710709" type="invPaloma2">
-                                    <param id="0" name="Blend mode">0</param>
-                                </action>
-                                <action id="9" name="Set scale" sid="295011758535083" type="invPaloma2">
-                                    <param id="0" name="Scale">1.5</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="449795466328133" type="System">
-                                    <param id="0" name="Seconds">0.5</param>
-                                </action>
-                                <action id="9" name="Set scale" sid="447534610741703" type="invPaloma2">
-                                    <param id="0" name="Scale">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="375584591747488" type="ctrlJugador">
+                            <param id="0" name="Instance variable">vidas</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="344951964222543" type="ctrlJugador">
+                            <param id="0" name="Instance variable">salud</param>
+                            <param id="1" name="Value">128</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="193166216065382" type="guiBarraSalud">
+                            <param id="0" name="Width">ctrlJugador.salud</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

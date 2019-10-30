@@ -118,6 +118,7 @@
                     <instance-variable comment="Número de milagro que hace cuando colisiona con cada sensor de milagro" name="milagro" sid="949309576166064" type="number" />
                     <instance-variable name="colisionHabilitada" sid="730694336852284" type="boolean" />
                     <instance-variable name="puebloActual" sid="881182173002957" type="string" />
+                    <instance-variable name="salud" sid="869439663459477" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Platform" sid="580809431457455">
@@ -506,7 +507,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="413524923845397" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\assets\img_arrow.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504348" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Botones\btnAtras.png">
                             <collision-poly>
                                 <point x="1" y="0" />
                                 <point x="1" y="1" />
@@ -529,7 +530,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="874450133150333" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\assets\img_arrow.png">
+                        <frame duration="1" hotspotX="0.504348" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Botones\btnArriba.png">
                             <collision-poly>
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
@@ -544,7 +545,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="447936978616775" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\assets\img_arrow.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Botones\btnAdelante.png">
                             <collision-poly>
                                 <point x="0" y="1" />
                                 <point x="0" y="0" />
@@ -627,33 +628,9 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="corazonVida" sid="973635770480894">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="271012072817174" speed="5">
-                        <frame duration="1" hotspotX="0.505263" hotspotY="0.5" original-source="D:\Users\lchaconc\Desktop\corazon.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
         </object-folder>
-        <object-folder name="inventario">
-            <object-type name="invPaloma1" sid="415192306182619">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="552806144266457" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Animaciones\Paloma\U2_0000_palomalasarriba.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="invPaloma2" sid="825661698623774">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="364490357202790" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Animaciones\Paloma\U2_0000_palomalasarriba.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="invPaloma3" sid="126923741832234">
+        <object-folder name="GUI">
+            <object-type name="guiPaloma" sid="126923741832234">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="510794331737611" speed="5">
@@ -661,8 +638,65 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="guiContadorPaloma" sid="633948262246641">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="483927014193244" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Botones\contadorpalomas.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="guiCorazonVida1" sid="973635770480894">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Rojo" pingpong="0" repeatcount="1" repeatto="0" sid="271012072817174" speed="5">
+                        <frame duration="1" hotspotX="0.509091" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Botones\vida.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Completo" pingpong="0" repeatcount="1" repeatto="0" sid="536207285922433" speed="5">
+                        <frame duration="1" hotspotX="0.509091" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Botones\vidaoff.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="guiCorazonVida2" sid="262365369434659">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Rojo" pingpong="0" repeatcount="1" repeatto="0" sid="163909513702809" speed="5">
+                        <frame duration="1" hotspotX="0.509091" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Botones\vida.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Completo" pingpong="0" repeatcount="1" repeatto="0" sid="394599176241364" speed="5">
+                        <frame duration="1" hotspotX="0.509091" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Botones\vidaoff.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="guiCorazonVida3" sid="672473145626383">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Rojo" pingpong="0" repeatcount="1" repeatto="0" sid="205787912991622" speed="5">
+                        <frame duration="1" hotspotX="0.509091" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Botones\vida.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Completo" pingpong="0" repeatcount="1" repeatto="0" sid="213691696092783" speed="5">
+                        <frame duration="1" hotspotX="0.509091" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Botones\vidaoff.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="guiBaseBarra" sid="387079420321152">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="595284156084582" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="guiBarraSalud" sid="579964391496047">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="738148695823916" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
-        <object-folder name="texts">
+        <object-folder name="Textos">
             <object-type name="txtConsignas" sid="633791259052584">
                 <plugin id="Text" />
             </object-type>
@@ -681,6 +715,9 @@
                 <plugin id="Text" />
             </object-type>
             <object-type name="txtGUI" sid="692320040800115">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="txtPalomas" sid="285212617731497">
                 <plugin id="Text" />
             </object-type>
         </object-folder>
