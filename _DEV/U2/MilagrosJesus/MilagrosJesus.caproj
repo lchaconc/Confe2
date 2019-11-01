@@ -449,7 +449,17 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="908178305042155" speed="5">
-                        <frame duration="1" hotspotX="0.500273" hotspotY="0.501002" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Ambiente\ciudadCANAANMilagros.png" />
+                        <frame duration="1" hotspotX="0.475945" hotspotY="0.500998" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Fondos\ciudadCANAANMilagros.png">
+                            <collision-poly>
+                                <point x="0.00687285" y="0.193613" />
+                                <point x="0.475372" y="0.578842" />
+                                <point x="0.916953" y="0.289421" />
+                                <point x="0.972509" y="0.499002" />
+                                <point x="0.997709" y="0.992016" />
+                                <point x="0.475372" y="0.994012" />
+                                <point x="0.00286369" y="0.820359" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -464,6 +474,38 @@
             <object-type name="bgNoche" sid="892584811506127">
                 <plugin id="TiledBg" />
                 <texture original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Fondos\cielonocheMilagros.png" />
+            </object-type>
+            <object-type name="bgEdificio2" sid="905377463985601">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="311415498555072" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Fondos\edificiosencillo.png">
+                            <collision-poly>
+                                <point x="0.00526316" y="0.0208333" />
+                                <point x="0.5" y="0.00520833" />
+                                <point x="0.993421" y="0.0260417" />
+                                <point x="0.993421" y="0.973958" />
+                                <point x="0.5" y="0.994792" />
+                                <point x="0.00657895" y="0.973958" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="estrellas" sid="363452452113610">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="118770052606758" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Fondos\estrellasgrupoMilagros.png">
+                            <collision-poly>
+                                <point x="0.971774" y="0.105263" />
+                                <point x="0.0534274" y="0.5" />
+                                <point x="0.995968" y="0.984962" />
+                                <point x="0.0504032" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
         <object-folder name="system">
@@ -1354,16 +1396,48 @@
             <object-type name="canastaPanes" sid="578412474411368">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="653881585750644" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="653881585750644" speed="2">
+                        <frame duration="1" hotspotX="0.503497" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Animaciones\Panes\panes_0003_panes1.png">
+                            <collision-poly>
+                                <point x="0.160839" y="0.235294" />
+                                <point x="0.608392" y="0.0235294" />
+                                <point x="0.874126" y="0.552941" />
+                                <point x="0.86014" y="0.4" />
+                                <point x="0.608392" y="0.988235" />
+                                <point x="0.041958" y="0.776471" />
+                                <point x="0.167832" y="0.4" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="4" loop="0" name="Multiplicacion" pingpong="0" repeatcount="1" repeatto="0" sid="938138569200908" speed="2">
+                        <frame duration="1" hotspotX="0.503497" hotspotY="1">
+                            <collision-poly>
+                                <point x="0.160839" y="0.235294" />
+                                <point x="0.608392" y="0.0235294" />
+                                <point x="0.874126" y="0.552941" />
+                                <point x="0.86014" y="0.4" />
+                                <point x="0.608392" y="0.988235" />
+                                <point x="0.041958" y="0.776471" />
+                                <point x="0.167832" y="0.4" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.503448" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.502347" hotspotY="1" />
                     </animation>
                 </animation-folder>
             </object-type>
             <object-type name="canastaPEces" sid="847583787831321">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="648860855545603" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="648860855545603" speed="2">
+                        <frame duration="1" hotspotX="0.503497" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Animaciones\Peces\peces1.png" />
+                    </animation>
+                    <animation framecount="4" loop="0" name="Multiplicacion" pingpong="0" repeatcount="1" repeatto="0" sid="210428114087700" speed="2">
+                        <frame duration="1" hotspotX="0.503497" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1452,6 +1526,90 @@
                                 <point x="0.00985223" y="0.69145" />
                                 <point x="0.0640395" y="0.267658" />
                                 <point x="0.423645" y="0.0223048" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="luna" sid="603770253734713">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="423582632737594" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Ambiente\LunaMilagros.png">
+                            <collision-poly>
+                                <point x="0.241935" y="0.241935" />
+                                <point x="0.5" y="0.13871" />
+                                <point x="0.754839" y="0.245161" />
+                                <point x="0.86129" y="0.5" />
+                                <point x="0.758065" y="0.758065" />
+                                <point x="0.5" y="0.864516" />
+                                <point x="0.23871" y="0.76129" />
+                                <point x="0.132258" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="rotuloCanaan" sid="825144275567395">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="668237103591716" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Ambiente\rotuloCanaan.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="nube1" sid="120069109077115">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="115870168992716" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Ambiente\nube1Milagros.png">
+                            <collision-poly>
+                                <point x="0.20122" y="0.485294" />
+                                <point x="0.5" y="0.205882" />
+                                <point x="0.871951" y="0.308824" />
+                                <point x="0.878049" y="0.5" />
+                                <point x="0.926829" y="0.823529" />
+                                <point x="0.5" y="0.985294" />
+                                <point x="0.0609756" y="0.852941" />
+                                <point x="0.20122" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="nube2" sid="651832042241673">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="675601392331016" speed="5">
+                        <frame duration="1" hotspotX="0.502222" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Ambiente\nube2Milagros.png">
+                            <collision-poly>
+                                <point x="0.128889" y="0.453125" />
+                                <point x="0.497778" y="0.140625" />
+                                <point x="0.813333" y="0.65625" />
+                                <point x="0.795556" y="0.5" />
+                                <point x="0.977778" y="0.921875" />
+                                <point x="0.497778" y="0.953125" />
+                                <point x="0.04" y="0.859375" />
+                                <point x="0.124444" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="nube3" sid="823683678253688">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="964467378395020" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.506173" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Ambiente\nube3Milagros.png">
+                            <collision-poly>
+                                <point x="0.236264" y="0.530864" />
+                                <point x="0.5" y="0" />
+                                <point x="0.807692" y="0.432099" />
+                                <point x="0.813187" y="0.493827" />
+                                <point x="0.983516" y="0.962963" />
+                                <point x="0.5" y="1" />
+                                <point x="0.0164835" y="0.962963" />
+                                <point x="0.252747" y="0.493827" />
                             </collision-poly>
                         </frame>
                     </animation>
