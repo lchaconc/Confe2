@@ -30,6 +30,7 @@
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -165,56 +166,44 @@
             <object-type name="romano" sid="510840511185944">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="7" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="107910894233545" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Romano\1.png">
+                    <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="107910894233545" speed="3">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Romano\r6.png">
                             <collision-poly>
                                 <point x="1" y="1" />
-                                <point x="0.786429" y="0.99" />
-                                <point x="0.772143" y="0.0466667" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
                                 <point x="1" y="0" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Romano\2.png">
-                            <collision-poly>
-                                <point x="0.737857" y="0" />
-                                <point x="0.993571" y="0" />
-                                <point x="0.982857" y="1" />
-                                <point x="0.707857" y="1" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Romano\3.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Romano\r1.png">
                             <collision-poly>
                                 <point x="1" y="1" />
-                                <point x="0.558572" y="0.27" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
                                 <point x="1" y="0" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Romano\4.png">
+                        <frame duration="1" hotspotX="0.497143" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Romano\r2.png">
                             <collision-poly>
                                 <point x="1" y="1" />
-                                <point x="0.408571" y="0.19" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
                                 <point x="1" y="0" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Romano\5.png">
+                        <frame duration="1" hotspotX="0.496644" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Romano\r4.png">
                             <collision-poly>
                                 <point x="1" y="1" />
-                                <point x="0.222143" y="0.246667" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
                                 <point x="1" y="0" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Romano\6.png">
+                        <frame duration="1" hotspotX="0.496183" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Romano\r5.png">
                             <collision-poly>
                                 <point x="1" y="1" />
-                                <point x="0.189286" y="0.253333" />
-                                <point x="1" y="0" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Romano\7.png">
-                            <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0.685" y="1" />
-                                <point x="0.681428" y="0.0166666" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
                                 <point x="1" y="0" />
                             </collision-poly>
                         </frame>
@@ -1013,6 +1002,9 @@
             </object-type>
             <object-type name="snsActivarRomano" sid="277158337402398">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="ataque" sid="282859168412314" type="number" />
+                </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="251817935093602" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -1622,6 +1614,39 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="608192978616161" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Armas">
+            <object-type name="lanza" sid="404868762025631">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="897263196286028">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="DestroyOutsideLayout" sid="341415629739471">
+                        <behavior id="destroy" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="105728673744906" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.490909" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Romano\lanzasola.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0.294118" y="0.654545" />
+                                <point x="0" y="0" />
+                                <point x="0.564706" y="0.272727" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="lanzadorLanza" sid="358975254818252">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="652996731426837" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>

@@ -641,30 +641,115 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="319755208171356" type="snsActivarRomano" />
-                        <action id="-16" name="Wait" sid="273041985786711" type="System">
-                            <param id="0" name="Seconds">1.0</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="604704965371206" type="romano">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="919426411381832" type="System">
-                            <param id="0" name="Seconds">0.5</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="349850175029980" type="romano">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="699080507797704" type="System">
-                            <param id="0" name="Seconds">1.0</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="896128775712834" type="romano" />
                     </actions>
+                    <sub-events>
+                        <event-block sid="266555363535891">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="571067302893731" type="snsActivarRomano">
+                                    <param id="0" name="Instance variable">ataque</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="768948231629013" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="0" name="Call function" sid="983631948117200" type="Function">
+                                    <param id="0" name="Name">&quot;lanzarLanza&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-16" name="Wait" sid="174286381772323" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="0" name="Call function" sid="997436843074433" type="Function">
+                                    <param id="0" name="Name">&quot;lanzarLanza&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-16" name="Wait" sid="520771337539273" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="0" name="Call function" sid="576778264633539" type="Function">
+                                    <param id="0" name="Name">&quot;lanzarLanza&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-16" name="Wait" sid="699080507797704" type="System">
+                                    <param id="0" name="Seconds">4</param>
+                                </action>
+                                <action id="0" name="Call function" sid="485460171001441" type="Function">
+                                    <param id="0" name="Name">&quot;lanzarLanza&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-16" name="Wait" sid="802224672012996" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="896128775712834" type="romano">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="193686086557635">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="166279160914160" type="snsActivarRomano">
+                                    <param id="0" name="Instance variable">ataque</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="588561140012619" type="romano">
+                                    <param id="0" name="X">17360</param>
+                                    <param id="1" name="Y">624</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="857328810926506" type="romano">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="815233165910433" type="lanzadorLanza">
+                                    <param id="0" name="X">17324</param>
+                                    <param id="1" name="Y">544</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="329967163337032" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="0" name="Call function" sid="646874597133088" type="Function">
+                                    <param id="0" name="Name">&quot;lanzarLanza&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-16" name="Wait" sid="996262308239630" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="0" name="Call function" sid="182907222273369" type="Function">
+                                    <param id="0" name="Name">&quot;lanzarLanza&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-16" name="Wait" sid="242284928096378" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="0" name="Call function" sid="623923973165344" type="Function">
+                                    <param id="0" name="Name">&quot;lanzarLanza&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-16" name="Wait" sid="583628247853868" type="System">
+                                    <param id="0" name="Seconds">4</param>
+                                </action>
+                                <action id="0" name="Call function" sid="736330617873734" type="Function">
+                                    <param id="0" name="Name">&quot;lanzarLanza&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-16" name="Wait" sid="937742803310195" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="508432834738376" type="romano">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="822065151050332">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="440468460592669" type="ctrlJugador">
-                            <param id="0" name="Object">romano</param>
+                        <condition id="0" name="On collision with another object" sid="440468460592669" type="spriteJesus">
+                            <param id="0" name="Object">lanza</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -714,6 +799,33 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="349107075425599">
+                    <conditions>
+                        <condition id="0" name="On function" sid="783478666291317" type="Function">
+                            <param id="0" name="Name">&quot;lanzarLanza&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="604704965371206" type="romano">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="919426411381832" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="350063330738555" type="lanzadorLanza">
+                            <param id="0" name="Object">lanza</param>
+                            <param id="1" name="Layer">&quot;Principal&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="147236881574395" type="lanza">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="958524473623256" type="lanza">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
