@@ -369,6 +369,7 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <variable constant="0" name="primeraCArga" sid="429407444883491" static="0" type="number">1</variable>
         <event-group description="" sid="322774359884925" title="on_Load">
             <sub-events>
                 <event-block sid="288689659712528">
@@ -402,7 +403,7 @@
                         <action id="0" name="Set text" sid="621763358523414" type="txtVidas">
                             <param id="0" name="Text">ctrlJugador.vidas</param>
                         </action>
-                        <action disabled="1" id="-3" name="Set position" sid="468064776699335" type="ctrlJugador">
+                        <action id="-3" name="Set position" sid="468064776699335" type="ctrlJugador">
                             <param id="0" name="X">176</param>
                             <param id="1" name="Y">160</param>
                         </action>
@@ -411,11 +412,6 @@
                         </action>
                         <action id="-15" name="Set visible" sid="198908216649934" type="spriteJesus">
                             <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action behavior="Flash" id="0" name="Flash" sid="901194584346909" type="spriteJesus">
-                            <param id="0" name="&apos;On&apos; time">0.1</param>
-                            <param id="1" name="&apos;Off&apos; time">0.1</param>
-                            <param id="2" name="Duration">1.0</param>
                         </action>
                         <action behavior="Pin" id="0" name="Pin to object" sid="549759902431098" type="famSerpiente">
                             <param id="0" name="Pin to">cntSerpiente</param>
@@ -459,6 +455,35 @@
                             <param id="0" name="Text">0</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="403933984476837">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="639386436106876" type="System">
+                                    <param id="0" name="Variable">primeraCArga</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="663028223621635" type="System">
+                                    <param id="0" name="Variable">primeraCArga</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="123599725642275">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="434268499487690" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Flash" id="0" name="Flash" sid="901194584346909" type="spriteJesus">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">1.0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -757,6 +782,13 @@
                             <param id="0" name="&apos;On&apos; time">0.1</param>
                             <param id="1" name="&apos;Off&apos; time">0.1</param>
                             <param id="2" name="Duration">1.0</param>
+                        </action>
+                        <action id="-12" name="Subtract from" sid="785379296318749" type="ctrlJugador">
+                            <param id="0" name="Instance variable">salud</param>
+                            <param id="1" name="Value">32</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="509174377941775" type="guiBarraSalud">
+                            <param id="0" name="Width">ctrlJugador.salud</param>
                         </action>
                     </actions>
                 </event-block>
