@@ -76,7 +76,7 @@
                                 <action id="-16" name="Wait" sid="234703279189797" type="System">
                                     <param id="0" name="Seconds">0.5</param>
                                 </action>
-                                <action behavior="Bullet" id="5" name="Set enabled" sid="219702960113601" type="piedra">
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="219702960113601" type="piedraNegra">
                                     <param id="0" name="State">1</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="984136488737515" type="niebla">
@@ -89,12 +89,12 @@
                 </event-block>
                 <event-block sid="414233591060016">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="396763019592389" type="piedra">
+                        <condition id="0" name="On collision with another object" sid="396763019592389" type="piedraNegra">
                             <param id="0" name="Object">snsReten</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Bullet" id="5" name="Set enabled" sid="552906637890250" type="piedra">
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="552906637890250" type="piedraNegra">
                             <param id="0" name="State">0</param>
                         </action>
                         <action id="-15" name="Set visible" sid="587330166579319" type="lazaro">

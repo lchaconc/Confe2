@@ -496,6 +496,40 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="palmeraFondo" sid="563171710205388">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="355126902770829" speed="5">
+                        <frame duration="1" hotspotX="0.502762" hotspotY="0.502075" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Fondos\palmerasilueta.png">
+                            <collision-poly>
+                                <point x="0.342541" y="0.257261" />
+                                <point x="0.502762" y="0.0622407" />
+                                <point x="0.856354" y="0.112033" />
+                                <point x="0.646409" y="0.497925" />
+                                <point x="0.889503" y="0.912863" />
+                                <point x="0.502762" y="0.746888" />
+                                <point x="0.375691" y="0.717842" />
+                                <point x="0.226519" y="0.497925" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="muro" sid="835715804068558">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="825978436990223" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Baldosas\Asset 88Milagros.png">
+                            <collision-poly>
+                                <point x="0.0111111" y="0.0111111" />
+                                <point x="0.988889" y="0.0111111" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="system">
             <object-type name="Touch" sid="579146676650647">
@@ -659,8 +693,10 @@
             <object-type name="guiPaloma" sid="126923741832234">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="510794331737611" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Animaciones\Paloma\U2_0000_palomalasarriba.png" />
+                    <animation framecount="3" loop="0" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="510794331737611" speed="6">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Animaciones\Paloma\U2_0000_palomalasarriba.png" />
+                        <frame duration="1" hotspotX="0.510204" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Animaciones\Paloma\U2_0001_palomalasmedio.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Animaciones\Paloma\U2_0002_palomalasbajo.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1243,6 +1279,30 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="rampaDesierto" sid="859993266915071">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="175294049868393">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="777419456731273" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Baldosas\baldosadesnivel1.png">
+                            <collision-poly>
+                                <point x="0.00137741" y="0.77907" />
+                                <point x="0.239669" y="0.790698" />
+                                <point x="0.243802" y="0.55814" />
+                                <point x="0.490358" y="0.52907" />
+                                <point x="0.491736" y="0.319768" />
+                                <point x="0.998623" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Ambiente">
             <object-type name="Palmera" sid="981415768674489">
@@ -1433,30 +1493,6 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="panes" sid="931050430165531">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="901565995093021" speed="3">
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Animaciones\Panes\pan1.png" />
-                        <frame duration="1" hotspotX="0.503401" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Animaciones\Panes\pan2.png" />
-                        <frame duration="1" hotspotX="0.502347" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Animaciones\Panes\pan3.png" />
-                        <frame duration="1" hotspotX="0.501672" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Animaciones\Panes\pan4.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Animaciones\Panes\pan5.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="peces" sid="753551987642259">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="873278092052731" speed="3">
-                        <frame duration="1" hotspotX="0.507463" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Animaciones\Peces\pez1.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Animaciones\Peces\pez2.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Animaciones\Peces\pez3.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Animaciones\Peces\pez4.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Animaciones\Peces\pez5.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
             <object-type name="cueva" sid="960551934570372">
                 <plugin id="Sprite" />
                 <animation-folder>
@@ -1465,7 +1501,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="piedra" sid="285708561689605">
+            <object-type name="piedraNegra" sid="285708561689605">
                 <plugin id="Sprite" />
                 <behaviors>
                     <behavior-type name="Bullet" sid="603959663776749">
@@ -1604,6 +1640,22 @@
                                 <point x="0.252747" y="0.493827" />
                             </collision-poly>
                         </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="piedraCafe" sid="803081758871960">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="210878037931049" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Ambiente\Piedras3Milagros.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="plantas" sid="922052998904620">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="108824715608654" speed="5">
+                        <frame duration="1" hotspotX="0.504505" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Ambiente\plantasSolasMilagros.png" />
                     </animation>
                 </animation-folder>
             </object-type>
