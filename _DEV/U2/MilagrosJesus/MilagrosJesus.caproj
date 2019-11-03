@@ -313,6 +313,22 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="barca" sid="208086389048604">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="637953730725220">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                    <behavior-type name="Bullet" sid="571233286588312">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="154033579275660" speed="5">
+                        <frame duration="1" hotspotX="0.501155" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\BarcaApostolesMilagros.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="logos">
             <object-type name="logoConfe" sid="834312970915883">
@@ -1117,6 +1133,22 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="snsMilagro5" sid="826056652722852">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="875827645677371" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="snsBarca" sid="853352160274643">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="325205654376080" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Baldosas">
             <object-type name="bldPiedraTierraZacate" sid="989683256860276">
@@ -1300,6 +1332,19 @@
                                 <point x="0" y="1" />
                             </collision-poly>
                         </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bldRojiza" sid="320425774280881">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="301153403361198">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="855408382621407" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Baldosas\plataformarojaU2.png" />
                     </animation>
                 </animation-folder>
             </object-type>
