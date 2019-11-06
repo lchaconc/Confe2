@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eNivel2</name>
     <events>
+        <variable constant="0" name="brinco" sid="770336395572902" static="0" type="number">0</variable>
         <event-group description="" sid="624431204071054" title="Ineraccion Personaje - Sensores2">
             <sub-events>
                 <event-block sid="904016001533987">
@@ -246,6 +247,40 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="936349458399723">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="941291973458321" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="685144209429564">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="437511438206085" type="System">
+                                    <param id="0" name="Variable">brinco</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="357577054042405" type="colaAmarilla">
+                                    <param id="0" name="Object">ctrlJugador</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="982488998242969">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="286296009157992" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="876102753634169" type="colaAmarilla">
+                                    <param id="0" name="X">-200</param>
+                                    <param id="1" name="Y">-200</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="685740401985066" title="control_sprite2">
@@ -369,6 +404,10 @@
                                     <param id="0" name="Animation">&quot;run&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="693166636991129" type="System">
+                                    <param id="0" name="Variable">brinco</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -395,6 +434,10 @@
                         <action id="4" name="Set animation" sid="457020414819755" type="spriteJesus">
                             <param id="0" name="Animation">&quot;corriendoAsaltar&quot;</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="384771449499061" type="System">
+                            <param id="0" name="Variable">brinco</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
