@@ -46,8 +46,30 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="446489503535123" title="Interaccion Usuario - Juego (Milagros)2">
+        <event-group description="" sid="446489503535123" title="Interaccion Usuario - Juego (Milagros) Evento click 2">
             <sub-events>
+                <event-block sid="497565486404699">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="629231926514727" type="Touch">
+                            <param id="0" name="Object">btnAceptar</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="678854077792572" type="btnAceptar">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="794126851108640" type="modalEntradaPueblo">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="309074974521222" type="modalEntradaPueblo">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="613248252041420" type="Function">
+                            <param id="0" name="Name">&quot;cargarJugador&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="171841214162771">
                     <conditions>
                         <condition id="3" name="On touched object" sid="893056453893253" type="Touch">
@@ -68,6 +90,19 @@
                         <action id="4" name="Set animation" sid="273882099882002" type="spriteJesus">
                             <param id="0" name="Animation">&quot;idle&quot;</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="553685503532275" type="txtGUI">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="999041114551790" type="Function">
+                            <param id="0" name="Name">&quot;cargarJugador&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="274637643582964" type="System">
+                            <param id="0" name="Seconds">1.5</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="368734893915593" type="txtGUI">
+                            <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -382,28 +417,6 @@
                         <action id="4" name="Set animation" sid="262794198834991" type="spriteJesus">
                             <param id="0" name="Animation">&quot;cayendo&quot;</param>
                             <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="497565486404699">
-                    <conditions>
-                        <condition id="4" name="Is touching object" sid="629231926514727" type="Touch">
-                            <param id="0" name="Object">btnAceptar</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="678854077792572" type="btnAceptar">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="794126851108640" type="modalEntradaPueblo">
-                            <param id="0" name="Angle">270</param>
-                        </action>
-                        <action behavior="Bullet" id="5" name="Set enabled" sid="309074974521222" type="modalEntradaPueblo">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="212414969578144" type="modalEntradaPueblo">
-                            <param id="0" name="Instance variable">activo</param>
-                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1124,6 +1137,11 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-24" name="Move to top" sid="206868642848210" type="spriteJesus" />
+                        <action id="4" name="Set animation" sid="591200674488446" type="spriteJesus">
+                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                         <action id="-15" name="Set visible" sid="690224821144318" type="spriteJesus">
                             <param id="0" name="Visibility">1</param>
                         </action>
@@ -1132,6 +1150,359 @@
                         </action>
                         <action behavior="Platform" id="0" name="Set ignoring input" sid="847962010443684" type="ctrlJugador">
                             <param id="0" name="Input">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="946022556784476" title="Sensores (Caida - modal - fin nivel 1)2">
+            <sub-events>
+                <event-block sid="394433849244016">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="351180165853470" type="ctrlJugador">
+                            <param id="0" name="Object">snsCaida</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="564353096715699" type="Audio">
+                            <param id="0" name="Audio file">caida</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="859322850454345" type="ctrlJugador">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="196228663983233" type="spriteJesus">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="790788114651739" type="ctrlJugador">
+                            <param id="0" name="Instance variable">vidas</param>
+                            <param id="1" name="Value">ctrlJugador.vidas - 1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="143391943856197" type="txtVidas">
+                            <param id="0" name="Text">ctrlJugador.vidas</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="846547357692442" type="ctrlJugador">
+                            <param id="0" name="Instance variable">salud</param>
+                            <param id="1" name="Value">128</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="417240710811876" type="guiBarraSalud">
+                            <param id="0" name="Width">128</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="970278307009067">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="583814840762030" type="ctrlJugador">
+                                    <param id="0" name="Instance variable">vidas</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="976605771445870">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="838034361429380" type="snsCaida">
+                                            <param id="0" name="Instance variable">etapa</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="276499875234846" type="ctrlJugador">
+                                            <param id="0" name="X">1616</param>
+                                            <param id="1" name="Y">352</param>
+                                        </action>
+                                        <action behavior="Platform" id="11" name="Set enabled" sid="497175195867595" type="ctrlJugador">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="575721211036931" type="spriteJesus">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="605783610191463" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="670652106214155">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="406096408124682" type="snsCaida">
+                                            <param id="0" name="Instance variable">etapa</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="877191470860663" type="ctrlJugador">
+                                            <param id="0" name="X">10384</param>
+                                            <param id="1" name="Y">400</param>
+                                        </action>
+                                        <action behavior="Platform" id="11" name="Set enabled" sid="558445107355856" type="ctrlJugador">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="313486556098898" type="spriteJesus">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="834639140861066" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="534258454884576">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="182976101224664" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="905771893297858" type="Function">
+                                    <param id="0" name="Name">&quot;cargarNivel1&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="851244624492920">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="469489501982278" type="snsRetenModal">
+                            <param id="0" name="Object">modalEntradaPueblo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="785452628278667" type="modalEntradaPueblo">
+                            <param id="0" name="Speed">modalEntradaPueblo.Bullet.Speed * -1</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="657490051558861" type="modalEntradaPueblo">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>FIN DEL NIVEL 1</comment>
+                <event-block sid="840476933245896">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="402159800685983" type="ctrlJugador">
+                            <param id="0" name="Object">snsFinNivel1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="950637306487101" type="ctrlJugador">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                        <action behavior="Platform" id="4" name="Set jump strength" sid="224890822063715" type="ctrlJugador">
+                            <param id="0" name="Jump strength">1600</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="471404996560437" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="33" name="Stop all" sid="795664225510106" type="Audio" />
+                        <action id="0" name="Set text" sid="422564178168639" type="txtGUI">
+                            <param id="0" name="Text">&quot;¡Nivel 1 terminado!&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="868174073262027" type="txtGUI">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Platform" disabled="1" id="0" name="Set ignoring input" sid="210233365057113" type="ctrlJugador">
+                            <param id="0" name="Input">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="858331486676123" type="spriteJesus">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="847489703848257" type="bgNegro">
+                            <param id="0" name="X">14200</param>
+                            <param id="1" name="Y">0</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="563936089508735" type="bgNegro" />
+                        <action id="-16" name="Wait" sid="781691037479797" type="System">
+                            <param id="0" name="Seconds">5</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="544603526748931" type="System">
+                            <param id="0" name="Layout">Nivel2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="750284391000811" title="Ineraccion Personaje - Sensores (milagros) - Entrada pueblos2">
+            <sub-events>
+                <event-block sid="812345485183745">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="906721700342357" type="ctrlJugador">
+                            <param id="0" name="Object">snsMoverFamiliaSerpiente</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="797536289997712" type="ctrSerpiente">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="982718412499815" type="famSerpiente">
+                            <param id="0" name="Pin to">cntSerpiente</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="786164751326803" type="serpiente">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="763739228667774" type="serpiente">
+                            <param id="0" name="Instance variable">activa</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="14" name="Log" sid="405956271979747" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;***colison snesnor mover familia&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="492265152593719">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="157657072487652" type="snsMoverFamiliaSerpiente">
+                                    <param id="0" name="Instance variable">contador</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="456859086181451" type="serpiente">
+                                    <param id="0" name="Animation">&quot;Serpiente2&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="247205861662220" type="cntSerpiente">
+                                    <param id="0" name="X">5680</param>
+                                    <param id="1" name="Y">520</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="875114328072760" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action behavior="Pin" id="1" name="Unpin" sid="163320955230434" type="famSerpiente" />
+                                <action id="-24" name="Move to top" sid="542513883932387" type="famSerpiente" />
+                                <action behavior="Platform" id="11" name="Set enabled" sid="454013547549825" type="ctrSerpiente">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="14" name="Log" sid="358586307508195" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot; 1 pos serpienbte X: &quot;  &amp; serpiente.X &amp; &quot; Y: &quot; &amp; serpiente.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="687390232504337">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="392691392343005" type="snsMoverFamiliaSerpiente">
+                                    <param id="0" name="Instance variable">contador</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="266754242159743" type="serpiente">
+                                    <param id="0" name="Animation">&quot;Serpiente1&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="492034792490005" type="cntSerpiente">
+                                    <param id="0" name="X">7808</param>
+                                    <param id="1" name="Y">350</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="402000251994115" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action behavior="Pin" id="1" name="Unpin" sid="172655417302376" type="famSerpiente" />
+                                <action id="-24" name="Move to top" sid="931663929735140" type="famSerpiente" />
+                                <action behavior="Platform" id="11" name="Set enabled" sid="168692316398764" type="ctrSerpiente">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="14" name="Log" sid="108551775074598" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot; 2 pos serpienbte X: &quot;  &amp; serpiente.X &amp; &quot; Y: &quot; &amp; serpiente.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="903280523091695">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="638357448538698" type="snsMoverFamiliaSerpiente">
+                                    <param id="0" name="Instance variable">contador</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="818072987594708" type="serpiente">
+                                    <param id="0" name="Animation">&quot;Serpiente1&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="476452343487661" type="cntSerpiente">
+                                    <param id="0" name="X">10096</param>
+                                    <param id="1" name="Y">450</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="742602498291932" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action behavior="Pin" id="1" name="Unpin" sid="435963570573137" type="famSerpiente" />
+                                <action id="-24" name="Move to top" sid="147364107838173" type="famSerpiente" />
+                                <action behavior="Platform" id="11" name="Set enabled" sid="881554650891141" type="ctrSerpiente">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="14" name="Log" sid="494538185930311" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot; 3 pos serpienbte X: &quot;  &amp; serpiente.X &amp; &quot; Y: &quot; &amp; serpiente.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="742580292940667">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="824464728062123" type="snsMoverFamiliaSerpiente">
+                                    <param id="0" name="Instance variable">contador</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="993026401522363" type="serpiente">
+                                    <param id="0" name="Animation">&quot;Serpiente1&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="607578194936290" type="cntSerpiente">
+                                    <param id="0" name="X">13072</param>
+                                    <param id="1" name="Y">300</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="219215725017248" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action behavior="Pin" id="1" name="Unpin" sid="328057234151007" type="famSerpiente" />
+                                <action id="-24" name="Move to top" sid="611589784867353" type="famSerpiente" />
+                                <action behavior="Platform" id="11" name="Set enabled" sid="176785060825985" type="ctrSerpiente">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="14" name="Log" sid="471004587319193" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot; 4 pos serpienbte X: &quot;  &amp; serpiente.X &amp; &quot; Y: &quot; &amp; serpiente.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="549453302729604">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="397497579169900" type="ctrlJugador">
+                            <param id="0" name="Object">snsEntradaPueblo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="607715838761311" type="ctrlJugador">
+                            <param id="0" name="Instance variable">puebloActual</param>
+                            <param id="1" name="Value">snsEntradaPueblo.nombrePueblo</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="978212063883064" type="modalEntradaPueblo">
+                            <param id="0" name="Animation">snsEntradaPueblo.nombrePueblo</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="139894841297379" type="modalEntradaPueblo">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="325533485599990" type="modalEntradaPueblo">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Platform" id="0" name="Set ignoring input" sid="165715149268518" type="ctrlJugador">
+                            <param id="0" name="Input">1</param>
                         </action>
                     </actions>
                 </event-block>
