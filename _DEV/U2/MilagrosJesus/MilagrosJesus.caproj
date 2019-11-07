@@ -251,7 +251,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="desconocido" sid="262566769070355">
+            <object-type name="bartimeo" sid="262566769070355">
                 <plugin id="Sprite" />
                 <behaviors>
                     <behavior-type name="Bullet" sid="660083764434897">
@@ -259,8 +259,15 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="892256244833039" speed="5">
-                        <frame duration="1" hotspotX="0.503704" hotspotY="1" />
+                    <animation framecount="5" loop="1" name="Caminando" pingpong="0" repeatcount="1" repeatto="0" sid="892256244833039" speed="4">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Bartimeo\bartimeo_0000_Layer-4.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Bartimeo\bartimeo_0001_Layer-3.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Bartimeo\bartimeo_0002_Layer-2.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Bartimeo\bartimeo_0003_Layer-1.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Bartimeo\bartimeo_0004_Layer-5.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Milagro" pingpong="0" repeatcount="1" repeatto="0" sid="842739985592729" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.995261" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Bartimeo\1x\bartimero.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -421,7 +428,7 @@
                 <plugin id="TiledBg" />
                 <texture original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Ambiente\cielodiaMilagros.png" />
             </object-type>
-            <object-type name="letrero" sid="297020206403268">
+            <object-type name="modalEntradaPueblo" sid="297020206403268">
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="activo" sid="439413404773239" type="boolean" />
@@ -435,8 +442,45 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="508077315193950" speed="5">
-                        <frame duration="1" hotspotX="0.0925" hotspotY="0.255" original-source="C:\Users\logan24\Desktop\recursos_CONFE\assets_granja2\granjaAsset 154@2x.png" />
+                    <animation framecount="1" loop="0" name="Inicio" pingpong="0" repeatcount="1" repeatto="0" sid="508077315193950" speed="5">
+                        <frame duration="1" hotspotX="0.501006" hotspotY="0.501805" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Modales\InicialModales.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Canaan" pingpong="0" repeatcount="1" repeatto="0" sid="880442698224694" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501805" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Modales\bodasModales.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Bartimeo" pingpong="0" repeatcount="1" repeatto="0" sid="437700963751032" speed="5">
+                        <frame duration="1" hotspotX="0.501006" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Modales\bartimeoModales.png">
+                            <collision-poly>
+                                <point x="0.0221328" y="0.0395683" />
+                                <point x="0.498994" y="0.00359712" />
+                                <point x="0.975855" y="0.0431655" />
+                                <point x="1" y="0.5" />
+                                <point x="0.977867" y="0.960432" />
+                                <point x="0.498994" y="1" />
+                                <point x="0.0221328" y="0.960432" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="ConCruz" pingpong="0" repeatcount="1" repeatto="0" sid="697906186907435" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Modales\ConlaCruzModales.png">
+                            <collision-poly>
+                                <point x="0.0240964" y="0.0431655" />
+                                <point x="0.5" y="0" />
+                                <point x="0.977912" y="0.0395683" />
+                                <point x="1" y="0.5" />
+                                <point x="0.975904" y="0.956835" />
+                                <point x="0.5" y="0.996403" />
+                                <point x="0.0240964" y="0.956835" />
+                                <point x="0.00200803" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="BetsaidaAguas" pingpong="0" repeatcount="1" repeatto="0" sid="417881772812899" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Modales\en las aguasModales.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="PanesPeces" pingpong="0" repeatcount="1" repeatto="0" sid="619556342519038" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Modales\PanesypecesModales.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -649,6 +693,11 @@
             </object-type>
             <object-type name="btnAceptar" sid="359987350699010">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="779034857653779">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="869514884136494" speed="5">
                         <frame duration="1" hotspotX="0.505376" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\assets\aceptar.png" />
@@ -660,32 +709,15 @@
                 <instance-variables>
                     <instance-variable name="id" sid="865545286142968" type="number" />
                 </instance-variables>
+                <behaviors>
+                    <behavior-type name="Sine" sid="781033118217436">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="956736187717032" speed="5">
-                        <frame duration="1" hotspotX="0.502618" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Botones\zona-milagro.png">
-                            <collision-poly>
-                                <point x="0.0471204" y="0.166667" />
-                                <point x="0.497382" y="0.111111" />
-                                <point x="0.95288" y="0.166667" />
-                                <point x="0.968586" y="0.5" />
-                                <point x="0.95288" y="0.833333" />
-                                <point x="0.497382" y="0.888889" />
-                                <point x="0.0471204" y="0.833333" />
-                                <point x="0.0314136" y="0.5" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.502618" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Botones\zona-milagro2.png">
-                            <collision-poly>
-                                <point x="0.0471204" y="0.166667" />
-                                <point x="0.497382" y="0.111111" />
-                                <point x="0.95288" y="0.166667" />
-                                <point x="0.968586" y="0.5" />
-                                <point x="0.95288" y="0.833333" />
-                                <point x="0.497382" y="0.888889" />
-                                <point x="0.0471204" y="0.833333" />
-                                <point x="0.0314136" y="0.5" />
-                            </collision-poly>
-                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503145" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Botones\botonmilagros.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\Picture1.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -782,14 +814,6 @@
             </object-type>
         </object-folder>
         <object-folder name="Textos">
-            <object-type name="txtConsignas" sid="633791259052584">
-                <plugin id="Text" />
-                <behaviors>
-                    <behavior-type name="Pin" sid="507888400926659">
-                        <behavior id="Pin" />
-                    </behavior-type>
-                </behaviors>
-            </object-type>
             <object-type name="jesus" sid="194553131822561">
                 <plugin id="Sprite" />
                 <animation-folder>
@@ -1473,8 +1497,24 @@
             <object-type name="tinajas" sid="522324155177110">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="971019990126738" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Ambiente\tinajasCanaanMilagros.png">
+                    <animation framecount="3" loop="0" name="Llenado" pingpong="0" repeatcount="1" repeatto="0" sid="971019990126738" speed="2">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Ambiente\tinajasCanaanMilagros.png">
+                            <collision-poly>
+                                <point x="0.115789" y="0.189655" />
+                                <point x="0.5" y="0.00862069" />
+                                <point x="0.884211" y="0.189655" />
+                                <point x="0.952632" y="0.5" />
+                                <point x="0.952632" y="0.922414" />
+                                <point x="0.5" y="0.991379" />
+                                <point x="0.0421053" y="0.931035" />
+                                <point x="0.0473684" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.502618" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Animaciones\VasijasVino\vasijas2.png" />
+                        <frame duration="1" hotspotX="0.502618" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Animaciones\VasijasVino\vasijas3.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="947969930647096" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
                             <collision-poly>
                                 <point x="0.115789" y="0.189655" />
                                 <point x="0.5" y="0.00862069" />

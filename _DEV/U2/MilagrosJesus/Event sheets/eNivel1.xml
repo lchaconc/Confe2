@@ -279,28 +279,17 @@
                 <event-block sid="587864687838740">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="506823725011049" type="snsRetenModal">
-                            <param id="0" name="Object">letrero</param>
+                            <param id="0" name="Object">modalEntradaPueblo</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Bullet" id="5" name="Set enabled" sid="336215809909067" type="letrero">
+                        <action behavior="Bullet" id="0" name="Set speed" sid="185360708390497" type="modalEntradaPueblo">
+                            <param id="0" name="Speed">modalEntradaPueblo.Bullet.Speed * -1</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="336215809909067" type="modalEntradaPueblo">
                             <param id="0" name="State">0</param>
                         </action>
                     </actions>
-                    <sub-events>
-                        <event-block sid="962349186213615">
-                            <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="802255181927163" type="letrero">
-                                    <param id="0" name="Instance variable">activo</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-15" name="Set visible" sid="344175503735139" type="btnAceptar">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
                 <comment>FIN DEL NIVEL 1</comment>
                 <event-block sid="905352102502275">
@@ -376,24 +365,8 @@
                         <action id="-15" name="Set visible" sid="307390109958386" type="famSensores">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="0" name="Play" sid="687622220998573" type="Audio">
-                            <param id="0" name="Audio file">MattOglseby</param>
-                            <param id="2" name="Loop">1</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;fondo1&quot;</param>
-                        </action>
                         <action id="0" name="Set text" sid="621763358523414" type="txtVidas">
                             <param id="0" name="Text">ctrlJugador.vidas</param>
-                        </action>
-                        <action disabled="1" id="-3" name="Set position" sid="468064776699335" type="ctrlJugador">
-                            <param id="0" name="X">176</param>
-                            <param id="1" name="Y">160</param>
-                        </action>
-                        <action behavior="Platform" id="11" name="Set enabled" sid="303311341583371" type="ctrlJugador">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="198908216649934" type="spriteJesus">
-                            <param id="0" name="Visibility">1</param>
                         </action>
                         <action behavior="Pin" id="0" name="Pin to object" sid="549759902431098" type="famSerpiente">
                             <param id="0" name="Pin to">cntSerpiente</param>
@@ -420,21 +393,31 @@
                             <param id="0" name="Variable">palomasObtenidas</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="275380655130789" type="btnAceptar">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="265383679734258" type="txtConsignas">
-                            <param id="0" name="Pin to">letrero</param>
-                            <param id="1" name="Mode">0</param>
-                        </action>
-                        <action behavior="Bullet" id="5" name="Set enabled" sid="295069936565181" type="letrero">
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="295069936565181" type="modalEntradaPueblo">
                             <param id="0" name="State">1</param>
                         </action>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="143033719149921" type="letrero">
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="143033719149921" type="modalEntradaPueblo">
                             <param id="0" name="Angle">90</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="905407020115202" type="btnAceptar">
+                            <param id="0" name="Pin to">modalEntradaPueblo</param>
+                            <param id="1" name="Mode">0</param>
                         </action>
                         <action id="0" name="Set text" sid="643716235871609" type="txtPalomas">
                             <param id="0" name="Text">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="687622220998573" type="Audio">
+                            <param id="0" name="Audio file">MattOglseby</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;fondo1&quot;</param>
+                        </action>
+                        <action disabled="1" id="-3" name="Set position" sid="468064776699335" type="ctrlJugador">
+                            <param id="0" name="X">176</param>
+                            <param id="1" name="Y">160</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="964470791815747" type="sensorAnticaida">
+                            <param id="0" name="State">0</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -466,6 +449,24 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="550214338126246">
+                    <conditions>
+                        <condition id="0" name="On function" sid="538611922498350" type="Function">
+                            <param id="0" name="Name">&quot;cargarJugador&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="198908216649934" type="spriteJesus">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="303311341583371" type="ctrlJugador">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Platform" id="0" name="Set ignoring input" sid="837139100326698" type="ctrlJugador">
+                            <param id="0" name="Input">0</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
@@ -859,7 +860,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="946244786104024" title="Ineraccion Personaje - Sensores (milagros)">
+        <event-group description="" sid="946244786104024" title="Ineraccion Personaje - Sensores (milagros) - Entrada pueblos">
             <sub-events>
                 <event-block sid="558911017042035">
                     <conditions>
@@ -1084,11 +1085,24 @@
                             <param id="0" name="Instance variable">puebloActual</param>
                             <param id="1" name="Value">snsEntradaPueblo.nombrePueblo</param>
                         </action>
+                        <action id="4" name="Set animation" sid="355515047011214" type="modalEntradaPueblo">
+                            <param id="0" name="Animation">snsEntradaPueblo.nombrePueblo</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="178398443968441" type="modalEntradaPueblo">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="849416316661528" type="modalEntradaPueblo">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Platform" id="0" name="Set ignoring input" sid="246344384849863" type="ctrlJugador">
+                            <param id="0" name="Input">1</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="705472792600524" title="Interaccion Usuario - Juego (Milagros)">
+        <event-group description="" sid="705472792600524" title="Interaccion Usuario - Juego (Milagros) Evento click">
             <sub-events>
                 <event-block sid="297943520096461">
                     <conditions>
@@ -1097,21 +1111,18 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="409237131605633" type="btnAceptar">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="932364600741457" type="letrero">
+                        <action behavior="Bullet" disabled="1" id="3" name="Set angle of motion" sid="932364600741457" type="modalEntradaPueblo">
                             <param id="0" name="Angle">270</param>
                         </action>
-                        <action behavior="Bullet" id="5" name="Set enabled" sid="720857442111797" type="letrero">
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="720857442111797" type="modalEntradaPueblo">
                             <param id="0" name="State">1</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="843943329157500" type="letrero">
-                            <param id="0" name="Instance variable">activo</param>
-                            <param id="1" name="Value">0</param>
                         </action>
                         <action id="-15" name="Set visible" sid="607356818917816" type="txtGUI">
                             <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="864116335837852" type="Function">
+                            <param id="0" name="Name">&quot;cargarJugador&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action id="-16" name="Wait" sid="127795968311718" type="System">
                             <param id="0" name="Seconds">1.5</param>
@@ -1195,10 +1206,10 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="308001049459100" type="desconocido">
+                                <action id="-15" name="Set visible" sid="308001049459100" type="bartimeo">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
-                                <action behavior="Bullet" id="5" name="Set enabled" sid="322179831541124" type="desconocido">
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="322179831541124" type="bartimeo">
                                     <param id="0" name="State">1</param>
                                 </action>
                             </actions>
@@ -1240,6 +1251,16 @@
                             <param id="1" name="Image point (optional)">0</param>
                         </action>
                         <action id="-16" name="Wait" sid="730587368259520" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="441670655703677" type="tinajas">
+                            <param id="0" name="Scale">2</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="422114638321868" type="tinajas">
+                            <param id="0" name="Animation">&quot;Llenado&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="953487783729291" type="System">
                             <param id="0" name="Seconds">2.5</param>
                         </action>
                         <action id="-3" name="Set position" sid="729832032616025" type="rayoMilagro">
@@ -1357,7 +1378,7 @@
                 </event-block>
                 <event-block sid="924403467058388">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="314641387731597" type="desconocido">
+                        <condition id="0" name="On collision with another object" sid="314641387731597" type="bartimeo">
                             <param id="0" name="Object">spriteJesus</param>
                         </condition>
                         <condition id="-8" name="Is boolean instance variable set" sid="451530943997733" type="ctrlJugador">
@@ -1369,22 +1390,39 @@
                             <param id="0" name="Instance variable">colisionHabilitada</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action behavior="Bullet" id="5" name="Set enabled" sid="433739894157208" type="desconocido">
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="433739894157208" type="bartimeo">
                             <param id="0" name="State">0</param>
                         </action>
+                        <action id="-16" name="Wait" sid="134260276879168" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="914708028622907" type="bartimeo">
+                            <param id="0" name="X">bartimeo.X - 50</param>
+                        </action>
+                        <action id="2" name="Stop" sid="630691178273593" type="bartimeo" />
                         <action id="-16" name="Wait" sid="991549196894530" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="636777954343740" type="spriteJesus">
+                            <param id="0" name="Animation">&quot;Orando&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="600050205584216" type="System">
                             <param id="0" name="Seconds">1</param>
                         </action>
                         <action id="-4" name="Set position to another object" sid="993782944109880" type="rayoMilagro">
                             <param id="0" name="Object">spriteJesus</param>
                             <param id="1" name="Image point (optional)">0</param>
                         </action>
-                        <action id="4" name="Set animation" sid="636777954343740" type="spriteJesus">
-                            <param id="0" name="Animation">&quot;Orando&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
                         <action id="-16" name="Wait" sid="706517083616629" type="System">
                             <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="299580013363563" type="bartimeo">
+                            <param id="0" name="Animation">&quot;Milagro&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="598045791605821" type="System">
+                            <param id="0" name="Seconds">0.5</param>
                         </action>
                         <action id="-3" name="Set position" sid="859656771837561" type="rayoMilagro">
                             <param id="0" name="X">-500</param>
@@ -1397,7 +1435,10 @@
                             <param id="0" name="Instance variable">haciendoMilagro</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="907427196062688" type="desconocido" />
+                        <action id="-16" name="Wait" sid="843678847064587" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="907427196062688" type="bartimeo" />
                     </actions>
                 </event-block>
             </sub-events>
