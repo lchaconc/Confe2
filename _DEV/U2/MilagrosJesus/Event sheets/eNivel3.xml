@@ -676,15 +676,15 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" sid="334198819113181" type="romano">
-                                    <param id="0" name="X">17360</param>
-                                    <param id="1" name="Y">624</param>
+                                    <param id="0" name="X">7200</param>
+                                    <param id="1" name="Y">420</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="758487198783556" type="romano">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="561850954081258" type="lanzadorLanza">
-                                    <param id="0" name="X">17324</param>
-                                    <param id="1" name="Y">544</param>
+                                <action id="-4" name="Set position to another object" sid="561850954081258" type="lanzadorLanza">
+                                    <param id="0" name="Object">romano</param>
+                                    <param id="1" name="Image point (optional)">1</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="817899670694406" type="System">
                                     <param id="0" name="Seconds">0.5</param>
@@ -809,6 +809,122 @@
                         </action>
                         <action id="-15" name="Set visible" sid="831201891629826" type="lanza">
                             <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="248370669695132" title="Restar vidas jugador3">
+            <sub-events>
+                <event-block sid="213750009182023">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="821376813939127" type="ctrlJugador">
+                            <param id="0" name="Instance variable">salud</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="387977120196677" type="ctrlJugador">
+                            <param id="0" name="Instance variable">salud</param>
+                            <param id="1" name="Value">128</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="414511068835608" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-12" name="Subtract from" sid="620185506734150" type="ctrlJugador">
+                            <param id="0" name="Instance variable">vidas</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="412139742337022" type="guiBarraSalud">
+                            <param id="0" name="Width">ctrlJugador.salud</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="626241569159356">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="780469148514834" type="ctrlJugador">
+                            <param id="0" name="Instance variable">vidas</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="161095261838533" type="guiCorazonVida1">
+                            <param id="0" name="Animation">&quot;Rojo&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="597192202480482" type="guiCorazonVida2">
+                            <param id="0" name="Animation">&quot;Rojo&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="614584434241116" type="guiCorazonVida3">
+                            <param id="0" name="Animation">&quot;Rojo&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="232184155825235">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="262730399354609" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="135882882039991" type="ctrlJugador">
+                            <param id="0" name="Instance variable">vidas</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="272518355362086" type="guiCorazonVida1">
+                            <param id="0" name="Animation">&quot;Rojo&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="379973866169265" type="guiCorazonVida2">
+                            <param id="0" name="Animation">&quot;Rojo&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="522647411277254" type="guiCorazonVida3">
+                            <param id="0" name="Animation">&quot;Negro&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="780227175620338">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="214884676956313" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="394987852428384" type="ctrlJugador">
+                            <param id="0" name="Instance variable">vidas</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="579232893938855" type="guiCorazonVida1">
+                            <param id="0" name="Animation">&quot;Rojo&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="455896051158403" type="guiCorazonVida2">
+                            <param id="0" name="Animation">&quot;Negro&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="662998793284122" type="guiCorazonVida3">
+                            <param id="0" name="Animation">&quot;Negro&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="184031208155997">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="179033126929171" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="911490734721506" type="ctrlJugador">
+                            <param id="0" name="Instance variable">vidas</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="992875156727425" type="Function">
+                            <param id="0" name="Name">&quot;cargarNivel3&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
