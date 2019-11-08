@@ -506,6 +506,10 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="bgTarde" sid="574304914596483">
+                <plugin id="TiledBg" />
+                <texture original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Fondos\cieloatardecerMilagros.png" />
+            </object-type>
         </object-folder>
         <object-folder name="system">
             <object-type name="Touch" sid="579146676650647">
@@ -1248,7 +1252,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="desierto" sid="699690557226583">
+            <object-type name="cafeFina" sid="699690557226583">
                 <plugin id="Sprite" />
                 <behaviors>
                     <behavior-type name="Solid" sid="146356780260772">
@@ -1338,6 +1342,96 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="855408382621407" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Baldosas\plataformarojaU2.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="desiertoCentro" sid="662284940686813">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="971206550472779" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Baldosas\Asset 69Milagros.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="desiertoIzquierdo" sid="545285251260111">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="714175404291805">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="891374348414231" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Baldosas\Asset 58Milagros.png">
+                            <collision-poly>
+                                <point x="0.05" y="0.0547945" />
+                                <point x="0.5" y="0" />
+                                <point x="0.9875" y="0.0136986" />
+                                <point x="1" y="1" />
+                                <point x="0.5" y="1" />
+                                <point x="0.1" y="0.890411" />
+                                <point x="0.0625" y="0.493151" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="desiertoDerecha" sid="179005697868460">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="180540456632162" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Baldosas\Asset 52Milagros.png">
+                            <collision-poly>
+                                <point x="0.0125" y="0.0135135" />
+                                <point x="0.5" y="0" />
+                                <point x="0.925" y="0.0810811" />
+                                <point x="0.975" y="0.5" />
+                                <point x="0.925" y="0.918919" />
+                                <point x="0.5" y="0.986486" />
+                                <point x="0.0125" y="0.986486" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="desiertoBajo" sid="368021400183004">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="132176483811958" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Baldosas\Asset 68Milagros.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.5" />
+                                <point x="0.9375" y="0.930556" />
+                                <point x="0.5" y="0.986111" />
+                                <point x="0.0875" y="0.902778" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="desiertoArriba" sid="718407030458444">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="779759304215707">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="948402384633593" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Baldosas\Asset 67Milagros.png">
+                            <collision-poly>
+                                <point x="0.05" y="0.056338" />
+                                <point x="0.5" y="0.028169" />
+                                <point x="0.925" y="0.084507" />
+                                <point x="1" y="0.492958" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.492958" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1782,6 +1876,7 @@
     <layout-folder>
         <layout>Splash.xml</layout>
         <layout>Nivel1.xml</layout>
+        <layout>Nivel3.xml</layout>
         <layout>FinDeJuego.xml</layout>
         <layout>Nivel2.xml</layout>
     </layout-folder>
@@ -1790,6 +1885,7 @@
         <event-sheet>eNivel1.xml</event-sheet>
         <event-sheet>eFindeJuego.xml</event-sheet>
         <event-sheet>eNivel2.xml</event-sheet>
+        <event-sheet>eNivel3.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="5">
