@@ -407,16 +407,16 @@
                             <param id="0" name="Text">0</param>
                         </action>
                         <action id="0" name="Play" sid="687622220998573" type="Audio">
-                            <param id="0" name="Audio file">MattOglseby</param>
+                            <param id="0" name="Audio file">Rub_A_Dub</param>
                             <param id="2" name="Loop">1</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;fondo1&quot;</param>
                         </action>
-                        <action disabled="1" id="-3" name="Set position" sid="468064776699335" type="ctrlJugador">
+                        <action id="-3" name="Set position" sid="468064776699335" type="ctrlJugador">
                             <param id="0" name="X">176</param>
                             <param id="1" name="Y">160</param>
                         </action>
-                        <action behavior="Solid" id="0" name="Set enabled" sid="964470791815747" type="sensorAnticaida">
+                        <action behavior="Solid" disabled="1" id="0" name="Set enabled" sid="964470791815747" type="sensorAnticaida">
                             <param id="0" name="State">0</param>
                         </action>
                     </actions>
@@ -900,6 +900,12 @@
                         <action id="-16" name="Wait" sid="919426411381832" type="System">
                             <param id="0" name="Seconds">1</param>
                         </action>
+                        <action id="0" name="Play" sid="315447403380701" type="Audio">
+                            <param id="0" name="Audio file">Airshot2</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;lanza&quot;</param>
+                        </action>
                         <action id="0" name="Spawn another object" sid="350063330738555" type="lanzadorLanza">
                             <param id="0" name="Object">lanza</param>
                             <param id="1" name="Layer">&quot;Principal&quot;</param>
@@ -1244,11 +1250,15 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="630188158285909" type="discipulo">
-                                    <param id="0" name="Visibility">1</param>
+                                <action id="4" name="Set animation" sid="271379630152420" type="discipulo">
+                                    <param id="0" name="Animation">&quot;Caminando&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                                 <action behavior="Bullet" id="5" name="Set enabled" sid="958930223348861" type="discipulo">
                                     <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="630188158285909" type="discipulo">
+                                    <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1358,6 +1368,17 @@
                         </action>
                         <action id="-1" name="Set X" sid="495985737433981" type="discipulo">
                             <param id="0" name="X">discipulo.X - 10</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="293697309800639" type="discipulo">
+                            <param id="0" name="Animation">&quot;Agachado1&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="398720522789422" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="364734964684091" type="discipulo">
+                            <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                         <action id="-4" name="Set position to another object" sid="642710318503030" type="canastaPanes">
                             <param id="0" name="Object">discipulo</param>

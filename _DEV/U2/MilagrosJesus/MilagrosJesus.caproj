@@ -338,8 +338,19 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="266020070460656" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <animation framecount="5" loop="1" name="Caminando" pingpong="0" repeatcount="1" repeatto="0" sid="266020070460656" speed="8">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Discipulo panes\Discipulopanespeces_0000_Layer-5.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Discipulo panes\Discipulopanespeces_0001_Layer-4.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Discipulo panes\Discipulopanespeces_0002_Layer-3.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Discipulo panes\Discipulopanespeces_0003_Layer-2.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Discipulo panes\Discipulopanespeces_0004_Layer-1.png" />
+                    </animation>
+                    <animation framecount="2" loop="0" name="Agachado1" pingpong="0" repeatcount="1" repeatto="0" sid="735441161835819" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Discipulo panes\1x\discupulo agachado 1panespeces.png" />
+                        <frame duration="1" hotspotX="0.504587" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Discipulo panes\1x\discupulo agachadopanespeces.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="348088132977364" speed="5">
+                        <frame duration="1" hotspotX="0.504587" hotspotY="1" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1929,6 +1940,14 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="rotuloJerico" sid="364999302856633">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="455647032727121" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Ambiente\jericoConbaseRotulo.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Contenedores">
             <object-type name="cntSerpiente" sid="208250832831337">
@@ -2083,9 +2102,9 @@
         <file name="item1.ogg" />
     </sounds-folder>
     <music-folder>
-        <file name="MattOglseby.ogg" />
         <file name="Voodoo_Like_You_Do.ogg" />
         <file name="Sweet_Tides2.ogg" />
+        <file name="Rub_A_Dub.ogg" />
     </music-folder>
     <files-folder>
         <file-folder name="Icons">
