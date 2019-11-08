@@ -260,16 +260,39 @@
                 <event-block sid="442044008739266">
                     <conditions>
                         <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="505552988536099" type="ctrlJugador" />
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="670142859431889" type="ctrlJugador">
-                            <param id="0" name="Instance variable">haciendoMilagro</param>
-                        </condition>
                     </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="433763281261333" type="spriteJesus">
-                            <param id="0" name="Animation">&quot;idle&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="833706710242661">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="213494063000801" type="ctrlJugador">
+                                    <param id="0" name="Instance variable">haciendoMilagro</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="436285668571050" type="ctrlJugador">
+                                    <param id="0" name="Instance variable">cargandoCruz</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="433763281261333" type="spriteJesus">
+                                    <param id="0" name="Animation">&quot;idle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="377152588932656">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="623485880664471" type="ctrlJugador">
+                                    <param id="0" name="Instance variable">cargandoCruz</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="598211844999789" type="spriteJesus">
+                                    <param id="0" name="Animation">&quot;DescansoConCruz&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="511763083069965">
                     <conditions>
@@ -486,6 +509,14 @@
                                 <action id="4" name="Set animation" sid="105315527772631" type="guiPaloma">
                                     <param id="0" name="Animation">&quot;Default&quot;</param>
                                     <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="116179001096240" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="129828862838485" type="spriteJesus">
+                                    <param id="0" name="Object">partAro</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="Image point">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1206,6 +1237,517 @@
                             <param id="0" name="Instance variable">cargandoCruz</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="295842009925656" title="Sensores (Caida - modal - fin nivel 1)3">
+            <sub-events>
+                <event-block sid="590277491786709">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="927776429551686" type="ctrlJugador">
+                            <param id="0" name="Object">snsCaida</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="434487868534844" type="Audio">
+                            <param id="0" name="Audio file">caida</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="239108470479921" type="ctrlJugador">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="145887804181041" type="spriteJesus">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="503956189828799" type="ctrlJugador">
+                            <param id="0" name="Instance variable">vidas</param>
+                            <param id="1" name="Value">ctrlJugador.vidas - 1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="856326633487288" type="txtVidas">
+                            <param id="0" name="Text">ctrlJugador.vidas</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="112129709699267" type="ctrlJugador">
+                            <param id="0" name="Instance variable">salud</param>
+                            <param id="1" name="Value">128</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="967966878010499" type="guiBarraSalud">
+                            <param id="0" name="Width">128</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="909069529973608">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="311791894849335" type="ctrlJugador">
+                                    <param id="0" name="Instance variable">vidas</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="819131080192416">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="884656332024546" type="snsCaida">
+                                            <param id="0" name="Instance variable">etapa</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="445557352974441" type="ctrlJugador">
+                                            <param id="0" name="X">1616</param>
+                                            <param id="1" name="Y">352</param>
+                                        </action>
+                                        <action behavior="Platform" id="11" name="Set enabled" sid="392194815209492" type="ctrlJugador">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="983323766427198" type="spriteJesus">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="269163240110277" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="923468069691088">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="570714151078275" type="snsCaida">
+                                            <param id="0" name="Instance variable">etapa</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="114613174853793" type="ctrlJugador">
+                                            <param id="0" name="X">10384</param>
+                                            <param id="1" name="Y">400</param>
+                                        </action>
+                                        <action behavior="Platform" id="11" name="Set enabled" sid="839380889505935" type="ctrlJugador">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="586918723690996" type="spriteJesus">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="526724186834370" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="161580731456643">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="385553157952252" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="627484811350075" type="Function">
+                                    <param id="0" name="Name">&quot;cargarNivel1&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="863539638659743">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="491538848561394" type="snsRetenModal">
+                            <param id="0" name="Object">modalEntradaPueblo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="474087396905362" type="modalEntradaPueblo">
+                            <param id="0" name="Speed">modalEntradaPueblo.Bullet.Speed * -1</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="512369397762000" type="modalEntradaPueblo">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>FIN DEL NIVEL 1</comment>
+                <event-block sid="904191584952039">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="786391764395653" type="ctrlJugador">
+                            <param id="0" name="Object">snsFinNiveles</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="170145969057663" type="ctrlJugador">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                        <action behavior="Platform" id="4" name="Set jump strength" sid="513043979352158" type="ctrlJugador">
+                            <param id="0" name="Jump strength">1600</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="750371762543476" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="33" name="Stop all" sid="981302306008299" type="Audio" />
+                        <action id="0" name="Set text" sid="733883674277328" type="txtGUI">
+                            <param id="0" name="Text">&quot;¡Nivel 1 terminado!&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="497034109749669" type="txtGUI">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Platform" disabled="1" id="0" name="Set ignoring input" sid="499508229209805" type="ctrlJugador">
+                            <param id="0" name="Input">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="592087683140696" type="spriteJesus">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="528193769213558" type="bgNegro">
+                            <param id="0" name="X">14200</param>
+                            <param id="1" name="Y">0</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="804456630255203" type="bgNegro" />
+                        <action id="-16" name="Wait" sid="217816511183982" type="System">
+                            <param id="0" name="Seconds">5</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="986571854777715" type="System">
+                            <param id="0" name="Layout">Nivel2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="787636197865969" title="Interaccion Usuario - Juego (Milagros) Evento click -3">
+            <sub-events>
+                <event-block sid="573817957845744">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="420075880878676" type="Touch">
+                            <param id="0" name="Object">btnAceptar</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" disabled="1" id="3" name="Set angle of motion" sid="841084151492160" type="modalEntradaPueblo">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="290228991112063" type="modalEntradaPueblo">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="886409396621243" type="txtGUI">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="572152579836710" type="Function">
+                            <param id="0" name="Name">&quot;cargarJugador&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="456183505501414" type="System">
+                            <param id="0" name="Seconds">1.5</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="445776214440306" type="txtGUI">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="862280008834872">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="937267333524345" type="Touch">
+                            <param id="0" name="Object">btnZonaMilagro</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="400675907058829" type="btnZonaMilagro">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="229069841869554" type="ctrlJugador">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="283633312907885" type="ctrlJugador">
+                            <param id="0" name="Instance variable">haciendoMilagro</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="116589633744690" type="spriteJesus">
+                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="353824974076063">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="916743241800218" type="ctrlJugador">
+                                    <param id="0" name="Instance variable">milagro</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="151411289085163" type="virgenMaria">
+                                    <param id="0" name="X">8368</param>
+                                    <param id="1" name="Y">656</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="828068483882077" type="virgenMaria">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="471214972222053" type="virgenMaria">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="166349792470296" type="virgenMaria">
+                                    <param id="0" name="Animation">&quot;Caminando&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="318396561037808">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="200741528967197" type="ctrlJugador">
+                                    <param id="0" name="Instance variable">milagro</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="103430692126689" type="discipulo">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="395546678136483" type="discipulo">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="446737634452737">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="270054552976068" type="ctrlJugador">
+                                    <param id="0" name="Instance variable">milagro</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="842142623204583" type="bartimeo">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="806229983452176" type="bartimeo">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="397020691722783">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="649888000126283" type="virgenMaria">
+                            <param id="0" name="Object">spriteJesus</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="166166660769498" type="virgenMaria">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="941105054633019" type="virgenMaria">
+                            <param id="0" name="Animation">&quot;Orando&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="859639660278645" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="986426154803839" type="virgenMaria">
+                            <param id="0" name="X">virgenMaria.X - 50</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="478697923072762" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="145617950810631" type="spriteJesus">
+                            <param id="0" name="Animation">&quot;Orando&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="278831153312860" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="752027245165667" type="rayoMilagro">
+                            <param id="0" name="Object">spriteJesus</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="807807146498038" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="935551171976401" type="tinajas">
+                            <param id="0" name="Scale">2</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="445588094205687" type="tinajas">
+                            <param id="0" name="Animation">&quot;Llenado&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="908168469213226" type="System">
+                            <param id="0" name="Seconds">2.5</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="106547430381005" type="rayoMilagro">
+                            <param id="0" name="X">-500</param>
+                            <param id="1" name="Y">-500</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="301701861983167" type="spriteJesus">
+                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="859991353764878" type="ctrlJugador">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="747945674865273" type="ctrlJugador">
+                            <param id="0" name="Instance variable">haciendoMilagro</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="942938173728845" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="622886330856339" type="virgenMaria" />
+                    </actions>
+                </event-block>
+                <event-block sid="591173100999940">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="434175914318516" type="discipulo">
+                            <param id="0" name="Object">spriteJesus</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="885502745884220" type="ctrlJugador">
+                            <param id="0" name="Instance variable">colisionHabilitada</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="806132085971875" type="ctrlJugador">
+                            <param id="0" name="Instance variable">colisionHabilitada</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="408097556596384" type="discipulo">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="397893099896378" type="discipulo">
+                            <param id="0" name="X">discipulo.X - 10</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="700613090971546" type="canastaPanes">
+                            <param id="0" name="Object">discipulo</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="591705788486995" type="canastaPEces">
+                            <param id="0" name="Object">spriteJesus</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="547218911491177" type="canastaPanes">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="839446093444534" type="canastaPEces">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="234411884785443" type="canastaPanes">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="490106778986917" type="canastaPEces">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="645410004675159" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="993785579906240" type="spriteJesus">
+                            <param id="0" name="Animation">&quot;Orando&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="695976376354496" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="901786300692565" type="rayoMilagro">
+                            <param id="0" name="Object">spriteJesus</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="966372587270412" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="953253755856491" type="canastaPanes">
+                            <param id="0" name="Animation">&quot;Multiplicacion&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="916940846235464" type="canastaPEces">
+                            <param id="0" name="Animation">&quot;Multiplicacion&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="876236603702981" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="591802468380951" type="canastaPanes">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="558264784455620" type="canastaPEces">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="586918388873149" type="rayoMilagro">
+                            <param id="0" name="X">-500</param>
+                            <param id="1" name="Y">-500</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="219457894341728" type="ctrlJugador">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="494095814163989" type="ctrlJugador">
+                            <param id="0" name="Instance variable">haciendoMilagro</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="438911507216969" type="discipulo">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="317724672075328">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="281085566365272" type="bartimeo">
+                            <param id="0" name="Object">spriteJesus</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="888445037696473" type="ctrlJugador">
+                            <param id="0" name="Instance variable">colisionHabilitada</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="617628875055034" type="ctrlJugador">
+                            <param id="0" name="Instance variable">colisionHabilitada</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="349506222012224" type="bartimeo">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="488068864084013" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="695341777926365" type="bartimeo">
+                            <param id="0" name="X">bartimeo.X - 50</param>
+                        </action>
+                        <action id="2" name="Stop" sid="858280071437623" type="bartimeo" />
+                        <action id="-16" name="Wait" sid="150453207195275" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="786595664783035" type="spriteJesus">
+                            <param id="0" name="Animation">&quot;Orando&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="205170623268686" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="589060200739334" type="rayoMilagro">
+                            <param id="0" name="Object">spriteJesus</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="464096327743322" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="769674808465429" type="bartimeo">
+                            <param id="0" name="Animation">&quot;Milagro&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="416369159480150" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="468687339658392" type="rayoMilagro">
+                            <param id="0" name="X">-500</param>
+                            <param id="1" name="Y">-500</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="199835772283787" type="ctrlJugador">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="149572279083580" type="ctrlJugador">
+                            <param id="0" name="Instance variable">haciendoMilagro</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="695233251792211" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="227601641898280" type="bartimeo" />
                     </actions>
                 </event-block>
             </sub-events>
