@@ -139,67 +139,67 @@
                         </action>
                     </actions>
                 </event-block>
-            </sub-events>
-        </event-group>
-        <event-block sid="350756414575114">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="305766699524209" type="System" />
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="566332061742941">
+                <event-block sid="350756414575114">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="447805442759292" type="System">
-                            <param id="0" name="Variable">brinco</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
+                        <condition id="-1" name="Every tick" sid="305766699524209" type="System" />
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="590932498248231">
+                        <event-block sid="566332061742941">
                             <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="107871703295595" type="ctrlJugador">
-                                    <param id="0" name="Instance variable">dobleBrinco</param>
+                                <condition id="-14" name="Compare variable" sid="447805442759292" type="System">
+                                    <param id="0" name="Variable">brinco</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-4" name="Set position to another object" sid="447783996212584" type="partColaRoja">
-                                    <param id="0" name="Object">ctrlJugador</param>
-                                    <param id="1" name="Image point (optional)">0</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="590932498248231">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="107871703295595" type="ctrlJugador">
+                                            <param id="0" name="Instance variable">dobleBrinco</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-4" name="Set position to another object" sid="447783996212584" type="partColaRoja">
+                                            <param id="0" name="Object">ctrlJugador</param>
+                                            <param id="1" name="Image point (optional)">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="446014250300967">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="316433802171062" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-4" name="Set position to another object" sid="171914080449441" type="partColaAmarilla">
+                                            <param id="0" name="Object">ctrlJugador</param>
+                                            <param id="1" name="Image point (optional)">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
-                        <event-block sid="446014250300967">
+                        <event-block sid="470039061044617">
                             <conditions>
-                                <condition id="-22" name="Else" sid="316433802171062" type="System" />
+                                <condition id="-22" name="Else" sid="322238301997095" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-4" name="Set position to another object" sid="171914080449441" type="partColaAmarilla">
-                                    <param id="0" name="Object">ctrlJugador</param>
-                                    <param id="1" name="Image point (optional)">0</param>
+                                <action id="-3" name="Set position" sid="632782813422227" type="partColaAmarilla">
+                                    <param id="0" name="X">-200</param>
+                                    <param id="1" name="Y">-200</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="296094025698578" type="partColaRoja">
+                                    <param id="0" name="X">-200</param>
+                                    <param id="1" name="Y">-200</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="470039061044617">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="322238301997095" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Set position" sid="632782813422227" type="partColaAmarilla">
-                            <param id="0" name="X">-200</param>
-                            <param id="1" name="Y">-200</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="296094025698578" type="partColaRoja">
-                            <param id="0" name="X">-200</param>
-                            <param id="1" name="Y">-200</param>
-                        </action>
-                    </actions>
-                </event-block>
             </sub-events>
-        </event-block>
+        </event-group>
         <event-group description="" sid="475500044389070" title="Animaciones Personaje3">
             <sub-events>
                 <event-block sid="214857507106454">
@@ -501,6 +501,314 @@
                         <action id="-13" name="Set boolean" sid="814293736841917" type="ctrlJugador">
                             <param id="0" name="Instance variable">dobleBrinco</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="233788619645672" type="System">
+                            <param id="0" name="Seconds">0.4</param>
+                        </action>
+                        <action id="0" name="Set text" sid="704870453569963" type="txtGUI">
+                            <param id="0" name="Text">&quot;¡Doble salto activado!&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="455863744588284" type="txtGUI">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="718621878974795" type="System">
+                            <param id="0" name="Seconds">1.5</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="586013074198696" type="txtGUI">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="366593709246993" title="Interacciones Personaje - Enemigos3">
+            <sub-events>
+                <event-block sid="944005456740719">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="242647282375299" type="ctrSerpiente">
+                            <param id="0" name="Object">snsReboteSerpiente</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="718651467658805" type="ctrSerpiente">
+                            <param id="0" name="Instance variable">direccion</param>
+                            <param id="1" name="Value">ctrSerpiente.direccion * -1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="823264678460252">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="808794227897558" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="524724036263243" type="serpiente">
+                            <param id="0" name="Object">ctrSerpiente</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="663265843835809">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="306364775028568" type="ctrlJugador">
+                            <param id="0" name="Object">serpiente</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="421699009312878" type="serpiente">
+                            <param id="0" name="Instance variable">activa</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="123545597295782">
+                            <conditions>
+                                <condition behavior="Platform" id="4" name="Is falling" sid="510223979622603" type="ctrlJugador" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="238361814093814" type="ctrlJugador">
+                                    <param id="0" name="Vector Y">-700</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="253218280167085" type="serpiente">
+                                    <param id="0" name="Instance variable">activa</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="203205489275323" type="serpiente">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="218357156376846" type="ctrSerpiente">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="0" name="Set text" sid="482215731630526" type="txtGUI">
+                                    <param id="0" name="Text">&quot;+10 pts!&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="576929292395952" type="txtGUI">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="629124204715365" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="870698029596771" type="txtGUI">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="995114287145543">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="921476595954031" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Flash" id="0" name="Flash" sid="999704618933130" type="spriteJesus">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">1.0</param>
+                                </action>
+                                <action id="-12" name="Subtract from" sid="161324693926665" type="ctrlJugador">
+                                    <param id="0" name="Instance variable">salud</param>
+                                    <param id="1" name="Value">32</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="874705121800735" type="guiBarraSalud">
+                                    <param id="0" name="Width">ctrlJugador.salud</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="351860421301383">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="743767231540481" type="ctrlJugador">
+                            <param id="0" name="Object">snsActivarRomano</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="828753761081120" type="snsActivarRomano" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="362890899664889">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="425480425153983" type="snsActivarRomano">
+                                    <param id="0" name="Instance variable">ataque</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="384967080532385" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="0" name="Call function" sid="461568877467156" type="Function">
+                                    <param id="0" name="Name">&quot;lanzarLanza&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-16" name="Wait" sid="611170909115421" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="0" name="Call function" sid="666858369588362" type="Function">
+                                    <param id="0" name="Name">&quot;lanzarLanza&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-16" name="Wait" sid="451757884978304" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="0" name="Call function" sid="831820962052015" type="Function">
+                                    <param id="0" name="Name">&quot;lanzarLanza&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-16" name="Wait" sid="384109809672585" type="System">
+                                    <param id="0" name="Seconds">4</param>
+                                </action>
+                                <action id="0" name="Call function" sid="713581787219810" type="Function">
+                                    <param id="0" name="Name">&quot;lanzarLanza&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-16" name="Wait" sid="913369719543292" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="509460426408896" type="romano">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="322731605263719">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="265642928972457" type="snsActivarRomano">
+                                    <param id="0" name="Instance variable">ataque</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="334198819113181" type="romano">
+                                    <param id="0" name="X">17360</param>
+                                    <param id="1" name="Y">624</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="758487198783556" type="romano">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="561850954081258" type="lanzadorLanza">
+                                    <param id="0" name="X">17324</param>
+                                    <param id="1" name="Y">544</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="817899670694406" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="0" name="Call function" sid="752289991166492" type="Function">
+                                    <param id="0" name="Name">&quot;lanzarLanza&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-16" name="Wait" sid="374730783688723" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="0" name="Call function" sid="457706615870792" type="Function">
+                                    <param id="0" name="Name">&quot;lanzarLanza&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-16" name="Wait" sid="107750552412602" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="0" name="Call function" sid="838335315312345" type="Function">
+                                    <param id="0" name="Name">&quot;lanzarLanza&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-16" name="Wait" sid="891442857364376" type="System">
+                                    <param id="0" name="Seconds">4</param>
+                                </action>
+                                <action id="0" name="Call function" sid="735037391551084" type="Function">
+                                    <param id="0" name="Name">&quot;lanzarLanza&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-16" name="Wait" sid="305011500388987" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="615975904821042" type="romano">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="390419024288451">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="771384142995740" type="spriteJesus">
+                            <param id="0" name="Object">lanza</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="894923803730872" type="spriteJesus">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                        <action id="-12" name="Subtract from" sid="954883705443449" type="ctrlJugador">
+                            <param id="0" name="Instance variable">salud</param>
+                            <param id="1" name="Value">32</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="500035895296681" type="guiBarraSalud">
+                            <param id="0" name="Width">ctrlJugador.salud</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="831374833514272">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="808764990673867" type="serpiente">
+                            <param id="0" name="Instance variable">activa</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="210939194140555">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="470487786133444" type="ctrSerpiente">
+                                    <param id="0" name="Instance variable">direccion</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="567119456429899" type="ctrSerpiente">
+                                    <param id="0" name="Control">0</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="270564392279104" type="serpiente">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="832772749333904">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="282444672046087" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="199380070763783" type="ctrSerpiente">
+                                    <param id="0" name="Control">1</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="859093272751596" type="serpiente">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="845660351551605">
+                    <conditions>
+                        <condition id="0" name="On function" sid="568443671107531" type="Function">
+                            <param id="0" name="Name">&quot;lanzarLanza&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="465025179436687" type="romano">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="391969227384643" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="123272233838761" type="lanzadorLanza">
+                            <param id="0" name="Object">lanza</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="963953783596224" type="lanza">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="831201891629826" type="lanza">
+                            <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
                 </event-block>
