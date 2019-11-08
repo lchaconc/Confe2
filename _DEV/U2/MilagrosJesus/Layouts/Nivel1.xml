@@ -18473,45 +18473,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="particulas_blanco" uid="137">
-                    <properties>
-                        <rate>1600</rate>
-                        <spray-cone>360</spray-cone>
-                        <type>Continuous spray</type>
-                        <initial-particle-properties></initial-particle-properties>
-                        <speed>200</speed>
-                        <size>32</size>
-                        <opacity>100</opacity>
-                        <grow-rate>0</grow-rate>
-                        <x-randomiser>0</x-randomiser>
-                        <y-randomiser>0</y-randomiser>
-                        <speed-randomiser->0</speed-randomiser->
-                        <size-randomiser>0</size-randomiser>
-                        <grow-rate-randomiser>0</grow-rate-randomiser>
-                        <particle-lifetime-properties></particle-lifetime-properties>
-                        <acceleration>-150</acceleration>
-                        <gravity>0</gravity>
-                        <angle-randomiser>0</angle-randomiser>
-                        <speed-randomiser>800</speed-randomiser>
-                        <opacity-randomiser>0</opacity-randomiser>
-                        <destroy-mode>Fade to invisible</destroy-mode>
-                        <timeout>1</timeout>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>7488</x>
-                        <y>-336</y>
-                        <z>0</z>
-                        <width>128</width>
-                        <height>128</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="luzAmarilla" uid="136">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
@@ -18578,6 +18539,7 @@
                         <colisionHabilitada>false</colisionHabilitada>
                         <puebloActual>Canaan</puebloActual>
                         <salud>128</salud>
+                        <dobleBrinco>false</dobleBrinco>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -19488,7 +19450,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="particulasBolas" uid="241">
+                <instance type="partBolas" uid="241">
                     <properties>
                         <rate>250</rate>
                         <spray-cone>360</spray-cone>
@@ -19770,13 +19732,16 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="snsFinNivel1" uid="606">
+                <instance type="snsFinNiveles" uid="606">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <nivel>3</nivel>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -19994,7 +19959,7 @@
                 </instance>
                 <instance type="lanzadorLanza" uid="865">
                     <properties>
-                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -20005,8 +19970,8 @@
                         <x>4992</x>
                         <y>496</y>
                         <z>0</z>
-                        <width>8</width>
-                        <height>8</height>
+                        <width>300</width>
+                        <height>300</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

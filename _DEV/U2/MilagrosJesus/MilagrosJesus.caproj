@@ -127,6 +127,7 @@
                     <instance-variable name="colisionHabilitada" sid="730694336852284" type="boolean" />
                     <instance-variable name="puebloActual" sid="881182173002957" type="string" />
                     <instance-variable name="salud" sid="869439663459477" type="number" />
+                    <instance-variable name="dobleBrinco" sid="836757084801007" type="boolean" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Platform" sid="580809431457455">
@@ -175,6 +176,7 @@
                 <animation-folder>
                     <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="107910894233545" speed="3">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Romano\r6.png">
+                            <image-point name="OrigenLanza" x="0.03125" y="0.262222" />
                             <collision-poly>
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
@@ -183,6 +185,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Romano\r1.png">
+                            <image-point name="OrigenLanza" x="0.0365854" y="0.262222" />
                             <collision-poly>
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
@@ -191,6 +194,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.497143" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Romano\r2.png">
+                            <image-point name="OrigenLanza" x="0.0342857" y="0.259091" />
                             <collision-poly>
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
@@ -199,6 +203,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.496644" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Romano\r4.png">
+                            <image-point name="OrigenLanza" x="0.033557" y="0.260274" />
                             <collision-poly>
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
@@ -207,6 +212,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.496183" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Romano\r5.png">
+                            <image-point name="OrigenLanza" x="0.0305344" y="0.262222" />
                             <collision-poly>
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
@@ -510,6 +516,24 @@
                 <plugin id="TiledBg" />
                 <texture original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Fondos\cieloatardecerMilagros.png" />
             </object-type>
+            <object-type name="bgEdificioRojo" sid="942527580689861">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="119480363877508" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Fondos\ciudadrojaU2.png">
+                            <collision-poly>
+                                <point x="0.0166405" y="0.0582418" />
+                                <point x="0.499843" y="0.635165" />
+                                <point x="0.917739" y="0.287912" />
+                                <point x="0.972998" y="0.5" />
+                                <point x="0.99843" y="0.994505" />
+                                <point x="0.499843" y="0.827473" />
+                                <point x="0.00941915" y="0.967033" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="system">
             <object-type name="Touch" sid="579146676650647">
@@ -794,10 +818,6 @@
             </object-type>
         </object-folder>
         <object-folder name="Efectos">
-            <object-type name="particulas_blanco" sid="367742004976874">
-                <plugin id="Particles" />
-                <texture />
-            </object-type>
             <object-type name="luzBlanca" sid="628398737060010">
                 <plugin id="Sprite" />
                 <behaviors>
@@ -987,7 +1007,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="particulasBolas" sid="377091691866599">
+            <object-type name="partBolas" sid="377091691866599">
                 <plugin id="Particles" />
                 <texture original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Efectos\projectile_glow_orange.png" />
             </object-type>
@@ -998,6 +1018,14 @@
             <object-type name="partAro" sid="538849805420564">
                 <plugin id="Particles" />
                 <texture original-source="C:\Users\logan24\Desktop\aro.png" />
+            </object-type>
+            <object-type name="partRAyoBlanco" sid="108559456204240">
+                <plugin id="Particles" />
+                <texture original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Efectos\destellopalomaMilagros.png" />
+            </object-type>
+            <object-type name="partColaRoja" sid="508855677905142">
+                <plugin id="Particles" />
+                <texture />
             </object-type>
         </object-folder>
         <object-folder name="sensores">
@@ -1084,8 +1112,11 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="snsFinNivel1" sid="516294707816361">
+            <object-type name="snsFinNiveles" sid="516294707816361">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="nivel" sid="410321741073949" type="number" />
+                </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="342586699097734" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />

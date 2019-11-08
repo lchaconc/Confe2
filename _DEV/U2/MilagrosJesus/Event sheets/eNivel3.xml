@@ -59,7 +59,7 @@
                             <param id="0" name="Variable">palomasObtenidas</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action behavior="Bullet" id="5" name="Set enabled" sid="849974541511040" type="modalEntradaPueblo">
+                        <action behavior="Bullet" disabled="1" id="5" name="Set enabled" sid="849974541511040" type="modalEntradaPueblo">
                             <param id="0" name="State">1</param>
                         </action>
                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="244488363569917" type="modalEntradaPueblo">
@@ -130,6 +130,7 @@
                         <action id="-15" name="Set visible" sid="389773733001170" type="spriteJesus">
                             <param id="0" name="Visibility">1</param>
                         </action>
+                        <action id="-24" name="Move to top" sid="815012010949762" type="spriteJesus" />
                         <action behavior="Platform" id="11" name="Set enabled" sid="550659123398935" type="ctrlJugador">
                             <param id="0" name="State">1</param>
                         </action>
@@ -140,6 +141,65 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="350756414575114">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="305766699524209" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="566332061742941">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="447805442759292" type="System">
+                            <param id="0" name="Variable">brinco</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="590932498248231">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="107871703295595" type="ctrlJugador">
+                                    <param id="0" name="Instance variable">dobleBrinco</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="447783996212584" type="partColaRoja">
+                                    <param id="0" name="Object">ctrlJugador</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="446014250300967">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="316433802171062" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="171914080449441" type="partColaAmarilla">
+                                    <param id="0" name="Object">ctrlJugador</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="470039061044617">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="322238301997095" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="632782813422227" type="partColaAmarilla">
+                            <param id="0" name="X">-200</param>
+                            <param id="1" name="Y">-200</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="296094025698578" type="partColaRoja">
+                            <param id="0" name="X">-200</param>
+                            <param id="1" name="Y">-200</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
         <event-group description="" sid="475500044389070" title="Animaciones Personaje3">
             <sub-events>
                 <event-block sid="214857507106454">
@@ -195,6 +255,10 @@
                             <param id="0" name="Animation">&quot;corriendoAsaltar&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
+                        <action id="-9" name="Set value" sid="119630694959776" type="System">
+                            <param id="0" name="Variable">brinco</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="266752847610340">
@@ -205,6 +269,10 @@
                         <action id="4" name="Set animation" sid="237140844921062" type="spriteJesus">
                             <param id="0" name="Animation">&quot;cayendo&quot;</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="679715889489459" type="System">
+                            <param id="0" name="Variable">brinco</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -300,6 +368,141 @@
                         </condition>
                     </conditions>
                     <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="497157931394782" title="Interacciones Personaje - Ambiente: cajas3">
+            <sub-events>
+                <event-block sid="442481976842427">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="744776454025885" type="spriteJesus">
+                            <param id="0" name="Object">cajaRoja</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="650516068959765" type="explosionB">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="130420779171536" type="explosionB">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="286959447865976" type="cajaRoja" />
+                        <action id="0" name="Play" sid="836453516786092" type="Audio">
+                            <param id="0" name="Audio file">Explosion1</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="960689169941321" type="ctrlJugador">
+                            <param id="0" name="Magnitude">30</param>
+                            <param id="1" name="Duration">0.6</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="857314969095986">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="279759995763326" type="spriteJesus">
+                            <param id="0" name="Object">cajaCafe</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="482034773741573" type="cajaCafe">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Value">cajaCafe.UID</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="341845723930230">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="532691406805633" type="cajaCafe">
+                                    <param id="0" name="Unique ID">cajaCafe.id</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="602686238752907" type="paloma">
+                                    <param id="0" name="Object">cajaCafe</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="458516579797772" type="paloma">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="622921153396080" type="cajaCafe" />
+                                <action id="-15" name="Set visible" sid="760175814519592" type="luzBlanca">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="617268656990070" type="luzBlanca">
+                                    <param id="0" name="Object">paloma</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="0" name="Play" sid="486570076919822" type="Audio">
+                                    <param id="0" name="Audio file">item1</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="367448403002275" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="259556515298777" type="luzBlanca">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="301058893713191" type="paloma">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="780520318176469" type="System">
+                                    <param id="0" name="Variable">palomasObtenidas</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="831964062698434" type="txtPalomas">
+                                    <param id="0" name="Text">palomasObtenidas</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="105315527772631" type="guiPaloma">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="725427843030147">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="576548041024067" type="spriteJesus">
+                            <param id="0" name="Object">cajaTurquesa</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="466705283319770" type="cajaTurquesa">
+                            <param id="0" name="Object">partRAyoBlanco</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="624094021676548" type="cajaTurquesa" />
+                        <action id="-16" name="Wait" sid="122180588249981" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="198542834072952" type="spriteJesus">
+                            <param id="0" name="Object">partAro</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="421930584211980" type="spriteJesus">
+                            <param id="0" name="Object">partAro</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="599284601474750" type="ctrlJugador">
+                            <param id="0" name="Vector Y">-700</param>
+                        </action>
+                        <action behavior="Platform" id="13" name="Set double-jump" sid="997885553742981" type="ctrlJugador">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="814293736841917" type="ctrlJugador">
+                            <param id="0" name="Instance variable">dobleBrinco</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
