@@ -82,12 +82,12 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;fondo1&quot;</param>
                         </action>
-                        <action disabled="1" id="-3" name="Set position" sid="702649895109568" type="ctrlJugador">
-                            <param id="0" name="X">176</param>
-                            <param id="1" name="Y">160</param>
-                        </action>
                         <action behavior="Solid" id="0" name="Set enabled" sid="602796185969464" type="sensorAnticaida">
                             <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="800496095469936" type="ctrlJugador">
+                            <param id="0" name="Object">marcJugador1</param>
+                            <param id="1" name="Image point (optional)">0</param>
                         </action>
                         <action id="0" name="Call function" sid="795872872409587" type="Function">
                             <param id="0" name="Name">&quot;cargarJugador&quot;</param>
@@ -1262,6 +1262,10 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-10" name="Set value" sid="148796305929860" type="ctrlJugador">
+                            <param id="0" name="Instance variable">etapa</param>
+                            <param id="1" name="Value">snsCaida.etapa</param>
+                        </action>
                         <action id="0" name="Play" sid="434487868534844" type="Audio">
                             <param id="0" name="Audio file">caida</param>
                             <param id="2" name="Loop">0</param>
@@ -1302,49 +1306,73 @@
                             <sub-events>
                                 <event-block sid="819131080192416">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="884656332024546" type="snsCaida">
+                                        <condition id="-7" name="Compare instance variable" sid="836239343314472" type="ctrlJugador">
                                             <param id="0" name="Instance variable">etapa</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">1</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-3" name="Set position" sid="445557352974441" type="ctrlJugador">
-                                            <param id="0" name="X">1616</param>
-                                            <param id="1" name="Y">352</param>
-                                        </action>
-                                        <action behavior="Platform" id="11" name="Set enabled" sid="392194815209492" type="ctrlJugador">
-                                            <param id="0" name="State">1</param>
-                                        </action>
                                         <action id="-15" name="Set visible" sid="983323766427198" type="spriteJesus">
                                             <param id="0" name="Visibility">1</param>
                                         </action>
                                         <action id="-16" name="Wait" sid="269163240110277" type="System">
                                             <param id="0" name="Seconds">0.5</param>
                                         </action>
+                                        <action behavior="Platform" id="11" name="Set enabled" sid="392194815209492" type="ctrlJugador">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-4" name="Set position to another object" sid="667130978505529" type="ctrlJugador">
+                                            <param id="0" name="Object">marcJugador1</param>
+                                            <param id="1" name="Image point (optional)">0</param>
+                                        </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="923468069691088">
+                                <event-block sid="729001966262663">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="570714151078275" type="snsCaida">
+                                        <condition id="-7" name="Compare instance variable" sid="648027088651841" type="ctrlJugador">
                                             <param id="0" name="Instance variable">etapa</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">2</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-3" name="Set position" sid="114613174853793" type="ctrlJugador">
-                                            <param id="0" name="X">10384</param>
-                                            <param id="1" name="Y">400</param>
-                                        </action>
-                                        <action behavior="Platform" id="11" name="Set enabled" sid="839380889505935" type="ctrlJugador">
-                                            <param id="0" name="State">1</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="586918723690996" type="spriteJesus">
+                                        <action id="-15" name="Set visible" sid="790618602451710" type="spriteJesus">
                                             <param id="0" name="Visibility">1</param>
                                         </action>
-                                        <action id="-16" name="Wait" sid="526724186834370" type="System">
+                                        <action id="-16" name="Wait" sid="958680683869421" type="System">
                                             <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                        <action behavior="Platform" id="11" name="Set enabled" sid="823607664171209" type="ctrlJugador">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-4" name="Set position to another object" sid="117640220992452" type="ctrlJugador">
+                                            <param id="0" name="Object">marcJugador2</param>
+                                            <param id="1" name="Image point (optional)">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="323924991292010">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="537435729222435" type="ctrlJugador">
+                                            <param id="0" name="Instance variable">etapa</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="663894915095082" type="spriteJesus">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="584901484431657" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                        <action behavior="Platform" id="11" name="Set enabled" sid="673113488544687" type="ctrlJugador">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-4" name="Set position to another object" sid="834241015288030" type="ctrlJugador">
+                                            <param id="0" name="Object">marcJugador3</param>
+                                            <param id="1" name="Image point (optional)">0</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1356,7 +1384,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="627484811350075" type="Function">
-                                    <param id="0" name="Name">&quot;cargarNivel1&quot;</param>
+                                    <param id="0" name="Name">&quot;cargarNivel3&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>

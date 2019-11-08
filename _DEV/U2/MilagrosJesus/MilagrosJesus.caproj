@@ -213,6 +213,7 @@
                     <instance-variable name="dobleBrinco" sid="836757084801007" type="boolean" />
                     <instance-variable name="palomasPorNivel" sid="568940422727957" type="number" />
                     <instance-variable name="cargandoCruz" sid="540347239803034" type="boolean" />
+                    <instance-variable name="etapa" sid="266633648125633" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Platform" sid="580809431457455">
@@ -2007,6 +2008,30 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="780254234985017" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="marcJugador1" sid="233035411235445">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="600251823407679" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="marcJugador2" sid="443696571472387">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="841813499408905" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="marcJugador3" sid="580999604681335">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="676880992293224" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
                     </animation>
                 </animation-folder>
