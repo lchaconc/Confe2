@@ -77,7 +77,7 @@
                             <param id="0" name="Text">ctrlJugador.palomasPorNivel</param>
                         </action>
                         <action id="0" name="Play" sid="499580497421321" type="Audio">
-                            <param id="0" name="Audio file">Sweet_Tides</param>
+                            <param id="0" name="Audio file">Sweet_Tides2</param>
                             <param id="2" name="Loop">1</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;fondo1&quot;</param>
@@ -511,7 +511,7 @@
                                     <param id="1" name="From">1</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="116179001096240" type="System">
-                                    <param id="0" name="Seconds">0.5</param>
+                                    <param id="0" name="Seconds">0.2</param>
                                 </action>
                                 <action id="0" name="Spawn another object" sid="129828862838485" type="spriteJesus">
                                     <param id="0" name="Object">partAro</param>
@@ -547,6 +547,12 @@
                             <param id="0" name="Object">partAro</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="742752176271482" type="Audio">
+                            <param id="0" name="Audio file">get_item</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;dobleSalto&quot;</param>
                         </action>
                         <action behavior="Platform" id="9" name="Set vector Y" sid="599284601474750" type="ctrlJugador">
                             <param id="0" name="Vector Y">-700</param>
@@ -854,6 +860,12 @@
                         </action>
                         <action id="-16" name="Wait" sid="391969227384643" type="System">
                             <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="883954324933682" type="Audio">
+                            <param id="0" name="Audio file">Airshot2</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;lanzamiento&quot;</param>
                         </action>
                         <action id="0" name="Spawn another object" sid="123272233838761" type="lanzadorLanza">
                             <param id="0" name="Object">lanza</param>
