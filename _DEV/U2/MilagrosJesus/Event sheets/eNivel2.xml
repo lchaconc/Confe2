@@ -87,22 +87,25 @@
                             <param id="0" name="Instance variable">haciendoMilagro</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="4" name="Set animation" sid="273882099882002" type="spriteJesus">
+                        <action disabled="1" id="4" name="Set animation" sid="273882099882002" type="spriteJesus">
                             <param id="0" name="Animation">&quot;idle&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="553685503532275" type="txtGUI">
+                        <action disabled="1" id="-15" name="Set visible" sid="553685503532275" type="txtGUI">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="0" name="Call function" sid="999041114551790" type="Function">
+                        <action disabled="1" id="0" name="Call function" sid="999041114551790" type="Function">
                             <param id="0" name="Name">&quot;cargarJugador&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
-                        <action id="-16" name="Wait" sid="274637643582964" type="System">
+                        <action disabled="1" id="-16" name="Wait" sid="274637643582964" type="System">
                             <param id="0" name="Seconds">1.5</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="368734893915593" type="txtGUI">
+                        <action disabled="1" id="-15" name="Set visible" sid="368734893915593" type="txtGUI">
                             <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="728744274899005" type="System">
+                            <param id="0" name="Seconds">0.5</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -120,7 +123,7 @@
                                     <param id="1" name="From">1</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="571401083596401" type="System">
-                                    <param id="0" name="Seconds">1</param>
+                                    <param id="0" name="Seconds">0.6</param>
                                 </action>
                                 <action id="-4" name="Set position to another object" sid="440944059099344" type="rayoMilagro">
                                     <param id="0" name="Object">spriteJesus</param>
@@ -152,7 +155,7 @@
                                     <param id="1" name="From">1</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="428658245544819" type="System">
-                                    <param id="0" name="Seconds">1</param>
+                                    <param id="0" name="Seconds">0.6</param>
                                 </action>
                                 <action id="-4" name="Set position to another object" sid="456515623664794" type="rayoMilagro">
                                     <param id="0" name="Object">spriteJesus</param>
@@ -496,6 +499,10 @@
                                 <action id="-16" name="Wait" sid="203527728303097" type="System">
                                     <param id="0" name="Seconds">1</param>
                                 </action>
+                                <action id="-11" name="Add to" sid="399598726686801" type="ctrlJugador">
+                                    <param id="0" name="Instance variable">palomasPorNivel</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                                 <action id="-15" name="Set visible" sid="867904362934212" type="luzBlanca">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
@@ -505,17 +512,13 @@
                                 <action id="4" name="Set font color" sid="921858303711321" type="txtPalomas">
                                     <param id="0" name="Color">rgb(255, 0, 0)</param>
                                 </action>
-                                <action id="-10" name="Add to" sid="477995674995401" type="System">
-                                    <param id="0" name="Variable">palomasObtenidas</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
                                 <action id="0" name="Spawn another object" sid="272223384153361" type="spriteJesus">
                                     <param id="0" name="Object">partAro</param>
                                     <param id="1" name="Layer">0</param>
                                     <param id="2" name="Image point">1</param>
                                 </action>
                                 <action id="0" name="Set text" sid="876955980654158" type="txtPalomas">
-                                    <param id="0" name="Text">palomasObtenidas</param>
+                                    <param id="0" name="Text">ctrlJugador.palomasPorNivel</param>
                                 </action>
                                 <action id="4" name="Set animation" sid="935873228887035" type="guiPaloma">
                                     <param id="0" name="Animation">&quot;Default&quot;</param>
@@ -546,6 +549,7 @@
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="Image point">0</param>
                         </action>
+                        <action id="-9" name="Destroy" sid="372854465682467" type="cajaTurquesa" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -1016,6 +1020,10 @@
                             <param id="1" name="Mode">1</param>
                         </action>
                         <action behavior="Pin" id="1" name="Unpin" sid="519749869248838" type="famSerpiente" />
+                        <action id="-10" name="Set value" sid="209445945613337" type="ctrlJugador">
+                            <param id="0" name="Instance variable">palomasPorNivel</param>
+                            <param id="1" name="Value">palomasObtenidas</param>
+                        </action>
                         <action id="-10" name="Set value" sid="183225665682983" type="ctrlJugador">
                             <param id="0" name="Instance variable">vidas</param>
                             <param id="1" name="Value">3</param>
@@ -1036,7 +1044,7 @@
                             <param id="0" name="Variable">palomasObtenidas</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action behavior="Bullet" id="5" name="Set enabled" sid="627929569786889" type="modalEntradaPueblo">
+                        <action behavior="Bullet" disabled="1" id="5" name="Set enabled" sid="627929569786889" type="modalEntradaPueblo">
                             <param id="0" name="State">1</param>
                         </action>
                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="877657466736509" type="modalEntradaPueblo">
@@ -1047,16 +1055,13 @@
                             <param id="1" name="Mode">0</param>
                         </action>
                         <action id="0" name="Set text" sid="598974461753866" type="txtPalomas">
-                            <param id="0" name="Text">0</param>
+                            <param id="0" name="Text">ctrlJugador.palomasPorNivel</param>
                         </action>
                         <action id="0" name="Play" sid="861634108269973" type="Audio">
                             <param id="0" name="Audio file">Voodoo_Like_You_Do</param>
                             <param id="2" name="Loop">1</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;fondo2&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="442733853933053" type="txtPalomas">
-                            <param id="0" name="Text">palomasObtenidas</param>
                         </action>
                         <action id="-3" name="Set position" sid="894716908292750" type="ctrlJugador">
                             <param id="0" name="X">160</param>
@@ -1155,7 +1160,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="946022556784476" title="Sensores (Caida - modal - fin nivel 1)2">
+        <event-group description="" sid="946022556784476" title="Sensores (Caida - modal - fin nivel 2) -2">
             <sub-events>
                 <event-block sid="394433849244016">
                     <conditions>
@@ -1211,9 +1216,9 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-3" name="Set position" sid="276499875234846" type="ctrlJugador">
-                                            <param id="0" name="X">1616</param>
-                                            <param id="1" name="Y">352</param>
+                                        <action id="-4" name="Set position to another object" sid="276499875234846" type="ctrlJugador">
+                                            <param id="0" name="Object">marcJugador1</param>
+                                            <param id="1" name="Image point (optional)">0</param>
                                         </action>
                                         <action behavior="Platform" id="11" name="Set enabled" sid="497175195867595" type="ctrlJugador">
                                             <param id="0" name="State">1</param>
@@ -1235,9 +1240,9 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-3" name="Set position" sid="877191470860663" type="ctrlJugador">
-                                            <param id="0" name="X">10384</param>
-                                            <param id="1" name="Y">400</param>
+                                        <action id="-4" name="Set position to another object" sid="566559583612697" type="ctrlJugador">
+                                            <param id="0" name="Object">marcJugador2</param>
+                                            <param id="1" name="Image point (optional)">0</param>
                                         </action>
                                         <action behavior="Platform" id="11" name="Set enabled" sid="558445107355856" type="ctrlJugador">
                                             <param id="0" name="State">1</param>
@@ -1257,10 +1262,7 @@
                                 <condition id="-22" name="Else" sid="182976101224664" type="System" />
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="905771893297858" type="Function">
-                                    <param id="0" name="Name">&quot;cargarNivel1&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
+                                <action id="-26" name="Restart layout" sid="607216904087721" type="System" />
                             </actions>
                         </event-block>
                     </sub-events>
@@ -1280,7 +1282,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <comment>FIN DEL NIVEL 1</comment>
+                <comment>FIN DEL NIVEL 2</comment>
                 <event-block sid="840476933245896">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="402159800685983" type="ctrlJugador">
@@ -1298,28 +1300,32 @@
                             <param id="0" name="Seconds">1.0</param>
                         </action>
                         <action id="33" name="Stop all" sid="795664225510106" type="Audio" />
+                        <action id="-9" name="Set value" sid="433625225777677" type="System">
+                            <param id="0" name="Variable">palomasObtenidas</param>
+                            <param id="1" name="Value">palomasObtenidas + ctrlJugador.palomasPorNivel</param>
+                        </action>
                         <action id="0" name="Set text" sid="422564178168639" type="txtGUI">
-                            <param id="0" name="Text">&quot;¡Nivel 1 terminado!&quot;</param>
+                            <param id="0" name="Text">&quot;¡Nivel 2 terminado!&quot;</param>
                         </action>
                         <action id="-15" name="Set visible" sid="868174073262027" type="txtGUI">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action behavior="Platform" disabled="1" id="0" name="Set ignoring input" sid="210233365057113" type="ctrlJugador">
+                        <action behavior="Platform" id="0" name="Set ignoring input" sid="210233365057113" type="ctrlJugador">
                             <param id="0" name="Input">1</param>
                         </action>
                         <action id="-15" name="Set visible" sid="858331486676123" type="spriteJesus">
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-3" name="Set position" sid="847489703848257" type="bgNegro">
-                            <param id="0" name="X">14200</param>
-                            <param id="1" name="Y">0</param>
+                            <param id="0" name="X">7120</param>
+                            <param id="1" name="Y">-96</param>
                         </action>
                         <action behavior="Fade" id="1" name="Start fade" sid="563936089508735" type="bgNegro" />
                         <action id="-16" name="Wait" sid="781691037479797" type="System">
                             <param id="0" name="Seconds">5</param>
                         </action>
                         <action id="-2" name="Go to layout" sid="544603526748931" type="System">
-                            <param id="0" name="Layout">Nivel2</param>
+                            <param id="0" name="Layout">Nivel3</param>
                         </action>
                     </actions>
                 </event-block>
