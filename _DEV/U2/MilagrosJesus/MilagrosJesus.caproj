@@ -116,6 +116,30 @@
                         <frame duration="1" hotspotX="0.502674" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Jesus\Orar\Asset 60jesusora.png" />
                         <frame duration="1" hotspotX="0.50289" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Jesus\Orar\Asset 61jesusora.png" />
                     </animation>
+                    <animation framecount="8" loop="1" name="CargandoCruz" pingpong="0" repeatcount="1" repeatto="0" sid="399457040447232" speed="8">
+                        <frame duration="1" hotspotX="0.501441" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Jesus con cruz\jesusConCruz_0000_Vector-Smart-Object.png" />
+                        <frame duration="1" hotspotX="0.501441" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Jesus con cruz\jesusConCruz_0001_Vector-Smart-Object.png" />
+                        <frame duration="1" hotspotX="0.501449" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Jesus con cruz\jesusConCruz_0002_Vector-Smart-Object.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Jesus con cruz\jesusConCruz_0003_Vector-Smart-Object.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Jesus con cruz\jesusConCruz_0004_Vector-Smart-Object.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Jesus con cruz\jesusConCruz_0005_Vector-Smart-Object.png" />
+                        <frame duration="1" hotspotX="0.501466" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Jesus con cruz\jesusConCruz_0006_Vector-Smart-Object.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Jesus con cruz\jesusConCruz_0007_Vector-Smart-Object.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="DescansoConCruz" pingpong="0" repeatcount="1" repeatto="0" sid="477701736984550" speed="5">
+                        <frame duration="1" hotspotX="0.501441" hotspotY="1" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\MilagrosJesus\Personajes\Jesus con cruz\jesusConCruz_0000_Vector-Smart-Object.png">
+                            <collision-poly>
+                                <point x="0.435158" y="0.558559" />
+                                <point x="0.498559" y="0.184685" />
+                                <point x="0.746398" y="0.274775" />
+                                <point x="0.913545" y="0.445946" />
+                                <point x="0.887608" y="0.837838" />
+                                <point x="0.498559" y="0.977477" />
+                                <point x="0.0288184" y="0.968468" />
+                                <point x="0.426513" y="0.445946" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
                 </animation-folder>
             </object-type>
             <object-type name="ctrlJugador" sid="180039339925438">
@@ -129,6 +153,7 @@
                     <instance-variable name="salud" sid="869439663459477" type="number" />
                     <instance-variable name="dobleBrinco" sid="836757084801007" type="boolean" />
                     <instance-variable name="palomasPorNivel" sid="568940422727957" type="number" />
+                    <instance-variable name="cargandoCruz" sid="540347239803034" type="boolean" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Platform" sid="580809431457455">
@@ -1178,6 +1203,14 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="snsCargarCruz" sid="305123891717126">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="308249934961435" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Baldosas">
             <object-type name="bldPiedraTierraZacate" sid="989683256860276">
@@ -1898,6 +1931,16 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="652996731426837" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Marcadores">
+            <object-type name="marcRomano2" sid="849854236671854">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="780254234985017" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
                     </animation>
                 </animation-folder>
             </object-type>
