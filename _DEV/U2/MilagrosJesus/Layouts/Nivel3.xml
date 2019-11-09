@@ -9803,21 +9803,24 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="sensorFinJuego" uid="1661">
+                <instance type="snsFinNiveles" uid="1661">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <nivel>3</nivel>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>8128</x>
-                        <y>312</y>
+                        <x>8064</x>
+                        <y>320</y>
                         <z>0</z>
-                        <width>144</width>
-                        <height>416</height>
+                        <width>112</width>
+                        <height>560</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -10446,8 +10449,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>5264</x>
-                        <y>-880</y>
+                        <x>5248</x>
+                        <y>-1040</y>
                         <z>0</z>
                         <width>3936</width>
                         <height>928</height>
