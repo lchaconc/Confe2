@@ -449,7 +449,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>5184</x>
+                        <x>5392</x>
                         <y>528</y>
                         <z>0</z>
                         <width>181</width>
@@ -471,8 +471,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>5040</x>
-                        <y>528</y>
+                        <x>5104</x>
+                        <y>560</y>
                         <z>0</z>
                         <width>181</width>
                         <height>241</height>
@@ -8869,28 +8869,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="sensorFinJuego" uid="1959">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>8992</x>
-                        <y>-256</y>
-                        <z>0</z>
-                        <width>48</width>
-                        <height>96</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="romano" uid="1961">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -9355,6 +9333,28 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="fuego" uid="1660">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>5440</x>
+                        <y>656</y>
+                        <z>0</z>
+                        <width>73</width>
+                        <height>109</height>
+                        <depth>0</depth>
+                        <hotspotX>0.506849289</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -9796,6 +9796,28 @@
                         <z>0</z>
                         <width>560</width>
                         <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="sensorFinJuego" uid="1661">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>8128</x>
+                        <y>312</y>
+                        <z>0</z>
+                        <width>144</width>
+                        <height>416</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -10395,6 +10417,37 @@
                     <world>
                         <x>14064</x>
                         <y>-992</y>
+                        <z>0</z>
+                        <width>3936</width>
+                        <height>928</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="bgNegro" uid="1659">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>3</fade-in-time>
+                                <wait-time>2</wait-time>
+                                <fade-out-time>5</fade-out-time>
+                                <destroy>No</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>5264</x>
+                        <y>-880</y>
                         <z>0</z>
                         <width>3936</width>
                         <height>928</height>
