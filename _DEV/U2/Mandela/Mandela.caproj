@@ -47,13 +47,33 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
-        <object-folder name="Buttons" />
+        <object-folder name="Buttons">
+            <object-type name="btnJugar" sid="161700227710189">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="651450534061125" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Mandela\horizontal\Assets horizontal\Boton jugar-1.png">
+                            <collision-poly>
+                                <point x="0.144828" y="0.101449" />
+                                <point x="0.496552" y="0" />
+                                <point x="0.855172" y="0.101449" />
+                                <point x="0.951724" y="0.497585" />
+                                <point x="0.917241" y="0.942029" />
+                                <point x="0.496552" y="0.990338" />
+                                <point x="0.0896552" y="0.937198" />
+                                <point x="0.0482759" y="0.497585" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-folder name="Backgrounds">
             <object-type name="bgMain" sid="825270901570097">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="724227683804854" speed="5">
-                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Mandela\pantallajuego.png" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Mandela\horizontal\Assets horizontal\Group 4.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -61,15 +81,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="190556428335012" speed="5">
-                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Mandela\back.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="bgInstrucciones" sid="161700227710189">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="651450534061125" speed="5">
-                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Mandela\instrucciones2.png" />
+                        <frame duration="1" hotspotX="0.000780031" hotspotY="0.00138504" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Mandela\horizontal\Assets horizontal\Group 6.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -77,13 +89,38 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="479085355879401" speed="5">
-                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Mandela\instrucciones.png" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Mandela\horizontal\Assets horizontal\Jesus-2.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="rotulo" sid="469894100258397">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="550395144826186" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500907" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Mandela\horizontal\Assets horizontal\Splash.png">
+                            <collision-poly>
+                                <point x="0.126812" y="0.127042" />
+                                <point x="0.661232" y="0.339383" />
+                                <point x="0.96558" y="0.499093" />
+                                <point x="0.929348" y="0.92922" />
+                                <point x="0.280797" y="0.718693" />
+                                <point x="0.0235507" y="0.499093" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bgConsignas" sid="575430159627560">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="859524942712244" speed="5">
+                        <frame duration="1" hotspotX="0.500574" hotspotY="0.501071" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Mandela\horizontal\Assets horizontal\modal inicio.png" />
                     </animation>
                 </animation-folder>
             </object-type>
         </object-folder>
         <object-folder name="Sprites">
-            <object-type name="foto1" sid="638243353350453">
+            <object-type name="fotoDerecha" sid="638243353350453">
                 <plugin id="Sprite" />
                 <behaviors>
                     <behavior-type name="Physics" sid="907262478208008">
@@ -92,10 +129,17 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="A" pingpong="0" repeatcount="1" repeatto="0" sid="620844799002503" speed="5">
-                        <frame duration="1" hotspotX="0.50096" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Mandela\marcoimagen.png" />
+                        <frame duration="1" hotspotX="0.501916" hotspotY="0.50079" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Mandela\tarjetas OK\1Der.png">
+                            <collision-poly>
+                                <point x="0.0114943" y="0.00947867" />
+                                <point x="0.984674" y="0.0126382" />
+                                <point x="0.980843" y="0.984202" />
+                                <point x="0.0172414" y="0.985782" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="B" pingpong="0" repeatcount="1" repeatto="0" sid="183409840592896" speed="5">
-                        <frame duration="1" hotspotX="0.50096" hotspotY="0.5">
+                        <frame duration="1" hotspotX="0.501916" hotspotY="0.50079" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Mandela\tarjetas OK\2Der.png">
                             <collision-poly>
                                 <point x="0.00959693" y="0.00791139" />
                                 <point x="0.984645" y="0.0126582" />
@@ -105,7 +149,7 @@
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="C" pingpong="0" repeatcount="1" repeatto="0" sid="780642602495259" speed="5">
-                        <frame duration="1" hotspotX="0.50096" hotspotY="0.5">
+                        <frame duration="1" hotspotX="0.501916" hotspotY="0.50079" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Mandela\tarjetas OK\3Der.png">
                             <collision-poly>
                                 <point x="0.00959693" y="0.00791139" />
                                 <point x="0.984645" y="0.0126582" />
@@ -115,7 +159,7 @@
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="D" pingpong="0" repeatcount="1" repeatto="0" sid="101601621866291" speed="5">
-                        <frame duration="1" hotspotX="0.50096" hotspotY="0.5">
+                        <frame duration="1" hotspotX="0.501916" hotspotY="0.50079" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Mandela\tarjetas OK\4Der.png">
                             <collision-poly>
                                 <point x="0.00959693" y="0.00791139" />
                                 <point x="0.984645" y="0.0126582" />
@@ -125,7 +169,7 @@
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="E" pingpong="0" repeatcount="1" repeatto="0" sid="113194570851844" speed="5">
-                        <frame duration="1" hotspotX="0.50096" hotspotY="0.5">
+                        <frame duration="1" hotspotX="0.501916" hotspotY="0.50079" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Mandela\tarjetas OK\5Der.png">
                             <collision-poly>
                                 <point x="0.00959693" y="0.00791139" />
                                 <point x="0.984645" y="0.0126582" />
@@ -134,9 +178,29 @@
                             </collision-poly>
                         </frame>
                     </animation>
+                    <animation framecount="1" loop="0" name="F" pingpong="0" repeatcount="1" repeatto="0" sid="400304211000051" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.50079" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Mandela\tarjetas OK\6Der.png">
+                            <collision-poly>
+                                <point x="0.00957854" y="0.00789889" />
+                                <point x="0.982759" y="0.014218" />
+                                <point x="0.980843" y="0.984202" />
+                                <point x="0.0172414" y="0.985782" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="G" pingpong="0" repeatcount="1" repeatto="0" sid="141906444330625" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.50079" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Mandela\tarjetas OK\7Der.png">
+                            <collision-poly>
+                                <point x="0.00957854" y="0.00789889" />
+                                <point x="0.982759" y="0.014218" />
+                                <point x="0.978927" y="0.982622" />
+                                <point x="0.0191571" y="0.984202" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="foto2" sid="929218745609470">
+            <object-type name="fotoIzquierda" sid="929218745609470">
                 <plugin id="Sprite" />
                 <behaviors>
                     <behavior-type name="Physics" sid="222608359654539">
@@ -145,10 +209,17 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="A" pingpong="0" repeatcount="1" repeatto="0" sid="936186349736019" speed="5">
-                        <frame duration="1" hotspotX="0.500956" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Mandela\marcoimagen.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.50079" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Mandela\tarjetas OK\1Izq.png">
+                            <collision-poly>
+                                <point x="0.00957854" y="0.00789889" />
+                                <point x="0.982759" y="0.014218" />
+                                <point x="0.980843" y="0.984202" />
+                                <point x="0.0172414" y="0.985782" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="B" pingpong="0" repeatcount="1" repeatto="0" sid="494633051315967" speed="5">
-                        <frame duration="1" hotspotX="0.50096" hotspotY="0.5">
+                        <frame duration="1" hotspotX="0.501916" hotspotY="0.50079" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Mandela\tarjetas OK\2Izq.png">
                             <collision-poly>
                                 <point x="0.00959693" y="0.00791139" />
                                 <point x="0.984645" y="0.0126582" />
@@ -158,7 +229,7 @@
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="C" pingpong="0" repeatcount="1" repeatto="0" sid="943724275100411" speed="5">
-                        <frame duration="1" hotspotX="0.50096" hotspotY="0.5">
+                        <frame duration="1" hotspotX="0.501916" hotspotY="0.50079" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Mandela\tarjetas OK\3Izq.png">
                             <collision-poly>
                                 <point x="0.00959693" y="0.00791139" />
                                 <point x="0.984645" y="0.0126582" />
@@ -168,7 +239,7 @@
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="D" pingpong="0" repeatcount="1" repeatto="0" sid="641065323274841" speed="5">
-                        <frame duration="1" hotspotX="0.50096" hotspotY="0.5">
+                        <frame duration="1" hotspotX="0.501916" hotspotY="0.50079" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Mandela\tarjetas OK\4Izq.png">
                             <collision-poly>
                                 <point x="0.00959693" y="0.00791139" />
                                 <point x="0.984645" y="0.0126582" />
@@ -178,12 +249,32 @@
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="E" pingpong="0" repeatcount="1" repeatto="0" sid="909038735273305" speed="5">
-                        <frame duration="1" hotspotX="0.50096" hotspotY="0.5">
+                        <frame duration="1" hotspotX="0.501916" hotspotY="0.50079" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Mandela\tarjetas OK\5Izq.png">
                             <collision-poly>
                                 <point x="0.00959693" y="0.00791139" />
                                 <point x="0.984645" y="0.0126582" />
                                 <point x="0.980806" y="0.984177" />
                                 <point x="0.0172745" y="0.985759" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="F" pingpong="0" repeatcount="1" repeatto="0" sid="639573024472791" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.50079" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Mandela\tarjetas OK\6Izq.png">
+                            <collision-poly>
+                                <point x="0.00957854" y="0.00789889" />
+                                <point x="0.982759" y="0.014218" />
+                                <point x="0.980843" y="0.984202" />
+                                <point x="0.0172414" y="0.985782" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="G" pingpong="0" repeatcount="1" repeatto="0" sid="908036723651779" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.50079" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Mandela\tarjetas OK\7Izq.png">
+                            <collision-poly>
+                                <point x="0.00957854" y="0.00789889" />
+                                <point x="0.982759" y="0.014218" />
+                                <point x="0.978927" y="0.982622" />
+                                <point x="0.0191571" y="0.984202" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -260,6 +351,42 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-type name="consigna" sid="254944004103308">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="609889227049869" speed="5">
+                    <frame duration="1" hotspotX="0.500921" hotspotY="0.509091" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Mandela\horizontal\Assets horizontal\Selecciona la imagen correcta.png">
+                        <collision-poly>
+                            <point x="0.0184162" y="0.181818" />
+                            <point x="0.499079" y="0.272727" />
+                            <point x="0.972376" y="0.272727" />
+                            <point x="0.987109" y="0.490909" />
+                            <point x="0.972376" y="0.727273" />
+                            <point x="0.499079" y="0.454545" />
+                            <point x="0.0257827" y="0.745455" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="fondoGUI" sid="967646536991627">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="938370356317861" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504505" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad 2\Mandela\horizontal\Assets horizontal\Rectangle 35.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.495495" />
+                            <point x="0.9625" y="0.918919" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0416667" y="0.90991" />
+                            <point x="0" y="0.495495" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
