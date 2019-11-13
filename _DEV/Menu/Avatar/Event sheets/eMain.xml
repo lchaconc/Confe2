@@ -12,7 +12,7 @@
         <variable constant="0" name="isFinLista" sid="654288113613225" static="0" type="number">0</variable>
         <variable comment="0 falso / 1 verdero" constant="0" name="isInicioLista" sid="901388738268504" static="0" type="number">0</variable>
         <variable constant="0" name="tipoAvatar" sid="161729942656353" static="0" type="number">0</variable>
-        <event-group description="" sid="370034331693827" title="loadMain">
+        <event-group description="" sid="370034331693827" title="carga App">
             <sub-events>
                 <event-block sid="250151715630644">
                     <conditions>
@@ -79,75 +79,25 @@
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">&quot;--- Sexo: &quot; &amp; sexo</param>
                         </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="704634817361514" title="Desplazar">
-            <sub-events>
-                <event-block sid="882263141604584">
-                    <conditions>
-                        <condition id="4" name="Is touching object" sid="817773526791046" type="Touch">
-                            <param id="0" name="Object">btnDerecho</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="337587832922133" type="System">
-                            <param id="0" name="Variable">isInicioLista</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="843930237249445" type="System">
-                            <param id="0" name="Variable">isFinLista</param>
-                            <param id="1" name="Value">0</param>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="404233504742994" type="avatar1">
+                            <param id="0" name="Pin to">guiaContenedor</param>
+                            <param id="1" name="Mode">0</param>
                         </action>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="514909169987250" type="avatar1">
-                            <param id="0" name="Control">1</param>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="751946637226515" type="avatar2">
+                            <param id="0" name="Pin to">guiaContenedor</param>
+                            <param id="1" name="Mode">0</param>
                         </action>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="366584628671753" type="avatar2">
-                            <param id="0" name="Control">1</param>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="371791565509457" type="avatar3">
+                            <param id="0" name="Pin to">guiaContenedor</param>
+                            <param id="1" name="Mode">0</param>
                         </action>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="520856318638070" type="avatar3">
-                            <param id="0" name="Control">1</param>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="351285435720507" type="avatar4">
+                            <param id="0" name="Pin to">guiaContenedor</param>
+                            <param id="1" name="Mode">0</param>
                         </action>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="587532738108166" type="avatar4">
-                            <param id="0" name="Control">1</param>
-                        </action>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="486226379386159" type="avatar5">
-                            <param id="0" name="Control">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="167018979354396">
-                    <conditions>
-                        <condition id="4" name="Is touching object" sid="356394245277479" type="Touch">
-                            <param id="0" name="Object">btnIzquierdo</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="296799681707628" type="System">
-                            <param id="0" name="Variable">isFinLista</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="105122096253084" type="System">
-                            <param id="0" name="Variable">isInicioLista</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="774420845997067" type="avatar1">
-                            <param id="0" name="Control">0</param>
-                        </action>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="224274584156052" type="avatar2">
-                            <param id="0" name="Control">0</param>
-                        </action>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="746782513306027" type="avatar3">
-                            <param id="0" name="Control">0</param>
-                        </action>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="126805296129672" type="avatar4">
-                            <param id="0" name="Control">0</param>
-                        </action>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="303384342156125" type="avatar5">
-                            <param id="0" name="Control">0</param>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="426664173141273" type="avatar5">
+                            <param id="0" name="Pin to">guiaContenedor</param>
+                            <param id="1" name="Mode">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -427,36 +377,6 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Cuando se llega al elemento 0 o se llega al ultimo elemento de los avatar se desactivan los botones de desplazamiento para evitar que se pierdan en pantalla los avatar" sid="759399647716988" title="Verificar_extremos_lista">
-            <sub-events>
-                <event-block sid="123216584514055">
-                    <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="150553843693428" type="snsAvatar1">
-                            <param id="0" name="Object">avatar1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="558593006797813" type="System">
-                            <param id="0" name="Variable">isInicioLista</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="259747770154587">
-                    <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="631654328087678" type="snsAvatarUltimo">
-                            <param id="0" name="Object">avatar5</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="488813566080741" type="System">
-                            <param id="0" name="Variable">isFinLista</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
         <event-group description="" sid="952993258919362" title="Determinar_genero">
             <sub-events>
                 <event-block sid="136355492019167">
@@ -660,6 +580,71 @@
                         <action id="7" name="Go to URL" sid="302217255965678" type="Browser">
                             <param id="0" name="URL">&quot;../menu/&quot;</param>
                             <param id="1" name="Target">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="879119470610827" title="Limites Reten">
+            <sub-events>
+                <event-block sid="599202672985287">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="800466705112862" type="guiaContenedor">
+                            <param id="0" name="Object">snsLimiteGuia</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="421428367176124">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="347884989463400" type="snsLimiteGuia">
+                                    <param id="0" name="Instance variable">lado</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;derecho&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="402944351517769" type="guiaContenedor">
+                                    <param id="0" name="X">guiaContenedor.X - 10</param>
+                                </action>
+                                <action behavior="DragDrop" id="0" name="Set enabled" sid="502848683619364" type="guiaContenedor">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="251501088533154">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="528061660912230" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="980475586799348" type="snsLimiteGuia">
+                                    <param id="0" name="Instance variable">lado</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;izquierdo&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="310895505280299" type="guiaContenedor">
+                                    <param id="0" name="X">guiaContenedor.X + 10</param>
+                                </action>
+                                <action behavior="DragDrop" id="0" name="Set enabled" sid="989541596920101" type="guiaContenedor">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="130668794233821" title="Activar Guia Contenedor">
+            <sub-events>
+                <event-block sid="175773388346268">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="771252506031360" type="Touch">
+                            <param id="0" name="Object">guiaContenedor</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="683556037395688" type="guiaContenedor">
+                            <param id="0" name="State">1</param>
                         </action>
                     </actions>
                 </event-block>

@@ -8,7 +8,7 @@
     <author-website>http://</author-website>
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>3subbtu8xvytq</unique-id>
-    <saved-with-version>26900</saved-with-version>
+    <saved-with-version>27200</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
@@ -19,7 +19,8 @@
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -97,8 +98,8 @@
             <object-type name="avatar1" sid="305994832654659">
                 <plugin id="Sprite" />
                 <behaviors>
-                    <behavior-type name="8Direction" sid="404373801434166">
-                        <behavior id="EightDir" />
+                    <behavior-type name="Pin" sid="372057241691664">
+                        <behavior id="Pin" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
@@ -113,8 +114,8 @@
             <object-type name="avatar2" sid="248523699031194">
                 <plugin id="Sprite" />
                 <behaviors>
-                    <behavior-type name="8Direction" sid="692754322512622">
-                        <behavior id="EightDir" />
+                    <behavior-type name="Pin" sid="678058631219802">
+                        <behavior id="Pin" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
@@ -129,8 +130,8 @@
             <object-type name="avatar3" sid="686985246063988">
                 <plugin id="Sprite" />
                 <behaviors>
-                    <behavior-type name="8Direction" sid="650690222687349">
-                        <behavior id="EightDir" />
+                    <behavior-type name="Pin" sid="220170418750285">
+                        <behavior id="Pin" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
@@ -145,8 +146,8 @@
             <object-type name="avatar4" sid="904944138139872">
                 <plugin id="Sprite" />
                 <behaviors>
-                    <behavior-type name="8Direction" sid="987736802471433">
-                        <behavior id="EightDir" />
+                    <behavior-type name="Pin" sid="421002855229733">
+                        <behavior id="Pin" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
@@ -173,34 +174,11 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="baseAvatar" sid="226289217039203">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="negro" pingpong="0" repeatcount="1" repeatto="0" sid="752616455156688" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.501129" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\avatars seleccion\negro.png" />
-                    </animation>
-                    <animation framecount="1" loop="0" name="blanco" pingpong="0" repeatcount="1" repeatto="0" sid="367018790498832" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\avatars seleccion\blanco.png" />
-                    </animation>
-                    <animation framecount="1" loop="0" name="moreno" pingpong="0" repeatcount="1" repeatto="0" sid="151689747684248" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\avatars seleccion\moreno.png" />
-                    </animation>
-                    <animation framecount="1" loop="0" name="negra" pingpong="0" repeatcount="1" repeatto="0" sid="926235421050111" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.501129" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\avatars seleccion\negra.png" />
-                    </animation>
-                    <animation framecount="1" loop="0" name="blanca" pingpong="0" repeatcount="1" repeatto="0" sid="316655740021144" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.501129" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\avatars seleccion\blanca.png" />
-                    </animation>
-                    <animation framecount="1" loop="0" name="morena" pingpong="0" repeatcount="1" repeatto="0" sid="373848751358189" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.501129" original-source="C:\Users\logan24\Desktop\CONFE ASSETS MENU\avatars seleccion\morena.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
             <object-type name="avatar5" sid="284692013404735">
                 <plugin id="Sprite" />
                 <behaviors>
-                    <behavior-type name="8Direction" sid="360888080105267">
-                        <behavior id="EightDir" />
+                    <behavior-type name="Pin" sid="185109792026210">
+                        <behavior id="Pin" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
@@ -216,6 +194,19 @@
                                 <point x="0.993976" y="0.00223214" />
                             </collision-poly>
                         </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="guiaContenedor" sid="506923746772119">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="DragDrop" sid="876217834876733">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="989987347860833" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -336,6 +327,17 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="426827542405909" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="snsLimiteGuia" sid="711803395810481">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="lado" sid="531701218431392" type="string" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="497439935323375" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
