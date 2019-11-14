@@ -21,7 +21,7 @@
                     <actions>
                         <action id="14" name="Log" sid="773715458328881" type="Browser">
                             <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;*** Avatar 1.7 ***&quot;</param>
+                            <param id="1" name="Message">&quot;*** Avatar 1.8.1 ***&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="939347095797292" type="System">
                             <param id="0" name="Variable">isFinLista</param>
@@ -587,63 +587,40 @@
         </event-group>
         <event-group description="" sid="879119470610827" title="Limites Reten">
             <sub-events>
-                <event-block sid="599202672985287">
+                <event-block sid="998008282245377">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="800466705112862" type="guiaContenedor">
-                            <param id="0" name="Object">snsLimiteGuia</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="421428367176124">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="347884989463400" type="snsLimiteGuia">
-                                    <param id="0" name="Instance variable">lado</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;derecho&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-1" name="Set X" sid="402944351517769" type="guiaContenedor">
-                                    <param id="0" name="X">guiaContenedor.X - 10</param>
-                                </action>
-                                <action behavior="DragDrop" id="0" name="Set enabled" sid="502848683619364" type="guiaContenedor">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="251501088533154">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="528061660912230" type="System" />
-                                <condition id="-7" name="Compare instance variable" sid="980475586799348" type="snsLimiteGuia">
-                                    <param id="0" name="Instance variable">lado</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;izquierdo&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-1" name="Set X" sid="310895505280299" type="guiaContenedor">
-                                    <param id="0" name="X">guiaContenedor.X + 10</param>
-                                </action>
-                                <action behavior="DragDrop" id="0" name="Set enabled" sid="989541596920101" type="guiaContenedor">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="130668794233821" title="Activar Guia Contenedor">
-            <sub-events>
-                <event-block sid="175773388346268">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="771252506031360" type="Touch">
-                            <param id="0" name="Object">guiaContenedor</param>
+                        <condition id="-1" name="Compare X" sid="991577114949191" type="guiaContenedor">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="X co-ordinate">1570</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="DragDrop" id="0" name="Set enabled" sid="683556037395688" type="guiaContenedor">
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="241678224585447" type="guiaContenedor">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="922796963705472" type="guiaContenedor">
+                            <param id="0" name="X">guiaContenedor.X - 20</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="558325144072937" type="guiaContenedor">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="375583952277671">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="688688970431477" type="guiaContenedor">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="X co-ordinate">-250</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="825958584984228" type="guiaContenedor">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="667504755396194" type="guiaContenedor">
+                            <param id="0" name="X">guiaContenedor.X + 20</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="345492712423604" type="guiaContenedor">
                             <param id="0" name="State">1</param>
                         </action>
                     </actions>
