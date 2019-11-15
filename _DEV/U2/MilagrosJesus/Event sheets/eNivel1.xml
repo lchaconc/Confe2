@@ -935,6 +935,9 @@
                             <param id="0" name="Instance variable">milagro</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="-15" name="Set visible" sid="637253832079738" type="indicadorMano">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="726851538280702">
@@ -956,6 +959,9 @@
                             <param id="0" name="Instance variable">colisionHabilitada</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="-15" name="Set visible" sid="821779024610881" type="indicadorMano">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="753536756998784">
@@ -976,6 +982,9 @@
                         <action id="-13" name="Set boolean" sid="329630209519860" type="ctrlJugador">
                             <param id="0" name="Instance variable">colisionHabilitada</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="830992511295334" type="indicadorMano">
+                            <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1198,6 +1207,9 @@
                     </conditions>
                     <actions>
                         <action id="-15" name="Set visible" sid="392342972095095" type="btnZonaMilagro">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="971846385124756" type="indicadorMano">
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action behavior="Platform" id="11" name="Set enabled" sid="578465298353949" type="ctrlJugador">
