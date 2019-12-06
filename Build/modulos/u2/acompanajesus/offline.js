@@ -1,9 +1,9 @@
 ﻿{
-	"version": 1573272467,
+	"version": 1575603182,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
-		"jquery-2.1.1.min.js",
+		"jquery-3.4.1.min.js",
 		"offlineClient.js",
 		"images/spritejesus-sheet0.png",
 		"images/spritejesus-sheet1.png",
@@ -44,6 +44,7 @@
 		"images/btnzonamilagro-sheet0.png",
 		"images/btnzonamilagro-sheet1.png",
 		"images/btnhome-sheet0.png",
+		"images/indicadormano-sheet0.png",
 		"images/paloma-sheet0.png",
 		"images/paloma-sheet1.png",
 		"images/paloma-sheet2.png",
@@ -137,6 +138,7 @@
 		"images/rtoulojerusalem-sheet0.png",
 		"images/rotulojerico-sheet0.png",
 		"images/cntserpiente-sheet0.png",
+		"images/cntlimitevertical-sheet0.png",
 		"images/lanza-sheet0.png",
 		"images/lanzadorlanza-sheet0.png",
 		"images/marcromano2-sheet0.png",
