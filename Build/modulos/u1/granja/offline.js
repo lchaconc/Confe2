@@ -1,9 +1,9 @@
 ﻿{
-	"version": 1570301975,
+	"version": 1575741326,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
-		"jquery-2.1.1.min.js",
+		"jquery-3.4.1.min.js",
 		"offlineClient.js",
 		"images/charactermasc-sheet0.png",
 		"images/charactermasc-sheet1.png",
@@ -22,7 +22,6 @@
 		"images/bgmisiones-sheet0.png",
 		"images/bgmodalmisiones-sheet0.png",
 		"images/bgmodalmisiones-sheet1.png",
-		"images/bgmodalmisiones-sheet2.png",
 		"images/bgnegro-sheet0.png",
 		"images/bgfinjuego-sheet0.png",
 		"images/btnclose-sheet0.png",
@@ -117,6 +116,7 @@
 		"images/titulosdias-sheet0.png",
 		"images/titulosdias-sheet1.png",
 		"images/txtmisiones-sheet0.png",
+		"images/txtmisiones-sheet1.png",
 		"images/txtnecesitas-sheet0.png",
 		"images/txtmisioncompleta-sheet0.png",
 		"images/txtfincompleto-sheet0.png",
