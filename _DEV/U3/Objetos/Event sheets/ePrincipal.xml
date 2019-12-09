@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ePrincipal</name>
+    <events>
+        <variable constant="0" name="itemes" sid="898841744535979" static="0" type="number">0</variable>
+        <variable constant="0" name="tiempo" sid="189411378881028" static="0" type="number">60</variable>
+        <variable comment="Limite de cantidad de animaciones cargadas" constant="0" name="limite" sid="742806680819187" static="0" type="number">0</variable>
+        <variable constant="0" name="activo" sid="641020428400177" static="0" type="number">0</variable>
+        <variable constant="0" name="aux" sid="253875549787268" static="0" type="number">0</variable>
+        <variable constant="0" name="idFichaArriba" sid="995860485407690" static="0" type="number">-1</variable>
+        <variable constant="0" name="idFichaDerecha" sid="947032204209378" static="0" type="number">-1</variable>
+        <variable constant="0" name="idFichaActual" sid="675120988793900" static="0" type="number">-1</variable>
+        <variable constant="0" name="animacionActual" sid="936753675121942" static="0" type="text"></variable>
+        <variable constant="0" name="animacionArriba" sid="820896781138967" static="0" type="text"></variable>
+        <variable constant="0" name="animacionDerecha" sid="356825075591464" static="0" type="text"></variable>
+        <event-block sid="882982172919029">
+            <conditions>
+                <condition id="3" name="On touched object" sid="787900944270718" type="Touch">
+                    <param id="0" name="Object">ficha</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="737367031136312" type="System">
+                    <param id="0" name="Variable">animacionActual</param>
+                    <param id="1" name="Value">&quot;nula&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="884593364768199" type="System">
+                    <param id="0" name="Variable">animacionArriba</param>
+                    <param id="1" name="Value">&quot;nula&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="702977369542310" type="System">
+                    <param id="0" name="Variable">animacionDerecha</param>
+                    <param id="1" name="Value">&quot;nula&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="325551985463896" type="System">
+                    <param id="0" name="Variable">idFichaActual</param>
+                    <param id="1" name="Value">-1</param>
+                </action>
+                <action id="-9" name="Set value" sid="648064173268776" type="System">
+                    <param id="0" name="Variable">idFichaDerecha</param>
+                    <param id="1" name="Value">-1</param>
+                </action>
+                <action id="-9" name="Set value" sid="701460065169006" type="System">
+                    <param id="0" name="Variable">idFichaArriba</param>
+                    <param id="1" name="Value">-1</param>
+                </action>
+                <action id="-9" name="Set value" sid="851857748980775" type="System">
+                    <param id="0" name="Variable">idFichaActual</param>
+                    <param id="1" name="Value">ficha.UID</param>
+                </action>
+                <action id="-9" name="Set value" sid="621420689758176" type="System">
+                    <param id="0" name="Variable">animacionActual</param>
+                    <param id="1" name="Value">ficha.AnimationName</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="343452443725210" type="sensorArriba">
+                    <param id="0" name="Object">ficha</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="11" name="Set collisions enabled" sid="691713319033823" type="detectorAriba">
+                    <param id="0" name="Collisions">1</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="452445394692041" type="sensorDerecha">
+                    <param id="0" name="Object">ficha</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="11" name="Set collisions enabled" sid="238091561001766" type="detectorDerecha">
+                    <param id="0" name="Collisions">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="735110914468121" title="cargar App">
+            <sub-events>
+                <event-block sid="269074083509238">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="608593565083147" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="734152331963892" type="detectorAriba">
+                            <param id="0" name="Pin to">sensorArriba</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="280202841670370" type="detectorDerecha">
+                            <param id="0" name="Pin to">sensorDerecha</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="140894043706941" type="ficha">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="722999225463614" type="animacionesBase">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Value">&quot;Agua&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="561369568963945" type="animacionesBase">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Value">&quot;Aceite&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="995305700040735" type="animacionesBase">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Value">&quot;Fuego&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="369888243952784" type="animacionesBase">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Value">&quot;Nube&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="998016157307424" type="animacionesBase">
+                            <param id="0" name="X">4</param>
+                            <param id="1" name="Value">&quot;Sello&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="499938515232948" type="animacionesBase">
+                            <param id="0" name="X">5</param>
+                            <param id="1" name="Value">&quot;Paloma&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="952971684033696" type="System">
+                            <param id="0" name="Variable">limite</param>
+                            <param id="1" name="Value">animacionesBase.Width</param>
+                        </action>
+                        <action id="5" name="Set web font" sid="498201039617703" type="txtTiempo">
+                            <param id="0" name="Family name">&quot;Finger Paint&quot;</param>
+                            <param id="1" name="CSS URL">&quot;https://fonts.googleapis.com/css?family=Finger+Paint&amp;display=swap&quot;</param>
+                        </action>
+                        <action id="5" name="Set web font" sid="707087040970680" type="txtItemes">
+                            <param id="0" name="Family name">&quot;Finger Paint&quot;</param>
+                            <param id="1" name="CSS URL">&quot;https://fonts.googleapis.com/css?family=Finger+Paint&amp;display=swap&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="104578268918208" type="Function">
+                            <param id="0" name="Name">&quot;cargarAnimaciones&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="838350052188914">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="242024744708743" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="385450795813724" type="System">
+                            <param id="0" name="Variable">tiempo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="691708922155758" type="txtTiempo">
+                            <param id="0" name="Text">&quot;Quedan &quot; &amp; tiempo &amp; &quot; segundos&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="991298543001717">
+            <conditions>
+                <condition id="0" name="On function" sid="984360916468855" type="Function">
+                    <param id="0" name="Name">&quot;destruirFichaActual&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="tmpPosX" sid="579270124017601" static="0" type="number">0</variable>
+                <event-block sid="510392261646479">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="963066899950030" type="ficha">
+                            <param id="0" name="Unique ID">idFichaActual</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="543729314614457" type="System">
+                            <param id="0" name="Variable">tmpPosX</param>
+                            <param id="1" name="Value">ficha.X</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="448822293965268" type="ficha" />
+                        <action id="-1" name="Set X" sid="683966564454216" type="origenFichas">
+                            <param id="0" name="X">tmpPosX</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="928684029897975" type="origenFichas">
+                            <param id="0" name="Object">ficha</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="260398501821110" type="ficha">
+                            <param id="0" name="Animation">animacionesBase.At(  random( 0, limite)     )</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="746668575131301" type="ficha">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="299421675169958" title="Detectar Adyacente">
+            <sub-events>
+                <event-block sid="110321923362644">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="785808929899836" type="detectorAriba">
+                            <param id="0" name="Object">ficha</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="427151942509290" type="System">
+                            <param id="0" name="Variable">animacionArriba</param>
+                            <param id="1" name="Value">ficha.AnimationName</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="105404313324673" type="System">
+                            <param id="0" name="Variable">idFichaArriba</param>
+                            <param id="1" name="Value">ficha.UID</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="570722634761733">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="417421103386550" type="System">
+                                    <param id="0" name="Variable">animacionActual</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">animacionArriba</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="11" name="Set collisions enabled" sid="488435847346346" type="detectorAriba">
+                                    <param id="0" name="Collisions">0</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="638263344686981" type="sensorArriba">
+                                    <param id="0" name="Object">obj1</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="848069806326891" type="origenFichas">
+                                    <param id="0" name="X">ficha.X</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="469450576410582" type="ficha" />
+                                <action id="0" name="Spawn another object" sid="779549219480181" type="origenFichas">
+                                    <param id="0" name="Object">ficha</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="771635742096188" type="ficha">
+                                    <param id="0" name="Animation">animacionesBase.At(  random( 0, limite)     )</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action behavior="Physics" id="27" name="Set enabled" sid="793153402459180" type="ficha">
+                                    <param id="0" name="Mode">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="820506736813811" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="149852644318057" type="System">
+                                    <param id="0" name="Variable">itemes</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="726207463675838" type="txtItemes">
+                                    <param id="0" name="Text">&quot;Itemes obtenidos &quot; &amp; itemes</param>
+                                </action>
+                                <action id="0" name="Call function" sid="705937865548671" type="Function">
+                                    <param id="0" name="Name">&quot;destruirFichaActual&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="443819631463912">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="557122730241135" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="649965333298403" type="sensorArriba">
+                                    <param id="0" name="Object">obj1</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="664799132569844">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="682158186485490" type="detectorDerecha">
+                            <param id="0" name="Object">ficha</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="304239505276675" type="System">
+                            <param id="0" name="Variable">animacionDerecha</param>
+                            <param id="1" name="Value">ficha.AnimationName</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="728624730446881" type="System">
+                            <param id="0" name="Variable">idFichaDerecha</param>
+                            <param id="1" name="Value">ficha.UID</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="820050981315625">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="843909630543616" type="System">
+                                    <param id="0" name="Variable">animacionActual</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">animacionDerecha</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="11" name="Set collisions enabled" sid="356674693109361" type="detectorAriba">
+                                    <param id="0" name="Collisions">0</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="378756230969321" type="sensorDerecha">
+                                    <param id="0" name="Object">obj2</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="289222475021410" type="origenFichas">
+                                    <param id="0" name="X">ficha.X</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="879785634897614" type="ficha" />
+                                <action id="0" name="Spawn another object" sid="134226354890939" type="origenFichas">
+                                    <param id="0" name="Object">ficha</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="136466353790802" type="ficha">
+                                    <param id="0" name="Animation">animacionesBase.At(  random( 0, limite)     )</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action behavior="Physics" id="27" name="Set enabled" sid="609136067983024" type="ficha">
+                                    <param id="0" name="Mode">1</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="164016801208328" type="System">
+                                    <param id="0" name="Variable">itemes</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="851538674768571" type="txtItemes">
+                                    <param id="0" name="Text">&quot;Itemes obtenidos &quot; &amp; itemes</param>
+                                </action>
+                                <action id="0" name="Call function" sid="926473570289967" type="Function">
+                                    <param id="0" name="Name">&quot;destruirFichaActual&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="403682757367924">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="672566877834675" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="137252298268285" type="sensorDerecha">
+                                    <param id="0" name="Object">obj2</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="621662507949067" title="Caragar Animaciones">
+            <sub-events>
+                <event-block sid="398360407018094">
+                    <conditions>
+                        <condition id="0" name="On function" sid="415349791579219" type="Function">
+                            <param id="0" name="Name">&quot;cargarAnimaciones&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="266810246585145">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="320911532642214" type="System">
+                                    <param id="0" name="Object">ficha</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="628858878275246" type="ficha">
+                                    <param id="0" name="Animation">animacionesBase.At(  random(0, limite )    )</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

@@ -5,16 +5,16 @@ It is entirely optional and the project will load without it.  If you are placin
 you probably do not want to add any .uistate.xml files to the repository.-->
     <camera>
         <position-x>640</position-x>
-        <position-y>499.354</position-y>
-        <position-z>148.644</position-z>
+        <position-y>360</position-y>
+        <position-z>214.359</position-z>
         <lookat-x>640</lookat-x>
-        <lookat-y>499.354</lookat-y>
+        <lookat-y>360</lookat-y>
         <lookat-z>0</lookat-z>
     </camera>
-    <snap-to-grid>0</snap-to-grid>
-    <show-grid>0</show-grid>
-    <snap-width>32</snap-width>
-    <snap-height>32</snap-height>
+    <snap-to-grid>1</snap-to-grid>
+    <show-grid>1</show-grid>
+    <snap-width>16</snap-width>
+    <snap-height>16</snap-height>
     <show-collision-polys>0</show-collision-polys>
     <translucent-inactive-layers>0</translucent-inactive-layers>
     <properties>
@@ -23,13 +23,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="0" name="Margins" />
         <property expanded="1" name="Effects" />
     </properties>
-    <active-layer name="Sensores" />
+    <active-layer name="GUI" />
     <layers>
-        <layer locked="0" name="background" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="main" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="Sensores" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="controls" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="shadows" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="texts" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Fondo" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Contenedor" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="GUI" parallax-in-editor="0" visible="1" />
     </layers>
 </c2uistate>
