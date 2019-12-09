@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>eMain</name>
+    <events>
+        <event-group description="" sid="370034331693827" title="Setup">
+            <sub-events>
+                <event-block sid="250151715630644">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="113989134144720" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set at X" sid="235098364495507" type="fichas">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Value">&quot;Nube&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="874546542610623" type="fichas">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Value">&quot;Paloma&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="417420362729846" type="fichas">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Value">&quot;Fuego&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="662471945863382" type="fichas">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Value">&quot;Aceite&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="723663751988766" type="fichas">
+                            <param id="0" name="X">4</param>
+                            <param id="1" name="Value">&quot;Agua&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="456047681106345" type="fichas">
+                            <param id="0" name="X">5</param>
+                            <param id="1" name="Value">&quot;Sello&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="488611076048200" type="fichas">
+                            <param id="0" name="X">6</param>
+                            <param id="1" name="Value">&quot;Nube&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="891454618928982" type="fichas">
+                            <param id="0" name="X">7</param>
+                            <param id="1" name="Value">&quot;Paloma&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="130230910876744" type="fichas">
+                            <param id="0" name="X">8</param>
+                            <param id="1" name="Value">&quot;Fuego&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="810028155876426" type="fichas">
+                            <param id="0" name="X">9</param>
+                            <param id="1" name="Value">&quot;Aceite&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="567700484827777" type="fichas">
+                            <param id="0" name="X">10</param>
+                            <param id="1" name="Value">&quot;Agua&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="923585011356290" type="fichas">
+                            <param id="0" name="X">11</param>
+                            <param id="1" name="Value">&quot;Sello&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="371372189183360" title="Eventos Touch">
+            <sub-events>
+                <variable constant="0" name="aux" sid="342877695030776" static="0" type="number">0</variable>
+                <variable constant="0" name="limite" sid="843582745297819" static="0" type="number">0</variable>
+                <event-block sid="311145965375584">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="454476203949458" type="Touch">
+                            <param id="0" name="Object">ficha</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="442638477886974" type="System">
+                            <param id="0" name="Variable">limite</param>
+                            <param id="1" name="Value">fichas.Width</param>
+                        </action>
+                        <action id="14" name="Log" sid="313248739227192" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;Limite: &quot; &amp; limite</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="235088729851673" type="System">
+                            <param id="0" name="Variable">aux</param>
+                            <param id="1" name="Value">random(0, fichas.Width)</param>
+                        </action>
+                        <action id="14" name="Log" sid="402195678789765" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;Aleatorio: &quot; &amp;int( aux)</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="412626992637848" type="ficha">
+                            <param id="0" name="Animation">fichas.At( int(aux)  )</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="9" name="Delete" sid="600304704117424" type="fichas">
+                            <param id="0" name="Index">aux</param>
+                            <param id="1" name="Axis">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
