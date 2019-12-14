@@ -50,6 +50,9 @@
         <object-folder name="Sprites">
             <object-type name="ficha" sid="914802064653488">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="animacion" sid="622847363458228" type="string" />
+                </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Nube" pingpong="0" repeatcount="1" repeatto="0" sid="616742852535698" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_3\01-Objetos\cloud.png" />
@@ -84,7 +87,7 @@
             <object-type name="Function" sid="558381821082318">
                 <plugin id="Function" />
             </object-type>
-            <object-type global="1" name="fichas" sid="498567800109121">
+            <object-type global="1" name="ImagenesBase" sid="498567800109121">
                 <plugin id="Arr" />
             </object-type>
             <object-type name="Browser" sid="885434796955149">
