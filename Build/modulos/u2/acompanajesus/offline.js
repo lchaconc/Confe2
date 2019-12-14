@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1575603182,
+	"version": 1576293169,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -45,6 +45,7 @@
 		"images/btnzonamilagro-sheet1.png",
 		"images/btnhome-sheet0.png",
 		"images/indicadormano-sheet0.png",
+		"images/btnhomejuego-sheet0.png",
 		"images/paloma-sheet0.png",
 		"images/paloma-sheet1.png",
 		"images/paloma-sheet2.png",

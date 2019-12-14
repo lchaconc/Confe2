@@ -1450,6 +1450,19 @@
         </event-group>
         <event-group description="" sid="787636197865969" title="Interaccion Usuario - Juego (Milagros) Evento click -3">
             <sub-events>
+                <event-block sid="365284056093111">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="848421882809709" type="Touch">
+                            <param id="0" name="Object">btnHomeJuego</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Go to URL" sid="136286388115958" type="Browser">
+                            <param id="0" name="URL">&quot;../../menu/index.html&quot;</param>
+                            <param id="1" name="Target">0</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="573817957845744">
                     <conditions>
                         <condition id="4" name="Is touching object" sid="420075880878676" type="Touch">

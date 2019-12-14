@@ -252,8 +252,34 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="978955021596924">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="638994382787072" type="Touch">
+                            <param id="0" name="Object">btnHomeJuego</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Go to URL" sid="828149745411628" type="Browser">
+                            <param id="0" name="URL">&quot;../../menu/index.html&quot;</param>
+                            <param id="1" name="Target">0</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="438718347723510">
+            <conditions>
+                <condition id="3" name="On touched object" sid="192165992864002" type="Touch">
+                    <param id="0" name="Object">btnHomeJuego</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Go to URL" sid="748625295683697" type="Browser">
+                    <param id="0" name="URL">&quot;../../menu/index.html&quot;</param>
+                    <param id="1" name="Target">0</param>
+                </action>
+            </actions>
+        </event-block>
         <event-group description="" sid="685740401985066" title="control_sprite2">
             <sub-events>
                 <event-block sid="662072882424732">

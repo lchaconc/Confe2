@@ -1543,6 +1543,19 @@
                         <action id="-9" name="Destroy" sid="907427196062688" type="bartimeo" />
                     </actions>
                 </event-block>
+                <event-block sid="935044453038507">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="291051861781563" type="Touch">
+                            <param id="0" name="Object">btnHomeJuego</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Go to URL" sid="137750372885193" type="Browser">
+                            <param id="0" name="URL">&quot;../../menu/index.html&quot;</param>
+                            <param id="1" name="Target">0</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="740053127096908" title="Restar vidas jugador">
