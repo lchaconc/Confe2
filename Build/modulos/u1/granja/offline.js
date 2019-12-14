@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1575781250,
+	"version": 1576291838,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -34,6 +34,7 @@
 		"images/controlesgeneral-sheet0.png",
 		"images/btnaudio-sheet0.png",
 		"images/btnaudio-sheet1.png",
+		"images/btnhome-sheet0.png",
 		"images/tree1-sheet0.png",
 		"images/carriot-sheet0.png",
 		"images/granero-sheet0.png",
