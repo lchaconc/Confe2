@@ -3,6 +3,9 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eMain</name>
     <events>
+        <variable constant="0" name="contador" sid="847594319233455" static="0" type="number">0</variable>
+        <variable constant="0" name="limiteFichas" sid="670529035688382" static="0" type="number">0</variable>
+        <variable constant="0" name="idFichaAnterior" sid="922738944078182" static="0" type="number">0</variable>
         <variable constant="0" name="actual" sid="277803287735438" static="0" type="text"></variable>
         <variable constant="0" name="anterior" sid="359566982060082" static="0" type="text"></variable>
         <event-group description="" sid="370034331693827" title="Setup">
@@ -64,11 +67,19 @@
                             <param id="0" name="Name">&quot;cargarFichas&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
+                        <action id="-9" name="Set value" sid="718797908050672" type="System">
+                            <param id="0" name="Variable">limiteFichas</param>
+                            <param id="1" name="Value">ficha.Count</param>
+                        </action>
+                        <action id="14" name="Log" sid="999900958567088" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;limiteFichas: &quot;  &amp; limiteFichas</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="371372189183360" title="Eventos Touch">
+        <event-group description="" sid="371372189183360" title="Eventos Touch - Evaluacion de Aciertos">
             <sub-events>
                 <event-block sid="311145965375584">
                     <conditions>
@@ -96,6 +107,68 @@
                             <param id="0" name="Variable">actual</param>
                             <param id="1" name="Value">ficha.animacion</param>
                         </action>
+                        <action id="14" name="Log" sid="472469521091248" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;Anterior: &quot; &amp; anterior</param>
+                        </action>
+                        <action id="14" name="Log" sid="826415058832776" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;Actual: &quot; &amp; actual</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="197149540489960">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="433507193535693" type="System">
+                                    <param id="0" name="Variable">actual</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">anterior</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="379858770060646" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;Acierto&quot;</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="328713504988293" type="ficha" />
+                                <action id="0" name="Call function" sid="983049323901093" type="Function">
+                                    <param id="0" name="Name">&quot;eliminarAnterior&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-10" name="Add to" sid="878063856777157" type="System">
+                                    <param id="0" name="Variable">contador</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="618011472908736">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="515772834802470" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="886420369944538" type="System">
+                                    <param id="0" name="Variable">idFichaAnterior</param>
+                                    <param id="1" name="Value">ficha.UID</param>
+                                </action>
+                                <action id="14" name="Log" sid="380557417294011" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;id ficha anterior: &quot; &amp; idFichaAnterior</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="507555657019447">
+                    <conditions>
+                        <condition id="0" name="On function" sid="561042047569759" type="Function">
+                            <param id="0" name="Name">&quot;eliminarAnterior&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="609449383595018" type="ficha">
+                            <param id="0" name="Unique ID">idFichaAnterior</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="724844117654660" type="ficha" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -103,7 +176,6 @@
         <event-group description="" sid="252988668234633" title="Funciones carga de fichas">
             <sub-events>
                 <variable constant="0" name="aux" sid="600274862162049" static="0" type="number">0</variable>
-                <variable constant="0" name="limite" sid="356916413055029" static="0" type="number">0</variable>
                 <variable constant="0" name="animacion" sid="758820401067213" static="0" type="text"></variable>
                 <event-block sid="114735143098672">
                     <conditions>
@@ -111,16 +183,7 @@
                             <param id="0" name="Name">&quot;cargarFichas&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="442638477886974" type="System">
-                            <param id="0" name="Variable">limite</param>
-                            <param id="1" name="Value">ImagenesBase.Width</param>
-                        </action>
-                        <action id="14" name="Log" sid="313248739227192" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;Limite: &quot; &amp; limite</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
                         <event-block sid="679686323927574">
                             <conditions>
@@ -131,7 +194,7 @@
                             <actions>
                                 <action id="-10" name="Set value" sid="785310468370042" type="ficha">
                                     <param id="0" name="Instance variable">animacion</param>
-                                    <param id="1" name="Value">&quot;frfr&quot;</param>
+                                    <param id="1" name="Value">&quot;&quot;</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="235088729851673" type="System">
                                     <param id="0" name="Variable">aux</param>
@@ -152,6 +215,24 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="602857025413447" title="Fin del juego">
+            <sub-events>
+                <event-block sid="549218789118711">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="390530265849438" type="System">
+                            <param id="0" name="Variable">contador</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">limiteFichas /2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="694365631429309" type="txtFinJuego">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
