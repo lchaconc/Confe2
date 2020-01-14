@@ -5,7 +5,7 @@
     <events>
         <variable constant="0" name="contador" sid="847594319233455" static="0" type="number">0</variable>
         <variable constant="0" name="limiteFichas" sid="670529035688382" static="0" type="number">0</variable>
-        <variable constant="0" name="idFichaAnterior" sid="922738944078182" static="0" type="number">0</variable>
+        <variable constant="0" name="idFichaAnterior" sid="922738944078182" static="0" type="number">17</variable>
         <variable constant="0" name="actual" sid="277803287735438" static="0" type="text"></variable>
         <variable constant="0" name="anterior" sid="359566982060082" static="0" type="text"></variable>
         <event-group description="" sid="370034331693827" title="Setup">
@@ -92,13 +92,6 @@
                             <param id="0" name="Animation">ficha.animacion</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-16" name="Wait" sid="131573948951685" type="System">
-                            <param id="0" name="Seconds">0.7</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="225001404886104" type="ficha">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
                         <action id="-9" name="Set value" sid="886072016633015" type="System">
                             <param id="0" name="Variable">anterior</param>
                             <param id="1" name="Value">actual</param>
@@ -130,6 +123,9 @@
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;Acierto&quot;</param>
                                 </action>
+                                <action id="-16" name="Wait" sid="329250862228059" type="System">
+                                    <param id="0" name="Seconds">0.6</param>
+                                </action>
                                 <action id="-9" name="Destroy" sid="328713504988293" type="ficha" />
                                 <action id="0" name="Call function" sid="983049323901093" type="Function">
                                     <param id="0" name="Name">&quot;eliminarAnterior&quot;</param>
@@ -141,11 +137,15 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="618011472908736">
+                        <event-block sid="118356590743970">
                             <conditions>
-                                <condition id="-22" name="Else" sid="515772834802470" type="System" />
+                                <condition id="-22" name="Else" sid="772663395789347" type="System" />
                             </conditions>
                             <actions>
+                                <action id="0" name="Call function" sid="319450495075636" type="Function">
+                                    <param id="0" name="Name">&quot;ocultarAnterior&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                                 <action id="-9" name="Set value" sid="886420369944538" type="System">
                                     <param id="0" name="Variable">idFichaAnterior</param>
                                     <param id="1" name="Value">ficha.UID</param>
@@ -169,6 +169,22 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="724844117654660" type="ficha" />
+                    </actions>
+                </event-block>
+                <event-block sid="944731814152199">
+                    <conditions>
+                        <condition id="0" name="On function" sid="776408080149171" type="Function">
+                            <param id="0" name="Name">&quot;ocultarAnterior&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="121080027413170" type="ficha">
+                            <param id="0" name="Unique ID">idFichaAnterior</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="358377866716110" type="ficha">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
