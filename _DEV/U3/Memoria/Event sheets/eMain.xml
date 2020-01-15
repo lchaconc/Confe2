@@ -15,51 +15,68 @@
                         <condition id="-2" name="On start of layout" sid="113989134144720" type="System" />
                     </conditions>
                     <actions>
-                        <action id="2" name="Set at X" sid="235098364495507" type="ImagenesBase">
+                        <action id="0" name="Call function" sid="639665045412392" type="Function">
+                            <param id="0" name="Name">&quot;cargarArrayObjetos&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="134737920417738" title="Cargar Animaciones">
+            <sub-events>
+                <event-block sid="282084385098536">
+                    <conditions>
+                        <condition id="0" name="On function" sid="944757919731630" type="Function">
+                            <param id="0" name="Name">&quot;cargarArrayObjetos&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set at X" sid="235098364495507" type="ImagenesObjetos">
                             <param id="0" name="X">0</param>
                             <param id="1" name="Value">&quot;Nube&quot;</param>
                         </action>
-                        <action id="2" name="Set at X" sid="874546542610623" type="ImagenesBase">
+                        <action id="2" name="Set at X" sid="874546542610623" type="ImagenesObjetos">
                             <param id="0" name="X">1</param>
                             <param id="1" name="Value">&quot;Paloma&quot;</param>
                         </action>
-                        <action id="2" name="Set at X" sid="417420362729846" type="ImagenesBase">
+                        <action id="2" name="Set at X" sid="417420362729846" type="ImagenesObjetos">
                             <param id="0" name="X">2</param>
                             <param id="1" name="Value">&quot;Fuego&quot;</param>
                         </action>
-                        <action id="2" name="Set at X" sid="662471945863382" type="ImagenesBase">
+                        <action id="2" name="Set at X" sid="662471945863382" type="ImagenesObjetos">
                             <param id="0" name="X">3</param>
                             <param id="1" name="Value">&quot;Aceite&quot;</param>
                         </action>
-                        <action id="2" name="Set at X" sid="723663751988766" type="ImagenesBase">
+                        <action id="2" name="Set at X" sid="723663751988766" type="ImagenesObjetos">
                             <param id="0" name="X">4</param>
                             <param id="1" name="Value">&quot;Agua&quot;</param>
                         </action>
-                        <action id="2" name="Set at X" sid="456047681106345" type="ImagenesBase">
+                        <action id="2" name="Set at X" sid="456047681106345" type="ImagenesObjetos">
                             <param id="0" name="X">5</param>
                             <param id="1" name="Value">&quot;Sello&quot;</param>
                         </action>
-                        <action id="2" name="Set at X" sid="488611076048200" type="ImagenesBase">
+                        <action id="2" name="Set at X" sid="488611076048200" type="ImagenesObjetos">
                             <param id="0" name="X">6</param>
                             <param id="1" name="Value">&quot;Nube&quot;</param>
                         </action>
-                        <action id="2" name="Set at X" sid="891454618928982" type="ImagenesBase">
+                        <action id="2" name="Set at X" sid="891454618928982" type="ImagenesObjetos">
                             <param id="0" name="X">7</param>
                             <param id="1" name="Value">&quot;Paloma&quot;</param>
                         </action>
-                        <action id="2" name="Set at X" sid="130230910876744" type="ImagenesBase">
+                        <action id="2" name="Set at X" sid="130230910876744" type="ImagenesObjetos">
                             <param id="0" name="X">8</param>
                             <param id="1" name="Value">&quot;Fuego&quot;</param>
                         </action>
-                        <action id="2" name="Set at X" sid="810028155876426" type="ImagenesBase">
+                        <action id="2" name="Set at X" sid="810028155876426" type="ImagenesObjetos">
                             <param id="0" name="X">9</param>
                             <param id="1" name="Value">&quot;Aceite&quot;</param>
                         </action>
-                        <action id="2" name="Set at X" sid="567700484827777" type="ImagenesBase">
+                        <action id="2" name="Set at X" sid="567700484827777" type="ImagenesObjetos">
                             <param id="0" name="X">10</param>
                             <param id="1" name="Value">&quot;Agua&quot;</param>
                         </action>
-                        <action id="2" name="Set at X" sid="923585011356290" type="ImagenesBase">
+                        <action id="2" name="Set at X" sid="923585011356290" type="ImagenesObjetos">
                             <param id="0" name="X">11</param>
                             <param id="1" name="Value">&quot;Sello&quot;</param>
                         </action>
@@ -86,6 +103,9 @@
                         <condition id="3" name="On touched object" sid="454476203949458" type="Touch">
                             <param id="0" name="Object">ficha</param>
                         </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="591503163576372" type="ficha">
+                            <param id="0" name="Instance variable">habilitada</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="152815443743881" type="ficha">
@@ -107,6 +127,10 @@
                         <action id="14" name="Log" sid="826415058832776" type="Browser">
                             <param id="0" name="Type">0</param>
                             <param id="1" name="Message">&quot;Actual: &quot; &amp; actual</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="135707999696749" type="ficha">
+                            <param id="0" name="Instance variable">habilitada</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -142,6 +166,9 @@
                                 <condition id="-22" name="Else" sid="772663395789347" type="System" />
                             </conditions>
                             <actions>
+                                <action id="-16" name="Wait" sid="198399332561865" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
                                 <action id="0" name="Call function" sid="319450495075636" type="Function">
                                     <param id="0" name="Name">&quot;ocultarAnterior&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
@@ -185,6 +212,10 @@
                             <param id="0" name="Animation">&quot;Default&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
+                        <action id="-13" name="Set boolean" sid="179301910008160" type="ficha">
+                            <param id="0" name="Instance variable">habilitada</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -214,7 +245,7 @@
                                 </action>
                                 <action id="-9" name="Set value" sid="235088729851673" type="System">
                                     <param id="0" name="Variable">aux</param>
-                                    <param id="1" name="Value">random(0, ImagenesBase.Width)</param>
+                                    <param id="1" name="Value">random(0, ImagenesObjetos.Width)</param>
                                 </action>
                                 <action id="14" name="Log" sid="402195678789765" type="Browser">
                                     <param id="0" name="Type">0</param>
@@ -222,9 +253,9 @@
                                 </action>
                                 <action id="-10" name="Set value" sid="590101667734257" type="ficha">
                                     <param id="0" name="Instance variable">animacion</param>
-                                    <param id="1" name="Value">ImagenesBase.At( int(aux)  )</param>
+                                    <param id="1" name="Value">ImagenesObjetos.At( int(aux)  )</param>
                                 </action>
-                                <action id="9" name="Delete" sid="600304704117424" type="ImagenesBase">
+                                <action id="9" name="Delete" sid="600304704117424" type="ImagenesObjetos">
                                     <param id="0" name="Index">aux</param>
                                     <param id="1" name="Axis">0</param>
                                 </action>
