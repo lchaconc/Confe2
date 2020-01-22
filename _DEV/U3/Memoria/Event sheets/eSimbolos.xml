@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>eMain</name>
+    <name>eSimbolos</name>
     <events>
         <variable constant="0" name="contador" sid="847594319233455" static="0" type="number">0</variable>
         <variable constant="0" name="limiteFichas" sid="670529035688382" static="0" type="number">0</variable>
@@ -19,6 +19,18 @@
                             <param id="0" name="Name">&quot;cargarArrayObjetos&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
+                        <action id="-9" name="Set value" sid="718797908050672" type="System">
+                            <param id="0" name="Variable">limiteFichas</param>
+                            <param id="1" name="Value">ficha.Count</param>
+                        </action>
+                        <action id="14" name="Log" sid="999900958567088" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;limiteFichas: &quot;  &amp; limiteFichas</param>
+                        </action>
+                        <action id="0" name="Call function" sid="447063204146218" type="Function">
+                            <param id="0" name="Name">&quot;cargarFichas&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -32,65 +44,53 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="2" name="Set at X" sid="235098364495507" type="ImagenesObjetos">
+                        <action id="2" name="Set at X" sid="235098364495507" type="arraySimbolos1">
                             <param id="0" name="X">0</param>
                             <param id="1" name="Value">&quot;Nube&quot;</param>
                         </action>
-                        <action id="2" name="Set at X" sid="874546542610623" type="ImagenesObjetos">
+                        <action id="2" name="Set at X" sid="874546542610623" type="arraySimbolos1">
                             <param id="0" name="X">1</param>
                             <param id="1" name="Value">&quot;Paloma&quot;</param>
                         </action>
-                        <action id="2" name="Set at X" sid="417420362729846" type="ImagenesObjetos">
+                        <action id="2" name="Set at X" sid="417420362729846" type="arraySimbolos1">
                             <param id="0" name="X">2</param>
                             <param id="1" name="Value">&quot;Fuego&quot;</param>
                         </action>
-                        <action id="2" name="Set at X" sid="662471945863382" type="ImagenesObjetos">
+                        <action id="2" name="Set at X" sid="662471945863382" type="arraySimbolos1">
                             <param id="0" name="X">3</param>
                             <param id="1" name="Value">&quot;Aceite&quot;</param>
                         </action>
-                        <action id="2" name="Set at X" sid="723663751988766" type="ImagenesObjetos">
+                        <action id="2" name="Set at X" sid="723663751988766" type="arraySimbolos1">
                             <param id="0" name="X">4</param>
                             <param id="1" name="Value">&quot;Agua&quot;</param>
                         </action>
-                        <action id="2" name="Set at X" sid="456047681106345" type="ImagenesObjetos">
+                        <action id="2" name="Set at X" sid="456047681106345" type="arraySimbolos1">
                             <param id="0" name="X">5</param>
                             <param id="1" name="Value">&quot;Sello&quot;</param>
                         </action>
-                        <action id="2" name="Set at X" sid="488611076048200" type="ImagenesObjetos">
+                        <action id="2" name="Set at X" sid="488611076048200" type="arraySimbolos1">
                             <param id="0" name="X">6</param>
                             <param id="1" name="Value">&quot;Nube&quot;</param>
                         </action>
-                        <action id="2" name="Set at X" sid="891454618928982" type="ImagenesObjetos">
+                        <action id="2" name="Set at X" sid="891454618928982" type="arraySimbolos1">
                             <param id="0" name="X">7</param>
                             <param id="1" name="Value">&quot;Paloma&quot;</param>
                         </action>
-                        <action id="2" name="Set at X" sid="130230910876744" type="ImagenesObjetos">
+                        <action id="2" name="Set at X" sid="130230910876744" type="arraySimbolos1">
                             <param id="0" name="X">8</param>
                             <param id="1" name="Value">&quot;Fuego&quot;</param>
                         </action>
-                        <action id="2" name="Set at X" sid="810028155876426" type="ImagenesObjetos">
+                        <action id="2" name="Set at X" sid="810028155876426" type="arraySimbolos1">
                             <param id="0" name="X">9</param>
                             <param id="1" name="Value">&quot;Aceite&quot;</param>
                         </action>
-                        <action id="2" name="Set at X" sid="567700484827777" type="ImagenesObjetos">
+                        <action id="2" name="Set at X" sid="567700484827777" type="arraySimbolos1">
                             <param id="0" name="X">10</param>
                             <param id="1" name="Value">&quot;Agua&quot;</param>
                         </action>
-                        <action id="2" name="Set at X" sid="923585011356290" type="ImagenesObjetos">
+                        <action id="2" name="Set at X" sid="923585011356290" type="arraySimbolos1">
                             <param id="0" name="X">11</param>
                             <param id="1" name="Value">&quot;Sello&quot;</param>
-                        </action>
-                        <action id="0" name="Call function" sid="447063204146218" type="Function">
-                            <param id="0" name="Name">&quot;cargarFichas&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="-9" name="Set value" sid="718797908050672" type="System">
-                            <param id="0" name="Variable">limiteFichas</param>
-                            <param id="1" name="Value">ficha.Count</param>
-                        </action>
-                        <action id="14" name="Log" sid="999900958567088" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;limiteFichas: &quot;  &amp; limiteFichas</param>
                         </action>
                     </actions>
                 </event-block>
@@ -245,7 +245,7 @@
                                 </action>
                                 <action id="-9" name="Set value" sid="235088729851673" type="System">
                                     <param id="0" name="Variable">aux</param>
-                                    <param id="1" name="Value">random(0, ImagenesObjetos.Width)</param>
+                                    <param id="1" name="Value">random(0, arraySimbolos1.Width)</param>
                                 </action>
                                 <action id="14" name="Log" sid="402195678789765" type="Browser">
                                     <param id="0" name="Type">0</param>
@@ -253,9 +253,9 @@
                                 </action>
                                 <action id="-10" name="Set value" sid="590101667734257" type="ficha">
                                     <param id="0" name="Instance variable">animacion</param>
-                                    <param id="1" name="Value">ImagenesObjetos.At( int(aux)  )</param>
+                                    <param id="1" name="Value">arraySimbolos1.At( int(aux)  )</param>
                                 </action>
-                                <action id="9" name="Delete" sid="600304704117424" type="ImagenesObjetos">
+                                <action id="9" name="Delete" sid="600304704117424" type="arraySimbolos1">
                                     <param id="0" name="Index">aux</param>
                                     <param id="1" name="Axis">0</param>
                                 </action>

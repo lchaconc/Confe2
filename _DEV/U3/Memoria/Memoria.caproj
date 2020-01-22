@@ -28,7 +28,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
-    <first-layout>main</first-layout>
+    <first-layout>Simbolos</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -56,23 +56,26 @@
                     <instance-variable comment="evita dar clic cuando está mostrada" name="habilitada" sid="852502009930030" type="boolean" />
                 </instance-variables>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Nube" pingpong="0" repeatcount="1" repeatto="0" sid="616742852535698" speed="5">
+                    <animation framecount="1" loop="0" name="Entendimiento" pingpong="0" repeatcount="1" repeatto="0" sid="616742852535698" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_3\01-Objetos\cloud.png" />
                     </animation>
-                    <animation framecount="1" loop="0" name="Paloma" pingpong="0" repeatcount="1" repeatto="0" sid="765812921601108" speed="5">
+                    <animation framecount="1" loop="0" name="Consejo" pingpong="0" repeatcount="1" repeatto="0" sid="765812921601108" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_3\01-Objetos\dove2.png" />
                     </animation>
-                    <animation framecount="1" loop="0" name="Fuego" pingpong="0" repeatcount="1" repeatto="0" sid="194653956038651" speed="5">
+                    <animation framecount="1" loop="0" name="Sabiduria" pingpong="0" repeatcount="1" repeatto="0" sid="194653956038651" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_3\01-Objetos\fire.png" />
                     </animation>
-                    <animation framecount="1" loop="0" name="Aceite" pingpong="0" repeatcount="1" repeatto="0" sid="761887873835529" speed="5">
+                    <animation framecount="1" loop="0" name="Piedad" pingpong="0" repeatcount="1" repeatto="0" sid="761887873835529" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_3\01-Objetos\oil.png" />
                     </animation>
-                    <animation framecount="1" loop="0" name="Agua" pingpong="0" repeatcount="1" repeatto="0" sid="835790351763026" speed="5">
+                    <animation framecount="1" loop="0" name="Fortaleza" pingpong="0" repeatcount="1" repeatto="0" sid="835790351763026" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_3\01-Objetos\raindrop.png" />
                     </animation>
-                    <animation framecount="1" loop="0" name="Sello" pingpong="0" repeatcount="1" repeatto="0" sid="222680052746249" speed="5">
+                    <animation framecount="1" loop="0" name="Temor" pingpong="0" repeatcount="1" repeatto="0" sid="222680052746249" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_3\01-Objetos\stamp.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Ciencia" pingpong="0" repeatcount="1" repeatto="0" sid="622525951710613" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="418648186423681" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_3\01-Objetos\pregunta.png" />
@@ -101,21 +104,28 @@
             <object-type name="Function" sid="558381821082318">
                 <plugin id="Function" />
             </object-type>
-            <object-type global="1" name="ImagenesObjetos" sid="498567800109121">
+            <object-type global="1" name="arraySimbolos1" sid="498567800109121">
                 <plugin id="Arr" />
             </object-type>
             <object-type name="Browser" sid="885434796955149">
                 <plugin id="Browser" />
+            </object-type>
+            <object-type global="1" name="arrayDones2" sid="737660675604315">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="arrayFrutos12" sid="921573421134273">
+                <plugin id="Arr" />
             </object-type>
         </object-folder>
         <object-folder name="Sensors" />
     </object-folder>
     <families />
     <layout-folder>
-        <layout>main.xml</layout>
+        <layout>Simbolos.xml</layout>
+        <layout>Dones.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>eMain.xml</event-sheet>
+        <event-sheet>eSimbolos.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Function" uid="0" />
