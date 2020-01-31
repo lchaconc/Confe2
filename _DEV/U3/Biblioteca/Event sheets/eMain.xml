@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>eMain</name>
+    <events>
+        <event-group description="" sid="370034331693827" title="Setup">
+            <sub-events>
+                <event-block sid="250151715630644">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="113989134144720" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="779087739975034" type="libroRespetoPadre">
+                            <param id="0" name="Pin to">estante</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="901356329401322" type="btnCerrar">
+                            <param id="0" name="Pin to">modal</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="581514651653013" type="btnComprar">
+                            <param id="0" name="Pin to">modal</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="608731066723229" title="Colisión Estante">
+            <sub-events>
+                <event-block sid="783570134640933">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="648852925209675" type="estante">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">1700</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="425300476552777" type="estante">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="649354994261241" type="estante">
+                            <param id="0" name="X">estante.X - 20</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="944716267546224" type="estante">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="369727706837122">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="767751790826615" type="estante">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">-426</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="222503111792548" type="estante">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="402658870898010" type="estante">
+                            <param id="0" name="X">estante.X + 20</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="916568455809469" type="estante">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="193077815303034" title="Seleccion de libros">
+            <sub-events>
+                <event-block sid="338032695332971">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="469085294056102" type="Touch">
+                            <param id="0" name="Object">libroRespetoPadre</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="364066130693473" type="fxDestello">
+                            <param id="0" name="Object">libroRespetoPadre</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="289713703068927" type="fxDestello">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="563755056386586" type="libroRespetoPadre">
+                            <param id="0" name="Scale">1.2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="683719968906026" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="385275029487673" type="libroRespetoPadre">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="386798691009777" type="fxDestello">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="676185347695184" type="fxDestello">
+                            <param id="0" name="X">-600</param>
+                            <param id="1" name="Y">-600</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="681923355677800" type="estante">
+                            <param id="0" name="Y">1173</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="326256208150094" type="System">
+                            <param id="0" name="Layer">&quot;shadows&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="951527491189497" type="modal">
+                            <param id="0" name="X">640</param>
+                            <param id="1" name="Y">360</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="841647457285111" title="Comprar Libro - Cerrar Modal">
+            <sub-events>
+                <event-block sid="808536290564685">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="256049456349885" type="Touch">
+                            <param id="0" name="Object">btnCerrar</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="923158285617440" type="modal">
+                            <param id="0" name="X">-600</param>
+                            <param id="1" name="Y">-600</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="177596109682452" type="System">
+                            <param id="0" name="Layer">&quot;shadows&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="375221514012483" type="estante">
+                            <param id="0" name="Y">450</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="808721160525842">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="768755834122664" type="Touch">
+                            <param id="0" name="Object">btnComprar</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="200178496336531" type="modal">
+                            <param id="0" name="X">-600</param>
+                            <param id="1" name="Y">-600</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="752058144864414" type="System">
+                            <param id="0" name="Layer">&quot;shadows&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="624678510161712" type="estante">
+                            <param id="0" name="Y">450</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
