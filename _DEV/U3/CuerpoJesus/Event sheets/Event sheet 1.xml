@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <event-block sid="504766705032281">
+            <conditions>
+                <condition id="3" name="On touched object" sid="535379000511426" type="Touch">
+                    <param id="0" name="Object">btnGenerar</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="707418174097296" type="btnGenerar">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-27" name="Snapshot canvas" sid="108795640872677" type="System">
+                    <param id="0" name="Format">0</param>
+                    <param id="1" name="JPEG quality">75</param>
+                </action>
+                <action id="-16" name="Wait" sid="557064550540881" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="652845582981349" type="btnGenerar">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="918493887102840">
+            <conditions>
+                <condition id="-26" name="On canvas snapshot" sid="480160668935875" type="System" />
+            </conditions>
+            <actions>
+                <action id="13" name="Invoke download" sid="375514126575176" type="Browser">
+                    <param id="0" name="URL">CanvasSnapshot</param>
+                    <param id="1" name="Filename">&quot;collage&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="258720929308366">
+            <conditions>
+                <condition id="0" name="On changed" sid="323297228603048" type="fcImagen1" />
+            </conditions>
+            <actions>
+                <action id="10" name="Load image from URL" sid="213059903677582" type="img1">
+                    <param id="0" name="URI">fcImagen1.FileURLAt(0)</param>
+                    <param id="1" name="Size">1</param>
+                    <param id="2" name="Cross-origin">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="106746942644964">
+            <conditions>
+                <condition id="0" name="On changed" sid="666625923975966" type="fcImagen2" />
+            </conditions>
+            <actions>
+                <action id="10" name="Load image from URL" sid="918045133927255" type="img2">
+                    <param id="0" name="URI">fcImagen2.FileURLAt(0)</param>
+                    <param id="1" name="Size">1</param>
+                    <param id="2" name="Cross-origin">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="185961405579228">
+            <conditions>
+                <condition id="0" name="On changed" sid="565018686628287" type="fcImagen3" />
+            </conditions>
+            <actions>
+                <action id="10" name="Load image from URL" sid="905848744728660" type="img3">
+                    <param id="0" name="URI">fcImagen3.FileURLAt(0)</param>
+                    <param id="1" name="Size">1</param>
+                    <param id="2" name="Cross-origin">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
