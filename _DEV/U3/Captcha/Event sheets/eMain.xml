@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>eMain</name>
+    <events>
+        <event-block sid="181637678022665">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="829177045720583" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="442322319144619" type="Function">
+                    <param id="0" name="Name">&quot;cargarImagenes&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="891673017277035" title="Cargar imagenes">
+            <sub-events>
+                <event-block sid="169493068760678">
+                    <conditions>
+                        <condition id="0" name="On function" sid="648635479649117" type="Function">
+                            <param id="0" name="Name">&quot;cargarImagenes&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="793178252365919">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="762235332503548" type="System">
+                                    <param id="0" name="Object">ficha</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="502710717776219" type="ficha">
+                                    <param id="0" name="Instance variable">valor</param>
+                                    <param id="1" name="Value">int(random(0,4))</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="746079625558703" type="ficha">
+                                    <param id="0" name="Animation">&quot;Imagenes&quot;</param>
+                                    <param id="1" name="From">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="238424118567661" type="ficha">
+                                    <param id="0" name="Frame number">ficha.valor</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="199091011432062" title="Seleccion">
+            <sub-events>
+                <variable constant="0" name="residuo" sid="966489356531176" static="0" type="number">-1</variable>
+                <event-block sid="872563423474062">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="732127939113404" type="Touch">
+                            <param id="0" name="Object">ficha</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="766469540828301" type="ficha">
+                            <param id="0" name="Object">marco</param>
+                            <param id="1" name="Layer">&quot;Main&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="592691193109359" type="System">
+                            <param id="0" name="Variable">residuo</param>
+                            <param id="1" name="Value">ficha.valor % 2</param>
+                        </action>
+                        <action id="14" name="Log" sid="763372920433249" type="Browser">
+                            <param id="0" name="Type">1</param>
+                            <param id="1" name="Message">residuo</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="401736360239948">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="824536903395004" type="System">
+                                    <param id="0" name="Variable">residuo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="897494786053997" type="ficha">
+                                    <param id="0" name="Object">MarcaBueno</param>
+                                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="817196340674696" title="Eventos: Validar">
+            <sub-events>
+                <event-block sid="840757931351536">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="847567924180630" type="Touch">
+                            <param id="0" name="Object">btnValidar</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="287629828975106" type="MarcaBueno">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
