@@ -8,13 +8,17 @@
                 <condition id="-2" name="On start of layout" sid="829177045720583" type="System" />
             </conditions>
             <actions>
+                <action id="0" name="Call function" sid="980146397791474" type="Function">
+                    <param id="0" name="Name">&quot;cargarArray&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
                 <action id="0" name="Call function" sid="442322319144619" type="Function">
                     <param id="0" name="Name">&quot;cargarImagenes&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="891673017277035" title="Cargar imagenes">
+        <event-group description="" sid="891673017277035" title="Funciones Cargar imagenes - Caragar Array">
             <sub-events>
                 <event-block sid="169493068760678">
                     <conditions>
@@ -24,6 +28,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <variable constant="0" name="i" sid="748587892194389" static="0" type="number">0</variable>
                         <event-block sid="793178252365919">
                             <conditions>
                                 <condition id="-11" name="For Each" sid="762235332503548" type="System">
@@ -31,9 +36,25 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="14" name="Log" sid="299050983067089" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;Limite &quot; &amp; listaNumeros.Width</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="328362621755513" type="System">
+                                    <param id="0" name="Variable">i</param>
+                                    <param id="1" name="Value">int(  random( 0, listaNumeros.Width ) )</param>
+                                </action>
+                                <action id="14" name="Log" sid="344869155705350" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;I&quot; &amp; i</param>
+                                </action>
                                 <action id="-10" name="Set value" sid="502710717776219" type="ficha">
                                     <param id="0" name="Instance variable">valor</param>
-                                    <param id="1" name="Value">int(random(0,4))</param>
+                                    <param id="1" name="Value">listaNumeros.At(i)</param>
+                                </action>
+                                <action id="14" name="Log" sid="702302752741473" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;VALOR: &quot; &amp; ficha.valor</param>
                                 </action>
                                 <action id="4" name="Set animation" sid="746079625558703" type="ficha">
                                     <param id="0" name="Animation">&quot;Imagenes&quot;</param>
@@ -42,9 +63,100 @@
                                 <action id="5" name="Set frame" sid="238424118567661" type="ficha">
                                     <param id="0" name="Frame number">ficha.valor</param>
                                 </action>
+                                <action id="9" name="Delete" sid="501706516881247" type="listaNumeros">
+                                    <param id="0" name="Index">i</param>
+                                    <param id="1" name="Axis">0</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="494537627252324">
+                    <conditions>
+                        <condition id="0" name="On function" sid="919736016493875" type="Function">
+                            <param id="0" name="Name">&quot;cargarArray&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Clear" sid="349943063283710" type="listaNumeros" />
+                        <action id="1" name="Set size" sid="804589406700908" type="listaNumeros">
+                            <param id="0" name="Width">17</param>
+                            <param id="1" name="Height">1</param>
+                            <param id="2" name="Depth">1</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="726348295004461" type="listaNumeros">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="617450142390112" type="listaNumeros">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="165388155069817" type="listaNumeros">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="267506935853925" type="listaNumeros">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="835493500517028" type="listaNumeros">
+                            <param id="0" name="X">4</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="785891701885387" type="listaNumeros">
+                            <param id="0" name="X">5</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="829493125866580" type="listaNumeros">
+                            <param id="0" name="X">6</param>
+                            <param id="1" name="Value">6</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="850912590517456" type="listaNumeros">
+                            <param id="0" name="X">7</param>
+                            <param id="1" name="Value">7</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="145581454886853" type="listaNumeros">
+                            <param id="0" name="X">8</param>
+                            <param id="1" name="Value">8</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="354364515703004" type="listaNumeros">
+                            <param id="0" name="X">9</param>
+                            <param id="1" name="Value">9</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="623584598259547" type="listaNumeros">
+                            <param id="0" name="X">10</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="155297135917336" type="listaNumeros">
+                            <param id="0" name="X">11</param>
+                            <param id="1" name="Value">11</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="625815502802925" type="listaNumeros">
+                            <param id="0" name="X">12</param>
+                            <param id="1" name="Value">12</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="464236648721185" type="listaNumeros">
+                            <param id="0" name="X">13</param>
+                            <param id="1" name="Value">13</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="216468561099759" type="listaNumeros">
+                            <param id="0" name="X">14</param>
+                            <param id="1" name="Value">14</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="763145944750063" type="listaNumeros">
+                            <param id="0" name="X">15</param>
+                            <param id="1" name="Value">15</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="531487378730131" type="listaNumeros">
+                            <param id="0" name="X">16</param>
+                            <param id="1" name="Value">16</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="374722406632161" type="listaNumeros">
+                            <param id="0" name="X">17</param>
+                            <param id="1" name="Value">17</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
@@ -89,11 +201,23 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="247737221668631">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="915509722359930" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="610480363971476" type="ficha">
+                                    <param id="0" name="Object">marcaError</param>
+                                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="817196340674696" title="Eventos: Validar">
+        <event-group description="" sid="817196340674696" title="Eventos: Validar - Recargar">
             <sub-events>
                 <event-block sid="840757931351536">
                     <conditions>
@@ -104,6 +228,38 @@
                     <actions>
                         <action id="-15" name="Set visible" sid="287629828975106" type="MarcaBueno">
                             <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="621298887952389" type="marcaError">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="614093969271192">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="747032265660914" type="Touch">
+                            <param id="0" name="Object">btnRecargar</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="594934068966720" type="MarcaBueno">
+                            <param id="0" name="X">-600</param>
+                            <param id="1" name="Y">-600</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="265657300845418" type="marcaError">
+                            <param id="0" name="X">-600</param>
+                            <param id="1" name="Y">-600</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="336054040073550" type="marco">
+                            <param id="0" name="X">-600</param>
+                            <param id="1" name="Y">-600</param>
+                        </action>
+                        <action id="0" name="Call function" sid="884941671252549" type="Function">
+                            <param id="0" name="Name">&quot;cargarArray&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="622341875177874" type="Function">
+                            <param id="0" name="Name">&quot;cargarImagenes&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>

@@ -10,6 +10,7 @@
     <unique-id>yb7ohsk6e5xt</unique-id>
     <saved-with-version>27500</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -34,12 +35,12 @@
         <prop name="Enable WebGL">On</prop>
         <prop name="Fullscreen in browser">Letterbox scale</prop>
         <prop name="Fullscreen scaling">High quality</prop>
-        <prop name="Loader style">Construct 2 splash</prop>
-        <prop name="Orientations">Any</prop>
+        <prop name="Loader style">Progress bar only</prop>
+        <prop name="Orientations">Landscape</prop>
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">(default)</prop>
+        <prop name="Preview browser">Chrome</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -54,11 +55,24 @@
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="206031991815595" speed="0">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
-                    <animation framecount="4" loop="0" name="Imagenes" pingpong="0" repeatcount="1" repeatto="0" sid="573220082613210" speed="0">
+                    <animation framecount="17" loop="0" name="Imagenes" pingpong="0" repeatcount="1" repeatto="0" sid="573220082613210" speed="0">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\ca\p8.jfif" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\ca\ig3.jfif" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\ca\p9.jfif" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\ca\ig4.jfif" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\ca\p31.jfif" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\ca\i20.jfif" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\ca\p33.jfif" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\ca\i21.jfif" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\ca\p34.jfif" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\ca\i22.jfif" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\ca\p35.jfif" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\ca\i23.jfif" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\ca\p36.jfif" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -66,7 +80,17 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="685818563538166" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.46875" hotspotY="0.40625" original-source="C:\Users\logan24\Desktop\ca\icono check.png">
+                            <collision-poly>
+                                <point x="0.430131" y="0.417417" />
+                                <point x="0.475983" y="0.357357" />
+                                <point x="0.805677" y="0.027027" />
+                                <point x="0.901747" y="0.411411" />
+                                <point x="0.475983" y="0.957958" />
+                                <point x="0.20524" y="0.717718" />
+                                <point x="0.010917" y="0.411411" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -75,6 +99,25 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="660010360773013" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="marcaError" sid="492634781978656">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="998513553012936" speed="5">
+                        <frame duration="1" hotspotX="0.53125" hotspotY="0.46875" original-source="C:\Users\logan24\Desktop\ca\icono  equis.png">
+                            <collision-poly>
+                                <point x="0.156909" y="0.0961538" />
+                                <point x="0.538642" y="0.162088" />
+                                <point x="0.887588" y="0.134615" />
+                                <point x="0.836066" y="0.464286" />
+                                <point x="0.929742" y="0.843407" />
+                                <point x="0.538642" y="0.818681" />
+                                <point x="0.114754" y="0.881868" />
+                                <point x="0.168618" y="0.464286" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -88,6 +131,9 @@
             </object-type>
             <object-type name="Browser" sid="443061226048071">
                 <plugin id="Browser" />
+            </object-type>
+            <object-type global="1" name="listaNumeros" sid="576221101526626">
+                <plugin id="Arr" />
             </object-type>
         </object-folder>
         <object-folder name="GUI">
@@ -107,6 +153,14 @@
                                 <point x="0.0119048" y="0.486486" />
                             </collision-poly>
                         </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btnRecargar" sid="271802925529441">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="779005371109742" speed="5">
+                        <frame duration="1" hotspotX="0.497738" hotspotY="0.5" original-source="C:\Users\logan24\Desktop\ca\unnamed.png" />
                     </animation>
                 </animation-folder>
             </object-type>
