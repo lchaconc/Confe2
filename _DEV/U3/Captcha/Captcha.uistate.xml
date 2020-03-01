@@ -11,7 +11,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout active="1" order="0">Main</layout>
+        <layout order="2">Splash</layout>
         <event-sheet order="1">eMain</event-sheet>
+        <event-sheet order="3">eSplash</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -22,9 +24,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <families-expanded root="1" />
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
-        <folder expanded="1" path="object-folder/Sprites/" />
-        <folder expanded="1" path="object-folder/System/" />
+        <folder expanded="0" path="object-folder/Sprites/" />
+        <folder expanded="0" path="object-folder/System/" />
         <folder expanded="1" path="object-folder/GUI/" />
+        <folder expanded="1" path="object-folder/BG/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />
@@ -37,5 +40,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/marcaError/" />
         <folder expanded="1" path="animation-folder/btnValidar/" />
         <folder expanded="1" path="animation-folder/btnRecargar/" />
+        <folder expanded="1" path="animation-folder/instruc/" />
+        <folder expanded="1" path="animation-folder/bgJuego/" />
+        <folder expanded="1" path="animation-folder/bgSplash/" />
     </folders-expanded>
 </c2uistate>
