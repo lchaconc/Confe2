@@ -47,7 +47,7 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
-        <object-folder name="Buttons">
+        <object-folder name="GUI">
             <object-type name="btnCerrar" sid="762036904049275">
                 <plugin id="Sprite" />
                 <behaviors>
@@ -74,6 +74,30 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="btnEstante1" sid="958942742539664">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="777813607937941" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btnEstante2" sid="519060689253961">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="324328108513990" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btnEstante3" sid="338773034632114">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="187780300652353" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Backgrounds">
             <object-type name="bgPAred" sid="525159421286163">
@@ -86,66 +110,65 @@
             </object-type>
         </object-folder>
         <object-folder name="Sprites">
-            <object-type name="estante" sid="494133510543495">
-                <plugin id="Sprite" />
-                <behaviors>
-                    <behavior-type name="DragDrop" sid="263921746142034">
-                        <behavior id="DragnDrop" />
-                    </behavior-type>
-                </behaviors>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="203368025708239" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.559036" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\librero1.png">
-                            <collision-poly>
-                                <point x="0.000524934" y="0.00120482" />
-                                <point x="0.999475" y="0.00120482" />
-                                <point x="0.999475" y="0.559036" />
-                                <point x="0.973753" y="0.998795" />
-                                <point x="0.0262467" y="0.998795" />
-                                <point x="0.000524934" y="0.559036" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="libroRespetoPadre" sid="979712843319062">
-                <plugin id="Sprite" />
-                <behaviors>
-                    <behavior-type name="Pin" sid="842710276612565">
-                        <behavior id="Pin" />
-                    </behavior-type>
-                </behaviors>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="281922169111124" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Asset 2libros.png">
-                            <collision-poly>
-                                <point x="0.266667" y="0.107383" />
-                                <point x="0.5" y="0.0134228" />
-                                <point x="0.916667" y="0.033557" />
-                                <point x="0.858333" y="0.5" />
-                                <point x="0.741667" y="0.895973" />
-                                <point x="0.5" y="0.989933" />
-                                <point x="0.0833333" y="0.966443" />
-                                <point x="0.141667" y="0.5" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
             <object-type name="modal" sid="332427171926714">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="158908107706232" speed="5">
-                        <frame duration="1" hotspotX="0.500412" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\libro abiertolibros.png">
-                            <image-point name="pntCerrar" x="0.826337" y="0.923937" />
-                            <image-point name="pntComprar" x="0.947325" y="0.923937" />
+                    <animation framecount="1" loop="0" name="Piedad" pingpong="0" repeatcount="1" repeatto="0" sid="158908107706232" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501222" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Libros\PiedadAbiertoLibros.png">
+                            <image-point name="pntCerrar" x="0.824013" y="0.919315" />
+                            <image-point name="pntComprar" x="0.944079" y="0.919315" />
+                            <collision-poly>
+                                <point x="0.00327331" y="0.00485434" />
+                                <point x="0.995093" y="0.00727559" />
+                                <point x="0.995093" y="0.992724" />
+                                <point x="0.00327331" y="0.995146" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Consejo" pingpong="0" repeatcount="1" repeatto="0" sid="963635972376504" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501222" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Libros\ConsejoAbiertoLibros.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="0.998355" y="0.997555" />
+                                <point x="0.00164474" y="0.997555" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Biblia1" pingpong="0" repeatcount="1" repeatto="0" sid="910937333658807" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501222" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Libros\Biblia1abiertaLibros.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.998355" y="0.00244499" />
+                                <point x="0.998355" y="0.997555" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Biblia2" pingpong="0" repeatcount="1" repeatto="0" sid="133255695355029" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501222" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Libros\Biblia2abiertaLibros.png">
+                            <collision-poly>
+                                <point x="0.00164474" y="0.00244499" />
+                                <point x="0.998355" y="0.00244499" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Biblia3" pingpong="0" repeatcount="1" repeatto="0" sid="464215173170439" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501222" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Libros\Biblia3abiertaLibros.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.998355" y="0.00244499" />
+                                <point x="0.998355" y="0.997555" />
+                                <point x="0" y="1" />
+                            </collision-poly>
                         </frame>
                     </animation>
                 </animation-folder>
             </object-type>
         </object-folder>
         <object-folder name="Texts" />
-        <object-folder name="Controls" />
         <object-folder name="System">
             <object-type name="Touch" sid="948977961617129">
                 <plugin id="Touch" />
@@ -181,8 +204,183 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-folder name="Libros">
+            <object-type name="lbrCiencia" sid="979712843319062">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="281922169111124" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503448" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Libros\CienciaLibros.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="lbConsejo" sid="808211976559974">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="382307522470244" speed="5">
+                        <frame duration="1" hotspotX="0.511628" hotspotY="0.503448" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Libros\ConsejoLibros.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="lbrEntendimiento" sid="138969092722047">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="575612051530845" speed="5">
+                        <frame duration="1" hotspotX="0.509804" hotspotY="0.503401" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Libros\EntendimientoLibros.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="lbrFortaleza" sid="599374513311711">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="798645623393863" speed="5">
+                        <frame duration="1" hotspotX="0.519231" hotspotY="0.503448" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Libros\FortalezaLibros.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="lbrPiedad" sid="612342516323237">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="670340064673650" speed="5">
+                        <frame duration="1" hotspotX="0.522727" hotspotY="0.503448" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Libros\PiedadLibros.png">
+                            <collision-poly>
+                                <point x="0.0227273" y="0.00689655" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0.0227273" y="0.993103" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="lbrSabiduria" sid="816139632378610">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="608468361373909" speed="5">
+                        <frame duration="1" hotspotX="0.525" hotspotY="0.503448" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Libros\SabiduriaLibros.png">
+                            <collision-poly>
+                                <point x="0.0227273" y="0.00689655" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0.0227273" y="0.993103" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="lbrTemor" sid="928234305978046">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="502311721357799" speed="5">
+                        <frame duration="1" hotspotX="0.52459" hotspotY="0.506667" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Libros\temordeDiosLibros.png">
+                            <collision-poly>
+                                <point x="0.0227273" y="0.00689655" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0.0227273" y="0.993103" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="biblia1" sid="933920008006010">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="885119385363024" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503401" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Libros\Biblia1Libros.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="biblia2" sid="412125254504017">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="859389802930579" speed="5">
+                        <frame duration="1" hotspotX="0.511628" hotspotY="0.503356" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Libros\Biblia2Libros.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="biblia3" sid="785711884457897">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="568062205897546" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503401" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Libros\Biblia3Libros.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="biblia4" sid="639504506071827">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="123397926525976" speed="5">
+                        <frame duration="1" hotspotX="0.512195" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Libros\Biblia5Libros.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="biblia5" sid="770911059194274">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="133513113967302" speed="5">
+                        <frame duration="1" hotspotX="0.512821" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Libros\Biblia6Libros.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="biblia6" sid="260495534281367">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="918637205192300" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503448" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Libros\Biblia7Libros.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Estantes">
+            <object-type name="estante1" sid="494133510543495">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="DragDrop" sid="263921746142034">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Est1" pingpong="0" repeatcount="1" repeatto="0" sid="203368025708239" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501199" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Libros-Estantes\Librero1Libros.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.539718" />
+                                <point x="0.982204" y="0.996351" />
+                                <point x="0.0177957" y="0.996351" />
+                                <point x="0" y="0.539718" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Est2" pingpong="0" repeatcount="1" repeatto="0" sid="205029077880617" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.479616" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Libros-Estantes\Librero2Libros.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Est3" pingpong="0" repeatcount="1" repeatto="0" sid="386612912954780" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.479616" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Libros-Estantes\Librero3Libros.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Est4" pingpong="0" repeatcount="1" repeatto="0" sid="837757840363040" speed="5">
+                        <frame duration="1" hotspotX="0.500525" hotspotY="0.479616" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Libros-Estantes\Librero4_1Libros.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
     </object-folder>
-    <families />
+    <families>
+        <family name="famEst1" plugin-id="Sprite" sid="698490414062677">
+            <members>
+                <member>biblia1</member>
+                <member>biblia2</member>
+                <member>biblia3</member>
+                <member>lbConsejo</member>
+                <member>lbrPiedad</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Pin" sid="270980743582677">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </family>
+    </families>
     <layout-folder>
         <layout>main.xml</layout>
     </layout-folder>
