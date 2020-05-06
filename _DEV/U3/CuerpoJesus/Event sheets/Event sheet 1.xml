@@ -36,41 +36,51 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="258720929308366">
-            <conditions>
-                <condition id="0" name="On changed" sid="323297228603048" type="fcImagen1" />
-            </conditions>
-            <actions>
-                <action id="10" name="Load image from URL" sid="213059903677582" type="img1">
-                    <param id="0" name="URI">fcImagen1.FileURLAt(0)</param>
-                    <param id="1" name="Size">1</param>
-                    <param id="2" name="Cross-origin">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="106746942644964">
-            <conditions>
-                <condition id="0" name="On changed" sid="666625923975966" type="fcImagen2" />
-            </conditions>
-            <actions>
-                <action id="10" name="Load image from URL" sid="918045133927255" type="img2">
-                    <param id="0" name="URI">fcImagen2.FileURLAt(0)</param>
-                    <param id="1" name="Size">1</param>
-                    <param id="2" name="Cross-origin">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="185961405579228">
-            <conditions>
-                <condition id="0" name="On changed" sid="565018686628287" type="fcImagen3" />
-            </conditions>
-            <actions>
-                <action id="10" name="Load image from URL" sid="905848744728660" type="img3">
-                    <param id="0" name="URI">fcImagen3.FileURLAt(0)</param>
-                    <param id="1" name="Size">1</param>
-                    <param id="2" name="Cross-origin">0</param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group description="" sid="942491458740203" title="Evento click de las img">
+            <sub-events>
+                <event-block sid="601382050076794">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="592705219819112" type="Touch">
+                            <param id="0" name="Object">img1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="10" name="Load image from URL" sid="542186768621796" type="img1">
+                            <param id="0" name="URI">FileChooser.FileURLAt(0)</param>
+                            <param id="1" name="Size">1</param>
+                            <param id="2" name="Cross-origin">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="626428701222292">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="711824314067485" type="Touch">
+                            <param id="0" name="Object">img2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="10" name="Load image from URL" sid="293479153006922" type="img2">
+                            <param id="0" name="URI">FileChooser.FileURLAt(0)</param>
+                            <param id="1" name="Size">1</param>
+                            <param id="2" name="Cross-origin">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="543268680894165">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="836842660657316" type="Touch">
+                            <param id="0" name="Object">img3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="10" name="Load image from URL" sid="301575553371620" type="img3">
+                            <param id="0" name="URI">FileChooser.FileURLAt(0)</param>
+                            <param id="1" name="Size">1</param>
+                            <param id="2" name="Cross-origin">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
