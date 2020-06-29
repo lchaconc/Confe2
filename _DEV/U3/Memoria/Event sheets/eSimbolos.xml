@@ -35,8 +35,10 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="134737920417738" title="Cargar Animaciones">
+        <event-group description="" sid="134737920417738" title="CARGA DE FICHAS">
             <sub-events>
+                <variable constant="0" name="aux" sid="578961471673290" static="0" type="number">0</variable>
+                <variable constant="0" name="animacion" sid="821175979531034" static="0" type="text"></variable>
                 <event-block sid="282084385098536">
                     <conditions>
                         <condition id="0" name="On function" sid="944757919731630" type="Function">
@@ -93,6 +95,45 @@
                             <param id="1" name="Value">&quot;Sello&quot;</param>
                         </action>
                     </actions>
+                </event-block>
+                <event-block sid="114735143098672">
+                    <conditions>
+                        <condition id="0" name="On function" sid="335582565653988" type="Function">
+                            <param id="0" name="Name">&quot;cargarFichas&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="679686323927574">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="692935720705291" type="System">
+                                    <param id="0" name="Object">ficha</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="785310468370042" type="ficha">
+                                    <param id="0" name="Instance variable">animacion</param>
+                                    <param id="1" name="Value">&quot;&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="235088729851673" type="System">
+                                    <param id="0" name="Variable">aux</param>
+                                    <param id="1" name="Value">random(0, arraySimbolos1.Width)</param>
+                                </action>
+                                <action id="14" name="Log" sid="402195678789765" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;Aleatorio: &quot; &amp;int( aux)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="590101667734257" type="ficha">
+                                    <param id="0" name="Instance variable">animacion</param>
+                                    <param id="1" name="Value">arraySimbolos1.At( int(aux)  )</param>
+                                </action>
+                                <action id="9" name="Delete" sid="600304704117424" type="arraySimbolos1">
+                                    <param id="0" name="Index">aux</param>
+                                    <param id="1" name="Axis">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -217,51 +258,6 @@
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="252988668234633" title="Funciones carga de fichas">
-            <sub-events>
-                <variable constant="0" name="aux" sid="600274862162049" static="0" type="number">0</variable>
-                <variable constant="0" name="animacion" sid="758820401067213" static="0" type="text"></variable>
-                <event-block sid="114735143098672">
-                    <conditions>
-                        <condition id="0" name="On function" sid="335582565653988" type="Function">
-                            <param id="0" name="Name">&quot;cargarFichas&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="679686323927574">
-                            <conditions>
-                                <condition id="-11" name="For Each" sid="692935720705291" type="System">
-                                    <param id="0" name="Object">ficha</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="785310468370042" type="ficha">
-                                    <param id="0" name="Instance variable">animacion</param>
-                                    <param id="1" name="Value">&quot;&quot;</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="235088729851673" type="System">
-                                    <param id="0" name="Variable">aux</param>
-                                    <param id="1" name="Value">random(0, arraySimbolos1.Width)</param>
-                                </action>
-                                <action id="14" name="Log" sid="402195678789765" type="Browser">
-                                    <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">&quot;Aleatorio: &quot; &amp;int( aux)</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="590101667734257" type="ficha">
-                                    <param id="0" name="Instance variable">animacion</param>
-                                    <param id="1" name="Value">arraySimbolos1.At( int(aux)  )</param>
-                                </action>
-                                <action id="9" name="Delete" sid="600304704117424" type="arraySimbolos1">
-                                    <param id="0" name="Index">aux</param>
-                                    <param id="1" name="Axis">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>

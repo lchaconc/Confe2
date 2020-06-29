@@ -8,7 +8,7 @@
     <author-website>http://</author-website>
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>3subbtu8xvytq</unique-id>
-    <saved-with-version>27500</saved-with-version>
+    <saved-with-version>27700</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
@@ -28,7 +28,6 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
-    <first-layout>Simbolos</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -41,13 +40,45 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">Firefox</prop>
+        <prop name="Preview browser">Chrome</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
         <object-folder name="Buttons" />
-        <object-folder name="Backgrounds" />
+        <object-folder name="Backgrounds">
+            <object-type name="bgMain" sid="553646057349261">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="313364643790585" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\backmemoriamemoria.png">
+                            <collision-poly>
+                                <point x="0.0107116" y="0.018543" />
+                                <point x="0.499617" y="0" />
+                                <point x="0.989288" y="0.018543" />
+                                <point x="0.999235" y="0.998676" />
+                                <point x="0.000765111" y="0.998676" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bgSpalsh" sid="539131935857806">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="732119453061152" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\memoriaSplashmemoria.png">
+                            <collision-poly>
+                                <point x="0.000765697" y="0.00135135" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0.000765697" y="0.998649" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-folder name="Sprites">
             <object-type name="ficha" sid="914802064653488">
                 <plugin id="Sprite" />
@@ -56,29 +87,26 @@
                     <instance-variable comment="evita dar clic cuando está mostrada" name="habilitada" sid="852502009930030" type="boolean" />
                 </instance-variables>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Entendimiento" pingpong="0" repeatcount="1" repeatto="0" sid="616742852535698" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_3\01-Objetos\cloud.png" />
+                    <animation framecount="1" loop="0" name="Nube" pingpong="0" repeatcount="1" repeatto="0" sid="616742852535698" speed="5">
+                        <frame duration="1" hotspotX="0.502857" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\simbolos\Simbolo_Nubememoria.png" />
                     </animation>
-                    <animation framecount="1" loop="0" name="Consejo" pingpong="0" repeatcount="1" repeatto="0" sid="765812921601108" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_3\01-Objetos\dove2.png" />
+                    <animation framecount="1" loop="0" name="Paloma" pingpong="0" repeatcount="1" repeatto="0" sid="765812921601108" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\simbolos\Simbolo_palomamemoria.png" />
                     </animation>
-                    <animation framecount="1" loop="0" name="Sabiduria" pingpong="0" repeatcount="1" repeatto="0" sid="194653956038651" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_3\01-Objetos\fire.png" />
+                    <animation framecount="1" loop="0" name="Fuego" pingpong="0" repeatcount="1" repeatto="0" sid="194653956038651" speed="5">
+                        <frame duration="1" hotspotX="0.502857" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\simbolos\Simbolo_fuegomemoria.png" />
                     </animation>
-                    <animation framecount="1" loop="0" name="Piedad" pingpong="0" repeatcount="1" repeatto="0" sid="761887873835529" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_3\01-Objetos\oil.png" />
+                    <animation framecount="1" loop="0" name="Aceite" pingpong="0" repeatcount="1" repeatto="0" sid="761887873835529" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\simbolos\Simbolo_aceitememoria.png" />
                     </animation>
-                    <animation framecount="1" loop="0" name="Fortaleza" pingpong="0" repeatcount="1" repeatto="0" sid="835790351763026" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_3\01-Objetos\raindrop.png" />
+                    <animation framecount="1" loop="0" name="Agua" pingpong="0" repeatcount="1" repeatto="0" sid="835790351763026" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\simbolos\Simbolo_aguamemoria.png" />
                     </animation>
-                    <animation framecount="1" loop="0" name="Temor" pingpong="0" repeatcount="1" repeatto="0" sid="222680052746249" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_3\01-Objetos\stamp.png" />
-                    </animation>
-                    <animation framecount="1" loop="0" name="Ciencia" pingpong="0" repeatcount="1" repeatto="0" sid="622525951710613" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <animation framecount="1" loop="0" name="Sello" pingpong="0" repeatcount="1" repeatto="0" sid="222680052746249" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\simbolos\Simbolo_Sellomemoria.png" />
                     </animation>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="418648186423681" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_3\01-Objetos\pregunta.png" />
+                        <frame duration="1" hotspotX="0.502857" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\fichavueltamemoria.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -95,8 +123,31 @@
             <object-type name="txtFinJuego" sid="532913943604016">
                 <plugin id="Text" />
             </object-type>
+            <object-type name="txtTitulo1" sid="196069914820014">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="txtAgua" sid="764137576738220">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
-        <object-folder name="Controls" />
+        <object-folder name="Controls">
+            <object-type name="btnReiniciar" sid="483742916945973">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="193435435303735" speed="5">
+                        <frame duration="1" hotspotX="0.502703" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\BtnReiniciarmemoria.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btnSiguiente" sid="573050902465473">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="232979424064429" speed="5">
+                        <frame duration="1" hotspotX="0.502703" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\BtnSiguientememoria.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-folder name="System">
             <object-type name="Touch" sid="948977961617129">
                 <plugin id="Touch" />
@@ -121,11 +172,12 @@
     </object-folder>
     <families />
     <layout-folder>
-        <layout>Simbolos.xml</layout>
-        <layout>Dones.xml</layout>
+        <layout>pSimbolos.xml</layout>
+        <layout>Splash.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>eSimbolos.xml</event-sheet>
+        <event-sheet>eSplash.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Function" uid="0" />
