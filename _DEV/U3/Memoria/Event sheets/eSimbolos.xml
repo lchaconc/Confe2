@@ -211,6 +211,10 @@
                                     <param id="0" name="Variable">contador</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="0" name="Call function" sid="583213225232904" type="Function">
+                                    <param id="0" name="Name">&quot;tacharPalabras&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="118356590743970">
@@ -287,6 +291,48 @@
                             <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="778113799953513" title="Tachar palabras encontradas">
+            <sub-events>
+                <event-block sid="983487329584560">
+                    <conditions>
+                        <condition id="0" name="On function" sid="429060939816096" type="Function">
+                            <param id="0" name="Name">&quot;tacharPalabras&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="305736420646195">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="937633867826309" type="System">
+                                    <param id="0" name="Variable">actual</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Agua&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="150739057289788" type="marcaAgua">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="137262472894384">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="253862912983657" type="System">
+                                    <param id="0" name="Variable">actual</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Aceite&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="148289065441509" type="marcaAceite">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
