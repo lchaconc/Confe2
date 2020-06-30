@@ -39,12 +39,12 @@
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action id="-9" name="Set value" sid="383518197338094" type="System">
-                            <param id="0" name="Variable">limiteFichas</param>
+                            <param id="0" name="Variable">limiteFichas5</param>
                             <param id="1" name="Value">fichaSimbolos.Count</param>
                         </action>
                         <action id="14" name="Log" sid="861994318156888" type="Browser">
                             <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;limiteFichas: &quot;  &amp; limiteFichas</param>
+                            <param id="1" name="Message">&quot;limiteFichas: &quot;  &amp; limiteFichas5</param>
                         </action>
                         <action id="0" name="Call function" sid="638129044815981" type="Function">
                             <param id="0" name="Name">&quot;cargarFichas&quot;</param>
@@ -103,31 +103,31 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="157410960112424" type="System">
-                            <param id="0" name="Variable">actual</param>
+                            <param id="0" name="Variable">actual5</param>
                             <param id="1" name="Value">&quot;&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="257975076490117" type="System">
-                            <param id="0" name="Variable">anterior</param>
+                            <param id="0" name="Variable">anterior5</param>
                             <param id="1" name="Value">&quot;&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="426083887774438" type="System">
-                            <param id="0" name="Variable">contador</param>
+                            <param id="0" name="Variable">contador5</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="627104523203771" type="System">
-                            <param id="0" name="Variable">idFichaAnterior</param>
+                            <param id="0" name="Variable">idFichaAnterior5</param>
                             <param id="1" name="Value">17</param>
                         </action>
                         <action id="-9" name="Set value" sid="793854056329997" type="System">
-                            <param id="0" name="Variable">limiteFichas</param>
+                            <param id="0" name="Variable">limiteFichas5</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="370127713124792" type="System">
-                            <param id="0" name="Variable">tiempo</param>
+                            <param id="0" name="Variable">tiempo5</param>
                             <param id="1" name="Value">35</param>
                         </action>
                         <action id="-9" name="Set value" sid="594684223318581" type="System">
-                            <param id="0" name="Variable">juegoActivo</param>
+                            <param id="0" name="Variable">juegoActivo5</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
@@ -271,20 +271,20 @@
                             <param id="1" name="From">1</param>
                         </action>
                         <action id="-9" name="Set value" sid="481909051856916" type="System">
-                            <param id="0" name="Variable">anterior</param>
-                            <param id="1" name="Value">actual</param>
+                            <param id="0" name="Variable">anterior5</param>
+                            <param id="1" name="Value">actual5</param>
                         </action>
                         <action id="-9" name="Set value" sid="595106406986750" type="System">
-                            <param id="0" name="Variable">actual</param>
+                            <param id="0" name="Variable">actual5</param>
                             <param id="1" name="Value">fichaSimbolos.animacion</param>
                         </action>
                         <action id="14" name="Log" sid="901255707625328" type="Browser">
                             <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;Anterior: &quot; &amp; anterior</param>
+                            <param id="1" name="Message">&quot;Anterior: &quot; &amp; anterior5</param>
                         </action>
                         <action id="14" name="Log" sid="666185745972871" type="Browser">
                             <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;Actual: &quot; &amp; actual</param>
+                            <param id="1" name="Message">&quot;Actual: &quot; &amp; actual5</param>
                         </action>
                         <action id="-13" name="Set boolean" sid="551710282026036" type="fichaDones">
                             <param id="0" name="Instance variable">habilitada</param>
@@ -297,7 +297,7 @@
                                 <condition id="-14" name="Compare variable" sid="232548901777638" type="System">
                                     <param id="0" name="Variable">actual2</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">anterior</param>
+                                    <param id="2" name="Value">anterior5</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -316,7 +316,7 @@
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                                 <action id="-10" name="Add to" sid="488420867730303" type="System">
-                                    <param id="0" name="Variable">contador</param>
+                                    <param id="0" name="Variable">contador5</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
                                 <action id="0" name="Call function" sid="196783914218100" type="Function">
@@ -338,12 +338,12 @@
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                                 <action id="-9" name="Set value" sid="131788169457652" type="System">
-                                    <param id="0" name="Variable">idFichaAnterior</param>
+                                    <param id="0" name="Variable">idFichaAnterior5</param>
                                     <param id="1" name="Value">fichaSimbolos.UID</param>
                                 </action>
                                 <action id="14" name="Log" sid="341346834369750" type="Browser">
                                     <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">&quot;id ficha anterior: &quot; &amp; idFichaAnterior</param>
+                                    <param id="1" name="Message">&quot;id ficha anterior: &quot; &amp; idFichaAnterior5</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -355,7 +355,7 @@
                             <param id="0" name="Name">&quot;eliminarAnterior&quot;</param>
                         </condition>
                         <condition id="-14" name="Pick by unique ID" sid="114932103967978" type="fichaDones">
-                            <param id="0" name="Unique ID">idFichaAnterior</param>
+                            <param id="0" name="Unique ID">idFichaAnterior5</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -370,7 +370,7 @@
                             <param id="0" name="Name">&quot;ocultarAnterior&quot;</param>
                         </condition>
                         <condition id="-14" name="Pick by unique ID" sid="134080284995057" type="fichaDones">
-                            <param id="0" name="Unique ID">idFichaAnterior</param>
+                            <param id="0" name="Unique ID">idFichaAnterior5</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -393,7 +393,7 @@
                         <condition id="-14" name="Compare variable" sid="712757083311124" type="System">
                             <param id="0" name="Variable">anterior2</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">limiteFichas /2</param>
+                            <param id="2" name="Value">limiteFichas5 /2</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -417,7 +417,7 @@
                         <event-block sid="195576335605028">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="975755919172587" type="System">
-                                    <param id="0" name="Variable">actual</param>
+                                    <param id="0" name="Variable">actual5</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;Agua&quot;</param>
                                 </condition>
@@ -431,7 +431,7 @@
                         <event-block sid="495966561167287">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="648096679765317" type="System">
-                                    <param id="0" name="Variable">actual</param>
+                                    <param id="0" name="Variable">actual5</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;Aceite&quot;</param>
                                 </condition>
@@ -445,7 +445,7 @@
                         <event-block sid="793011616002639">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="472268337323609" type="System">
-                                    <param id="0" name="Variable">actual</param>
+                                    <param id="0" name="Variable">actual5</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;Fuego&quot;</param>
                                 </condition>
@@ -459,7 +459,7 @@
                         <event-block sid="669029801937241">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="191669851555894" type="System">
-                                    <param id="0" name="Variable">actual</param>
+                                    <param id="0" name="Variable">actual5</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;Paloma&quot;</param>
                                 </condition>
@@ -473,7 +473,7 @@
                         <event-block sid="306468331250971">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="108398640465013" type="System">
-                                    <param id="0" name="Variable">actual</param>
+                                    <param id="0" name="Variable">actual5</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;Nube&quot;</param>
                                 </condition>
@@ -487,7 +487,7 @@
                         <event-block sid="475078232286359">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="475756351418888" type="System">
-                                    <param id="0" name="Variable">actual</param>
+                                    <param id="0" name="Variable">actual5</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;Sello&quot;</param>
                                 </condition>
@@ -512,7 +512,7 @@
                     </conditions>
                     <actions>
                         <action id="-11" name="Subtract from" sid="616377271002290" type="System">
-                            <param id="0" name="Variable">tiempo</param>
+                            <param id="0" name="Variable">tiempo5</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
@@ -520,7 +520,7 @@
                         <event-block sid="434623553507061">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="120402791575501" type="System">
-                                    <param id="0" name="Variable">tiempo</param>
+                                    <param id="0" name="Variable">tiempo5</param>
                                     <param id="1" name="Comparison">2</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
@@ -530,7 +530,7 @@
                                     <param id="0" name="Visibility">1</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="833472958847559" type="System">
-                                    <param id="0" name="Variable">juegoActivo</param>
+                                    <param id="0" name="Variable">juegoActivo5</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
@@ -538,14 +538,14 @@
                         <event-block sid="881348497485005">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="443045630527652" type="System">
-                                    <param id="0" name="Variable">juegoActivo</param>
+                                    <param id="0" name="Variable">juegoActivo5</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Set text" sid="866566898110576" type="txtTimer">
-                                    <param id="0" name="Text">tiempo</param>
+                                <action id="0" name="Set text" sid="866566898110576" type="txtTiempo">
+                                    <param id="0" name="Text">tiempo5</param>
                                 </action>
                             </actions>
                         </event-block>
