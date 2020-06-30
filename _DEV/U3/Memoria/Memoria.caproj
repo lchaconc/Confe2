@@ -80,7 +80,7 @@
             </object-type>
         </object-folder>
         <object-folder name="Sprites">
-            <object-type name="ficha" sid="914802064653488">
+            <object-type name="fichaSimbolos" sid="914802064653488">
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="animacion" sid="622847363458228" type="string" />
@@ -166,6 +166,130 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="fichaDones" sid="401985759613231">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="animacion" sid="314863244227533" type="string" />
+                    <instance-variable comment="evita dar clic cuando está mostrada" name="habilitada" sid="863620264736427" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Sabiduria" pingpong="0" repeatcount="1" repeatto="0" sid="805439983801007" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503759" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\dones\Dones_sabiduriamemoria.png">
+                            <collision-poly>
+                                <point x="0.143939" y="0.142857" />
+                                <point x="0.5" y="0" />
+                                <point x="0.840909" y="0.157895" />
+                                <point x="0.969697" y="0.496241" />
+                                <point x="0.833333" y="0.834586" />
+                                <point x="0.5" y="0.969925" />
+                                <point x="0.159091" y="0.842105" />
+                                <point x="0" y="0.496241" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Entendimiento" pingpong="0" repeatcount="1" repeatto="0" sid="535294201745436" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503759" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\dones\Dones_entendimientomemoria.png">
+                            <collision-poly>
+                                <point x="0.143939" y="0.142857" />
+                                <point x="0.5" y="0" />
+                                <point x="0.840909" y="0.157895" />
+                                <point x="0.969697" y="0.496241" />
+                                <point x="0.833333" y="0.834586" />
+                                <point x="0.5" y="0.969925" />
+                                <point x="0.159091" y="0.842105" />
+                                <point x="0" y="0.496241" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Consejo" pingpong="0" repeatcount="1" repeatto="0" sid="562690885652240" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503759" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\dones\Dones_consejomemoria.png">
+                            <collision-poly>
+                                <point x="0.143939" y="0.142857" />
+                                <point x="0.5" y="0" />
+                                <point x="0.840909" y="0.157895" />
+                                <point x="0.969697" y="0.496241" />
+                                <point x="0.833333" y="0.834586" />
+                                <point x="0.5" y="0.969925" />
+                                <point x="0.159091" y="0.842105" />
+                                <point x="0" y="0.496241" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Ciencia" pingpong="0" repeatcount="1" repeatto="0" sid="951073663765192" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503759" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\dones\Dones_cienciamemoria.png">
+                            <collision-poly>
+                                <point x="0.143939" y="0.142857" />
+                                <point x="0.5" y="0" />
+                                <point x="0.840909" y="0.157895" />
+                                <point x="0.969697" y="0.496241" />
+                                <point x="0.833333" y="0.834586" />
+                                <point x="0.5" y="0.969925" />
+                                <point x="0.159091" y="0.842105" />
+                                <point x="0" y="0.496241" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Piedad" pingpong="0" repeatcount="1" repeatto="0" sid="763115466942665" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503759" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\dones\Dones_piedadmemoria.png">
+                            <collision-poly>
+                                <point x="0.143939" y="0.142857" />
+                                <point x="0.5" y="0" />
+                                <point x="0.840909" y="0.157895" />
+                                <point x="0.969697" y="0.496241" />
+                                <point x="0.833333" y="0.834586" />
+                                <point x="0.5" y="0.969925" />
+                                <point x="0.159091" y="0.842105" />
+                                <point x="0" y="0.496241" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Fortaleza" pingpong="0" repeatcount="1" repeatto="0" sid="410531022915293" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503759" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\dones\Dones_fortalezamemoria.png">
+                            <collision-poly>
+                                <point x="0.143939" y="0.142857" />
+                                <point x="0.5" y="0" />
+                                <point x="0.840909" y="0.157895" />
+                                <point x="0.969697" y="0.496241" />
+                                <point x="0.833333" y="0.834586" />
+                                <point x="0.5" y="0.969925" />
+                                <point x="0.159091" y="0.842105" />
+                                <point x="0" y="0.496241" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Temor" pingpong="0" repeatcount="1" repeatto="0" sid="945157657360412" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503759" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\dones\Dones_temordeDiosmemoria.png">
+                            <collision-poly>
+                                <point x="0.143939" y="0.142857" />
+                                <point x="0.5" y="0" />
+                                <point x="0.840909" y="0.157895" />
+                                <point x="0.969697" y="0.496241" />
+                                <point x="0.833333" y="0.834586" />
+                                <point x="0.5" y="0.969925" />
+                                <point x="0.159091" y="0.842105" />
+                                <point x="0" y="0.496241" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="418976157791833" speed="5">
+                        <frame duration="1" hotspotX="0.502857" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\fichavueltamemoria.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Comodin" pingpong="0" repeatcount="1" repeatto="0" sid="532117868084739" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503759" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\dones\Dones_comodinmemoria.png">
+                            <collision-poly>
+                                <point x="0.143939" y="0.142857" />
+                                <point x="0.5" y="0" />
+                                <point x="0.840909" y="0.157895" />
+                                <point x="0.969697" y="0.496241" />
+                                <point x="0.833333" y="0.834586" />
+                                <point x="0.5" y="0.969925" />
+                                <point x="0.159091" y="0.842105" />
+                                <point x="0" y="0.496241" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Texts">
             <object-type name="txtFinJuego" sid="532913943604016">
@@ -245,7 +369,7 @@
             <object-type name="Browser" sid="885434796955149">
                 <plugin id="Browser" />
             </object-type>
-            <object-type global="1" name="arrayDones2" sid="737660675604315">
+            <object-type global="1" name="arrayDones" sid="737660675604315">
                 <plugin id="Arr" />
             </object-type>
             <object-type global="1" name="arrayFrutos12" sid="921573421134273">
@@ -274,6 +398,7 @@
     <event-folder>
         <event-sheet>eSimbolos.xml</event-sheet>
         <event-sheet>eSplash.xml</event-sheet>
+        <event-sheet>eDones.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Function" uid="0" />
