@@ -3,13 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eSimbolos</name>
     <events>
-        <variable comment="determina si el juego está activo. Depende del tiempo " constant="0" name="juegoActivo5" sid="100488459595579" static="0" type="number">0</variable>
-        <variable constant="0" name="tiempo5" sid="381543840189867" static="0" type="number">0</variable>
-        <variable constant="0" name="contador5" sid="847594319233455" static="0" type="number">0</variable>
-        <variable constant="0" name="limiteFichas5" sid="670529035688382" static="0" type="number">0</variable>
-        <variable constant="0" name="idFichaAnterior5" sid="922738944078182" static="0" type="number">0</variable>
-        <variable constant="0" name="actual5" sid="277803287735438" static="0" type="text"></variable>
-        <variable constant="0" name="anterior5" sid="359566982060082" static="0" type="text"></variable>
         <event-group description="" sid="370034331693827" title="Setup">
             <sub-events>
                 <event-block sid="250151715630644">
@@ -575,6 +568,18 @@
                         <action id="0" name="Call function" sid="538339013456758" type="Function">
                             <param id="0" name="Name">&quot;iniciar&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="505347982716173">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="985079215162336" type="Touch">
+                            <param id="0" name="Object">btnSiguiente</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="873070734681886" type="System">
+                            <param id="0" name="Layout">pDones</param>
                         </action>
                     </actions>
                 </event-block>

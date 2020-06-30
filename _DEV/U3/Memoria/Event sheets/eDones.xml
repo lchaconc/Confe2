@@ -3,91 +3,90 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eDones</name>
     <events>
-        <variable comment="determina si el juego está activo. Depende del tiempo " constant="0" name="juegoActivo2" sid="970911978165381" static="0" type="number">0</variable>
-        <variable constant="0" name="tiempo2" sid="855997908935114" static="0" type="number">0</variable>
-        <variable constant="0" name="contador2" sid="776275922495993" static="0" type="number">0</variable>
-        <variable constant="0" name="limiteFichas2" sid="716576096875411" static="0" type="number">0</variable>
-        <variable constant="0" name="idFichaAnterior2" sid="889137684706312" static="0" type="number">0</variable>
-        <variable constant="0" name="actual2" sid="535882044890780" static="0" type="text"></variable>
-        <variable constant="0" name="anterior2" sid="233554300904650" static="0" type="text"></variable>
-        <event-group description="" sid="362234065838315" title="Setup2">
+        <event-group description="" sid="402828373652792" title="Setup2">
             <sub-events>
-                <event-block sid="117029025889404">
+                <event-block sid="288140160719367">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="312191297037960" type="System" />
+                        <condition id="-2" name="On start of layout" sid="204255930902985" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="622639359355157" type="Function">
+                        <action id="0" name="Call function" sid="704109254934286" type="Function">
                             <param id="0" name="Name">&quot;resetVariables&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
-                        <action id="0" name="Call function" sid="761392309799231" type="Function">
+                        <action id="0" name="Call function" sid="549503721804482" type="Function">
                             <param id="0" name="Name">&quot;iniciar&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="353733386793889">
+                <event-block sid="811622694865908">
                     <conditions>
-                        <condition id="0" name="On function" sid="577345257035677" type="Function">
+                        <condition id="0" name="On function" sid="669302725340308" type="Function">
                             <param id="0" name="Name">&quot;iniciar&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="687171423967094" type="Function">
+                        <action id="0" name="Call function" sid="912941793838607" type="Function">
                             <param id="0" name="Name">&quot;cargarArrayObjetos&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
-                        <action id="-9" name="Set value" sid="383518197338094" type="System">
-                            <param id="0" name="Variable">limiteFichas5</param>
+                        <action id="-9" name="Set value" sid="413954905702733" type="System">
+                            <param id="0" name="Variable">limiteFichas</param>
                             <param id="1" name="Value">fichaSimbolos.Count</param>
                         </action>
-                        <action id="14" name="Log" sid="861994318156888" type="Browser">
+                        <action id="14" name="Log" sid="321906778249550" type="Browser">
                             <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;limiteFichas: &quot;  &amp; limiteFichas5</param>
+                            <param id="1" name="Message">&quot;limiteFichas: &quot;  &amp; limiteFichas</param>
                         </action>
-                        <action id="0" name="Call function" sid="638129044815981" type="Function">
+                        <action id="0" name="Call function" sid="899840102064363" type="Function">
                             <param id="0" name="Name">&quot;cargarFichas&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
-                        <action id="-15" name="Set visible" sid="830461131960714" type="txtFinJuego">
+                        <action id="0" name="Set text" sid="399834638701171" type="txtTitulo1">
+                            <param id="0" name="Text">&quot;DONES DEL ESPIRITU SANTO&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="346094028081440" type="txtFinJuego">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="340942183015547" type="marcaAceite">
+                        <action id="-15" name="Set visible" sid="676620793607589" type="txtTiempo">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="710681098847137" type="marcaAceite">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="434355707714932" type="marcaFuego">
+                        <action id="-15" name="Set visible" sid="233775473426765" type="marcaFuego">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="126827615608271" type="marcaNube">
+                        <action id="-15" name="Set visible" sid="480633499412675" type="marcaNube">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="427794938517514" type="marcaPaloma">
+                        <action id="-15" name="Set visible" sid="489773670739126" type="marcaPaloma">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="885856511245643" type="marcaSello">
+                        <action id="-15" name="Set visible" sid="579328872711663" type="marcaSello">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="929524249472077" type="marcaAgua">
+                        <action id="-15" name="Set visible" sid="705338207389567" type="marcaAgua">
                             <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="945587617109081">
+                        <event-block sid="177347367508468">
                             <conditions>
-                                <condition id="-11" name="For Each" sid="297273666687314" type="System">
+                                <condition id="-11" name="For Each" sid="586401910859399" type="System">
                                     <param id="0" name="Object">fichaDones</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="182784827604863" type="fichaDones">
+                                <action id="-15" name="Set visible" sid="175317735883272" type="fichaDones">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
-                                <action id="4" name="Set animation" sid="186880843878015" type="fichaDones">
+                                <action id="4" name="Set animation" sid="753361305647801" type="fichaDones">
                                     <param id="0" name="Animation">&quot;Default&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action id="-13" name="Set boolean" sid="536703680063812" type="fichaDones">
+                                <action id="-13" name="Set boolean" sid="183161013447124" type="fichaDones">
                                     <param id="0" name="Instance variable">habilitada</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
@@ -95,151 +94,159 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="343135052035974">
+                <event-block sid="368467127510084">
                     <conditions>
-                        <condition id="0" name="On function" sid="649111653430081" type="Function">
+                        <condition id="0" name="On function" sid="557874276373035" type="Function">
                             <param id="0" name="Name">&quot;resetVariables&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="157410960112424" type="System">
-                            <param id="0" name="Variable">actual5</param>
+                        <action id="-9" name="Set value" sid="715139329862750" type="System">
+                            <param id="0" name="Variable">actual</param>
                             <param id="1" name="Value">&quot;&quot;</param>
                         </action>
-                        <action id="-9" name="Set value" sid="257975076490117" type="System">
-                            <param id="0" name="Variable">anterior5</param>
+                        <action id="-9" name="Set value" sid="433634645256350" type="System">
+                            <param id="0" name="Variable">anterior</param>
                             <param id="1" name="Value">&quot;&quot;</param>
                         </action>
-                        <action id="-9" name="Set value" sid="426083887774438" type="System">
-                            <param id="0" name="Variable">contador5</param>
+                        <action id="-9" name="Set value" sid="281472586520144" type="System">
+                            <param id="0" name="Variable">contador</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action id="-9" name="Set value" sid="627104523203771" type="System">
-                            <param id="0" name="Variable">idFichaAnterior5</param>
+                        <action id="-9" name="Set value" sid="635098360428835" type="System">
+                            <param id="0" name="Variable">idFichaAnterior</param>
                             <param id="1" name="Value">17</param>
                         </action>
-                        <action id="-9" name="Set value" sid="793854056329997" type="System">
-                            <param id="0" name="Variable">limiteFichas5</param>
+                        <action id="-9" name="Set value" sid="820242491796394" type="System">
+                            <param id="0" name="Variable">limiteFichas</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action id="-9" name="Set value" sid="370127713124792" type="System">
-                            <param id="0" name="Variable">tiempo5</param>
-                            <param id="1" name="Value">35</param>
+                        <action id="-9" name="Set value" sid="354282943038380" type="System">
+                            <param id="0" name="Variable">tiempo</param>
+                            <param id="1" name="Value">100</param>
                         </action>
-                        <action id="-9" name="Set value" sid="594684223318581" type="System">
-                            <param id="0" name="Variable">juegoActivo5</param>
+                        <action id="-9" name="Set value" sid="765721281839847" type="System">
+                            <param id="0" name="Variable">juegoActivo</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="345843545866847" title="Carga de fichas2">
+        <event-group description="" sid="203561005298247" title="Carga de fichas2">
             <sub-events>
-                <variable constant="0" name="aux" sid="418866461028808" static="0" type="number">0</variable>
-                <variable constant="0" name="animacion" sid="216585145796616" static="0" type="text"></variable>
-                <event-block sid="830011185123084">
+                <variable constant="0" name="aux" sid="318860177126320" static="0" type="number">0</variable>
+                <variable constant="0" name="animacion" sid="308347589793367" static="0" type="text"></variable>
+                <event-block sid="881214620227336">
                     <conditions>
-                        <condition id="0" name="On function" sid="435547058785908" type="Function">
+                        <condition id="0" name="On function" sid="209528364949628" type="Function">
                             <param id="0" name="Name">&quot;cargarArrayObjetos&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="1" name="Set size" sid="106825459654458" type="arrayDones">
-                            <param id="0" name="Width">14</param>
+                        <action id="1" name="Set size" sid="318618097411402" type="arrayDones">
+                            <param id="0" name="Width">16</param>
                             <param id="1" name="Height">1</param>
                             <param id="2" name="Depth">1</param>
                         </action>
-                        <action id="2" name="Set at X" sid="469912359350295" type="arrayDones">
+                        <action id="2" name="Set at X" sid="762226357495532" type="arrayDones">
                             <param id="0" name="X">0</param>
                             <param id="1" name="Value">&quot;Sabiduria&quot;</param>
                         </action>
-                        <action id="2" name="Set at X" sid="654340933770679" type="arrayDones">
+                        <action id="2" name="Set at X" sid="766121740830476" type="arrayDones">
                             <param id="0" name="X">1</param>
                             <param id="1" name="Value">&quot;Entendimiento&quot;</param>
                         </action>
-                        <action id="2" name="Set at X" sid="396940405386338" type="arrayDones">
+                        <action id="2" name="Set at X" sid="665889590881204" type="arrayDones">
                             <param id="0" name="X">2</param>
                             <param id="1" name="Value">&quot;Consejo&quot;</param>
                         </action>
-                        <action id="2" name="Set at X" sid="982778226368272" type="arrayDones">
+                        <action id="2" name="Set at X" sid="267223988737918" type="arrayDones">
                             <param id="0" name="X">3</param>
                             <param id="1" name="Value">&quot;Ciencia&quot;</param>
                         </action>
-                        <action id="2" name="Set at X" sid="538915755214611" type="arrayDones">
+                        <action id="2" name="Set at X" sid="925331232865940" type="arrayDones">
                             <param id="0" name="X">4</param>
                             <param id="1" name="Value">&quot;Piedad&quot;</param>
                         </action>
-                        <action id="2" name="Set at X" sid="729533531233800" type="arrayDones">
+                        <action id="2" name="Set at X" sid="557361218450188" type="arrayDones">
                             <param id="0" name="X">5</param>
                             <param id="1" name="Value">&quot;Fortaleza&quot;</param>
                         </action>
-                        <action id="2" name="Set at X" sid="540210035895750" type="arrayDones">
+                        <action id="2" name="Set at X" sid="690053149668829" type="arrayDones">
                             <param id="0" name="X">6</param>
                             <param id="1" name="Value">&quot;Temor&quot;</param>
                         </action>
-                        <action id="2" name="Set at X" sid="566437687268018" type="arrayDones">
+                        <action id="2" name="Set at X" sid="440860212042205" type="arrayDones">
                             <param id="0" name="X">7</param>
+                            <param id="1" name="Value">&quot;Comodin&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="926927465139785" type="arrayDones">
+                            <param id="0" name="X">8</param>
                             <param id="1" name="Value">&quot;Sabiduria&quot;</param>
                         </action>
-                        <action id="2" name="Set at X" sid="448417325641219" type="arrayDones">
-                            <param id="0" name="X">8</param>
+                        <action id="2" name="Set at X" sid="144632501692214" type="arrayDones">
+                            <param id="0" name="X">9</param>
                             <param id="1" name="Value">&quot;Entendimiento&quot;</param>
                         </action>
-                        <action id="2" name="Set at X" sid="433011018546213" type="arrayDones">
-                            <param id="0" name="X">9</param>
+                        <action id="2" name="Set at X" sid="761851217317855" type="arrayDones">
+                            <param id="0" name="X">10</param>
                             <param id="1" name="Value">&quot;Consejo&quot;</param>
                         </action>
-                        <action id="2" name="Set at X" sid="282763154702774" type="arrayDones">
-                            <param id="0" name="X">10</param>
+                        <action id="2" name="Set at X" sid="629377457507805" type="arrayDones">
+                            <param id="0" name="X">11</param>
                             <param id="1" name="Value">&quot;Ciencia&quot;</param>
                         </action>
-                        <action id="2" name="Set at X" sid="832203016206827" type="arrayDones">
-                            <param id="0" name="X">11</param>
+                        <action id="2" name="Set at X" sid="147764403818510" type="arrayDones">
+                            <param id="0" name="X">12</param>
                             <param id="1" name="Value">&quot;Piedad&quot;</param>
                         </action>
-                        <action id="2" name="Set at X" sid="917456417344245" type="arrayDones">
-                            <param id="0" name="X">12</param>
+                        <action id="2" name="Set at X" sid="556989115058234" type="arrayDones">
+                            <param id="0" name="X">13</param>
                             <param id="1" name="Value">&quot;Fortaleza&quot;</param>
                         </action>
-                        <action id="2" name="Set at X" sid="154142793298809" type="arrayDones">
-                            <param id="0" name="X">13</param>
+                        <action id="2" name="Set at X" sid="685188075971359" type="arrayDones">
+                            <param id="0" name="X">14</param>
                             <param id="1" name="Value">&quot;Temor&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="707544606104857" type="arrayDones">
+                            <param id="0" name="X">15</param>
+                            <param id="1" name="Value">&quot;Comodin&quot;</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="335404683607203">
+                <event-block sid="444519848180187">
                     <conditions>
-                        <condition id="0" name="On function" sid="868615404885260" type="Function">
+                        <condition id="0" name="On function" sid="286162303434076" type="Function">
                             <param id="0" name="Name">&quot;cargarFichas&quot;</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="443695269894083">
+                        <event-block sid="282881953676378">
                             <conditions>
-                                <condition id="-11" name="For Each" sid="987962483295489" type="System">
+                                <condition id="-11" name="For Each" sid="136014282277644" type="System">
                                     <param id="0" name="Object">fichaDones</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="644967557984429" type="fichaDones">
+                                <action id="-10" name="Set value" sid="175557116191324" type="fichaDones">
                                     <param id="0" name="Instance variable">animacion</param>
                                     <param id="1" name="Value">&quot;&quot;</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="257173382446165" type="System">
+                                <action id="-9" name="Set value" sid="389674870259309" type="System">
                                     <param id="0" name="Variable">aux</param>
-                                    <param id="1" name="Value">random(0, arraySimbolos.Width)</param>
+                                    <param id="1" name="Value">random(0, arrayDones.Width)</param>
                                 </action>
-                                <action disabled="1" id="14" name="Log" sid="889752361804800" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="492054109847937" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;Aleatorio: &quot; &amp;int( aux)</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="830460495983835" type="fichaDones">
+                                <action id="-10" name="Set value" sid="233057715031458" type="fichaDones">
                                     <param id="0" name="Instance variable">animacion</param>
                                     <param id="1" name="Value">arrayDones.At( int(aux)  )</param>
                                 </action>
-                                <action id="9" name="Delete" sid="444474161010220" type="arrayDones">
+                                <action id="9" name="Delete" sid="934105553197303" type="arrayDones">
                                     <param id="0" name="Index">aux</param>
                                     <param id="1" name="Axis">0</param>
                                 </action>
@@ -249,136 +256,136 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="268159966345076" title="Eventos Touch - Evaluacion de Aciertos2">
+        <event-group description="" sid="577464440855999" title="Eventos Touch - Evaluacion de Aciertos2">
             <sub-events>
-                <event-block sid="199021404620595">
+                <event-block sid="105834309052705">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="787484078121232" type="Touch">
+                        <condition id="3" name="On touched object" sid="954525888384266" type="Touch">
                             <param id="0" name="Object">fichaDones</param>
                         </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="746759881982028" type="fichaDones">
+                        <condition id="-8" name="Is boolean instance variable set" sid="985730700012939" type="fichaDones">
                             <param id="0" name="Instance variable">habilitada</param>
                         </condition>
-                        <condition id="-14" name="Compare variable" sid="360313036734321" type="System">
-                            <param id="0" name="Variable">juegoActivo2</param>
+                        <condition id="-14" name="Compare variable" sid="886802120534753" type="System">
+                            <param id="0" name="Variable">juegoActivo</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="113957819431755" type="fichaDones">
+                        <action id="4" name="Set animation" sid="779238537616065" type="fichaDones">
                             <param id="0" name="Animation">fichaDones.animacion</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-9" name="Set value" sid="481909051856916" type="System">
-                            <param id="0" name="Variable">anterior5</param>
-                            <param id="1" name="Value">actual5</param>
+                        <action id="-9" name="Set value" sid="991914457416049" type="System">
+                            <param id="0" name="Variable">anterior</param>
+                            <param id="1" name="Value">actual</param>
                         </action>
-                        <action id="-9" name="Set value" sid="595106406986750" type="System">
-                            <param id="0" name="Variable">actual5</param>
-                            <param id="1" name="Value">fichaSimbolos.animacion</param>
+                        <action id="-9" name="Set value" sid="794325538557966" type="System">
+                            <param id="0" name="Variable">actual</param>
+                            <param id="1" name="Value">fichaDones.animacion</param>
                         </action>
-                        <action id="14" name="Log" sid="901255707625328" type="Browser">
+                        <action id="14" name="Log" sid="720954266080457" type="Browser">
                             <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;Anterior: &quot; &amp; anterior5</param>
+                            <param id="1" name="Message">&quot;Anterior: &quot; &amp; anterior</param>
                         </action>
-                        <action id="14" name="Log" sid="666185745972871" type="Browser">
+                        <action id="14" name="Log" sid="567226393303054" type="Browser">
                             <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;Actual: &quot; &amp; actual5</param>
+                            <param id="1" name="Message">&quot;Actual: &quot; &amp; actual</param>
                         </action>
-                        <action id="-13" name="Set boolean" sid="551710282026036" type="fichaDones">
+                        <action id="-13" name="Set boolean" sid="334431292420037" type="fichaDones">
                             <param id="0" name="Instance variable">habilitada</param>
                             <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="698338066766972">
+                        <event-block sid="605036209023276">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="232548901777638" type="System">
-                                    <param id="0" name="Variable">actual2</param>
+                                <condition id="-14" name="Compare variable" sid="616321244616665" type="System">
+                                    <param id="0" name="Variable">actual</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">anterior5</param>
+                                    <param id="2" name="Value">anterior</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="14" name="Log" sid="927589083913114" type="Browser">
+                                <action id="14" name="Log" sid="674536204551899" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;Acierto&quot;</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="355060562954528" type="System">
+                                <action id="-16" name="Wait" sid="991357552886429" type="System">
                                     <param id="0" name="Seconds">0.2</param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="576139351177445" type="fichaSimbolos">
+                                <action id="-15" name="Set visible" sid="623693633997918" type="fichaDones">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
-                                <action id="0" name="Call function" sid="943592586054703" type="Function">
+                                <action id="0" name="Call function" sid="834134795487224" type="Function">
                                     <param id="0" name="Name">&quot;eliminarAnterior&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
-                                <action id="-10" name="Add to" sid="488420867730303" type="System">
-                                    <param id="0" name="Variable">contador5</param>
+                                <action id="-10" name="Add to" sid="642891866275152" type="System">
+                                    <param id="0" name="Variable">contador</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="0" name="Call function" sid="196783914218100" type="Function">
+                                <action id="0" name="Call function" sid="731701225338395" type="Function">
                                     <param id="0" name="Name">&quot;tacharPalabras&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="452065334486688">
+                        <event-block sid="485638724784710">
                             <conditions>
-                                <condition id="-22" name="Else" sid="316157025845217" type="System" />
+                                <condition id="-22" name="Else" sid="526650843930021" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-16" name="Wait" sid="958523303452435" type="System">
+                                <action id="-16" name="Wait" sid="873411847033648" type="System">
                                     <param id="0" name="Seconds">0.2</param>
                                 </action>
-                                <action id="0" name="Call function" sid="986260439815679" type="Function">
+                                <action id="0" name="Call function" sid="134522586857883" type="Function">
                                     <param id="0" name="Name">&quot;ocultarAnterior&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
-                                <action id="-9" name="Set value" sid="131788169457652" type="System">
-                                    <param id="0" name="Variable">idFichaAnterior5</param>
-                                    <param id="1" name="Value">fichaSimbolos.UID</param>
+                                <action id="-9" name="Set value" sid="229110555284774" type="System">
+                                    <param id="0" name="Variable">idFichaAnterior</param>
+                                    <param id="1" name="Value">fichaDones.UID</param>
                                 </action>
-                                <action id="14" name="Log" sid="341346834369750" type="Browser">
+                                <action id="14" name="Log" sid="730437131766408" type="Browser">
                                     <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">&quot;id ficha anterior: &quot; &amp; idFichaAnterior5</param>
+                                    <param id="1" name="Message">&quot;id ficha anterior: &quot; &amp; idFichaAnterior</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="963937009224624">
+                <event-block sid="265372733934955">
                     <conditions>
-                        <condition id="0" name="On function" sid="140678646157872" type="Function">
+                        <condition id="0" name="On function" sid="526494888690532" type="Function">
                             <param id="0" name="Name">&quot;eliminarAnterior&quot;</param>
                         </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="114932103967978" type="fichaDones">
-                            <param id="0" name="Unique ID">idFichaAnterior5</param>
+                        <condition id="-14" name="Pick by unique ID" sid="827631933364073" type="fichaDones">
+                            <param id="0" name="Unique ID">idFichaAnterior</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="342866657235759" type="fichaDones">
+                        <action id="-15" name="Set visible" sid="146519958445403" type="fichaDones">
                             <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="714462138324880">
+                <event-block sid="576321746278714">
                     <conditions>
-                        <condition id="0" name="On function" sid="964219301029793" type="Function">
+                        <condition id="0" name="On function" sid="270429971677685" type="Function">
                             <param id="0" name="Name">&quot;ocultarAnterior&quot;</param>
                         </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="134080284995057" type="fichaDones">
-                            <param id="0" name="Unique ID">idFichaAnterior5</param>
+                        <condition id="-14" name="Pick by unique ID" sid="792305305641432" type="fichaDones">
+                            <param id="0" name="Unique ID">idFichaAnterior</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="755569632800287" type="fichaDones">
+                        <action id="4" name="Set animation" sid="837425312406057" type="fichaDones">
                             <param id="0" name="Animation">&quot;Default&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-13" name="Set boolean" sid="395116888232916" type="fichaDones">
+                        <action id="-13" name="Set boolean" sid="800558752946087" type="fichaDones">
                             <param id="0" name="Instance variable">habilitada</param>
                             <param id="1" name="Value">1</param>
                         </action>
@@ -386,114 +393,114 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="630595221066314" title="Fin del juego2">
+        <event-group description="" sid="975916188651414" title="Fin del juego2">
             <sub-events>
-                <event-block sid="832143485429066">
+                <event-block sid="436423035086941">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="712757083311124" type="System">
-                            <param id="0" name="Variable">anterior2</param>
+                        <condition id="-14" name="Compare variable" sid="329934698958737" type="System">
+                            <param id="0" name="Variable">contador</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">limiteFichas5 /2</param>
+                            <param id="2" name="Value">limiteFichas /2</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="848182451937303" type="btnSiguiente">
+                        <action id="-15" name="Set visible" sid="894783829353482" type="btnSiguiente">
                             <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="765332994169357" title="Tachar palabras encontradas2">
+        <event-group description="" sid="600383091962680" title="Tachar palabras encontradas2">
             <sub-events>
-                <event-block sid="504204297461660">
+                <event-block sid="893021619183376">
                     <conditions>
-                        <condition id="0" name="On function" sid="431522871224046" type="Function">
+                        <condition id="0" name="On function" sid="228665904281676" type="Function">
                             <param id="0" name="Name">&quot;tacharPalabras&quot;</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="195576335605028">
+                        <event-block sid="711068716909944">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="975755919172587" type="System">
-                                    <param id="0" name="Variable">actual5</param>
+                                <condition id="-14" name="Compare variable" sid="246862885989460" type="System">
+                                    <param id="0" name="Variable">actual</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;Agua&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="704656975109027" type="marcaAgua">
+                                <action id="-15" name="Set visible" sid="299018763097064" type="marcaAgua">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="495966561167287">
+                        <event-block sid="546633239961953">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="648096679765317" type="System">
-                                    <param id="0" name="Variable">actual5</param>
+                                <condition id="-14" name="Compare variable" sid="862544343671573" type="System">
+                                    <param id="0" name="Variable">actual</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;Aceite&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="646897873401513" type="marcaAceite">
+                                <action id="-15" name="Set visible" sid="423952620573929" type="marcaAceite">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="793011616002639">
+                        <event-block sid="428104985442942">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="472268337323609" type="System">
-                                    <param id="0" name="Variable">actual5</param>
+                                <condition id="-14" name="Compare variable" sid="395690308952273" type="System">
+                                    <param id="0" name="Variable">actual</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;Fuego&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="985148614663182" type="marcaFuego">
+                                <action id="-15" name="Set visible" sid="301934340868367" type="marcaFuego">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="669029801937241">
+                        <event-block sid="288194563534684">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="191669851555894" type="System">
-                                    <param id="0" name="Variable">actual5</param>
+                                <condition id="-14" name="Compare variable" sid="464989697270553" type="System">
+                                    <param id="0" name="Variable">actual</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;Paloma&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="487975903973177" type="marcaPaloma">
+                                <action id="-15" name="Set visible" sid="216202572126471" type="marcaPaloma">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="306468331250971">
+                        <event-block sid="950675933693713">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="108398640465013" type="System">
-                                    <param id="0" name="Variable">actual5</param>
+                                <condition id="-14" name="Compare variable" sid="966286339260457" type="System">
+                                    <param id="0" name="Variable">actual</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;Nube&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="543289120025838" type="marcaNube">
+                                <action id="-15" name="Set visible" sid="666201673128859" type="marcaNube">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="475078232286359">
+                        <event-block sid="345433022998687">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="475756351418888" type="System">
-                                    <param id="0" name="Variable">actual5</param>
+                                <condition id="-14" name="Compare variable" sid="612358491559420" type="System">
+                                    <param id="0" name="Variable">actual</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;Sello&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="452872197793388" type="marcaSello">
+                                <action id="-15" name="Set visible" sid="593205310261494" type="marcaSello">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
@@ -502,50 +509,50 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="459486541947856" title="Manejo de tiempo2">
+        <event-group description="" sid="778278479170980" title="Manejo de tiempo2">
             <sub-events>
-                <event-block sid="585160235025196">
+                <event-block sid="627103860886222">
                     <conditions>
-                        <condition id="-6" name="Every X seconds" sid="509293652600903" type="System">
+                        <condition id="-6" name="Every X seconds" sid="312722264719534" type="System">
                             <param id="0" name="Interval (seconds)">1.0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-11" name="Subtract from" sid="616377271002290" type="System">
-                            <param id="0" name="Variable">tiempo5</param>
+                        <action id="-11" name="Subtract from" sid="466046701644480" type="System">
+                            <param id="0" name="Variable">tiempo</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="434623553507061">
+                        <event-block sid="404453465442328">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="120402791575501" type="System">
-                                    <param id="0" name="Variable">tiempo5</param>
+                                <condition id="-14" name="Compare variable" sid="388520985741497" type="System">
+                                    <param id="0" name="Variable">tiempo</param>
                                     <param id="1" name="Comparison">2</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="828670855367804" type="txtFinJuego">
+                                <action id="-15" name="Set visible" sid="819358158763749" type="txtFinJuego">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="833472958847559" type="System">
-                                    <param id="0" name="Variable">juegoActivo5</param>
+                                <action id="-9" name="Set value" sid="672603732821764" type="System">
+                                    <param id="0" name="Variable">juegoActivo</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="881348497485005">
+                        <event-block sid="281844047677107">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="443045630527652" type="System">
-                                    <param id="0" name="Variable">juegoActivo5</param>
+                                <condition id="-14" name="Compare variable" sid="225731600007244" type="System">
+                                    <param id="0" name="Variable">juegoActivo</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Set text" sid="866566898110576" type="txtTiempo">
-                                    <param id="0" name="Text">tiempo5</param>
+                                <action id="0" name="Set text" sid="584653864059021" type="txtTiempo">
+                                    <param id="0" name="Text">tiempo</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -553,22 +560,34 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="134453514525574" title="Eventos botones (reiniciar - siguiente)2">
+        <event-group description="" sid="970876893256606" title="Eventos botones (reiniciar - siguiente)2">
             <sub-events>
-                <event-block sid="219210614314260">
+                <event-block sid="741904364046029">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="408295158268114" type="Touch">
+                        <condition id="3" name="On touched object" sid="989498819714598" type="Touch">
                             <param id="0" name="Object">btnReiniciar</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="129040033898926" type="Function">
+                        <action id="0" name="Call function" sid="936927142758531" type="Function">
                             <param id="0" name="Name">&quot;resetVariables&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
-                        <action id="0" name="Call function" sid="246903037699819" type="Function">
+                        <action id="0" name="Call function" sid="328341119853492" type="Function">
                             <param id="0" name="Name">&quot;iniciar&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="895216382615343">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="525281241492642" type="Touch">
+                            <param id="0" name="Object">btnSiguiente</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="527495112697590" type="System">
+                            <param id="0" name="Layout">pDones</param>
                         </action>
                     </actions>
                 </event-block>
