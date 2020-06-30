@@ -134,6 +134,38 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="marcaFuego" sid="439190713396492">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="916939379259371" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="marcaPaloma" sid="388124211471819">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="710164522295282" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="marcaNube" sid="171881514621846">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="999983747637415" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="marcaSello" sid="778685357894104">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="350475246830272" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Texts">
             <object-type name="txtFinJuego" sid="532913943604016">
@@ -178,6 +210,9 @@
                     <instance-variable name="nombre" sid="379821846009407" type="string" />
                 </instance-variables>
             </object-type>
+            <object-type name="txtTimer" sid="445131344423931">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
         <object-folder name="Controls">
             <object-type name="btnReiniciar" sid="483742916945973">
@@ -204,7 +239,7 @@
             <object-type name="Function" sid="558381821082318">
                 <plugin id="Function" />
             </object-type>
-            <object-type global="1" name="arraySimbolos1" sid="498567800109121">
+            <object-type global="1" name="arraySimbolos" sid="498567800109121">
                 <plugin id="Arr" />
             </object-type>
             <object-type name="Browser" sid="885434796955149">
