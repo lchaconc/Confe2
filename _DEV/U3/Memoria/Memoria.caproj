@@ -118,7 +118,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="marcaAgua" sid="736357815846465">
+            <object-type name="marca1" sid="736357815846465">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="895624908998048" speed="5">
@@ -126,7 +126,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="marcaAceite" sid="609835405384388">
+            <object-type name="marca2" sid="609835405384388">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="261180328621465" speed="5">
@@ -134,7 +134,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="marcaFuego" sid="439190713396492">
+            <object-type name="marca3" sid="439190713396492">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="916939379259371" speed="5">
@@ -142,7 +142,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="marcaPaloma" sid="388124211471819">
+            <object-type name="marca4" sid="388124211471819">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="710164522295282" speed="5">
@@ -150,7 +150,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="marcaNube" sid="171881514621846">
+            <object-type name="marca5" sid="171881514621846">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="999983747637415" speed="5">
@@ -158,7 +158,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="marcaSello" sid="778685357894104">
+            <object-type name="marca6" sid="778685357894104">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="350475246830272" speed="5">
@@ -290,6 +290,14 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="marca7" sid="676090936513595">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="874370159860562" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Texts">
             <object-type name="txtFinJuego" sid="532913943604016">
@@ -298,43 +306,58 @@
             <object-type name="txtTitulo1" sid="196069914820014">
                 <plugin id="Text" />
             </object-type>
-            <object-type name="txtAgua" sid="764137576738220">
+            <object-type name="txtSabiduria" sid="764137576738220">
                 <plugin id="Text" />
                 <instance-variables>
                     <instance-variable name="nombre" sid="889119873449401" type="string" />
                 </instance-variables>
             </object-type>
-            <object-type name="txtAceite" sid="994154972374418">
+            <object-type name="txtEntendimiento" sid="994154972374418">
                 <plugin id="Text" />
                 <instance-variables>
                     <instance-variable name="nombre" sid="530911243650444" type="string" />
                 </instance-variables>
             </object-type>
-            <object-type name="txtFuego" sid="757821356001465">
+            <object-type name="txtConsejo" sid="757821356001465">
                 <plugin id="Text" />
                 <instance-variables>
                     <instance-variable name="nombre" sid="304120128134270" type="string" />
                 </instance-variables>
             </object-type>
-            <object-type name="txtPaloma" sid="431946169750573">
+            <object-type name="txtCiencia" sid="431946169750573">
                 <plugin id="Text" />
                 <instance-variables>
                     <instance-variable name="nombre" sid="970079932451263" type="string" />
                 </instance-variables>
             </object-type>
-            <object-type name="txtNube" sid="231761332833674">
+            <object-type name="txtPiedad" sid="231761332833674">
                 <plugin id="Text" />
                 <instance-variables>
                     <instance-variable name="nombre" sid="821137611280626" type="string" />
                 </instance-variables>
             </object-type>
-            <object-type name="txtSello" sid="817631625709508">
+            <object-type name="txtFortaleza" sid="817631625709508">
                 <plugin id="Text" />
                 <instance-variables>
                     <instance-variable name="nombre" sid="379821846009407" type="string" />
                 </instance-variables>
             </object-type>
             <object-type name="txtTiempo" sid="445131344423931">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="txtTemor" sid="743592954694998">
+                <plugin id="Text" />
+                <instance-variables>
+                    <instance-variable name="nombre" sid="523605805239675" type="string" />
+                </instance-variables>
+            </object-type>
+            <object-type name="txtLblTiempo" sid="107084079201877">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="txtAciertos" sid="778485511608916">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="txtLblAciertos" sid="767052051711513">
                 <plugin id="Text" />
             </object-type>
         </object-folder>
@@ -381,12 +404,13 @@
     <families>
         <family name="txtSimbolos" plugin-id="Text" sid="294670394278943">
             <members>
-                <member>txtAceite</member>
-                <member>txtAgua</member>
-                <member>txtFuego</member>
-                <member>txtNube</member>
-                <member>txtPaloma</member>
-                <member>txtSello</member>
+                <member>txtCiencia</member>
+                <member>txtConsejo</member>
+                <member>txtEntendimiento</member>
+                <member>txtFortaleza</member>
+                <member>txtPiedad</member>
+                <member>txtSabiduria</member>
+                <member>txtTemor</member>
             </members>
         </family>
     </families>

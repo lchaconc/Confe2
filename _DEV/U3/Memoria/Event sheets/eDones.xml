@@ -33,7 +33,7 @@
                         </action>
                         <action id="-9" name="Set value" sid="413954905702733" type="System">
                             <param id="0" name="Variable">limiteFichas</param>
-                            <param id="1" name="Value">fichaSimbolos.Count</param>
+                            <param id="1" name="Value">fichaDones.Count</param>
                         </action>
                         <action id="14" name="Log" sid="321906778249550" type="Browser">
                             <param id="0" name="Type">0</param>
@@ -52,22 +52,25 @@
                         <action id="-15" name="Set visible" sid="676620793607589" type="txtTiempo">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="710681098847137" type="marcaAceite">
+                        <action id="-15" name="Set visible" sid="710681098847137" type="marca1">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="233775473426765" type="marcaFuego">
+                        <action id="-15" name="Set visible" sid="534939214253002" type="marca2">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="480633499412675" type="marcaNube">
+                        <action id="-15" name="Set visible" sid="663749746713079" type="marca3">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="489773670739126" type="marcaPaloma">
+                        <action id="-15" name="Set visible" sid="317304770340035" type="marca4">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="579328872711663" type="marcaSello">
+                        <action id="-15" name="Set visible" sid="142692032786032" type="marca5">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="705338207389567" type="marcaAgua">
+                        <action id="-15" name="Set visible" sid="212458251046128" type="marca6">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="471047796842574" type="marca7">
                             <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
@@ -123,7 +126,7 @@
                         </action>
                         <action id="-9" name="Set value" sid="354282943038380" type="System">
                             <param id="0" name="Variable">tiempo</param>
-                            <param id="1" name="Value">100</param>
+                            <param id="1" name="Value">30</param>
                         </action>
                         <action id="-9" name="Set value" sid="765721281839847" type="System">
                             <param id="0" name="Variable">juegoActivo</param>
@@ -326,6 +329,9 @@
                                     <param id="0" name="Variable">contador</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="0" name="Set text" sid="991134421555890" type="txtAciertos">
+                                    <param id="0" name="Text">contador</param>
+                                </action>
                                 <action id="0" name="Call function" sid="731701225338395" type="Function">
                                     <param id="0" name="Name">&quot;tacharPalabras&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
@@ -426,11 +432,11 @@
                                 <condition id="-14" name="Compare variable" sid="246862885989460" type="System">
                                     <param id="0" name="Variable">actual</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Agua&quot;</param>
+                                    <param id="2" name="Value">&quot;Sabiduria&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="299018763097064" type="marcaAgua">
+                                <action id="-15" name="Set visible" sid="299018763097064" type="marca1">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
@@ -440,11 +446,11 @@
                                 <condition id="-14" name="Compare variable" sid="862544343671573" type="System">
                                     <param id="0" name="Variable">actual</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Aceite&quot;</param>
+                                    <param id="2" name="Value">&quot;Entendimiento&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="423952620573929" type="marcaAceite">
+                                <action id="-15" name="Set visible" sid="423952620573929" type="marca2">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
@@ -454,11 +460,11 @@
                                 <condition id="-14" name="Compare variable" sid="395690308952273" type="System">
                                     <param id="0" name="Variable">actual</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Fuego&quot;</param>
+                                    <param id="2" name="Value">&quot;Consejo&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="301934340868367" type="marcaFuego">
+                                <action id="-15" name="Set visible" sid="301934340868367" type="marca3">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
@@ -468,11 +474,11 @@
                                 <condition id="-14" name="Compare variable" sid="464989697270553" type="System">
                                     <param id="0" name="Variable">actual</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Paloma&quot;</param>
+                                    <param id="2" name="Value">&quot;Ciencia&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="216202572126471" type="marcaPaloma">
+                                <action id="-15" name="Set visible" sid="216202572126471" type="marca4">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
@@ -482,11 +488,11 @@
                                 <condition id="-14" name="Compare variable" sid="966286339260457" type="System">
                                     <param id="0" name="Variable">actual</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Nube&quot;</param>
+                                    <param id="2" name="Value">&quot;Piedad&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="666201673128859" type="marcaNube">
+                                <action id="-15" name="Set visible" sid="666201673128859" type="marca5">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
@@ -496,11 +502,25 @@
                                 <condition id="-14" name="Compare variable" sid="612358491559420" type="System">
                                     <param id="0" name="Variable">actual</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Sello&quot;</param>
+                                    <param id="2" name="Value">&quot;Fortaleza&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="593205310261494" type="marcaSello">
+                                <action id="-15" name="Set visible" sid="593205310261494" type="marca6">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="790979541755014">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="487861355750345" type="System">
+                                    <param id="0" name="Variable">actual</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Temor&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="193086086629130" type="marca7">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
