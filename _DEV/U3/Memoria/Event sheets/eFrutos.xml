@@ -1,0 +1,664 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>eFrutos</name>
+    <events>
+        <event-group description="" sid="757436044254507" title="Setup3">
+            <sub-events>
+                <event-block sid="367818389983521">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="925733613703412" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="848027455053954" type="Function">
+                            <param id="0" name="Name">&quot;resetVariables&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="873251802224399" type="Function">
+                            <param id="0" name="Name">&quot;iniciar&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="163076443929083">
+                    <conditions>
+                        <condition id="0" name="On function" sid="132011836229372" type="Function">
+                            <param id="0" name="Name">&quot;iniciar&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="798347467131609" type="Function">
+                            <param id="0" name="Name">&quot;cargarArrayObjetos&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-9" name="Set value" sid="887419075436906" type="System">
+                            <param id="0" name="Variable">limiteFichas</param>
+                            <param id="1" name="Value">fichaFrutos.Count</param>
+                        </action>
+                        <action id="14" name="Log" sid="979757831787231" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;limiteFichas: &quot;  &amp; limiteFichas</param>
+                        </action>
+                        <action id="0" name="Call function" sid="810255578147689" type="Function">
+                            <param id="0" name="Name">&quot;cargarFichas&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Set text" sid="592232718624312" type="txtTitulo1">
+                            <param id="0" name="Text">&quot;FRUTOS DEL ESPIRITU SANTO&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="985786645981914" type="txtFinJuego">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="820257730627946" type="txtTiempo">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="923662156433612" type="marca1">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="989652458202659" type="marca2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="206167569465949" type="marca3">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="667717350804023" type="marca4">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="299952914505985" type="marca5">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="181677440212336" type="marca6">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="192054838333449" type="marca7">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="531437908768517" type="marca8">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="644992982693951" type="marca9">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="509687125743290" type="marca10">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="547869439594715" type="marca11">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="137411894358956" type="marca12">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="206838472145496">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="594439697578501" type="System">
+                                    <param id="0" name="Object">fichaFrutos</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="761395237118399" type="fichaFrutos">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="415440369031733" type="fichaFrutos">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="701653572568008" type="fichaFrutos">
+                                    <param id="0" name="Instance variable">habilitada</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="164078186493926">
+                    <conditions>
+                        <condition id="0" name="On function" sid="140163402974402" type="Function">
+                            <param id="0" name="Name">&quot;resetVariables&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="783228977505075" type="System">
+                            <param id="0" name="Variable">actual</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="751669606176747" type="System">
+                            <param id="0" name="Variable">anterior</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="120451853037776" type="System">
+                            <param id="0" name="Variable">contador</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="835391742321171" type="System">
+                            <param id="0" name="Variable">idFichaAnterior</param>
+                            <param id="1" name="Value">17</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="340397339399532" type="System">
+                            <param id="0" name="Variable">limiteFichas</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="845562241590943" type="System">
+                            <param id="0" name="Variable">tiempo</param>
+                            <param id="1" name="Value">30</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="221109710530241" type="System">
+                            <param id="0" name="Variable">juegoActivo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="985303421947272" title="Carga de fichas3">
+            <sub-events>
+                <variable constant="0" name="aux" sid="560746636229048" static="0" type="number">0</variable>
+                <variable constant="0" name="animacion" sid="187072950860695" static="0" type="text"></variable>
+                <event-block sid="666089908129749">
+                    <conditions>
+                        <condition id="0" name="On function" sid="186191014719720" type="Function">
+                            <param id="0" name="Name">&quot;cargarArrayObjetos&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set size" sid="773360241473612" type="arrayFrutos">
+                            <param id="0" name="Width">24</param>
+                            <param id="1" name="Height">1</param>
+                            <param id="2" name="Depth">1</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="176190533544422" type="arrayFrutos">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Value">&quot;Amor&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="452856410564851" type="arrayFrutos">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Value">&quot;Alegria&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="330787843712504" type="arrayFrutos">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Value">&quot;Paz&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="641641720477248" type="arrayFrutos">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Value">&quot;Paciencia&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="312410890611688" type="arrayFrutos">
+                            <param id="0" name="X">4</param>
+                            <param id="1" name="Value">&quot;Longa&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="125864316508509" type="arrayFrutos">
+                            <param id="0" name="X">5</param>
+                            <param id="1" name="Value">&quot;Beni&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="899432294014329" type="arrayFrutos">
+                            <param id="0" name="X">6</param>
+                            <param id="1" name="Value">&quot;Bondad&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="389163732293344" type="arrayFrutos">
+                            <param id="0" name="X">7</param>
+                            <param id="1" name="Value">&quot;Mansedumbre&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="765870160223136" type="arrayFrutos">
+                            <param id="0" name="X">8</param>
+                            <param id="1" name="Value">&quot;Fidelidad&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="652849829788147" type="arrayFrutos">
+                            <param id="0" name="X">9</param>
+                            <param id="1" name="Value">&quot;Modestia&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="310946672883747" type="arrayFrutos">
+                            <param id="0" name="X">10</param>
+                            <param id="1" name="Value">&quot;Templanza&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="608370186065737" type="arrayFrutos">
+                            <param id="0" name="X">11</param>
+                            <param id="1" name="Value">&quot;Castidad&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="712197816533962" type="arrayFrutos">
+                            <param id="0" name="X">12</param>
+                            <param id="1" name="Value">&quot;Amor&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="305032554643068" type="arrayFrutos">
+                            <param id="0" name="X">13</param>
+                            <param id="1" name="Value">&quot;Alegria&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="680729129791418" type="arrayFrutos">
+                            <param id="0" name="X">14</param>
+                            <param id="1" name="Value">&quot;Paz&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="282772940375393" type="arrayFrutos">
+                            <param id="0" name="X">15</param>
+                            <param id="1" name="Value">&quot;Paciencia&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="291286669891223" type="arrayFrutos">
+                            <param id="0" name="X">16</param>
+                            <param id="1" name="Value">&quot;Longa&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="707432217062964" type="arrayFrutos">
+                            <param id="0" name="X">17</param>
+                            <param id="1" name="Value">&quot;Beni&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="223605573610805" type="arrayFrutos">
+                            <param id="0" name="X">18</param>
+                            <param id="1" name="Value">&quot;Bondad&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="218383759312423" type="arrayFrutos">
+                            <param id="0" name="X">19</param>
+                            <param id="1" name="Value">&quot;Mansedumbre&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="992904830539043" type="arrayFrutos">
+                            <param id="0" name="X">20</param>
+                            <param id="1" name="Value">&quot;Fidelidad&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="754539389755161" type="arrayFrutos">
+                            <param id="0" name="X">21</param>
+                            <param id="1" name="Value">&quot;Modestia&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="754463692643213" type="arrayFrutos">
+                            <param id="0" name="X">22</param>
+                            <param id="1" name="Value">&quot;Templanza&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="524908512255519" type="arrayFrutos">
+                            <param id="0" name="X">23</param>
+                            <param id="1" name="Value">&quot;Castidad&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="552249240770666">
+                    <conditions>
+                        <condition id="0" name="On function" sid="210551172390022" type="Function">
+                            <param id="0" name="Name">&quot;cargarFichas&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="261477091680350">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="341186179170116" type="System">
+                                    <param id="0" name="Object">fichaFrutos</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="223734468746766" type="fichaFrutos">
+                                    <param id="0" name="Instance variable">animacion</param>
+                                    <param id="1" name="Value">&quot;&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="903228182381937" type="System">
+                                    <param id="0" name="Variable">aux</param>
+                                    <param id="1" name="Value">random(0, arrayDones.Width)</param>
+                                </action>
+                                <action disabled="1" id="14" name="Log" sid="967744866929978" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;Aleatorio: &quot; &amp;int( aux)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="891676241166269" type="fichaFrutos">
+                                    <param id="0" name="Instance variable">animacion</param>
+                                    <param id="1" name="Value">arrayFrutos.At( int(aux) )</param>
+                                </action>
+                                <action id="9" name="Delete" sid="647208692357140" type="arrayFrutos">
+                                    <param id="0" name="Index">aux</param>
+                                    <param id="1" name="Axis">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="824693960621577" title="Eventos Touch - Evaluacion de Aciertos3">
+            <sub-events>
+                <event-block sid="797975809896764">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="586762769976761" type="Touch">
+                            <param id="0" name="Object">fichaFrutos</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="884191598565102" type="fichaFrutos">
+                            <param id="0" name="Instance variable">habilitada</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="419539907560728" type="System">
+                            <param id="0" name="Variable">juegoActivo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="822664822691945" type="fichaFrutos">
+                            <param id="0" name="Animation">fichaFrutos.animacion</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="221395539906555" type="System">
+                            <param id="0" name="Variable">anterior</param>
+                            <param id="1" name="Value">actual</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="688873970680804" type="System">
+                            <param id="0" name="Variable">actual</param>
+                            <param id="1" name="Value">fichaFrutos.animacion</param>
+                        </action>
+                        <action id="14" name="Log" sid="485201608392022" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;Anterior: &quot; &amp; anterior</param>
+                        </action>
+                        <action id="14" name="Log" sid="606575944454347" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;Actual: &quot; &amp; actual</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="185690605542777" type="fichaFrutos">
+                            <param id="0" name="Instance variable">habilitada</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="706017079170162">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="748644131546684" type="System">
+                                    <param id="0" name="Variable">actual</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">anterior</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="431424044436359" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;Acierto&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="421001741388668" type="System">
+                                    <param id="0" name="Seconds">0.2</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="719861938701624" type="fichaFrutos">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="368777446054419" type="Function">
+                                    <param id="0" name="Name">&quot;eliminarAnterior&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-10" name="Add to" sid="981634075584933" type="System">
+                                    <param id="0" name="Variable">contador</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="786130938220562" type="txtAciertos">
+                                    <param id="0" name="Text">contador</param>
+                                </action>
+                                <action id="0" name="Call function" sid="549104557779586" type="Function">
+                                    <param id="0" name="Name">&quot;tacharPalabras&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="997105671765264">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="968997775147397" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="872339031377574" type="System">
+                                    <param id="0" name="Seconds">0.2</param>
+                                </action>
+                                <action id="0" name="Call function" sid="658723064790633" type="Function">
+                                    <param id="0" name="Name">&quot;ocultarAnterior&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-9" name="Set value" sid="193749410641563" type="System">
+                                    <param id="0" name="Variable">idFichaAnterior</param>
+                                    <param id="1" name="Value">fichaFrutos.UID</param>
+                                </action>
+                                <action id="14" name="Log" sid="293641745720522" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;id ficha anterior: &quot; &amp; idFichaAnterior</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="659411125866453">
+                    <conditions>
+                        <condition id="0" name="On function" sid="452293233430027" type="Function">
+                            <param id="0" name="Name">&quot;eliminarAnterior&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="175907030374413" type="fichaFrutos">
+                            <param id="0" name="Unique ID">idFichaAnterior</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="682855084133342" type="fichaFrutos">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="513478316176698">
+                    <conditions>
+                        <condition id="0" name="On function" sid="859137064115721" type="Function">
+                            <param id="0" name="Name">&quot;ocultarAnterior&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="915727109599160" type="fichaFrutos">
+                            <param id="0" name="Unique ID">idFichaAnterior</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="417569174957658" type="fichaFrutos">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="703252180799982" type="fichaFrutos">
+                            <param id="0" name="Instance variable">habilitada</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="941508666040985" title="Fin del juego3">
+            <sub-events>
+                <event-block sid="899740437820904">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="495361073028215" type="System">
+                            <param id="0" name="Variable">contador</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">limiteFichas /2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="397487723095913" type="btnSiguiente">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="853721313466189" title="Tachar palabras encontradas3">
+            <sub-events>
+                <event-block sid="744482189562723">
+                    <conditions>
+                        <condition id="0" name="On function" sid="106423714642663" type="Function">
+                            <param id="0" name="Name">&quot;tacharPalabras&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="537423769656274">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="212703954472080" type="System">
+                                    <param id="0" name="Variable">actual</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Sabiduria&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="604977903108780" type="marca1">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="532789659474912">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="612866738451767" type="System">
+                                    <param id="0" name="Variable">actual</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Entendimiento&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="701118431695012" type="marca2">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="584911818035854">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="779856035641680" type="System">
+                                    <param id="0" name="Variable">actual</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Consejo&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="863230897654357" type="marca3">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="620082667666804">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="857374827508273" type="System">
+                                    <param id="0" name="Variable">actual</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Ciencia&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="396657648440338" type="marca4">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="587006031524887">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="651955037421296" type="System">
+                                    <param id="0" name="Variable">actual</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Piedad&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="352030690595836" type="marca5">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="969152666868125">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="825785465100208" type="System">
+                                    <param id="0" name="Variable">actual</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Fortaleza&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="151834941108089" type="marca6">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="975738608797186">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="446993601365577" type="System">
+                                    <param id="0" name="Variable">actual</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Temor&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="489280313231899" type="marca7">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="406785624359580" title="Manejo de tiempo3">
+            <sub-events>
+                <event-block sid="404676935985762">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="148663701194180" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="771976562413948" type="System">
+                            <param id="0" name="Variable">tiempo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="355014604585377">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="226266148597732" type="System">
+                                    <param id="0" name="Variable">tiempo</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="686272686629685" type="txtFinJuego">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="958322012020872" type="System">
+                                    <param id="0" name="Variable">juegoActivo</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="231654260872615">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="673412948694862" type="System">
+                                    <param id="0" name="Variable">juegoActivo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="396495293164666" type="txtTiempo">
+                                    <param id="0" name="Text">tiempo</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="728551556889156" title="Eventos botones (reiniciar - siguiente)3">
+            <sub-events>
+                <event-block sid="386220675839905">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="633526720219620" type="Touch">
+                            <param id="0" name="Object">btnReiniciar</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="403840936720811" type="Function">
+                            <param id="0" name="Name">&quot;resetVariables&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="753915359043469" type="Function">
+                            <param id="0" name="Name">&quot;iniciar&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="522996951741905">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="773918236751848" type="Touch">
+                            <param id="0" name="Object">btnSiguiente</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="662211724627934" type="System">
+                            <param id="0" name="Layout">pDones</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
