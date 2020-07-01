@@ -28,6 +28,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
+    <first-layout>Splash</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -75,6 +76,14 @@
                                 <point x="0.000765697" y="0.998649" />
                             </collision-poly>
                         </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bgFin" sid="133007705700806">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="564580766622587" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -681,12 +690,14 @@
         <layout>pDones.xml</layout>
         <layout>pFrutos.xml</layout>
         <layout>Splash.xml</layout>
+        <layout>pFin.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>eSimbolos.xml</event-sheet>
         <event-sheet>eSplash.xml</event-sheet>
         <event-sheet>eDones.xml</event-sheet>
         <event-sheet>eFrutos.xml</event-sheet>
+        <event-sheet>Event sheet 1.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Function" uid="0" />

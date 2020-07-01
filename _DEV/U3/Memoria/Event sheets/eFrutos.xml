@@ -141,7 +141,7 @@
                         </action>
                         <action id="-9" name="Set value" sid="845562241590943" type="System">
                             <param id="0" name="Variable">tiempo</param>
-                            <param id="1" name="Value">30</param>
+                            <param id="1" name="Value">60</param>
                         </action>
                         <action id="-9" name="Set value" sid="221109710530241" type="System">
                             <param id="0" name="Variable">juegoActivo</param>
@@ -286,9 +286,9 @@
                                 </action>
                                 <action id="-9" name="Set value" sid="903228182381937" type="System">
                                     <param id="0" name="Variable">aux</param>
-                                    <param id="1" name="Value">random(0, arrayDones.Width)</param>
+                                    <param id="1" name="Value">random(0, arrayFrutos.Width)</param>
                                 </action>
-                                <action disabled="1" id="14" name="Log" sid="967744866929978" type="Browser">
+                                <action id="14" name="Log" sid="967744866929978" type="Browser">
                                     <param id="0" name="Type">0</param>
                                     <param id="1" name="Message">&quot;Aleatorio: &quot; &amp;int( aux)</param>
                                 </action>
@@ -479,7 +479,7 @@
                                 <condition id="-14" name="Compare variable" sid="212703954472080" type="System">
                                     <param id="0" name="Variable">actual</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Sabiduria&quot;</param>
+                                    <param id="2" name="Value">&quot;Amor&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -493,7 +493,7 @@
                                 <condition id="-14" name="Compare variable" sid="612866738451767" type="System">
                                     <param id="0" name="Variable">actual</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Entendimiento&quot;</param>
+                                    <param id="2" name="Value">&quot;Alegria&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -507,7 +507,7 @@
                                 <condition id="-14" name="Compare variable" sid="779856035641680" type="System">
                                     <param id="0" name="Variable">actual</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Consejo&quot;</param>
+                                    <param id="2" name="Value">&quot;Paz&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -521,7 +521,7 @@
                                 <condition id="-14" name="Compare variable" sid="857374827508273" type="System">
                                     <param id="0" name="Variable">actual</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Ciencia&quot;</param>
+                                    <param id="2" name="Value">&quot;Paciencia&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -535,7 +535,7 @@
                                 <condition id="-14" name="Compare variable" sid="651955037421296" type="System">
                                     <param id="0" name="Variable">actual</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Piedad&quot;</param>
+                                    <param id="2" name="Value">&quot;Longa&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -549,7 +549,7 @@
                                 <condition id="-14" name="Compare variable" sid="825785465100208" type="System">
                                     <param id="0" name="Variable">actual</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Fortaleza&quot;</param>
+                                    <param id="2" name="Value">&quot;Beni&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -563,11 +563,81 @@
                                 <condition id="-14" name="Compare variable" sid="446993601365577" type="System">
                                     <param id="0" name="Variable">actual</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Temor&quot;</param>
+                                    <param id="2" name="Value">&quot;Bondad&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="-15" name="Set visible" sid="489280313231899" type="marca7">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="433341497574432">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="471484119128030" type="System">
+                                    <param id="0" name="Variable">actual</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Mansedumbre&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="491847359696784" type="marca8">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="167569791981417">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="713623560831252" type="System">
+                                    <param id="0" name="Variable">actual</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Fidelidad&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="860413279882160" type="marca9">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="612137310328341">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="729829493344426" type="System">
+                                    <param id="0" name="Variable">actual</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Modestia&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="663281922493113" type="marca10">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="949296808792914">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="767633689484304" type="System">
+                                    <param id="0" name="Variable">actual</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Templanza&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="138443731270118" type="marca11">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="491454327138379">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="911514902973009" type="System">
+                                    <param id="0" name="Variable">actual</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Castidad&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="564500778358708" type="marca12">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
@@ -654,7 +724,7 @@
                     </conditions>
                     <actions>
                         <action id="-2" name="Go to layout" sid="662211724627934" type="System">
-                            <param id="0" name="Layout">pDones</param>
+                            <param id="0" name="Layout">pFin</param>
                         </action>
                     </actions>
                 </event-block>
