@@ -212,13 +212,23 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="bgSplash" sid="181428017508891">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="519162025852440" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Cuerpo de Cristo\SplashCristoFotos.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
         <layout>Main.xml</layout>
+        <layout>Splash.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>eMain.xml</event-sheet>
+        <event-sheet>eSplash.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="2">
