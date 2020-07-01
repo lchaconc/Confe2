@@ -66,7 +66,18 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="690322983335664" speed="5">
-                    <frame duration="1" hotspotX="0.501639" hotspotY="0.508065" original-source="C:\Users\logan24\Desktop\Cool Text - Generar 348116658142479.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.508876" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Cuerpo de Cristo\BtnGuardarCuerpodeCristo.png">
+                        <collision-poly>
+                            <point x="0.266055" y="0.343195" />
+                            <point x="0.5" y="0.00591716" />
+                            <point x="0.729358" y="0.349112" />
+                            <point x="0.802752" y="0.497041" />
+                            <point x="0.93578" y="0.91716" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0642202" y="0.91716" />
+                            <point x="0.197248" y="0.497041" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -124,6 +135,82 @@
         </object-type>
         <object-type name="FileChooser" sid="253351340578456">
             <plugin id="filechooser" />
+            <container>
+                <type>FileChooser</type>
+                <type>btnCargar</type>
+            </container>
+        </object-type>
+        <object-type name="img4" sid="369229763995521">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="718258272327280" speed="5">
+                    <frame duration="1" hotspotX="0.453988" hotspotY="0.357576" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Cuerpo de Cristo\cajacargaCuerpodeCristo.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.993865" y="0.00606061" />
+                            <point x="0.993865" y="0.993939" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="img5" sid="875212711582023">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="949995688462933" speed="5">
+                    <frame duration="1" hotspotX="0.453988" hotspotY="0.357576" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Cuerpo de Cristo\cajacargaCuerpodeCristo.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.993865" y="0.00606061" />
+                            <point x="0.993865" y="0.993939" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="img6" sid="917528980316998">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="273432989528361" speed="5">
+                    <frame duration="1" hotspotX="0.453988" hotspotY="0.357576" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Cuerpo de Cristo\cajacargaCuerpodeCristo.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.993865" y="0.00606061" />
+                            <point x="0.993865" y="0.993939" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="img7" sid="729566151174892">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="796618963792848" speed="5">
+                    <frame duration="1" hotspotX="0.453988" hotspotY="0.357576" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Cuerpo de Cristo\cajacargaCuerpodeCristo.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.993865" y="0.00606061" />
+                            <point x="0.993865" y="0.993939" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btnCargar" sid="532563038667081">
+            <plugin id="Sprite" />
+            <container>
+                <type>FileChooser</type>
+                <type>btnCargar</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="768936626359529" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50303" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Cuerpo de Cristo\BtnCargarCuerpodeCristo.png" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />
