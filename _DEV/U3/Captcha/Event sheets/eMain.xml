@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eMain</name>
     <events>
+        <variable constant="0" name="clics" sid="268830579123786" static="0" type="number">0</variable>
+        <variable constant="0" name="cantIglesias" sid="517849027305373" static="0" type="number">0</variable>
         <event-block sid="181637678022665">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="829177045720583" type="System" />
@@ -20,6 +22,7 @@
         </event-block>
         <event-group description="" sid="891673017277035" title="Funciones Cargar imagenes - Caragar Array">
             <sub-events>
+                <variable constant="0" name="residuo" sid="413186908797826" static="0" type="number">0</variable>
                 <event-block sid="169493068760678">
                     <conditions>
                         <condition id="0" name="On function" sid="648635479649117" type="Function">
@@ -36,7 +39,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="14" name="Log" sid="299050983067089" type="Browser">
+                                <action disabled="1" id="14" name="Log" sid="299050983067089" type="Browser">
                                     <param id="0" name="Type">1</param>
                                     <param id="1" name="Message">&quot;Limite &quot; &amp; listaNumeros.Width</param>
                                 </action>
@@ -67,7 +70,28 @@
                                     <param id="0" name="Index">i</param>
                                     <param id="1" name="Axis">0</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="332227468547494" type="System">
+                                    <param id="0" name="Variable">residuo</param>
+                                    <param id="1" name="Value">ficha.valor %  2 </param>
+                                </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="665613832053269">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="678264204973696" type="System">
+                                            <param id="0" name="Variable">residuo</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="622007650008606" type="System">
+                                            <param id="0" name="Variable">cantIglesias</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -183,6 +207,10 @@
                             <param id="0" name="Type">1</param>
                             <param id="1" name="Message">residuo</param>
                         </action>
+                        <action id="-10" name="Add to" sid="930027796342476" type="System">
+                            <param id="0" name="Variable">clics</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="401736360239948">
@@ -232,6 +260,10 @@
                         <action id="-15" name="Set visible" sid="621298887952389" type="marcaError">
                             <param id="0" name="Visibility">1</param>
                         </action>
+                        <action id="0" name="Call function" sid="530454589964322" type="Function">
+                            <param id="0" name="Name">&quot;finDelJuego&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="614093969271192">
@@ -253,6 +285,14 @@
                             <param id="0" name="X">-600</param>
                             <param id="1" name="Y">-600</param>
                         </action>
+                        <action id="-9" name="Set value" sid="526882901251982" type="System">
+                            <param id="0" name="Variable">cantIglesias</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="559578915052035" type="System">
+                            <param id="0" name="Variable">clics</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
                         <action id="0" name="Call function" sid="884941671252549" type="Function">
                             <param id="0" name="Name">&quot;cargarArray&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
@@ -262,6 +302,37 @@
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="646439195789408" title="Fin del juego">
+            <sub-events>
+                <event-block sid="351190844516100">
+                    <conditions>
+                        <condition id="0" name="On function" sid="954425323704162" type="Function">
+                            <param id="0" name="Name">&quot;finDelJuego&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="592039488279621">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="359476950788795" type="System">
+                                    <param id="0" name="Variable">cantIglesias</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">clics</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="747431597671215" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="952132663043031" type="System">
+                                    <param id="0" name="Layout">Fin</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
