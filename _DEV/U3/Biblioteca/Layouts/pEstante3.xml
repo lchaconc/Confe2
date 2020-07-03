@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>pEstante2</name>
-    <sid>137316252044594</sid>
-    <event-sheet>eEstante2</event-sheet>
+    <name>pEstante3</name>
+    <sid>267744157926823</sid>
+    <event-sheet>eEstante3</event-sheet>
     <size>
         <width>1280</width>
         <height>720</height>
@@ -13,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="background" sid="912906306302370">
+        <layer name="background" sid="169019239814524">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>0</transparent>
@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="bgPAred" uid="31">
+                <instance type="bgPAred" uid="59">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -54,7 +54,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Estantes" sid="215096641139048">
+        <layer name="Estantes" sid="100693548449404">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -70,10 +70,10 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="contEstantes" uid="32">
+                <instance type="contEstantes" uid="60">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Est2</initial-animation>
+                        <initial-animation>Est3</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -100,7 +100,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="fxDestello" uid="33">
+                <instance type="fxDestello" uid="61">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -133,7 +133,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Libros" sid="644016315621174">
+        <layer name="Libros" sid="804467474905050">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -149,7 +149,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="lbrCiencia" uid="34">
+                <instance type="lbrCiencia" uid="62">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -171,7 +171,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="lbConsejo" uid="35">
+                <instance type="lbConsejo" uid="63">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -184,8 +184,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>298</x>
-                        <y>-324</y>
+                        <x>358</x>
+                        <y>-246</y>
                         <z>0</z>
                         <width>43</width>
                         <height>145</height>
@@ -196,7 +196,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="lbrEntendimiento" uid="36">
+                <instance type="lbrEntendimiento" uid="64">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -209,8 +209,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1186</x>
-                        <y>-224</y>
+                        <x>740</x>
+                        <y>260</y>
                         <z>0</z>
                         <width>51</width>
                         <height>147</height>
@@ -221,7 +221,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="lbrFortaleza" uid="37">
+                <instance type="lbrFortaleza" uid="65">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -243,7 +243,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="lbrSabiduria" uid="38">
+                <instance type="lbrSabiduria" uid="66">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -256,8 +256,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>823</x>
-                        <y>275</y>
+                        <x>417</x>
+                        <y>-255</y>
                         <z>0</z>
                         <width>40</width>
                         <height>145</height>
@@ -268,7 +268,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="lbrTemor" uid="39">
+                <instance type="lbrTemor" uid="67">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -290,7 +290,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="biblia3" uid="40">
+                <instance type="biblia3" uid="68">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -315,7 +315,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="lbrPiedad" uid="41">
+                <instance type="lbrPiedad" uid="69">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -328,8 +328,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>364</x>
-                        <y>-324</y>
+                        <x>476</x>
+                        <y>-241</y>
                         <z>0</z>
                         <width>44</width>
                         <height>145</height>
@@ -340,7 +340,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="biblia1" uid="42">
+                <instance type="biblia1" uid="70">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -365,7 +365,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="biblia2" uid="43">
+                <instance type="biblia2" uid="71">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -390,7 +390,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="biblia4" uid="44">
+                <instance type="biblia4" uid="72">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -403,8 +403,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1368</x>
-                        <y>268</y>
+                        <x>-193</x>
+                        <y>-61</y>
                         <z>0</z>
                         <width>41</width>
                         <height>146</height>
@@ -415,7 +415,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="biblia5" uid="45">
+                <instance type="biblia5" uid="73">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -428,8 +428,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1928</x>
-                        <y>270</y>
+                        <x>-137</x>
+                        <y>-54</y>
                         <z>0</z>
                         <width>39</width>
                         <height>146</height>
@@ -440,7 +440,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="biblia6" uid="46">
+                <instance type="biblia6" uid="74">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -453,8 +453,33 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-313</x>
-                        <y>181</y>
+                        <x>1386</x>
+                        <y>272</y>
+                        <z>0</z>
+                        <width>36</width>
+                        <height>145</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.503448248</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="biblia7" uid="87">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1934</x>
+                        <y>270</y>
                         <z>0</z>
                         <width>36</width>
                         <height>145</height>
@@ -468,7 +493,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="shadows" sid="310804639824828">
+        <layer name="shadows" sid="720251335680138">
             <initially-visible>0</initially-visible>
             <background-color>0,0,0</background-color>
             <transparent>0</transparent>
@@ -486,7 +511,7 @@
             <instances />
             <effects />
         </layer>
-        <layer name="Modal" sid="871003999062856">
+        <layer name="Modal" sid="955499872209772">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -502,7 +527,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="modal" uid="47">
+                <instance type="modal" uid="75">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -524,7 +549,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="bgListaCompras" uid="48">
+                <instance type="bgListaCompras" uid="76">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -546,7 +571,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txtLista" uid="49">
+                <instance type="txtLista" uid="77">
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -579,7 +604,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="GUI" sid="807234013242425">
+        <layer name="GUI" sid="141484198866857">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -595,7 +620,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="btnCerrar" uid="50">
+                <instance type="btnCerrar" uid="78">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -620,7 +645,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="btnComprar" uid="51">
+                <instance type="btnComprar" uid="79">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -645,7 +670,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="btnEstante1" uid="52">
+                <instance type="btnEstante1" uid="80">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -667,7 +692,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="btnEstante2" uid="53">
+                <instance type="btnEstante2" uid="81">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -686,10 +711,10 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="btnEstante3" uid="54">
+                <instance type="btnEstante3" uid="82">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -708,10 +733,10 @@
                         <hotspotX>0.507692337</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>0.5</opacity>
+                        <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="btnCarrito" uid="55">
+                <instance type="btnCarrito" uid="83">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -736,7 +761,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="visorCompras" uid="56">
+                <instance type="visorCompras" uid="84">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -761,7 +786,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="texts" sid="976987559445383">
+        <layer name="texts" sid="868155073939839">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -777,7 +802,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="txtAviso" uid="57">
+                <instance type="txtAviso" uid="85">
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Invisible</initial-visibility>
@@ -804,7 +829,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txtComprados" uid="58">
+                <instance type="txtComprados" uid="86">
                     <properties>
                         <text>.</text>
                         <initial-visibility>Visible</initial-visibility>

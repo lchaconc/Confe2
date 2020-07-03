@@ -96,7 +96,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="187780300652353" speed="5">
-                        <frame duration="1" hotspotX="0.507692" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\btn4biblioteca.png" />
+                        <frame duration="1" hotspotX="0.507692" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\btn3biblioteca.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -261,6 +261,46 @@
                                 <point x="1" y="0" />
                                 <point x="0.998355" y="0.997555" />
                                 <point x="0.00164474" y="0.997555" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Biblia6" pingpong="0" repeatcount="1" repeatto="0" sid="388663489727933" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501222" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Libros\Biblia6abiertaLibros.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.998355" y="0.00244499" />
+                                <point x="0.998355" y="0.997555" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Biblia7" pingpong="0" repeatcount="1" repeatto="0" sid="375445128201087" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501222" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Libros\Biblia7abiertaLibros.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.998355" y="0.00244499" />
+                                <point x="0.998355" y="0.997555" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Biblia8" pingpong="0" repeatcount="1" repeatto="0" sid="658335778613408" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501222" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Libros\Biblia8abiertaLibros.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="0.998355" y="0.997555" />
+                                <point x="0.00164474" y="0.997555" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Biblia9" pingpong="0" repeatcount="1" repeatto="0" sid="125795306662111" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501222" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Libros\Biblia9abiertaLibros.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.998355" y="0.00244499" />
+                                <point x="0.998355" y="0.997555" />
+                                <point x="0" y="1" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -447,6 +487,23 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="biblia7" sid="507076329211353">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="459486328613647" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503448" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Libros\Biblia7Libros.png">
+                            <collision-poly>
+                                <point x="0.0277778" y="0.00689655" />
+                                <point x="0.972222" y="0.00689655" />
+                                <point x="1" y="0.496552" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0.0277778" y="0.496552" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Estantes">
             <object-type name="contEstantes" sid="494133510543495">
@@ -509,16 +566,30 @@
                 </behavior-type>
             </behaviors>
         </family>
+        <family name="famEst3" plugin-id="Sprite" sid="838554262784398">
+            <members>
+                <member>biblia6</member>
+                <member>biblia7</member>
+                <member>lbrEntendimiento</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Pin" sid="503188903636990">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </family>
     </families>
     <layout-folder>
         <layout>pEstante1.xml</layout>
         <layout>pEstante2.xml</layout>
+        <layout>pEstante3.xml</layout>
         <layout>splash.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>eEstante1.xml</event-sheet>
         <event-sheet>eSplash.xml</event-sheet>
         <event-sheet>eEstante2.xml</event-sheet>
+        <event-sheet>eEstante3.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Function" uid="0" />
