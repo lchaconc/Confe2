@@ -332,7 +332,9 @@
                 </event-block>
                 <event-block sid="889033061951034">
                     <conditions>
-                        <condition id="14" name="On tap" sid="359410480861641" type="Touch" />
+                        <condition id="17" name="On tap object" sid="359410480861641" type="Touch">
+                            <param id="0" name="Object">estante1</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="404812653603459" type="txtAviso">
@@ -411,7 +413,7 @@
                     <actions>
                         <action id="-3" name="Set position" sid="493859583958878" type="bgListaCompras">
                             <param id="0" name="X">640</param>
-                            <param id="1" name="Y">300</param>
+                            <param id="1" name="Y">340</param>
                         </action>
                         <action id="0" name="Set text" sid="556219994613961" type="txtLista">
                             <param id="0" name="Text">&quot;&quot;</param>
