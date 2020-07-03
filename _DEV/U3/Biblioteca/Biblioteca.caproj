@@ -102,9 +102,20 @@
             </object-type>
             <object-type name="btnCarrito" sid="254110342246648">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="comprasAbierta" sid="116054027635109" type="boolean" />
+                </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="172699501709527" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\maletinbiblioteca.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="visorCompras" sid="770257998783570">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="245539779747996" speed="5">
+                        <frame duration="1" hotspotX="0.502793" hotspotY="0.502793" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\base_num.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -247,6 +258,9 @@
                         <behavior id="Pin" />
                     </behavior-type>
                 </behaviors>
+            </object-type>
+            <object-type name="txtComprados" sid="725474545538184">
+                <plugin id="Text" />
             </object-type>
         </object-folder>
         <object-folder name="System">
@@ -466,11 +480,13 @@
     </families>
     <layout-folder>
         <layout>pEstante1.xml</layout>
+        <layout>pEstante2.xml</layout>
         <layout>splash.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>eEstante1.xml</event-sheet>
         <event-sheet>eSplash.xml</event-sheet>
+        <event-sheet>eEstante2.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Function" uid="0" />
