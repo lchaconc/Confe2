@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>eMain</name>
+    <name>eEstante1</name>
     <events>
         <variable comment="para cargar los estantes" constant="0" name="turno" sid="238494222558278" static="0" type="number">1</variable>
         <event-group description="" sid="370034331693827" title="Setup">
@@ -21,6 +21,10 @@
                         </action>
                         <action behavior="Pin" id="0" name="Pin to object" sid="673194069467598" type="famEst1">
                             <param id="0" name="Pin to">estante1</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="989794378083469" type="txtLista">
+                            <param id="0" name="Pin to">bgListaCompras</param>
                             <param id="1" name="Mode">0</param>
                         </action>
                     </actions>
@@ -69,7 +73,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="193077815303034" title="Seleccion de libros Estante 1">
+        <event-group description="" sid="193077815303034" title="Seleccion de libros Estante">
             <sub-events>
                 <event-block sid="338032695332971">
                     <conditions>
@@ -116,6 +120,10 @@
                             <param id="0" name="X">640</param>
                             <param id="1" name="Y">360</param>
                         </action>
+                        <action id="-9" name="Set value" sid="966566351343110" type="System">
+                            <param id="0" name="Variable">libroActual</param>
+                            <param id="1" name="Value">&quot;Piedad&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="590284430292057">
@@ -156,12 +164,16 @@
                             <param id="1" name="Visibility">1</param>
                         </action>
                         <action id="4" name="Set animation" sid="954928373008656" type="modal">
-                            <param id="0" name="Animation">&quot;Piedad&quot;</param>
+                            <param id="0" name="Animation">&quot;Consejo&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                         <action id="-3" name="Set position" sid="176505357805079" type="modal">
                             <param id="0" name="X">640</param>
                             <param id="1" name="Y">360</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="110096059054140" type="System">
+                            <param id="0" name="Variable">libroActual</param>
+                            <param id="1" name="Value">&quot;Consejo&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -210,6 +222,10 @@
                             <param id="0" name="X">640</param>
                             <param id="1" name="Y">360</param>
                         </action>
+                        <action id="-9" name="Set value" sid="580091442726072" type="System">
+                            <param id="0" name="Variable">libroActual</param>
+                            <param id="1" name="Value">&quot;Ayuno&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="650432741036322">
@@ -256,6 +272,10 @@
                         <action id="-3" name="Set position" sid="626593355347535" type="modal">
                             <param id="0" name="X">640</param>
                             <param id="1" name="Y">360</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="516983038962237" type="System">
+                            <param id="0" name="Variable">libroActual</param>
+                            <param id="1" name="Value">&quot;Confianza&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -304,11 +324,34 @@
                             <param id="0" name="X">640</param>
                             <param id="1" name="Y">360</param>
                         </action>
+                        <action id="-9" name="Set value" sid="711145605318505" type="System">
+                            <param id="0" name="Variable">libroActual</param>
+                            <param id="1" name="Value">&quot;Esperanza&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="889033061951034">
+                    <conditions>
+                        <condition id="14" name="On tap" sid="359410480861641" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="404812653603459" type="txtAviso">
+                            <param id="0" name="Text">&quot;No disponible&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="688072606633984" type="txtAviso">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="638705881189459" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="603493905150480" type="txtAviso">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="841647457285111" title="Comprar Libro - Cerrar Modal">
+        <event-group description="" sid="841647457285111" title="Eventos Touch Modal: Comprar Libro - Cerrar">
             <sub-events>
                 <event-block sid="808536290564685">
                     <conditions>
@@ -348,7 +391,69 @@
                         <action id="-2" name="Set Y" sid="624678510161712" type="estante1">
                             <param id="0" name="Y">450</param>
                         </action>
+                        <action id="5" name="Push" sid="674036823814188" type="arrayCompras">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">libroActual</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="952571756054272" title="Ver Lista de compras">
+            <sub-events>
+                <event-block sid="927906642274481">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="373004567967767" type="Touch">
+                            <param id="0" name="Object">btnCarrito</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="493859583958878" type="bgListaCompras">
+                            <param id="0" name="X">640</param>
+                            <param id="1" name="Y">300</param>
+                        </action>
+                        <action id="0" name="Set text" sid="556219994613961" type="txtLista">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <variable constant="0" name="i" sid="704570807677570" static="0" type="number">-1</variable>
+                        <variable constant="0" name="tmpItem" sid="687535526204729" static="0" type="text"></variable>
+                        <event-block sid="499704960587647">
+                            <conditions>
+                                <condition id="3" name="For each element" sid="973725408610439" type="arrayCompras">
+                                    <param id="0" name="Axes">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="761267267294522" type="System">
+                                    <param id="0" name="Variable">i</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="270611786354119" type="System">
+                                    <param id="0" name="Variable">tmpItem</param>
+                                    <param id="1" name="Value">arrayCompras.At(i)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="846829573054217">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="535327178442130" type="System">
+                                            <param id="0" name="Variable">tmpItem</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">&quot;0&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="841538831685919" type="txtLista">
+                                            <param id="0" name="Text">  txtLista.Text  &amp; newline &amp;  tmpItem</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>

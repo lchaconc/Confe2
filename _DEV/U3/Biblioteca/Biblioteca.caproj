@@ -8,10 +8,12 @@
     <author-website>http://</author-website>
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>3subbtu8xvytq</unique-id>
-    <saved-with-version>27500</saved-with-version>
+    <saved-with-version>27700</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
@@ -29,7 +31,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
-    <first-layout>main</first-layout>
+    <first-layout>pEstante1</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -42,7 +44,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">Firefox</prop>
+        <prop name="Preview browser">Chrome</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -98,6 +100,14 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="btnCarrito" sid="254110342246648">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="172699501709527" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Backgrounds">
             <object-type name="bgPAred" sid="525159421286163">
@@ -105,6 +115,14 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="746849888245492" speed="5">
                         <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\logan24\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\patronpared.jpg" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bgListaCompras" sid="620973762785518">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="864571337168354" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -165,16 +183,81 @@
                             </collision-poly>
                         </frame>
                     </animation>
+                    <animation framecount="1" loop="0" name="Entendimiento" pingpong="0" repeatcount="1" repeatto="0" sid="343603719683121" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501222" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Libros\EntendimientoAbiertoLibros.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="0.998355" y="0.997555" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Sabiduria" pingpong="0" repeatcount="1" repeatto="0" sid="865044057387954" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501222" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Libros\SabiduriaAbiertoLibros.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="0.998355" y="0.997555" />
+                                <point x="0.00164474" y="0.997555" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Fortaleza" pingpong="0" repeatcount="1" repeatto="0" sid="538556686128024" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501222" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Libros\FortalezaAbiertoLibros.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.998355" y="0.00244499" />
+                                <point x="0.998355" y="0.997555" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Temor" pingpong="0" repeatcount="1" repeatto="0" sid="368529520886245" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501222" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Libros\TemordeDiosAbiertoLibros.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.998355" y="0.00244499" />
+                                <point x="0.998355" y="0.997555" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Ciencia" pingpong="0" repeatcount="1" repeatto="0" sid="149346082770341" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501222" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Libros\CienciaAbiertoLibros.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.998355" y="0.00244499" />
+                                <point x="0.998355" y="0.997555" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder name="Texts" />
+        <object-folder name="Texts">
+            <object-type name="txtAviso" sid="146544136764075">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="txtLista" sid="381026251553967">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="873432462972000">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+        </object-folder>
         <object-folder name="System">
             <object-type name="Touch" sid="948977961617129">
                 <plugin id="Touch" />
             </object-type>
             <object-type name="Function" sid="558381821082318">
                 <plugin id="Function" />
+            </object-type>
+            <object-type global="1" name="arrayCompras" sid="724231287590774">
+                <plugin id="Arr" />
             </object-type>
         </object-folder>
         <object-folder name="Sensors" />
@@ -382,10 +465,12 @@
         </family>
     </families>
     <layout-folder>
-        <layout>main.xml</layout>
+        <layout>pEstante1.xml</layout>
+        <layout>splash.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>eMain.xml</event-sheet>
+        <event-sheet>eEstante1.xml</event-sheet>
+        <event-sheet>eSplash.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Function" uid="0" />
