@@ -1,0 +1,544 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>eEstante4</name>
+    <events>
+        <event-group description="" sid="537823185341297" title="Setup4">
+            <sub-events>
+                <event-block sid="713284811650040">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="250723097237277" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="164919500183406" type="btnCerrar">
+                            <param id="0" name="Pin to">modal</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="621932827296675" type="btnComprar">
+                            <param id="0" name="Pin to">modal</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="478655830450588" type="famEst4">
+                            <param id="0" name="Pin to">contEstantes</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="624608792807610" type="contEstantes">
+                            <param id="0" name="Animation">&quot;Est4&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="362805587608893" type="txtLista">
+                            <param id="0" name="Pin to">bgListaCompras</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="485811332901867" type="txtComprados">
+                            <param id="0" name="Text">librosComprados</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="691408667478596" title="Colisión Estante4">
+            <sub-events>
+                <event-block sid="410720111485275">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="865745088671425" type="contEstantes">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">1070</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="910989893645121" type="contEstantes">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="317164344323684" type="contEstantes">
+                            <param id="0" name="X">contEstantes.X - 20</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="173971761410132" type="contEstantes">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="593945401850942">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="448459217828659" type="contEstantes">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">230</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="759797317933220" type="contEstantes">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="802048730859023" type="contEstantes">
+                            <param id="0" name="X">contEstantes.X + 20</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="281585973306677" type="contEstantes">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="405681579014253" title="Seleccion de libros Estante4">
+            <sub-events>
+                <event-block sid="257279727442480">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="331040715507191" type="Touch">
+                            <param id="0" name="Object">lbrCiencia</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="465434866070276" type="btnCarrito">
+                            <param id="0" name="Instance variable">comprasAbierta</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="261053615005290" type="fxDestello">
+                            <param id="0" name="Object">lbrCiencia</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="830682934030310" type="fxDestello">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="374134287878016" type="lbrCiencia">
+                            <param id="0" name="Scale">1.2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="447796827974045" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="651062974881959" type="lbrCiencia">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="651296430460504" type="fxDestello">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="606277047639213" type="fxDestello">
+                            <param id="0" name="X">-600</param>
+                            <param id="1" name="Y">-600</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="889193088239708" type="contEstantes">
+                            <param id="0" name="Y">1173</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="713680471521548" type="System">
+                            <param id="0" name="Layer">&quot;shadows&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="880401607729953" type="modal">
+                            <param id="0" name="Animation">&quot;Ciencia&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="869078378445352" type="modal">
+                            <param id="0" name="X">640</param>
+                            <param id="1" name="Y">360</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="422238760157968" type="System">
+                            <param id="0" name="Variable">libroActual</param>
+                            <param id="1" name="Value">&quot;Ciencia&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="653518186184762">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="426388040754605" type="Touch">
+                            <param id="0" name="Object">lbrTemor</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="467245507099624" type="btnCarrito">
+                            <param id="0" name="Instance variable">comprasAbierta</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="936101424564638" type="fxDestello">
+                            <param id="0" name="Object">lbrTemor</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="758538737435651" type="fxDestello">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="750119256322964" type="lbrTemor">
+                            <param id="0" name="Scale">1.2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="978396934856267" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="792465465756962" type="lbrTemor">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="927024815717226" type="fxDestello">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="179760012900664" type="fxDestello">
+                            <param id="0" name="X">-600</param>
+                            <param id="1" name="Y">-600</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="320358174680880" type="contEstantes">
+                            <param id="0" name="Y">1173</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="287003237595085" type="System">
+                            <param id="0" name="Layer">&quot;shadows&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="119278162653570" type="modal">
+                            <param id="0" name="Animation">&quot;Temor&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="843411465999883" type="modal">
+                            <param id="0" name="X">640</param>
+                            <param id="1" name="Y">360</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="402731121374756" type="System">
+                            <param id="0" name="Variable">libroActual</param>
+                            <param id="1" name="Value">&quot;Temor&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="588753491362159">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="647137938839616" type="Touch">
+                            <param id="0" name="Object">lbrFortaleza</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="660263233526919" type="btnCarrito">
+                            <param id="0" name="Instance variable">comprasAbierta</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="217666337175371" type="fxDestello">
+                            <param id="0" name="Object">lbrFortaleza</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="497077738337035" type="fxDestello">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="331212913735855" type="lbrFortaleza">
+                            <param id="0" name="Scale">1.2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="546869894784499" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="396919388627056" type="lbrFortaleza">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="119952411007987" type="fxDestello">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="396913452655763" type="fxDestello">
+                            <param id="0" name="X">-600</param>
+                            <param id="1" name="Y">-600</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="542667981964850" type="contEstantes">
+                            <param id="0" name="Y">1173</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="284069810394618" type="System">
+                            <param id="0" name="Layer">&quot;shadows&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="882040588699092" type="modal">
+                            <param id="0" name="Animation">&quot;Fortaleza&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="255721761437797" type="modal">
+                            <param id="0" name="X">640</param>
+                            <param id="1" name="Y">360</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="785329489812859" type="System">
+                            <param id="0" name="Variable">libroActual</param>
+                            <param id="1" name="Value">&quot;Fortaleza&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="300661989847284">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="399369750614589" type="Touch">
+                            <param id="0" name="Object">biblia8</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="692886793781696" type="btnCarrito">
+                            <param id="0" name="Instance variable">comprasAbierta</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="462400494750765" type="fxDestello">
+                            <param id="0" name="Object">biblia8</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="854383638283602" type="fxDestello">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="997219926152156" type="biblia8">
+                            <param id="0" name="Scale">1.2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="367464423953924" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="945760260164156" type="biblia8">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="346115440644083" type="fxDestello">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="181981045686840" type="fxDestello">
+                            <param id="0" name="X">-600</param>
+                            <param id="1" name="Y">-600</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="468167864784291" type="contEstantes">
+                            <param id="0" name="Y">1173</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="320133324648475" type="System">
+                            <param id="0" name="Layer">&quot;shadows&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="895413122408093" type="modal">
+                            <param id="0" name="Animation">&quot;Biblia8&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="821342109027156" type="modal">
+                            <param id="0" name="X">640</param>
+                            <param id="1" name="Y">360</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="500866477259942" type="System">
+                            <param id="0" name="Variable">libroActual</param>
+                            <param id="1" name="Value">&quot;Fe&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="935581019547925">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="147830705753629" type="Touch">
+                            <param id="0" name="Object">biblia9</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="465361976728715" type="btnCarrito">
+                            <param id="0" name="Instance variable">comprasAbierta</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="844912384702883" type="fxDestello">
+                            <param id="0" name="Object">biblia9</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="945721913452701" type="fxDestello">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="379587526446471" type="biblia9">
+                            <param id="0" name="Scale">1.2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="883590027776040" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="518092974441596" type="biblia9">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="130576955769410" type="fxDestello">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="398287376123293" type="fxDestello">
+                            <param id="0" name="X">-600</param>
+                            <param id="1" name="Y">-600</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="892770334997647" type="contEstantes">
+                            <param id="0" name="Y">1173</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="490896642113589" type="System">
+                            <param id="0" name="Layer">&quot;shadows&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="611843855601423" type="modal">
+                            <param id="0" name="Animation">&quot;Biblia9&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="298452974791729" type="modal">
+                            <param id="0" name="X">640</param>
+                            <param id="1" name="Y">360</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="956405727511266" type="System">
+                            <param id="0" name="Variable">libroActual</param>
+                            <param id="1" name="Value">&quot;Gozo&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="379242563989616">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="198361228459853" type="Touch">
+                            <param id="0" name="Object">contEstantes</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="973348051247119">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="895197478976004" type="btnCarrito">
+                                    <param id="0" name="Instance variable">comprasAbierta</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="188974612966602" type="txtAviso">
+                                    <param id="0" name="Text">&quot;No disponible&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="759838509535954" type="txtAviso">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="214791063302421" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="134631920058445" type="txtAviso">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="360476590316596" title="Eventos Touch Modal: Comprar Libro - Cerrar4">
+            <sub-events>
+                <event-block sid="974066656311015">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="869937001216802" type="Touch">
+                            <param id="0" name="Object">btnCerrar</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="786987232282588" type="modal">
+                            <param id="0" name="X">-600</param>
+                            <param id="1" name="Y">-600</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="686625507967201" type="System">
+                            <param id="0" name="Layer">&quot;shadows&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="544755826268971" type="contEstantes">
+                            <param id="0" name="Y">450</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="184792490870683" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="781804721982136" type="btnCarrito">
+                            <param id="0" name="Instance variable">comprasAbierta</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="929562805811900">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="620586359931117" type="Touch">
+                            <param id="0" name="Object">btnComprar</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="209001551954992" type="modal">
+                            <param id="0" name="X">-600</param>
+                            <param id="1" name="Y">-600</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="813827201787120" type="System">
+                            <param id="0" name="Layer">&quot;shadows&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="114199119630227" type="contEstantes">
+                            <param id="0" name="Y">450</param>
+                        </action>
+                        <action id="5" name="Push" sid="286424215922019" type="arrayCompras">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">libroActual</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="646637855072654" type="System">
+                            <param id="0" name="Variable">librosComprados</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="902397534041372" type="txtComprados">
+                            <param id="0" name="Text">librosComprados</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="463972654681771" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="959721143957100" type="btnCarrito">
+                            <param id="0" name="Instance variable">comprasAbierta</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="590236049242061" title="Ver Lista de compras4">
+            <sub-events>
+                <event-block sid="191242736974693">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="605492421197518" type="Touch">
+                            <param id="0" name="Object">btnCarrito</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="784475632296444" type="bgListaCompras">
+                            <param id="0" name="X">640</param>
+                            <param id="1" name="Y">340</param>
+                        </action>
+                        <action id="0" name="Set text" sid="879695990403577" type="txtLista">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="893792259948690" type="btnCarrito">
+                            <param id="0" name="Instance variable">comprasAbierta</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <variable constant="0" name="i" sid="827034185459001" static="0" type="number">-1</variable>
+                        <variable constant="0" name="tmpItem" sid="207089276917588" static="0" type="text"></variable>
+                        <event-block sid="746115631568455">
+                            <conditions>
+                                <condition id="3" name="For each element" sid="747055653658600" type="arrayCompras">
+                                    <param id="0" name="Axes">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="280798256980565" type="System">
+                                    <param id="0" name="Variable">i</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="554572610550066" type="System">
+                                    <param id="0" name="Variable">tmpItem</param>
+                                    <param id="1" name="Value">arrayCompras.At(i)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="743415585363376">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="896716799589325" type="System">
+                                            <param id="0" name="Variable">tmpItem</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">&quot;0&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="636254944133112" type="txtLista">
+                                            <param id="0" name="Text">  txtLista.Text  &amp; newline &amp;  tmpItem</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="283814654155946">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="576871875954941" type="Touch">
+                            <param id="0" name="Object">bgListaCompras</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="442241948215775" type="bgListaCompras">
+                            <param id="0" name="X">-600</param>
+                            <param id="1" name="Y">-600</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="686694392309630" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="631703686304349" type="btnCarrito">
+                            <param id="0" name="Instance variable">comprasAbierta</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

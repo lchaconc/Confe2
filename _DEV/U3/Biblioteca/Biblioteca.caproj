@@ -119,6 +119,14 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="btnEstante4" sid="361409933417684">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="945858803589055" speed="5">
+                        <frame duration="1" hotspotX="0.507692" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\btn4biblioteca.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Backgrounds">
             <object-type name="bgPAred" sid="525159421286163">
@@ -504,6 +512,22 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="biblia8" sid="955971969770529">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="231921256586643" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Libros\Biblia8Libros.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="biblia9" sid="802369593158128">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="232107842800081" speed="5">
+                        <frame duration="1" hotspotX="0.512195" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Libros\Biblia9Libros.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Estantes">
             <object-type name="contEstantes" sid="494133510543495">
@@ -578,11 +602,26 @@
                 </behavior-type>
             </behaviors>
         </family>
+        <family name="famEst4" plugin-id="Sprite" sid="391801991024441">
+            <members>
+                <member>biblia8</member>
+                <member>biblia9</member>
+                <member>lbrCiencia</member>
+                <member>lbrFortaleza</member>
+                <member>lbrTemor</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Pin" sid="750417434561410">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </family>
     </families>
     <layout-folder>
         <layout>pEstante1.xml</layout>
         <layout>pEstante2.xml</layout>
         <layout>pEstante3.xml</layout>
+        <layout>pEstante4.xml</layout>
         <layout>splash.xml</layout>
     </layout-folder>
     <event-folder>
@@ -590,6 +629,7 @@
         <event-sheet>eSplash.xml</event-sheet>
         <event-sheet>eEstante2.xml</event-sheet>
         <event-sheet>eEstante3.xml</event-sheet>
+        <event-sheet>eEstante4.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Function" uid="0" />
