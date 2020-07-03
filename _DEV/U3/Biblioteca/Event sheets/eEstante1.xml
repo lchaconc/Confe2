@@ -546,12 +546,48 @@
                 <event-block sid="964530355559000">
                     <conditions>
                         <condition id="3" name="On touched object" sid="811885398652031" type="Touch">
-                            <param id="0" name="Object">btnEstante2</param>
+                            <param id="0" name="Object">btnEstante1</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-2" name="Go to layout" sid="550616379779442" type="System">
+                            <param id="0" name="Layout">pEstante1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="690777608971814">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="686022895353256" type="Touch">
+                            <param id="0" name="Object">btnEstante2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="160445099290941" type="System">
                             <param id="0" name="Layout">pEstante2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="969043747160786">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="812086760137716" type="Touch">
+                            <param id="0" name="Object">btnEstante3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="291104021779558" type="System">
+                            <param id="0" name="Layout">pEstante3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="948716286877765">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="339250687290469" type="Touch">
+                            <param id="0" name="Object">btnEstante4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="190430012380153" type="System">
+                            <param id="0" name="Layout">pEstante4</param>
                         </action>
                     </actions>
                 </event-block>

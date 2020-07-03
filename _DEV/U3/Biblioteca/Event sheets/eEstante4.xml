@@ -540,5 +540,57 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="746888273211477" title="Cargar Estantes4">
+            <sub-events>
+                <event-block sid="180784282332491">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="565272557387509" type="Touch">
+                            <param id="0" name="Object">btnEstante1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="469472202350722" type="System">
+                            <param id="0" name="Layout">pEstante1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="987608904968021">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="586203140318655" type="Touch">
+                            <param id="0" name="Object">btnEstante2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="490360357835517" type="System">
+                            <param id="0" name="Layout">pEstante2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="115187793135586">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="882775590781639" type="Touch">
+                            <param id="0" name="Object">btnEstante3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="170841074571476" type="System">
+                            <param id="0" name="Layout">pEstante3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="917069259971469">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="508795011357731" type="Touch">
+                            <param id="0" name="Object">btnEstante4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="738559623529772" type="System">
+                            <param id="0" name="Layout">pEstante4</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
