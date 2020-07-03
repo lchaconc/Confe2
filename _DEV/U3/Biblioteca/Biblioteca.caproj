@@ -429,7 +429,7 @@
             </object-type>
         </object-folder>
         <object-folder name="Estantes">
-            <object-type name="estante1" sid="494133510543495">
+            <object-type name="contEstantes" sid="494133510543495">
                 <plugin id="Sprite" />
                 <behaviors>
                     <behavior-type name="DragDrop" sid="263921746142034">
@@ -473,6 +473,18 @@
             </members>
             <behaviors>
                 <behavior-type name="Pin" sid="270980743582677">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="famEst2" plugin-id="Sprite" sid="389698640439945">
+            <members>
+                <member>biblia4</member>
+                <member>biblia5</member>
+                <member>lbrSabiduria</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Pin" sid="707628714138149">
                     <behavior id="Pin" />
                 </behavior-type>
             </behaviors>

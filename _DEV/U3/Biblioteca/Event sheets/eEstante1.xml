@@ -20,7 +20,7 @@
                             <param id="1" name="Mode">0</param>
                         </action>
                         <action behavior="Pin" id="0" name="Pin to object" sid="673194069467598" type="famEst1">
-                            <param id="0" name="Pin to">estante1</param>
+                            <param id="0" name="Pin to">contEstantes</param>
                             <param id="1" name="Mode">0</param>
                         </action>
                         <action behavior="Pin" id="0" name="Pin to object" sid="989794378083469" type="txtLista">
@@ -30,6 +30,10 @@
                         <action id="0" name="Set text" sid="668328702331516" type="txtComprados">
                             <param id="0" name="Text">librosComprados</param>
                         </action>
+                        <action id="4" name="Set animation" sid="509315075561578" type="contEstantes">
+                            <param id="0" name="Animation">&quot;Est1&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -38,38 +42,38 @@
             <sub-events>
                 <event-block sid="783570134640933">
                     <conditions>
-                        <condition id="-1" name="Compare X" sid="648852925209675" type="estante1">
+                        <condition id="-1" name="Compare X" sid="648852925209675" type="contEstantes">
                             <param id="0" name="Comparison">4</param>
                             <param id="1" name="X co-ordinate">1070</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="DragDrop" id="0" name="Set enabled" sid="425300476552777" type="estante1">
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="425300476552777" type="contEstantes">
                             <param id="0" name="State">0</param>
                         </action>
-                        <action id="-1" name="Set X" sid="649354994261241" type="estante1">
-                            <param id="0" name="X">estante1.X - 20</param>
+                        <action id="-1" name="Set X" sid="649354994261241" type="contEstantes">
+                            <param id="0" name="X">contEstantes.X - 20</param>
                         </action>
-                        <action behavior="DragDrop" id="0" name="Set enabled" sid="944716267546224" type="estante1">
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="944716267546224" type="contEstantes">
                             <param id="0" name="State">1</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="369727706837122">
                     <conditions>
-                        <condition id="-1" name="Compare X" sid="767751790826615" type="estante1">
+                        <condition id="-1" name="Compare X" sid="767751790826615" type="contEstantes">
                             <param id="0" name="Comparison">2</param>
                             <param id="1" name="X co-ordinate">230</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="DragDrop" id="0" name="Set enabled" sid="222503111792548" type="estante1">
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="222503111792548" type="contEstantes">
                             <param id="0" name="State">0</param>
                         </action>
-                        <action id="-1" name="Set X" sid="402658870898010" type="estante1">
-                            <param id="0" name="X">estante1.X + 20</param>
+                        <action id="-1" name="Set X" sid="402658870898010" type="contEstantes">
+                            <param id="0" name="X">contEstantes.X + 20</param>
                         </action>
-                        <action behavior="DragDrop" id="0" name="Set enabled" sid="916568455809469" type="estante1">
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="916568455809469" type="contEstantes">
                             <param id="0" name="State">1</param>
                         </action>
                     </actions>
@@ -108,7 +112,7 @@
                             <param id="0" name="X">-600</param>
                             <param id="1" name="Y">-600</param>
                         </action>
-                        <action id="-2" name="Set Y" sid="681923355677800" type="estante1">
+                        <action id="-2" name="Set Y" sid="681923355677800" type="contEstantes">
                             <param id="0" name="Y">1173</param>
                         </action>
                         <action id="-4" name="Set layer visible" sid="326256208150094" type="System">
@@ -159,7 +163,7 @@
                             <param id="0" name="X">-600</param>
                             <param id="1" name="Y">-600</param>
                         </action>
-                        <action id="-2" name="Set Y" sid="861993910147311" type="estante1">
+                        <action id="-2" name="Set Y" sid="861993910147311" type="contEstantes">
                             <param id="0" name="Y">1173</param>
                         </action>
                         <action id="-4" name="Set layer visible" sid="978992545864316" type="System">
@@ -210,7 +214,7 @@
                             <param id="0" name="X">-600</param>
                             <param id="1" name="Y">-600</param>
                         </action>
-                        <action id="-2" name="Set Y" sid="155109706829051" type="estante1">
+                        <action id="-2" name="Set Y" sid="155109706829051" type="contEstantes">
                             <param id="0" name="Y">1173</param>
                         </action>
                         <action id="-4" name="Set layer visible" sid="248247978914732" type="System">
@@ -261,7 +265,7 @@
                             <param id="0" name="X">-600</param>
                             <param id="1" name="Y">-600</param>
                         </action>
-                        <action id="-2" name="Set Y" sid="943753285591116" type="estante1">
+                        <action id="-2" name="Set Y" sid="943753285591116" type="contEstantes">
                             <param id="0" name="Y">1173</param>
                         </action>
                         <action id="-4" name="Set layer visible" sid="314410437352975" type="System">
@@ -312,7 +316,7 @@
                             <param id="0" name="X">-600</param>
                             <param id="1" name="Y">-600</param>
                         </action>
-                        <action id="-2" name="Set Y" sid="144452717951488" type="estante1">
+                        <action id="-2" name="Set Y" sid="144452717951488" type="contEstantes">
                             <param id="0" name="Y">1173</param>
                         </action>
                         <action id="-4" name="Set layer visible" sid="731934762450516" type="System">
@@ -336,7 +340,7 @@
                 <event-block sid="889033061951034">
                     <conditions>
                         <condition id="17" name="On tap object" sid="359410480861641" type="Touch">
-                            <param id="0" name="Object">estante1</param>
+                            <param id="0" name="Object">contEstantes</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -383,7 +387,7 @@
                             <param id="0" name="Layer">&quot;shadows&quot;</param>
                             <param id="1" name="Visibility">0</param>
                         </action>
-                        <action id="-2" name="Set Y" sid="375221514012483" type="estante1">
+                        <action id="-2" name="Set Y" sid="375221514012483" type="contEstantes">
                             <param id="0" name="Y">450</param>
                         </action>
                         <action id="-16" name="Wait" sid="864913626469689" type="System">
@@ -410,7 +414,7 @@
                             <param id="0" name="Layer">&quot;shadows&quot;</param>
                             <param id="1" name="Visibility">0</param>
                         </action>
-                        <action id="-2" name="Set Y" sid="624678510161712" type="estante1">
+                        <action id="-2" name="Set Y" sid="624678510161712" type="contEstantes">
                             <param id="0" name="Y">450</param>
                         </action>
                         <action id="5" name="Push" sid="674036823814188" type="arrayCompras">
