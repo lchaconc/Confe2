@@ -561,6 +561,74 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="frutos1" sid="606613831834707">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="931447105344748" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Frutos-Estantes\mueblefrutas1frutosES.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="frutos2" sid="533262412000299">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="411787077665980" speed="5">
+                        <frame duration="1" hotspotX="0.500655" hotspotY="0.500882" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Frutos-Estantes\mueblefrutas2frutosES.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="frutos3" sid="111803822822505">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="681702063010079" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Frutos-Estantes\mueblefrutas3frutosES.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="frutos4" sid="585266988318939">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="599826474752924" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500885" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Frutos-Estantes\mueblefrutas4frutosES.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Frutos">
+            <object-type name="fBanano" sid="909416200277712">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="866517599322983" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Frutos\alegria_bananofrutosES.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="fUva" sid="120974341060970">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="359756255548662" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Frutos\Amor_uvafrutosES.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="fGuayaba" sid="872960133884766">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="976972329296069" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Frutos\benignidad_guayabafrutosES.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Rotulos">
+            <object-type name="rtBananoAlegria" sid="930478200578457">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="214312995391596" speed="5">
+                        <frame duration="1" hotspotX="0.503937" hotspotY="0.504425" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Frutos\alegriafrutosES.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
     </object-folder>
     <families>
@@ -623,6 +691,8 @@
         <layout>pEstante3.xml</layout>
         <layout>pEstante4.xml</layout>
         <layout>splash.xml</layout>
+        <layout>pFrutos1.xml</layout>
+        <layout>pFrutos2.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>eEstante1.xml</event-sheet>
@@ -630,6 +700,8 @@
         <event-sheet>eEstante2.xml</event-sheet>
         <event-sheet>eEstante3.xml</event-sheet>
         <event-sheet>eEstante4.xml</event-sheet>
+        <event-sheet>eFrutos1.xml</event-sheet>
+        <event-sheet>eFrutos2.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Function" uid="0" />

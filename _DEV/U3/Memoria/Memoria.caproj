@@ -46,7 +46,24 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
-        <object-folder name="Buttons" />
+        <object-folder name="Buttons">
+            <object-type name="btnAdelantar" sid="345922522435008">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="220394393121099" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btnAtras" sid="206271880783441">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="207159488442287" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-folder name="Backgrounds">
             <object-type name="bgMain" sid="553646057349261">
                 <plugin id="Sprite" />
@@ -83,7 +100,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="564580766622587" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\memoriaSimbolos-frutos-dones-05.jpg" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -665,6 +682,36 @@
             </object-type>
         </object-folder>
         <object-folder name="Sensors" />
+        <object-folder name="TextosCierre">
+            <object-type name="visorEs" sid="670994400831550">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="cont" sid="838157315085597" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="18" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="282189447180613" speed="0">
+                        <frame duration="1" hotspotX="0.502488" hotspotY="0.618297" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\txts cierre\Asset 34.png" />
+                        <frame duration="1" hotspotX="0.501397" hotspotY="0.628205" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\txts cierre\Asset 35.png" />
+                        <frame duration="1" hotspotX="0.500581" hotspotY="0.563218" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\txts cierre\Asset 36.png" />
+                        <frame duration="1" hotspotX="0.499463" hotspotY="0.51671" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\txts cierre\Asset 37.png" />
+                        <frame duration="1" hotspotX="0.500546" hotspotY="0.569405" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\txts cierre\Asset 38.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.614679" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\txts cierre\Asset 39.png" />
+                        <frame duration="1" hotspotX="0.502128" hotspotY="0.561111" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\txts cierre\Asset 40.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.561111" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\txts cierre\Asset 41.png" />
+                        <frame duration="1" hotspotX="0.501493" hotspotY="0.623457" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\txts cierre\Asset 42.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.617284" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\txts cierre\Asset 43.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.56338" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\txts cierre\Asset 44.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.56338" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\txts cierre\Asset 45.png" />
+                        <frame duration="1" hotspotX="0.502726" hotspotY="0.533981" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\txts cierre\Asset 46.png" />
+                        <frame duration="1" hotspotX="0.499463" hotspotY="0.522667" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\txts cierre\Asset 47.png" />
+                        <frame duration="1" hotspotX="0.502691" hotspotY="0.578125" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\txts cierre\Asset 48.png" />
+                        <frame duration="1" hotspotX="0.499471" hotspotY="0.536842" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\txts cierre\Asset 49.png" />
+                        <frame duration="1" hotspotX="0.500557" hotspotY="0.568116" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\txts cierre\Asset 50.png" />
+                        <frame duration="1" hotspotX="0.498876" hotspotY="0.56686" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\txts cierre\Asset 51.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
     </object-folder>
     <families>
         <family name="txtSimbolos" plugin-id="Text" sid="294670394278943">
@@ -691,13 +738,15 @@
         <layout>pFrutos.xml</layout>
         <layout>Splash.xml</layout>
         <layout>pFin.xml</layout>
+        <layout>pFin2.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>eSimbolos.xml</event-sheet>
         <event-sheet>eSplash.xml</event-sheet>
         <event-sheet>eDones.xml</event-sheet>
         <event-sheet>eFrutos.xml</event-sheet>
-        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>eFin.xml</event-sheet>
+        <event-sheet>eFin2.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Function" uid="0" />

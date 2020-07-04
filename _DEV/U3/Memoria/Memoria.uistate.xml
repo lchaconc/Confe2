@@ -10,13 +10,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="1">Splash</layout>
-        <layout order="2">pFrutos</layout>
-        <layout order="6">pFin</layout>
-        <event-sheet order="0">eSplash</event-sheet>
-        <event-sheet order="3">eFrutos</event-sheet>
-        <event-sheet order="4">eSimbolos</event-sheet>
-        <event-sheet active="1" order="5">eDones</event-sheet>
+        <layout order="1">pFin</layout>
+        <layout order="2">pFin2</layout>
+        <layout order="4">pFrutos</layout>
+        <event-sheet active="1" order="3">eFin2</event-sheet>
+        <event-sheet order="5">eFrutos</event-sheet>
+        <event-sheet order="6">eFin</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -30,18 +29,21 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
         <folder expanded="1" path="object-folder/Buttons/" />
-        <folder expanded="1" path="object-folder/Backgrounds/" />
+        <folder expanded="0" path="object-folder/Backgrounds/" />
         <folder expanded="0" path="object-folder/Sprites/" />
         <folder expanded="0" path="object-folder/Texts/" />
         <folder expanded="0" path="object-folder/Controls/" />
-        <folder expanded="1" path="object-folder/System/" />
+        <folder expanded="0" path="object-folder/System/" />
         <folder expanded="1" path="object-folder/Sensors/" />
+        <folder expanded="1" path="object-folder/TextosCierre/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/btnAdelantar/" />
+        <folder expanded="1" path="animation-folder/btnAtras/" />
         <folder expanded="1" path="animation-folder/bgMain/" />
         <folder expanded="1" path="animation-folder/bgSpalsh/" />
         <folder expanded="1" path="animation-folder/bgFin/" />
@@ -63,5 +65,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/marca12/" />
         <folder expanded="1" path="animation-folder/btnReiniciar/" />
         <folder expanded="1" path="animation-folder/btnSiguiente/" />
+        <folder expanded="1" path="animation-folder/visorEs/" />
     </folders-expanded>
 </c2uistate>
