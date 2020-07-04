@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>eFin2</name>
+    <events>
+        <event-group description="" sid="348391330556178" title="Evento tap botones">
+            <sub-events>
+                <event-block sid="630109428006142">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="549363819258091" type="Touch">
+                            <param id="0" name="Object">btnAdelante</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="482475151083022">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="146566601479314" type="visor">
+                                    <param id="0" name="Instance variable">cont</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="712152522056185" type="visor">
+                                    <param id="0" name="Instance variable">cont</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="774190965741523" type="visor">
+                                    <param id="0" name="Frame number">visor.cont</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="337319962238023">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="772286686808823" type="Touch">
+                            <param id="0" name="Object">btnAtras</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="641445224685309">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="562634467611948" type="visor">
+                                    <param id="0" name="Instance variable">cont</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="428273502141901" type="visor">
+                                    <param id="0" name="Instance variable">cont</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="722688887550003" type="visor">
+                                    <param id="0" name="Frame number">visor.cont</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

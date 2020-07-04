@@ -8,7 +8,7 @@
     <author-website>http://</author-website>
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>2vwskc83xvhli</unique-id>
-    <saved-with-version>27500</saved-with-version>
+    <saved-with-version>27700</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
@@ -214,17 +214,95 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="bgFin1" sid="746756072781989">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="704241299496567" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Simbolos ES\txtfinal.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btnAdelante" sid="616038806695961">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="346540095153896" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btnAtras" sid="956616675187836">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="458387008568186" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="visor" sid="436112438347810">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="cont" sid="488681500661210" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="6" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="553964167506240" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Simbolos ES\aceite.png" />
+                    <frame duration="1" hotspotX="0.501205" hotspotY="0.501229" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Simbolos ES\agua.png" />
+                    <frame duration="1" hotspotX="0.501695" hotspotY="0.501241" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Simbolos ES\fuego.png" />
+                    <frame duration="1" hotspotX="0.500596" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Simbolos ES\nube.png" />
+                    <frame duration="1" hotspotX="0.500938" hotspotY="0.50116" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Simbolos ES\paloma.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Simbolos ES\sello.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="mdlFinJuego" sid="571316872649260">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="505680586221916" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Desktop\fin_juego.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btnReniciar" sid="736143975755416">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="385841361332360">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="391794986363065" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btnFinalizar" sid="896692417592689">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="804078802088275">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="118506213822959" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
         <layout>Principal.xml</layout>
         <layout>Splash.xml</layout>
         <layout>Menu.xml</layout>
+        <layout>pFin1.xml</layout>
+        <layout>pFin2.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>ePrincipal.xml</event-sheet>
         <event-sheet>eSplash.xml</event-sheet>
         <event-sheet>eMenu.xml</event-sheet>
+        <event-sheet>eFin1.xml</event-sheet>
+        <event-sheet>eFin2.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="7">

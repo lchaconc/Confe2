@@ -4,7 +4,7 @@
     <name>ePrincipal</name>
     <events>
         <variable constant="0" name="itemes" sid="898841744535979" static="0" type="number">0</variable>
-        <variable constant="0" name="tiempo" sid="189411378881028" static="0" type="number">60</variable>
+        <variable constant="0" name="tiempo" sid="189411378881028" static="0" type="number">20</variable>
         <variable comment="Limite de cantidad de animaciones cargadas" constant="0" name="limite" sid="742806680819187" static="0" type="number">0</variable>
         <variable constant="0" name="activo" sid="641020428400177" static="0" type="number">0</variable>
         <variable constant="0" name="aux" sid="253875549787268" static="0" type="number">0</variable>
@@ -84,6 +84,14 @@
                             <param id="0" name="Pin to">sensorDerecha</param>
                             <param id="1" name="Mode">0</param>
                         </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="462351575217979" type="btnReniciar">
+                            <param id="0" name="Pin to">mdlFinJuego</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="391972425787421" type="btnFinalizar">
+                            <param id="0" name="Pin to">mdlFinJuego</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
                         <action behavior="Physics" id="27" name="Set enabled" sid="140894043706941" type="ficha">
                             <param id="0" name="Mode">1</param>
                         </action>
@@ -144,6 +152,35 @@
                             <param id="0" name="Text">tiempo</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="138648245549152">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="394775643933679" type="System">
+                                    <param id="0" name="Variable">tiempo</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="588628084096737" type="System">
+                                    <param id="0" name="Layer">&quot;Shadow&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="736562549108260" type="mdlFinJuego">
+                                    <param id="0" name="X">640</param>
+                                    <param id="1" name="Y">360</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="995267395337097" type="txtItemes">
+                                    <param id="0" name="X">480</param>
+                                    <param id="1" name="Y">336</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="485062319486818" type="txtItemes">
+                                    <param id="0" name="Layer">&quot;Modal&quot;</param>
+                                </action>
+                                <action id="-24" name="Move to top" sid="753097824962185" type="txtItemes" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -368,6 +405,40 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="578074852313992" title="Eventos touch botones (reiniciar - fin juego)">
+            <sub-events>
+                <event-block sid="960438850201641">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="167632032577507" type="Touch">
+                            <param id="0" name="Object">btnReniciar</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="615962763960563" type="System">
+                            <param id="0" name="Variable">tiempo</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="380490676654775" type="System">
+                            <param id="0" name="Layer">&quot;Shadow&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-26" name="Restart layout" sid="319421607384813" type="System" />
+                    </actions>
+                </event-block>
+                <event-block sid="954674700382894">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="800387099284878" type="Touch">
+                            <param id="0" name="Object">btnFinalizar</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="445053078121256" type="System">
+                            <param id="0" name="Layout">pFin1</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
