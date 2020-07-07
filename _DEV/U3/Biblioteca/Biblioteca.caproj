@@ -127,6 +127,34 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="canasta" sid="835538605907810">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="665209772704034" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\canasta.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="cantFrutos" sid="879035630013117">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="13" loop="0" name="Numeros" pingpong="0" repeatcount="1" repeatto="0" sid="767238741110464" speed="0">
+                        <frame duration="1" hotspotX="0.507692" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\btn1biblioteca.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\btn2biblioteca.png" />
+                        <frame duration="1" hotspotX="0.507692" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\btn3biblioteca.png" />
+                        <frame duration="1" hotspotX="0.507692" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\btn4biblioteca.png" />
+                        <frame duration="1" hotspotX="0.507692" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\btn5biblioteca.png" />
+                        <frame duration="1" hotspotX="0.507692" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\btn6biblioteca.png" />
+                        <frame duration="1" hotspotX="0.507692" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\btn7biblioteca.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\btn8.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\btn9.png" />
+                        <frame duration="1" hotspotX="0.507692" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\btn10.png" />
+                        <frame duration="1" hotspotX="0.507692" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\btn11.png" />
+                        <frame duration="1" hotspotX="0.507692" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\btn12.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Backgrounds">
             <object-type name="bgPAred" sid="525159421286163">
@@ -597,6 +625,11 @@
         <object-folder name="Frutos">
             <object-type name="fBanano" sid="909416200277712">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="DragDrop" sid="362137705375164">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="866517599322983" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Frutos\alegria_bananofrutosES.png" />
@@ -605,6 +638,11 @@
             </object-type>
             <object-type name="fUva" sid="120974341060970">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="DragDrop" sid="693007164796691">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="359756255548662" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Frutos\Amor_uvafrutosES.png" />
@@ -613,19 +651,167 @@
             </object-type>
             <object-type name="fGuayaba" sid="872960133884766">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="DragDrop" sid="880571704988034">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="976972329296069" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Frutos\benignidad_guayabafrutosES.png" />
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="fSandia" sid="901835126672650">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="DragDrop" sid="194188957199311">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="523529885907772" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Frutos\bondad_sandiafrutosES.png">
+                            <collision-poly>
+                                <point x="0.00625" y="0.00961538" />
+                                <point x="0.99375" y="0.00961538" />
+                                <point x="1" y="1" />
+                                <point x="0.5" y="0.971154" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="fLimon" sid="720876153197061">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="DragDrop" sid="796531572695127">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="788457937544498" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Frutos\longanimidad_limonfrutosES.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="fManzana" sid="918389944459341">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="DragDrop" sid="345962995822171">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="220443219059967" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Frutos\manzana_pazfrutosES.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="fMelocoton" sid="552047116559952">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="DragDrop" sid="927422257562355">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="431487099299122" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Frutos\melocoton_templanzafrutosES.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Rotulos">
-            <object-type name="rtBananoAlegria" sid="930478200578457">
+            <object-type name="rAlegria" sid="930478200578457">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="812864896824767">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="214312995391596" speed="5">
+                    <animation framecount="1" loop="0" name="Alegria" pingpong="0" repeatcount="1" repeatto="0" sid="214312995391596" speed="5">
                         <frame duration="1" hotspotX="0.503937" hotspotY="0.504425" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Frutos\alegriafrutosES.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="rAmor" sid="774699954681862">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="712561891315452">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Amor" pingpong="0" repeatcount="1" repeatto="0" sid="227993156452648" speed="5">
+                        <frame duration="1" hotspotX="0.503937" hotspotY="0.504425" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Frutos\amorfrutosES.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="rBondad" sid="264265319308143">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="217659217161861">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="639639479695134" speed="5">
+                        <frame duration="1" hotspotX="0.503937" hotspotY="0.504425" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Frutos\bondadfrutosES.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="rBeni" sid="359313717963335">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="877310592050774">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="844313348897397" speed="5">
+                        <frame duration="1" hotspotX="0.503937" hotspotY="0.504425" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Frutos\benignidadfrutosES.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="rCastidad" sid="188212547519426">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="175698276324835">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="394690251459179" speed="5">
+                        <frame duration="1" hotspotX="0.503937" hotspotY="0.504425" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Frutos\castidadfrutosES.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="rFidelidad" sid="846833997868857">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="235860583935228">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="840846943485449" speed="5">
+                        <frame duration="1" hotspotX="0.503937" hotspotY="0.504425" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Frutos\fidelidadfrutosES.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="rLonga" sid="336904831098314">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="638486810964902">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="939671414872835" speed="5">
+                        <frame duration="1" hotspotX="0.503937" hotspotY="0.504425" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Frutos\longanimidadfrutosES.png" />
                     </animation>
                 </animation-folder>
             </object-type>
