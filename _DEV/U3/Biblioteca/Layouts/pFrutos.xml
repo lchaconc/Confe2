@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>pFrutos2</name>
+    <name>pFrutos</name>
     <sid>156947147474634</sid>
-    <event-sheet>eFrutos2</event-sheet>
+    <event-sheet>eFrutos</event-sheet>
     <size>
         <width>1280</width>
         <height>720</height>
@@ -73,7 +73,7 @@
                 <instance type="frutos3" uid="125">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
+                        <initial-animation>default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -117,7 +117,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Main" sid="388897517750606">
+        <layer name="Frutos" sid="388897517750606">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -562,6 +562,61 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="fModestia" uid="158">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-78</x>
+                        <y>-193</y>
+                        <z>0</z>
+                        <width>127</width>
+                        <height>113</height>
+                        <depth>0</depth>
+                        <hotspotX>0.503937006</hotspotX>
+                        <hotspotY>0.504424751</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="fPina" uid="157">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="DragDrop">
+                            <properties>
+                                <axes>Both</axes>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-75</x>
+                        <y>-116</y>
+                        <z>0</z>
+                        <width>160</width>
+                        <height>108</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -627,8 +682,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>600</x>
-                        <y>380</y>
+                        <x>607</x>
+                        <y>379</y>
                         <z>0</z>
                         <width>900</width>
                         <height>570</height>

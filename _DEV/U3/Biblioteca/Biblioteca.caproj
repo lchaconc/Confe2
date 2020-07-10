@@ -616,7 +616,7 @@
             <object-type name="frutos3" sid="111803822822505">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="681702063010079" speed="5">
+                    <animation framecount="1" loop="0" name="Estante2" pingpong="0" repeatcount="1" repeatto="0" sid="681702063010079" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Frutos-Estantes\mueblefrutas3frutosES.png" />
                     </animation>
                 </animation-folder>
@@ -730,6 +730,19 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="fPina" sid="236061971983662">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="DragDrop" sid="897730101125646">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="481930257220037" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Frutos\modestia_pinafrutosES.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Rotulos">
             <object-type name="rAlegria" sid="930478200578457">
@@ -820,6 +833,19 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="939671414872835" speed="5">
                         <frame duration="1" hotspotX="0.503937" hotspotY="0.504425" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Frutos\longanimidadfrutosES.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="fModestia" sid="436152419608441">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="270685905220590">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="205413688853381" speed="5">
+                        <frame duration="1" hotspotX="0.503937" hotspotY="0.504425" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Dones ES biblioteca\Frutos\modestiafrutosES.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1080,7 +1106,7 @@
         <layout>pEstante4.xml</layout>
         <layout>splash.xml</layout>
         <layout>pFrutos1.xml</layout>
-        <layout>pFrutos2.xml</layout>
+        <layout>pFrutos.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>eEstante1.xml</event-sheet>
@@ -1089,7 +1115,7 @@
         <event-sheet>eEstante3.xml</event-sheet>
         <event-sheet>eEstante4.xml</event-sheet>
         <event-sheet>eFrutos1.xml</event-sheet>
-        <event-sheet>eFrutos2.xml</event-sheet>
+        <event-sheet>eFrutos.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Function" uid="0" />
