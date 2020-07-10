@@ -169,6 +169,54 @@
                             <param id="0" name="Pin to">fMelocoton</param>
                             <param id="1" name="Mode">0</param>
                         </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="430472630211305" type="mAlegria">
+                            <param id="0" name="Pin to">bgModalFrutos</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="878458885794836" type="mAmor">
+                            <param id="0" name="Pin to">bgModalFrutos</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="791783189605587" type="mBeni">
+                            <param id="0" name="Pin to">bgModalFrutos</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="523807027452490" type="mBondad">
+                            <param id="0" name="Pin to">bgModalFrutos</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="530622142370801" type="mCastidad">
+                            <param id="0" name="Pin to">bgModalFrutos</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="514549645142029" type="mFidelidad">
+                            <param id="0" name="Pin to">bgModalFrutos</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="378951573999549" type="mLonga">
+                            <param id="0" name="Pin to">bgModalFrutos</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="510512968273646" type="mMansedumbre">
+                            <param id="0" name="Pin to">bgModalFrutos</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="546472611499721" type="mPaciencia">
+                            <param id="0" name="Pin to">bgModalFrutos</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="731828123996076" type="mPaz">
+                            <param id="0" name="Pin to">bgModalFrutos</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="284871318373184" type="mTemplaza">
+                            <param id="0" name="Pin to">bgModalFrutos</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="451997432007927" type="bgModalFrutos">
+                            <param id="0" name="X">-600</param>
+                            <param id="1" name="Y">-600</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -253,9 +301,17 @@
                                 <action id="-15" name="Set visible" sid="919628264172714" type="fBanano">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
+                                <action id="-3" name="Set position" sid="410174662624287" type="fBanano">
+                                    <param id="0" name="X">-600</param>
+                                    <param id="1" name="Y">-600</param>
+                                </action>
                                 <action id="0" name="Call function" sid="781018977672033" type="Function">
                                     <param id="0" name="Name">&quot;sumarFrutos&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="4" name="Set animation" sid="929415672758030" type="mAlegria">
+                                    <param id="0" name="Animation">&quot;Si&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -283,9 +339,17 @@
                                 <action id="-15" name="Set visible" sid="117849577758509" type="fUva">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
+                                <action id="-3" name="Set position" sid="989731246342350" type="fUva">
+                                    <param id="0" name="X">-600</param>
+                                    <param id="1" name="Y">-600</param>
+                                </action>
                                 <action id="0" name="Call function" sid="920316596493378" type="Function">
                                     <param id="0" name="Name">&quot;sumarFrutos&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="4" name="Set animation" sid="773096224475598" type="mAmor">
+                                    <param id="0" name="Animation">&quot;Si&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -313,9 +377,17 @@
                                 <action id="-15" name="Set visible" sid="113962597600127" type="fGuayaba">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
+                                <action id="-3" name="Set position" sid="543856998315749" type="fGuayaba">
+                                    <param id="0" name="X">-600</param>
+                                    <param id="1" name="Y">-600</param>
+                                </action>
                                 <action id="0" name="Call function" sid="694448696911650" type="Function">
                                     <param id="0" name="Name">&quot;sumarFrutos&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="4" name="Set animation" sid="831449668728671" type="mBondad">
+                                    <param id="0" name="Animation">&quot;Si&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -343,9 +415,17 @@
                                 <action id="-15" name="Set visible" sid="991826841628124" type="fSandia">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
+                                <action id="-3" name="Set position" sid="588456474522052" type="fSandia">
+                                    <param id="0" name="X">-600</param>
+                                    <param id="1" name="Y">-600</param>
+                                </action>
                                 <action id="0" name="Call function" sid="628456716421955" type="Function">
                                     <param id="0" name="Name">&quot;sumarFrutos&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="4" name="Set animation" sid="954577617695714" type="mBeni">
+                                    <param id="0" name="Animation">&quot;Si&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -373,9 +453,17 @@
                                 <action id="-15" name="Set visible" sid="312792074409240" type="fLimon">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
+                                <action id="-3" name="Set position" sid="352788421699368" type="fLimon">
+                                    <param id="0" name="X">-600</param>
+                                    <param id="1" name="Y">-600</param>
+                                </action>
                                 <action id="0" name="Call function" sid="176390724342322" type="Function">
                                     <param id="0" name="Name">&quot;sumarFrutos&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="4" name="Set animation" sid="760834475469962" type="mLonga">
+                                    <param id="0" name="Animation">&quot;Si&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -403,9 +491,17 @@
                                 <action id="-15" name="Set visible" sid="436449079343762" type="fManzana">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
+                                <action id="-3" name="Set position" sid="757449450368146" type="fManzana">
+                                    <param id="0" name="X">-600</param>
+                                    <param id="1" name="Y">-600</param>
+                                </action>
                                 <action id="0" name="Call function" sid="843102938016269" type="Function">
                                     <param id="0" name="Name">&quot;sumarFrutos&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="4" name="Set animation" sid="295698302937726" type="mFidelidad">
+                                    <param id="0" name="Animation">&quot;Si&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -433,9 +529,17 @@
                                 <action id="-15" name="Set visible" sid="795820973187112" type="fMelocoton">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
+                                <action id="-3" name="Set position" sid="876762018440331" type="fMelocoton">
+                                    <param id="0" name="X">-600</param>
+                                    <param id="1" name="Y">-600</param>
+                                </action>
                                 <action id="0" name="Call function" sid="134477213182109" type="Function">
                                     <param id="0" name="Name">&quot;sumarFrutos&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="4" name="Set animation" sid="747516467309634" type="mCastidad">
+                                    <param id="0" name="Animation">&quot;Si&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -458,6 +562,44 @@
                         </action>
                         <action id="5" name="Set frame" sid="152812792734135" type="cantFrutos">
                             <param id="0" name="Frame number">contadorFrutos</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="152944495143883" title="Eventos click">
+            <sub-events>
+                <event-block sid="363397072159786">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="925375304214279" type="Touch">
+                            <param id="0" name="Object">canasta</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="261487622723046" type="System">
+                            <param id="0" name="Layer">&quot;Shadow&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="182369524619509" type="bgModalFrutos">
+                            <param id="0" name="X">600</param>
+                            <param id="1" name="Y">380</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="497799190039349">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="914292379173848" type="Touch">
+                            <param id="0" name="Object">bgModalFrutos</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="741592095064271" type="System">
+                            <param id="0" name="Layer">&quot;Shadow&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="211043741321271" type="bgModalFrutos">
+                            <param id="0" name="X">-600</param>
+                            <param id="1" name="Y">-600</param>
                         </action>
                     </actions>
                 </event-block>
