@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>pFrutos</name>
+    <name>pFrutos2</name>
     <sid>156947147474634</sid>
-    <event-sheet>eFrutos</event-sheet>
+    <event-sheet>eFrutos2</event-sheet>
     <size>
         <width>1280</width>
         <height>720</height>
@@ -540,7 +540,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="cantFrutos" uid="142">
+                <instance type="visorCantFrutos" uid="142">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -550,11 +550,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>222</x>
-                        <y>87</y>
+                        <x>199.109909058</x>
+                        <y>78.846450806</y>
                         <z>0</z>
-                        <width>65</width>
-                        <height>64</height>
+                        <width>43.549819946</width>
+                        <height>41.985519409</height>
                         <depth>0</depth>
                         <hotspotX>0.507692337</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -635,7 +635,52 @@
             <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <instances />
+            <instances>
+                <instance type="btnEstante1" uid="160">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>626</x>
+                        <y>43</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="btnEstante2" uid="161">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>739</x>
+                        <y>39</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
             <effects />
         </layer>
         <layer name="Shadow" sid="501757714452529">

@@ -135,7 +135,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="cantFrutos" sid="879035630013117">
+            <object-type name="visorCantFrutos" sid="879035630013117">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="13" loop="0" name="Numeros" pingpong="0" repeatcount="1" repeatto="0" sid="767238741110464" speed="0">
@@ -375,6 +375,9 @@
                 <plugin id="Function" />
             </object-type>
             <object-type global="1" name="arrayCompras" sid="724231287590774">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="arrayFrutosObtenidos" sid="317995830846464">
                 <plugin id="Arr" />
             </object-type>
         </object-folder>
@@ -1106,7 +1109,7 @@
         <layout>pEstante4.xml</layout>
         <layout>splash.xml</layout>
         <layout>pFrutos1.xml</layout>
-        <layout>pFrutos.xml</layout>
+        <layout>pFrutos2.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>eEstante1.xml</event-sheet>
@@ -1115,7 +1118,7 @@
         <event-sheet>eEstante3.xml</event-sheet>
         <event-sheet>eEstante4.xml</event-sheet>
         <event-sheet>eFrutos1.xml</event-sheet>
-        <event-sheet>eFrutos.xml</event-sheet>
+        <event-sheet>eFrutos2.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Function" uid="0" />

@@ -3,15 +3,148 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eFrutos1</name>
     <events>
-        <event-group description="" sid="271189495371836" title="Cargar otra pantalla2">
+        <event-group description="" sid="652255714519125" title="Inicio Frutos1">
             <sub-events>
-                <event-block sid="278079028708470">
+                <event-block sid="132904522382547">
                     <conditions>
-                        <condition id="13" name="On hold" sid="647035605941430" type="Touch" />
+                        <condition id="-2" name="On start of layout" sid="294084920066697" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-2" name="Go to layout" sid="584404810004181" type="System">
-                            <param id="0" name="Layout">pFrutos</param>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="402846954461791" type="rAlegria">
+                            <param id="0" name="Pin to">fBanano</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="100816573041868" type="rAmor">
+                            <param id="0" name="Pin to">fUva</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="724795195873882" type="rBondad">
+                            <param id="0" name="Pin to">fGuayaba</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="595405795756181" type="rBeni">
+                            <param id="0" name="Pin to">fSandia</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="271420069625808" type="rLonga">
+                            <param id="0" name="Pin to">fLimon</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="737552499446277" type="rFidelidad">
+                            <param id="0" name="Pin to">fManzana</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="974502693833633" type="rCastidad">
+                            <param id="0" name="Pin to">fMelocoton</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="568205303639572" type="mAlegria">
+                            <param id="0" name="Pin to">bgModalFrutos</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="954576670402363" type="mAmor">
+                            <param id="0" name="Pin to">bgModalFrutos</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="956221992973477" type="mBeni">
+                            <param id="0" name="Pin to">bgModalFrutos</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="526448553965184" type="mBondad">
+                            <param id="0" name="Pin to">bgModalFrutos</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="647956334489850" type="mCastidad">
+                            <param id="0" name="Pin to">bgModalFrutos</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="485358738189918" type="mFidelidad">
+                            <param id="0" name="Pin to">bgModalFrutos</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="690643628489121" type="mLonga">
+                            <param id="0" name="Pin to">bgModalFrutos</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="171740677633682" type="mMansedumbre">
+                            <param id="0" name="Pin to">bgModalFrutos</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="930216770565619" type="mPaciencia">
+                            <param id="0" name="Pin to">bgModalFrutos</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="436655676262477" type="mPaz">
+                            <param id="0" name="Pin to">bgModalFrutos</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="541069966486054" type="mTemplaza">
+                            <param id="0" name="Pin to">bgModalFrutos</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="959606512660064" type="mModestia">
+                            <param id="0" name="Pin to">bgModalFrutos</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="624148386202786" type="bgModalFrutos">
+                            <param id="0" name="X">-600</param>
+                            <param id="1" name="Y">-600</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="789541571144294" type="btnEstante2">
+                            <param id="0" name="Opacity">50</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="116543045531438" type="btnEstante1">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="896239772992089" title="Eventos click1">
+            <sub-events>
+                <event-block sid="367590935370668">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="971726384158921" type="Touch">
+                            <param id="0" name="Object">canasta</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="430504137677214" type="System">
+                            <param id="0" name="Layer">&quot;Shadow&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="243042762984207" type="bgModalFrutos">
+                            <param id="0" name="X">600</param>
+                            <param id="1" name="Y">380</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="393720352838187">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="453727281837315" type="Touch">
+                            <param id="0" name="Object">bgModalFrutos</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="818557391743455" type="System">
+                            <param id="0" name="Layer">&quot;Shadow&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="746154451616811" type="bgModalFrutos">
+                            <param id="0" name="X">-600</param>
+                            <param id="1" name="Y">-600</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="507661146178849">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="667120837799004" type="Touch">
+                            <param id="0" name="Object">btnEstante2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="665109503307312" type="System">
+                            <param id="0" name="Layout">pFrutos2</param>
                         </action>
                     </actions>
                 </event-block>
