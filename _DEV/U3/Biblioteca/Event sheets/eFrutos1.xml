@@ -5,37 +5,251 @@
     <events>
         <event-group description="" sid="652255714519125" title="Inicio Frutos1">
             <sub-events>
+                <event-block sid="746274730553232">
+                    <conditions>
+                        <condition id="0" name="On function" sid="791286746803450" type="Function">
+                            <param id="0" name="Name">&quot;cargarFrutosModal&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="138476655627129">
+                            <conditions>
+                                <condition id="1" name="Compare at XY" sid="385101952630736" type="arrayFrutosObtenidos">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Y">0</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="291042877633701" type="mAlegria">
+                                    <param id="0" name="Animation">&quot;Si&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="754298436547878">
+                            <conditions>
+                                <condition id="1" name="Compare at XY" sid="643127044898778" type="arrayFrutosObtenidos">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Y">1</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="971412485044302" type="mAmor">
+                                    <param id="0" name="Animation">&quot;Si&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="474907363923114">
+                            <conditions>
+                                <condition id="1" name="Compare at XY" sid="376553375052308" type="arrayFrutosObtenidos">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Y">2</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="917818644207422" type="mBondad">
+                                    <param id="0" name="Animation">&quot;Si&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="611868400194827">
+                            <conditions>
+                                <condition id="1" name="Compare at XY" sid="733271206915767" type="arrayFrutosObtenidos">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Y">3</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="196598741158706" type="mBeni">
+                                    <param id="0" name="Animation">&quot;Si&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="939956801007819">
+                            <conditions>
+                                <condition id="1" name="Compare at XY" sid="801290333108226" type="arrayFrutosObtenidos">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Y">4</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="379799949208243" type="mLonga">
+                                    <param id="0" name="Animation">&quot;Si&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="606016818675885">
+                            <conditions>
+                                <condition id="1" name="Compare at XY" sid="710974653055782" type="arrayFrutosObtenidos">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Y">5</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="917771912889551" type="mFidelidad">
+                                    <param id="0" name="Animation">&quot;Si&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="783203521428266">
+                            <conditions>
+                                <condition id="1" name="Compare at XY" sid="839167769479643" type="arrayFrutosObtenidos">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Y">6</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="499587863208953" type="mCastidad">
+                                    <param id="0" name="Animation">&quot;Si&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="551664567523391">
+                            <conditions>
+                                <condition id="1" name="Compare at XY" sid="295539659494797" type="arrayFrutosObtenidos">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Y">7</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="541811717546981" type="mTemplaza">
+                                    <param id="0" name="Animation">&quot;Si&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="510973267131974" type="fMelocotn2">
+                                    <param id="0" name="X">-800</param>
+                                    <param id="1" name="Y">-800</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="989140057344952">
+                            <conditions>
+                                <condition id="1" name="Compare at XY" sid="399762008235715" type="arrayFrutosObtenidos">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Y">8</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="580404542477887" type="mModestia">
+                                    <param id="0" name="Animation">&quot;Si&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="943493814840428" type="fPina">
+                                    <param id="0" name="X">-800</param>
+                                    <param id="1" name="Y">-800</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="162261210244542">
+                            <conditions>
+                                <condition id="1" name="Compare at XY" sid="482451088611576" type="arrayFrutosObtenidos">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Y">9</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="191166470613569" type="mMansedumbre">
+                                    <param id="0" name="Animation">&quot;Si&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="788106240279845" type="fNaranja">
+                                    <param id="0" name="X">-800</param>
+                                    <param id="1" name="Y">-800</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="910532082774553">
+                            <conditions>
+                                <condition id="1" name="Compare at XY" sid="253046599683836" type="arrayFrutosObtenidos">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Y">10</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="580935550436364" type="mPaciencia">
+                                    <param id="0" name="Animation">&quot;Si&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="329519985492957" type="fMango">
+                                    <param id="0" name="X">-800</param>
+                                    <param id="1" name="Y">-800</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="215284313401754">
+                            <conditions>
+                                <condition id="1" name="Compare at XY" sid="686693485747209" type="arrayFrutosObtenidos">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Y">11</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="839561518978072" type="mPaz">
+                                    <param id="0" name="Animation">&quot;Si&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="402696920869808" type="fPera">
+                                    <param id="0" name="X">-800</param>
+                                    <param id="1" name="Y">-800</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-block sid="132904522382547">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="294084920066697" type="System" />
                     </conditions>
                     <actions>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="402846954461791" type="rAlegria">
-                            <param id="0" name="Pin to">fBanano</param>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="958666979349498" type="rTemplanza">
+                            <param id="0" name="Pin to">fMelocotn2</param>
                             <param id="1" name="Mode">0</param>
                         </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="100816573041868" type="rAmor">
-                            <param id="0" name="Pin to">fUva</param>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="591577812753443" type="rModestia">
+                            <param id="0" name="Pin to">fPina</param>
                             <param id="1" name="Mode">0</param>
                         </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="724795195873882" type="rBondad">
-                            <param id="0" name="Pin to">fGuayaba</param>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="163725960384305" type="rMansedumbre">
+                            <param id="0" name="Pin to">fNaranja</param>
                             <param id="1" name="Mode">0</param>
                         </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="595405795756181" type="rBeni">
-                            <param id="0" name="Pin to">fSandia</param>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="392603377829213" type="rPaciencia">
+                            <param id="0" name="Pin to">fMango</param>
                             <param id="1" name="Mode">0</param>
                         </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="271420069625808" type="rLonga">
-                            <param id="0" name="Pin to">fLimon</param>
-                            <param id="1" name="Mode">0</param>
-                        </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="737552499446277" type="rFidelidad">
-                            <param id="0" name="Pin to">fManzana</param>
-                            <param id="1" name="Mode">0</param>
-                        </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="974502693833633" type="rCastidad">
-                            <param id="0" name="Pin to">fMelocoton</param>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="799881586823829" type="rPaz">
+                            <param id="0" name="Pin to">fPera</param>
                             <param id="1" name="Mode">0</param>
                         </action>
                         <action behavior="Pin" id="0" name="Pin to object" sid="568205303639572" type="mAlegria">
@@ -86,15 +300,22 @@
                             <param id="0" name="Pin to">bgModalFrutos</param>
                             <param id="1" name="Mode">0</param>
                         </action>
-                        <action id="-3" name="Set position" sid="624148386202786" type="bgModalFrutos">
+                        <action id="0" name="Call function" sid="867402979532873" type="Function">
+                            <param id="0" name="Name">&quot;cargarFrutosModal&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-3" name="Set position" sid="718654348905181" type="bgModalFrutos">
                             <param id="0" name="X">-600</param>
                             <param id="1" name="Y">-600</param>
                         </action>
-                        <action id="-16" name="Set opacity" sid="789541571144294" type="btnEstante2">
+                        <action id="-16" name="Set opacity" sid="569818603837173" type="btnEstante2">
                             <param id="0" name="Opacity">50</param>
                         </action>
-                        <action id="-16" name="Set opacity" sid="116543045531438" type="btnEstante1">
+                        <action id="-16" name="Set opacity" sid="143022952263030" type="btnEstante1">
                             <param id="0" name="Opacity">100</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="585638852862446" type="visorCantFrutos">
+                            <param id="0" name="Frame number">contadorFrutos</param>
                         </action>
                     </actions>
                 </event-block>
@@ -145,6 +366,250 @@
                     <actions>
                         <action id="-2" name="Go to layout" sid="665109503307312" type="System">
                             <param id="0" name="Layout">pFrutos2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="462105716393351" title="Seleccion de frutos1">
+            <sub-events>
+                <event-block sid="777746724739606">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="927914311777725" type="Touch">
+                            <param id="0" name="Object">fMelocotn2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="329501610894235" type="rTemplanza">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="116736951617791" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="165953254884027" type="rTemplanza">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="725089132543644">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="985406119057959" type="Touch">
+                            <param id="0" name="Object">fPina</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="318431066530212" type="rModestia">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="147730938075844" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="474709552824951" type="rModestia">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="102962940411066">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="987058340862612" type="Touch">
+                            <param id="0" name="Object">fNaranja</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="934349838534887" type="rMansedumbre">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="542582731599936" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="656109728433359" type="rMansedumbre">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="225657507871042">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="992318947960484" type="Touch">
+                            <param id="0" name="Object">fMango</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="483216649217223" type="rPaciencia">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="734354598482164" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="420364250371145" type="rPaciencia">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="910832572233104">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="181296472567757" type="Touch">
+                            <param id="0" name="Object">fPera</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="143211395092893" type="rPaz">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="957050059694219" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="583116683286809" type="rPaz">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="947037185428767" title="Arrastrar y soltar (Comprar Frutos) 2">
+            <sub-events>
+                <event-block sid="914177793934936">
+                    <conditions>
+                        <condition behavior="DragDrop" id="1" name="On drag start" sid="598011617147209" type="fMelocotn2" />
+                    </conditions>
+                    <actions>
+                        <action id="-24" name="Move to top" sid="193357371006216" type="fMelocotn2" />
+                    </actions>
+                </event-block>
+                <event-block sid="289763671479079">
+                    <conditions>
+                        <condition behavior="DragDrop" id="1" name="On drag start" sid="369271613518844" type="fPina" />
+                    </conditions>
+                    <actions>
+                        <action id="-24" name="Move to top" sid="328232585813771" type="fPina" />
+                    </actions>
+                </event-block>
+                <event-block sid="160692945864382">
+                    <conditions>
+                        <condition behavior="DragDrop" id="1" name="On drag start" sid="270497855655509" type="fNaranja" />
+                    </conditions>
+                    <actions>
+                        <action id="-24" name="Move to top" sid="658177012269293" type="fNaranja" />
+                    </actions>
+                </event-block>
+                <event-block sid="886248501397314">
+                    <conditions>
+                        <condition behavior="DragDrop" id="1" name="On drag start" sid="394589963285637" type="fMango" />
+                    </conditions>
+                    <actions>
+                        <action id="-24" name="Move to top" sid="593615359303853" type="fMango" />
+                    </actions>
+                </event-block>
+                <event-block sid="333737825633291">
+                    <conditions>
+                        <condition behavior="DragDrop" id="1" name="On drag start" sid="147435604469405" type="fPera" />
+                    </conditions>
+                    <actions>
+                        <action id="-24" name="Move to top" sid="831754443226412" type="fPera" />
+                    </actions>
+                </event-block>
+                <event-block sid="512275296324752">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="482825147616226" type="fMelocotn2" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="684187883980755">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="219108911217032" type="fMelocotn2">
+                                    <param id="0" name="Object">canasta</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="697385530375167" type="fMelocotn2">
+                                    <param id="0" name="Scale">0.5</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="270902083047343" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="507596598354623" type="fMelocotn2">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="285875103776398" type="fMelocotn2">
+                                    <param id="0" name="X">-600</param>
+                                    <param id="1" name="Y">-600</param>
+                                </action>
+                                <action id="0" name="Call function" sid="111944703984192" type="Function">
+                                    <param id="0" name="Name">&quot;sumarFrutos&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="4" name="Set animation" sid="747134451715101" type="mTemplaza">
+                                    <param id="0" name="Animation">&quot;Si&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="922841190324385" type="arrayFrutosObtenidos">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Y">7</param>
+                                    <param id="2" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="448254102997477">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="489101730057556" type="fPina" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="272009110420012">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="176147662106213" type="fPina">
+                                    <param id="0" name="Object">canasta</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="481821442327353" type="fPina">
+                                    <param id="0" name="Scale">0.5</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="403524833889759" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="975326381304831" type="fPina">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="366413937701509" type="fPina">
+                                    <param id="0" name="X">-600</param>
+                                    <param id="1" name="Y">-600</param>
+                                </action>
+                                <action id="0" name="Call function" sid="435511789290079" type="Function">
+                                    <param id="0" name="Name">&quot;sumarFrutos&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="4" name="Set animation" sid="881895040634854" type="mModestia">
+                                    <param id="0" name="Animation">&quot;Si&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="628287541273176" type="arrayFrutosObtenidos">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Y">8</param>
+                                    <param id="2" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="747882555683172" title="Contablizar frutos 1">
+            <sub-events>
+                <event-block sid="618977786750736">
+                    <conditions>
+                        <condition id="0" name="On function" sid="196491769981647" type="Function">
+                            <param id="0" name="Name">&quot;sumarFrutos&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="269666356145098" type="System">
+                            <param id="0" name="Variable">contadorFrutos</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="271770850880137" type="visorCantFrutos">
+                            <param id="0" name="Frame number">contadorFrutos</param>
                         </action>
                     </actions>
                 </event-block>

@@ -138,20 +138,19 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="706447992525414" type="fModestia">
+                        <action id="-15" name="Set visible" sid="706447992525414" type="rModestia">
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="-16" name="Wait" sid="852560390182058" type="System">
                             <param id="0" name="Seconds">1.0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="672302525302056" type="fModestia">
+                        <action id="-15" name="Set visible" sid="672302525302056" type="rModestia">
                             <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="605732055196019" title="Cargar otra pantalla" />
         <event-group description="" sid="643985080637068" title="Inicio Frutos">
             <sub-events>
                 <event-block sid="821499583542243">
@@ -397,6 +396,106 @@
                                     <param id="1" name="From">1</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="653473985904964" type="fMelocoton">
+                                    <param id="0" name="X">-800</param>
+                                    <param id="1" name="Y">-800</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="579424670571713">
+                            <conditions>
+                                <condition id="1" name="Compare at XY" sid="776000236635052" type="arrayFrutosObtenidos">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Y">7</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="700294813318768" type="mTemplaza">
+                                    <param id="0" name="Animation">&quot;Si&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="756174322411996" type="fMelocotn2">
+                                    <param id="0" name="X">-800</param>
+                                    <param id="1" name="Y">-800</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="451977384213071">
+                            <conditions>
+                                <condition id="1" name="Compare at XY" sid="887863970589029" type="arrayFrutosObtenidos">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Y">8</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="569213015816175" type="mModestia">
+                                    <param id="0" name="Animation">&quot;Si&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="894079735247572" type="fPina">
+                                    <param id="0" name="X">-800</param>
+                                    <param id="1" name="Y">-800</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="664252308901127">
+                            <conditions>
+                                <condition id="1" name="Compare at XY" sid="516939112378626" type="arrayFrutosObtenidos">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Y">9</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="940583894842605" type="mMansedumbre">
+                                    <param id="0" name="Animation">&quot;Si&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="239557201864841" type="fNaranja">
+                                    <param id="0" name="X">-800</param>
+                                    <param id="1" name="Y">-800</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="673473632256210">
+                            <conditions>
+                                <condition id="1" name="Compare at XY" sid="819474145236597" type="arrayFrutosObtenidos">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Y">10</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="915511480819404" type="mPaciencia">
+                                    <param id="0" name="Animation">&quot;Si&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="458734907849141" type="fMango">
+                                    <param id="0" name="X">-800</param>
+                                    <param id="1" name="Y">-800</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="952783900474043">
+                            <conditions>
+                                <condition id="1" name="Compare at XY" sid="383381442148108" type="arrayFrutosObtenidos">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Y">11</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="870291472541163" type="mPaz">
+                                    <param id="0" name="Animation">&quot;Si&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="659647887211686" type="fPera">
                                     <param id="0" name="X">-800</param>
                                     <param id="1" name="Y">-800</param>
                                 </action>
