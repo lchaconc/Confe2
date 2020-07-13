@@ -593,6 +593,135 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="951012591825602">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="688125655306898" type="fNaranja" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="580452624777460">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="239991912344717" type="fNaranja">
+                                    <param id="0" name="Object">canasta</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="216429779560246" type="fNaranja">
+                                    <param id="0" name="Scale">0.5</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="386602731257958" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="171851152862040" type="fNaranja">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="610364388137475" type="fNaranja">
+                                    <param id="0" name="X">-600</param>
+                                    <param id="1" name="Y">-600</param>
+                                </action>
+                                <action id="0" name="Call function" sid="322687335325200" type="Function">
+                                    <param id="0" name="Name">&quot;sumarFrutos&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="4" name="Set animation" sid="557583666569223" type="mMansedumbre">
+                                    <param id="0" name="Animation">&quot;Si&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="778930323395497" type="arrayFrutosObtenidos">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Y">9</param>
+                                    <param id="2" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="328648165494627">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="599519756715266" type="fMango" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="713225872764282">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="737362127088507" type="fMango">
+                                    <param id="0" name="Object">canasta</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="867362806936996" type="fMango">
+                                    <param id="0" name="Scale">0.5</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="484552057310077" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="521922371296623" type="fMango">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="971855017102631" type="fMango">
+                                    <param id="0" name="X">-600</param>
+                                    <param id="1" name="Y">-600</param>
+                                </action>
+                                <action id="0" name="Call function" sid="944369048937218" type="Function">
+                                    <param id="0" name="Name">&quot;sumarFrutos&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="4" name="Set animation" sid="706464629148706" type="mPaciencia">
+                                    <param id="0" name="Animation">&quot;Si&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="702352486888825" type="arrayFrutosObtenidos">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Y">10</param>
+                                    <param id="2" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="660629925415951">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="451235139334153" type="fPera" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="331273971019190">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="263724105971370" type="fPera">
+                                    <param id="0" name="Object">canasta</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="534169331503416" type="fPera">
+                                    <param id="0" name="Scale">0.5</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="988002596933317" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="579381290340683" type="fPera">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="969951482765624" type="fPera">
+                                    <param id="0" name="X">-600</param>
+                                    <param id="1" name="Y">-600</param>
+                                </action>
+                                <action id="0" name="Call function" sid="168069662006320" type="Function">
+                                    <param id="0" name="Name">&quot;sumarFrutos&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="4" name="Set animation" sid="925729648584693" type="mPaz">
+                                    <param id="0" name="Animation">&quot;Si&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="405353929504987" type="arrayFrutosObtenidos">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Y">11</param>
+                                    <param id="2" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="747882555683172" title="Contablizar frutos 1">
