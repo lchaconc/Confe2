@@ -91,7 +91,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-13" name="Set boolean" sid="410246964594690" type="btnCarrito">
+                        <action id="-13" name="Set boolean" sid="410246964594690" type="btnMaletin">
                             <param id="0" name="Instance variable">comprasAbierta</param>
                             <param id="1" name="Value">1</param>
                         </action>
@@ -146,7 +146,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-13" name="Set boolean" sid="575153214306773" type="btnCarrito">
+                        <action id="-13" name="Set boolean" sid="575153214306773" type="btnMaletin">
                             <param id="0" name="Instance variable">comprasAbierta</param>
                             <param id="1" name="Value">1</param>
                         </action>
@@ -201,7 +201,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-13" name="Set boolean" sid="887058522211927" type="btnCarrito">
+                        <action id="-13" name="Set boolean" sid="887058522211927" type="btnMaletin">
                             <param id="0" name="Instance variable">comprasAbierta</param>
                             <param id="1" name="Value">1</param>
                         </action>
@@ -259,7 +259,7 @@
                     <sub-events>
                         <event-block sid="192401155994801">
                             <conditions>
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="416690167460123" type="btnCarrito">
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="416690167460123" type="btnMaletin">
                                     <param id="0" name="Instance variable">comprasAbierta</param>
                                 </condition>
                             </conditions>
@@ -305,7 +305,7 @@
                         <action id="-16" name="Wait" sid="712099690350892" type="System">
                             <param id="0" name="Seconds">1</param>
                         </action>
-                        <action id="-13" name="Set boolean" sid="403495922524447" type="btnCarrito">
+                        <action id="-13" name="Set boolean" sid="403495922524447" type="btnMaletin">
                             <param id="0" name="Instance variable">comprasAbierta</param>
                             <param id="1" name="Value">0</param>
                         </action>
@@ -351,7 +351,7 @@
                         <action id="-16" name="Wait" sid="827265621800361" type="System">
                             <param id="0" name="Seconds">1</param>
                         </action>
-                        <action id="-13" name="Set boolean" sid="889975311578462" type="btnCarrito">
+                        <action id="-13" name="Set boolean" sid="889975311578462" type="btnMaletin">
                             <param id="0" name="Instance variable">comprasAbierta</param>
                             <param id="1" name="Value">0</param>
                         </action>
@@ -364,7 +364,7 @@
                 <event-block sid="344984771886258">
                     <conditions>
                         <condition id="3" name="On touched object" sid="821783324177748" type="Touch">
-                            <param id="0" name="Object">btnCarrito</param>
+                            <param id="0" name="Object">btnMaletin</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -375,7 +375,7 @@
                         <action id="0" name="Set text" sid="140955690803003" type="txtLista">
                             <param id="0" name="Text">&quot;&quot;</param>
                         </action>
-                        <action id="-13" name="Set boolean" sid="402677486953200" type="btnCarrito">
+                        <action id="-13" name="Set boolean" sid="402677486953200" type="btnMaletin">
                             <param id="0" name="Instance variable">comprasAbierta</param>
                             <param id="1" name="Value">1</param>
                         </action>
@@ -432,7 +432,7 @@
                         <action id="-16" name="Wait" sid="986153587561293" type="System">
                             <param id="0" name="Seconds">1</param>
                         </action>
-                        <action id="-13" name="Set boolean" sid="843837681130356" type="btnCarrito">
+                        <action id="-13" name="Set boolean" sid="843837681130356" type="btnMaletin">
                             <param id="0" name="Instance variable">comprasAbierta</param>
                             <param id="1" name="Value">0</param>
                         </action>
