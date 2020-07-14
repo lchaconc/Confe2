@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eSplash</name>
     <events>
+        <variable comment="monedas que se le dan al usuario para comprar los dones  (7 dones.1 p cada Don)" constant="0" name="monedas" sid="659344023831204" static="0" type="number">7</variable>
         <variable constant="0" name="contadorFrutos" sid="616574806249042" static="0" type="number">0</variable>
         <variable constant="0" name="librosComprados" sid="144599650366637" static="0" type="number">0</variable>
         <variable constant="0" name="libroActual" sid="196650346676609" static="0" type="text"></variable>
@@ -86,7 +87,7 @@
                     <param id="0" name="Seconds">1.0</param>
                 </action>
                 <action id="-2" name="Go to layout" sid="180815684790440" type="System">
-                    <param id="0" name="Layout">pFrutos2</param>
+                    <param id="0" name="Layout">pEstante1</param>
                 </action>
             </actions>
         </event-block>

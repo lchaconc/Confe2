@@ -34,6 +34,9 @@
                             <param id="0" name="Animation">&quot;Est1&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
+                        <action id="5" name="Set frame" sid="295031832738298" type="visorMonedas">
+                            <param id="0" name="Frame number">monedas</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -394,7 +397,7 @@
             <sub-events>
                 <event-block sid="808536290564685">
                     <conditions>
-                        <condition id="17" name="On tap object" sid="256049456349885" type="Touch">
+                        <condition id="3" name="On touched object" sid="256049456349885" type="Touch">
                             <param id="0" name="Object">btnCerrar</param>
                         </condition>
                     </conditions>
@@ -421,11 +424,18 @@
                 </event-block>
                 <event-block sid="808721160525842">
                     <conditions>
-                        <condition id="17" name="On tap object" sid="768755834122664" type="Touch">
+                        <condition id="3" name="On touched object" sid="768755834122664" type="Touch">
                             <param id="0" name="Object">btnComprar</param>
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-11" name="Subtract from" sid="926868813686489" type="System">
+                            <param id="0" name="Variable">monedas</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="685647264362878" type="visorMonedas">
+                            <param id="0" name="Frame number">monedas</param>
+                        </action>
                         <action id="-3" name="Set position" sid="200178496336531" type="modal">
                             <param id="0" name="X">-600</param>
                             <param id="1" name="Y">-600</param>

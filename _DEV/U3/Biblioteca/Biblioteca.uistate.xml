@@ -10,13 +10,16 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">pFrutos2</layout>
-        <layout order="5">splash</layout>
-        <layout active="1" order="2">pFrutos1</layout>
-        <layout order="6">pEstante1</layout>
-        <event-sheet order="1">eFrutos2</event-sheet>
-        <event-sheet order="4">eSplash</event-sheet>
-        <event-sheet order="3">eFrutos1</event-sheet>
+        <layout order="3">splash</layout>
+        <layout order="0">pEstante1</layout>
+        <layout order="4">pEstante2</layout>
+        <layout order="5">pEstante3</layout>
+        <layout order="6">pEstante4</layout>
+        <event-sheet order="2">eSplash</event-sheet>
+        <event-sheet order="1">eEstante1</event-sheet>
+        <event-sheet active="1" order="7">eEstante2</event-sheet>
+        <event-sheet order="8">eEstante3</event-sheet>
+        <event-sheet order="9">eEstante4</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -32,7 +35,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
-        <folder expanded="0" path="object-folder/GUI/" />
+        <folder expanded="1" path="object-folder/GUI/" />
         <folder expanded="1" path="object-folder/Backgrounds/" />
         <folder expanded="0" path="object-folder/Sprites/" />
         <folder expanded="0" path="object-folder/Texts/" />
@@ -60,6 +63,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/btnEstante4/" />
         <folder expanded="1" path="animation-folder/canasta/" />
         <folder expanded="1" path="animation-folder/visorCantFrutos/" />
+        <folder expanded="1" path="animation-folder/visorMonedas/" />
         <folder expanded="1" path="animation-folder/bgPAred/" />
         <folder expanded="1" path="animation-folder/bgListaCompras/" />
         <folder expanded="1" path="animation-folder/bgModalFrutos/" />
