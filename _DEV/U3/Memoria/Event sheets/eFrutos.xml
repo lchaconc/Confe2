@@ -14,9 +14,13 @@
                             <param id="0" name="Name">&quot;resetVariables&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
-                        <action id="0" name="Call function" sid="873251802224399" type="Function">
+                        <action disabled="1" id="0" name="Call function" sid="873251802224399" type="Function">
                             <param id="0" name="Name">&quot;iniciar&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-3" name="Set position" sid="764182696549835" type="bgModalFrutos">
+                            <param id="0" name="X">640</param>
+                            <param id="1" name="Y">320</param>
                         </action>
                     </actions>
                 </event-block>
@@ -110,6 +114,27 @@
                         <action id="-9" name="Set value" sid="221109710530241" type="System">
                             <param id="0" name="Variable">juegoActivo</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="749012896620675">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="968286449721846" type="Touch">
+                            <param id="0" name="Object">bgModalFrutos</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="636004432019682" type="Function">
+                            <param id="0" name="Name">&quot;iniciar&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="763488023593841" type="System">
+                            <param id="0" name="Group name">&quot;Manejo de tiempo3&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="933797990409242" type="bgModalFrutos">
+                            <param id="0" name="X">-800</param>
+                            <param id="1" name="Y">-800</param>
                         </action>
                     </actions>
                 </event-block>
@@ -622,7 +647,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="406785624359580" title="Manejo de tiempo3">
+        <event-group description="" inactive="1" sid="406785624359580" title="Manejo de tiempo3">
             <sub-events>
                 <event-block sid="404676935985762">
                     <conditions>
