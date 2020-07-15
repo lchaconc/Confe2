@@ -52,42 +52,6 @@
                         <action id="-15" name="Set visible" sid="820257730627946" type="txtTiempo">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="923662156433612" type="marca1">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="989652458202659" type="marca2">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="206167569465949" type="marca3">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="667717350804023" type="marca4">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="299952914505985" type="marca5">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="181677440212336" type="marca6">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="192054838333449" type="marca7">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="531437908768517" type="marca8">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="644992982693951" type="marca9">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="509687125743290" type="marca10">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="547869439594715" type="marca11">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="137411894358956" type="marca12">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="206838472145496">
@@ -141,7 +105,7 @@
                         </action>
                         <action id="-9" name="Set value" sid="845562241590943" type="System">
                             <param id="0" name="Variable">tiempo</param>
-                            <param id="1" name="Value">60</param>
+                            <param id="1" name="Value">150</param>
                         </action>
                         <action id="-9" name="Set value" sid="221109710530241" type="System">
                             <param id="0" name="Variable">juegoActivo</param>
@@ -483,8 +447,9 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="604977903108780" type="marca1">
-                                    <param id="0" name="Visibility">1</param>
+                                <action id="4" name="Set animation" sid="668149136170232" type="pAmor">
+                                    <param id="0" name="Animation">&quot;Tachada&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -497,8 +462,9 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="701118431695012" type="marca2">
-                                    <param id="0" name="Visibility">1</param>
+                                <action id="4" name="Set animation" sid="640420524440352" type="pAlegria">
+                                    <param id="0" name="Animation">&quot;Tachada&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -511,8 +477,9 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="863230897654357" type="marca3">
-                                    <param id="0" name="Visibility">1</param>
+                                <action id="4" name="Set animation" sid="666462437612145" type="pPaz">
+                                    <param id="0" name="Animation">&quot;Tachada&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -525,8 +492,9 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="396657648440338" type="marca4">
-                                    <param id="0" name="Visibility">1</param>
+                                <action id="4" name="Set animation" sid="607226672571152" type="pPaciencia">
+                                    <param id="0" name="Animation">&quot;Tachada&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -539,8 +507,9 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="352030690595836" type="marca5">
-                                    <param id="0" name="Visibility">1</param>
+                                <action id="4" name="Set animation" sid="290340528984811" type="pLonga">
+                                    <param id="0" name="Animation">&quot;Tachada&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -553,8 +522,9 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="151834941108089" type="marca6">
-                                    <param id="0" name="Visibility">1</param>
+                                <action id="4" name="Set animation" sid="940196325552730" type="pBeni">
+                                    <param id="0" name="Animation">&quot;Tachada&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -567,8 +537,9 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="489280313231899" type="marca7">
-                                    <param id="0" name="Visibility">1</param>
+                                <action id="4" name="Set animation" sid="970739867183795" type="pBondad">
+                                    <param id="0" name="Animation">&quot;Tachada&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -581,8 +552,9 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="491847359696784" type="marca8">
-                                    <param id="0" name="Visibility">1</param>
+                                <action id="4" name="Set animation" sid="723571954508159" type="pMansedumbre">
+                                    <param id="0" name="Animation">&quot;Tachada&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -595,8 +567,9 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="860413279882160" type="marca9">
-                                    <param id="0" name="Visibility">1</param>
+                                <action id="4" name="Set animation" sid="864406561859897" type="pFidelidad">
+                                    <param id="0" name="Animation">&quot;Tachada&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -609,8 +582,9 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="663281922493113" type="marca10">
-                                    <param id="0" name="Visibility">1</param>
+                                <action id="4" name="Set animation" sid="921573787080639" type="pModestia">
+                                    <param id="0" name="Animation">&quot;Tachada&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -623,8 +597,9 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="138443731270118" type="marca11">
-                                    <param id="0" name="Visibility">1</param>
+                                <action id="4" name="Set animation" sid="682491224418210" type="pTemplanza">
+                                    <param id="0" name="Animation">&quot;Tachada&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -637,8 +612,9 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="564500778358708" type="marca12">
-                                    <param id="0" name="Visibility">1</param>
+                                <action id="4" name="Set animation" sid="765201707719921" type="pCastidad">
+                                    <param id="0" name="Animation">&quot;Tachada&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
