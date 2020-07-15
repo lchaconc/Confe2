@@ -10,12 +10,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="1">pFin</layout>
-        <layout order="2">pFin2</layout>
-        <layout order="4">pFrutos</layout>
-        <event-sheet active="1" order="3">eFin2</event-sheet>
-        <event-sheet order="5">eFrutos</event-sheet>
-        <event-sheet order="6">eFin</event-sheet>
+        <layout order="0">pSimbolos</layout>
+        <layout order="4">Splash</layout>
+        <layout order="2">pDones</layout>
+        <event-sheet order="1">eSimbolos</event-sheet>
+        <event-sheet active="1" order="3">eDones</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -28,14 +27,15 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
-        <folder expanded="1" path="object-folder/Buttons/" />
+        <folder expanded="0" path="object-folder/Buttons/" />
         <folder expanded="0" path="object-folder/Backgrounds/" />
-        <folder expanded="0" path="object-folder/Sprites/" />
-        <folder expanded="0" path="object-folder/Texts/" />
+        <folder expanded="1" path="object-folder/Sprites/" />
+        <folder expanded="1" path="object-folder/Texts/" />
         <folder expanded="0" path="object-folder/Controls/" />
         <folder expanded="0" path="object-folder/System/" />
         <folder expanded="1" path="object-folder/Sensors/" />
-        <folder expanded="1" path="object-folder/TextosCierre/" />
+        <folder expanded="0" path="object-folder/TextosCierre/" />
+        <folder expanded="1" path="object-folder/Palabras/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />
@@ -66,5 +66,18 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/btnReiniciar/" />
         <folder expanded="1" path="animation-folder/btnSiguiente/" />
         <folder expanded="1" path="animation-folder/visorEs/" />
+        <folder expanded="1" path="animation-folder/pAgua/" />
+        <folder expanded="1" path="animation-folder/pAceite/" />
+        <folder expanded="1" path="animation-folder/pFuego/" />
+        <folder expanded="1" path="animation-folder/pPaloma/" />
+        <folder expanded="1" path="animation-folder/pNube/" />
+        <folder expanded="1" path="animation-folder/pSello/" />
+        <folder expanded="1" path="animation-folder/pSabid/" />
+        <folder expanded="1" path="animation-folder/pEntendimiento/" />
+        <folder expanded="1" path="animation-folder/pConsejo/" />
+        <folder expanded="1" path="animation-folder/pCiencia/" />
+        <folder expanded="1" path="animation-folder/pPiedad/" />
+        <folder expanded="1" path="animation-folder/pFortaleza/" />
+        <folder expanded="1" path="animation-folder/pTemor/" />
     </folders-expanded>
 </c2uistate>
