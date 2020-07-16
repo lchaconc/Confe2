@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>eFinSimbolos</name>
+    <events>
+        <event-block sid="961159305639718">
+            <conditions>
+                <condition id="3" name="On touched object" sid="433315231587871" type="Touch">
+                    <param id="0" name="Object">btnSiguiente</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="442710400901630" type="System">
+                    <param id="0" name="Layout">finDones</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="813603048776131">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="107834858020784" type="System" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="977541829660359" type="btnSiguiente">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

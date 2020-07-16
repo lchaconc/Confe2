@@ -10,13 +10,16 @@
                         <condition id="-2" name="On start of layout" sid="113989134144720" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="540433798426550" type="Function">
-                            <param id="0" name="Name">&quot;resetVariables&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
+                        <action id="0" name="Set text" sid="125315223524558" type="txtTitulo1">
+                            <param id="0" name="Text">&quot;SÍMBOLOS DEL ESPIRITU SANTO&quot;</param>
                         </action>
-                        <action id="0" name="Call function" sid="983772218469933" type="Function">
-                            <param id="0" name="Name">&quot;iniciar&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
+                        <action id="4" name="Set animation" sid="417980514871157" type="bgModalesNivel">
+                            <param id="0" name="Animation">&quot;Simbolos&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="146003495096001" type="bgModalesNivel">
+                            <param id="0" name="X">640</param>
+                            <param id="1" name="Y">420</param>
                         </action>
                     </actions>
                 </event-block>
@@ -27,6 +30,10 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Call function" sid="540433798426550" type="Function">
+                            <param id="0" name="Name">&quot;resetVariables&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                         <action id="0" name="Call function" sid="639665045412392" type="Function">
                             <param id="0" name="Name">&quot;cargarArrayObjetos&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
@@ -49,26 +56,9 @@
                         <action id="-15" name="Set visible" sid="515581495206569" type="txtTiempo">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="666626287428169" type="marca2">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="693893879545243" type="marca3">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="415339445103654" type="marca5">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="259445517238949" type="marca4">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="479051702890998" type="marca6">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="744105555362247" type="marca1">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="0" name="Set text" sid="438163958096870" type="txtTitulo1">
-                            <param id="0" name="Text">&quot;SÍMBOLOS DEL ESPIRITU SANTO&quot;</param>
+                        <action id="-12" name="Set group active" sid="515540396167314" type="System">
+                            <param id="0" name="Group name">&quot;Fin del juego&quot;</param>
+                            <param id="1" name="State">1</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -129,10 +119,58 @@
                             <param id="0" name="Variable">juegoActivo</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="4" name="Set animation" sid="529485490626197" type="pAgua">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="220629979979033" type="pAceite">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="596792173981959" type="pFuego">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="610225743409618" type="pPaloma">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="506482544665206" type="pNube">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="172124025459626" type="pSello">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="108478032253665">
+            <conditions>
+                <condition id="3" name="On touched object" sid="624394201169795" type="Touch">
+                    <param id="0" name="Object">bgModalesNivel</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="432210144871298" type="Function">
+                    <param id="0" name="Name">&quot;iniciar&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-12" name="Set group active" sid="899391485331203" type="System">
+                    <param id="0" name="Group name">&quot;Manejo de tiempo&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="993051855466179" type="bgModalesNivel">
+                    <param id="0" name="X">-800</param>
+                    <param id="1" name="Y">-800</param>
+                </action>
+                <action id="-15" name="Set visible" sid="800857826535725" type="btnReiniciar">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
         <event-group description="" sid="134737920417738" title="Carga de fichas">
             <sub-events>
                 <variable constant="0" name="aux" sid="578961471673290" static="0" type="number">0</variable>
@@ -388,7 +426,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="602857025413447" title="Fin del juego">
+        <event-group description="" inactive="1" sid="602857025413447" title="Fin del juego">
             <sub-events>
                 <event-block sid="549218789118711">
                     <conditions>
@@ -510,7 +548,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="990563332485538" title="Manejo de tiempo">
+        <event-group description="" inactive="1" sid="990563332485538" title="Manejo de tiempo">
             <sub-events>
                 <event-block sid="134538597139759">
                     <conditions>
@@ -570,10 +608,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="543237873761281" type="Function">
-                            <param id="0" name="Name">&quot;resetVariables&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
                         <action id="0" name="Call function" sid="538339013456758" type="Function">
                             <param id="0" name="Name">&quot;iniciar&quot;</param>
                             <param id="1" name="Parameter {n}"></param>

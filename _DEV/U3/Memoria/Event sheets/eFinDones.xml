@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>eFinDones</name>
+    <events>
+        <event-group description="" sid="907176252769551" title="Evento touch botones Fin">
+            <sub-events>
+                <event-block sid="797260586381851">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="272423718775051" type="Touch">
+                            <param id="0" name="Object">btnAdelantar</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="181115069945795">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="786357101690714" type="visorDones">
+                                    <param id="0" name="Instance variable">cont</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="983054691533420" type="visorDones">
+                                    <param id="0" name="Instance variable">cont</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="417988627791516" type="visorDones">
+                                    <param id="0" name="Frame number">visorDones.cont</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="430584440153447">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="723718784112603" type="Touch">
+                            <param id="0" name="Object">btnAtras</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="301433902934963">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="181083078512460" type="visorDones">
+                                    <param id="0" name="Instance variable">cont</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="306539292506768" type="visorDones">
+                                    <param id="0" name="Instance variable">cont</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="707339739668211" type="visorDones">
+                                    <param id="0" name="Frame number">visorDones.cont</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="398499441389918" title="Inicio Fin">
+            <sub-events>
+                <event-block sid="629035269145955">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="839788948749329" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="647152288667124" type="txtTitulo1">
+                            <param id="0" name="Text">&quot;Dones del Espiritu Santo&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="319588088737666" type="btnSiguiente">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="159779745161171">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="691549861696426" type="Touch">
+                            <param id="0" name="Object">btnSiguiente</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="283411829406860" type="System">
+                            <param id="0" name="Layout">finFrutos</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

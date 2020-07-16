@@ -10,17 +10,19 @@
                         <condition id="-2" name="On start of layout" sid="925733613703412" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="848027455053954" type="Function">
-                            <param id="0" name="Name">&quot;resetVariables&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
+                        <action id="-15" name="Set visible" sid="208763082554822" type="btnReiniciar">
+                            <param id="0" name="Visibility">0</param>
                         </action>
-                        <action disabled="1" id="0" name="Call function" sid="873251802224399" type="Function">
-                            <param id="0" name="Name">&quot;iniciar&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
+                        <action id="0" name="Set text" sid="287912917481999" type="txtTitulo1">
+                            <param id="0" name="Text">&quot;FRUTOS DEL ESPIRITU SANTO&quot;</param>
                         </action>
-                        <action id="-3" name="Set position" sid="764182696549835" type="bgModalFrutos">
+                        <action id="4" name="Set animation" sid="746282227286571" type="bgModalesNivel">
+                            <param id="0" name="Animation">&quot;Frutos&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="764182696549835" type="bgModalesNivel">
                             <param id="0" name="X">640</param>
-                            <param id="1" name="Y">320</param>
+                            <param id="1" name="Y">420</param>
                         </action>
                     </actions>
                 </event-block>
@@ -31,6 +33,10 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Call function" sid="848027455053954" type="Function">
+                            <param id="0" name="Name">&quot;resetVariables&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                         <action id="0" name="Call function" sid="798347467131609" type="Function">
                             <param id="0" name="Name">&quot;cargarArrayObjetos&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
@@ -47,14 +53,15 @@
                             <param id="0" name="Name">&quot;cargarFichas&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
-                        <action id="0" name="Set text" sid="592232718624312" type="txtTitulo1">
-                            <param id="0" name="Text">&quot;FRUTOS DEL ESPIRITU SANTO&quot;</param>
-                        </action>
                         <action id="-15" name="Set visible" sid="985786645981914" type="txtFinJuego">
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-15" name="Set visible" sid="820257730627946" type="txtTiempo">
                             <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="111258937168044" type="System">
+                            <param id="0" name="Group name">&quot;Fin del juego3&quot;</param>
+                            <param id="1" name="State">1</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -115,12 +122,60 @@
                             <param id="0" name="Variable">juegoActivo</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="4" name="Set animation" sid="565759648715868" type="pAmor">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="400456868582568" type="pAlegria">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="205296068402026" type="pPaz">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="824692246422211" type="pPaciencia">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="671226308789571" type="pLonga">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="152295100197466" type="pBeni">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="230405803808426" type="pBondad">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="251535917324137" type="pMansedumbre">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="587003363666358" type="pFidelidad">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="757348680608043" type="pModestia">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="260479369487821" type="pTemplanza">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="594491730512411" type="pCastidad">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="749012896620675">
                     <conditions>
                         <condition id="3" name="On touched object" sid="968286449721846" type="Touch">
-                            <param id="0" name="Object">bgModalFrutos</param>
+                            <param id="0" name="Object">bgModalesNivel</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -132,9 +187,12 @@
                             <param id="0" name="Group name">&quot;Manejo de tiempo3&quot;</param>
                             <param id="1" name="State">1</param>
                         </action>
-                        <action id="-3" name="Set position" sid="933797990409242" type="bgModalFrutos">
+                        <action id="-3" name="Set position" sid="933797990409242" type="bgModalesNivel">
                             <param id="0" name="X">-800</param>
                             <param id="1" name="Y">-800</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="383343658810218" type="btnReiniciar">
+                            <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -435,7 +493,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="941508666040985" title="Fin del juego3">
+        <event-group description="" inactive="1" sid="941508666040985" title="Fin del juego3">
             <sub-events>
                 <event-block sid="899740437820904">
                     <conditions>
@@ -707,10 +765,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="403840936720811" type="Function">
-                            <param id="0" name="Name">&quot;resetVariables&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
                         <action id="0" name="Call function" sid="753915359043469" type="Function">
                             <param id="0" name="Name">&quot;iniciar&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
@@ -725,7 +779,7 @@
                     </conditions>
                     <actions>
                         <action id="-2" name="Go to layout" sid="662211724627934" type="System">
-                            <param id="0" name="Layout">pFin</param>
+                            <param id="0" name="Layout">finSimbolos</param>
                         </action>
                     </actions>
                 </event-block>

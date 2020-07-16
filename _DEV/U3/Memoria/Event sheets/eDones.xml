@@ -10,13 +10,19 @@
                         <condition id="-2" name="On start of layout" sid="204255930902985" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="704109254934286" type="Function">
-                            <param id="0" name="Name">&quot;resetVariables&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
+                        <action id="-15" name="Set visible" sid="321207323128825" type="btnReiniciar">
+                            <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="0" name="Call function" sid="549503721804482" type="Function">
-                            <param id="0" name="Name">&quot;iniciar&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
+                        <action id="0" name="Set text" sid="399834638701171" type="txtTitulo1">
+                            <param id="0" name="Text">&quot;DONES DEL ESPIRITU SANTO&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="787167949376617" type="bgModalesNivel">
+                            <param id="0" name="Animation">&quot;Dones&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="804207457861184" type="bgModalesNivel">
+                            <param id="0" name="X">640</param>
+                            <param id="1" name="Y">420</param>
                         </action>
                     </actions>
                 </event-block>
@@ -27,6 +33,10 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Call function" sid="704109254934286" type="Function">
+                            <param id="0" name="Name">&quot;resetVariables&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                         <action id="0" name="Call function" sid="912941793838607" type="Function">
                             <param id="0" name="Name">&quot;cargarArrayObjetos&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
@@ -43,35 +53,15 @@
                             <param id="0" name="Name">&quot;cargarFichas&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
-                        <action id="0" name="Set text" sid="399834638701171" type="txtTitulo1">
-                            <param id="0" name="Text">&quot;DONES DEL ESPIRITU SANTO&quot;</param>
-                        </action>
                         <action id="-15" name="Set visible" sid="346094028081440" type="txtFinJuego">
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-15" name="Set visible" sid="676620793607589" type="txtTiempo">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="710681098847137" type="marca1">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="534939214253002" type="marca2">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="663749746713079" type="marca3">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="317304770340035" type="marca4">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="142692032786032" type="marca5">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="212458251046128" type="marca6">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="471047796842574" type="marca7">
-                            <param id="0" name="Visibility">0</param>
+                        <action id="-12" name="Set group active" sid="853644099895083" type="System">
+                            <param id="0" name="Group name">&quot;Fin del juego2&quot;</param>
+                            <param id="1" name="State">1</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -132,10 +122,62 @@
                             <param id="0" name="Variable">juegoActivo</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="4" name="Set animation" sid="138786176239684" type="pSabid">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="953885565575975" type="pEntendimiento">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="772033257932701" type="pConsejo">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="822843810854729" type="pCiencia">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="347111448650152" type="pPiedad">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="877499269088708" type="pFortaleza">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="525005820785827" type="pTemor">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="498252993488599">
+            <conditions>
+                <condition id="3" name="On touched object" sid="563554739741754" type="Touch">
+                    <param id="0" name="Object">bgModalesNivel</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="796667463754127" type="Function">
+                    <param id="0" name="Name">&quot;iniciar&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-12" name="Set group active" sid="845900145065426" type="System">
+                    <param id="0" name="Group name">&quot;Manejo de tiempo2&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="182337156127179" type="bgModalesNivel">
+                    <param id="0" name="X">-800</param>
+                    <param id="1" name="Y">-800</param>
+                </action>
+                <action id="-15" name="Set visible" sid="834562356831497" type="btnReiniciar">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
         <event-group description="" sid="203561005298247" title="Carga de fichas2">
             <sub-events>
                 <variable constant="0" name="aux" sid="318860177126320" static="0" type="number">0</variable>
@@ -399,7 +441,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="975916188651414" title="Fin del juego2">
+        <event-group description="" inactive="1" sid="975916188651414" title="Fin del juego2">
             <sub-events>
                 <event-block sid="436423035086941">
                     <conditions>
@@ -536,7 +578,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="778278479170980" title="Manejo de tiempo2">
+        <event-group description="" inactive="1" sid="778278479170980" title="Manejo de tiempo2">
             <sub-events>
                 <event-block sid="627103860886222">
                     <conditions>

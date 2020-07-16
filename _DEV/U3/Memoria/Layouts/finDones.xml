@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>pFin2</name>
+    <name>finDones</name>
     <sid>675256276831611</sid>
-    <event-sheet>eFin2</event-sheet>
+    <event-sheet>eFinDones</event-sheet>
     <size>
         <width>1280</width>
         <height>720</height>
@@ -70,7 +70,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="visorEs" uid="140">
+                <instance type="visorDones" uid="140">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -86,11 +86,11 @@
                         <x>624</x>
                         <y>443</y>
                         <z>0</z>
-                        <width>603</width>
-                        <height>317</height>
+                        <width>917</width>
+                        <height>412</height>
                         <depth>0</depth>
-                        <hotspotX>0.50248754</hotspotX>
-                        <hotspotY>0.618296504</hotspotY>
+                        <hotspotX>0.502726257</hotspotX>
+                        <hotspotY>0.533980608</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -134,6 +134,55 @@
                         <height>128</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="txtTitulo1" uid="67">
+                    <properties>
+                        <text>SÍMBOLOS DEL ESPÍRITU SANTO</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Century Gothic,-48,400,0</font>
+                        <color>255,255,255</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>234</x>
+                        <y>24</y>
+                        <z>0</z>
+                        <width>816</width>
+                        <height>80</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="btnSiguiente" uid="75">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1173</x>
+                        <y>677</y>
+                        <z>0</z>
+                        <width>127</width>
+                        <height>44</height>
+                        <depth>0</depth>
+                        <hotspotX>0.502702713</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
