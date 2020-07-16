@@ -43,7 +43,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">Firefox</prop>
+        <prop name="Preview browser">Chrome</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -254,7 +254,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="mdlFinJuego" sid="571316872649260">
+        <object-type name="modalFinJuego" sid="571316872649260">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="505680586221916" speed="5">
@@ -288,6 +288,9 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="lblReiniciando" sid="862089901362556">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -296,6 +299,7 @@
         <layout>Menu.xml</layout>
         <layout>pFin1.xml</layout>
         <layout>pFin2.xml</layout>
+        <layout>Reiniciando.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>ePrincipal.xml</event-sheet>
@@ -303,6 +307,7 @@
         <event-sheet>eMenu.xml</event-sheet>
         <event-sheet>eFin1.xml</event-sheet>
         <event-sheet>eFin2.xml</event-sheet>
+        <event-sheet>eReiniciando.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="7">

@@ -10,9 +10,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">Principal</layout>
-        <event-sheet active="1" order="1">ePrincipal</event-sheet>
+        <layout active="1" order="0">Principal</layout>
+        <layout order="3">Menu</layout>
+        <layout order="4">Splash</layout>
+        <layout order="5">Reiniciando</layout>
+        <event-sheet order="1">ePrincipal</event-sheet>
         <event-sheet order="2">eFin1</event-sheet>
+        <event-sheet order="6">eReiniciando</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -45,7 +49,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/btnAdelante/" />
         <folder expanded="1" path="animation-folder/btnAtras/" />
         <folder expanded="1" path="animation-folder/visor/" />
-        <folder expanded="1" path="animation-folder/mdlFinJuego/" />
+        <folder expanded="1" path="animation-folder/modalFinJuego/" />
         <folder expanded="1" path="animation-folder/btnReniciar/" />
         <folder expanded="1" path="animation-folder/btnFinalizar/" />
     </folders-expanded>
