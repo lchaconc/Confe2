@@ -115,9 +115,9 @@
                             <param id="0" name="Variable">tiempo</param>
                             <param id="1" name="Value">35</param>
                         </action>
-                        <action id="-9" name="Set value" sid="102287655717631" type="System">
+                        <action id="-9" name="Set value" sid="501598436053471" type="System">
                             <param id="0" name="Variable">juegoActivo</param>
-                            <param id="1" name="Value">1</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                         <action id="4" name="Set animation" sid="529485490626197" type="pAgua">
                             <param id="0" name="Animation">&quot;Default&quot;</param>
@@ -168,6 +168,13 @@
                 </action>
                 <action id="-15" name="Set visible" sid="800857826535725" type="btnReiniciar">
                     <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="261271831106390" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action id="-9" name="Set value" sid="454405274924447" type="System">
+                    <param id="0" name="Variable">juegoActivo</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
@@ -358,6 +365,9 @@
                                 <action id="-10" name="Add to" sid="878063856777157" type="System">
                                     <param id="0" name="Variable">contador</param>
                                     <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="994583180910713" type="txtAciertos">
+                                    <param id="0" name="Text">contador</param>
                                 </action>
                                 <action id="0" name="Call function" sid="583213225232904" type="Function">
                                     <param id="0" name="Name">&quot;tacharPalabras&quot;</param>
@@ -611,6 +621,10 @@
                         <action id="0" name="Call function" sid="538339013456758" type="Function">
                             <param id="0" name="Name">&quot;iniciar&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-9" name="Set value" sid="960119448806309" type="System">
+                            <param id="0" name="Variable">juegoActivo</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
