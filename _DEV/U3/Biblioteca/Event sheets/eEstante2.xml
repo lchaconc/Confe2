@@ -137,6 +137,10 @@
                             <param id="0" name="Variable">libroActual</param>
                             <param id="1" name="Value">&quot;Sabiduría&quot;</param>
                         </action>
+                        <action id="-10" name="Add to" sid="314265624194641" type="System">
+                            <param id="0" name="Variable">librosCorrectos</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="679944359987293">
@@ -489,6 +493,48 @@
                             <param id="0" name="Layout">pEstante4</param>
                         </action>
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="623963312789611" title="Fin de juego2">
+            <sub-events>
+                <event-block sid="242870980696041">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="659569147020901" type="System">
+                            <param id="0" name="Variable">monedas</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="519545436324618">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="328807690185551" type="System">
+                                    <param id="0" name="Variable">librosCorrectos</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">7</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="843531645625261" type="modalFinCorrecto">
+                                    <param id="0" name="X">640</param>
+                                    <param id="1" name="Y">360</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="957108335183031">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="198432290414635" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="642510929983805" type="modalFinIncorrecto">
+                                    <param id="0" name="X">640</param>
+                                    <param id="1" name="Y">360</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>

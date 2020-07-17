@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eSplash</name>
     <events>
+        <variable constant="0" name="idLibroActual" sid="938687552451162" static="0" type="number">0</variable>
+        <variable constant="0" name="librosCorrectos" sid="766927556857021" static="0" type="number">0</variable>
         <variable comment="monedas que se le dan al usuario para comprar los dones  (7 dones.1 p cada Don)" constant="0" name="monedas" sid="659344023831204" static="0" type="number">7</variable>
         <variable constant="0" name="contadorFrutos" sid="616574806249042" static="0" type="number">0</variable>
         <variable constant="0" name="librosComprados" sid="144599650366637" static="0" type="number">0</variable>
@@ -83,11 +85,42 @@
                     <param id="1" name="Y">11</param>
                     <param id="2" name="Value">&quot;paz&quot;</param>
                 </action>
+                <action id="-9" name="Set value" sid="282550138758377" type="System">
+                    <param id="0" name="Variable">contadorFrutos</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="125293422217739" type="System">
+                    <param id="0" name="Variable">idLibroActual</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="228774138415817" type="System">
+                    <param id="0" name="Variable">libroActual</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="759024458547894" type="System">
+                    <param id="0" name="Variable">librosComprados</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="743523929124828" type="System">
+                    <param id="0" name="Variable">librosCorrectos</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="883192445869417" type="System">
+                    <param id="0" name="Variable">monedas</param>
+                    <param id="1" name="Value">7</param>
+                </action>
+                <action id="-9" name="Set value" sid="649262295499355" type="System">
+                    <param id="0" name="Variable">turno</param>
+                    <param id="1" name="Value">0</param>
+                </action>
                 <action id="-16" name="Wait" sid="193440111430470" type="System">
                     <param id="0" name="Seconds">1.0</param>
                 </action>
-                <action id="-2" name="Go to layout" sid="180815684790440" type="System">
+                <action disabled="1" id="-2" name="Go to layout" sid="180815684790440" type="System">
                     <param id="0" name="Layout">pEstante1</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="966713970655826" type="System">
+                    <param id="0" name="Layout">pFrutos1</param>
                 </action>
             </actions>
         </event-block>

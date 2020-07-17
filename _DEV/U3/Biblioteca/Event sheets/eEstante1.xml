@@ -138,6 +138,14 @@
                             <param id="0" name="Variable">libroActual</param>
                             <param id="1" name="Value">&quot;Piedad&quot;</param>
                         </action>
+                        <action id="-10" name="Add to" sid="662529107402615" type="System">
+                            <param id="0" name="Variable">librosCorrectos</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="564580332635924" type="System">
+                            <param id="0" name="Variable">idLibroActual</param>
+                            <param id="1" name="Value">lbrPiedad.UID</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="590284430292057">
@@ -192,6 +200,14 @@
                         <action id="-9" name="Set value" sid="110096059054140" type="System">
                             <param id="0" name="Variable">libroActual</param>
                             <param id="1" name="Value">&quot;Consejo&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="900940305860706" type="System">
+                            <param id="0" name="Variable">librosCorrectos</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="713098755379238" type="System">
+                            <param id="0" name="Variable">idLibroActual</param>
+                            <param id="1" name="Value">lbConsejo.UID</param>
                         </action>
                     </actions>
                 </event-block>
@@ -248,6 +264,10 @@
                             <param id="0" name="Variable">libroActual</param>
                             <param id="1" name="Value">&quot;Ayuno&quot;</param>
                         </action>
+                        <action id="-9" name="Set value" sid="541447550188021" type="System">
+                            <param id="0" name="Variable">idLibroActual</param>
+                            <param id="1" name="Value">biblia1.UID</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="650432741036322">
@@ -303,6 +323,10 @@
                             <param id="0" name="Variable">libroActual</param>
                             <param id="1" name="Value">&quot;Confianza&quot;</param>
                         </action>
+                        <action id="-9" name="Set value" sid="680500142260038" type="System">
+                            <param id="0" name="Variable">idLibroActual</param>
+                            <param id="1" name="Value">biblia2.UID</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="942940312945290">
@@ -357,6 +381,10 @@
                         <action id="-9" name="Set value" sid="711145605318505" type="System">
                             <param id="0" name="Variable">libroActual</param>
                             <param id="1" name="Value">&quot;Esperanza&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="128967147632319" type="System">
+                            <param id="0" name="Variable">idLibroActual</param>
+                            <param id="1" name="Value">biblia3.UID</param>
                         </action>
                     </actions>
                 </event-block>
@@ -598,6 +626,76 @@
                     <actions>
                         <action id="-2" name="Go to layout" sid="190430012380153" type="System">
                             <param id="0" name="Layout">pEstante4</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="421582932602508" title="Fin de juego">
+            <sub-events>
+                <event-block sid="591178814924660">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="119669738460264" type="System">
+                            <param id="0" name="Variable">monedas</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="597096987470748">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="393807258296575" type="System">
+                                    <param id="0" name="Variable">librosCorrectos</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">7</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="798638642490094" type="modalFinCorrecto">
+                                    <param id="0" name="X">640</param>
+                                    <param id="1" name="Y">360</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="999772020039962">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="105406541785277" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="762983652172277" type="modalFinIncorrecto">
+                                    <param id="0" name="X">640</param>
+                                    <param id="1" name="Y">360</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="898818932325660">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="982384148105152" type="Touch">
+                            <param id="0" name="Object">modalFinIncorrecto</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="121426955045903" type="modalFinIncorrecto">
+                            <param id="0" name="X">-800</param>
+                            <param id="1" name="Y">-800</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="394011008442434" type="System">
+                            <param id="0" name="Layout">splash</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="723737796283314">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="736986749116954" type="Touch">
+                            <param id="0" name="Object">modalFinCorrecto</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="302717699788006" type="System">
+                            <param id="0" name="Layout">pFrutos1</param>
                         </action>
                     </actions>
                 </event-block>
