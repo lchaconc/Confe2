@@ -614,11 +614,11 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="480704939827255" title="Fin de juego4">
+        <event-group description="" sid="974530262312515" title="Fin de juego Estantes -4">
             <sub-events>
-                <event-block sid="430499080027083">
+                <event-block sid="106826194605486">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="738461529197704" type="System">
+                        <condition id="-14" name="Compare variable" sid="992552543894933" type="System">
                             <param id="0" name="Variable">monedas</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
@@ -626,33 +626,61 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="858658086203007">
+                        <event-block sid="608522529217018">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="985857480529392" type="System">
+                                <condition id="-14" name="Compare variable" sid="257448019119267" type="System">
                                     <param id="0" name="Variable">librosCorrectos</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">7</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="550764372455188" type="modalFinCorrecto">
+                                <action id="-3" name="Set position" sid="464238730458719" type="modalFinCorrecto">
                                     <param id="0" name="X">640</param>
                                     <param id="1" name="Y">360</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="297503946006671">
+                        <event-block sid="516464712027200">
                             <conditions>
-                                <condition id="-22" name="Else" sid="409837320307657" type="System" />
+                                <condition id="-22" name="Else" sid="729528888811431" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="765063307068480" type="modalFinIncorrecto">
+                                <action id="-3" name="Set position" sid="532248002886703" type="modalFinIncorrecto">
                                     <param id="0" name="X">640</param>
                                     <param id="1" name="Y">360</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="350526144917801">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="225667775485048" type="Touch">
+                            <param id="0" name="Object">modalFinIncorrecto</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="199713023872480" type="modalFinIncorrecto">
+                            <param id="0" name="X">-800</param>
+                            <param id="1" name="Y">-800</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="510893897571588" type="System">
+                            <param id="0" name="Layout">splash</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="418939663364369">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="911921656150639" type="Touch">
+                            <param id="0" name="Object">modalFinCorrecto</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="446595390922229" type="System">
+                            <param id="0" name="Layout">pFrutos1</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
