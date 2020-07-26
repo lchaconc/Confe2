@@ -13,10 +13,12 @@
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -59,9 +61,30 @@
         </object-folder>
         <object-folder name="Buttons" />
         <object-folder name="Sensors" />
-        <object-folder name="Bg" />
+        <object-folder name="Bg">
+            <object-type name="bgModal" sid="726018268118065">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="402080893449879" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="malo" pingpong="0" repeatcount="1" repeatto="0" sid="988045949537410" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-folder name="Texts" />
-        <object-folder name="Modal" />
+        <object-folder name="Modal">
+            <object-type name="txtNombreBebe" sid="550879484760448">
+                <plugin id="TextBox" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="585701437473661">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+        </object-folder>
         <object-folder name="Main">
             <object-type name="bebe" sid="852312360744329">
                 <plugin id="Sprite" />
