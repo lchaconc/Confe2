@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>eMain</name>
+    <events>
+        <variable constant="0" name="turno" sid="409387766481464" static="0" type="number">0</variable>
+        <event-group description="" sid="333332407560062" title="Colocar Simbolos">
+            <sub-events>
+                <event-block sid="639443977851206">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="732599199496048" type="agua" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="182678527176867">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="203178961856149" type="agua">
+                                    <param id="0" name="Object">bebe</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="321948448372925" type="System">
+                                    <param id="0" name="Variable">turno</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="281889872840235">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="396078978800179" type="System">
+                                            <param id="0" name="Variable">turno</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="993593570146545" type="bebe">
+                                            <param id="0" name="Animation">&quot;Feliz&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="937031969182066" type="agua">
+                                            <param id="0" name="X">-600</param>
+                                            <param id="1" name="Y">-600</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="981753059892153" type="System">
+                                            <param id="0" name="Seconds">1.0</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="971022843149292" type="bebe">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="784121683155779">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="422923472162144" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="706635070714235" type="bebe">
+                                            <param id="0" name="Animation">&quot;Enojado&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="253943217348202" type="agua">
+                                            <param id="0" name="X">100</param>
+                                            <param id="1" name="Y">90</param>
+                                        </action>
+                                        <action id="-11" name="Subtract from" sid="117567515944641" type="System">
+                                            <param id="0" name="Variable">turno</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="206450591338396" type="System">
+                                            <param id="0" name="Seconds">1.0</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="691452703133630" type="bebe">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="795190378643700">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="315020771374759" type="vela" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="742806213358779">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="862654372223956" type="vela">
+                                    <param id="0" name="Object">bebe</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="976537870527279" type="System">
+                                    <param id="0" name="Variable">turno</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="749277681641914">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="536188334201828" type="System">
+                                            <param id="0" name="Variable">turno</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="612879511094648" type="bebe">
+                                            <param id="0" name="Animation">&quot;Feliz&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="229335858081907" type="vela">
+                                            <param id="0" name="X">-600</param>
+                                            <param id="1" name="Y">-600</param>
+                                        </action>
+                                        <action id="-11" name="Subtract from" sid="190014956045926" type="System">
+                                            <param id="0" name="Variable">turno</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="772125103252028" type="System">
+                                            <param id="0" name="Seconds">1.0</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="805681666467891" type="bebe">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="109336024817659">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="735885551717432" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="845520911851071" type="bebe">
+                                            <param id="0" name="Animation">&quot;Enojado&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="463709435539280" type="vela">
+                                            <param id="0" name="X">265</param>
+                                            <param id="1" name="Y">90</param>
+                                        </action>
+                                        <action id="-11" name="Subtract from" sid="796475241782148" type="System">
+                                            <param id="0" name="Variable">turno</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="262592704638485" type="System">
+                                            <param id="0" name="Seconds">1.0</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="201392198699569" type="bebe">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
