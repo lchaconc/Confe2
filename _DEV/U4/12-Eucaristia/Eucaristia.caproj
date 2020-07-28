@@ -10,12 +10,16 @@
     <unique-id>uf1sq6qxoh4c</unique-id>
     <saved-with-version>27700</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
-    <used-behaviors />
+    <used-behaviors>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+    </used-behaviors>
     <used-effects />
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -54,8 +58,25 @@
             <object-type name="Touch" sid="221858948176753">
                 <plugin id="Touch" />
             </object-type>
+            <object-type global="1" name="arrayMomento" sid="788667896762458">
+                <plugin id="Arr" />
+            </object-type>
         </object-folder>
-        <object-folder name="Buttons" />
+        <object-folder name="Buttons">
+            <object-type name="btnSiguiente" sid="464683670289642">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="718454190886688">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="952719572331072" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-folder name="Sensors">
             <object-type name="snsNavidad1" sid="170109596392260">
                 <plugin id="Sprite" />
@@ -72,6 +93,28 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="862172437031944" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="snsCeniza1" sid="459771314151300">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="activo" sid="100462522223110" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="274137094099872" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="snsCeniza2" sid="225595368187514">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="activo" sid="903146525329892" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="827304719285954" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
@@ -99,13 +142,38 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="marcaCeniza" sid="433646273579639">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="871337861618205" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Etiquetas">
             <object-type name="lblNavidad" sid="994325196695093">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="729111118407940" speed="5">
-                        <frame duration="1" hotspotX="0.501053" hotspotY="0.503311" original-source="C:\Users\luisc\Desktop\NAVIDAD.png">
+                        <frame duration="1" hotspotX="0.501053" hotspotY="0.506579" original-source="C:\Users\luisc\Desktop\NAVIDAD.png">
+                            <collision-poly>
+                                <point x="0.0842105" y="0.264901" />
+                                <point x="0.911579" y="0.278146" />
+                                <point x="0.964211" y="0.496689" />
+                                <point x="0.922105" y="0.754967" />
+                                <point x="0.0715789" y="0.774834" />
+                                <point x="0.0505263" y="0.496689" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="lblCeniza" sid="477935427930949">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="305812005137515" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503311" original-source="C:\Users\luisc\Desktop\ceniza.png">
                             <collision-poly>
                                 <point x="0.0842105" y="0.264901" />
                                 <point x="0.911579" y="0.278146" />
@@ -119,17 +187,45 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-folder name="Simbolos">
+            <object-type name="casulla" sid="771369138058751">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="591793283513633" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500952" original-source="C:\Users\luisc\Desktop\casulla-verde.jpg" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Simon">
+            <object-type name="Personaje" sid="451805156469405">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Pie" pingpong="0" repeatcount="1" repeatto="0" sid="751491573590579" speed="5">
+                        <frame duration="1" hotspotX="0.503759" hotspotY="0.502538" original-source="C:\Users\luisc\Desktop\pie.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Sentado" pingpong="0" repeatcount="1" repeatto="0" sid="230318596847717" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502591" original-source="C:\Users\luisc\Desktop\sentado.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="txtVsor" sid="490702942824609">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
     </object-folder>
     <families />
     <layout-folder>
         <layout>Splash.xml</layout>
-        <layout>Main.xml</layout>
-        <layout>Main2.xml</layout>
+        <layout>Sopa.xml</layout>
+        <layout>Calendario.xml</layout>
+        <layout>SimonDice.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>eSplash.xml</event-sheet>
-        <event-sheet>eMain2.xml</event-sheet>
-        <event-sheet>eMain.xml</event-sheet>
+        <event-sheet>eCalendario.xml</event-sheet>
+        <event-sheet>eSopa.xml</event-sheet>
+        <event-sheet>eSimonDice.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="0">

@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>eSopa</name>
+    <events>
+        <variable constant="0" name="palabrasEncontradas" sid="393875388871797" static="0" type="number">0</variable>
+        <event-group description="" sid="263947968711391" title="Clic en inicial 1">
+            <sub-events>
+                <event-block sid="819330337740667">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="963780323694056" type="Touch">
+                            <param id="0" name="Object">snsNavidad1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="884101826612567" type="snsNavidad1">
+                            <param id="0" name="Instance variable">activo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="630132817172755">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="785234593900441" type="Touch">
+                            <param id="0" name="Object">snsCeniza1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="142978054677056" type="snsCeniza1">
+                            <param id="0" name="Instance variable">activo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="505487904564016" title="Clic en inical 2">
+            <sub-events>
+                <event-block sid="419815931914950">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="993103908305229" type="Touch">
+                            <param id="0" name="Object">snsNavidad2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="740877937790856">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="510513365003628" type="snsNavidad1">
+                                    <param id="0" name="Instance variable">activo</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="684063244900131" type="marcaNavidad">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="213538907473297" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="964985516608089" type="lblNavidad">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="323991031566173" type="Function">
+                                    <param id="0" name="Name">&quot;verificarFin&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="525456481322824">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="997536821411266" type="Touch">
+                            <param id="0" name="Object">snsCeniza2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="254254427712280">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="405756192625593" type="snsCeniza1">
+                                    <param id="0" name="Instance variable">activo</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="581520069297114" type="marcaCeniza">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="697730068086742" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="205361304852050" type="lblCeniza">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="323938389154219" type="Function">
+                                    <param id="0" name="Name">&quot;verificarFin&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="112202152392240" title="Fin del Sopa">
+            <sub-events>
+                <event-block sid="345960770287784">
+                    <conditions>
+                        <condition id="0" name="On function" sid="146014378337020" type="Function">
+                            <param id="0" name="Name">&quot;verificarFin&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="121458434998414" type="System">
+                            <param id="0" name="Variable">palabrasEncontradas</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="873956028422489">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="194097926046436" type="System">
+                                    <param id="0" name="Variable">palabrasEncontradas</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="555539353734188" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="986746895237617" type="System">
+                                    <param id="0" name="Layer">&quot;Shadow&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="953316539953370" type="casulla">
+                                    <param id="0" name="X">640</param>
+                                    <param id="1" name="Y">300</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="538548385785007" title="Inicio Sopa">
+            <sub-events>
+                <event-block sid="874646831434524">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="947278461898317" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="263501107919901" type="btnSiguiente">
+                            <param id="0" name="Pin to">casulla</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
