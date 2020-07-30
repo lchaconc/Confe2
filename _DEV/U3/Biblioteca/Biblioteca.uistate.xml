@@ -12,10 +12,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <open-tabs>
         <layout order="0">splash</layout>
         <layout order="1">pEstante1</layout>
-        <event-sheet order="2">eEstante1</event-sheet>
+        <event-sheet active="1" order="2">eEstante1</event-sheet>
         <event-sheet order="3">eEstante2</event-sheet>
         <event-sheet order="4">eEstante3</event-sheet>
-        <event-sheet active="1" order="5">eEstante4</event-sheet>
+        <event-sheet order="5">eEstante4</event-sheet>
+        <event-sheet order="6">eSplash</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -31,14 +32,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
-        <folder expanded="1" path="object-folder/GUI/" />
-        <folder expanded="1" path="object-folder/Backgrounds/" />
+        <folder expanded="0" path="object-folder/GUI/" />
+        <folder expanded="0" path="object-folder/Backgrounds/" />
         <folder expanded="0" path="object-folder/Sprites/" />
         <folder expanded="0" path="object-folder/Texts/" />
         <folder expanded="1" path="object-folder/System/" />
         <folder expanded="1" path="object-folder/Sensors/" />
         <folder expanded="0" path="object-folder/Efects/" />
-        <folder expanded="0" path="object-folder/Libros/" />
+        <folder expanded="1" path="object-folder/Libros/" />
         <folder expanded="0" path="object-folder/Estantes/" />
         <folder expanded="0" path="object-folder/Frutos/" />
         <folder expanded="0" path="object-folder/Rotulos/" />
@@ -85,6 +86,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/biblia7/" />
         <folder expanded="1" path="animation-folder/biblia8/" />
         <folder expanded="1" path="animation-folder/biblia9/" />
+        <folder expanded="1" path="animation-folder/librosGeneral/" />
         <folder expanded="1" path="animation-folder/contEstantes/" />
         <folder expanded="1" path="animation-folder/frutos1/" />
         <folder expanded="1" path="animation-folder/frutos2/" />
