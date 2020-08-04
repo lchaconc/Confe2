@@ -176,6 +176,21 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="844818540798416">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="584672686788090" type="System">
+                                    <param id="0" name="Variable">isCorrecto</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="967349887963569" type="System">
+                                    <param id="0" name="Variable">librosCorrectos</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
@@ -473,9 +488,9 @@
                             <param id="0" name="Variable">libroActual</param>
                             <param id="1" name="Value">librosGeneral.AnimationName</param>
                         </action>
-                        <action id="-10" name="Add to" sid="313496272750333" type="System">
-                            <param id="0" name="Variable">librosCorrectos</param>
-                            <param id="1" name="Value">1</param>
+                        <action id="-9" name="Set value" sid="485008123009196" type="System">
+                            <param id="0" name="Variable">isCorrecto</param>
+                            <param id="1" name="Value">librosGeneral.libroCorrecto</param>
                         </action>
                     </actions>
                 </event-block>
