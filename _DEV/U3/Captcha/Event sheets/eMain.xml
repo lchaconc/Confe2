@@ -375,23 +375,13 @@
                                             <param id="0" name="Layer">&quot;Shadow&quot;</param>
                                             <param id="1" name="Visibility">1</param>
                                         </action>
-                                        <action id="-4" name="Set layer visible" sid="631621652846947" type="System">
-                                            <param id="0" name="Layer">&quot;Modal&quot;</param>
-                                            <param id="1" name="Visibility">1</param>
+                                        <action id="4" name="Set animation" sid="775432402387495" type="mdlError">
+                                            <param id="0" name="Animation">&quot;Incorreto2&quot;</param>
+                                            <param id="1" name="From">1</param>
                                         </action>
-                                        <action id="0" name="Set text" sid="316966430549909" type="txtAviso">
-                                            <param id="0" name="Text">&quot;Selección incorrecta. Oprime el botón &apos;Cambiar imagen&apos;. &quot;</param>
-                                        </action>
-                                        <action id="-16" name="Wait" sid="286258143359362" type="System">
-                                            <param id="0" name="Seconds">2</param>
-                                        </action>
-                                        <action id="-4" name="Set layer visible" sid="215014512253490" type="System">
-                                            <param id="0" name="Layer">&quot;Modal&quot;</param>
-                                            <param id="1" name="Visibility">0</param>
-                                        </action>
-                                        <action id="-4" name="Set layer visible" sid="176274893978130" type="System">
-                                            <param id="0" name="Layer">&quot;Shadow&quot;</param>
-                                            <param id="1" name="Visibility">0</param>
+                                        <action id="-3" name="Set position" sid="876125300518708" type="mdlError">
+                                            <param id="0" name="X">640</param>
+                                            <param id="1" name="Y">384</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -406,27 +396,34 @@
                                     <param id="0" name="Layer">&quot;Shadow&quot;</param>
                                     <param id="1" name="Visibility">1</param>
                                 </action>
-                                <action id="-4" name="Set layer visible" sid="680312861572158" type="System">
-                                    <param id="0" name="Layer">&quot;Modal&quot;</param>
-                                    <param id="1" name="Visibility">1</param>
+                                <action id="4" name="Set animation" sid="219195517278553" type="mdlError">
+                                    <param id="0" name="Animation">&quot;Incorrecto1&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
-                                <action id="0" name="Set text" sid="706880261385026" type="txtAviso">
-                                    <param id="0" name="Text">&quot;Falta seleccionar más elementos. Oprime el botón &apos;Cambiar imagen&apos;. &quot;</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="936358762082430" type="System">
-                                    <param id="0" name="Seconds">2</param>
-                                </action>
-                                <action id="-4" name="Set layer visible" sid="865429446703428" type="System">
-                                    <param id="0" name="Layer">&quot;Modal&quot;</param>
-                                    <param id="1" name="Visibility">0</param>
-                                </action>
-                                <action id="-4" name="Set layer visible" sid="803632278229075" type="System">
-                                    <param id="0" name="Layer">&quot;Shadow&quot;</param>
-                                    <param id="1" name="Visibility">0</param>
+                                <action id="-3" name="Set position" sid="807125331457144" type="mdlError">
+                                    <param id="0" name="X">640</param>
+                                    <param id="1" name="Y">384</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="877930791919998">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="803118798053525" type="Touch">
+                            <param id="0" name="Object">mdlError</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="323344031143710" type="System">
+                            <param id="0" name="Layer">&quot;Shadow&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="566081357616690" type="mdlError">
+                            <param id="0" name="X">-600</param>
+                            <param id="1" name="Y">-600</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

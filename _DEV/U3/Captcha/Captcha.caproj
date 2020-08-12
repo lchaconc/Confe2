@@ -180,6 +180,39 @@
             <object-type name="txtAviso" sid="506651927355017">
                 <plugin id="Text" />
             </object-type>
+            <object-type name="mdlError" sid="232679307057941">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Incorreto2" pingpong="0" repeatcount="1" repeatto="0" sid="507370787887694" speed="5">
+                        <frame duration="1" hotspotX="0.500518" hotspotY="0.5" original-source="C:\Users\luisc\Desktop\incorrecto.png">
+                            <collision-poly>
+                                <point x="0.0248705" y="0.048583" />
+                                <point x="0.499482" y="0" />
+                                <point x="0.97513" y="0.048583" />
+                                <point x="1" y="0.5" />
+                                <point x="0.97513" y="0.951417" />
+                                <point x="0.499482" y="1" />
+                                <point x="0.0248705" y="0.951417" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Incorrecto1" pingpong="0" repeatcount="1" repeatto="0" sid="519645127322504" speed="5">
+                        <frame duration="1" hotspotX="0.500514" hotspotY="0.5" original-source="C:\Users\luisc\Desktop\correcto.png">
+                            <collision-poly>
+                                <point x="0.024666" y="0.048583" />
+                                <point x="0.499486" y="0" />
+                                <point x="0.971223" y="0.0566802" />
+                                <point x="0.991778" y="0.5" />
+                                <point x="0.971223" y="0.94332" />
+                                <point x="0.499486" y="1" />
+                                <point x="0.024666" y="0.951417" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="BG">
             <object-type name="bgJuego" sid="871398943643408">
