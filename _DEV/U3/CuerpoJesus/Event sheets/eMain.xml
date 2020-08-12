@@ -242,5 +242,20 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="824251092355321" title="Iniciar">
+            <sub-events>
+                <event-block sid="879292795168400">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="165203474172878" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set CSS style" sid="639622988268262" type="FileChooser">
+                            <param id="0" name="Property name">&quot;opacity&quot;</param>
+                            <param id="1" name="Value">&quot;0&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
