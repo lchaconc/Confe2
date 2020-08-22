@@ -19,6 +19,7 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -211,6 +212,98 @@
             </object-type>
             <object-type name="txtVsor" sid="490702942824609">
                 <plugin id="Text" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Calendario">
+            <object-type name="mando" sid="359687445113824">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Rotate" sid="872357018335239">
+                        <behavior id="Rotate" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="988927135055605" speed="5">
+                        <frame duration="1" hotspotX="0.50079" hotspotY="0.50079" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Combinación\1x\mandocentralcombinacion.png">
+                            <collision-poly>
+                                <point x="0.146919" y="0.146919" />
+                                <point x="0.49921" y="0.00157978" />
+                                <point x="0.853081" y="0.146919" />
+                                <point x="0.99842" y="0.49921" />
+                                <point x="0.853081" y="0.853081" />
+                                <point x="0.49921" y="1" />
+                                <point x="0.1406" y="0.848342" />
+                                <point x="0" y="0.49921" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btnSelect" sid="922795877727468">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="607272478413666" speed="5">
+                        <frame duration="1" hotspotX="0.503356" hotspotY="0.502924" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Combinación\1x\indicadorseleccioncombinacion.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bgCalendario" sid="681027435987761">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="247427159594782" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Combinación\1x\fondoareajuegocombinacion.png">
+                            <collision-poly>
+                                <point x="0.0146379" y="0.0246753" />
+                                <point x="0.5" y="0" />
+                                <point x="0.985362" y="0.0246753" />
+                                <point x="0.99923" y="0.5" />
+                                <point x="0.983821" y="0.972727" />
+                                <point x="0.5" y="1" />
+                                <point x="0.0161787" y="0.972727" />
+                                <point x="0.00154083" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="snsNavidad" sid="488436910662777">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="260666045361247">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="670707476484026" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="snsCuaresma" sid="809566145440631">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="149052032762329">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="373848814202422" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="snsOrdinario2" sid="852715781978263">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="529913617574106">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="397606812370928" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
     </object-folder>
