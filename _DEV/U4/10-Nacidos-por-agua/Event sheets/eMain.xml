@@ -535,23 +535,28 @@
                         <condition id="-14" name="Compare variable" sid="311593823412649" type="System">
                             <param id="0" name="Variable">turno</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">10</param>
+                            <param id="2" name="Value">2</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-16" name="Wait" sid="669403174704115" type="System">
-                            <param id="0" name="Seconds">1</param>
+                            <param id="0" name="Seconds">2</param>
                         </action>
-                        <action id="-3" name="Set position" sid="531139593194460" type="bgModal">
-                            <param id="0" name="X">640</param>
-                            <param id="1" name="Y">340</param>
+                        <action id="-15" name="Set visible" sid="877831975500284" type="bgNombre">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="3" name="Set visible" sid="544066878088094" type="txtNombreBebe">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="789371481301735" type="btnGuardarNombre">
+                            <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="179386069862840">
                     <conditions>
                         <condition id="3" name="On touched object" sid="924204970597685" type="Touch">
-                            <param id="0" name="Object">bgModal</param>
+                            <param id="0" name="Object">btnGuardarNombre</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -568,9 +573,16 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="0" name="Call function" sid="683051570780328" type="Function">
+                                    <param id="0" name="Name">&quot;enojado&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                                 <action id="4" name="Set animation" sid="346220278933708" type="bgModal">
                                     <param id="0" name="Animation">&quot;malo&quot;</param>
                                     <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="242676425930816" type="bgModal">
+                                    <param id="0" name="Visibility">1</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="391725553454794" type="System">
                                     <param id="0" name="Seconds">0.5</param>
@@ -578,9 +590,16 @@
                                 <action id="0" name="Set text" sid="964360455282443" type="txtNombreBebe">
                                     <param id="0" name="Text">&quot;&quot;</param>
                                 </action>
+                                <action id="-15" name="Set visible" sid="632228903831425" type="bgModal">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
                                 <action id="4" name="Set animation" sid="476299729385390" type="bgModal">
                                     <param id="0" name="Animation">&quot;Default&quot;</param>
                                     <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="412581757826313" type="Function">
+                                    <param id="0" name="Name">&quot;descansar&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
@@ -599,9 +618,9 @@
                                 <action id="-16" name="Wait" sid="790160124271977" type="System">
                                     <param id="0" name="Seconds">0.5</param>
                                 </action>
-                                <action id="4" name="Set animation" sid="342105093046152" type="bebe">
-                                    <param id="0" name="Animation">&quot;Feliz&quot;</param>
-                                    <param id="1" name="From">1</param>
+                                <action id="0" name="Call function" sid="500822024078019" type="Function">
+                                    <param id="0" name="Name">&quot;feliz&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
@@ -619,10 +638,6 @@
                         <action id="7" name="Set CSS style" sid="911183738535592" type="txtNombreBebe">
                             <param id="0" name="Property name">&quot;font-size&quot;</param>
                             <param id="1" name="Value">&quot;8em;&quot;</param>
-                        </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="888824824772855" type="txtNombreBebe">
-                            <param id="0" name="Pin to">bgModal</param>
-                            <param id="1" name="Mode">0</param>
                         </action>
                         <action id="0" name="Call function" sid="182296568599797" type="Function">
                             <param id="0" name="Name">&quot;descansar&quot;</param>
