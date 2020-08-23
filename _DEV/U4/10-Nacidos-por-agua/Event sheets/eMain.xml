@@ -483,10 +483,6 @@
                                     <param id="0" name="X">800</param>
                                     <param id="1" name="Y">160</param>
                                 </action>
-                                <action id="-11" name="Subtract from" sid="475924050852389" type="System">
-                                    <param id="0" name="Variable">turno</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
                                 <action id="-16" name="Wait" sid="745444951443512" type="System">
                                     <param id="0" name="Seconds">1.0</param>
                                 </action>
@@ -518,10 +514,6 @@
                                 <action id="-3" name="Set position" sid="696663388252491" type="vestidoIncorrecto">
                                     <param id="0" name="X">1184</param>
                                     <param id="1" name="Y">544</param>
-                                </action>
-                                <action id="-11" name="Subtract from" sid="643475378058275" type="System">
-                                    <param id="0" name="Variable">turno</param>
-                                    <param id="1" name="Value">1</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="150542765160513" type="System">
                                     <param id="0" name="Seconds">1.0</param>
@@ -665,6 +657,17 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="970017960538204">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="236981958580609" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="109192483948545" type="bebe">
+                                    <param id="0" name="Animation">&quot;NinoDescansa&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
                 <event-block sid="250644317167130">
@@ -690,6 +693,17 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="572100958584671">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="257308890714585" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="472616733896165" type="bebe">
+                                    <param id="0" name="Animation">&quot;NinoFeliz&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
                 <event-block sid="470305022619115">
@@ -711,6 +725,17 @@
                             <actions>
                                 <action id="4" name="Set animation" sid="655128748295936" type="bebe">
                                     <param id="0" name="Animation">&quot;NinaEnojada&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="792417908850428">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="348161507086761" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="873905375822886" type="bebe">
+                                    <param id="0" name="Animation">&quot;NinoEnojado&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>
@@ -758,6 +783,52 @@
                             <param id="1" name="Y">416</param>
                         </action>
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="417719646247217" title="Cargar trajes niña - niño">
+            <sub-events>
+                <event-block sid="530622749803176">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="426766339372268" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="170955923694946">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="692179262622951" type="System">
+                                    <param id="0" name="Variable">sexo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;M&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="871384953867783" type="vestidoCorrecto">
+                                    <param id="0" name="Animation">&quot;Nina&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="217173090838588" type="vestidoIncorrecto">
+                                    <param id="0" name="Animation">&quot;Nina&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="770566250231828">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="366971751495874" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="859165287809262" type="vestidoCorrecto">
+                                    <param id="0" name="Animation">&quot;Nino&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="647901136853382" type="vestidoIncorrecto">
+                                    <param id="0" name="Animation">&quot;Nino&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
