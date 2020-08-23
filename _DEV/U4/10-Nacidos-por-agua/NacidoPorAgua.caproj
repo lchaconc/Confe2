@@ -69,7 +69,24 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder name="Sensors" />
+        <object-folder name="Sensors">
+            <object-type name="snsCabeza" sid="261224876903319">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="250119629609646" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="snsPecho" sid="578836818203414">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="813828494865893" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-folder name="Bg">
             <object-type name="bgModal" sid="726018268118065">
                 <plugin id="Sprite" />
@@ -125,6 +142,14 @@
                     </behavior-type>
                 </behaviors>
             </object-type>
+            <object-type name="modalesSimbolos" sid="796527132279142">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Agua" pingpong="0" repeatcount="1" repeatto="0" sid="504138771783639" speed="5">
+                        <frame duration="1" hotspotX="0.500632" hotspotY="0.5" original-source="C:\Users\luisc\Desktop\modalAgua.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Main">
             <object-type name="bebe" sid="852312360744329">
@@ -173,88 +198,88 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\feliz nina\BebeIFeliz nina0040.png" />
                     </animation>
                     <animation framecount="40" loop="0" name="NinaEnojada" pingpong="0" repeatcount="1" repeatto="0" sid="581348019646643" speed="45">
-                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0001.png" />
-                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0002.png" />
-                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0003.png" />
-                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0004.png" />
-                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0005.png" />
-                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0006.png" />
-                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0007.png" />
-                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0008.png" />
-                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0009.png" />
-                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0010.png" />
-                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0011.png" />
-                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0012.png" />
-                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0013.png" />
-                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0014.png" />
-                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0015.png" />
-                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0016.png" />
-                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0017.png" />
-                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0018.png" />
-                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0019.png" />
-                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0020.png" />
-                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0021.png" />
-                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0022.png" />
-                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0023.png" />
-                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0024.png" />
-                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0025.png" />
-                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0026.png" />
-                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0027.png" />
-                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0028.png" />
-                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0029.png" />
-                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0030.png" />
-                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0031.png" />
-                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0032.png" />
-                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0033.png" />
-                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0034.png" />
-                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0035.png" />
-                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0036.png" />
-                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0037.png" />
-                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0038.png" />
-                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0039.png" />
-                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0040.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0001.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0002.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0003.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0004.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0005.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0006.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0007.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0008.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0009.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0010.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0011.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0012.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0013.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0014.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0015.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0016.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0017.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0018.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0019.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0020.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0021.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0022.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0023.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0024.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0025.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0026.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0027.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0028.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0029.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0030.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0031.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0032.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0033.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0034.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0035.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0036.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0037.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0038.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0039.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\enojada nina\BebeEnojado nina0040.png" />
                     </animation>
                     <animation framecount="40" loop="1" name="NinaDEscansa" pingpong="0" repeatcount="1" repeatto="0" sid="466472458191218" speed="55">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0001.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0002.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0003.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0004.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0005.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0006.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0007.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0008.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0009.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0010.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0011.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0012.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0013.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0014.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0015.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0016.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0017.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0018.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0019.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0020.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0021.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0022.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0023.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0024.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0025.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0026.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0027.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0028.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0029.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0030.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0031.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0032.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0033.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0034.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0035.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0036.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0037.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0038.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0039.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0040.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0001.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0002.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0003.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0004.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0005.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0006.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0007.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0008.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0009.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0010.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0011.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0012.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0013.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0014.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0015.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0016.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0017.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0018.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0019.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0020.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0021.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0022.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0023.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0024.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0025.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0026.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0027.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0028.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0029.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0030.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0031.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0032.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0033.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0034.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0035.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0036.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0037.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0038.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0039.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500743" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Idle nina\BebeIdle nina0040.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -267,7 +292,7 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="190931529523977" speed="5">
-                        <frame duration="1" hotspotX="0.503067" hotspotY="0.503311" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\aguaNo.png" />
+                        <frame duration="1" hotspotX="0.506667" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Elementos solos\agua.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -280,7 +305,7 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="433547064829020" speed="5">
-                        <frame duration="1" hotspotX="0.503067" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\velaencendid.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502415" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Elementos solos\velaencendidasola.png">
                             <collision-poly>
                                 <point x="0" y="0.256881" />
                                 <point x="1" y="0.256881" />
@@ -300,7 +325,7 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="904643924962253" speed="5">
-                        <frame duration="1" hotspotX="0.503067" hotspotY="0.503311" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\oleoenfermos.png" />
+                        <frame duration="1" hotspotX="0.505882" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Elementos solos\OleoEnfermosSolo.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -313,7 +338,7 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="644514799301465" speed="5">
-                        <frame duration="1" hotspotX="0.503067" hotspotY="0.503311" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\santocrisma.png" />
+                        <frame duration="1" hotspotX="0.505882" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Elementos solos\SAntoCrismaSolo.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -326,10 +351,10 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Nino" pingpong="0" repeatcount="1" repeatto="0" sid="238465269523278" speed="5">
-                        <frame duration="1" hotspotX="0.503067" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\ropaninoNo.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Elementos solos\ropacelesteHombre.png" />
                     </animation>
                     <animation framecount="1" loop="0" name="Nina" pingpong="0" repeatcount="1" repeatto="0" sid="710505096477146" speed="5">
-                        <frame duration="1" hotspotX="0.503067" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\ropaninaNo.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503356" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Elementos solos\RopaRosaNina.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -342,7 +367,7 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="598436281795384" speed="5">
-                        <frame duration="1" hotspotX="0.503067" hotspotY="0.503311" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\oleocatecumenos.png" />
+                        <frame duration="1" hotspotX="0.505882" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Elementos solos\OleoCatSolo.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -355,7 +380,7 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="357195462480857" speed="5">
-                        <frame duration="1" hotspotX="0.503067" hotspotY="0.502959" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\velaapagada.png">
+                        <frame duration="1" hotspotX="0.506024" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Elementos solos\velaapagadasola.png">
                             <collision-poly>
                                 <point x="0" y="0.174041" />
                                 <point x="1" y="0.150372" />
@@ -375,14 +400,14 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Nino" pingpong="0" repeatcount="1" repeatto="0" sid="417374212454271" speed="5">
-                        <frame duration="1" hotspotX="0.503067" hotspotY="0.503311" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\ropaninosi.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Elementos solos\ropablancaHombre.png" />
                     </animation>
                     <animation framecount="1" loop="0" name="Nina" pingpong="0" repeatcount="1" repeatto="0" sid="646081508763049" speed="5">
-                        <frame duration="1" hotspotX="0.503067" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\ropaninasi.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503356" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Elementos solos\RopaBlancaNina.png" />
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="vestidoIncorrecto2" sid="785779547430753">
+            <object-type name="conchaBautismal" sid="785779547430753">
                 <plugin id="Sprite" />
                 <behaviors>
                     <behavior-type name="DragDrop" sid="802270058748473">
@@ -391,7 +416,15 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="721318788439602" speed="5">
-                        <frame duration="1" hotspotX="0.503067" hotspotY="0.503311" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\conchabautismal.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\Elementos solos\ConchaBautSola.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="baseBoton" sid="407039339188487">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="118808106056793" speed="5">
+                        <frame duration="1" hotspotX="0.503067" hotspotY="0.503311" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Assets\baseboton.jpg" />
                     </animation>
                 </animation-folder>
             </object-type>
