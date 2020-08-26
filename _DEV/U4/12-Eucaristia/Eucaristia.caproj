@@ -8,7 +8,7 @@
     <author-website>http://</author-website>
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>uf1sq6qxoh4c</unique-id>
-    <saved-with-version>27700</saved-with-version>
+    <saved-with-version>27900</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
@@ -18,6 +18,7 @@
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
     </used-behaviors>
@@ -63,131 +64,207 @@
                 <plugin id="Arr" />
             </object-type>
         </object-folder>
-        <object-folder name="Buttons">
-            <object-type name="btnSiguiente" sid="464683670289642">
-                <plugin id="Sprite" />
-                <behaviors>
-                    <behavior-type name="Pin" sid="718454190886688">
-                        <behavior id="Pin" />
-                    </behavior-type>
-                </behaviors>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="952719572331072" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
+        <object-folder name="Sopa">
+            <object-folder name="ListaPalabras">
+                <object-type name="lblCeniza" sid="477935427930949">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="305812005137515" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.515152" original-source="C:\Users\luisc\Desktop\ceniza.png">
+                                <collision-poly>
+                                    <point x="0.0842105" y="0.264901" />
+                                    <point x="0.911579" y="0.278146" />
+                                    <point x="0.964211" y="0.496689" />
+                                    <point x="0.922105" y="0.754967" />
+                                    <point x="0.0715789" y="0.774834" />
+                                    <point x="0.0505263" y="0.496689" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="lblCuaresma" sid="994325196695093">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="729111118407940" speed="5">
+                            <frame duration="1" hotspotX="0.503106" hotspotY="0.514286" original-source="C:\Users\luisc\Desktop\cuaresma.png">
+                                <collision-poly>
+                                    <point x="0.0496894" y="0.228571" />
+                                    <point x="0.937888" y="0.285714" />
+                                    <point x="0.956522" y="0.485714" />
+                                    <point x="0.913043" y="0.6" />
+                                    <point x="0.0496894" y="0.771429" />
+                                    <point x="0.0124224" y="0.485714" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Marcas">
+                <object-type name="marcaCuaresma" sid="597497681157225">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="576403882582362" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="marcaCeniza" sid="433646273579639">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="871337861618205" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Sensors">
+                <object-type name="snsCuaresma1" sid="170109596392260">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="activo" sid="324449569939443" type="boolean" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="650450463448713" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="snsCuaresma2" sid="768982168062655">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="862172437031944" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="snsCeniza1" sid="459771314151300">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="activo" sid="100462522223110" type="boolean" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="274137094099872" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="snsCeniza2" sid="225595368187514">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="activo" sid="903146525329892" type="boolean" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="827304719285954" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Buttons">
+                <object-type name="btnSiguiente" sid="464683670289642">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Pin" sid="718454190886688">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="952719572331072" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Backgrounds">
+                <object-type name="bgSopa2" sid="312321392697347">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="559604134514601" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Sopaletras\Assets\Asset 7Sopaletras.png">
+                                <collision-poly>
+                                    <point x="0.0428571" y="0.0710059" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.952679" y="0.0784024" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.947321" y="0.912722" />
+                                    <point x="0.5" y="0.998521" />
+                                    <point x="0.05" y="0.91716" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="bgSopa" sid="387161100783804">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="923166447403173" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Sopaletras\Assets\Asset 15Sopaletras.png">
+                                <collision-poly>
+                                    <point x="0.000773395" y="0.00136612" />
+                                    <point x="0.999227" y="0.00136612" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="bgSopa3" sid="302301952833912">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="243986909701298" speed="5">
+                            <frame duration="1" hotspotX="0.500585" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Sopaletras\Assets\Asset 6Sopaletras.png">
+                                <collision-poly>
+                                    <point x="0.0502924" y="0.0676101" />
+                                    <point x="0.499415" y="0" />
+                                    <point x="0.94386" y="0.0754717" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.948538" y="0.930818" />
+                                    <point x="0.499415" y="1" />
+                                    <point x="0.0467836" y="0.937107" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="bgMatrizletras" sid="265529281494853">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="707376541219808" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Sopaletras\Assets\Asset 11Sopaletras.png">
+                                <collision-poly>
+                                    <point x="0.103133" y="0.125" />
+                                    <point x="0.968668" y="0.0379747" />
+                                    <point x="0.967363" y="0.5" />
+                                    <point x="0.845953" y="0.813291" />
+                                    <point x="0.0809399" y="0.901899" />
+                                    <point x="0.0770235" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="bgIntroSopa" sid="307919119344510">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Physics" sid="739884258129572">
+                            <behavior id="Physics" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="577039547145401" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Sopaletras\Referencias\Sopadeletras-02.jpg" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
         </object-folder>
-        <object-folder name="Sensors">
-            <object-type name="snsNavidad1" sid="170109596392260">
-                <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable name="activo" sid="324449569939443" type="boolean" />
-                </instance-variables>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="650450463448713" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="snsNavidad2" sid="768982168062655">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="862172437031944" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="snsCeniza1" sid="459771314151300">
-                <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable name="activo" sid="100462522223110" type="boolean" />
-                </instance-variables>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="274137094099872" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="snsCeniza2" sid="225595368187514">
-                <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable name="activo" sid="903146525329892" type="boolean" />
-                </instance-variables>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="827304719285954" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-        </object-folder>
-        <object-folder name="Bg">
-            <object-type name="bgSopa" sid="387161100783804">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="923166447403173" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Documents\SOPA.jpg" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-        </object-folder>
-        <object-folder name="Texts" />
         <object-folder name="Modal" />
         <object-folder name="Main" />
-        <object-folder name="Marcas">
-            <object-type name="marcaNavidad" sid="597497681157225">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="576403882582362" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="marcaCeniza" sid="433646273579639">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="871337861618205" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-        </object-folder>
-        <object-folder name="Etiquetas">
-            <object-type name="lblNavidad" sid="994325196695093">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="729111118407940" speed="5">
-                        <frame duration="1" hotspotX="0.501053" hotspotY="0.506579" original-source="C:\Users\luisc\Desktop\NAVIDAD.png">
-                            <collision-poly>
-                                <point x="0.0842105" y="0.264901" />
-                                <point x="0.911579" y="0.278146" />
-                                <point x="0.964211" y="0.496689" />
-                                <point x="0.922105" y="0.754967" />
-                                <point x="0.0715789" y="0.774834" />
-                                <point x="0.0505263" y="0.496689" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="lblCeniza" sid="477935427930949">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="305812005137515" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.503311" original-source="C:\Users\luisc\Desktop\ceniza.png">
-                            <collision-poly>
-                                <point x="0.0842105" y="0.264901" />
-                                <point x="0.911579" y="0.278146" />
-                                <point x="0.964211" y="0.496689" />
-                                <point x="0.922105" y="0.754967" />
-                                <point x="0.0715789" y="0.774834" />
-                                <point x="0.0505263" y="0.496689" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-        </object-folder>
         <object-folder name="Simbolos">
             <object-type name="casulla" sid="771369138058751">
                 <plugin id="Sprite" />
