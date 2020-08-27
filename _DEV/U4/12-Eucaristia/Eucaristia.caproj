@@ -292,6 +292,191 @@
             </object-type>
         </object-folder>
         <object-folder name="Calendario">
+            <object-folder name="Sensores">
+                <object-type name="snsCuaresma" sid="809566145440631">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Pin" sid="149052032762329">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="373848814202422" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="snsNavidad" sid="488436910662777">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Pin" sid="260666045361247">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="670707476484026" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="snsOrdinario2" sid="852715781978263">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Pin" sid="529913617574106">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="397606812370928" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="snsPascua" sid="679407561842684">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Pin" sid="415947719731223">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="950988565613111" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="snsAdviento" sid="824505902276813">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Pin" sid="748617257319656">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="671918567514565" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="snsOrdinario1" sid="588044498755898">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Pin" sid="755561751028950">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="878146860202604" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="snsLimiteInferior" sid="895561696965371">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Physics" sid="506577402411414">
+                            <behavior id="Physics" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="352006574792105" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="posNavidad" sid="719254011023574">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="isCorrecto" sid="289489225856580" type="boolean" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="534233762910822" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="posAdviento" sid="990406606736149">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="isCorrecto" sid="498696530478286" type="boolean" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="784782013700484" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="posCuaresma" sid="615814379220601">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="isCorrecto" sid="626000879138806" type="boolean" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="286778865009941" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Palabras">
+                <object-type name="navidad" sid="337863524083741">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Physics" sid="295552399879749">
+                            <behavior id="Physics" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="738505164881179" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Desktop\navidad.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="cuaresma" sid="701232104976862">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Physics" sid="490698026208015">
+                            <behavior id="Physics" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="721347720087650" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Desktop\cuaresma.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="adviento" sid="210310688120351">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Physics" sid="709498695138273">
+                            <behavior id="Physics" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="275587437603662" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Desktop\adviento.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Botones">
+                <object-type name="btnSelect" sid="922795877727468">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="607272478413666" speed="5">
+                            <frame duration="1" hotspotX="0.503356" hotspotY="0.502924" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Combinación\1x\indicadorseleccioncombinacion.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="btnAbrir" sid="497834666648970">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="421701466849518" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Combinación\1x\BtnAbrircombinacion.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
             <object-type name="mando" sid="359687445113824">
                 <plugin id="Sprite" />
                 <behaviors>
@@ -316,14 +501,6 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="btnSelect" sid="922795877727468">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="607272478413666" speed="5">
-                        <frame duration="1" hotspotX="0.503356" hotspotY="0.502924" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Combinación\1x\indicadorseleccioncombinacion.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
             <object-type name="bgCalendario" sid="681027435987761">
                 <plugin id="Sprite" />
                 <animation-folder>
@@ -340,45 +517,6 @@
                                 <point x="0.00154083" y="0.5" />
                             </collision-poly>
                         </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="snsNavidad" sid="488436910662777">
-                <plugin id="Sprite" />
-                <behaviors>
-                    <behavior-type name="Pin" sid="260666045361247">
-                        <behavior id="Pin" />
-                    </behavior-type>
-                </behaviors>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="670707476484026" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="snsCuaresma" sid="809566145440631">
-                <plugin id="Sprite" />
-                <behaviors>
-                    <behavior-type name="Pin" sid="149052032762329">
-                        <behavior id="Pin" />
-                    </behavior-type>
-                </behaviors>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="373848814202422" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="snsOrdinario2" sid="852715781978263">
-                <plugin id="Sprite" />
-                <behaviors>
-                    <behavior-type name="Pin" sid="529913617574106">
-                        <behavior id="Pin" />
-                    </behavior-type>
-                </behaviors>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="397606812370928" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>

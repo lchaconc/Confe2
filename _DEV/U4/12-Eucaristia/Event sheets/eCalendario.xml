@@ -4,110 +4,275 @@
     <name>eCalendario</name>
     <events>
         <variable constant="0" name="tiempo" sid="805755841525482" static="0" type="text"></variable>
-        <variable constant="0" name="finX" sid="695875777509819" static="0" type="number">0</variable>
-        <variable constant="0" name="incioX" sid="327758540670576" static="0" type="number">0</variable>
-        <event-block sid="415033626280564">
-            <conditions>
-                <condition id="1" name="On any touch end" sid="811020814706478" type="Touch" />
-            </conditions>
-            <actions>
-                <action behavior="Rotate" id="0" name="Set speed" sid="713670538402921" type="mando">
-                    <param id="0" name="Speed">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="616853055883286">
-            <conditions>
-                <condition id="3" name="On touched object" sid="557216374475660" type="Touch">
-                    <param id="0" name="Object">mando</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Rotate" id="0" name="Set speed" sid="647415006154750" type="mando">
-                    <param id="0" name="Speed">50</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="691675953325724">
-            <conditions>
-                <condition id="16" name="On hold over object" sid="529931756285285" type="Touch">
-                    <param id="0" name="Object">btnSelect</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="883420150703121" type="System">
-                    <param id="0" name="Variable">finX</param>
-                    <param id="1" name="Value">finX + 1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="844085032910734">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="936810427483222" type="System" />
-            </conditions>
-            <actions>
-                <action behavior="Pin" id="0" name="Pin to object" sid="350660088477562" type="snsNavidad">
-                    <param id="0" name="Pin to">mando</param>
-                    <param id="1" name="Mode">0</param>
-                </action>
-                <action behavior="Pin" id="0" name="Pin to object" sid="296185250522509" type="snsCuaresma">
-                    <param id="0" name="Pin to">mando</param>
-                    <param id="1" name="Mode">0</param>
-                </action>
-                <action behavior="Pin" id="0" name="Pin to object" sid="153094613030645" type="snsOrdinario2">
-                    <param id="0" name="Pin to">mando</param>
-                    <param id="1" name="Mode">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="920493479910777">
-            <conditions>
-                <condition id="3" name="On touched object" sid="308931146424119" type="Touch">
-                    <param id="0" name="Object">btnSelect</param>
-                </condition>
-            </conditions>
-            <actions />
+        <event-group description="" sid="441196110933399" title="Colisiones con selector">
             <sub-events>
-                <event-block sid="719739401944348">
+                <event-block sid="920493479910777">
                     <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="404074902092220" type="btnSelect">
-                            <param id="0" name="Object">snsNavidad</param>
+                        <condition id="3" name="On touched object" sid="308931146424119" type="Touch">
+                            <param id="0" name="Object">btnSelect</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="936671718739195" type="System">
-                            <param id="0" name="Variable">tiempo</param>
-                            <param id="1" name="Value">&quot;navidad&quot;</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="719739401944348">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="404074902092220" type="btnSelect">
+                                    <param id="0" name="Object">snsNavidad</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="936671718739195" type="System">
+                                    <param id="0" name="Variable">tiempo</param>
+                                    <param id="1" name="Value">&quot;navidad&quot;</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="121490747545069" type="navidad">
+                                    <param id="0" name="X">1165</param>
+                                    <param id="1" name="Y">-100</param>
+                                </action>
+                                <action behavior="Physics" id="27" name="Set enabled" sid="812592149024803" type="navidad">
+                                    <param id="0" name="Mode">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="619306253913903">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="272918899074514" type="btnSelect">
+                                    <param id="0" name="Object">snsCuaresma</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="748238685805166" type="System">
+                                    <param id="0" name="Variable">tiempo</param>
+                                    <param id="1" name="Value">&quot;cuaresma&quot;</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="718496364613275" type="cuaresma">
+                                    <param id="0" name="X">1165</param>
+                                    <param id="1" name="Y">-100</param>
+                                </action>
+                                <action behavior="Physics" id="27" name="Set enabled" sid="476490247718870" type="cuaresma">
+                                    <param id="0" name="Mode">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="958109777681034">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="243775783243041" type="btnSelect">
+                                    <param id="0" name="Object">snsOrdinario2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="757384715956381" type="System">
+                                    <param id="0" name="Variable">tiempo</param>
+                                    <param id="1" name="Value">&quot;ordinario2&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="993270925979273">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="733528548265331" type="btnSelect">
+                                    <param id="0" name="Object">snsOrdinario1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="542523241672613" type="System">
+                                    <param id="0" name="Variable">tiempo</param>
+                                    <param id="1" name="Value">&quot;ordinario1&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="784338626529411">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="838299107749863" type="btnSelect">
+                                    <param id="0" name="Object">snsAdviento</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="904750655244142" type="System">
+                                    <param id="0" name="Variable">tiempo</param>
+                                    <param id="1" name="Value">&quot;adviento&quot;</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="111053371294081" type="adviento">
+                                    <param id="0" name="X">1165</param>
+                                    <param id="1" name="Y">-100</param>
+                                </action>
+                                <action behavior="Physics" id="27" name="Set enabled" sid="575173500020124" type="adviento">
+                                    <param id="0" name="Mode">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="761371378613814">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="844047195099524" type="btnSelect">
+                                    <param id="0" name="Object">snsPascua</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="998049891913281" type="System">
+                                    <param id="0" name="Variable">tiempo</param>
+                                    <param id="1" name="Value">&quot;pascua&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
-                <event-block sid="619306253913903">
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="497052805586533" title="Iniciar">
+            <sub-events>
+                <event-block sid="844085032910734">
                     <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="272918899074514" type="btnSelect">
-                            <param id="0" name="Object">snsCuaresma</param>
-                        </condition>
+                        <condition id="-2" name="On start of layout" sid="936810427483222" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="748238685805166" type="System">
-                            <param id="0" name="Variable">tiempo</param>
-                            <param id="1" name="Value">&quot;cuaresma&quot;</param>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="350660088477562" type="snsNavidad">
+                            <param id="0" name="Pin to">mando</param>
+                            <param id="1" name="Mode">0</param>
                         </action>
-                    </actions>
-                </event-block>
-                <event-block sid="958109777681034">
-                    <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="243775783243041" type="btnSelect">
-                            <param id="0" name="Object">snsOrdinario2</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="757384715956381" type="System">
-                            <param id="0" name="Variable">tiempo</param>
-                            <param id="1" name="Value">&quot;II ordinario&quot;</param>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="296185250522509" type="snsCuaresma">
+                            <param id="0" name="Pin to">mando</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="153094613030645" type="snsOrdinario2">
+                            <param id="0" name="Pin to">mando</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="327593425294744" type="snsAdviento">
+                            <param id="0" name="Pin to">mando</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="216923255352886" type="snsOrdinario1">
+                            <param id="0" name="Pin to">mando</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="756568442930080" type="snsPascua">
+                            <param id="0" name="Pin to">mando</param>
+                            <param id="1" name="Mode">0</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
-        </event-block>
+        </event-group>
+        <event-group description="" sid="982351675022950" title="Animacion mando">
+            <sub-events>
+                <event-block sid="616853055883286">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="557216374475660" type="Touch">
+                            <param id="0" name="Object">mando</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Rotate" id="0" name="Set speed" sid="647415006154750" type="mando">
+                            <param id="0" name="Speed">50</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="415033626280564">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="811020814706478" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Rotate" id="0" name="Set speed" sid="713670538402921" type="mando">
+                            <param id="0" name="Speed">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="122135864279648" title="Verficiar combinacion">
+            <sub-events>
+                <event-block sid="657651520010707">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="954524768635850" type="Touch">
+                            <param id="0" name="Object">btnAbrir</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="598058487922208">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="648970804241268" type="posAdviento">
+                                    <param id="0" name="Object">adviento</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="435397792930210" type="posAdviento">
+                                    <param id="0" name="Instance variable">isCorrecto</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="14" name="Log" sid="821761120473111" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">posAdviento.isCorrecto</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="390180840858126">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="541861288810017" type="posNavidad">
+                                    <param id="0" name="Object">navidad</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="934777343246357" type="posNavidad">
+                                    <param id="0" name="Instance variable">isCorrecto</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="14" name="Log" sid="543155394772930" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">posNavidad.isCorrecto</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="319339964643158">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="895115315536351" type="posCuaresma">
+                                    <param id="0" name="Object">cuaresma</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="615964063260288" type="posCuaresma">
+                                    <param id="0" name="Instance variable">isCorrecto</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="14" name="Log" sid="897598678850776" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">posCuaresma.isCorrecto</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="391014990008484">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="270671037621243" type="Function">
+                                    <param id="0" name="Name">&quot;verificarDesbloqueo&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="970168669240164">
+                    <conditions>
+                        <condition id="0" name="On function" sid="654051939408845" type="Function">
+                            <param id="0" name="Name">&quot;verificarDesbloqueo&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="133375102978615" type="posAdviento">
+                            <param id="0" name="Instance variable">isCorrecto</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="187626728808645" type="posCuaresma">
+                            <param id="0" name="Instance variable">isCorrecto</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="545396241106609" type="posNavidad">
+                            <param id="0" name="Instance variable">isCorrecto</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Log" sid="705578348089297" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;DESBLOQUEADO&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
