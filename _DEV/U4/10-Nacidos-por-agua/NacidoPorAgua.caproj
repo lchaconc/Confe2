@@ -18,6 +18,7 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -131,7 +132,33 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder name="Texts" />
+        <object-folder name="Texts">
+            <object-type name="textosModal" sid="360075450141820">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="791129543333132">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Agua" pingpong="0" repeatcount="1" repeatto="0" sid="403433665383972" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503597" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\El agua Símbolo de vida y muerte. Se muere al pecado y se nace a la vida de fe..png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Crisma" pingpong="0" repeatcount="1" repeatto="0" sid="130764996884522" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502262" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\El Santo Crisma se aplica en la coronilla y significa el don del Espíritu Santo que se comunica al cristiano una vez recibida el agua bautismal..png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Vestido" pingpong="0" repeatcount="1" repeatto="0" sid="584815436985440" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\La vestidura blanca Es símbolo de la vida de gracia, indicando que el bautizado se ha revestido de Cristo..png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Cate" pingpong="0" repeatcount="1" repeatto="0" sid="138444796790787" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Óleo de los catecúmenos Se coloca en el pecho del bautizando; es símbolo de l a fortaleza que viene de Cristo Salvador..png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Vela" pingpong="0" repeatcount="1" repeatto="0" sid="412089777576165" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502793" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Vela encendida Significa que Cristo ilumina al bautizado, quien se compromete a ser luz en el mundo..png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-folder name="Modal">
             <object-type name="txtNombreBebe" sid="550879484760448">
                 <plugin id="TextBox" />
@@ -140,7 +167,32 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Agua" pingpong="0" repeatcount="1" repeatto="0" sid="504138771783639" speed="5">
-                        <frame duration="1" hotspotX="0.500632" hotspotY="0.5" original-source="C:\Users\luisc\Desktop\modalAgua.png" />
+                        <frame duration="1" hotspotX="0.50066" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\modaltransp.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="visorSimbolos" sid="726136935302523">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="421725480863344">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Agua" pingpong="0" repeatcount="1" repeatto="0" sid="979603081395603" speed="5">
+                        <frame duration="1" hotspotX="0.506667" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Elementos solos\agua.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Crisma" pingpong="0" repeatcount="1" repeatto="0" sid="626942840888010" speed="5">
+                        <frame duration="1" hotspotX="0.505882" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Elementos solos\SAntoCrismaSolo.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="vestido" pingpong="0" repeatcount="1" repeatto="0" sid="933720172795494" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Elementos solos\ropablancaHombre.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Cate" pingpong="0" repeatcount="1" repeatto="0" sid="144975911476624" speed="5">
+                        <frame duration="1" hotspotX="0.505882" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Elementos solos\OleoCatSolo.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Vela" pingpong="0" repeatcount="1" repeatto="0" sid="750245607592565" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502415" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\Elementos solos\velaencendidasola.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -552,10 +604,10 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Activa" pingpong="0" repeatcount="1" repeatto="0" sid="975596363757349" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Desktop\estrella_Activa.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.506494" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\estrellaON.png" />
                     </animation>
                     <animation framecount="1" loop="0" name="Inactiva" pingpong="0" repeatcount="1" repeatto="0" sid="277057847021257" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Desktop\estrella_desactiva.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\estrellaOFF.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -563,10 +615,10 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Activa" pingpong="0" repeatcount="1" repeatto="0" sid="940950180695925" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Desktop\estrella_Activa.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.506494" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\estrellaON.png" />
                     </animation>
                     <animation framecount="1" loop="0" name="Inactiva" pingpong="0" repeatcount="1" repeatto="0" sid="703981639653489" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Desktop\estrella_desactiva.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\estrellaOFF.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -574,10 +626,10 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Activa" pingpong="0" repeatcount="1" repeatto="0" sid="685333534561411" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Desktop\estrella_Activa.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.506494" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\estrellaON.png" />
                     </animation>
                     <animation framecount="1" loop="0" name="Inactiva" pingpong="0" repeatcount="1" repeatto="0" sid="104656165772379" speed="5">
-                        <frame duration="1" hotspotX="0.494949" hotspotY="0.5" original-source="C:\Users\luisc\Desktop\estrella_desactiva.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\JuegoBautismo\estrellaOFF.png" />
                     </animation>
                 </animation-folder>
             </object-type>

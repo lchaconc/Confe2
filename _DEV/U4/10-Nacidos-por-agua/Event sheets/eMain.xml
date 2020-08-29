@@ -800,6 +800,14 @@
                             <param id="0" name="Name">&quot;descansar&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="582774376132204" type="textosModal">
+                            <param id="0" name="Pin to">modalesSimbolos</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="968031453784751" type="visorSimbolos">
+                            <param id="0" name="Pin to">modalesSimbolos</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -953,6 +961,130 @@
                         <action id="-3" name="Set position" sid="487274332212815" type="modalesSimbolos">
                             <param id="0" name="X">672</param>
                             <param id="1" name="Y">416</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="501146712778655" type="visorSimbolos">
+                            <param id="0" name="Animation">&quot;Agua&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="494550045279991" type="textosModal">
+                            <param id="0" name="Animation">&quot;Agua&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="866034687942037">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="130280190544997" type="Touch">
+                            <param id="0" name="Object">crisma</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="796248605370728" type="System">
+                            <param id="0" name="Layer">&quot;Shadow&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="978477399055580" type="modalesSimbolos">
+                            <param id="0" name="Animation">&quot;Agua&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="140680135826644" type="modalesSimbolos">
+                            <param id="0" name="X">672</param>
+                            <param id="1" name="Y">416</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="700352544547092" type="visorSimbolos">
+                            <param id="0" name="Animation">&quot;Crisma&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="320506548781659" type="textosModal">
+                            <param id="0" name="Animation">&quot;Crisma&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="803542779592516">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="838751402863146" type="Touch">
+                            <param id="0" name="Object">vestidoCorrecto</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="200781615013929" type="System">
+                            <param id="0" name="Layer">&quot;Shadow&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="291359130529597" type="modalesSimbolos">
+                            <param id="0" name="Animation">&quot;Agua&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="282552138548760" type="modalesSimbolos">
+                            <param id="0" name="X">672</param>
+                            <param id="1" name="Y">416</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="459432517954958" type="visorSimbolos">
+                            <param id="0" name="Animation">&quot;vestido&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="718187022964159" type="textosModal">
+                            <param id="0" name="Animation">&quot;Vestido&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="539249551776452">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="557642578884163" type="Touch">
+                            <param id="0" name="Object">oleCatecumenos</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="922897812982714" type="System">
+                            <param id="0" name="Layer">&quot;Shadow&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="812804556777177" type="modalesSimbolos">
+                            <param id="0" name="Animation">&quot;Agua&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="485807661989645" type="modalesSimbolos">
+                            <param id="0" name="X">672</param>
+                            <param id="1" name="Y">416</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="274746291899752" type="visorSimbolos">
+                            <param id="0" name="Animation">&quot;Cate&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="461261365074860" type="textosModal">
+                            <param id="0" name="Animation">&quot;Cate&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="346270598590251">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="159995065802348" type="Touch">
+                            <param id="0" name="Object">velaEncendida</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="886872791716284" type="System">
+                            <param id="0" name="Layer">&quot;Shadow&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="397070524489656" type="modalesSimbolos">
+                            <param id="0" name="Animation">&quot;Agua&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="647740733961415" type="modalesSimbolos">
+                            <param id="0" name="X">672</param>
+                            <param id="1" name="Y">416</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="241240690971275" type="visorSimbolos">
+                            <param id="0" name="Animation">&quot;Vela&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="743393150040719" type="textosModal">
+                            <param id="0" name="Animation">&quot;Vela&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
