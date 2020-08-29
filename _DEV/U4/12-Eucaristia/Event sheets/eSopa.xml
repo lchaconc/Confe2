@@ -34,7 +34,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="505487904564016" title="Clic en inical 2">
+        <event-group description="" sid="505487904564016" title="Clic en inical 2 (Verificacion de correcta)">
             <sub-events>
                 <event-block sid="419815931914950">
                     <conditions>
@@ -57,8 +57,9 @@
                                 <action id="-16" name="Wait" sid="213538907473297" type="System">
                                     <param id="0" name="Seconds">0.5</param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="964985516608089" type="lblCuaresma">
-                                    <param id="0" name="Visibility">1</param>
+                                <action id="4" name="Set animation" sid="964985516608089" type="lblCuaresma">
+                                    <param id="0" name="Animation">&quot;Chk&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                                 <action id="0" name="Call function" sid="323991031566173" type="Function">
                                     <param id="0" name="Name">&quot;verificarFin&quot;</param>
@@ -89,8 +90,9 @@
                                 <action id="-16" name="Wait" sid="697730068086742" type="System">
                                     <param id="0" name="Seconds">0.5</param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="205361304852050" type="lblCeniza">
-                                    <param id="0" name="Visibility">1</param>
+                                <action id="4" name="Set animation" sid="205361304852050" type="lblCeniza">
+                                    <param id="0" name="Animation">&quot;Chk&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                                 <action id="0" name="Call function" sid="323938389154219" type="Function">
                                     <param id="0" name="Name">&quot;verificarFin&quot;</param>
