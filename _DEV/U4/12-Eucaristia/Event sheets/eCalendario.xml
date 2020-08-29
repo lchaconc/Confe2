@@ -65,6 +65,13 @@
                                     <param id="0" name="Variable">tiempo</param>
                                     <param id="1" name="Value">&quot;ordinario2&quot;</param>
                                 </action>
+                                <action id="-3" name="Set position" sid="552406887511983" type="ordinario2">
+                                    <param id="0" name="X">1165</param>
+                                    <param id="1" name="Y">-100</param>
+                                </action>
+                                <action behavior="Physics" id="27" name="Set enabled" sid="611228463739628" type="ordinario2">
+                                    <param id="0" name="Mode">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="993270925979273">
@@ -77,6 +84,13 @@
                                 <action id="-9" name="Set value" sid="542523241672613" type="System">
                                     <param id="0" name="Variable">tiempo</param>
                                     <param id="1" name="Value">&quot;ordinario1&quot;</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="490543735282908" type="ordinario1">
+                                    <param id="0" name="X">1165</param>
+                                    <param id="1" name="Y">-100</param>
+                                </action>
+                                <action behavior="Physics" id="27" name="Set enabled" sid="340941065623770" type="ordinario1">
+                                    <param id="0" name="Mode">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -178,7 +192,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="122135864279648" title="Verficiar combinacion">
+        <event-group description="" sid="122135864279648" title="Evento tocuh btnAbrir (sensores)">
             <sub-events>
                 <event-block sid="657651520010707">
                     <conditions>
@@ -199,10 +213,6 @@
                                     <param id="0" name="Instance variable">isCorrecto</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="14" name="Log" sid="821761120473111" type="Browser">
-                                    <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">posAdviento.isCorrecto</param>
-                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="390180840858126">
@@ -215,10 +225,6 @@
                                 <action id="-13" name="Set boolean" sid="934777343246357" type="posNavidad">
                                     <param id="0" name="Instance variable">isCorrecto</param>
                                     <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="14" name="Log" sid="543155394772930" type="Browser">
-                                    <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">posNavidad.isCorrecto</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -233,9 +239,31 @@
                                     <param id="0" name="Instance variable">isCorrecto</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="14" name="Log" sid="897598678850776" type="Browser">
-                                    <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">posCuaresma.isCorrecto</param>
+                            </actions>
+                        </event-block>
+                        <event-block sid="599068784659008">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="162145181754996" type="posOrdinario1">
+                                    <param id="0" name="Object">ordinario1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="551476892128126" type="posOrdinario1">
+                                    <param id="0" name="Instance variable">isCorrecto</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="331616353189842">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="801934264156625" type="posOrdinario2">
+                                    <param id="0" name="Object">ordinario2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="248175879256877" type="posOrdinario2">
+                                    <param id="0" name="Instance variable">isCorrecto</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -246,10 +274,34 @@
                                     <param id="0" name="Name">&quot;verificarDesbloqueo&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
+                                <action id="14" name="Log" sid="851704346302977" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">posAdviento.isCorrecto</param>
+                                </action>
+                                <action id="14" name="Log" sid="496726057765928" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">posNavidad.isCorrecto</param>
+                                </action>
+                                <action id="14" name="Log" sid="505396903823216" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">posCuaresma.isCorrecto</param>
+                                </action>
+                                <action id="14" name="Log" sid="281545343949427" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">posOrdinario1.isCorrecto</param>
+                                </action>
+                                <action id="14" name="Log" sid="298572002159139" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">posOrdinario2.isCorrecto</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="388719665244762" title="Verificar desbloqueo">
+            <sub-events>
                 <event-block sid="970168669240164">
                     <conditions>
                         <condition id="0" name="On function" sid="654051939408845" type="Function">
@@ -262,6 +314,12 @@
                             <param id="0" name="Instance variable">isCorrecto</param>
                         </condition>
                         <condition id="-8" name="Is boolean instance variable set" sid="545396241106609" type="posNavidad">
+                            <param id="0" name="Instance variable">isCorrecto</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="119055764641195" type="posOrdinario1">
+                            <param id="0" name="Instance variable">isCorrecto</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="133947158683094" type="posOrdinario2">
                             <param id="0" name="Instance variable">isCorrecto</param>
                         </condition>
                     </conditions>

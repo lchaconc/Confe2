@@ -417,6 +417,28 @@
                         </animation>
                     </animation-folder>
                 </object-type>
+                <object-type name="posOrdinario1" sid="720953266513328">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="isCorrecto" sid="454883188739549" type="boolean" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="184990093725378" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="posOrdinario2" sid="768842659017560">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="isCorrecto" sid="920853885766614" type="boolean" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="524404546220205" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
             </object-folder>
             <object-folder name="Palabras">
                 <object-type name="navidad" sid="337863524083741">
@@ -428,7 +450,7 @@
                     </behaviors>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="738505164881179" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Desktop\navidad.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Combinación\1x\avidad TXTU4Combinac.png" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -441,7 +463,7 @@
                     </behaviors>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="721347720087650" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Desktop\cuaresma.png" />
+                            <frame duration="1" hotspotX="0.502924" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Combinación\1x\CuaresmaTXTU4Combinac.png" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -454,7 +476,46 @@
                     </behaviors>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="275587437603662" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Desktop\adviento.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Combinación\1x\AdvientoTXTU4Combinac.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="pascua" sid="275444714882831">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Physics" sid="685894177012201">
+                            <behavior id="Physics" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="258209732206908" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Combinación\1x\Pascual TXTU4Combinac.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="ordinario1" sid="206902428249633">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Physics" sid="532868294025095">
+                            <behavior id="Physics" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="871241232716047" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Combinación\1x\I Ordinario TXTU4Combinac.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="ordinario2" sid="547121937144175">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Physics" sid="677353396557122">
+                            <behavior id="Physics" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="500553987004226" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Combinación\1x\II ordinario TXTU4Combinac.png" />
                         </animation>
                     </animation-folder>
                 </object-type>
