@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eCalendario</name>
     <events>
+        <variable constant="0" name="desbloqueado" sid="884990262210013" static="0" type="number">0</variable>
         <variable constant="0" name="tiempo" sid="805755841525482" static="0" type="text"></variable>
         <event-group description="" sid="441196110933399" title="Colisiones con selector">
             <sub-events>
@@ -162,6 +163,20 @@
                             <param id="0" name="Pin to">mando</param>
                             <param id="1" name="Mode">0</param>
                         </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="385870473434538" type="btnFinCalendario">
+                            <param id="0" name="Pin to">visorFin</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="479773727316666" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="582049491842710" type="splashCalendario">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="337735656171035" type="System">
+                            <param id="0" name="Seconds">4</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="163309909930276" type="splashCalendario" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -307,28 +322,106 @@
                         <condition id="0" name="On function" sid="654051939408845" type="Function">
                             <param id="0" name="Name">&quot;verificarDesbloqueo&quot;</param>
                         </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="133375102978615" type="posAdviento">
-                            <param id="0" name="Instance variable">isCorrecto</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="187626728808645" type="posCuaresma">
-                            <param id="0" name="Instance variable">isCorrecto</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="545396241106609" type="posNavidad">
-                            <param id="0" name="Instance variable">isCorrecto</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="119055764641195" type="posOrdinario1">
-                            <param id="0" name="Instance variable">isCorrecto</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="133947158683094" type="posOrdinario2">
-                            <param id="0" name="Instance variable">isCorrecto</param>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="374619399870952">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="846435942576253" type="posAdviento">
+                                    <param id="0" name="Instance variable">isCorrecto</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="187626728808645" type="posCuaresma">
+                                    <param id="0" name="Instance variable">isCorrecto</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="545396241106609" type="posNavidad">
+                                    <param id="0" name="Instance variable">isCorrecto</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="119055764641195" type="posOrdinario1">
+                                    <param id="0" name="Instance variable">isCorrecto</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="133947158683094" type="posOrdinario2">
+                                    <param id="0" name="Instance variable">isCorrecto</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="705578348089297" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;DESBLOQUEADO&quot;</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="677528282346557" type="visorFin">
+                                    <param id="0" name="Animation">&quot;desbloqueado&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="656081428862347" type="btnFinCalendario">
+                                    <param id="0" name="Animation">&quot;Continuar&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="686395961075410" type="visorFin">
+                                    <param id="0" name="X">628</param>
+                                    <param id="1" name="Y">360</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="886277480601653" type="System">
+                                    <param id="0" name="Variable">desbloqueado</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="139901550624258">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="351431818572253" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="363952731183637" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;ERROR&quot;</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="948589208107653" type="visorFin">
+                                    <param id="0" name="Animation">&quot;bloqueado&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="104422588896752" type="btnFinCalendario">
+                                    <param id="0" name="Animation">&quot;JugarDeNuevo&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="846380166728501" type="visorFin">
+                                    <param id="0" name="X">628</param>
+                                    <param id="1" name="Y">360</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="362939509495267" title="EWvento touch boton fin">
+            <sub-events>
+                <event-block sid="698572985786106">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="689634741989786" type="Touch">
+                            <param id="0" name="Object">btnFinCalendario</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="14" name="Log" sid="705578348089297" type="Browser">
-                            <param id="0" name="Type">0</param>
-                            <param id="1" name="Message">&quot;DESBLOQUEADO&quot;</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="753708449174982">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="294778915306739" type="System">
+                                    <param id="0" name="Variable">desbloqueado</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                        <event-block sid="891920713670538">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="978536536722233" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-26" name="Restart layout" sid="443364649067318" type="System" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
