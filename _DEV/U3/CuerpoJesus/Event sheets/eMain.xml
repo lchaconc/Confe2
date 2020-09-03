@@ -257,5 +257,65 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="927595717344018" title="Módulo de ayuda">
+            <sub-events>
+                <event-block sid="109707322888784">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="276348535613443" type="Touch">
+                            <param id="0" name="Object">btnEntendido</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="246510322568674" type="btnEntendido">
+                            <param id="0" name="X">-600</param>
+                            <param id="1" name="Y">-600</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="247759673400184" type="fondoNegro">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="239220133203827" type="flecha1">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="222556048504882" type="flecha2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="970664945324886" type="txtInstrucciones">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="101458722848835" type="btnAyuda">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="784206385390770">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="176822091935232" type="Touch">
+                            <param id="0" name="Object">btnAyuda</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="197231594491083" type="btnEntendido">
+                            <param id="0" name="X">654</param>
+                            <param id="1" name="Y">591</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="677805749629449" type="fondoNegro">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="757481984129920" type="flecha1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="319436352839856" type="flecha2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="968209837739495" type="txtInstrucciones">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="556192633356854" type="btnAyuda">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
