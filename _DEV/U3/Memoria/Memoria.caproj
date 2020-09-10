@@ -8,7 +8,7 @@
     <author-website>http://</author-website>
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>3subbtu8xvytq</unique-id>
-    <saved-with-version>27700</saved-with-version>
+    <saved-with-version>27900</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
@@ -1235,7 +1235,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="220394393121099" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Desktop\btn_siguiente.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1243,7 +1243,14 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="207159488442287" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Desktop\btn_siguiente.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1282,6 +1289,22 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.617284" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\txts cierre\Asset 43.png" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.56338" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\txts cierre\Asset 44.png" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.56338" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad_3\Memoria ES\Assets\txts cierre\Asset 45.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="finJuego" sid="397752092244811">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="181332936478130" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Desktop\FIN.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btnAtrasGris" sid="600485721627644">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="282265434905889" speed="5">
+                        <frame duration="1" hotspotX="0.503937" hotspotY="0.568182" original-source="C:\Users\luisc\Desktop\btn_atras.png" />
                     </animation>
                 </animation-folder>
             </object-type>

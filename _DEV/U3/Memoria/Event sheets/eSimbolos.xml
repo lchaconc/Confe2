@@ -11,7 +11,7 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="125315223524558" type="txtTitulo1">
-                            <param id="0" name="Text">&quot;SÍMBOLOS DEL ESPIRITU SANTO&quot;</param>
+                            <param id="0" name="Text">&quot;SÍMBOLOS DEL ESPÍRITU SANTO&quot;</param>
                         </action>
                         <action id="4" name="Set animation" sid="417980514871157" type="bgModalesNivel">
                             <param id="0" name="Animation">&quot;Simbolos&quot;</param>
@@ -50,8 +50,9 @@
                             <param id="0" name="Name">&quot;cargarFichas&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
-                        <action id="-15" name="Set visible" sid="448259953366512" type="txtFinJuego">
-                            <param id="0" name="Visibility">0</param>
+                        <action id="-3" name="Set position" sid="704811618077216" type="finJuego">
+                            <param id="0" name="X">-600</param>
+                            <param id="1" name="Y">-600</param>
                         </action>
                         <action id="-15" name="Set visible" sid="515581495206569" type="txtTiempo">
                             <param id="0" name="Visibility">1</param>
@@ -117,6 +118,10 @@
                         </action>
                         <action id="-9" name="Set value" sid="501598436053471" type="System">
                             <param id="0" name="Variable">juegoActivo</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="761309480306618" type="System">
+                            <param id="0" name="Variable">ganePantalla</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="4" name="Set animation" sid="529485490626197" type="pAgua">
@@ -450,6 +455,10 @@
                         <action id="-15" name="Set visible" sid="517799842757236" type="btnSiguiente">
                             <param id="0" name="Visibility">1</param>
                         </action>
+                        <action id="-9" name="Set value" sid="901140500306393" type="System">
+                            <param id="0" name="Variable">ganePantalla</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -582,14 +591,28 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="271440366874282" type="txtFinJuego">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
                                 <action id="-9" name="Set value" sid="541419765520740" type="System">
                                     <param id="0" name="Variable">juegoActivo</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="829174920833317">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="351426343463542" type="System">
+                                            <param id="0" name="Variable">ganePantalla</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="257283023677931" type="finJuego">
+                                            <param id="0" name="X">640</param>
+                                            <param id="1" name="Y">404</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="637976882363087">
                             <conditions>

@@ -10,16 +10,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">pSimbolos</layout>
-        <layout order="2">pDones</layout>
-        <layout order="4">pFrutos</layout>
-        <layout order="6">Splash</layout>
-        <layout order="7">finSimbolos</layout>
-        <layout active="1" order="8">finDones</layout>
-        <layout order="9">finFrutos</layout>
-        <event-sheet order="1">eSimbolos</event-sheet>
-        <event-sheet order="3">eDones</event-sheet>
-        <event-sheet order="5">eFrutos</event-sheet>
+        <event-sheet active="1" order="0">eDones</event-sheet>
+        <event-sheet order="1">eFrutos</event-sheet>
+        <event-sheet order="2">eSimbolos</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -31,11 +24,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
         <folder expanded="0" path="object-folder/Backgrounds/" />
-        <folder expanded="1" path="object-folder/Fichas/" />
-        <folder expanded="1" path="object-folder/Texts/" />
+        <folder expanded="0" path="object-folder/Fichas/" />
+        <folder expanded="0" path="object-folder/Texts/" />
         <folder expanded="0" path="object-folder/System/" />
         <folder expanded="0" path="object-folder/Palabras/" />
-        <folder expanded="0" path="object-folder/GUI/" />
+        <folder expanded="1" path="object-folder/GUI/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />
@@ -81,5 +74,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/btnAtras/" />
         <folder expanded="1" path="animation-folder/visorDones/" />
         <folder expanded="1" path="animation-folder/visorFrutos/" />
+        <folder expanded="1" path="animation-folder/finJuego/" />
+        <folder expanded="1" path="animation-folder/btnAtrasGris/" />
     </folders-expanded>
 </c2uistate>
