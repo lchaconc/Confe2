@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eMain</name>
     <events>
+        <variable comment="si el bb está vestido 1, contrario 0" constant="0" name="vestido" sid="280129403708886" static="0" type="number">0</variable>
         <variable constant="0" name="errores" sid="557590432749272" static="0" type="number">0</variable>
         <variable constant="0" name="turno" sid="409387766481464" static="0" type="number">0</variable>
         <event-group description="" sid="333332407560062" title="Colocar Simbolos Correctos">
@@ -111,83 +112,107 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <comment>2- VELA ENCENDIDA</comment>
-                <event-block sid="795190378643700">
+                <comment>2-CAONCHA BAUTISMAL</comment>
+                <event-block sid="656711981184109">
                     <conditions>
-                        <condition behavior="DragDrop" id="2" name="On drop" sid="315020771374759" type="velaEncendida" />
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="364090056918114" type="conchaBautismal" />
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="742806213358779">
+                        <event-block sid="105580330294328">
                             <conditions>
-                                <condition id="1" name="Is overlapping another object" sid="862654372223956" type="velaEncendida">
-                                    <param id="0" name="Object">bebe</param>
+                                <condition id="1" name="Is overlapping another object" sid="379664125813075" type="conchaBautismal">
+                                    <param id="0" name="Object">snsCabeza</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Add to" sid="976537870527279" type="System">
+                                <action id="-10" name="Add to" sid="513382320370274" type="System">
                                     <param id="0" name="Variable">turno</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                             <sub-events>
-                                <event-block sid="749277681641914">
+                                <event-block sid="571206503102531">
                                     <conditions>
-                                        <condition id="-14" name="Compare variable" sid="536188334201828" type="System">
+                                        <condition id="-14" name="Compare variable" sid="648611500894169" type="System">
                                             <param id="0" name="Variable">turno</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">2</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Call function" sid="851564044890388" type="Function">
+                                        <action id="0" name="Call function" sid="172425923181737" type="Function">
                                             <param id="0" name="Name">&quot;feliz&quot;</param>
                                             <param id="1" name="Parameter {n}"></param>
                                         </action>
-                                        <action id="-3" name="Set position" sid="229335858081907" type="velaEncendida">
+                                        <action id="-3" name="Set position" sid="430855721549991" type="conchaBautismal">
                                             <param id="0" name="X">-600</param>
                                             <param id="1" name="Y">-600</param>
                                         </action>
-                                        <action id="-16" name="Wait" sid="772125103252028" type="System">
+                                        <action id="-16" name="Wait" sid="720686450154156" type="System">
                                             <param id="0" name="Seconds">1.0</param>
                                         </action>
-                                        <action id="0" name="Call function" sid="828312218007404" type="Function">
+                                        <action id="0" name="Call function" sid="788619217684552" type="Function">
                                             <param id="0" name="Name">&quot;descansar&quot;</param>
                                             <param id="1" name="Parameter {n}"></param>
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="109336024817659">
+                                <event-block sid="453411890399789">
                                     <conditions>
-                                        <condition id="-22" name="Else" sid="735885551717432" type="System" />
+                                        <condition id="-22" name="Else" sid="934214193547552" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Call function" sid="388162580595500" type="Function">
+                                        <action id="0" name="Call function" sid="188597556031199" type="Function">
                                             <param id="0" name="Name">&quot;enojado&quot;</param>
                                             <param id="1" name="Parameter {n}"></param>
                                         </action>
-                                        <action id="-3" name="Set position" sid="463709435539280" type="velaEncendida">
-                                            <param id="0" name="X">992</param>
-                                            <param id="1" name="Y">128</param>
+                                        <action id="-3" name="Set position" sid="969415880291270" type="conchaBautismal">
+                                            <param id="0" name="X">800</param>
+                                            <param id="1" name="Y">352</param>
                                         </action>
-                                        <action id="-11" name="Subtract from" sid="796475241782148" type="System">
+                                        <action id="-11" name="Subtract from" sid="670770120241378" type="System">
                                             <param id="0" name="Variable">turno</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
-                                        <action id="-16" name="Wait" sid="262592704638485" type="System">
+                                        <action id="-16" name="Wait" sid="392472518028864" type="System">
                                             <param id="0" name="Seconds">1.0</param>
                                         </action>
-                                        <action id="0" name="Call function" sid="472867323687759" type="Function">
+                                        <action id="0" name="Call function" sid="378190816430012" type="Function">
                                             <param id="0" name="Name">&quot;descansar&quot;</param>
                                             <param id="1" name="Parameter {n}"></param>
                                         </action>
-                                        <action id="-10" name="Add to" sid="167458134371699" type="System">
+                                        <action id="-10" name="Add to" sid="968635637402133" type="System">
                                             <param id="0" name="Variable">errores</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                        <event-block sid="397603138149666">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="357766060937271" type="conchaBautismal">
+                                    <param id="0" name="Object">snsPecho</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="201441939400006" type="Function">
+                                    <param id="0" name="Name">&quot;enojado&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-3" name="Set position" sid="435111841805638" type="conchaBautismal">
+                                    <param id="0" name="X">800</param>
+                                    <param id="1" name="Y">352</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="267509899000850" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="453902408928703" type="Function">
+                                    <param id="0" name="Name">&quot;descansar&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -299,77 +324,81 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <comment>4-CAONCHA BAUTISMAL</comment>
-                <event-block sid="656711981184109">
+                <comment>4- VESTIDO</comment>
+                <event-block sid="529175184206624">
                     <conditions>
-                        <condition behavior="DragDrop" id="2" name="On drop" sid="364090056918114" type="conchaBautismal" />
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="352717552670383" type="vestidoCorrecto" />
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="105580330294328">
+                        <event-block sid="341150572746420">
                             <conditions>
-                                <condition id="1" name="Is overlapping another object" sid="379664125813075" type="conchaBautismal">
+                                <condition id="1" name="Is overlapping another object" sid="601624253615226" type="vestidoCorrecto">
                                     <param id="0" name="Object">bebe</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Add to" sid="513382320370274" type="System">
+                                <action id="-10" name="Add to" sid="854777618927172" type="System">
                                     <param id="0" name="Variable">turno</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                             <sub-events>
-                                <event-block sid="571206503102531">
+                                <event-block sid="234305900729176">
                                     <conditions>
-                                        <condition id="-14" name="Compare variable" sid="648611500894169" type="System">
+                                        <condition id="-14" name="Compare variable" sid="744421438121692" type="System">
                                             <param id="0" name="Variable">turno</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">4</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Call function" sid="172425923181737" type="Function">
+                                        <action id="-9" name="Set value" sid="959067907818591" type="System">
+                                            <param id="0" name="Variable">vestido</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="423249138670783" type="Function">
                                             <param id="0" name="Name">&quot;feliz&quot;</param>
                                             <param id="1" name="Parameter {n}"></param>
                                         </action>
-                                        <action id="-3" name="Set position" sid="430855721549991" type="conchaBautismal">
+                                        <action id="-3" name="Set position" sid="968059588593942" type="vestidoCorrecto">
                                             <param id="0" name="X">-600</param>
                                             <param id="1" name="Y">-600</param>
                                         </action>
-                                        <action id="-16" name="Wait" sid="720686450154156" type="System">
+                                        <action id="-16" name="Wait" sid="551637529714364" type="System">
                                             <param id="0" name="Seconds">1.0</param>
                                         </action>
-                                        <action id="0" name="Call function" sid="788619217684552" type="Function">
+                                        <action id="0" name="Call function" sid="751415835734906" type="Function">
                                             <param id="0" name="Name">&quot;descansar&quot;</param>
                                             <param id="1" name="Parameter {n}"></param>
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="453411890399789">
+                                <event-block sid="769856572240270">
                                     <conditions>
-                                        <condition id="-22" name="Else" sid="934214193547552" type="System" />
+                                        <condition id="-22" name="Else" sid="561565765413483" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Call function" sid="188597556031199" type="Function">
+                                        <action id="0" name="Call function" sid="405075776408800" type="Function">
                                             <param id="0" name="Name">&quot;enojado&quot;</param>
                                             <param id="1" name="Parameter {n}"></param>
                                         </action>
-                                        <action id="-3" name="Set position" sid="969415880291270" type="conchaBautismal">
-                                            <param id="0" name="X">800</param>
-                                            <param id="1" name="Y">352</param>
+                                        <action id="-3" name="Set position" sid="395752434674581" type="vestidoCorrecto">
+                                            <param id="0" name="X">1181</param>
+                                            <param id="1" name="Y">350</param>
                                         </action>
-                                        <action id="-11" name="Subtract from" sid="670770120241378" type="System">
+                                        <action id="-11" name="Subtract from" sid="736218259221306" type="System">
                                             <param id="0" name="Variable">turno</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
-                                        <action id="-16" name="Wait" sid="392472518028864" type="System">
+                                        <action id="-16" name="Wait" sid="305410717027419" type="System">
                                             <param id="0" name="Seconds">1.0</param>
                                         </action>
-                                        <action id="0" name="Call function" sid="378190816430012" type="Function">
+                                        <action id="0" name="Call function" sid="133611100745297" type="Function">
                                             <param id="0" name="Name">&quot;descansar&quot;</param>
                                             <param id="1" name="Parameter {n}"></param>
                                         </action>
-                                        <action id="-10" name="Add to" sid="968635637402133" type="System">
+                                        <action id="-10" name="Add to" sid="443889035447639" type="System">
                                             <param id="0" name="Variable">errores</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
@@ -379,14 +408,94 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <comment>5- OLEO ENFERMOS</comment>
-                <event-block sid="939751258914219">
+                <comment>5- VELA ENCENDIDA</comment>
+                <event-block sid="795190378643700">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="315020771374759" type="velaEncendida" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="742806213358779">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="862654372223956" type="velaEncendida">
+                                    <param id="0" name="Object">bebe</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="976537870527279" type="System">
+                                    <param id="0" name="Variable">turno</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="749277681641914">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="536188334201828" type="System">
+                                            <param id="0" name="Variable">turno</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="851564044890388" type="Function">
+                                            <param id="0" name="Name">&quot;feliz&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="229335858081907" type="velaEncendida">
+                                            <param id="0" name="X">-600</param>
+                                            <param id="1" name="Y">-600</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="772125103252028" type="System">
+                                            <param id="0" name="Seconds">1.0</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="828312218007404" type="Function">
+                                            <param id="0" name="Name">&quot;descansar&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="109336024817659">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="735885551717432" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="388162580595500" type="Function">
+                                            <param id="0" name="Name">&quot;enojado&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="463709435539280" type="velaEncendida">
+                                            <param id="0" name="X">992</param>
+                                            <param id="1" name="Y">128</param>
+                                        </action>
+                                        <action id="-11" name="Subtract from" sid="796475241782148" type="System">
+                                            <param id="0" name="Variable">turno</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="262592704638485" type="System">
+                                            <param id="0" name="Seconds">1.0</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="472867323687759" type="Function">
+                                            <param id="0" name="Name">&quot;descansar&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="167458134371699" type="System">
+                                            <param id="0" name="Variable">errores</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>5- OLEO ENFERMOS TODO: Preguntar si se elimina</comment>
+                <event-block disabled="1" sid="939751258914219">
                     <conditions>
                         <condition behavior="DragDrop" id="2" name="On drop" sid="459716247782148" type="oleoEnfermos" />
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="642614899600331">
+                        <event-block disabled="1" sid="642614899600331">
                             <conditions>
                                 <condition id="1" name="Is overlapping another object" sid="566376329003527" type="oleoEnfermos">
                                     <param id="0" name="Object">snsCabeza</param>
@@ -399,7 +508,7 @@
                                 </action>
                             </actions>
                             <sub-events>
-                                <event-block sid="456120934897291">
+                                <event-block disabled="1" sid="456120934897291">
                                     <conditions>
                                         <condition id="-14" name="Compare variable" sid="341773680065866" type="System">
                                             <param id="0" name="Variable">turno</param>
@@ -425,7 +534,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="464931512338446">
+                                <event-block disabled="1" sid="464931512338446">
                                     <conditions>
                                         <condition id="-22" name="Else" sid="564497470466434" type="System" />
                                     </conditions>
@@ -457,7 +566,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="102974649901652">
+                        <event-block disabled="1" sid="102974649901652">
                             <conditions>
                                 <condition id="1" name="Is overlapping another object" sid="827829610080682" type="oleoEnfermos">
                                     <param id="0" name="Object">snsPecho</param>
@@ -830,12 +939,35 @@
                                     <param id="2" name="Value">&quot;M&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="503815239065500" type="bebe">
-                                    <param id="0" name="Animation">&quot;NinaDEscansa&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="710038127758397">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="292269401780255" type="System">
+                                            <param id="0" name="Variable">vestido</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="503815239065500" type="bebe">
+                                            <param id="0" name="Animation">&quot;NinaVestidaDescansa&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="857465345491931">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="394715456613285" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="120492277337083" type="bebe">
+                                            <param id="0" name="Animation">&quot;NinaDEscansa&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="970017960538204">
                             <conditions>
@@ -866,12 +998,35 @@
                                     <param id="2" name="Value">&quot;M&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="576669026271759" type="bebe">
-                                    <param id="0" name="Animation">&quot;NinaFeliz&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="326090562615900">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="678206373860626" type="System">
+                                            <param id="0" name="Variable">vestido</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="576669026271759" type="bebe">
+                                            <param id="0" name="Animation">&quot;NinaFelizRopa&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="381315235584827">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="374696380840693" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="918311008504310" type="bebe">
+                                            <param id="0" name="Animation">&quot;NinaFeliz&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="572100958584671">
                             <conditions>
@@ -902,12 +1057,35 @@
                                     <param id="2" name="Value">&quot;M&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="655128748295936" type="bebe">
-                                    <param id="0" name="Animation">&quot;NinaEnojada&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="250415831137998">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="507385172722118" type="System">
+                                            <param id="0" name="Variable">vestido</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="655128748295936" type="bebe">
+                                            <param id="0" name="Animation">&quot;NinaEnojadaRopa&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="124089948796289">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="135333510262187" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="294764425400534" type="bebe">
+                                            <param id="0" name="Animation">&quot;NinaEnojada&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="792417908850428">
                             <conditions>
