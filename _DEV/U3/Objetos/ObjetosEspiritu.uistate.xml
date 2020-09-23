@@ -10,13 +10,17 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="0">Principal</layout>
-        <layout order="3">Menu</layout>
-        <layout order="4">Splash</layout>
-        <layout order="5">Reiniciando</layout>
+        <layout order="0">Principal</layout>
+        <layout order="3">Splash</layout>
+        <layout order="4">Reiniciando</layout>
+        <layout order="6">pFin1</layout>
+        <layout active="1" order="7">Ayuda</layout>
+        <layout order="9">Menu</layout>
         <event-sheet order="1">ePrincipal</event-sheet>
         <event-sheet order="2">eFin1</event-sheet>
-        <event-sheet order="6">eReiniciando</event-sheet>
+        <event-sheet order="5">eReiniciando</event-sheet>
+        <event-sheet order="8">eAyuda</event-sheet>
+        <event-sheet order="10">eMenu</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -52,5 +56,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/modalFinJuego/" />
         <folder expanded="1" path="animation-folder/btnReniciar/" />
         <folder expanded="1" path="animation-folder/btnFinalizar/" />
+        <folder expanded="1" path="animation-folder/palomAnimada/" />
+        <folder expanded="1" path="animation-folder/ayudaVisual/" />
     </folders-expanded>
 </c2uistate>

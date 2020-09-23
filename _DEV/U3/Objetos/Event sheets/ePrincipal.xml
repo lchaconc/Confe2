@@ -94,7 +94,7 @@
                         </action>
                         <action id="-9" name="Set value" sid="964695699552824" type="System">
                             <param id="0" name="Variable">tiempo</param>
-                            <param id="1" name="Value">30</param>
+                            <param id="1" name="Value">40</param>
                         </action>
                         <action id="-9" name="Set value" sid="902678757312601" type="System">
                             <param id="0" name="Variable">itemes</param>
@@ -144,51 +144,6 @@
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
-                </event-block>
-                <event-block sid="838350052188914">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="242024744708743" type="System">
-                            <param id="0" name="Interval (seconds)">1.0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-11" name="Subtract from" sid="385450795813724" type="System">
-                            <param id="0" name="Variable">tiempo</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="0" name="Set text" sid="691708922155758" type="txtTiempo">
-                            <param id="0" name="Text">tiempo</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="138648245549152">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="394775643933679" type="System">
-                                    <param id="0" name="Variable">tiempo</param>
-                                    <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-4" name="Set layer visible" sid="588628084096737" type="System">
-                                    <param id="0" name="Layer">&quot;Shadow&quot;</param>
-                                    <param id="1" name="Visibility">1</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="736562549108260" type="modalFinJuego">
-                                    <param id="0" name="X">640</param>
-                                    <param id="1" name="Y">360</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="995267395337097" type="txtItemes">
-                                    <param id="0" name="X">480</param>
-                                    <param id="1" name="Y">336</param>
-                                </action>
-                                <action id="-26" name="Move to layer" sid="485062319486818" type="txtItemes">
-                                    <param id="0" name="Layer">&quot;Modal&quot;</param>
-                                </action>
-                                <action id="-24" name="Move to top" sid="753097824962185" type="txtItemes" />
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -445,6 +400,58 @@
                             <param id="0" name="Layout">pFin1</param>
                         </action>
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="604019621998877" title="Tiempo de juego">
+            <sub-events>
+                <event-block sid="838350052188914">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="242024744708743" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="385450795813724" type="System">
+                            <param id="0" name="Variable">tiempo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="691708922155758" type="txtTiempo">
+                            <param id="0" name="Text">tiempo</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="138648245549152">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="394775643933679" type="System">
+                                    <param id="0" name="Variable">tiempo</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="588628084096737" type="System">
+                                    <param id="0" name="Layer">&quot;Shadow&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="295793872165290" type="System">
+                                    <param id="0" name="Seconds">0.7</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="736562549108260" type="modalFinJuego">
+                                    <param id="0" name="X">640</param>
+                                    <param id="1" name="Y">360</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="995267395337097" type="txtItemes">
+                                    <param id="0" name="X">480</param>
+                                    <param id="1" name="Y">336</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="485062319486818" type="txtItemes">
+                                    <param id="0" name="Layer">&quot;Modal&quot;</param>
+                                </action>
+                                <action id="-24" name="Move to top" sid="753097824962185" type="txtItemes" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
