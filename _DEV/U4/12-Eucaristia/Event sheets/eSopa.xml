@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eSopa</name>
     <events>
+        <variable constant="1" name="max_palabras" sid="671430294056677" static="0" type="number">5</variable>
         <variable constant="0" name="palabrasEncontradas" sid="393875388871797" static="0" type="number">0</variable>
         <event-group description="" sid="263947968711391" title="Clic en inicial 1">
             <sub-events>
@@ -27,6 +28,189 @@
                     </conditions>
                     <actions>
                         <action id="-13" name="Set boolean" sid="142978054677056" type="snsCeniza1">
+                            <param id="0" name="Instance variable">activo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="705219862485402">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="781543203991009" type="Touch">
+                            <param id="0" name="Object">snsVerde1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="379258570158870" type="snsVerde1">
+                            <param id="0" name="Instance variable">activo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="890257879030219">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="101674403332820" type="Touch">
+                            <param id="0" name="Object">snsTiempo1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="571068235391350" type="snsTiempo1">
+                            <param id="0" name="Instance variable">activo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="251306198067759">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="406900945182897" type="Touch">
+                            <param id="0" name="Object">snsRosado1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="494814965897244" type="snsRosado1">
+                            <param id="0" name="Instance variable">activo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="155375416743493">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="406088152109073" type="Touch">
+                            <param id="0" name="Object">snsRojo1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="415656159577757" type="snsRojo1">
+                            <param id="0" name="Instance variable">activo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="174940625226338">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="183043631604902" type="Touch">
+                            <param id="0" name="Object">snsPascua1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="717220387321380" type="snsPascua1">
+                            <param id="0" name="Instance variable">activo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="804625029314770">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="966317612011031" type="Touch">
+                            <param id="0" name="Object">snsOrdinario1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="778819394401067" type="snsOrdinario1">
+                            <param id="0" name="Instance variable">activo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="307194384721554">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="850864183706186" type="Touch">
+                            <param id="0" name="Object">snsNegro1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="151456854614075" type="snsNegro1">
+                            <param id="0" name="Instance variable">activo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="670187791292047">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="198074538959429" type="Touch">
+                            <param id="0" name="Object">snsNavidad1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="871552365598100" type="snsNavidad1">
+                            <param id="0" name="Instance variable">activo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="105013741052627">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="777087820868604" type="Touch">
+                            <param id="0" name="Object">snsMorado1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="461999140931384" type="snsMorado1">
+                            <param id="0" name="Instance variable">activo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="888441988730819">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="348071991304368" type="Touch">
+                            <param id="0" name="Object">snsDorado1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="675073809622565" type="snsDorado1">
+                            <param id="0" name="Instance variable">activo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="121687638755726">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="203941497661287" type="Touch">
+                            <param id="0" name="Object">snsCeleste1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="385921987752489" type="snsCeleste1">
+                            <param id="0" name="Instance variable">activo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="436692859916754">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="918744522520564" type="Touch">
+                            <param id="0" name="Object">snsBlanco1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="419610043752112" type="snsBlanco1">
+                            <param id="0" name="Instance variable">activo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Azul</comment>
+                <event-block sid="521540328896052">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="914979902711980" type="Touch">
+                            <param id="0" name="Object">snsPascua2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="146827788368337" type="snsPascua2">
+                            <param id="0" name="Instance variable">activo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="359849569290708">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="684894017383619" type="Touch">
+                            <param id="0" name="Object">snsAdviento1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="582170448227584" type="snsAdviento1">
                             <param id="0" name="Instance variable">activo</param>
                             <param id="1" name="Value">1</param>
                         </action>
@@ -102,6 +286,39 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="840027332849187">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="302069339969395" type="Touch">
+                            <param id="0" name="Object">snsVerde2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="986883382540805">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="777587519852964" type="snsVerde1">
+                                    <param id="0" name="Instance variable">activo</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="342842972258764" type="marcaVerde">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="860884000335668" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="337190050737905" type="lblVerde">
+                                    <param id="0" name="Animation">&quot;Chk&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="613634888297441" type="Function">
+                                    <param id="0" name="Name">&quot;verificarFin&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="112202152392240" title="Fin del Sopa">
@@ -124,7 +341,7 @@
                                 <condition id="-14" name="Compare variable" sid="194097926046436" type="System">
                                     <param id="0" name="Variable">palabrasEncontradas</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">2</param>
+                                    <param id="2" name="Value">MAX_PALABRAS</param>
                                 </condition>
                             </conditions>
                             <actions>
