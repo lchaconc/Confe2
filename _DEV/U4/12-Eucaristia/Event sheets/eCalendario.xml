@@ -126,6 +126,13 @@
                                     <param id="0" name="Variable">tiempo</param>
                                     <param id="1" name="Value">&quot;pascua&quot;</param>
                                 </action>
+                                <action id="-3" name="Set position" sid="173294319369881" type="pascua">
+                                    <param id="0" name="X">1165</param>
+                                    <param id="1" name="Y">-100</param>
+                                </action>
+                                <action behavior="Physics" id="27" name="Set enabled" sid="515176736613496" type="pascua">
+                                    <param id="0" name="Mode">1</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -282,6 +289,19 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="318019448096911">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="900094054462368" type="posPascua">
+                                    <param id="0" name="Object">pascua</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="692361584429320" type="posPascua">
+                                    <param id="0" name="Instance variable">isCorrecto</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="391014990008484">
                             <conditions />
                             <actions>
@@ -291,23 +311,27 @@
                                 </action>
                                 <action id="14" name="Log" sid="851704346302977" type="Browser">
                                     <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">posAdviento.isCorrecto</param>
+                                    <param id="1" name="Message">&quot;Adviento &quot; &amp; posAdviento.isCorrecto</param>
                                 </action>
                                 <action id="14" name="Log" sid="496726057765928" type="Browser">
                                     <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">posNavidad.isCorrecto</param>
+                                    <param id="1" name="Message">&quot;Navidad &quot; &amp; posNavidad.isCorrecto</param>
                                 </action>
                                 <action id="14" name="Log" sid="505396903823216" type="Browser">
                                     <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">posCuaresma.isCorrecto</param>
+                                    <param id="1" name="Message">&quot;Cuaresma&quot; &amp; posCuaresma.isCorrecto</param>
                                 </action>
                                 <action id="14" name="Log" sid="281545343949427" type="Browser">
                                     <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">posOrdinario1.isCorrecto</param>
+                                    <param id="1" name="Message">&quot;Ordinario1 &quot; &amp; posOrdinario1.isCorrecto</param>
                                 </action>
                                 <action id="14" name="Log" sid="298572002159139" type="Browser">
                                     <param id="0" name="Type">0</param>
-                                    <param id="1" name="Message">posOrdinario2.isCorrecto</param>
+                                    <param id="1" name="Message">&quot;Ordinario2 &quot; &amp; posOrdinario2.isCorrecto</param>
+                                </action>
+                                <action id="14" name="Log" sid="750016828391826" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;Pascua &quot; &amp; posPascua.isCorrecto</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -340,6 +364,9 @@
                                     <param id="0" name="Instance variable">isCorrecto</param>
                                 </condition>
                                 <condition id="-8" name="Is boolean instance variable set" sid="133947158683094" type="posOrdinario2">
+                                    <param id="0" name="Instance variable">isCorrecto</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="883258620732549" type="posPascua">
                                     <param id="0" name="Instance variable">isCorrecto</param>
                                 </condition>
                             </conditions>
