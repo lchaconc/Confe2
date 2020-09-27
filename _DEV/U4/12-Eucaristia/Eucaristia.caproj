@@ -1082,17 +1082,206 @@
             </object-type>
         </object-folder>
         <object-folder name="Simon">
-            <object-type name="Personaje" sid="451805156469405">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Pie" pingpong="0" repeatcount="1" repeatto="0" sid="751491573590579" speed="5">
-                        <frame duration="1" hotspotX="0.503759" hotspotY="0.502538" original-source="C:\Users\luisc\Desktop\pie.png" />
-                    </animation>
-                    <animation framecount="1" loop="0" name="Sentado" pingpong="0" repeatcount="1" repeatto="0" sid="230318596847717" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.502591" original-source="C:\Users\luisc\Desktop\sentado.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
+            <object-folder name="Controls">
+                <object-type name="btnSentarse" sid="655602335828964">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="535918176221027" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Assets\BTNsntadoU4_simon.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="btnHincarse" sid="819407815538403">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="779214735240094" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.503226" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Assets\BTNrodillasU4_simon.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="btnLevantarse" sid="837451251159136">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="359852529323042" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.503311" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Assets\BTNdepieU4_simon.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="btnPlay" sid="685308194531186">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="883214933794619" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="visorCorresctas" sid="260245747597008">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="604408715868448" speed="5">
+                            <frame duration="1" hotspotX="0.510204" hotspotY="0.510204" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Assets\IcoBlancoU4_simon.png" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Correcta" pingpong="0" repeatcount="1" repeatto="0" sid="657576884807049" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.510204" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Assets\IcoAciertoU4_simon.png" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Incorrecta" pingpong="0" repeatcount="1" repeatto="0" sid="602332213814732" speed="5">
+                            <frame duration="1" hotspotX="0.510204" hotspotY="0.510204" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Assets\IcoErrorU4_simon.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="BG">
+                <object-type name="bgSimon" sid="988751097673254">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="844568799634714" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Assets\backprincipalU4_simon.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.999227" y="0.00137552" />
+                                    <point x="0.99536" y="0.991747" />
+                                    <point x="0.00464037" y="0.991747" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="splashSimon" sid="931547535666558">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Physics" sid="509249576654859">
+                            <behavior id="Physics" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="235126411335721" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Assets\SimonPedroDiceSplash.jpg" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Sprites">
+                <object-type name="Personaje" sid="451805156469405">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Levantado" pingpong="0" repeatcount="1" repeatto="0" sid="751491573590579" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\animSimon\sentarseincarse0001.png" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Sentado" pingpong="0" repeatcount="1" repeatto="0" sid="230318596847717" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\animSimon\sentarseincarse0005.png">
+                                <collision-poly>
+                                    <point x="0.5" y="0.879182" />
+                                    <point x="0.208531" y="0.620818" />
+                                    <point x="0.180095" y="0.5" />
+                                    <point x="0.165877" y="0.345725" />
+                                    <point x="0.5" y="0.916357" />
+                                    <point x="0.028436" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Hincado" pingpong="0" repeatcount="1" repeatto="0" sid="148780046144527" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\animSimon\sentarseincarse0015.png">
+                                <collision-poly>
+                                    <point x="0.651659" y="0.511152" />
+                                    <point x="0.5" y="0.873606" />
+                                    <point x="0.952607" y="0.5" />
+                                    <point x="0.791469" y="0.836431" />
+                                    <point x="0.5" y="0.931227" />
+                                    <point x="0.656398" y="0.48513" />
+                                    <point x="0.651659" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="5" loop="0" name="Levantado_Hincado" pingpong="0" repeatcount="1" repeatto="0" sid="106517780589192" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\animSimon\sentarseincarse0011.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\animSimon\sentarseincarse0012.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\animSimon\sentarseincarse0013.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\animSimon\sentarseincarse0014.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\animSimon\sentarseincarse0015.png" />
+                        </animation>
+                        <animation framecount="5" loop="0" name="Hincado_Levantado" pingpong="0" repeatcount="1" repeatto="0" sid="145484746499393" speed="15">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Animaciones\Hincado_Levantado\01.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Animaciones\Hincado_Levantado\02.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Animaciones\Hincado_Levantado\03.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Animaciones\Hincado_Levantado\04.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Animaciones\Hincado_Levantado\05.png" />
+                        </animation>
+                        <animation framecount="5" loop="0" name="Sentado_Levantado" pingpong="0" repeatcount="1" repeatto="0" sid="355522952128062" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\animSimon\sentarseincarse0006.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\animSimon\sentarseincarse0007.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\animSimon\sentarseincarse0008.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\animSimon\sentarseincarse0009.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\animSimon\sentarseincarse0010.png" />
+                        </animation>
+                        <animation framecount="11" loop="0" name="Sentado_Hincado" pingpong="0" repeatcount="1" repeatto="0" sid="660443564664178" speed="10">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\animSimon\sentarseincarse0005.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\animSimon\sentarseincarse0006.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\animSimon\sentarseincarse0007.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\animSimon\sentarseincarse0008.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\animSimon\sentarseincarse0009.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\animSimon\sentarseincarse0010.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\animSimon\sentarseincarse0011.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\animSimon\sentarseincarse0012.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\animSimon\sentarseincarse0013.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\animSimon\sentarseincarse0014.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\animSimon\sentarseincarse0015.png" />
+                        </animation>
+                        <animation framecount="5" loop="0" name="Levantado_Sentado" pingpong="0" repeatcount="1" repeatto="0" sid="239164832716870" speed="10">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Animaciones\Levantado_Sentado\sentarseincarse0001.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Animaciones\Levantado_Sentado\sentarseincarse0002.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Animaciones\Levantado_Sentado\sentarseincarse0003.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Animaciones\Levantado_Sentado\sentarseincarse0004.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Animaciones\Levantado_Sentado\sentarseincarse0005.png" />
+                        </animation>
+                        <animation framecount="8" loop="0" name="Hincado_Sentado" pingpong="0" repeatcount="1" repeatto="0" sid="493955064350052" speed="10">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Animaciones\Hincado_Sentado\01.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Animaciones\Hincado_Sentado\02.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Animaciones\Hincado_Sentado\03.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Animaciones\Hincado_Sentado\04.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Animaciones\Hincado_Sentado\05.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Animaciones\Hincado_Sentado\06.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Animaciones\Hincado_Sentado\07.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Animaciones\Hincado_Sentado\08.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="banca" sid="430502959688366">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="325864540468613" speed="5">
+                            <frame duration="1" hotspotX="0.501608" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Assets\bancaU4_simon.png">
+                                <collision-poly>
+                                    <point x="0.340836" y="0.278947" />
+                                    <point x="0.498392" y="0.0131579" />
+                                    <point x="0.617363" y="0.313158" />
+                                    <point x="0.890675" y="0.5" />
+                                    <point x="0.996785" y="0.997368" />
+                                    <point x="0" y="1" />
+                                    <point x="0.340836" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="visorMomento" sid="229163565453243">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="255500042578245" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.504132" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Assets\GloboTextoU4_simon.png">
+                                <collision-poly>
+                                    <point x="0.0263158" y="0.140496" />
+                                    <point x="0.5" y="0.0247934" />
+                                    <point x="0.993808" y="0.0330578" />
+                                    <point x="0.831269" y="0.495868" />
+                                    <point x="0.5" y="0.991736" />
+                                    <point x="0.0247678" y="0.867769" />
+                                    <point x="0.00154799" y="0.495868" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
             <object-type name="txtVsor" sid="490702942824609">
                 <plugin id="Text" />
             </object-type>

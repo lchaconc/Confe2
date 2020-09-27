@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eSimonDice</name>
     <events>
+        <variable constant="0" name="estadoPersonaje" sid="888710842377138" static="0" type="text">levantado</variable>
         <variable constant="0" name="aux" sid="810678284328572" static="0" type="number">0</variable>
         <event-group description="" sid="243883429359526" title="Iniciar Simon">
             <sub-events>
@@ -27,6 +28,12 @@
                         <action id="2" name="Set at X" sid="651145316394370" type="arrayMomento">
                             <param id="0" name="X">3</param>
                             <param id="1" name="Value">&quot;Homilia&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="392143401701953" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="467782263585080" type="splashSimon">
+                            <param id="0" name="Mode">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -53,15 +60,146 @@
                 <event-block sid="392875822501178">
                     <conditions>
                         <condition id="3" name="On touched object" sid="432768509759976" type="Touch">
-                            <param id="0" name="Object">Personaje</param>
+                            <param id="0" name="Object">btnHincarse</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="979779611942148" type="Function">
-                            <param id="0" name="Name">&quot;generarPalabra&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="115284855939029">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="325975542152672" type="System">
+                                    <param id="0" name="Variable">estadoPersonaje</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;levantado&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="163553208179704" type="Personaje">
+                                    <param id="0" name="Animation">&quot;Levantado_Hincado&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="961430363821444" type="System">
+                                    <param id="0" name="Variable">estadoPersonaje</param>
+                                    <param id="1" name="Value">&quot;hincado&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="283687311983813">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="528270231017908" type="System">
+                                    <param id="0" name="Variable">estadoPersonaje</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;sentado&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="508223844564221" type="Personaje">
+                                    <param id="0" name="Animation">&quot;Sentado_Hincado&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="618308917146052" type="System">
+                                    <param id="0" name="Variable">estadoPersonaje</param>
+                                    <param id="1" name="Value">&quot;hincado&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="412422257810087">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="587525524926868" type="Touch">
+                            <param id="0" name="Object">btnLevantarse</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="314066841500652">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="467212801720468" type="System">
+                                    <param id="0" name="Variable">estadoPersonaje</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;hincado&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="762685449314145" type="Personaje">
+                                    <param id="0" name="Animation">&quot;Hincado_Levantado&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="346508766836384" type="System">
+                                    <param id="0" name="Variable">estadoPersonaje</param>
+                                    <param id="1" name="Value">&quot;levantado&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="357356227862943">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="572728241246418" type="System">
+                                    <param id="0" name="Variable">estadoPersonaje</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;sentado&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="683376019421119" type="Personaje">
+                                    <param id="0" name="Animation">&quot;Sentado_Levantado&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="970160913041813" type="System">
+                                    <param id="0" name="Variable">estadoPersonaje</param>
+                                    <param id="1" name="Value">&quot;levantado&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="134610582009837">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="529928910229700" type="Touch">
+                            <param id="0" name="Object">btnSentarse</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="818143271290985">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="835819089353705" type="System">
+                                    <param id="0" name="Variable">estadoPersonaje</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;hincado&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="349518155984574" type="Personaje">
+                                    <param id="0" name="Animation">&quot;Hincado_Sentado&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="644610921524134" type="System">
+                                    <param id="0" name="Variable">estadoPersonaje</param>
+                                    <param id="1" name="Value">&quot;sentado&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="221045820663462">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="503490926783710" type="System">
+                                    <param id="0" name="Variable">estadoPersonaje</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;levantado&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="654596725378543" type="Personaje">
+                                    <param id="0" name="Animation">&quot;Levantado_Sentado&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="856130939937577" type="System">
+                                    <param id="0" name="Variable">estadoPersonaje</param>
+                                    <param id="1" name="Value">&quot;sentado&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
