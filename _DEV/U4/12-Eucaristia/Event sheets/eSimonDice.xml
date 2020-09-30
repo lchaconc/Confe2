@@ -3,8 +3,10 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eSimonDice</name>
     <events>
-        <variable constant="0" name="estadoPersonaje" sid="888710842377138" static="0" type="text">levantado</variable>
-        <variable constant="0" name="aux" sid="810678284328572" static="0" type="number">0</variable>
+        <variable constant="0" name="posicionMaster" sid="949246308505537" static="0" type="text"></variable>
+        <variable constant="0" name="puntajeSimon" sid="962572384533333" static="0" type="number">0</variable>
+        <variable constant="0" name="estadoPersonaje" sid="888710842377138" static="0" type="text">sentado</variable>
+        <variable constant="0" name="iMomento" sid="810678284328572" static="0" type="number">0</variable>
         <event-group description="" sid="243883429359526" title="Iniciar Simon">
             <sub-events>
                 <event-block sid="916269709124655">
@@ -12,28 +14,56 @@
                         <condition id="-2" name="On start of layout" sid="688525440657624" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Clear" sid="127442650846297" type="arrayMomento" />
-                        <action id="2" name="Set at X" sid="426953417177254" type="arrayMomento">
+                        <action id="0" name="Clear" sid="127442650846297" type="momentos" />
+                        <action id="2" name="Set at X" sid="426953417177254" type="momentos">
                             <param id="0" name="X">0</param>
-                            <param id="1" name="Value">&quot;Entrada&quot;</param>
+                            <param id="1" name="Value">&quot;hincado&quot;</param>
                         </action>
-                        <action id="2" name="Set at X" sid="707873390564317" type="arrayMomento">
+                        <action id="2" name="Set at X" sid="707873390564317" type="momentos">
                             <param id="0" name="X">1</param>
-                            <param id="1" name="Value">&quot;Lecturas&quot;</param>
+                            <param id="1" name="Value">&quot;levantado&quot;</param>
                         </action>
-                        <action id="2" name="Set at X" sid="185458190534049" type="arrayMomento">
+                        <action id="2" name="Set at X" sid="185458190534049" type="momentos">
                             <param id="0" name="X">2</param>
-                            <param id="1" name="Value">&quot;Evangelio&quot;</param>
+                            <param id="1" name="Value">&quot;levantado&quot;</param>
                         </action>
-                        <action id="2" name="Set at X" sid="651145316394370" type="arrayMomento">
+                        <action id="2" name="Set at X" sid="651145316394370" type="momentos">
                             <param id="0" name="X">3</param>
-                            <param id="1" name="Value">&quot;Homilia&quot;</param>
+                            <param id="1" name="Value">&quot;levantado&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="585484401995897" type="momentos">
+                            <param id="0" name="X">4</param>
+                            <param id="1" name="Value">&quot;sentado&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="696242918947847" type="momentos">
+                            <param id="0" name="X">5</param>
+                            <param id="1" name="Value">&quot;levantado&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="823972398458723" type="momentos">
+                            <param id="0" name="X">6</param>
+                            <param id="1" name="Value">&quot;sentado&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="820807954956838" type="momentos">
+                            <param id="0" name="X">7</param>
+                            <param id="1" name="Value">&quot;levantado&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="490999126457789" type="momentos">
+                            <param id="0" name="X">8</param>
+                            <param id="1" name="Value">&quot;sentado&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="410380141998188" type="momentos">
+                            <param id="0" name="X">9</param>
+                            <param id="1" name="Value">&quot;sentado&quot;</param>
                         </action>
                         <action id="-16" name="Wait" sid="392143401701953" type="System">
                             <param id="0" name="Seconds">1.0</param>
                         </action>
                         <action behavior="Physics" id="27" name="Set enabled" sid="467782263585080" type="splashSimon">
                             <param id="0" name="Mode">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="465490822072952" type="Function">
+                            <param id="0" name="Name">&quot;generarPalabra&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
@@ -48,12 +78,23 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="952425853847864" type="System">
-                            <param id="0" name="Variable">aux</param>
-                            <param id="1" name="Value">int(random(0,3.9999))</param>
+                        <action id="-16" name="Wait" sid="336974038696539" type="System">
+                            <param id="0" name="Seconds">1.0</param>
                         </action>
-                        <action id="0" name="Set text" sid="924303986406213" type="txtVsor">
-                            <param id="0" name="Text">arrayMomento.At(aux)</param>
+                        <action id="-9" name="Set value" sid="952425853847864" type="System">
+                            <param id="0" name="Variable">iMomento</param>
+                            <param id="1" name="Value">int(random(0,9.999999))</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="154845707264893" type="txtMomentos">
+                            <param id="0" name="Frame number">iMomento</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="581850854236418" type="System">
+                            <param id="0" name="Variable">posicionMaster</param>
+                            <param id="1" name="Value">momentos.At(iMomento)</param>
+                        </action>
+                        <action id="14" name="Log" sid="846920921680307" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">iMomento</param>
                         </action>
                     </actions>
                 </event-block>
@@ -82,11 +123,20 @@
                                     <param id="0" name="Variable">estadoPersonaje</param>
                                     <param id="1" name="Value">&quot;hincado&quot;</param>
                                 </action>
+                                <action id="0" name="Call function" sid="831910368071294" type="Function">
+                                    <param id="0" name="Name">&quot;validarPos&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="630552878784829" type="Function">
+                                    <param id="0" name="Name">&quot;generarPalabra&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                             </actions>
                         </event-block>
-                        <event-block sid="283687311983813">
+                        <event-block sid="148923606287883">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="528270231017908" type="System">
+                                <condition id="-22" name="Else" sid="188072990965652" type="System" />
+                                <condition id="-14" name="Compare variable" sid="243181929013280" type="System">
                                     <param id="0" name="Variable">estadoPersonaje</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;sentado&quot;</param>
@@ -100,6 +150,42 @@
                                 <action id="-9" name="Set value" sid="618308917146052" type="System">
                                     <param id="0" name="Variable">estadoPersonaje</param>
                                     <param id="1" name="Value">&quot;hincado&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="503518880447230" type="Function">
+                                    <param id="0" name="Name">&quot;validarPos&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="679387836601515" type="Function">
+                                    <param id="0" name="Name">&quot;generarPalabra&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="242851413884377">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="138916342855542" type="System" />
+                                <condition id="-14" name="Compare variable" sid="890494757473670" type="System">
+                                    <param id="0" name="Variable">estadoPersonaje</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;hincado&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="178673337784897" type="Personaje">
+                                    <param id="0" name="Animation">&quot;Hincado&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="853779184606096" type="System">
+                                    <param id="0" name="Variable">estadoPersonaje</param>
+                                    <param id="1" name="Value">&quot;hincado&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="918608054723002" type="Function">
+                                    <param id="0" name="Name">&quot;validarPos&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="605526767520874" type="Function">
+                                    <param id="0" name="Name">&quot;generarPalabra&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
@@ -130,11 +216,20 @@
                                     <param id="0" name="Variable">estadoPersonaje</param>
                                     <param id="1" name="Value">&quot;levantado&quot;</param>
                                 </action>
+                                <action id="0" name="Call function" sid="625051569803098" type="Function">
+                                    <param id="0" name="Name">&quot;validarPos&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="756609796973617" type="Function">
+                                    <param id="0" name="Name">&quot;generarPalabra&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                             </actions>
                         </event-block>
-                        <event-block sid="357356227862943">
+                        <event-block sid="714401200398590">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="572728241246418" type="System">
+                                <condition id="-22" name="Else" sid="109806825764150" type="System" />
+                                <condition id="-14" name="Compare variable" sid="877661842222604" type="System">
                                     <param id="0" name="Variable">estadoPersonaje</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;sentado&quot;</param>
@@ -148,6 +243,42 @@
                                 <action id="-9" name="Set value" sid="970160913041813" type="System">
                                     <param id="0" name="Variable">estadoPersonaje</param>
                                     <param id="1" name="Value">&quot;levantado&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="711758285248093" type="Function">
+                                    <param id="0" name="Name">&quot;validarPos&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="672277943944653" type="Function">
+                                    <param id="0" name="Name">&quot;generarPalabra&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="962989346996138">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="357632967440318" type="System" />
+                                <condition id="-14" name="Compare variable" sid="336890465147833" type="System">
+                                    <param id="0" name="Variable">estadoPersonaje</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;levantado&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="581198761154932" type="Personaje">
+                                    <param id="0" name="Animation">&quot;Levantado&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="242137667127429" type="System">
+                                    <param id="0" name="Variable">estadoPersonaje</param>
+                                    <param id="1" name="Value">&quot;levantado&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="289331221659485" type="Function">
+                                    <param id="0" name="Name">&quot;validarPos&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="574435384111998" type="Function">
+                                    <param id="0" name="Name">&quot;generarPalabra&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
@@ -178,11 +309,20 @@
                                     <param id="0" name="Variable">estadoPersonaje</param>
                                     <param id="1" name="Value">&quot;sentado&quot;</param>
                                 </action>
+                                <action id="0" name="Call function" sid="161645946861756" type="Function">
+                                    <param id="0" name="Name">&quot;validarPos&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="164409621168871" type="Function">
+                                    <param id="0" name="Name">&quot;generarPalabra&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                             </actions>
                         </event-block>
-                        <event-block sid="221045820663462">
+                        <event-block sid="411028516432879">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="503490926783710" type="System">
+                                <condition id="-22" name="Else" sid="498267314358562" type="System" />
+                                <condition id="-14" name="Compare variable" sid="519237113217672" type="System">
                                     <param id="0" name="Variable">estadoPersonaje</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;levantado&quot;</param>
@@ -196,6 +336,87 @@
                                 <action id="-9" name="Set value" sid="856130939937577" type="System">
                                     <param id="0" name="Variable">estadoPersonaje</param>
                                     <param id="1" name="Value">&quot;sentado&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="940802754585219" type="Function">
+                                    <param id="0" name="Name">&quot;validarPos&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="331513845010926" type="Function">
+                                    <param id="0" name="Name">&quot;generarPalabra&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="527704823032730">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="281477791607012" type="System" />
+                                <condition id="-14" name="Compare variable" sid="933615142492733" type="System">
+                                    <param id="0" name="Variable">estadoPersonaje</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;sentado&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="707204622528095" type="Personaje">
+                                    <param id="0" name="Animation">&quot;Sentado&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="830853830934926" type="System">
+                                    <param id="0" name="Variable">estadoPersonaje</param>
+                                    <param id="1" name="Value">&quot;sentado&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="425656991209882" type="Function">
+                                    <param id="0" name="Name">&quot;validarPos&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="232067040205479" type="Function">
+                                    <param id="0" name="Name">&quot;generarPalabra&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="131259747296726" title="Evento touch boton play">
+            <sub-events>
+                <event-block sid="538005652121537">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="294723220166226" type="Touch">
+                            <param id="0" name="Object">btnPlaySimon</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="651668015508549" type="txtMomentos">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="685019932032570" title="Validar posicion">
+            <sub-events>
+                <event-block sid="328147122903233">
+                    <conditions>
+                        <condition id="0" name="On function" sid="134480248323656" type="Function">
+                            <param id="0" name="Name">&quot;validarPos&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="832719505410909">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="422693047005461" type="System">
+                                    <param id="0" name="Variable">estadoPersonaje</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">posicionMaster</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="526353895262560" type="System">
+                                    <param id="0" name="Variable">puntajeSimon</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>

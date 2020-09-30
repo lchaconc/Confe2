@@ -73,7 +73,7 @@
                 <instance type="Personaje" uid="14">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Pie</initial-animation>
+                        <initial-animation>Sentado</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -148,8 +148,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>665</x>
-                        <y>22</y>
+                        <x>528</x>
+                        <y>-130</y>
                         <z>0</z>
                         <width>296</width>
                         <height>67</height>
@@ -236,8 +236,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>937</x>
-                        <y>103</y>
+                        <x>965</x>
+                        <y>79</y>
                         <z>0</z>
                         <width>646</width>
                         <height>121</height>
@@ -248,7 +248,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="btnPlay" uid="108">
+                <instance type="btnPlaySimon" uid="108">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -273,7 +273,7 @@
                 <instance type="visorCorresctas" uid="110">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Incorrecta</initial-animation>
+                        <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -295,7 +295,7 @@
                 <instance type="visorCorresctas" uid="111">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Correcta</initial-animation>
+                        <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -305,10 +305,10 @@
                         <x>125</x>
                         <y>43</y>
                         <z>0</z>
-                        <width>50</width>
+                        <width>49</width>
                         <height>49</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
+                        <hotspotX>0.510204077</hotspotX>
                         <hotspotY>0.510204077</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -317,7 +317,7 @@
                 <instance type="visorCorresctas" uid="112">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Correcta</initial-animation>
+                        <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -327,10 +327,10 @@
                         <x>186</x>
                         <y>42</y>
                         <z>0</z>
-                        <width>50</width>
+                        <width>49</width>
                         <height>49</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
+                        <hotspotX>0.510204077</hotspotX>
                         <hotspotY>0.510204077</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -339,7 +339,7 @@
                 <instance type="visorCorresctas" uid="113">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Correcta</initial-animation>
+                        <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -349,10 +349,10 @@
                         <x>251</x>
                         <y>40</y>
                         <z>0</z>
-                        <width>50</width>
+                        <width>49</width>
                         <height>49</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
+                        <hotspotX>0.510204077</hotspotX>
                         <hotspotY>0.510204077</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -424,6 +424,28 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="txtMomentos" uid="117">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>881</x>
+                        <y>75</y>
+                        <z>0</z>
+                        <width>397</width>
+                        <height>94</height>
+                        <depth>0</depth>
+                        <hotspotX>0.501259446</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -470,7 +492,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>641</x>
-                        <y>358</y>
+                        <y>349</y>
                         <z>0</z>
                         <width>1280</width>
                         <height>720</height>
