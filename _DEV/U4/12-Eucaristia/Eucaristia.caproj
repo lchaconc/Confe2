@@ -60,7 +60,10 @@
             <object-type name="Touch" sid="221858948176753">
                 <plugin id="Touch" />
             </object-type>
-            <object-type global="1" name="momentos" sid="788667896762458">
+            <object-type global="1" name="posicionesSimon" sid="788667896762458">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="momentosSimon" sid="513379058637623">
                 <plugin id="Arr" />
             </object-type>
         </object-folder>
@@ -1159,6 +1162,34 @@
                         </animation>
                     </animation-folder>
                 </object-type>
+                <object-type name="modalFinSimon" sid="724407890455619">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="juegoGanado" sid="622743387290864" type="boolean" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Logrado" pingpong="0" repeatcount="1" repeatto="0" sid="595139818838029" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Desktop\logrado.png">
+                                <collision-poly>
+                                    <point x="0.00803213" y="0.0154083" />
+                                    <point x="0.991968" y="0.0154083" />
+                                    <point x="0.989558" y="0.979969" />
+                                    <point x="0.0104418" y="0.979969" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="NoLogrado" pingpong="0" repeatcount="1" repeatto="0" sid="682645019988262" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Desktop\no_logrado.png">
+                                <collision-poly>
+                                    <point x="0.00803213" y="0.0154083" />
+                                    <point x="0.991968" y="0.0154083" />
+                                    <point x="0.989558" y="0.979969" />
+                                    <point x="0.0104418" y="0.979969" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
             </object-folder>
             <object-folder name="Sprites">
                 <object-type name="Personaje" sid="451805156469405">
@@ -1206,7 +1237,7 @@
                             <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Animaciones\Hincado_Levantado\04.png" />
                             <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Animaciones\Hincado_Levantado\05.png" />
                         </animation>
-                        <animation framecount="5" loop="0" name="Sentado_Levantado" pingpong="0" repeatcount="1" repeatto="0" sid="355522952128062" speed="5">
+                        <animation framecount="5" loop="0" name="Sentado_Levantado" pingpong="0" repeatcount="1" repeatto="0" sid="355522952128062" speed="10">
                             <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\animSimon\sentarseincarse0006.png" />
                             <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\animSimon\sentarseincarse0007.png" />
                             <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\animSimon\sentarseincarse0008.png" />
@@ -1226,7 +1257,7 @@
                             <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\animSimon\sentarseincarse0014.png" />
                             <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\animSimon\sentarseincarse0015.png" />
                         </animation>
-                        <animation framecount="5" loop="0" name="Levantado_Sentado" pingpong="0" repeatcount="1" repeatto="0" sid="239164832716870" speed="10">
+                        <animation framecount="5" loop="0" name="Levantado_Sentado" pingpong="0" repeatcount="1" repeatto="0" sid="239164832716870" speed="15">
                             <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Animaciones\Levantado_Sentado\sentarseincarse0001.png" />
                             <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Animaciones\Levantado_Sentado\sentarseincarse0002.png" />
                             <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Animaciones\Levantado_Sentado\sentarseincarse0003.png" />
@@ -1286,16 +1317,37 @@
                 <object-type name="txtMomentos" sid="508315543219692">
                     <plugin id="Sprite" />
                     <animation-folder>
-                        <animation framecount="10" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="813166089738060" speed="0">
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="813166089738060" speed="0">
+                            <frame duration="1" hotspotX="0.501155" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Textos\segundalecturaSimonPedro.png" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Consagracion" pingpong="0" repeatcount="1" repeatto="0" sid="664099355868108" speed="5">
                             <frame duration="1" hotspotX="0.501259" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Textos\ConsagracionSimonPedro.png" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Credo" pingpong="0" repeatcount="1" repeatto="0" sid="864545466624706" speed="5">
                             <frame duration="1" hotspotX="0.501085" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Textos\CredoSimonPedro.png" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Entrada" pingpong="0" repeatcount="1" repeatto="0" sid="182398151166361" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.505376" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Textos\EntradaSimonPedro.png" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Evangelio" pingpong="0" repeatcount="1" repeatto="0" sid="182574334056864" speed="5">
                             <frame duration="1" hotspotX="0.501416" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Textos\EvangelioSimonPedro.png" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Homilia" pingpong="0" repeatcount="1" repeatto="0" sid="977002716800407" speed="5">
                             <frame duration="1" hotspotX="0.501144" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Textos\HomiliaSimonPedro.png" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="PadreNuestro" pingpong="0" repeatcount="1" repeatto="0" sid="886997248061509" speed="5">
                             <frame duration="1" hotspotX="0.501408" hotspotY="0.505376" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Textos\PadrenuestroSimonPedro.png" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Lectura1" pingpong="0" repeatcount="1" repeatto="0" sid="639121820206527" speed="5">
                             <frame duration="1" hotspotX="0.502092" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Textos\primeralecturaSimonPedro.png" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Salida" pingpong="0" repeatcount="1" repeatto="0" sid="432439766399649" speed="5">
                             <frame duration="1" hotspotX="0.501511" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Textos\SalidaSimonPedro.png" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Salmo" pingpong="0" repeatcount="1" repeatto="0" sid="495576804749625" speed="5">
                             <frame duration="1" hotspotX="0.501217" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Textos\SalmoSimonPedro.png" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Lectura2" pingpong="0" repeatcount="1" repeatto="0" sid="150925644260873" speed="5">
                             <frame duration="1" hotspotX="0.501155" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\SimonPedro\Textos\segundalecturaSimonPedro.png" />
                         </animation>
                     </animation-folder>
