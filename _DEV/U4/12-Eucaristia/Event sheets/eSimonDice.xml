@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eSimonDice</name>
     <events>
+        <variable constant="0" name="turnoSimon" sid="466359436166688" static="0" type="number">-1</variable>
         <variable constant="0" name="maxArrayMomentos" sid="954881765209371" static="0" type="number">100</variable>
         <variable constant="0" name="posicionMaster" sid="949246308505537" static="0" type="text"></variable>
         <variable constant="0" name="puntajeSimon" sid="962572384533333" static="0" type="number">0</variable>
@@ -168,6 +169,10 @@
                         <action id="9" name="Delete" sid="470718328533587" type="momentosSimon">
                             <param id="0" name="Index">iMomento</param>
                             <param id="1" name="Axis">0</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="399785463719191" type="System">
+                            <param id="0" name="Variable">turnoSimon</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -552,6 +557,46 @@
                                     <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="796883065935986">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="703803331883983" type="visorCorresctasSimon">
+                                            <param id="0" name="Instance variable">id</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">turnoSimon</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="216687146513253" type="visorCorresctasSimon">
+                                            <param id="0" name="Animation">&quot;Correcta&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="522715410232272">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="296862644753725" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="929588954611528">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="172188202946449" type="visorCorresctasSimon">
+                                            <param id="0" name="Instance variable">id</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">turnoSimon</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="343206117750677" type="visorCorresctasSimon">
+                                            <param id="0" name="Animation">&quot;Incorrecta&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
