@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eSopa</name>
     <events>
-        <variable constant="1" name="MAX_PALABRAS" sid="671430294056677" static="0" type="number">17</variable>
+        <variable constant="1" name="MAX_PALABRAS" sid="671430294056677" static="0" type="number">15</variable>
         <variable constant="0" name="palabrasEncontradas" sid="393875388871797" static="0" type="number">0</variable>
         <event-group description="" sid="263947968711391" title="Clic en inicial 1">
             <sub-events>
@@ -163,19 +163,6 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="121687638755726">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="203941497661287" type="Touch">
-                            <param id="0" name="Object">snsCeleste1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="385921987752489" type="snsCeleste1">
-                            <param id="0" name="Instance variable">activo</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="436692859916754">
                     <conditions>
                         <condition id="3" name="On touched object" sid="918744522520564" type="Touch">
@@ -184,20 +171,6 @@
                     </conditions>
                     <actions>
                         <action id="-13" name="Set boolean" sid="419610043752112" type="snsBlanco1">
-                            <param id="0" name="Instance variable">activo</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>Azul</comment>
-                <event-block sid="521540328896052">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="914979902711980" type="Touch">
-                            <param id="0" name="Object">snsPascua2</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="146827788368337" type="snsPascua2">
                             <param id="0" name="Instance variable">activo</param>
                             <param id="1" name="Value">1</param>
                         </action>
@@ -616,39 +589,6 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="481546205118523">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="208368467268889" type="Touch">
-                            <param id="0" name="Object">snsCeleste2</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="643239273379225">
-                            <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="160715602520146" type="snsCeleste1">
-                                    <param id="0" name="Instance variable">activo</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-15" name="Set visible" sid="845350466946763" type="marcaCeleste">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="854224767556980" type="System">
-                                    <param id="0" name="Seconds">0.5</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="916491717085887" type="lblCeleste">
-                                    <param id="0" name="Animation">&quot;Chk&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="0" name="Call function" sid="665613835391639" type="Function">
-                                    <param id="0" name="Name">&quot;verificarFin&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
                 <event-block sid="292563964887904">
                     <conditions>
                         <condition id="3" name="On touched object" sid="950711618382301" type="Touch">
@@ -675,39 +615,6 @@
                                     <param id="1" name="From">1</param>
                                 </action>
                                 <action id="0" name="Call function" sid="441582261461920" type="Function">
-                                    <param id="0" name="Name">&quot;verificarFin&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="910040277739170">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="606788633929445" type="Touch">
-                            <param id="0" name="Object">snsAzul2</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="551432244995837">
-                            <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="535372598268233" type="snsPascua2">
-                                    <param id="0" name="Instance variable">activo</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-15" name="Set visible" sid="289732445330723" type="marcaAzul">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="287062241773158" type="System">
-                                    <param id="0" name="Seconds">0.5</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="790242955002025" type="lblAzul">
-                                    <param id="0" name="Animation">&quot;Chk&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="0" name="Call function" sid="866501467450041" type="Function">
                                     <param id="0" name="Name">&quot;verificarFin&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
