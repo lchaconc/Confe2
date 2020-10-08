@@ -918,6 +918,34 @@
                             <param id="1" name="Mode">0</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="721879125638042">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="955151819172206" type="System">
+                                    <param id="0" name="Variable">sexo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;M&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="137168700559131" type="bgNombre">
+                                    <param id="0" name="Animation">&quot;Nina&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="757899856827403">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="345881421158883" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="537505912863182" type="bgNombre">
+                                    <param id="0" name="Animation">&quot;Nino&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
