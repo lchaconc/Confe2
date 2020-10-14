@@ -226,7 +226,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="346540095153896" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Desktop\doble.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -234,7 +234,14 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="458387008568186" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Desktop\doble.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -314,6 +321,14 @@
                     <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\luisc\Desktop\Presentación1\Diapositiva7.JPG" />
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="lblVisorPuntos" sid="255200051547341">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Pin" sid="348054651959928">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
         </object-type>
     </object-folder>
     <families />
