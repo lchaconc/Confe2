@@ -16,6 +16,10 @@
                         <condition id="-2" name="On start of layout" sid="688525440657624" type="System" />
                     </conditions>
                     <actions>
+                        <action id="0" name="Call function" sid="828738727773307" type="Function">
+                            <param id="0" name="Name">&quot;acomodarPersonaje&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                         <action id="0" name="Clear" sid="127442650846297" type="posicionesSimon" />
                         <action id="0" name="Clear" sid="306234495790981" type="momentosSimon" />
                         <action id="1" name="Set size" sid="205697367988041" type="posicionesSimon">
@@ -734,6 +738,54 @@
                                 <action id="-13" name="Set boolean" sid="823171375616738" type="modalFinSimon">
                                     <param id="0" name="Instance variable">juegoGanado</param>
                                     <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="936368468421044" title="Acomodar personaje Hombre o Mujer">
+            <sub-events>
+                <event-block sid="678394222715857">
+                    <conditions>
+                        <condition id="0" name="On function" sid="779326766891870" type="Function">
+                            <param id="0" name="Name">&quot;acomodarPersonaje&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="105265356831690">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="180102649264756" type="System">
+                                    <param id="0" name="Variable">sexo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;M&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="766999014371482" type="chica">
+                                    <param id="0" name="X">648</param>
+                                    <param id="1" name="Y">446</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="165323594657721" type="chico">
+                                    <param id="0" name="X">-600</param>
+                                    <param id="1" name="Y">-600</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="461918073435690">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="773136279846717" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="966915417721789" type="chico">
+                                    <param id="0" name="X">658</param>
+                                    <param id="1" name="Y">708</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="174324278115357" type="chica">
+                                    <param id="0" name="X">-600</param>
+                                    <param id="1" name="Y">-600</param>
                                 </action>
                             </actions>
                         </event-block>

@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eSplash</name>
     <events>
-        <variable constant="0" name="sexo" sid="699940636377285" static="0" type="number">0</variable>
+        <variable comment="H=Hombre  / M=Mujer" constant="0" name="sexo" sid="699940636377285" static="0" type="text">H</variable>
         <event-block sid="228096461268681">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="761703569107543" type="System" />
@@ -13,7 +13,7 @@
                     <param id="0" name="Seconds">1.0</param>
                 </action>
                 <action id="-2" name="Go to layout" sid="284781569351085" type="System">
-                    <param id="0" name="Layout">Sopa</param>
+                    <param id="0" name="Layout">SimonDice</param>
                 </action>
             </actions>
         </event-block>
