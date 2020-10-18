@@ -66,6 +66,9 @@
             <object-type global="1" name="momentosSimon" sid="513379058637623">
                 <plugin id="Arr" />
             </object-type>
+            <object-type global="1" name="vestidosCura" sid="814341330747289">
+                <plugin id="Arr" />
+            </object-type>
         </object-folder>
         <object-folder name="Sopa">
             <object-folder name="ListaPalabras">
@@ -1792,6 +1795,103 @@
                 </object-type>
             </object-folder>
         </object-folder>
+        <object-folder name="Vistiendo-Cura">
+            <object-folder name="Bg" />
+            <object-folder name="Main">
+                <object-type name="padre" sid="532463869051324">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Base" pingpong="0" repeatcount="1" repeatto="0" sid="381764674066831" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.500829" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\RevistiendoalCura\1x\Padre1revestirCura.png" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Alba" pingpong="0" repeatcount="1" repeatto="0" sid="662831646049642" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\RevistiendoalCura\1x\Padre2revestirCura.png" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Cingulo" pingpong="0" repeatcount="1" repeatto="0" sid="470754288490619" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\RevistiendoalCura\1x\Padre3revestirCura.png" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Estola" pingpong="0" repeatcount="1" repeatto="0" sid="751894493950552" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\RevistiendoalCura\1x\Padre4revestirCura.png" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Casulla" pingpong="0" repeatcount="1" repeatto="0" sid="373452377647601" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\RevistiendoalCura\1x\Padre5revestirCura.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="sombraCura" sid="138736165238086">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="342755110449893" speed="5">
+                            <frame duration="1" hotspotX="0.501193" hotspotY="0.505495" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\RevistiendoalCura\1x\sombrarevestirCura.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Controls">
+                <object-type name="btnVestidoCura" sid="272027603550480">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="nombre" sid="852267438091613" type="string" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Alba" pingpong="0" repeatcount="1" repeatto="0" sid="638326635200064" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.503311" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\RevistiendoalCura\1x\BtnAlbarevestirCura.png" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Cingulo" pingpong="0" repeatcount="1" repeatto="0" sid="291959751637508" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\RevistiendoalCura\1x\BtnCingulorevestirCura.png" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Estola" pingpong="0" repeatcount="1" repeatto="0" sid="500157216640265" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\RevistiendoalCura\1x\BtnEstolarevestirCura.png" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Casulla" pingpong="0" repeatcount="1" repeatto="0" sid="127263073736072" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\RevistiendoalCura\1x\btnCasullarevestirCura.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="letreroVestidosCura" sid="164977744866671">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Estola" pingpong="0" repeatcount="1" repeatto="0" sid="399061781261363" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.509804" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\RevistiendoalCura\1x\txtEstolarevestirCura.png" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Cingulo" pingpong="0" repeatcount="1" repeatto="0" sid="726306240158349" speed="5">
+                            <frame duration="1" hotspotX="0.504762" hotspotY="0.509434" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\RevistiendoalCura\1x\BtnCingulo_1revestirCura.png" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Alba" pingpong="0" repeatcount="1" repeatto="0" sid="809852452219495" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.509804" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\RevistiendoalCura\1x\BtnAlba_1revestirCura.png" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Casulla" pingpong="0" repeatcount="1" repeatto="0" sid="421822686851481" speed="5">
+                            <frame duration="1" hotspotX="0.50505" hotspotY="0.509804" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\RevistiendoalCura\1x\txtCasullarevestirCura.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Modal">
+                <object-type name="mdlErrorVEstidoCura" sid="106254692318152">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="566501995339202" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.504202" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\RevistiendoalCura\1x\BtnOrnamentoIncorrectorevestirCura.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+        </object-folder>
+        <object-type name="bgVistiendoCura" sid="233652992384754">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="904566291117153" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\RevistiendoalCura\1x\backgroundrevestirCura.png">
+                        <collision-poly>
+                            <point x="0.00155521" y="0.00274348" />
+                            <point x="0.998445" y="0.00274348" />
+                            <point x="0.996112" y="0.993141" />
+                            <point x="0.00388802" y="0.993141" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -1799,12 +1899,14 @@
         <layout>Sopa.xml</layout>
         <layout>Calendario.xml</layout>
         <layout>SimonDice.xml</layout>
+        <layout>VisitnedoCura.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>eSplash.xml</event-sheet>
         <event-sheet>eCalendario.xml</event-sheet>
         <event-sheet>eSopa.xml</event-sheet>
         <event-sheet>eSimonDice.xml</event-sheet>
+        <event-sheet>eVisitendoCura.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="0">

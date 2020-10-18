@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>eVisitendoCura</name>
+    <events>
+        <variable constant="0" name="contVestido" sid="940811575047790" static="0" type="number">0</variable>
+        <event-group description="" sid="478783659145000" title="Setup">
+            <sub-events>
+                <event-block sid="138822583731673">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="145282839146859" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set size" sid="754302729971527" type="vestidosCura">
+                            <param id="0" name="Width">4</param>
+                            <param id="1" name="Height">1</param>
+                            <param id="2" name="Depth">1</param>
+                        </action>
+                        <action id="0" name="Clear" sid="282585845012572" type="vestidosCura" />
+                        <action id="2" name="Set at X" sid="511995071871068" type="vestidosCura">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Value">&quot;Alba&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="421791924537082" type="vestidosCura">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Value">&quot;Cingulo&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="475888184997806" type="vestidosCura">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Value">&quot;Estola&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="399659404861797" type="vestidosCura">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Value">&quot;Casulla&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="816544259459954" title="Acicones Vistiendo">
+            <sub-events>
+                <event-block sid="395239870868512">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="888041668931548" type="Touch">
+                            <param id="0" name="Object">btnVestidoCura</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="772595260738480" type="letreroVestidosCura">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="861973729546311">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="557161555134517" type="btnVestidoCura">
+                                    <param id="0" name="Instance variable">nombre</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">vestidosCura.At( contVestido )</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="183377032215735" type="padre">
+                                    <param id="0" name="Animation">btnVestidoCura.nombre</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="777886110990430" type="System">
+                                    <param id="0" name="Variable">contVestido</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="517471288628603">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="246925730143601" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="825091867853125" type="mdlErrorVEstidoCura">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="347670258271005">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="624961810195602" type="Touch">
+                            <param id="0" name="Object">mdlErrorVEstidoCura</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="982632034693564" type="mdlErrorVEstidoCura">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="439966689492010">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="849364898957527" type="System">
+                            <param id="0" name="Variable">contVestido</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="819352779621208" type="sombraCura">
+                            <param id="0" name="Width">419</param>
+                            <param id="1" name="Height">26</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="254257464788017">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="231281698015059" type="System">
+                            <param id="0" name="Variable">contVestido</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="189834983227538" type="sombraCura">
+                            <param id="0" name="Width">419</param>
+                            <param id="1" name="Height">91</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
