@@ -1796,7 +1796,31 @@
             </object-folder>
         </object-folder>
         <object-folder name="Vistiendo-Cura">
-            <object-folder name="Bg" />
+            <object-folder name="Bg">
+                <object-type name="bgVistiendoCura" sid="233652992384754">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="904566291117153" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\RevistiendoalCura\1x\backgroundrevestirCura.png">
+                                <collision-poly>
+                                    <point x="0.00155521" y="0.00274348" />
+                                    <point x="0.998445" y="0.00274348" />
+                                    <point x="0.996112" y="0.993141" />
+                                    <point x="0.00388802" y="0.993141" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="bgFinVistiendoCura" sid="442990806763516">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="295152666458785" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
             <object-folder name="Main">
                 <object-type name="padre" sid="532463869051324">
                     <plugin id="Sprite" />
@@ -1823,6 +1847,23 @@
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="342755110449893" speed="5">
                             <frame duration="1" hotspotX="0.501193" hotspotY="0.505495" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\RevistiendoalCura\1x\sombrarevestirCura.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="instruccionesCura" sid="627354596088246">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="775664939382548" speed="5">
+                            <frame duration="1" hotspotX="0.501319" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\RevistiendoalCura\1x\BtnInstruccionesrevestirCura.png">
+                                <collision-poly>
+                                    <point x="0.0158311" y="0.0428571" />
+                                    <point x="0.91029" y="0.242857" />
+                                    <point x="0.738786" y="0.5" />
+                                    <point x="0.717678" y="0.235714" />
+                                    <point x="0.0422164" y="0.885714" />
+                                    <point x="0.00791557" y="0.5" />
+                                </collision-poly>
+                            </frame>
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -1877,21 +1918,6 @@
                 </object-type>
             </object-folder>
         </object-folder>
-        <object-type name="bgVistiendoCura" sid="233652992384754">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="904566291117153" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\RevistiendoalCura\1x\backgroundrevestirCura.png">
-                        <collision-poly>
-                            <point x="0.00155521" y="0.00274348" />
-                            <point x="0.998445" y="0.00274348" />
-                            <point x="0.996112" y="0.993141" />
-                            <point x="0.00388802" y="0.993141" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
     </object-folder>
     <families />
     <layout-folder>
