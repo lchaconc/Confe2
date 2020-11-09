@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>eMain</name>
+    <events>
+        <variable constant="0" name="toques" sid="116457428638421" static="0" type="number">0</variable>
+        <variable constant="0" name="avance" sid="171956609287113" static="0" type="number">0</variable>
+        <event-group description="" sid="966629886206222" title="Evento clic btn">
+            <sub-events>
+                <event-block sid="152764996447562">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="260038436761809" type="Touch">
+                            <param id="0" name="Object">btnClicker</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="867198845517667" type="barraAvance">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Y co-ordinate">283</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="574542089511575" type="System">
+                            <param id="0" name="Variable">toques</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="677532699300225" type="barraAvance">
+                            <param id="0" name="Y">barraAvance.Y - 5</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="859357544226198" type="System">
+                            <param id="0" name="Group name">&quot;Bajar Barra&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="879120955512478" title="Bajar Barra">
+            <sub-events>
+                <event-block sid="151404481077585">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="538709375864528" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="917930382366364" type="barraAvance">
+                            <param id="0" name="Y">barraAvance.Y + 5</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="505685393645593" title="Control caida de barra">
+            <sub-events>
+                <event-block sid="599843558280533">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="748424052983415" type="barraAvance">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Y co-ordinate">284</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="350688848406601" type="System">
+                            <param id="0" name="Group name">&quot;Bajar Barra&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="346087849742596">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="675436559395418" type="barraAvance">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Y co-ordinate">771</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="213764821357322" type="System">
+                            <param id="0" name="Group name">&quot;Bajar Barra&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="998065381975612" title="Cambios Tama">
+            <sub-events>
+                <event-block sid="474212623693805">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="592825578764398" type="barraAvance">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Y co-ordinate">550</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="303151021889995" type="tama">
+                            <param id="0" name="Animation">&quot;Tarea1&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="140800555886666" type="tama">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="682774353923157">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="437251629384215" type="barraAvance">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Y co-ordinate">600</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="989947178655056" type="tama">
+                            <param id="0" name="Animation">&quot;Tarea1&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="423662548896006" type="tama">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="708298858101022">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="143826486597710" type="barraAvance">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Y co-ordinate">284</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="763876191857691" type="tama">
+                            <param id="0" name="Animation">&quot;Tarea1&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="719141094150994" type="tama">
+                            <param id="0" name="Frame number">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
