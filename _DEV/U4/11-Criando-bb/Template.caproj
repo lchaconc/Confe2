@@ -10,6 +10,7 @@
     <unique-id>uf1sq6qxoh4c</unique-id>
     <saved-with-version>27900</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -54,6 +55,9 @@
             <object-type name="Touch" sid="221858948176753">
                 <plugin id="Touch" />
             </object-type>
+            <object-type global="1" name="animaciones" sid="295986659450700">
+                <plugin id="Arr" />
+            </object-type>
         </object-folder>
         <object-folder name="Controls">
             <object-type name="baseBarra" sid="455216450416385">
@@ -97,15 +101,30 @@
             <object-type name="btnClicker" sid="217240428133646">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="tarea1" pingpong="0" repeatcount="1" repeatto="0" sid="825218593288680" speed="5">
+                    <animation framecount="1" loop="0" name="D1T1" pingpong="0" repeatcount="1" repeatto="0" sid="825218593288680" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Criando bebe\Dia1\tarea 1\btn_panaldia1.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="D1T2" pingpong="0" repeatcount="1" repeatto="0" sid="864878857955856" speed="5">
+                        <frame duration="1" hotspotX="0.503401" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Criando bebe\Dia1\tarea 2\btn_banodia1.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="D1T3" pingpong="0" repeatcount="1" repeatto="0" sid="780970284737118" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503401" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Criando bebe\Dia1\tarea 3\btn_chupondia1.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="D2T1" pingpong="0" repeatcount="1" repeatto="0" sid="965519853019318" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="D2T2" pingpong="0" repeatcount="1" repeatto="0" sid="459224249130686" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503401" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Criando bebe\Dia1\tarea 3\btn_chupondia1.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="D2T3" pingpong="0" repeatcount="1" repeatto="0" sid="864519952607966" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
             <object-type name="tama" sid="234920675900987">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="3" loop="0" name="Tarea1" pingpong="0" repeatcount="1" repeatto="0" sid="589731304114227" speed="0">
+                    <animation framecount="3" loop="0" name="D1T1" pingpong="0" repeatcount="1" repeatto="0" sid="589731304114227" speed="0">
                         <frame duration="1" hotspotX="0.501695" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Criando bebe\Dia1\tarea 1\panal1_Hdia1.png">
                             <collision-poly>
                                 <point x="0.227119" y="0.108065" />
@@ -143,8 +162,194 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="1" loop="0" name="Tarea2" pingpong="0" repeatcount="1" repeatto="0" sid="451320006281347" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <animation framecount="3" loop="0" name="D1T2" pingpong="0" repeatcount="1" repeatto="0" sid="451320006281347" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Criando bebe\Dia1\tarea 2\bano1+Hdia1.png">
+                            <collision-poly>
+                                <point x="0.222581" y="0.110224" />
+                                <point x="0.5" y="0" />
+                                <point x="0.767742" y="0.115016" />
+                                <point x="0.829032" y="0.5" />
+                                <point x="0.754839" y="0.878594" />
+                                <point x="0.5" y="0.835463" />
+                                <point x="0.270968" y="0.865815" />
+                                <point x="0.145161" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.501235" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Criando bebe\Dia1\tarea 2\bano2+Hdia1.png">
+                            <collision-poly>
+                                <point x="0.239506" y="0.171378" />
+                                <point x="0.498765" y="0.04947" />
+                                <point x="0.804938" y="0.139576" />
+                                <point x="0.91358" y="0.938163" />
+                                <point x="0.498765" y="1" />
+                                <point x="0.0617284" y="0.95583" />
+                                <point x="0.246914" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.501235" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Criando bebe\Dia1\tarea 2\bano3+Hdia1.png">
+                            <collision-poly>
+                                <point x="0.308642" y="0.220848" />
+                                <point x="0.498765" y="0.15371" />
+                                <point x="0.696296" y="0.217314" />
+                                <point x="0.859259" y="0.5" />
+                                <point x="0.91358" y="0.938163" />
+                                <point x="0.498765" y="1" />
+                                <point x="0.0617284" y="0.95583" />
+                                <point x="0.246914" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="3" loop="0" name="D1T3" pingpong="0" repeatcount="1" repeatto="0" sid="805370101100926" speed="0">
+                        <frame duration="1" hotspotX="0.501695" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Criando bebe\Dia1\tarea 3\comer1_Hdia1.png">
+                            <collision-poly>
+                                <point x="0.227119" y="0.108065" />
+                                <point x="0.498305" y="0.0403226" />
+                                <point x="0.779661" y="0.104839" />
+                                <point x="0.938983" y="0.5" />
+                                <point x="0.762712" y="0.887097" />
+                                <point x="0.498305" y="0.824194" />
+                                <point x="0.264407" y="0.874194" />
+                                <point x="0.0711864" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.501639" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Criando bebe\Dia1\tarea 3\comer2_Hdia1.png">
+                            <collision-poly>
+                                <point x="0.222951" y="0.108974" />
+                                <point x="0.498361" y="0.0416667" />
+                                <point x="0.783607" y="0.105769" />
+                                <point x="0.865574" y="0.5" />
+                                <point x="0.744262" y="0.875" />
+                                <point x="0.498361" y="0.833333" />
+                                <point x="0.262295" y="0.871795" />
+                                <point x="0.127869" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500787" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Criando bebe\Dia1\tarea 3\comer3_Hdia1.png">
+                            <collision-poly>
+                                <point x="0.223684" y="0.107087" />
+                                <point x="0.5" y="0.0409449" />
+                                <point x="0.782895" y="0.103937" />
+                                <point x="0.891447" y="0.499213" />
+                                <point x="0.753289" y="0.88189" />
+                                <point x="0.5" y="0.829921" />
+                                <point x="0.266447" y="0.872441" />
+                                <point x="0.115132" y="0.499213" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="3" loop="0" name="D2T1" pingpong="0" repeatcount="1" repeatto="0" sid="618144957064507" speed="0">
+                        <frame duration="1" hotspotX="0.501618" hotspotY="0.500928" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Criando bebe\Dia2\tarea 1\bano1_Hdia2.png">
+                            <collision-poly>
+                                <point x="0.177994" y="0.102041" />
+                                <point x="0.498382" y="0" />
+                                <point x="0.831715" y="0.096475" />
+                                <point x="0.702265" y="0.499072" />
+                                <point x="0.809061" y="0.890538" />
+                                <point x="0.498382" y="1" />
+                                <point x="0.113269" y="0.935065" />
+                                <point x="0.216828" y="0.499072" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500921" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Criando bebe\Dia2\tarea 1\bano2_Hdia2.png">
+                            <collision-poly>
+                                <point x="0.156463" y="0.0847145" />
+                                <point x="0.5" y="0.00368324" />
+                                <point x="0.836735" y="0.0883978" />
+                                <point x="0.758503" y="0.499079" />
+                                <point x="0.870748" y="0.930018" />
+                                <point x="0.5" y="0.970534" />
+                                <point x="0.12585" y="0.93186" />
+                                <point x="0.248299" y="0.499079" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500921" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Criando bebe\Dia2\tarea 1\bano3_Hdia2.png">
+                            <collision-poly>
+                                <point x="0.177632" y="0.0994475" />
+                                <point x="0.5" y="0.00368324" />
+                                <point x="0.835526" y="0.092081" />
+                                <point x="0.743421" y="0.499079" />
+                                <point x="0.858553" y="0.92081" />
+                                <point x="0.5" y="0.972376" />
+                                <point x="0.131579" y="0.926335" />
+                                <point x="0.253289" y="0.499079" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="3" loop="0" name="D2T2" pingpong="0" repeatcount="1" repeatto="0" sid="511332568186535" speed="0">
+                        <frame duration="1" hotspotX="0.501695" hotspotY="0.500808" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Criando bebe\Dia2\tarea 2\comer1_H_1dia2.png">
+                            <collision-poly>
+                                <point x="0.176271" y="0.0840065" />
+                                <point x="0.498305" y="0.00161551" />
+                                <point x="0.837288" y="0.0775444" />
+                                <point x="0.942373" y="0.499192" />
+                                <point x="0.759322" y="0.885299" />
+                                <point x="0.498305" y="0.822294" />
+                                <point x="0.264407" y="0.87399" />
+                                <point x="0.0677966" y="0.499192" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.501639" hotspotY="0.500821" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Criando bebe\Dia2\tarea 2\comer2_H_1dia2.png">
+                            <collision-poly>
+                                <point x="0.17377" y="0.0870279" />
+                                <point x="0.498361" y="0.00328407" />
+                                <point x="0.829508" y="0.0853859" />
+                                <point x="0.878689" y="0.499179" />
+                                <point x="0.740984" y="0.870279" />
+                                <point x="0.498361" y="0.827586" />
+                                <point x="0.262295" y="0.868637" />
+                                <point x="0.104918" y="0.499179" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.501639" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Criando bebe\Dia2\tarea 2\comer3_H_1dia2.png">
+                            <collision-poly>
+                                <point x="0.177049" y="0.0865385" />
+                                <point x="0.498361" y="0.00160256" />
+                                <point x="0.836066" y="0.0801282" />
+                                <point x="0.901639" y="0.5" />
+                                <point x="0.754098" y="0.879808" />
+                                <point x="0.498361" y="0.826923" />
+                                <point x="0.268852" y="0.86859" />
+                                <point x="0.0983607" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="3" loop="0" name="D2T3" pingpong="0" repeatcount="1" repeatto="0" sid="736532085826787" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Criando bebe\Dia2\tarea 3\camina1_Hdia2.png">
+                            <collision-poly>
+                                <point x="0.0913979" y="0.0841584" />
+                                <point x="0.5" y="0.039604" />
+                                <point x="0.725806" y="0.252475" />
+                                <point x="0.696237" y="0.5" />
+                                <point x="0.884409" y="0.893564" />
+                                <point x="0.5" y="0.987624" />
+                                <point x="0.244624" y="0.774752" />
+                                <point x="0.0188172" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500907" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Criando bebe\Dia2\tarea 3\camina2_Hdia2.png">
+                            <collision-poly>
+                                <point x="0.125749" y="0.076225" />
+                                <point x="0.5" y="0.0181488" />
+                                <point x="0.694611" y="0.185118" />
+                                <point x="0.784431" y="0.499093" />
+                                <point x="0.736527" y="0.84029" />
+                                <point x="0.5" y="0.994555" />
+                                <point x="0.314371" y="0.809437" />
+                                <point x="0.42515" y="0.499093" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Criando bebe\Dia2\tarea 3\camina3_Hdia2.png">
+                            <collision-poly>
+                                <point x="0.181159" y="0.088968" />
+                                <point x="0.5" y="0" />
+                                <point x="0.84058" y="0.0782918" />
+                                <point x="0.721014" y="0.5" />
+                                <point x="0.833333" y="0.918149" />
+                                <point x="0.5" y="0.836299" />
+                                <point x="0.0724638" y="0.964413" />
+                                <point x="0.286232" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>

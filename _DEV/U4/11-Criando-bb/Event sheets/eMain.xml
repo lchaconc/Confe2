@@ -3,8 +3,54 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eMain</name>
     <events>
+        <variable constant="0" name="cambioTarea" sid="660805431385681" static="0" type="number">1</variable>
+        <variable constant="0" name="contador" sid="987910350895125" static="0" type="number">0</variable>
         <variable constant="0" name="toques" sid="116457428638421" static="0" type="number">0</variable>
-        <variable constant="0" name="avance" sid="171956609287113" static="0" type="number">0</variable>
+        <event-group description="" sid="548360784478949" title="Setup">
+            <sub-events>
+                <event-block sid="996169872293887">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="874964787556966" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Clear" sid="953447907849030" type="animaciones" />
+                        <action id="1" name="Set size" sid="570720436074613" type="animaciones">
+                            <param id="0" name="Width">6</param>
+                            <param id="1" name="Height">1</param>
+                            <param id="2" name="Depth">1</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="881985217026733" type="animaciones">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Value">&quot;D1T1&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="303810948755771" type="animaciones">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Value">&quot;D1T2&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="884178741543988" type="animaciones">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Value">&quot;D1T3&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="477625389803987" type="animaciones">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Value">&quot;D2T1&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="433492983597483" type="animaciones">
+                            <param id="0" name="X">4</param>
+                            <param id="1" name="Value">&quot;D2T2&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="460604214256408" type="animaciones">
+                            <param id="0" name="X">5</param>
+                            <param id="1" name="Value">&quot;D2T3&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="223434038593459" type="Function">
+                            <param id="0" name="Name">&quot;cargarAnimacion&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="966629886206222" title="Evento clic btn">
             <sub-events>
                 <event-block sid="152764996447562">
@@ -25,7 +71,7 @@
                         <action id="-2" name="Set Y" sid="677532699300225" type="barraAvance">
                             <param id="0" name="Y">barraAvance.Y - 5</param>
                         </action>
-                        <action id="-12" name="Set group active" sid="859357544226198" type="System">
+                        <action disabled="1" id="-12" name="Set group active" sid="859357544226198" type="System">
                             <param id="0" name="Group name">&quot;Bajar Barra&quot;</param>
                             <param id="1" name="State">1</param>
                         </action>
@@ -91,10 +137,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="303151021889995" type="tama">
-                            <param id="0" name="Animation">&quot;Tarea1&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
                         <action id="5" name="Set frame" sid="140800555886666" type="tama">
                             <param id="0" name="Frame number">1</param>
                         </action>
@@ -108,10 +150,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="989947178655056" type="tama">
-                            <param id="0" name="Animation">&quot;Tarea1&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
                         <action id="5" name="Set frame" sid="423662548896006" type="tama">
                             <param id="0" name="Frame number">0</param>
                         </action>
@@ -125,12 +163,85 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="763876191857691" type="tama">
-                            <param id="0" name="Animation">&quot;Tarea1&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
                         <action id="5" name="Set frame" sid="719141094150994" type="tama">
                             <param id="0" name="Frame number">2</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="311041303226006">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="984991072886435" type="System">
+                                    <param id="0" name="Variable">cambioTarea</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="646959794961304" type="System">
+                                    <param id="0" name="Variable">cambioTarea</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="235242246895330" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="793304208390996" type="System">
+                                    <param id="0" name="Variable">contador</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="983712831112110" type="Function">
+                                    <param id="0" name="Name">&quot;cargarAnimacion&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="379657258088045" type="Function">
+                                    <param id="0" name="Name">&quot;iniciarBarra&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="763511101783836" title="Control dias y tareas">
+            <sub-events>
+                <event-block sid="766755181980964">
+                    <conditions>
+                        <condition id="0" name="On function" sid="707996208973055" type="Function">
+                            <param id="0" name="Name">&quot;cargarAnimacion&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="936195624951663" type="tama">
+                            <param id="0" name="Animation">animaciones.At(contador)</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="537438522222674" type="btnClicker">
+                            <param id="0" name="Animation">animaciones.At(contador)</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="726071701213698" title="Inicializar barra">
+            <sub-events>
+                <event-block sid="163673215219695">
+                    <conditions>
+                        <condition id="0" name="On function" sid="205039873097790" type="Function">
+                            <param id="0" name="Name">&quot;iniciarBarra&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="289328283847076" type="barraAvance">
+                            <param id="0" name="X">1209</param>
+                            <param id="1" name="Y">770</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="289258866806587" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="912400266325578" type="System">
+                            <param id="0" name="Variable">cambioTarea</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
