@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eMain</name>
     <events>
+        <variable constant="0" name="animacion" sid="220775613620556" static="0" type="text"></variable>
         <variable constant="0" name="cambioTarea" sid="660805431385681" static="0" type="number">1</variable>
         <variable constant="0" name="contador" sid="987910350895125" static="0" type="number">0</variable>
         <variable constant="0" name="toques" sid="116457428638421" static="0" type="number">0</variable>
@@ -43,6 +44,18 @@
                             <param id="0" name="X">5</param>
                             <param id="1" name="Value">&quot;D2T3&quot;</param>
                         </action>
+                        <action id="2" name="Set at X" sid="128986439626931" type="animaciones">
+                            <param id="0" name="X">6</param>
+                            <param id="1" name="Value">&quot;D3T1&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="338313761138245" type="animaciones">
+                            <param id="0" name="X">7</param>
+                            <param id="1" name="Value">&quot;D3T2&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="724600092178519" type="animaciones">
+                            <param id="0" name="X">8</param>
+                            <param id="1" name="Value">&quot;D3T3&quot;</param>
+                        </action>
                         <action id="0" name="Call function" sid="223434038593459" type="Function">
                             <param id="0" name="Name">&quot;cargarAnimacion&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
@@ -69,7 +82,7 @@
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="-2" name="Set Y" sid="677532699300225" type="barraAvance">
-                            <param id="0" name="Y">barraAvance.Y - 5</param>
+                            <param id="0" name="Y">barraAvance.Y - 10</param>
                         </action>
                         <action disabled="1" id="-12" name="Set group active" sid="859357544226198" type="System">
                             <param id="0" name="Group name">&quot;Bajar Barra&quot;</param>
@@ -211,12 +224,24 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-9" name="Set value" sid="716916998734063" type="System">
+                            <param id="0" name="Variable">animacion</param>
+                            <param id="1" name="Value">animaciones.At(contador)</param>
+                        </action>
                         <action id="4" name="Set animation" sid="936195624951663" type="tama">
-                            <param id="0" name="Animation">animaciones.At(contador)</param>
+                            <param id="0" name="Animation">animacion</param>
                             <param id="1" name="From">1</param>
                         </action>
                         <action id="4" name="Set animation" sid="537438522222674" type="btnClicker">
-                            <param id="0" name="Animation">animaciones.At(contador)</param>
+                            <param id="0" name="Animation">animacion</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="471036777150959" type="txtDias">
+                            <param id="0" name="Animation">animacion</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="513733557056830" type="txtTareasPorDia">
+                            <param id="0" name="Animation">animacion</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
