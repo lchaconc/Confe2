@@ -5,7 +5,7 @@
     <events>
         <variable constant="0" name="animacion" sid="220775613620556" static="0" type="text"></variable>
         <variable constant="0" name="cambioTarea" sid="660805431385681" static="0" type="number">1</variable>
-        <variable constant="0" name="contador" sid="987910350895125" static="0" type="number">5</variable>
+        <variable constant="0" name="contador" sid="987910350895125" static="0" type="number">0</variable>
         <variable constant="0" name="toques" sid="116457428638421" static="0" type="number">0</variable>
         <event-group description="" sid="548360784478949" title="Setup">
             <sub-events>
@@ -73,7 +73,7 @@
                         </condition>
                         <condition id="-2" name="Compare Y" sid="867198845517667" type="barraAvance">
                             <param id="0" name="Comparison">5</param>
-                            <param id="1" name="Y co-ordinate">283</param>
+                            <param id="1" name="Y co-ordinate">625</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -82,7 +82,7 @@
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="-2" name="Set Y" sid="677532699300225" type="barraAvance">
-                            <param id="0" name="Y">barraAvance.Y - 10</param>
+                            <param id="0" name="Y">barraAvance.Y - 5</param>
                         </action>
                         <action disabled="1" id="-12" name="Set group active" sid="859357544226198" type="System">
                             <param id="0" name="Group name">&quot;Bajar Barra&quot;</param>
@@ -114,7 +114,7 @@
                     <conditions>
                         <condition id="-2" name="Compare Y" sid="748424052983415" type="barraAvance">
                             <param id="0" name="Comparison">3</param>
-                            <param id="1" name="Y co-ordinate">284</param>
+                            <param id="1" name="Y co-ordinate">625</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -128,7 +128,7 @@
                     <conditions>
                         <condition id="-2" name="Compare Y" sid="675436559395418" type="barraAvance">
                             <param id="0" name="Comparison">5</param>
-                            <param id="1" name="Y co-ordinate">771</param>
+                            <param id="1" name="Y co-ordinate">1125</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -146,25 +146,25 @@
                     <conditions>
                         <condition id="-2" name="Compare Y" sid="592825578764398" type="barraAvance">
                             <param id="0" name="Comparison">0</param>
-                            <param id="1" name="Y co-ordinate">550</param>
+                            <param id="1" name="Y co-ordinate">1125</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="5" name="Set frame" sid="140800555886666" type="tama">
-                            <param id="0" name="Frame number">1</param>
+                            <param id="0" name="Frame number">0</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="682774353923157">
                     <conditions>
                         <condition id="-2" name="Compare Y" sid="437251629384215" type="barraAvance">
-                            <param id="0" name="Comparison">5</param>
-                            <param id="1" name="Y co-ordinate">600</param>
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Y co-ordinate">900</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="5" name="Set frame" sid="423662548896006" type="tama">
-                            <param id="0" name="Frame number">0</param>
+                            <param id="0" name="Frame number">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -172,7 +172,7 @@
                     <conditions>
                         <condition id="-2" name="Compare Y" sid="143826486597710" type="barraAvance">
                             <param id="0" name="Comparison">3</param>
-                            <param id="1" name="Y co-ordinate">284</param>
+                            <param id="1" name="Y co-ordinate">625</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -258,8 +258,8 @@
                     </conditions>
                     <actions>
                         <action id="-3" name="Set position" sid="289328283847076" type="barraAvance">
-                            <param id="0" name="X">1209</param>
-                            <param id="1" name="Y">770</param>
+                            <param id="0" name="X">1207</param>
+                            <param id="1" name="Y">1125</param>
                         </action>
                         <action id="-16" name="Wait" sid="289258866806587" type="System">
                             <param id="0" name="Seconds">1.0</param>
