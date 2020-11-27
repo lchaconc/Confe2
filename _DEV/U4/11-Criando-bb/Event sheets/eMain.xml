@@ -5,7 +5,7 @@
     <events>
         <variable constant="0" name="animacion" sid="220775613620556" static="0" type="text"></variable>
         <variable constant="0" name="cambioTarea" sid="660805431385681" static="0" type="number">1</variable>
-        <variable constant="0" name="contador" sid="987910350895125" static="0" type="number">8</variable>
+        <variable constant="0" name="contador" sid="987910350895125" static="0" type="number">6</variable>
         <variable constant="0" name="toques" sid="116457428638421" static="0" type="number">0</variable>
         <event-group description="" sid="548360784478949" title="Setup">
             <sub-events>
@@ -85,6 +85,58 @@
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="752337349500962">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="116099330622657" type="System">
+                                    <param id="0" name="Variable">sexo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;m&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="408738023859482" type="tamaMujer">
+                                    <param id="0" name="X">657</param>
+                                    <param id="1" name="Y">370</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="874690234068923" type="tamaHombre">
+                                    <param id="0" name="X">-600</param>
+                                    <param id="1" name="Y">-600</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="379201787603003" type="txtTareasPorDiaMujer">
+                                    <param id="0" name="X">231</param>
+                                    <param id="1" name="Y">326</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="472873266674078" type="txtTareasPorDiaHombre">
+                                    <param id="0" name="X">-600</param>
+                                    <param id="1" name="Y">-600</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="372908426816493">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="835237563996284" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="845661645370325" type="tamaHombre">
+                                    <param id="0" name="X">657</param>
+                                    <param id="1" name="Y">370</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="318558967762111" type="tamaMujer">
+                                    <param id="0" name="X">-600</param>
+                                    <param id="1" name="Y">-600</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="872980857416903" type="txtTareasPorDiaHombre">
+                                    <param id="0" name="X">231</param>
+                                    <param id="1" name="Y">326</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="411099951378521" type="txtTareasPorDiaMujer">
+                                    <param id="0" name="X">-600</param>
+                                    <param id="1" name="Y">-600</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -174,7 +226,10 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="5" name="Set frame" sid="140800555886666" type="tama">
+                        <action id="5" name="Set frame" sid="140800555886666" type="tamaHombre">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="507874675372984" type="tamaMujer">
                             <param id="0" name="Frame number">0</param>
                         </action>
                     </actions>
@@ -187,7 +242,10 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="5" name="Set frame" sid="423662548896006" type="tama">
+                        <action id="5" name="Set frame" sid="423662548896006" type="tamaHombre">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="184601735919771" type="tamaMujer">
                             <param id="0" name="Frame number">1</param>
                         </action>
                     </actions>
@@ -200,7 +258,10 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="5" name="Set frame" sid="719141094150994" type="tama">
+                        <action id="5" name="Set frame" sid="719141094150994" type="tamaHombre">
+                            <param id="0" name="Frame number">2</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="192041166444290" type="tamaMujer">
                             <param id="0" name="Frame number">2</param>
                         </action>
                     </actions>
@@ -252,7 +313,11 @@
                             <param id="0" name="Variable">animacion</param>
                             <param id="1" name="Value">animaciones.At(contador)</param>
                         </action>
-                        <action id="4" name="Set animation" sid="936195624951663" type="tama">
+                        <action id="4" name="Set animation" sid="936195624951663" type="tamaHombre">
+                            <param id="0" name="Animation">animacion</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="868379990803042" type="tamaMujer">
                             <param id="0" name="Animation">animacion</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -264,7 +329,11 @@
                             <param id="0" name="Animation">animacion</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="4" name="Set animation" sid="513733557056830" type="txtTareasPorDia">
+                        <action id="4" name="Set animation" sid="513733557056830" type="txtTareasPorDiaHombre">
+                            <param id="0" name="Animation">animacion</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="420469829808816" type="txtTareasPorDiaMujer">
                             <param id="0" name="Animation">animacion</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -291,6 +360,42 @@
                         <action id="-9" name="Set value" sid="912400266325578" type="System">
                             <param id="0" name="Variable">cambioTarea</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="301202386100223" title="Mostrar mascota">
+            <sub-events>
+                <variable constant="0" name="num" sid="597809399629175" static="0" type="number">0</variable>
+                <event-block sid="977443611625113">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="735691725820681" type="System">
+                            <param id="0" name="Variable">contador</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">6</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="322756087324714" type="barraAvance">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Y co-ordinate">630</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="802003263567326" type="System">
+                            <param id="0" name="Variable">num</param>
+                            <param id="1" name="Value">random(0,2)</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="917937700885695" type="mascota">
+                            <param id="0" name="Frame number">num</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="823362908436875" type="mascota">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="346941223034857" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="263258656586860" type="mascota">
+                            <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
                 </event-block>
