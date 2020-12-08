@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>Splash</name>
-    <sid>903095872690908</sid>
-    <event-sheet>eSplash</event-sheet>
+    <name>Instrucciones</name>
+    <sid>491435314808709</sid>
+    <event-sheet>eInstrucciones</event-sheet>
     <size>
         <width>1280</width>
         <height>720</height>
@@ -13,9 +13,9 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="Layer 0" sid="343056537914743">
+        <layer name="Layer 0" sid="346753902236525">
             <initially-visible>1</initially-visible>
-            <background-color>102,153,0</background-color>
+            <background-color>255,255,255</background-color>
             <transparent>0</transparent>
             <parallax>
                 <x>1</x>
@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="bgSprite" uid="17">
+                <instance type="bgInstrucciones" uid="18">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -43,7 +43,7 @@
                         <y>0</y>
                         <z>0</z>
                         <width>1281</width>
-                        <height>720</height>
+                        <height>721</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -55,14 +55,6 @@
             <effects />
         </layer>
     </layers>
-    <nonworld-instances>
-        <instance type="animaciones" uid="8">
-            <properties>
-                <width>1</width>
-                <height>1</height>
-                <depth>1</depth>
-            </properties>
-        </instance>
-    </nonworld-instances>
+    <nonworld-instances />
     <effects />
 </c2layout>

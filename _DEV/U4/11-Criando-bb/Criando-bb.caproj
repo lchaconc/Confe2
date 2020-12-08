@@ -80,7 +80,26 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="268228685210426" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.50193" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Criando bebe\Dia1\1x\basetareadia1.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502783" original-source="C:\Users\luisc\Desktop\Imagen1.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btnIniciar" sid="808559207464080">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="993658499595660" speed="5">
+                        <frame duration="1" hotspotX="0.502304" hotspotY="0.508475" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Criando bebe\btnOK.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="visorFinTarea" sid="668764140691480">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="FinTarea" pingpong="0" repeatcount="1" repeatto="0" sid="733399739611037" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Criando bebe\tareacompleta.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="FinDia" pingpong="0" repeatcount="1" repeatto="0" sid="228583809803690" speed="5">
+                        <frame duration="1" hotspotX="0.500986" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Criando bebe\tareas completas.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -115,6 +134,29 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="502559484939089" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Desktop\base.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bgSprite" sid="685129993916678">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="327353196864702" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Criando bebe\splash.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bgInstrucciones" sid="177927654388915">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="316040353232548" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Criando bebe\instrucciones.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="0.999219" y="0.998613" />
+                                <point x="0.00078064" y="0.998613" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1108,16 +1150,26 @@
             </object-type>
         </object-folder>
     </object-folder>
-    <families />
+    <families>
+        <family name="famCliker" plugin-id="Sprite" sid="580950883053929">
+            <members>
+                <member>barraAvance</member>
+                <member>baseBarra</member>
+                <member>btnClicker</member>
+            </members>
+        </family>
+    </families>
     <layout-folder>
         <layout>Splash.xml</layout>
         <layout>End.xml</layout>
         <layout>Main.xml</layout>
+        <layout>Instrucciones.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>eSplash.xml</event-sheet>
         <event-sheet>eMain.xml</event-sheet>
         <event-sheet>eEnd.xml</event-sheet>
+        <event-sheet>eInstrucciones.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="0">

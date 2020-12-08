@@ -11,11 +11,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">Splash</layout>
-        <layout order="2">End</layout>
-        <layout order="4">Main</layout>
-        <event-sheet order="1">eSplash</event-sheet>
-        <event-sheet order="3">eEnd</event-sheet>
-        <event-sheet active="1" order="5">eMain</event-sheet>
+        <layout order="1">Main</layout>
+        <event-sheet active="1" order="2">eMain</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -23,7 +20,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="0" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
-    <families-expanded root="1" />
+    <families-expanded root="1">
+        <family expanded="0" name="famCliker" />
+    </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
         <folder expanded="1" path="object-folder/System/" />
@@ -42,9 +41,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/baseBarra/" />
         <folder expanded="1" path="animation-folder/barraAvance/" />
         <folder expanded="1" path="animation-folder/controlDia/" />
+        <folder expanded="1" path="animation-folder/btnIniciar/" />
+        <folder expanded="1" path="animation-folder/visorFinTarea/" />
         <folder expanded="1" path="animation-folder/bgMain/" />
         <folder expanded="1" path="animation-folder/bgCintaDia/" />
         <folder expanded="1" path="animation-folder/bgBaseFondo/" />
+        <folder expanded="1" path="animation-folder/bgSprite/" />
+        <folder expanded="1" path="animation-folder/bgInstrucciones/" />
         <folder expanded="1" path="animation-folder/btnClicker/" />
         <folder expanded="1" path="animation-folder/tamaHombre/" />
         <folder expanded="1" path="animation-folder/txtDias/" />
