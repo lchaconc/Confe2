@@ -6,7 +6,6 @@
         <variable constant="0" name="isTareaFinalizada" sid="848501294343537" static="0" type="number">0</variable>
         <variable constant="0" name="animacion" sid="220775613620556" static="0" type="text"></variable>
         <variable constant="0" name="cambioTarea" sid="660805431385681" static="0" type="number">1</variable>
-        <variable constant="0" name="contador" sid="987910350895125" static="0" type="number">0</variable>
         <variable constant="0" name="toques" sid="116457428638421" static="0" type="number">0</variable>
         <event-group description="" sid="548360784478949" title="Setup">
             <sub-events>
@@ -292,34 +291,6 @@
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
-                    <sub-events>
-                        <event-block disabled="1" sid="311041303226006">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="984991072886435" type="System">
-                                    <param id="0" name="Variable">cambioTarea</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="646959794961304" type="System">
-                                    <param id="0" name="Variable">cambioTarea</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="235242246895330" type="System">
-                                    <param id="0" name="Seconds">1.0</param>
-                                </action>
-                                <action id="-10" name="Add to" sid="793304208390996" type="System">
-                                    <param id="0" name="Variable">contador</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="0" name="Call function" sid="983712831112110" type="Function">
-                                    <param id="0" name="Name">&quot;cargarAnimacion&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -332,6 +303,10 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-9" name="Set value" sid="716916998734063" type="System">
+                            <param id="0" name="Variable">animacion</param>
+                            <param id="1" name="Value">animaciones.At(avanceJuego)</param>
+                        </action>
                         <action id="4" name="Set animation" sid="936195624951663" type="tamaHombre">
                             <param id="0" name="Animation">animacion</param>
                             <param id="1" name="From">1</param>
@@ -344,19 +319,6 @@
                             <param id="0" name="Animation">animacion</param>
                             <param id="1" name="From">1</param>
                         </action>
-                    </actions>
-                </event-block>
-                <event-block sid="168234859777044">
-                    <conditions>
-                        <condition id="0" name="On function" sid="602914320879077" type="Function">
-                            <param id="0" name="Name">&quot;mostrarTarea&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="716916998734063" type="System">
-                            <param id="0" name="Variable">animacion</param>
-                            <param id="1" name="Value">animaciones.At(contador)</param>
-                        </action>
                         <action id="4" name="Set animation" sid="471036777150959" type="txtDias">
                             <param id="0" name="Animation">animacion</param>
                             <param id="1" name="From">1</param>
@@ -368,6 +330,10 @@
                         <action id="4" name="Set animation" sid="420469829808816" type="txtTareasPorDiaMujer">
                             <param id="0" name="Animation">animacion</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="294588023213634" type="System">
+                            <param id="0" name="Variable">avanceJuego</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                         <action id="-15" name="Set visible" sid="927004010153970" type="btnIniciar">
                             <param id="0" name="Visibility">1</param>
@@ -397,6 +363,10 @@
                                 <action id="5" name="Set frame" sid="192041166444290" type="tamaMujer">
                                     <param id="0" name="Frame number">2</param>
                                 </action>
+                                <action id="4" name="Set animation" sid="354770636968633" type="visorFinTarea">
+                                    <param id="0" name="Animation">&quot;FinTarea&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
                                 <action id="-15" name="Set visible" sid="847293456874121" type="visorFinTarea">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
@@ -407,11 +377,18 @@
                                 <action id="-15" name="Set visible" sid="288767291160183" type="famCliker">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="505060308013735" type="System">
+                                    <param id="0" name="Variable">isTareaFinalizada</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
                                 <action id="-16" name="Wait" sid="571285104277909" type="System">
                                     <param id="0" name="Seconds">4</param>
                                 </action>
-                                <action id="0" name="Call function" sid="990901351763290" type="Function">
-                                    <param id="0" name="Name">&quot;mostrarTarea&quot;</param>
+                                <action id="-15" name="Set visible" sid="496091254931291" type="visorFinTarea">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="224334335895766" type="Function">
+                                    <param id="0" name="Name">&quot;cargarAnimacion&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
@@ -449,11 +426,6 @@
                 <variable constant="0" name="num" sid="597809399629175" static="0" type="number">0</variable>
                 <event-block sid="977443611625113">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="735691725820681" type="System">
-                            <param id="0" name="Variable">contador</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">6</param>
-                        </condition>
                         <condition id="-2" name="Compare Y" sid="322756087324714" type="barraAvance">
                             <param id="0" name="Comparison">3</param>
                             <param id="1" name="Y co-ordinate">630</param>
