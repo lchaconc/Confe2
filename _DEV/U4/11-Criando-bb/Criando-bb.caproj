@@ -16,7 +16,9 @@
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
-    <used-behaviors />
+    <used-behaviors>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
+    </used-behaviors>
     <used-effects />
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -104,7 +106,21 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder name="Sensors" />
+        <object-folder name="Sensors">
+            <object-type name="snsCaidaMAscota" sid="755149111259986">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Physics" sid="805000785814260">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="597969532714818" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-folder name="Bg">
             <object-type name="bgMain" sid="138173912867797">
                 <plugin id="Sprite" />
@@ -444,8 +460,19 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="1" loop="0" name="D3T1" pingpong="0" repeatcount="1" repeatto="0" sid="804755278230492" speed="0">
+                    <animation framecount="2" loop="0" name="D3T1" pingpong="0" repeatcount="1" repeatto="0" sid="804755278230492" speed="0">
                         <frame duration="1" hotspotX="0.501199" hotspotY="0.50073" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Criando bebe\Dia3\tarea1\mascota1Hdia3.png" />
+                        <frame duration="1" hotspotX="0.501466" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Criando bebe\Dia3\tarea1\mascota2_HDia3.png">
+                            <collision-poly>
+                                <point x="0.0821114" y="0.0366492" />
+                                <point x="0.498534" y="0.0196335" />
+                                <point x="0.85044" y="0.5" />
+                                <point x="0.809384" y="0.914921" />
+                                <point x="0.498534" y="0.977749" />
+                                <point x="0.498534" y="0.777487" />
+                                <point x="0.278592" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                     <animation framecount="3" loop="0" name="D3T2" pingpong="0" repeatcount="1" repeatto="0" sid="931862151593812" speed="0">
                         <frame duration="1" hotspotX="0.50116" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Criando bebe\Dia3\tarea2\dibujo1_Hdia3.png">
@@ -912,8 +939,19 @@
                         <frame duration="1" hotspotX="0.501341" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Criando bebe\Dia2\tarea 3\camina2_Mdia2.png" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Criando bebe\Dia2\tarea 3\camina3_Mdia2.png" />
                     </animation>
-                    <animation framecount="1" loop="0" name="D3T1" pingpong="0" repeatcount="1" repeatto="0" sid="676205770834958" speed="0">
+                    <animation framecount="2" loop="0" name="D3T1" pingpong="0" repeatcount="1" repeatto="0" sid="676205770834958" speed="0">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Criando bebe\Dia3\tarea1\mascota1Mdia3.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Criando bebe\Dia3\tarea1\mascota2_MDia3.png">
+                            <collision-poly>
+                                <point x="0.0803571" y="0.0359043" />
+                                <point x="0.5" y="0.018617" />
+                                <point x="0.830357" y="0.0757979" />
+                                <point x="0.791667" y="0.906915" />
+                                <point x="0.5" y="0.985372" />
+                                <point x="0.479167" y="0.785904" />
+                                <point x="0.220238" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                     <animation framecount="3" loop="0" name="D3T2" pingpong="0" repeatcount="1" repeatto="0" sid="803595102060335" speed="0">
                         <frame duration="1" hotspotX="0.501205" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Criando bebe\Dia3\tarea2\dibujo1_Mdia3.png" />
@@ -1129,6 +1167,11 @@
             </object-type>
             <object-type name="mascota" sid="893065164334967">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Physics" sid="206004755832973">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="980740435224580" speed="0">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Criando bebe\Dia3\tarea1\mascota1dia3.png">

@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eMain</name>
     <events>
+        <variable constant="0" name="numMascota" sid="919771592750410" static="0" type="number">0</variable>
         <variable constant="0" name="isTareaFinalizada" sid="848501294343537" static="0" type="number">0</variable>
         <variable constant="0" name="animacion" sid="220775613620556" static="0" type="text"></variable>
         <variable constant="0" name="cambioTarea" sid="660805431385681" static="0" type="number">1</variable>
@@ -19,6 +20,17 @@
                         </action>
                         <action id="-15" name="Set visible" sid="266934555122871" type="btnIniciar">
                             <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="407503373970988" type="System">
+                            <param id="0" name="Variable">numMascota</param>
+                            <param id="1" name="Value">round(random(1,2.9999))</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="246265519534607" type="mascota">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="195750372910792" type="mascota">
+                            <param id="0" name="Frame number">numMascota</param>
                         </action>
                         <action id="0" name="Clear" sid="953447907849030" type="animaciones" />
                         <action id="1" name="Set size" sid="570720436074613" type="animaciones">
@@ -239,22 +251,6 @@
         </event-group>
         <event-group description="" sid="998065381975612" title="Cambios Tama">
             <sub-events>
-                <event-block disabled="1" sid="474212623693805">
-                    <conditions>
-                        <condition id="-2" name="Compare Y" sid="592825578764398" type="barraAvance">
-                            <param id="0" name="Comparison">0</param>
-                            <param id="1" name="Y co-ordinate">1125</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="5" name="Set frame" sid="140800555886666" type="tamaHombre">
-                            <param id="0" name="Frame number">0</param>
-                        </action>
-                        <action id="5" name="Set frame" sid="507874675372984" type="tamaMujer">
-                            <param id="0" name="Frame number">0</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="682774353923157">
                     <conditions>
                         <condition id="-2" name="Compare Y" sid="437251629384215" type="barraAvance">
@@ -331,10 +327,6 @@
                             <param id="0" name="Animation">animacion</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-10" name="Add to" sid="294588023213634" type="System">
-                            <param id="0" name="Variable">avanceJuego</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
                         <action id="-15" name="Set visible" sid="927004010153970" type="btnIniciar">
                             <param id="0" name="Visibility">1</param>
                         </action>
@@ -377,6 +369,10 @@
                                 <action id="-15" name="Set visible" sid="288767291160183" type="famCliker">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
+                                <action id="0" name="Call function" sid="510395322762920" type="Function">
+                                    <param id="0" name="Name">&quot;mostrarMascota&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                                 <action id="-9" name="Set value" sid="505060308013735" type="System">
                                     <param id="0" name="Variable">isTareaFinalizada</param>
                                     <param id="1" name="Value">0</param>
@@ -386,6 +382,10 @@
                                 </action>
                                 <action id="-15" name="Set visible" sid="496091254931291" type="visorFinTarea">
                                     <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="294588023213634" type="System">
+                                    <param id="0" name="Variable">avanceJuego</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                                 <action id="0" name="Call function" sid="224334335895766" type="Function">
                                     <param id="0" name="Name">&quot;cargarAnimacion&quot;</param>
@@ -423,31 +423,41 @@
         </event-group>
         <event-group description="" sid="301202386100223" title="Mostrar mascota">
             <sub-events>
-                <variable constant="0" name="num" sid="597809399629175" static="0" type="number">0</variable>
-                <event-block sid="977443611625113">
+                <event-block sid="734993269832466">
                     <conditions>
-                        <condition id="-2" name="Compare Y" sid="322756087324714" type="barraAvance">
-                            <param id="0" name="Comparison">3</param>
-                            <param id="1" name="Y co-ordinate">630</param>
+                        <condition id="0" name="On function" sid="636080629093080" type="Function">
+                            <param id="0" name="Name">&quot;mostrarMascota&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="374033080455225">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="416034680030256" type="System">
+                                    <param id="0" name="Variable">avanceJuego</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="27" name="Set enabled" sid="882235129148183" type="mascota">
+                                    <param id="0" name="Mode">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="287648916973132">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="893804480256942" type="mascota">
+                            <param id="0" name="Object">snsCaidaMAscota</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="802003263567326" type="System">
-                            <param id="0" name="Variable">num</param>
-                            <param id="1" name="Value">random(0,2)</param>
+                        <action id="-16" name="Wait" sid="602474643133387" type="System">
+                            <param id="0" name="Seconds">3</param>
                         </action>
-                        <action id="5" name="Set frame" sid="917937700885695" type="mascota">
-                            <param id="0" name="Frame number">num</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="823362908436875" type="mascota">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="346941223034857" type="System">
-                            <param id="0" name="Seconds">1.0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="263258656586860" type="mascota">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
+                        <action id="-9" name="Destroy" sid="479544161177311" type="mascota" />
                     </actions>
                 </event-block>
             </sub-events>
