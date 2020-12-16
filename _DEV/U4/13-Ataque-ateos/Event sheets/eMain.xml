@@ -84,11 +84,19 @@
                             <param id="0" name="Family name">&quot;Langar&quot;</param>
                             <param id="1" name="CSS URL">&quot;https://fonts.googleapis.com/css2?family=Langar&amp;display=swap&quot;</param>
                         </action>
-                        <action disabled="1" id="3" name="Set font size" sid="871940573357630" type="txtAtaque">
-                            <param id="0" name="Size (pt)">14</param>
+                        <action id="3" name="Set font size" sid="871940573357630" type="txtAtaque">
+                            <param id="0" name="Size (pt)">24</param>
                         </action>
-                        <action id="0" name="Set text" sid="423803787202632" type="txtAtaque">
-                            <param id="0" name="Text">textosAtaques.At(i)</param>
+                        <action id="5" name="Set web font" sid="366096675690159" type="txtDefensa">
+                            <param id="0" name="Family name">&quot;Langar&quot;</param>
+                            <param id="1" name="CSS URL">&quot;https://fonts.googleapis.com/css2?family=Langar&amp;display=swap&quot;</param>
+                        </action>
+                        <action id="3" name="Set font size" sid="603930090841984" type="txtDefensa">
+                            <param id="0" name="Size (pt)">24</param>
+                        </action>
+                        <action id="0" name="Call function" sid="327149823892578" type="Function">
+                            <param id="0" name="Name">&quot;cargarTextos&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
@@ -105,6 +113,25 @@
                     <actions>
                         <action behavior="Bullet" id="5" name="Set enabled" sid="627074261200160" type="vector">
                             <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="597708704135995" title="Despliegue de textos">
+            <sub-events>
+                <event-block sid="592087348140961">
+                    <conditions>
+                        <condition id="0" name="On function" sid="695012151818872" type="Function">
+                            <param id="0" name="Name">&quot;cargarTextos&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="423803787202632" type="txtAtaque">
+                            <param id="0" name="Text">textosAtaques.At(i)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="119579791825791" type="txtDefensa">
+                            <param id="0" name="Text">textosDefensa.At(i)</param>
                         </action>
                     </actions>
                 </event-block>

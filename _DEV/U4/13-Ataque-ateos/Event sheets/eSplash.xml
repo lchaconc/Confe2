@@ -8,39 +8,13 @@
                 <condition id="-2" name="On start of layout" sid="761703569107543" type="System" />
             </conditions>
             <actions>
-                <action id="1" name="Set size" sid="742360504340887" type="textosAtaques">
-                    <param id="0" name="Width">10</param>
-                    <param id="1" name="Height">1</param>
-                    <param id="2" name="Depth">1</param>
+                <action id="-12" name="Set group active" sid="839920782081812" type="System">
+                    <param id="0" name="Group name">&quot;Cargas de Textos Ataques&quot;</param>
+                    <param id="1" name="State">1</param>
                 </action>
-                <action id="0" name="Clear" sid="792879857086467" type="textosAtaques" />
-                <action id="2" name="Set at X" sid="771304517530808" type="textosAtaques">
-                    <param id="0" name="X">0</param>
-                    <param id="1" name="Value">&quot;La misa es aburrida.&quot;</param>
-                </action>
-                <action id="2" name="Set at X" sid="963823016362948" type="textosAtaques">
-                    <param id="0" name="X">1</param>
-                    <param id="1" name="Value">&quot;La misa es para ancianos.&quot;</param>
-                </action>
-                <action id="2" name="Set at X" sid="483684983602808" type="textosAtaques">
-                    <param id="0" name="X">2</param>
-                    <param id="1" name="Value">&quot;En la Iglesia todos son hipócritas.&quot;</param>
-                </action>
-                <action id="2" name="Set at X" sid="253356136328763" type="textosAtaques">
-                    <param id="0" name="X">3</param>
-                    <param id="1" name="Value">&quot;Las imágenes de Jesús son gore.&quot;</param>
-                </action>
-                <action id="2" name="Set at X" sid="582724123623793" type="textosAtaques">
-                    <param id="0" name="X">4</param>
-                    <param id="1" name="Value">&quot;Algunas personas solo van a la Iglesia a darse por el pecho pero son malas en la calle.&quot;</param>
-                </action>
-                <action id="2" name="Set at X" sid="146891785816330" type="textosAtaques">
-                    <param id="0" name="X">5</param>
-                    <param id="1" name="Value">&quot;En misa no se están quietos, hay que estarse parando y sentando.&quot;</param>
-                </action>
-                <action id="5" name="Set web font" sid="572153439915365" type="txtAtaque">
-                    <param id="0" name="Family name">&quot;Langar&quot;</param>
-                    <param id="1" name="CSS URL">&quot;https://fonts.googleapis.com/css2?family=Langar&amp;display=swap&quot;</param>
+                <action id="-12" name="Set group active" sid="294486428826483" type="System">
+                    <param id="0" name="Group name">&quot;Cargas textos de Defensa&quot;</param>
+                    <param id="1" name="State">1</param>
                 </action>
                 <action id="-16" name="Wait" sid="925133963469467" type="System">
                     <param id="0" name="Seconds">0.5</param>
@@ -50,5 +24,63 @@
                 </action>
             </actions>
         </event-block>
+        <event-group description="" inactive="1" sid="583510937390895" title="Cargas de Textos Ataques">
+            <sub-events>
+                <event-block sid="250695928721884">
+                    <conditions />
+                    <actions>
+                        <action id="1" name="Set size" sid="742360504340887" type="textosAtaques">
+                            <param id="0" name="Width">10</param>
+                            <param id="1" name="Height">1</param>
+                            <param id="2" name="Depth">1</param>
+                        </action>
+                        <action id="0" name="Clear" sid="792879857086467" type="textosAtaques" />
+                        <action id="2" name="Set at X" sid="771304517530808" type="textosAtaques">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Value">&quot;La misa es aburrida.&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="963823016362948" type="textosAtaques">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Value">&quot;La misa es para ancianos.&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="483684983602808" type="textosAtaques">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Value">&quot;En la Iglesia todos son hipócritas.&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="253356136328763" type="textosAtaques">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Value">&quot;Las imágenes de Jesús son gore.&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="582724123623793" type="textosAtaques">
+                            <param id="0" name="X">4</param>
+                            <param id="1" name="Value">&quot;Algunas personas solo van a la Iglesia a darse por el pecho pero son malas en la calle.&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="146891785816330" type="textosAtaques">
+                            <param id="0" name="X">5</param>
+                            <param id="1" name="Value">&quot;En misa no se están quietos, hay que estarse parando y sentando.&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="988965347343449" title="Cargas textos de Defensa">
+            <sub-events>
+                <event-block sid="163759774709293">
+                    <conditions />
+                    <actions>
+                        <action id="1" name="Set size" sid="389416617639982" type="textosDefensa">
+                            <param id="0" name="Width">10</param>
+                            <param id="1" name="Height">1</param>
+                            <param id="2" name="Depth">1</param>
+                        </action>
+                        <action id="0" name="Clear" sid="284924167984908" type="textosDefensa" />
+                        <action id="2" name="Set at X" sid="245268751983570" type="textosDefensa">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Value">&quot;Hay que entenderla para vivirla.&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
