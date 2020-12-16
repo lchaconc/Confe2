@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Ataque-ateos</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>uf1sq6qxoh4c</unique-id>
+    <saved-with-version>27900</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1280</width>
+        <height>720</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>Splash</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar only</prop>
+        <prop name="Orientations">Landscape</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">Chrome</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="System">
+            <object-type name="Browser" sid="854861984981213">
+                <plugin id="Browser" />
+            </object-type>
+            <object-type name="Function" sid="772827627350588">
+                <plugin id="Function" />
+            </object-type>
+            <object-type name="Touch" sid="221858948176753">
+                <plugin id="Touch" />
+            </object-type>
+            <object-type global="1" name="textosAtaques" sid="331120727602196">
+                <plugin id="Arr" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Sensors">
+            <object-type name="snsEscudo" sid="632387032211835">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="199416002905642" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="snsFinPantalla" sid="410829175900369">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="839748725142551" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Bg">
+            <object-type name="bgAtaque" sid="322268870046105">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="371861569445888" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\1x\Fondos\ataque1.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0.0015625" y="0.99723" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bgDefensa" sid="296259719389868">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="842785027626322" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\1x\Fondos\defensa1.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.999219" y="0.00138889" />
+                                <point x="0.999219" y="0.998611" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Texts">
+            <object-type name="txtAtaque" sid="504763165609961">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Modal" />
+        <object-folder name="Main">
+            <object-type name="flecha" sid="218443206187800">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Physics" sid="823480289427747">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                    <behavior-type name="Pin" sid="438869482758697">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="995460512219706" speed="5">
+                        <frame duration="1" hotspotX="0.500914" hotspotY="0.507463" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\Armas\Arma1Ateos.png">
+                            <collision-poly>
+                                <point x="0.047532" y="0.38806" />
+                                <point x="0.95064" y="0.402985" />
+                                <point x="0.998172" y="0.492537" />
+                                <point x="0.952468" y="0.61194" />
+                                <point x="0.047532" y="0.61194" />
+                                <point x="0.00182815" y="0.492537" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="visorNiveles" sid="246360406758337">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="323979295570600" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\GUI\nivel1Ateos.png">
+                            <collision-poly>
+                                <point x="0.0172414" y="0.0540541" />
+                                <point x="0.5" y="0" />
+                                <point x="0.982759" y="0.0540541" />
+                                <point x="0.99569" y="0.5" />
+                                <point x="0.969828" y="0.905405" />
+                                <point x="0.5" y="0.932432" />
+                                <point x="0.0301724" y="0.905405" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="escudos" sid="564467906985815">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="668191452401973" speed="5">
+                        <frame duration="1" hotspotX="0.501608" hotspotY="0.501639" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\Escudos\e1.png">
+                            <collision-poly>
+                                <point x="0.128617" y="0.131148" />
+                                <point x="0.498392" y="0.00327869" />
+                                <point x="0.861736" y="0.140984" />
+                                <point x="1" y="0.498361" />
+                                <point x="0.861736" y="0.859016" />
+                                <point x="0.498392" y="0.990164" />
+                                <point x="0.157556" y="0.839344" />
+                                <point x="0.0546624" y="0.498361" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btnClicker" sid="521489271888098">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="358267725582374" speed="5">
+                        <frame duration="1" hotspotX="0.503448" hotspotY="0.503106" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\GUI\btnclickerAteos.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="barraMarco" sid="786265842371707">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="259309485721430" speed="5">
+                        <frame duration="1" hotspotX="0.501066" hotspotY="0.506024" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\GUI\backnivelclicker2Ateos.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="barraBase" sid="398597307798082">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="314563597952189" speed="5">
+                        <frame duration="1" hotspotX="0.501066" hotspotY="0.506024" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\GUI\backnivelclickerAteos.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="barraAvance" sid="288312394156069">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="368664571531015" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0.507937" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\GUI\nivelclickerAteos.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="vector" sid="793680390690322">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="279489128607149">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="ScrollTo" sid="247200034007701">
+                        <behavior id="scrollto" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="836335336371023" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Splash.xml</layout>
+        <layout>End.xml</layout>
+        <layout>Main.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>eSplash.xml</event-sheet>
+        <event-sheet>eMain.xml</event-sheet>
+        <event-sheet>eEnd.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Touch" uid="0">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Function" uid="1" />
+        <global-instance type="Browser" uid="2" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

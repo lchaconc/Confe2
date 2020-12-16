@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>eMain</name>
+    <events>
+        <variable constant="0" name="i" sid="996034158324984" static="0" type="number">0</variable>
+        <variable constant="0" name="avanceX" sid="490587034742866" static="0" type="number">0</variable>
+        <event-group description="" sid="696962280087413" title="Colision sensores Escudo y Fin pantalla">
+            <sub-events>
+                <event-block sid="236011714105806">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="118887807239172" type="vector">
+                            <param id="0" name="Object">snsEscudo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="1" name="Unpin" sid="939992879115798" type="flecha" />
+                    </actions>
+                </event-block>
+                <event-block sid="205166698648921">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="641165942113764" type="vector">
+                            <param id="0" name="Object">snsFinPantalla</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="770694895531349" type="vector">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="721687500847843" title="Boton Clicker">
+            <sub-events>
+                <event-block sid="596455913210231">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="327618437962983" type="Touch">
+                            <param id="0" name="Object">btnClicker</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="559544866466466" type="System">
+                            <param id="0" name="Variable">avanceX</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="338980469756337" type="barraAvance">
+                            <param id="0" name="Width">avanceX</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="515903106485603">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="117054558921115" type="System">
+                            <param id="0" name="Variable">avanceX</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">400</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="713099887197801" type="flecha">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="781940460147182" title="Setup">
+            <sub-events>
+                <event-block sid="967523726838710">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="358457300524987" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="909009780162047" type="flecha">
+                            <param id="0" name="Pin to">vector</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="782836850113921" type="System">
+                            <param id="0" name="Variable">avanceX</param>
+                            <param id="1" name="Value">barraAvance.Width</param>
+                        </action>
+                        <action id="5" name="Set web font" sid="468289696078768" type="txtAtaque">
+                            <param id="0" name="Family name">&quot;Langar&quot;</param>
+                            <param id="1" name="CSS URL">&quot;https://fonts.googleapis.com/css2?family=Langar&amp;display=swap&quot;</param>
+                        </action>
+                        <action disabled="1" id="3" name="Set font size" sid="871940573357630" type="txtAtaque">
+                            <param id="0" name="Size (pt)">14</param>
+                        </action>
+                        <action id="0" name="Set text" sid="423803787202632" type="txtAtaque">
+                            <param id="0" name="Text">textosAtaques.At(i)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="602276047722495" title="Boton Iniciar">
+            <sub-events>
+                <event-block sid="163877982065159">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="884474352939337" type="Touch">
+                            <param id="0" name="Object">visorNiveles</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="627074261200160" type="vector">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
