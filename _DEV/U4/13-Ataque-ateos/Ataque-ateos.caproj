@@ -128,7 +128,7 @@
         </object-folder>
         <object-folder name="Modal" />
         <object-folder name="Main">
-            <object-type name="flecha" sid="218443206187800">
+            <object-type name="armas" sid="218443206187800">
                 <plugin id="Sprite" />
                 <behaviors>
                     <behavior-type name="Physics" sid="823480289427747">
@@ -139,7 +139,7 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="995460512219706" speed="5">
+                    <animation framecount="1" loop="0" name="FlechaEst" pingpong="0" repeatcount="1" repeatto="0" sid="995460512219706" speed="5">
                         <frame duration="1" hotspotX="0.500914" hotspotY="0.507463" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\Armas\Arma1Ateos.png">
                             <collision-poly>
                                 <point x="0.047532" y="0.38806" />
@@ -150,6 +150,34 @@
                                 <point x="0.00182815" y="0.492537" />
                             </collision-poly>
                         </frame>
+                    </animation>
+                    <animation framecount="17" loop="1" name="FlechaAni" pingpong="0" repeatcount="1" repeatto="0" sid="823143666672436" speed="15">
+                        <frame duration="1" hotspotX="0.500914" hotspotY="0.507463">
+                            <collision-poly>
+                                <point x="0.047532" y="0.38806" />
+                                <point x="0.95064" y="0.402985" />
+                                <point x="0.998172" y="0.492537" />
+                                <point x="0.952468" y="0.61194" />
+                                <point x="0.047532" y="0.61194" />
+                                <point x="0.00182815" y="0.492537" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>

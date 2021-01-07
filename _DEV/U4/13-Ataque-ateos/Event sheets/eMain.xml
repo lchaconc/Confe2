@@ -3,7 +3,9 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eMain</name>
     <events>
-        <variable constant="0" name="i" sid="996034158324984" static="0" type="number">0</variable>
+        <variable comment="bandera que indica si el arma está en movimiento (0=false / 1=true)" constant="0" name="activo" sid="834985502498211" static="0" type="number">0</variable>
+        <variable constant="0" name="nivel" sid="605837430550118" static="0" type="number">0</variable>
+        <variable constant="0" name="partida" sid="996034158324984" static="0" type="number">0</variable>
         <variable constant="0" name="avanceX" sid="490587034742866" static="0" type="number">0</variable>
         <event-group description="" sid="696962280087413" title="Colision sensores Escudo y Fin pantalla">
             <sub-events>
@@ -14,7 +16,11 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Pin" id="1" name="Unpin" sid="939992879115798" type="flecha" />
+                        <action behavior="Pin" id="1" name="Unpin" sid="939992879115798" type="armas" />
+                        <action id="0" name="Call function" sid="117791857063811" type="Function">
+                            <param id="0" name="Name">&quot;detenerArma&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="205166698648921">
@@ -58,7 +64,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Physics" id="27" name="Set enabled" sid="713099887197801" type="flecha">
+                        <action behavior="Physics" id="27" name="Set enabled" sid="713099887197801" type="armas">
                             <param id="0" name="Mode">1</param>
                         </action>
                     </actions>
@@ -72,13 +78,13 @@
                         <condition id="-2" name="On start of layout" sid="358457300524987" type="System" />
                     </conditions>
                     <actions>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="909009780162047" type="flecha">
-                            <param id="0" name="Pin to">vector</param>
-                            <param id="1" name="Mode">0</param>
-                        </action>
                         <action id="-9" name="Set value" sid="782836850113921" type="System">
                             <param id="0" name="Variable">avanceX</param>
                             <param id="1" name="Value">barraAvance.Width</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="693759204356859" type="System">
+                            <param id="0" name="Variable">nivel</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                         <action id="5" name="Set web font" sid="468289696078768" type="txtAtaque">
                             <param id="0" name="Family name">&quot;Langar&quot;</param>
@@ -94,8 +100,8 @@
                         <action id="3" name="Set font size" sid="603930090841984" type="txtDefensa">
                             <param id="0" name="Size (pt)">24</param>
                         </action>
-                        <action id="0" name="Call function" sid="327149823892578" type="Function">
-                            <param id="0" name="Name">&quot;cargarTextos&quot;</param>
+                        <action id="0" name="Call function" sid="372320844447751" type="Function">
+                            <param id="0" name="Name">&quot;cargarArma&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
@@ -114,6 +120,10 @@
                         <action behavior="Bullet" id="5" name="Set enabled" sid="627074261200160" type="vector">
                             <param id="0" name="State">1</param>
                         </action>
+                        <action id="0" name="Call function" sid="250995898591756" type="Function">
+                            <param id="0" name="Name">&quot;animarArma&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -128,10 +138,134 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="423803787202632" type="txtAtaque">
-                            <param id="0" name="Text">textosAtaques.At(i)</param>
+                            <param id="0" name="Text">textosAtaques.At(partida)</param>
                         </action>
                         <action id="0" name="Set text" sid="119579791825791" type="txtDefensa">
-                            <param id="0" name="Text">textosDefensa.At(i)</param>
+                            <param id="0" name="Text">textosDefensa.At(partida)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="171828975450542" title="Funciones de armas: Cargar-Animar">
+            <sub-events>
+                <event-block sid="309059518256650">
+                    <conditions>
+                        <condition id="0" name="On function" sid="395069406533626" type="Function">
+                            <param id="0" name="Name">&quot;cargarArma&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="364839422131029" type="armas">
+                            <param id="0" name="Object">vector</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="909009780162047" type="armas">
+                            <param id="0" name="Pin to">vector</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="305289976140489" type="armas">
+                            <param id="0" name="Animation">&quot;Animada&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="802242446400259">
+                    <conditions>
+                        <condition id="0" name="On function" sid="242467006946773" type="Function">
+                            <param id="0" name="Name">&quot;animarArma&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="490588414652767">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="999478290872077" type="System">
+                                    <param id="0" name="Variable">nivel</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="552378260832149" type="armas">
+                                    <param id="0" name="Animation">&quot;FlechaAni&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="725448618451725">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="331381962969080" type="System">
+                                            <param id="0" name="Variable">activo</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="191837747898365">
+                    <conditions>
+                        <condition id="0" name="On function" sid="224227994470435" type="Function">
+                            <param id="0" name="Name">&quot;detenerArma&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="555076215408869">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="653360903373691" type="System">
+                                    <param id="0" name="Variable">nivel</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="192257872558332" type="armas">
+                                    <param id="0" name="Animation">&quot;FlechaEst&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="547634022909937">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="527675052573472" type="System">
+                                            <param id="0" name="Variable">activo</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="837000216894647" title="Cargar partida">
+            <sub-events>
+                <event-block sid="472472963025314">
+                    <conditions>
+                        <condition id="0" name="On function" sid="375413263569961" type="Function">
+                            <param id="0" name="Name">&quot;cargarPartida&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="755124327272534" type="System">
+                            <param id="0" name="Variable">nivel</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="702256526583813" type="Function">
+                            <param id="0" name="Name">&quot;cargarArma&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="327149823892578" type="Function">
+                            <param id="0" name="Name">&quot;cargarTextos&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
