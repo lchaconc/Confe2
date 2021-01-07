@@ -85,6 +85,14 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="snsArmaCaida" sid="749509681121916">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="814271200909186" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Bg">
             <object-type name="bgAtaque" sid="322268870046105">
@@ -140,16 +148,7 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="FlechaEst" pingpong="0" repeatcount="1" repeatto="0" sid="995460512219706" speed="5">
-                        <frame duration="1" hotspotX="0.500914" hotspotY="0.507463" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\Armas\Arma1Ateos.png">
-                            <collision-poly>
-                                <point x="0.047532" y="0.38806" />
-                                <point x="0.95064" y="0.402985" />
-                                <point x="0.998172" y="0.492537" />
-                                <point x="0.952468" y="0.61194" />
-                                <point x="0.047532" y="0.61194" />
-                                <point x="0.00182815" y="0.492537" />
-                            </collision-poly>
-                        </frame>
+                        <frame duration="1" hotspotX="0.500914" hotspotY="0.507463" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\Armas\Arma1Ateos.png" />
                     </animation>
                     <animation framecount="17" loop="1" name="FlechaAni" pingpong="0" repeatcount="1" repeatto="0" sid="823143666672436" speed="15">
                         <frame duration="1" hotspotX="0.500914" hotspotY="0.507463">
@@ -179,12 +178,38 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
+                    <animation framecount="1" loop="0" name="EspadaEst" pingpong="0" repeatcount="1" repeatto="0" sid="950071665339492" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\Armas\Arma2Ateos.png" />
+                    </animation>
+                    <animation framecount="21" loop="1" name="EspadaAni" pingpong="0" repeatcount="1" repeatto="0" sid="998272382295235" speed="15">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\Animaciones-armas\espada2\espadaNivel20010.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\Animaciones-armas\espada2\espadaNivel20011.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\Animaciones-armas\espada2\espadaNivel20012.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\Animaciones-armas\espada2\espadaNivel20013.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\Animaciones-armas\espada2\espadaNivel20014.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\Animaciones-armas\espada2\espadaNivel20015.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\Animaciones-armas\espada2\espadaNivel20016.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\Animaciones-armas\espada2\espadaNivel20017.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\Animaciones-armas\espada2\espadaNivel20018.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\Animaciones-armas\espada2\espadaNivel20019.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\Animaciones-armas\espada2\espadaNivel20020.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\Animaciones-armas\espada2\espadaNivel20021.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\Animaciones-armas\espada2\espadaNivel20022.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\Animaciones-armas\espada2\espadaNivel20023.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\Animaciones-armas\espada2\espadaNivel20024.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\Animaciones-armas\espada2\espadaNivel20025.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\Animaciones-armas\espada2\espadaNivel20026.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\Animaciones-armas\espada2\espadaNivel20027.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\Animaciones-armas\espada2\espadaNivel20028.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\Animaciones-armas\espada2\espadaNivel20029.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\Animaciones-armas\espada2\espadaNivel20030.png" />
+                    </animation>
                 </animation-folder>
             </object-type>
             <object-type name="visorNiveles" sid="246360406758337">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="323979295570600" speed="5">
+                    <animation framecount="1" loop="0" name="N1" pingpong="0" repeatcount="1" repeatto="0" sid="323979295570600" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\GUI\nivel1Ateos.png">
                             <collision-poly>
                                 <point x="0.0172414" y="0.0540541" />
@@ -198,12 +223,27 @@
                             </collision-poly>
                         </frame>
                     </animation>
+                    <animation framecount="1" loop="0" name="N2" pingpong="0" repeatcount="1" repeatto="0" sid="449355284699457" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.506667" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\GUI\Nivel2Ateos.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="N3" pingpong="0" repeatcount="1" repeatto="0" sid="550185965312700" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.506667" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\GUI\Nivel3Ateos.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="N4" pingpong="0" repeatcount="1" repeatto="0" sid="200039108939970" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\GUI\Nivel4Ateos.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="N5" pingpong="0" repeatcount="1" repeatto="0" sid="416423608540523" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\GUI\Nivel5Ateos.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="N6" pingpong="0" repeatcount="1" repeatto="0" sid="402961048498811" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\GUI\Nivel6Ateos.png" />
+                    </animation>
                 </animation-folder>
             </object-type>
             <object-type name="escudos" sid="564467906985815">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="668191452401973" speed="5">
+                    <animation framecount="1" loop="0" name="E1" pingpong="0" repeatcount="1" repeatto="0" sid="668191452401973" speed="5">
                         <frame duration="1" hotspotX="0.501608" hotspotY="0.501639" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\Escudos\e1.png">
                             <collision-poly>
                                 <point x="0.128617" y="0.131148" />
@@ -214,6 +254,34 @@
                                 <point x="0.498392" y="0.990164" />
                                 <point x="0.157556" y="0.839344" />
                                 <point x="0.0546624" y="0.498361" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="E2" pingpong="0" repeatcount="1" repeatto="0" sid="744344860565670" speed="5">
+                        <frame duration="1" hotspotX="0.501767" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\Escudos\e2.png">
+                            <collision-poly>
+                                <point x="0.155477" y="0.152778" />
+                                <point x="0.498233" y="0" />
+                                <point x="0.858657" y="0.138889" />
+                                <point x="0.996466" y="0.5" />
+                                <point x="0.833922" y="0.836806" />
+                                <point x="0.498233" y="0.954861" />
+                                <point x="0.180212" y="0.822917" />
+                                <point x="0.0282686" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="E3" pingpong="0" repeatcount="1" repeatto="0" sid="762619213265708" speed="5">
+                        <frame duration="1" hotspotX="0.50193" hotspotY="0.501901" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\Escudos\e3.png">
+                            <collision-poly>
+                                <point x="0.131274" y="0.129278" />
+                                <point x="0.498069" y="0" />
+                                <point x="0.876448" y="0.121673" />
+                                <point x="1" y="0.498099" />
+                                <point x="0.849421" y="0.851711" />
+                                <point x="0.498069" y="0.965779" />
+                                <point x="0.15444" y="0.847909" />
+                                <point x="0.019305" y="0.498099" />
                             </collision-poly>
                         </frame>
                     </animation>

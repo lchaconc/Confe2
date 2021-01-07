@@ -6,8 +6,8 @@
         <variable comment="bandera que indica si el arma está en movimiento (0=false / 1=true)" constant="0" name="activo" sid="834985502498211" static="0" type="number">0</variable>
         <variable constant="0" name="nivel" sid="605837430550118" static="0" type="number">0</variable>
         <variable constant="0" name="partida" sid="996034158324984" static="0" type="number">0</variable>
-        <variable constant="0" name="avanceX" sid="490587034742866" static="0" type="number">0</variable>
-        <event-group description="" sid="696962280087413" title="Colision sensores Escudo y Fin pantalla">
+        <variable constant="0" name="avanceBarra" sid="490587034742866" static="0" type="number">0</variable>
+        <event-group description="" sid="696962280087413" title="Colision sensores Escudo - Caida de arma - Fin pantalla">
             <sub-events>
                 <event-block sid="236011714105806">
                     <conditions>
@@ -35,6 +35,26 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="784508160022553">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="913554318058932" type="armas">
+                            <param id="0" name="Object">snsArmaCaida</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="380023707895710" type="armas">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="228012597630911" type="vector">
+                            <param id="0" name="X">-300</param>
+                            <param id="1" name="Y">360</param>
+                        </action>
+                        <action id="0" name="Call function" sid="451768890891184" type="Function">
+                            <param id="0" name="Name">&quot;cargarPartida&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="721687500847843" title="Boton Clicker">
@@ -47,18 +67,18 @@
                     </conditions>
                     <actions>
                         <action id="-10" name="Add to" sid="559544866466466" type="System">
-                            <param id="0" name="Variable">avanceX</param>
+                            <param id="0" name="Variable">avanceBarra</param>
                             <param id="1" name="Value">5</param>
                         </action>
                         <action id="-5" name="Set width" sid="338980469756337" type="barraAvance">
-                            <param id="0" name="Width">avanceX</param>
+                            <param id="0" name="Width">avanceBarra</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="515903106485603">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="117054558921115" type="System">
-                            <param id="0" name="Variable">avanceX</param>
+                            <param id="0" name="Variable">avanceBarra</param>
                             <param id="1" name="Comparison">5</param>
                             <param id="2" name="Value">400</param>
                         </condition>
@@ -79,12 +99,12 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="782836850113921" type="System">
-                            <param id="0" name="Variable">avanceX</param>
+                            <param id="0" name="Variable">avanceBarra</param>
                             <param id="1" name="Value">barraAvance.Width</param>
                         </action>
                         <action id="-9" name="Set value" sid="693759204356859" type="System">
                             <param id="0" name="Variable">nivel</param>
-                            <param id="1" name="Value">0</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                         <action id="5" name="Set web font" sid="468289696078768" type="txtAtaque">
                             <param id="0" name="Family name">&quot;Langar&quot;</param>
@@ -101,7 +121,7 @@
                             <param id="0" name="Size (pt)">24</param>
                         </action>
                         <action id="0" name="Call function" sid="372320844447751" type="Function">
-                            <param id="0" name="Name">&quot;cargarArma&quot;</param>
+                            <param id="0" name="Name">&quot;cargarPartida&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
@@ -192,18 +212,22 @@
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>
-                            <sub-events>
-                                <event-block sid="725448618451725">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="331381962969080" type="System">
-                                            <param id="0" name="Variable">activo</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
-                                </event-block>
-                            </sub-events>
+                        </event-block>
+                        <event-block sid="971325179298842">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="736232163279268" type="System" />
+                                <condition id="-14" name="Compare variable" sid="174246757232159" type="System">
+                                    <param id="0" name="Variable">nivel</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="565162941411300" type="armas">
+                                    <param id="0" name="Animation">&quot;EspadaAni&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -229,24 +253,28 @@
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>
-                            <sub-events>
-                                <event-block sid="547634022909937">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="527675052573472" type="System">
-                                            <param id="0" name="Variable">activo</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
-                                </event-block>
-                            </sub-events>
+                        </event-block>
+                        <event-block sid="668654625430517">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="330277597840617" type="System" />
+                                <condition id="-14" name="Compare variable" sid="534105684101091" type="System">
+                                    <param id="0" name="Variable">nivel</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="424562820073121" type="armas">
+                                    <param id="0" name="Animation">&quot;EspadaEst&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="837000216894647" title="Cargar partida">
+        <event-group description="" sid="837000216894647" title="Cargar partida - Incrementar nivel">
             <sub-events>
                 <event-block sid="472472963025314">
                     <conditions>
@@ -255,8 +283,19 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-5" name="Set width" sid="382321985787590" type="barraAvance">
+                            <param id="0" name="Width">50</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="344218726430411" type="System">
+                            <param id="0" name="Variable">avanceBarra</param>
+                            <param id="1" name="Value">barraAvance.Width</param>
+                        </action>
+                        <action id="0" name="Call function" sid="332382947190095" type="Function">
+                            <param id="0" name="Name">&quot;incrementarNivel&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                         <action id="-10" name="Add to" sid="755124327272534" type="System">
-                            <param id="0" name="Variable">nivel</param>
+                            <param id="0" name="Variable">partida</param>
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="0" name="Call function" sid="702256526583813" type="Function">
@@ -267,7 +306,85 @@
                             <param id="0" name="Name">&quot;cargarTextos&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
+                        <action id="0" name="Call function" sid="286068846963184" type="Function">
+                            <param id="0" name="Name">&quot;cargarEscudo&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                     </actions>
+                </event-block>
+                <event-block sid="495589928256170">
+                    <conditions>
+                        <condition id="0" name="On function" sid="892887230643467" type="Function">
+                            <param id="0" name="Name">&quot;incrementarNivel&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="756498876774496">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="578448270557429" type="System">
+                                    <param id="0" name="Variable">partida</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="697129244862652" type="System">
+                                    <param id="0" name="Variable">nivel</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="349017723489659" type="visorNiveles">
+                                    <param id="0" name="Animation">&quot;N2&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="612544292482152" title="Metodos de Escudo">
+            <sub-events>
+                <event-block sid="285739778237373">
+                    <conditions>
+                        <condition id="0" name="On function" sid="379175079275505" type="Function">
+                            <param id="0" name="Name">&quot;cargarEscudo&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="134489539686788">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="616358887467510" type="System">
+                                    <param id="0" name="Variable">nivel</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="672799140539419" type="escudos">
+                                    <param id="0" name="Animation">&quot;E1&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="466213742291909">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="428474501781650" type="System" />
+                                <condition id="-14" name="Compare variable" sid="538189378239500" type="System">
+                                    <param id="0" name="Variable">nivel</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="297847526945558" type="escudos">
+                                    <param id="0" name="Animation">&quot;E2&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
