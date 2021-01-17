@@ -5,7 +5,7 @@
     <events>
         <variable comment="bandera que indica si el arma está en movimiento (0=false / 1=true)" constant="0" name="activo" sid="834985502498211" static="0" type="number">0</variable>
         <variable constant="0" name="nivel" sid="605837430550118" static="0" type="number">0</variable>
-        <variable constant="0" name="partida" sid="996034158324984" static="0" type="number">0</variable>
+        <variable constant="0" name="partida" sid="996034158324984" static="0" type="number">40</variable>
         <variable constant="0" name="avanceBarra" sid="490587034742866" static="0" type="number">0</variable>
         <event-group description="" sid="696962280087413" title="Colision sensores Escudo - Caida de arma - Fin pantalla">
             <sub-events>
@@ -229,6 +229,70 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="862209970154455">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="833484504964277" type="System" />
+                                <condition id="-14" name="Compare variable" sid="732121967532223" type="System">
+                                    <param id="0" name="Variable">nivel</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="411546931519330" type="armas">
+                                    <param id="0" name="Animation">&quot;HachaAni&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="872323438774445">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="772728555582585" type="System" />
+                                <condition id="-14" name="Compare variable" sid="155880651295095" type="System">
+                                    <param id="0" name="Variable">nivel</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="452557162918985" type="armas">
+                                    <param id="0" name="Animation">&quot;BolaAni&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="801258232890915">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="459329455931579" type="System" />
+                                <condition id="-14" name="Compare variable" sid="319220446829037" type="System">
+                                    <param id="0" name="Variable">nivel</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="698276554592547" type="armas">
+                                    <param id="0" name="Animation">&quot;GarroteAni&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="481059508482411">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="388677135753557" type="System" />
+                                <condition id="-14" name="Compare variable" sid="816810608274751" type="System">
+                                    <param id="0" name="Variable">nivel</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="284029683466084" type="armas">
+                                    <param id="0" name="Animation">&quot;PicosAni&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
                 <event-block sid="191837747898365">
@@ -266,6 +330,70 @@
                             <actions>
                                 <action id="4" name="Set animation" sid="424562820073121" type="armas">
                                     <param id="0" name="Animation">&quot;EspadaEst&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="633997663250901">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="157709187369154" type="System" />
+                                <condition id="-14" name="Compare variable" sid="146390214739625" type="System">
+                                    <param id="0" name="Variable">nivel</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="658123010630252" type="armas">
+                                    <param id="0" name="Animation">&quot;HachaEst&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="321087533852436">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="440392518955743" type="System" />
+                                <condition id="-14" name="Compare variable" sid="374741809474530" type="System">
+                                    <param id="0" name="Variable">nivel</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="727202445938349" type="armas">
+                                    <param id="0" name="Animation">&quot;BolaEst&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="334344413479022">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="974801805835087" type="System" />
+                                <condition id="-14" name="Compare variable" sid="503129209768398" type="System">
+                                    <param id="0" name="Variable">nivel</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="526072024662703" type="armas">
+                                    <param id="0" name="Animation">&quot;GarroteEst&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="917044378958363">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="689554011289081" type="System" />
+                                <condition id="-14" name="Compare variable" sid="301040196538785" type="System">
+                                    <param id="0" name="Variable">nivel</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="821447398481262" type="armas">
+                                    <param id="0" name="Animation">&quot;PicosEst&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>
@@ -324,8 +452,13 @@
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="578448270557429" type="System">
                                     <param id="0" name="Variable">partida</param>
-                                    <param id="1" name="Comparison">0</param>
+                                    <param id="1" name="Comparison">5</param>
                                     <param id="2" name="Value">4</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="673769656531424" type="System">
+                                    <param id="0" name="Variable">partida</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">10</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -335,6 +468,101 @@
                                 </action>
                                 <action id="4" name="Set animation" sid="349017723489659" type="visorNiveles">
                                     <param id="0" name="Animation">&quot;N2&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="397068099114510">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="335434622089839" type="System" />
+                                <condition id="-14" name="Compare variable" sid="446120560815447" type="System">
+                                    <param id="0" name="Variable">partida</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="407106630110480" type="System">
+                                    <param id="0" name="Variable">partida</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">19</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="928993420709822" type="System">
+                                    <param id="0" name="Variable">nivel</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="865826666425765" type="visorNiveles">
+                                    <param id="0" name="Animation">&quot;N3&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="193529120069775">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="505557260364170" type="System" />
+                                <condition id="-14" name="Compare variable" sid="707316237475517" type="System">
+                                    <param id="0" name="Variable">partida</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">19</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="865120716575433" type="System">
+                                    <param id="0" name="Variable">partida</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">31</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="629173742478031" type="System">
+                                    <param id="0" name="Variable">nivel</param>
+                                    <param id="1" name="Value">4</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="275846204946676" type="visorNiveles">
+                                    <param id="0" name="Animation">&quot;N4&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="153356671767538">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="360399636062391" type="System" />
+                                <condition id="-14" name="Compare variable" sid="282441026667114" type="System">
+                                    <param id="0" name="Variable">partida</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">31</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="814929028470611" type="System">
+                                    <param id="0" name="Variable">partida</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">49</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="734847491879186" type="System">
+                                    <param id="0" name="Variable">nivel</param>
+                                    <param id="1" name="Value">5</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="849020890184303" type="visorNiveles">
+                                    <param id="0" name="Animation">&quot;N5&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="184086793776004">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="431037541079653" type="System" />
+                                <condition id="-14" name="Compare variable" sid="285122086188431" type="System">
+                                    <param id="0" name="Variable">partida</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">49</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="525682139871157" type="System">
+                                    <param id="0" name="Variable">nivel</param>
+                                    <param id="1" name="Value">6</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="816039893741421" type="visorNiveles">
+                                    <param id="0" name="Animation">&quot;N6&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>
@@ -380,6 +608,70 @@
                             <actions>
                                 <action id="4" name="Set animation" sid="297847526945558" type="escudos">
                                     <param id="0" name="Animation">&quot;E2&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="983148631749703">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="390156909589566" type="System" />
+                                <condition id="-14" name="Compare variable" sid="170612279506654" type="System">
+                                    <param id="0" name="Variable">nivel</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="706354157262168" type="escudos">
+                                    <param id="0" name="Animation">&quot;E3&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="590497786182769">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="153047982133927" type="System" />
+                                <condition id="-14" name="Compare variable" sid="888015465444437" type="System">
+                                    <param id="0" name="Variable">nivel</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="118622274469751" type="escudos">
+                                    <param id="0" name="Animation">&quot;E4&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="982358895475322">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="475516187956072" type="System" />
+                                <condition id="-14" name="Compare variable" sid="367965769896363" type="System">
+                                    <param id="0" name="Variable">nivel</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="636736915313397" type="escudos">
+                                    <param id="0" name="Animation">&quot;E5&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="922182799007440">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="426208777751752" type="System" />
+                                <condition id="-14" name="Compare variable" sid="195932233648514" type="System">
+                                    <param id="0" name="Variable">nivel</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="259745911710338" type="escudos">
+                                    <param id="0" name="Animation">&quot;E6&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>
