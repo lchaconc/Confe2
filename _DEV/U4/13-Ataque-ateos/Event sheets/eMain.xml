@@ -3,9 +3,10 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eMain</name>
     <events>
+        <variable constant="0" name="conteo" sid="563084410696613" static="0" type="number">0</variable>
         <variable comment="bandera que indica si el arma está en movimiento (0=false / 1=true)" constant="0" name="activo" sid="834985502498211" static="0" type="number">0</variable>
         <variable constant="0" name="nivel" sid="605837430550118" static="0" type="number">0</variable>
-        <variable constant="0" name="partida" sid="996034158324984" static="0" type="number">50</variable>
+        <variable constant="0" name="partida" sid="996034158324984" static="0" type="number">12</variable>
         <variable constant="0" name="avanceBarra" sid="490587034742866" static="0" type="number">0</variable>
         <event-group description="" sid="696962280087413" title="Colision sensores Escudo - Caida de arma - Fin pantalla">
             <sub-events>
@@ -19,6 +20,10 @@
                         <action behavior="Pin" id="1" name="Unpin" sid="939992879115798" type="armas" />
                         <action id="0" name="Call function" sid="117791857063811" type="Function">
                             <param id="0" name="Name">&quot;detenerArma&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="491057028811315" type="Function">
+                            <param id="0" name="Name">&quot;iniciarClicker&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
@@ -110,14 +115,21 @@
                             <param id="0" name="Family name">&quot;Langar&quot;</param>
                             <param id="1" name="CSS URL">&quot;https://fonts.googleapis.com/css2?family=Langar&amp;display=swap&quot;</param>
                         </action>
-                        <action id="3" name="Set font size" sid="871940573357630" type="txtAtaque">
-                            <param id="0" name="Size (pt)">24</param>
-                        </action>
                         <action id="5" name="Set web font" sid="366096675690159" type="txtDefensa">
                             <param id="0" name="Family name">&quot;Langar&quot;</param>
                             <param id="1" name="CSS URL">&quot;https://fonts.googleapis.com/css2?family=Langar&amp;display=swap&quot;</param>
                         </action>
+                        <action id="5" name="Set web font" sid="303753815074369" type="txtTiempo">
+                            <param id="0" name="Family name">&quot;Langar&quot;</param>
+                            <param id="1" name="CSS URL">&quot;https://fonts.googleapis.com/css2?family=Langar&amp;display=swap&quot;</param>
+                        </action>
+                        <action id="3" name="Set font size" sid="871940573357630" type="txtAtaque">
+                            <param id="0" name="Size (pt)">24</param>
+                        </action>
                         <action id="3" name="Set font size" sid="603930090841984" type="txtDefensa">
+                            <param id="0" name="Size (pt)">24</param>
+                        </action>
+                        <action id="3" name="Set font size" sid="291808799718870" type="txtTiempo">
                             <param id="0" name="Size (pt)">24</param>
                         </action>
                         <action id="0" name="Call function" sid="372320844447751" type="Function">
@@ -677,6 +689,48 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="319932466409776" title="Manejador de tiempo">
+            <sub-events>
+                <event-block sid="296229017298421">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="482573238800292" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="678691485622033" type="System">
+                            <param id="0" name="Variable">conteo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="430866329622486" type="txtTiempo">
+                            <param id="0" name="Text">conteo</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="575249339982295">
+                    <conditions>
+                        <condition id="0" name="On function" sid="596039388116669" type="Function">
+                            <param id="0" name="Name">&quot;iniciarClicker&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="204821956876853" type="System">
+                            <param id="0" name="Variable">conteo</param>
+                            <param id="1" name="Value">33</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="850291656890931" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="919631997493523" type="btnClicker">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="814457393365175" type="txtTiempo">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
