@@ -3,10 +3,10 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eMain</name>
     <events>
-        <variable constant="0" name="conteo" sid="563084410696613" static="0" type="number">0</variable>
+        <variable comment="se inicia en 1000 porque 0 rompe el escudo y activa bullet de arma" constant="0" name="conteo" sid="563084410696613" static="0" type="number">1000</variable>
         <variable comment="bandera que indica si el arma está en movimiento (0=false / 1=true)" constant="0" name="activo" sid="834985502498211" static="0" type="number">0</variable>
         <variable constant="0" name="nivel" sid="605837430550118" static="0" type="number">0</variable>
-        <variable constant="0" name="partida" sid="996034158324984" static="0" type="number">8</variable>
+        <variable constant="0" name="partida" sid="996034158324984" static="0" type="number">5</variable>
         <variable constant="0" name="avanceBarra" sid="490587034742866" static="0" type="number">0</variable>
         <event-group description="" sid="696962280087413" title="Colision sensores Escudo - Caida de arma - Fin pantalla">
             <sub-events>
@@ -17,6 +17,10 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-9" name="Set value" sid="218166723725041" type="System">
+                            <param id="0" name="Variable">activo</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
                         <action behavior="Pin" id="1" name="Unpin" sid="939992879115798" type="armas" />
                         <action id="0" name="Call function" sid="117791857063811" type="Function">
                             <param id="0" name="Name">&quot;detenerArma&quot;</param>
@@ -60,9 +64,29 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="447062020528111">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="371273468008174" type="armas">
+                            <param id="0" name="Object">snsArmaGanada</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="882308633860425" type="armas">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="367215968894733" type="vector">
+                            <param id="0" name="X">-300</param>
+                            <param id="1" name="Y">360</param>
+                        </action>
+                        <action id="0" name="Call function" sid="355469405513476" type="Function">
+                            <param id="0" name="Name">&quot;cargarPartida&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="721687500847843" title="Boton Clicker">
+        <event-group description="" sid="721687500847843" title="Boton Clicker - Efectos de arma">
             <sub-events>
                 <event-block sid="596455913210231">
                     <conditions>
@@ -80,6 +104,7 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>GANA--&gt; Si el avance de la barra es mayor 400 logró llegar antes de que el tiempo se terminara</comment>
                 <event-block sid="515903106485603">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="117054558921115" type="System">
@@ -91,6 +116,32 @@
                     <actions>
                         <action behavior="Physics" id="27" name="Set enabled" sid="713099887197801" type="armas">
                             <param id="0" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>PIERDE---&gt; Si el conteo es menor que cero, perdió el turno</comment>
+                <event-block sid="223077875018379">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="238278096561096" type="System">
+                            <param id="0" name="Variable">conteo</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="978963446593037" type="System">
+                            <param id="0" name="Variable">conteo</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">-2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="202627069159028" type="armas">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="826084728088308" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="702330822199729" type="escudos">
+                            <param id="0" name="Frame number">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -155,6 +206,16 @@
                         <action id="0" name="Call function" sid="250995898591756" type="Function">
                             <param id="0" name="Name">&quot;animarArma&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="5" name="Set frame" sid="154986710138195" type="escudos">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="752125790114615" type="armas">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="246108898199332" type="System">
+                            <param id="0" name="Variable">activo</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -706,15 +767,27 @@
                             <param id="0" name="Interval (seconds)">1.0</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-11" name="Subtract from" sid="678691485622033" type="System">
-                            <param id="0" name="Variable">conteo</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="0" name="Set text" sid="430866329622486" type="txtTiempo">
-                            <param id="0" name="Text">conteo</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="599440046415739">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="395128698997094" type="System">
+                                    <param id="0" name="Variable">activo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Subtract from" sid="678691485622033" type="System">
+                                    <param id="0" name="Variable">conteo</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="430866329622486" type="txtTiempo">
+                                    <param id="0" name="Text">conteo</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="575249339982295">
                     <conditions>
@@ -725,10 +798,10 @@
                     <actions>
                         <action id="-9" name="Set value" sid="204821956876853" type="System">
                             <param id="0" name="Variable">conteo</param>
-                            <param id="1" name="Value">33</param>
+                            <param id="1" name="Value">10</param>
                         </action>
                         <action id="-16" name="Wait" sid="850291656890931" type="System">
-                            <param id="0" name="Seconds">3</param>
+                            <param id="0" name="Seconds">5</param>
                         </action>
                         <action id="-15" name="Set visible" sid="919631997493523" type="bgAmarillo">
                             <param id="0" name="Visibility">0</param>
