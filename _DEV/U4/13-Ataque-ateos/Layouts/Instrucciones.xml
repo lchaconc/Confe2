@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>Splash</name>
-    <sid>903095872690908</sid>
-    <event-sheet>eSplash</event-sheet>
+    <name>Instrucciones</name>
+    <sid>938723905157956</sid>
+    <event-sheet>eInstrucciones</event-sheet>
     <size>
         <width>1280</width>
         <height>720</height>
@@ -13,9 +13,9 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="Layer 0" sid="343056537914743">
+        <layer name="Layer 0" sid="485151886405968">
             <initially-visible>1</initially-visible>
-            <background-color>0,0,0</background-color>
+            <background-color>255,255,255</background-color>
             <transparent>0</transparent>
             <parallax>
                 <x>1</x>
@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="bgSplash" uid="26">
+                <instance type="bgInstrucciones" uid="27">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -51,25 +51,32 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="btnIniciar" uid="28">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>907</x>
+                        <y>643</y>
+                        <z>0</z>
+                        <width>232</width>
+                        <height>75</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.50666666</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
     </layers>
-    <nonworld-instances>
-        <instance type="textosAtaques" uid="16">
-            <properties>
-                <width>1</width>
-                <height>1</height>
-                <depth>1</depth>
-            </properties>
-        </instance>
-        <instance type="textosDefensa" uid="18">
-            <properties>
-                <width>10</width>
-                <height>1</height>
-                <depth>1</depth>
-            </properties>
-        </instance>
-    </nonworld-instances>
+    <nonworld-instances />
     <effects />
 </c2layout>

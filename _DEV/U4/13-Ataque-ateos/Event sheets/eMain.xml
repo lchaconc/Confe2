@@ -7,7 +7,7 @@
         <variable comment="se inicia en 1000 porque 0 rompe el escudo y activa bullet de arma" constant="0" name="conteo" sid="563084410696613" static="0" type="number">1000</variable>
         <variable comment="bandera que indica si el arma está en movimiento (0=false / 1=true)" constant="0" name="activo" sid="834985502498211" static="0" type="number">0</variable>
         <variable constant="0" name="nivel" sid="605837430550118" static="0" type="number">0</variable>
-        <variable constant="0" name="partida" sid="996034158324984" static="0" type="number">20</variable>
+        <variable constant="0" name="partida" sid="996034158324984" static="0" type="number">11</variable>
         <variable constant="0" name="avanceBarra" sid="490587034742866" static="0" type="number">0</variable>
         <event-group description="" sid="696962280087413" title="Colision sensores Escudo - Caida de arma - Fin pantalla">
             <sub-events>
@@ -129,8 +129,19 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-12" name="Set group active" sid="622554760249181" type="System">
+                            <param id="0" name="Group name">&quot;Retroceder barra&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="482099283947550" type="txtTiempo">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
                         <action behavior="Physics" id="27" name="Set enabled" sid="713099887197801" type="armas">
                             <param id="0" name="Mode">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="759240027993543" type="System">
+                            <param id="0" name="Variable">conteo</param>
+                            <param id="1" name="Value">1000</param>
                         </action>
                     </actions>
                 </event-block>
@@ -145,10 +156,21 @@
                         <condition id="-14" name="Compare variable" sid="978963446593037" type="System">
                             <param id="0" name="Variable">conteo</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">-2</param>
+                            <param id="2" name="Value">-1</param>
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-12" name="Set group active" sid="907820242952687" type="System">
+                            <param id="0" name="Group name">&quot;Retroceder barra&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="484000896760148" type="txtTiempo">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="377731391287586" type="System">
+                            <param id="0" name="Variable">conteo</param>
+                            <param id="1" name="Value">1000</param>
+                        </action>
                         <action behavior="Bullet" id="5" name="Set enabled" sid="202627069159028" type="armas">
                             <param id="0" name="State">1</param>
                         </action>
@@ -222,7 +244,7 @@
                 <event-block sid="163877982065159">
                     <conditions>
                         <condition id="3" name="On touched object" sid="884474352939337" type="Touch">
-                            <param id="0" name="Object">visorNiveles</param>
+                            <param id="0" name="Object">btnIniciar</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -242,6 +264,9 @@
                         <action id="-9" name="Set value" sid="246108898199332" type="System">
                             <param id="0" name="Variable">activo</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="309009343041836" type="btnIniciar">
+                            <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -266,7 +291,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="171828975450542" title="Funciones de armas: Cargar-Animar">
+        <event-group description="" sid="171828975450542" title="Funciones de armas: Cargar-Animar-Detener">
             <sub-events>
                 <event-block sid="309059518256650">
                     <conditions>
@@ -512,6 +537,9 @@
                     <actions>
                         <action id="-5" name="Set width" sid="382321985787590" type="barraAvance">
                             <param id="0" name="Width">50</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="707303079102516" type="btnIniciar">
+                            <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="-9" name="Set value" sid="344218726430411" type="System">
                             <param id="0" name="Variable">avanceBarra</param>
@@ -824,7 +852,7 @@
                     <actions>
                         <action id="-9" name="Set value" sid="204821956876853" type="System">
                             <param id="0" name="Variable">conteo</param>
-                            <param id="1" name="Value">28</param>
+                            <param id="1" name="Value">29</param>
                         </action>
                         <action id="-16" name="Wait" sid="850291656890931" type="System">
                             <param id="0" name="Seconds">3</param>
@@ -835,7 +863,43 @@
                         <action id="-15" name="Set visible" sid="814457393365175" type="txtTiempo">
                             <param id="0" name="Visibility">1</param>
                         </action>
+                        <action id="-12" name="Set group active" sid="786491939235876" type="System">
+                            <param id="0" name="Group name">&quot;Retroceder barra&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="696421076355345" title="Retroceder barra">
+            <sub-events>
+                <event-block sid="877506903873535">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="782526950352241" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="163540948613822">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="809657440656688" type="System">
+                                    <param id="0" name="Variable">avanceBarra</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">50</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Subtract from" sid="760898471206016" type="System">
+                                    <param id="0" name="Variable">avanceBarra</param>
+                                    <param id="1" name="Value">5</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="262279976026612" type="barraAvance">
+                                    <param id="0" name="Width">avanceBarra</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>

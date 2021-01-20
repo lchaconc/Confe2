@@ -149,6 +149,22 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="bgSplash" sid="502025174497366">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="442914602237626" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\Fondos\AtaqueAteosUI-05.jpg" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bgInstrucciones" sid="628854944835166">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="658739002389370" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\Fondos\AtaqueAteosUI-14.jpg" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Texts">
             <object-type name="txtAtaque" sid="504763165609961">
@@ -612,6 +628,14 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="btnIniciar" sid="456310668202891">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="627160732896881" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.506667" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\GUI\btnIniciarU4Ateos.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
     </object-folder>
     <families />
@@ -619,11 +643,13 @@
         <layout>Splash.xml</layout>
         <layout>End.xml</layout>
         <layout>Main.xml</layout>
+        <layout>Instrucciones.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>eSplash.xml</event-sheet>
         <event-sheet>eMain.xml</event-sheet>
         <event-sheet>eEnd.xml</event-sheet>
+        <event-sheet>eInstrucciones.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="0">
