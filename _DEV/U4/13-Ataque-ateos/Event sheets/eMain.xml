@@ -7,7 +7,7 @@
         <variable comment="se inicia en 1000 porque 0 rompe el escudo y activa bullet de arma" constant="0" name="conteo" sid="563084410696613" static="0" type="number">1000</variable>
         <variable comment="bandera que indica si el arma está en movimiento (0=false / 1=true)" constant="0" name="activo" sid="834985502498211" static="0" type="number">0</variable>
         <variable constant="0" name="nivel" sid="605837430550118" static="0" type="number">0</variable>
-        <variable constant="0" name="partida" sid="996034158324984" static="0" type="number">11</variable>
+        <variable constant="0" name="partida" sid="996034158324984" static="0" type="number">77</variable>
         <variable constant="0" name="avanceBarra" sid="490587034742866" static="0" type="number">0</variable>
         <event-group description="" sid="696962280087413" title="Colision sensores Escudo - Caida de arma - Fin pantalla">
             <sub-events>
@@ -863,7 +863,7 @@
                         <action id="-15" name="Set visible" sid="814457393365175" type="txtTiempo">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="-12" name="Set group active" sid="786491939235876" type="System">
+                        <action disabled="1" id="-12" name="Set group active" sid="786491939235876" type="System">
                             <param id="0" name="Group name">&quot;Retroceder barra&quot;</param>
                             <param id="1" name="State">1</param>
                         </action>

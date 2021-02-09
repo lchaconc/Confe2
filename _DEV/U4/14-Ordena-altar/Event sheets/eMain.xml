@@ -1,0 +1,521 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>eMain</name>
+    <events>
+        <variable constant="0" name="indice" sid="749035412525517" static="0" type="number">0</variable>
+        <event-group description="" sid="582679923700600" title="Touch de objetos">
+            <sub-events>
+                <event-block sid="198214608322572">
+                    <conditions>
+                        <condition behavior="DragDrop" id="1" name="On drag start" sid="366560940140564" type="caliz" />
+                    </conditions>
+                    <actions>
+                        <action id="-24" name="Move to top" sid="983742051869987" type="caliz" />
+                    </actions>
+                </event-block>
+                <event-block sid="883343434241836">
+                    <conditions>
+                        <condition behavior="DragDrop" id="1" name="On drag start" sid="258308690636987" type="purificador" />
+                    </conditions>
+                    <actions>
+                        <action id="-24" name="Move to top" sid="928867687794572" type="purificador" />
+                    </actions>
+                </event-block>
+                <event-block sid="404906197423254">
+                    <conditions>
+                        <condition behavior="DragDrop" id="1" name="On drag start" sid="502462362618180" type="patena" />
+                    </conditions>
+                    <actions>
+                        <action id="-24" name="Move to top" sid="220257090081470" type="patena" />
+                    </actions>
+                </event-block>
+                <event-block sid="882968048639770">
+                    <conditions>
+                        <condition behavior="DragDrop" id="1" name="On drag start" sid="734505457991087" type="palia" />
+                    </conditions>
+                    <actions>
+                        <action id="-24" name="Move to top" sid="673261263895259" type="palia" />
+                    </actions>
+                </event-block>
+                <event-block sid="316735917450209">
+                    <conditions>
+                        <condition behavior="DragDrop" id="1" name="On drag start" sid="682909344716689" type="corporal" />
+                    </conditions>
+                    <actions>
+                        <action id="-24" name="Move to top" sid="812754933579896" type="corporal" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="921144598907518" title="setup">
+            <sub-events>
+                <event-block sid="286765378438268">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="438609616764422" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set size" sid="138482096475088" type="listaObjetos">
+                            <param id="0" name="Width">10</param>
+                            <param id="1" name="Height">1</param>
+                            <param id="2" name="Depth">1</param>
+                        </action>
+                        <action id="0" name="Clear" sid="452425204584982" type="listaObjetos" />
+                        <action id="2" name="Set at X" sid="771932861464011" type="listaObjetos">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Value">&quot;caliz&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="106850642687494" type="listaObjetos">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Value">&quot;purificador&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="239371866749906" type="listaObjetos">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Value">&quot;patena&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="585219544676570" type="listaObjetos">
+                            <param id="0" name="X">4</param>
+                            <param id="1" name="Value">&quot;palia&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="263082137653487" type="listaObjetos">
+                            <param id="0" name="X">5</param>
+                            <param id="1" name="Value">&quot;corporal&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="213866524115903" title="Drop de objetos">
+            <sub-events>
+                <comment>1-Caliz</comment>
+                <event-block sid="463648069547997">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="593626534702865" type="caliz" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="552553069714487" type="System">
+                            <param id="0" name="Variable">indice</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="535298427328712">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="429762400830897" type="snsAreaAcomodo">
+                                    <param id="0" name="Object">caliz</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="655492135811289">
+                                    <conditions>
+                                        <condition id="0" name="Compare at X" sid="853613421133505" type="listaObjetos">
+                                            <param id="0" name="X">indice</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;caliz&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="14" name="Log" sid="393571289176781" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;BUENA&quot;</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="419886923233840" type="caliz">
+                                            <param id="0" name="X">624</param>
+                                            <param id="1" name="Y">390</param>
+                                        </action>
+                                        <action behavior="DragDrop" id="0" name="Set enabled" sid="710699492973584" type="caliz">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="811600534273623">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="868268495222155" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="14" name="Log" sid="621093460564349" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;MALA&quot;</param>
+                                        </action>
+                                        <action id="-11" name="Subtract from" sid="310677334521467" type="System">
+                                            <param id="0" name="Variable">indice</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="354319146028481" type="caliz">
+                                            <param id="0" name="X">310</param>
+                                            <param id="1" name="Y">380</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="869333618980191">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="735110643692612" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="684193956295909" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;fuera de area&quot;</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="392826563143313" type="System">
+                                    <param id="0" name="Variable">indice</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="683706535331873" type="caliz">
+                                    <param id="0" name="X">310</param>
+                                    <param id="1" name="Y">380</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>2-Purificador</comment>
+                <event-block sid="166936711196157">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="533991062824744" type="purificador" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="117680096797691" type="System">
+                            <param id="0" name="Variable">indice</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="888368178005463">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="190782709119116" type="snsAreaAcomodo">
+                                    <param id="0" name="Object">purificador</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="555222805717590">
+                                    <conditions>
+                                        <condition id="0" name="Compare at X" sid="572027260209124" type="listaObjetos">
+                                            <param id="0" name="X">indice</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;purificador&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="14" name="Log" sid="589276834137512" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;BUENA&quot;</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="742031140751109" type="purificador">
+                                            <param id="0" name="X">620</param>
+                                            <param id="1" name="Y">345</param>
+                                        </action>
+                                        <action behavior="DragDrop" id="0" name="Set enabled" sid="211649904171458" type="purificador">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="423354109806320" type="purificador">
+                                            <param id="0" name="Animation">&quot;abierto&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="462617614262512">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="121613581621607" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="14" name="Log" sid="358869548607908" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;MALA&quot;</param>
+                                        </action>
+                                        <action id="-11" name="Subtract from" sid="649696692891440" type="System">
+                                            <param id="0" name="Variable">indice</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="205440673412984" type="purificador">
+                                            <param id="0" name="X">965</param>
+                                            <param id="1" name="Y">465</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="935318689535754">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="188137176528200" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="814837286917864" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;fuera de area&quot;</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="918117917470707" type="System">
+                                    <param id="0" name="Variable">indice</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="800323282964761" type="purificador">
+                                    <param id="0" name="X">965</param>
+                                    <param id="1" name="Y">465</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>3-Patena</comment>
+                <event-block sid="276061286950809">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="357126392485455" type="patena" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="764985068055966" type="System">
+                            <param id="0" name="Variable">indice</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="803203422235165">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="930576923569816" type="snsAreaAcomodo">
+                                    <param id="0" name="Object">patena</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="285497327432538">
+                                    <conditions>
+                                        <condition id="0" name="Compare at X" sid="717638508551749" type="listaObjetos">
+                                            <param id="0" name="X">indice</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;patena&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="14" name="Log" sid="504985086622821" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;BUENA&quot;</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="894422926692311" type="patena">
+                                            <param id="0" name="X">625</param>
+                                            <param id="1" name="Y">320</param>
+                                        </action>
+                                        <action behavior="DragDrop" id="0" name="Set enabled" sid="497033490626052" type="patena">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="944400089161547">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="110858318673518" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="14" name="Log" sid="464590635928062" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;MALA&quot;</param>
+                                        </action>
+                                        <action id="-11" name="Subtract from" sid="722392551545938" type="System">
+                                            <param id="0" name="Variable">indice</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="871943906026968" type="patena">
+                                            <param id="0" name="X">420</param>
+                                            <param id="1" name="Y">430</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="647612835600394">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="912568431182774" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="949429661095127" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;fuera de area&quot;</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="388547678807610" type="System">
+                                    <param id="0" name="Variable">indice</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="152695284904408" type="patena">
+                                    <param id="0" name="X">420</param>
+                                    <param id="1" name="Y">430</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>4-Palia</comment>
+                <event-block sid="993290156330077">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="628116683282457" type="palia" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="147449050056295" type="System">
+                            <param id="0" name="Variable">indice</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="545579059982506">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="398758987807877" type="snsAreaAcomodo">
+                                    <param id="0" name="Object">palia</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="599458525913469">
+                                    <conditions>
+                                        <condition id="0" name="Compare at X" sid="301744951243872" type="listaObjetos">
+                                            <param id="0" name="X">indice</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;palia&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="14" name="Log" sid="554992017030212" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;BUENA&quot;</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="589711178712838" type="palia">
+                                            <param id="0" name="X">620</param>
+                                            <param id="1" name="Y">300</param>
+                                        </action>
+                                        <action behavior="DragDrop" id="0" name="Set enabled" sid="202963236191216" type="palia">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="699524154450700">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="734932963174629" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="14" name="Log" sid="464087430276736" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;MALA&quot;</param>
+                                        </action>
+                                        <action id="-11" name="Subtract from" sid="911404044795101" type="System">
+                                            <param id="0" name="Variable">indice</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="700706347984704" type="palia">
+                                            <param id="0" name="X">190</param>
+                                            <param id="1" name="Y">460</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="817725592239100">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="375627371760968" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="329847189587133" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;fuera de area&quot;</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="889469462593038" type="System">
+                                    <param id="0" name="Variable">indice</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="827711646373101" type="palia">
+                                    <param id="0" name="X">190</param>
+                                    <param id="1" name="Y">460</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>5-Corporal</comment>
+                <event-block sid="194826795431218">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="264157044677309" type="corporal" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="405617192915081" type="System">
+                            <param id="0" name="Variable">indice</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="478049549208294">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="633719836245206" type="snsAreaAcomodo">
+                                    <param id="0" name="Object">corporal</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="502699970862786">
+                                    <conditions>
+                                        <condition id="0" name="Compare at X" sid="293589158245516" type="listaObjetos">
+                                            <param id="0" name="X">indice</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;corporal&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="14" name="Log" sid="765515465502672" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;BUENA&quot;</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="706582241005517" type="corporal">
+                                            <param id="0" name="X">620</param>
+                                            <param id="1" name="Y">290</param>
+                                        </action>
+                                        <action behavior="DragDrop" id="0" name="Set enabled" sid="773001240829602" type="corporal">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="258491933316914" type="corporal">
+                                            <param id="0" name="Animation">&quot;Cerrado&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="586314848143042">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="160129938967637" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="14" name="Log" sid="234848373988872" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">&quot;MALA&quot;</param>
+                                        </action>
+                                        <action id="-11" name="Subtract from" sid="746174959746401" type="System">
+                                            <param id="0" name="Variable">indice</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="239865072939442" type="corporal">
+                                            <param id="0" name="X">800</param>
+                                            <param id="1" name="Y">420</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="475033374594797">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="472301555825349" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="793624456854162" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;fuera de area&quot;</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="194739926503610" type="System">
+                                    <param id="0" name="Variable">indice</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="934921976126199" type="corporal">
+                                    <param id="0" name="X">800</param>
+                                    <param id="1" name="Y">420</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
