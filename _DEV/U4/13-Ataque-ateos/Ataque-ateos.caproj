@@ -16,6 +16,7 @@
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
@@ -66,6 +67,9 @@
             </object-type>
             <object-type global="1" name="textosDefensa" sid="782663153750940">
                 <plugin id="Arr" />
+            </object-type>
+            <object-type name="WebStorage" sid="319995960614657">
+                <plugin id="WebStorage" />
             </object-type>
         </object-folder>
         <object-folder name="Sensors">
@@ -631,8 +635,33 @@
             <object-type name="btnIniciar" sid="456310668202891">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="627160732896881" speed="5">
+                    <animation framecount="1" loop="0" name="Iniciar" pingpong="0" repeatcount="1" repeatto="0" sid="627160732896881" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.506667" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\GUI\btnIniciarU4Ateos.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Empezar" pingpong="0" repeatcount="1" repeatto="0" sid="890075131330007" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.544304" original-source="C:\Users\luisc\Desktop\btn-empezar.png">
+                            <collision-poly>
+                                <point x="0.00260417" y="0.0126582" />
+                                <point x="0.997396" y="0.0126582" />
+                                <point x="0.979167" y="0.987342" />
+                                <point x="0.0208333" y="0.987342" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btnContinuar" sid="486529397238440">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="831246454019455" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.544304" original-source="C:\Users\luisc\Desktop\btn_continuar.png">
+                            <collision-poly>
+                                <point x="0.00260417" y="0.0126582" />
+                                <point x="0.997396" y="0.0126582" />
+                                <point x="0.979167" y="0.987342" />
+                                <point x="0.0208333" y="0.987342" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -659,6 +688,7 @@
         </global-instance>
         <global-instance type="Function" uid="1" />
         <global-instance type="Browser" uid="2" />
+        <global-instance type="WebStorage" uid="29" />
     </global-instances>
     <sounds-folder />
     <music-folder />

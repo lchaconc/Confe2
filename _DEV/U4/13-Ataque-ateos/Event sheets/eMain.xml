@@ -7,7 +7,7 @@
         <variable comment="se inicia en 1000 porque 0 rompe el escudo y activa bullet de arma" constant="0" name="conteo" sid="563084410696613" static="0" type="number">1000</variable>
         <variable comment="bandera que indica si el arma está en movimiento (0=false / 1=true)" constant="0" name="activo" sid="834985502498211" static="0" type="number">0</variable>
         <variable constant="0" name="nivel" sid="605837430550118" static="0" type="number">0</variable>
-        <variable constant="0" name="partida" sid="996034158324984" static="0" type="number">77</variable>
+        <variable constant="0" name="partida" sid="996034158324984" static="0" type="number">0</variable>
         <variable constant="0" name="avanceBarra" sid="490587034742866" static="0" type="number">0</variable>
         <event-group description="" sid="696962280087413" title="Colision sensores Escudo - Caida de arma - Fin pantalla">
             <sub-events>
@@ -202,6 +202,10 @@
                         <action id="-9" name="Set value" sid="364649379270208" type="System">
                             <param id="0" name="Variable">puntos</param>
                             <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="110377812463135" type="System">
+                            <param id="0" name="Variable">partida</param>
+                            <param id="1" name="Value">lsPartida</param>
                         </action>
                         <action id="5" name="Set web font" sid="468289696078768" type="txtAtaque">
                             <param id="0" name="Family name">&quot;Langar&quot;</param>
@@ -548,6 +552,10 @@
                         <action id="0" name="Call function" sid="332382947190095" type="Function">
                             <param id="0" name="Name">&quot;incrementarNivel&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Set local value" sid="209569802344271" type="WebStorage">
+                            <param id="0" name="Key">&quot;lsPartida&quot;</param>
+                            <param id="1" name="Value">partida</param>
                         </action>
                         <action id="-10" name="Add to" sid="755124327272534" type="System">
                             <param id="0" name="Variable">partida</param>
