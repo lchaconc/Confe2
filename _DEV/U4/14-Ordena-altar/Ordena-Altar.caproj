@@ -18,6 +18,7 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -71,6 +72,19 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="snsSagrario" sid="100073194688990">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Physics" sid="710677110469525">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="641728716245235" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Bg">
             <object-type name="bgPared" sid="704706716009330">
@@ -120,6 +134,29 @@
                                 <point x="0.5" y="1" />
                                 <point x="0.274262" y="0.788274" />
                                 <point x="0.301688" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bgSpalsh" sid="411134030771456">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="366357833880473" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500678" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\OrdenarAltar\Splashu4.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bgSagrario" sid="690910739651330">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="139077469306218" speed="5">
+                        <frame duration="1" hotspotX="0.50039" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\OrdenarAltar\backsagrariohch.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.999219" y="0.00138889" />
+                                <point x="0.999219" y="0.998611" />
+                                <point x="0" y="1" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -179,6 +216,79 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="sagrario" sid="901518485620966">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Cerrado" pingpong="0" repeatcount="1" repeatto="0" sid="773659471137323" speed="5">
+                        <frame duration="1" hotspotX="0.500763" hotspotY="0.500763" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\OrdenarAltar\sagrario cerradohch.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Abierto" pingpong="0" repeatcount="1" repeatto="0" sid="183623783885349" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501027" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\OrdenarAltar\sagrario abiertohch.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="llave" sid="786781314600798">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="DragDrop" sid="350122149405115">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="333107796555874" speed="5">
+                        <frame duration="1" hotspotX="0.501683" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\OrdenarAltar\llavesagrarioU4Altar.png">
+                            <collision-poly>
+                                <point x="0.050505" y="0.277778" />
+                                <point x="0.392256" y="0.363248" />
+                                <point x="0.885522" y="0.0128205" />
+                                <point x="0.983165" y="0.153845" />
+                                <point x="0.488215" y="0.553418" />
+                                <point x="0.42761" y="1" />
+                                <point x="0" y="0.96795" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="llavin" sid="948472306314507">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="898394702068955" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="premioCaliz" sid="425336317532727">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Physics" sid="594951189411183">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="948632925108009" speed="5">
+                        <frame duration="1" hotspotX="0.501449" hotspotY="0.502825" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\OrdenarAltar\premiocalizbonushch.png">
+                            <collision-poly>
+                                <point x="0.0782609" y="0.152542" />
+                                <point x="0.498551" y="0.169492" />
+                                <point x="0.962319" y="0.0734463" />
+                                <point x="0.985507" y="0.497175" />
+                                <point x="0.886957" y="0.779661" />
+                                <point x="0.498551" y="0.779661" />
+                                <point x="0.0724638" y="0.858757" />
+                                <point x="0.00289855" y="0.497175" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-type name="purificador" sid="770762689676155">
             <plugin id="Sprite" />
@@ -209,17 +319,42 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="premioCopon" sid="254189365159120">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="639440988076910">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="643827876186901" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502825" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\OrdenarAltar\premiocoponhch.png">
+                        <collision-poly>
+                            <point x="0.0789474" y="0.152542" />
+                            <point x="0.912281" y="0.169492" />
+                            <point x="0.994152" y="0.497175" />
+                            <point x="0.885965" y="0.779661" />
+                            <point x="0.5" y="0.779661" />
+                            <point x="0.0730994" y="0.858757" />
+                            <point x="0.00292398" y="0.497175" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
         <layout>Splash.xml</layout>
         <layout>End.xml</layout>
         <layout>Main.xml</layout>
+        <layout>Sagrario.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>eSplash.xml</event-sheet>
         <event-sheet>eMain.xml</event-sheet>
         <event-sheet>eEnd.xml</event-sheet>
+        <event-sheet>eSagrario.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="0">
