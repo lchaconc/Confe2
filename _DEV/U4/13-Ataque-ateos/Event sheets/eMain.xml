@@ -56,7 +56,7 @@
                             <param id="0" name="Mode">0</param>
                         </action>
                         <action id="-3" name="Set position" sid="228012597630911" type="vector">
-                            <param id="0" name="X">-300</param>
+                            <param id="0" name="X">-430</param>
                             <param id="1" name="Y">360</param>
                         </action>
                         <action id="-10" name="Add to" sid="731096070135660" type="System">
@@ -83,7 +83,7 @@
                             <param id="0" name="State">0</param>
                         </action>
                         <action id="-3" name="Set position" sid="367215968894733" type="vector">
-                            <param id="0" name="X">-300</param>
+                            <param id="0" name="X">-430</param>
                             <param id="1" name="Y">360</param>
                         </action>
                         <action id="-11" name="Subtract from" sid="883689372066371" type="System">
@@ -696,6 +696,11 @@
                                     <param id="1" name="Comparison">5</param>
                                     <param id="2" name="Value">49</param>
                                 </condition>
+                                <condition id="-14" name="Compare variable" sid="945245417345369" type="System">
+                                    <param id="0" name="Variable">partida</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">79</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-9" name="Set value" sid="525682139871157" type="System">
@@ -705,6 +710,21 @@
                                 <action id="4" name="Set animation" sid="816039893741421" type="visorNiveles">
                                     <param id="0" name="Animation">&quot;N6&quot;</param>
                                     <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="655084704299644">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="522124380166420" type="System" />
+                                <condition id="-14" name="Compare variable" sid="299475102855203" type="System">
+                                    <param id="0" name="Variable">partida</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">79</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="977921638018196" type="System">
+                                    <param id="0" name="Layout">Fin</param>
                                 </action>
                             </actions>
                         </event-block>
