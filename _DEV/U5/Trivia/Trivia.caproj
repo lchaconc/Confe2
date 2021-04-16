@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Trivia</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>3subbtu8xvytq</unique-id>
+    <saved-with-version>27900</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors />
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1280</width>
+        <height>720</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>main</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar only</prop>
+        <prop name="Orientations">Landscape</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">Chrome</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="Buttons" />
+        <object-folder name="Backgrounds">
+            <object-type name="bgSplash" sid="410224090032756">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="644720096559060" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 5\Trivia\Triviapantallas-01.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bgInstrucciones" sid="304967806736321">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="862004666290642" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 5\Trivia\Triviapantallas-03.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bgTrivia" sid="972410489358277">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="249285147573310" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 5\Trivia\1x\Asset 3U5Trivia.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.996885" y="0.00555556" />
+                                <point x="0.996885" y="0.994444" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bgTExto" sid="683261547534165">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="208614358172854" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501916" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 5\Trivia\1x\Asset 11U5Trivia.png">
+                            <collision-poly>
+                                <point x="0.0154739" y="0.0613027" />
+                                <point x="0.5" y="0" />
+                                <point x="0.984526" y="0.0613027" />
+                                <point x="1" y="0.498084" />
+                                <point x="0.984526" y="0.938697" />
+                                <point x="0.5" y="1" />
+                                <point x="0.0154739" y="0.938697" />
+                                <point x="0" y="0.498084" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Sprites">
+            <object-type name="numeros" sid="219420092476072">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="340613710863136" speed="5">
+                        <frame duration="1" hotspotX="0.504673" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 5\Trivia\1x\Asset 10U5Trivia.png">
+                            <collision-poly>
+                                <point x="0.149533" y="0.150943" />
+                                <point x="0.495327" y="0" />
+                                <point x="0.850467" y="0.150943" />
+                                <point x="1" y="0.5" />
+                                <point x="0.850467" y="0.849057" />
+                                <point x="0.495327" y="1" />
+                                <point x="0.149533" y="0.849057" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="letraA" sid="745808208370368">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="valor" sid="526283209199942" type="string" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="249581109202566" speed="5">
+                        <frame duration="1" hotspotX="0.507042" hotspotY="0.507042" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 5\Trivia\1x\Asset 9U5Trivia.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="letraB" sid="189767936268440">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="valor" sid="228114494402774" type="string" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="886022158453567" speed="5">
+                        <frame duration="1" hotspotX="0.507042" hotspotY="0.507042" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 5\Trivia\1x\Asset 8U5Trivia.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="letraC" sid="259561029181087">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="valor" sid="231048292042713" type="string" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="167954620387841" speed="5">
+                        <frame duration="1" hotspotX="0.507042" hotspotY="0.507042" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 5\Trivia\1x\Asset 7U5Trivia.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="check" sid="523090147614844">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="700397049618270" speed="5">
+                        <frame duration="1" hotspotX="0.507692" hotspotY="0.509804" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 5\Trivia\1x\Asset 4U5Trivia.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="wrong" sid="994659033814032">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="704700518449548" speed="5">
+                        <frame duration="1" hotspotX="0.510204" hotspotY="0.510204" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 5\Trivia\1x\Asset 5U5Trivia.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Texts">
+            <object-type name="txtPregunta" sid="654312730359344">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="txtOpt1" sid="937365057872052">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="txtOpt2" sid="262148253759195">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="txtOpt3" sid="863826187468031">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Controls">
+            <object-type name="btnSiguiente" sid="169096612677141">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="170888096755437" speed="5">
+                        <frame duration="1" hotspotX="0.503145" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 5\Trivia\1x\Asset 6U5Trivia.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="System">
+            <object-type name="Touch" sid="948977961617129">
+                <plugin id="Touch" />
+            </object-type>
+            <object-type name="Function" sid="558381821082318">
+                <plugin id="Function" />
+            </object-type>
+            <object-type global="1" name="preguntas" sid="435407687468289">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="opcionesA" sid="174608598194302">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="opcionesB" sid="496771411692442">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="opcionesC" sid="123195614115622">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type name="Browser" sid="576449373830181">
+                <plugin id="Browser" />
+            </object-type>
+            <object-type global="1" name="respuestas" sid="751382901941277">
+                <plugin id="Arr" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Sensors" />
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>main.xml</layout>
+        <layout>Splash.xml</layout>
+        <layout>Instrucciones.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>eMain.xml</event-sheet>
+        <event-sheet>eSplash.xml</event-sheet>
+        <event-sheet>eInstrucciones.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Function" uid="0" />
+        <global-instance type="Touch" uid="1">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Browser" uid="21" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>eSplash</name>
+    <events>
+        <variable constant="0" name="index" sid="288929664734197" static="0" type="number">1</variable>
+        <event-block sid="693149256061647">
+            <conditions>
+                <condition id="3" name="On touched object" sid="518421046131767" type="Touch">
+                    <param id="0" name="Object">bgSplash</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="365496052021296" type="System">
+                    <param id="0" name="Layout">Instrucciones</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="472748436194075" title="Inicializar arrays">
+            <sub-events>
+                <event-block sid="313236635995371">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="447729791246635" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set size" sid="829554474817751" type="preguntas">
+                            <param id="0" name="Width">11</param>
+                            <param id="1" name="Height">1</param>
+                            <param id="2" name="Depth">1</param>
+                        </action>
+                        <action id="1" name="Set size" sid="677468433891285" type="opcionesA">
+                            <param id="0" name="Width">11</param>
+                            <param id="1" name="Height">1</param>
+                            <param id="2" name="Depth">1</param>
+                        </action>
+                        <action id="1" name="Set size" sid="605585508002706" type="opcionesB">
+                            <param id="0" name="Width">11</param>
+                            <param id="1" name="Height">1</param>
+                            <param id="2" name="Depth">1</param>
+                        </action>
+                        <action id="1" name="Set size" sid="168884778841380" type="opcionesC">
+                            <param id="0" name="Width">11</param>
+                            <param id="1" name="Height">1</param>
+                            <param id="2" name="Depth">1</param>
+                        </action>
+                        <action id="1" name="Set size" sid="789125378698311" type="respuestas">
+                            <param id="0" name="Width">11</param>
+                            <param id="1" name="Height">1</param>
+                            <param id="2" name="Depth">1</param>
+                        </action>
+                        <action id="0" name="Clear" sid="441001607035658" type="respuestas" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="103679612826603" title="Agregar preguntas">
+            <sub-events>
+                <event-block sid="590311463346840">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="197070655566096" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set at X" sid="576872333514247" type="preguntas">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Value">&quot;¿Qué simboliza el fuego en la Biblia?&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="450081501893336" type="preguntas">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Value">&quot;La venida del Espíritu Santo en Pentecostés inaugura la vida&#x0D;&#x0A;de la Iglesia, por eso se dice que Pentecostés es un&#x0D;&#x0A;acontecimiento:&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="222584729519774" type="preguntas">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Value">&quot;¿Quién es el sucesor de los apóstoles?&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="519177423146241" type="preguntas">
+                            <param id="0" name="X">4</param>
+                            <param id="1" name="Value">&quot;Es Espíritu Santo se posó sobre los apóstoles en forma de:&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="391724946182469" title="Agregar opciones">
+            <sub-events>
+                <event-block sid="286746134903988">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="679656469234018" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set at X" sid="325206679363201" type="opcionesA">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Value">&quot;Misericordia&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="149527634892687" type="opcionesB">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Value">&quot;La presencia de Dios y la Acción transformadora del&#x0D;&#x0A;Espíritu Santo&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="170532041172427" type="opcionesC">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Value">&quot;Valentía&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="569641157189649" type="opcionesA">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Value">&quot;Transformador&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="854915191522757" type="opcionesB">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Value">&quot;Extraordinario&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="463430801046194" type="opcionesC">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Value">&quot;Eclesial&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="159400282302457" type="opcionesA">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Value">&quot;Pedro&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="163118693450435" type="opcionesB">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Value">&quot;El sacerdote&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="705108437358520" type="opcionesC">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Value">&quot;El obispo&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="179307342528346" type="opcionesA">
+                            <param id="0" name="X">4</param>
+                            <param id="1" name="Value">&quot;Lenugas&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="720348081686185" type="opcionesB">
+                            <param id="0" name="X">4</param>
+                            <param id="1" name="Value">&quot;Paloma&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="373919560681718" type="opcionesC">
+                            <param id="0" name="X">4</param>
+                            <param id="1" name="Value">&quot;Nube luminosa&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="388427370541838" type="opcionesA">
+                            <param id="0" name="X">5</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="987793553268906" type="opcionesB">
+                            <param id="0" name="X">5</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="867941385173722" type="opcionesC">
+                            <param id="0" name="X">5</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="868050356687196" type="opcionesA">
+                            <param id="0" name="X">6</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="478049363726321" type="opcionesB">
+                            <param id="0" name="X">6</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="142186829930263" type="opcionesC">
+                            <param id="0" name="X">6</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="975467282525710" type="opcionesA">
+                            <param id="0" name="X">7</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="210528016649599" type="opcionesB">
+                            <param id="0" name="X">7</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="366268083077685" type="opcionesC">
+                            <param id="0" name="X">7</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="115987083832788" type="opcionesA">
+                            <param id="0" name="X">8</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="244704203149872" type="opcionesB">
+                            <param id="0" name="X">8</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="242713505457489" type="opcionesC">
+                            <param id="0" name="X">8</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="517572899800453" type="opcionesA">
+                            <param id="0" name="X">9</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="548854636699302" type="opcionesB">
+                            <param id="0" name="X">9</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="280141517914713" type="opcionesC">
+                            <param id="0" name="X">9</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="832789161137077" type="opcionesA">
+                            <param id="0" name="X">10</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="206678011931948" type="opcionesB">
+                            <param id="0" name="X">10</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="706714667529238" type="opcionesC">
+                            <param id="0" name="X">10</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="267256142004200" title="Agregar respuestas">
+            <sub-events>
+                <event-block sid="883006957210866">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="422734480703282" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set at X" sid="608414882006454" type="respuestas">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Value">&quot;b&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="746995574987178" type="respuestas">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Value">&quot;c&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="170610200215135" type="respuestas">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Value">&quot;c&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="301128815894161" type="respuestas">
+                            <param id="0" name="X">4</param>
+                            <param id="1" name="Value">&quot;a&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="456048918124738" type="respuestas">
+                            <param id="0" name="X">5</param>
+                            <param id="1" name="Value">&quot;a&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="188977897655964" type="respuestas">
+                            <param id="0" name="X">6</param>
+                            <param id="1" name="Value">&quot;b&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="730855854878491" type="respuestas">
+                            <param id="0" name="X">7</param>
+                            <param id="1" name="Value">&quot;b&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="739014072109615" type="respuestas">
+                            <param id="0" name="X">8</param>
+                            <param id="1" name="Value">&quot;a&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="320184426795418" type="respuestas">
+                            <param id="0" name="X">9</param>
+                            <param id="1" name="Value">&quot;b&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="920055254964784" type="respuestas">
+                            <param id="0" name="X">10</param>
+                            <param id="1" name="Value">&quot;c&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

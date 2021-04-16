@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>eMain</name>
+    <events>
+        <event-group description="" sid="370034331693827" title="Setup">
+            <sub-events>
+                <event-block sid="250151715630644">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="113989134144720" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="802669994268546" type="txtPregunta">
+                            <param id="0" name="Text">preguntas.At(1)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="451995431556244" type="txtOpt1">
+                            <param id="0" name="Text">opcionesA.At(1)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="805016785096396" type="txtOpt2">
+                            <param id="0" name="Text">opcionesB.At(1)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="802971452085977" type="txtOpt3">
+                            <param id="0" name="Text">opcionesC.At(1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="566767373038693" title="Pasar preguntas (btn Siguiente)">
+            <sub-events>
+                <event-block sid="427013660177091">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="695625920497732" type="Touch">
+                            <param id="0" name="Object">btnSiguiente</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="678620531140139" type="System">
+                            <param id="0" name="Variable">index</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="275362511949181" type="txtPregunta">
+                            <param id="0" name="Text">preguntas.At(index)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="625180710571481" type="txtOpt1">
+                            <param id="0" name="Text">opcionesA.At(index)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="674171956995932" type="txtOpt2">
+                            <param id="0" name="Text">opcionesB.At(index)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="840912543679282" type="txtOpt3">
+                            <param id="0" name="Text">opcionesC.At(index)</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="835215249783301" type="check">
+                            <param id="0" name="X">-600</param>
+                            <param id="1" name="Y">-600</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="265119493845387" type="wrong">
+                            <param id="0" name="X">-600</param>
+                            <param id="1" name="Y">-600</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="547003308669261" title="Eventos touch de opciones">
+            <sub-events>
+                <event-block sid="326607038643647">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="769401030850440" type="Touch">
+                            <param id="0" name="Object">letraA</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="503509395214118">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="784837206851072" type="letraA">
+                                    <param id="0" name="Instance variable">valor</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">respuestas.At(index)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="463732166346627" type="check">
+                                    <param id="0" name="Object">letraA</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="357864912838989">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="615667455037089" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="500071422897295" type="wrong">
+                                    <param id="0" name="Object">letraA</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="671214511630534">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="290658918136541" type="Touch">
+                            <param id="0" name="Object">letraB</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="870690085454619">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="632535338191249" type="letraB">
+                                    <param id="0" name="Instance variable">valor</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">respuestas.At(index)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="497254646042896" type="check">
+                                    <param id="0" name="Object">letraB</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="786477395216456">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="205600375912276" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="120263581368481" type="wrong">
+                                    <param id="0" name="Object">letraB</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="673879099291236">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="960630934120588" type="Touch">
+                            <param id="0" name="Object">letraC</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="112121421733411">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="234122514941092" type="letraC">
+                                    <param id="0" name="Instance variable">valor</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">respuestas.At(index)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="857187760193560" type="check">
+                                    <param id="0" name="Object">letraC</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="974741474625562">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="792083842324657" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="865113730638527" type="wrong">
+                                    <param id="0" name="Object">letraC</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
