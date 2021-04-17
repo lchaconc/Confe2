@@ -104,18 +104,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="340613710863136" speed="5">
-                        <frame duration="1" hotspotX="0.504673" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 5\Trivia\1x\Asset 10U5Trivia.png">
-                            <collision-poly>
-                                <point x="0.149533" y="0.150943" />
-                                <point x="0.495327" y="0" />
-                                <point x="0.850467" y="0.150943" />
-                                <point x="1" y="0.5" />
-                                <point x="0.850467" y="0.849057" />
-                                <point x="0.495327" y="1" />
-                                <point x="0.149533" y="0.849057" />
-                                <point x="0" y="0.5" />
-                            </collision-poly>
-                        </frame>
+                        <frame duration="1" hotspotX="0.507813" hotspotY="0.5" original-source="C:\Users\luisc\Desktop\circulo.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -182,6 +171,9 @@
             <object-type name="txtOpt3" sid="863826187468031">
                 <plugin id="Text" />
             </object-type>
+            <object-type name="txtNum" sid="642390277548165">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
         <object-folder name="Controls">
             <object-type name="btnSiguiente" sid="169096612677141">
@@ -217,6 +209,110 @@
             </object-type>
             <object-type global="1" name="respuestas" sid="751382901941277">
                 <plugin id="Arr" />
+            </object-type>
+            <object-type name="txtPreguntas" sid="305920698153700">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="11" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="499479835996857" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\luisc\Desktop\textos\p01.png" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\luisc\Desktop\textos\p02.png">
+                            <collision-poly>
+                                <point x="0.126697" y="0.46281" />
+                                <point x="0.5" y="0.64876" />
+                                <point x="0.924208" y="0.276859" />
+                                <point x="0.893665" y="0.5" />
+                                <point x="0.928733" y="0.739669" />
+                                <point x="0.0723982" y="0.735537" />
+                                <point x="0.030543" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\luisc\Desktop\textos\p03.png">
+                            <collision-poly>
+                                <point x="0.0835655" y="0.304569" />
+                                <point x="0.5" y="0.345178" />
+                                <point x="0.5" y="0.451777" />
+                                <point x="0.0988858" y="0.639594" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\luisc\Desktop\textos\p04.png">
+                            <collision-poly>
+                                <point x="0.116667" y="0.426396" />
+                                <point x="0.5" y="0.35533" />
+                                <point x="0.906944" y="0.340102" />
+                                <point x="0.85" y="0.451777" />
+                                <point x="0.5" y="0.446701" />
+                                <point x="0.0986111" y="0.639594" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\luisc\Desktop\textos\p05.png">
+                            <collision-poly>
+                                <point x="0.0373961" y="0.103846" />
+                                <point x="0.5" y="0.280769" />
+                                <point x="0.904432" y="0.265385" />
+                                <point x="0.926593" y="0.5" />
+                                <point x="0.83241" y="0.534615" />
+                                <point x="0.5" y="0.534615" />
+                                <point x="0.0429363" y="0.880769" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\luisc\Desktop\textos\p06.png">
+                            <collision-poly>
+                                <point x="0.0373961" y="0.103846" />
+                                <point x="0.5" y="0.280769" />
+                                <point x="0.904432" y="0.265385" />
+                                <point x="0.926593" y="0.5" />
+                                <point x="0.83241" y="0.534615" />
+                                <point x="0.5" y="0.534615" />
+                                <point x="0.0429363" y="0.880769" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\luisc\Desktop\textos\p07.png">
+                            <collision-poly>
+                                <point x="0.04" y="0.176471" />
+                                <point x="0.5" y="0.423529" />
+                                <point x="0.949333" y="0.223529" />
+                                <point x="0.936" y="0.5" />
+                                <point x="0.874667" y="0.447059" />
+                                <point x="0.5" y="0.547059" />
+                                <point x="0.036" y="0.841176" />
+                                <point x="0.048" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\luisc\Desktop\textos\p08.png">
+                            <collision-poly>
+                                <point x="0.0362903" y="0.158824" />
+                                <point x="0.5" y="0.158824" />
+                                <point x="0.899194" y="0.441176" />
+                                <point x="0.947581" y="0.5" />
+                                <point x="0.875" y="0.452941" />
+                                <point x="0.5" y="0.288235" />
+                                <point x="0.0416667" y="0.817647" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\luisc\Desktop\textos\p09.png">
+                            <collision-poly>
+                                <point x="0.035809" y="0.0885246" />
+                                <point x="0.5" y="0.0885246" />
+                                <point x="0.911141" y="0.219672" />
+                                <point x="0.897878" y="0.747541" />
+                                <point x="0.5" y="0.75082" />
+                                <point x="0.0411141" y="0.898361" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\luisc\Desktop\textos\p10.png">
+                            <collision-poly>
+                                <point x="0.0365359" y="0.158824" />
+                                <point x="0.499323" y="0.164706" />
+                                <point x="0.947226" y="0.229412" />
+                                <point x="0.7659" y="0.5" />
+                                <point x="0.836265" y="0.288235" />
+                                <point x="0.499323" y="0.817647" />
+                                <point x="0.0419486" y="0.817647" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
         <object-folder name="Sensors" />

@@ -39,8 +39,8 @@
                             <param id="0" name="Variable">index</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="0" name="Set text" sid="275362511949181" type="txtPregunta">
-                            <param id="0" name="Text">preguntas.At(index)</param>
+                        <action id="5" name="Set frame" sid="450255942175810" type="txtPreguntas">
+                            <param id="0" name="Frame number">index</param>
                         </action>
                         <action id="0" name="Set text" sid="625180710571481" type="txtOpt1">
                             <param id="0" name="Text">opcionesA.At(index)</param>
@@ -58,6 +58,9 @@
                         <action id="-3" name="Set position" sid="265119493845387" type="wrong">
                             <param id="0" name="X">-600</param>
                             <param id="1" name="Y">-600</param>
+                        </action>
+                        <action id="0" name="Set text" sid="620037393304033" type="txtNum">
+                            <param id="0" name="Text">index</param>
                         </action>
                     </actions>
                 </event-block>
