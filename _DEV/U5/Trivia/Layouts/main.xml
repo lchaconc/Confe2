@@ -189,34 +189,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txtPregunta" uid="10">
-                    <properties>
-                        <text>Text</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-40,400,0</font>
-                        <color>255,255,255</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-608</x>
-                        <y>-435</y>
-                        <z>0</z>
-                        <width>243</width>
-                        <height>79</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="txtOpt1" uid="11">
+                <instance type="txtOptA" uid="11">
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -228,11 +201,14 @@
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
+                    <instance-variables>
+                        <valor>a</valor>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>181</x>
-                        <y>369</y>
+                        <x>172</x>
+                        <y>368</y>
                         <z>0</z>
                         <width>1065</width>
                         <height>57</height>
@@ -243,7 +219,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txtOpt2" uid="16">
+                <instance type="txtOptB" uid="16">
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -255,14 +231,17 @@
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
+                    <instance-variables>
+                        <valor>b</valor>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>184</x>
-                        <y>462</y>
+                        <x>177</x>
+                        <y>490</y>
                         <z>0</z>
                         <width>1051</width>
-                        <height>140</height>
+                        <height>95</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -270,7 +249,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txtOpt3" uid="17">
+                <instance type="txtOptC" uid="17">
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -282,11 +261,14 @@
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
+                    <instance-variables>
+                        <valor>c</valor>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>181</x>
-                        <y>613</y>
+                        <x>180</x>
+                        <y>620</y>
                         <z>0</z>
                         <width>876</width>
                         <height>57</height>
@@ -299,11 +281,14 @@
                 </instance>
                 <instance type="btnSiguiente" uid="18">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <isActivo>false</isActivo>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>

@@ -98,6 +98,14 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="bgFin" sid="981993144756620">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="663044543184857" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Sprites">
             <object-type name="numeros" sid="219420092476072">
@@ -159,17 +167,23 @@
             </object-type>
         </object-folder>
         <object-folder name="Texts">
-            <object-type name="txtPregunta" sid="654312730359344">
+            <object-type name="txtOptA" sid="937365057872052">
                 <plugin id="Text" />
+                <instance-variables>
+                    <instance-variable name="valor" sid="604567275815508" type="string" />
+                </instance-variables>
             </object-type>
-            <object-type name="txtOpt1" sid="937365057872052">
+            <object-type name="txtOptB" sid="262148253759195">
                 <plugin id="Text" />
+                <instance-variables>
+                    <instance-variable name="valor" sid="610635005656934" type="string" />
+                </instance-variables>
             </object-type>
-            <object-type name="txtOpt2" sid="262148253759195">
+            <object-type name="txtOptC" sid="863826187468031">
                 <plugin id="Text" />
-            </object-type>
-            <object-type name="txtOpt3" sid="863826187468031">
-                <plugin id="Text" />
+                <instance-variables>
+                    <instance-variable name="valor" sid="313296447946109" type="string" />
+                </instance-variables>
             </object-type>
             <object-type name="txtNum" sid="642390277548165">
                 <plugin id="Text" />
@@ -178,6 +192,9 @@
         <object-folder name="Controls">
             <object-type name="btnSiguiente" sid="169096612677141">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="isActivo" sid="692607571167033" type="boolean" />
+                </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="170888096755437" speed="5">
                         <frame duration="1" hotspotX="0.503145" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 5\Trivia\1x\Asset 6U5Trivia.png" />
@@ -322,11 +339,13 @@
         <layout>main.xml</layout>
         <layout>Splash.xml</layout>
         <layout>Instrucciones.xml</layout>
+        <layout>Fin.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>eMain.xml</event-sheet>
         <event-sheet>eSplash.xml</event-sheet>
         <event-sheet>eInstrucciones.xml</event-sheet>
+        <event-sheet>eFin.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Function" uid="0" />

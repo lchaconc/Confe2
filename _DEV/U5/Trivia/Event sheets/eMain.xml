@@ -10,16 +10,13 @@
                         <condition id="-2" name="On start of layout" sid="113989134144720" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="802669994268546" type="txtPregunta">
-                            <param id="0" name="Text">preguntas.At(1)</param>
-                        </action>
-                        <action id="0" name="Set text" sid="451995431556244" type="txtOpt1">
+                        <action id="0" name="Set text" sid="451995431556244" type="txtOptA">
                             <param id="0" name="Text">opcionesA.At(1)</param>
                         </action>
-                        <action id="0" name="Set text" sid="805016785096396" type="txtOpt2">
+                        <action id="0" name="Set text" sid="805016785096396" type="txtOptB">
                             <param id="0" name="Text">opcionesB.At(1)</param>
                         </action>
-                        <action id="0" name="Set text" sid="802971452085977" type="txtOpt3">
+                        <action id="0" name="Set text" sid="802971452085977" type="txtOptC">
                             <param id="0" name="Text">opcionesC.At(1)</param>
                         </action>
                     </actions>
@@ -34,35 +31,71 @@
                             <param id="0" name="Object">btnSiguiente</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-10" name="Add to" sid="678620531140139" type="System">
-                            <param id="0" name="Variable">index</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="5" name="Set frame" sid="450255942175810" type="txtPreguntas">
-                            <param id="0" name="Frame number">index</param>
-                        </action>
-                        <action id="0" name="Set text" sid="625180710571481" type="txtOpt1">
-                            <param id="0" name="Text">opcionesA.At(index)</param>
-                        </action>
-                        <action id="0" name="Set text" sid="674171956995932" type="txtOpt2">
-                            <param id="0" name="Text">opcionesB.At(index)</param>
-                        </action>
-                        <action id="0" name="Set text" sid="840912543679282" type="txtOpt3">
-                            <param id="0" name="Text">opcionesC.At(index)</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="835215249783301" type="check">
-                            <param id="0" name="X">-600</param>
-                            <param id="1" name="Y">-600</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="265119493845387" type="wrong">
-                            <param id="0" name="X">-600</param>
-                            <param id="1" name="Y">-600</param>
-                        </action>
-                        <action id="0" name="Set text" sid="620037393304033" type="txtNum">
-                            <param id="0" name="Text">index</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="807410640273025">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="378287464144002" type="System">
+                                    <param id="0" name="Variable">index</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="800019291962527" type="btnSiguiente">
+                                    <param id="0" name="Instance variable">isActivo</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="678620531140139" type="System">
+                                    <param id="0" name="Variable">index</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="450255942175810" type="txtPreguntas">
+                                    <param id="0" name="Frame number">index</param>
+                                </action>
+                                <action id="0" name="Set text" sid="625180710571481" type="txtOptA">
+                                    <param id="0" name="Text">opcionesA.At(index)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="674171956995932" type="txtOptB">
+                                    <param id="0" name="Text">opcionesB.At(index)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="840912543679282" type="txtOptC">
+                                    <param id="0" name="Text">opcionesC.At(index)</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="835215249783301" type="check">
+                                    <param id="0" name="X">-600</param>
+                                    <param id="1" name="Y">-600</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="265119493845387" type="wrong">
+                                    <param id="0" name="X">-600</param>
+                                    <param id="1" name="Y">-600</param>
+                                </action>
+                                <action id="0" name="Set text" sid="620037393304033" type="txtNum">
+                                    <param id="0" name="Text">index</param>
+                                </action>
+                                <action id="0" name="Call function" sid="165724874576806" type="Function">
+                                    <param id="0" name="Name">&quot;resetColorBlanco&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="435131936178139" type="btnSiguiente">
+                                    <param id="0" name="Instance variable">isActivo</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="266361537216674" type="btnSiguiente">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="108743572160499">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="735567595277958" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="836966441867285" type="System">
+                                    <param id="0" name="Layout">Fin</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -74,7 +107,15 @@
                             <param id="0" name="Object">letraA</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="921642192528961" type="btnSiguiente">
+                            <param id="0" name="Instance variable">isActivo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="292908674748160" type="btnSiguiente">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="503509395214118">
                             <conditions>
@@ -100,6 +141,10 @@
                                     <param id="0" name="Object">letraA</param>
                                     <param id="1" name="Image point (optional)">0</param>
                                 </action>
+                                <action id="0" name="Call function" sid="437993919384761" type="Function">
+                                    <param id="0" name="Name">&quot;colorearCorrecta&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -110,7 +155,15 @@
                             <param id="0" name="Object">letraB</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="775691565589988" type="btnSiguiente">
+                            <param id="0" name="Instance variable">isActivo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="866127265934419" type="btnSiguiente">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="870690085454619">
                             <conditions>
@@ -136,6 +189,10 @@
                                     <param id="0" name="Object">letraB</param>
                                     <param id="1" name="Image point (optional)">0</param>
                                 </action>
+                                <action id="0" name="Call function" sid="112642077480039" type="Function">
+                                    <param id="0" name="Name">&quot;colorearCorrecta&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -146,7 +203,15 @@
                             <param id="0" name="Object">letraC</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="763292964448019" type="btnSiguiente">
+                            <param id="0" name="Instance variable">isActivo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="293009386700698" type="btnSiguiente">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="112121421733411">
                             <conditions>
@@ -172,9 +237,239 @@
                                     <param id="0" name="Object">letraC</param>
                                     <param id="1" name="Image point (optional)">0</param>
                                 </action>
+                                <action id="0" name="Call function" sid="433124943304334" type="Function">
+                                    <param id="0" name="Name">&quot;colorearCorrecta&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="587539615314497" title="Eventos touch de opciones2">
+            <sub-events>
+                <event-block sid="127040474911173">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="114790599770793" type="Touch">
+                            <param id="0" name="Object">txtOptA</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="472082643262579" type="btnSiguiente">
+                            <param id="0" name="Instance variable">isActivo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="832399754837825" type="btnSiguiente">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="891386639389187">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="449263185196075" type="txtOptA">
+                                    <param id="0" name="Instance variable">valor</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">respuestas.At(index)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="707944257418734" type="check">
+                                    <param id="0" name="Object">letraA</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="359870701508956">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="279976209263337" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="154464557964752" type="wrong">
+                                    <param id="0" name="Object">letraA</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="690176737613285" type="Function">
+                                    <param id="0" name="Name">&quot;colorearCorrecta&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="901386875560770">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="691265808275014" type="Touch">
+                            <param id="0" name="Object">txtOptB</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="113749530484106" type="btnSiguiente">
+                            <param id="0" name="Instance variable">isActivo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="945656426827797" type="btnSiguiente">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="584306517742901">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="422036134162665" type="txtOptB">
+                                    <param id="0" name="Instance variable">valor</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">respuestas.At(index)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="672569406463096" type="check">
+                                    <param id="0" name="Object">letraB</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="376774139361763">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="586239893302165" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="705521468424612" type="wrong">
+                                    <param id="0" name="Object">letraB</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="494485176388191" type="Function">
+                                    <param id="0" name="Name">&quot;colorearCorrecta&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="815821031896758">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="216015004594024" type="Touch">
+                            <param id="0" name="Object">txtOptC</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="539656067010715" type="btnSiguiente">
+                            <param id="0" name="Instance variable">isActivo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="385486415927276" type="btnSiguiente">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="140413181554131">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="732195804259008" type="txtOptC">
+                                    <param id="0" name="Instance variable">valor</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">respuestas.At(index)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="312296445339174" type="check">
+                                    <param id="0" name="Object">letraC</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="177165289125293">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="535320837456050" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="989840342404275" type="wrong">
+                                    <param id="0" name="Object">letraC</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="947767820119240" type="Function">
+                                    <param id="0" name="Name">&quot;colorearCorrecta&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="946685988069424" title="Colorear correcta">
+            <sub-events>
+                <event-block sid="275219665965399">
+                    <conditions>
+                        <condition id="0" name="On function" sid="240437354456746" type="Function">
+                            <param id="0" name="Name">&quot;colorearCorrecta&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="832757083421332">
+                            <conditions>
+                                <condition id="0" name="Compare at X" sid="680699939110954" type="respuestas">
+                                    <param id="0" name="X">index</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;a&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set font color" sid="259147523257997" type="txtOptA">
+                                    <param id="0" name="Color">rgb(50,205,50)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="398450708498120">
+                            <conditions>
+                                <condition id="0" name="Compare at X" sid="631276868272594" type="respuestas">
+                                    <param id="0" name="X">index</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;b&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set font color" sid="170827368728639" type="txtOptB">
+                                    <param id="0" name="Color">rgb(50,205,50)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="406250022301009">
+                            <conditions>
+                                <condition id="0" name="Compare at X" sid="944501577438417" type="respuestas">
+                                    <param id="0" name="X">index</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;c&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set font color" sid="274578575821090" type="txtOptC">
+                                    <param id="0" name="Color">rgb(50,205,50)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="372735638458606" title="Reset color Blanco">
+            <sub-events>
+                <event-block sid="509835776357675">
+                    <conditions>
+                        <condition id="0" name="On function" sid="817522795194796" type="Function">
+                            <param id="0" name="Name">&quot;resetColorBlanco&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="906935518861279" type="txtOptA">
+                            <param id="0" name="Color">rgb(255,255,255)</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="258370689561122" type="txtOptB">
+                            <param id="0" name="Color">rgb(255,255,255)</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="412680791296049" type="txtOptC">
+                            <param id="0" name="Color">rgb(255,255,255)</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
