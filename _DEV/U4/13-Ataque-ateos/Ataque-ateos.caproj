@@ -105,6 +105,14 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="snsFin" sid="607891363426204">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="306449672913469" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Bg">
             <object-type name="bgAtaque" sid="322268870046105">
@@ -178,6 +186,11 @@
             </object-type>
             <object-type name="bgFin" sid="678323566834473">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Physics" sid="137911181135138">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="864909944968187" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 4\Ataque de los ateos\cierreu4.png">
@@ -695,14 +708,12 @@
         <layout>End.xml</layout>
         <layout>Main.xml</layout>
         <layout>Instrucciones.xml</layout>
-        <layout>Fin.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>eSplash.xml</event-sheet>
         <event-sheet>eMain.xml</event-sheet>
         <event-sheet>eEnd.xml</event-sheet>
         <event-sheet>eInstrucciones.xml</event-sheet>
-        <event-sheet>Event sheet 1.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="0">
