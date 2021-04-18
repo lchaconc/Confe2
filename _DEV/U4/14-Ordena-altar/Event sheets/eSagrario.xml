@@ -35,7 +35,19 @@
                 <action id="-16" name="Wait" sid="441879334220211" type="System">
                     <param id="0" name="Seconds">2.5</param>
                 </action>
-                <action id="-2" name="Go to layout" sid="576640397704518" type="System">
+                <action id="-15" name="Set visible" sid="319453391108133" type="btnSiguiente">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="466278639565901">
+            <conditions>
+                <condition id="3" name="On touched object" sid="246173373353103" type="Touch">
+                    <param id="0" name="Object">btnSiguiente</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="498319918521444" type="System">
                     <param id="0" name="Layout">Main</param>
                 </action>
             </actions>
