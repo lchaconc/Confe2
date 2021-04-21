@@ -10,18 +10,18 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="4" name="Set animation" sid="588844389231600" type="sagrario">
-                    <param id="0" name="Animation">&quot;Abierto&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action id="-15" name="Set visible" sid="789563680307427" type="llavin">
-                    <param id="0" name="Visibility">0</param>
-                </action>
                 <action id="-16" name="Wait" sid="785725166108422" type="System">
                     <param id="0" name="Seconds">0.5</param>
                 </action>
                 <action id="-15" name="Set visible" sid="315983514521756" type="llave">
                     <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="414677082010044" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="4" name="Set animation" sid="588844389231600" type="sagrario">
+                    <param id="0" name="Animation">&quot;Abierto&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
                 <action behavior="Physics" id="27" name="Set enabled" sid="161012886927988" type="premioCopon">
                     <param id="0" name="Mode">1</param>
