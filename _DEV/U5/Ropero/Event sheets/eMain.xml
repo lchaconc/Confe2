@@ -50,11 +50,11 @@
                             <param id="0" name="Variable">urlActualizarAvatar</param>
                             <param id="1" name="Value">apiJuegos &amp; &quot;AsignaAvatar/?idUsuario=&quot;</param>
                         </action>
-                        <action disabled="1" id="-9" name="Set value" sid="148073063466415" type="System">
+                        <action id="-9" name="Set value" sid="148073063466415" type="System">
                             <param id="0" name="Variable">sexo</param>
-                            <param id="1" name="Value">&quot;m&quot;</param>
+                            <param id="1" name="Value">&quot;F&quot;</param>
                         </action>
-                        <action disabled="1" id="-9" name="Set value" sid="835528493640961" type="System">
+                        <action id="-9" name="Set value" sid="835528493640961" type="System">
                             <param id="0" name="Variable">tipoAvatar</param>
                             <param id="1" name="Value">3</param>
                         </action>
@@ -89,6 +89,10 @@
                                     <param id="0" name="Name">&quot;caracteristicasHombre&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
+                                <action id="-3" name="Set position" sid="329164626924076" type="trajeHombreBiblico">
+                                    <param id="0" name="X">319.005 </param>
+                                    <param id="1" name="Y">380.318</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="705449809716451">
@@ -103,6 +107,18 @@
                                 <action id="0" name="Call function" sid="261511193258767" type="Function">
                                     <param id="0" name="Name">&quot;caracteristicasMujer&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="4" name="Set animation" sid="698749717559166" type="trajeMujer">
+                                    <param id="0" name="Animation">&quot;biblico&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="837819856728705" type="trajeMujer">
+                                    <param id="0" name="X">344.254</param>
+                                    <param id="1" name="Y">485.991</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="486197672891912" type="trajeMujer">
+                                    <param id="0" name="Width">87.952</param>
+                                    <param id="1" name="Height">393.041</param>
                                 </action>
                             </actions>
                         </event-block>
