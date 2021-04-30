@@ -3,30 +3,37 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eSplash</name>
     <events>
-        <event-group description="" sid="714910530714889" title="Cargar preguntas">
+        <event-group description="" sid="200721915450429" title="Load Data">
             <sub-events>
-                <event-block sid="526805928142649">
+                <event-block sid="866329462219986">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="314138123368064" type="System" />
+                        <condition id="-2" name="On start of layout" sid="921202307680557" type="System" />
                     </conditions>
                     <actions>
-                        <action id="1" name="Set size" sid="329956666674621" type="preguntas">
+                        <action id="1" name="Set size" sid="329956666674621" type="pregPrincipiante">
                             <param id="0" name="Width">20</param>
-                            <param id="1" name="Height">1</param>
-                            <param id="2" name="Depth">1</param>
+                            <param id="1" name="Height">20</param>
+                            <param id="2" name="Depth">20</param>
                         </action>
-                        <action id="0" name="Clear" sid="800456690691668" type="preguntas" />
-                        <action id="2" name="Set at X" sid="446117239436349" type="preguntas">
-                            <param id="0" name="X">1</param>
-                            <param id="1" name="Value">&quot;Pregunta 1&quot;</param>
+                        <action id="0" name="Clear" sid="800456690691668" type="pregPrincipiante" />
+                        <action id="1" name="Request project file" sid="796407457408210" type="AJAX">
+                            <param id="0" name="Tag">&quot;principiantes&quot;</param>
+                            <param id="1" name="File">preg-principiantes.json</param>
                         </action>
-                        <action id="2" name="Set at X" sid="917962408547912" type="preguntas">
-                            <param id="0" name="X">2</param>
-                            <param id="1" name="Value">&quot;Pregunta 2&quot;</param>
+                    </actions>
+                </event-block>
+                <event-block sid="328491141882036">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="853908738130550" type="AJAX">
+                            <param id="0" name="Tag">&quot;principiantes&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="991948633454255" type="pregPrincipiante">
+                            <param id="0" name="JSON">AJAX.LastData</param>
                         </action>
-                        <action id="2" name="Set at X" sid="457190107627580" type="preguntas">
-                            <param id="0" name="X">3</param>
-                            <param id="1" name="Value">&quot;Pregunta 3&quot;</param>
+                        <action id="0" name="Set text" sid="868940326643367" type="txtVisor">
+                            <param id="0" name="Text">pregPrincipiante.At(4,0,5)</param>
                         </action>
                     </actions>
                 </event-block>

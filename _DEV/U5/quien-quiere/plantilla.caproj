@@ -10,8 +10,10 @@
     <unique-id>3subbtu8xvytq</unique-id>
     <saved-with-version>27900</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors />
@@ -46,7 +48,11 @@
         <object-folder name="Buttons" />
         <object-folder name="Backgrounds" />
         <object-folder name="Sprites" />
-        <object-folder name="Texts" />
+        <object-folder name="Texts">
+            <object-type name="txtVisor" sid="959691672709243">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
         <object-folder name="Controls" />
         <object-folder name="System">
             <object-type name="Touch" sid="948977961617129">
@@ -55,8 +61,11 @@
             <object-type name="Function" sid="558381821082318">
                 <plugin id="Function" />
             </object-type>
-            <object-type global="1" name="preguntas" sid="382553183313462">
+            <object-type global="1" name="pregPrincipiante" sid="382553183313462">
                 <plugin id="Arr" />
+            </object-type>
+            <object-type name="AJAX" sid="933389252294516">
+                <plugin id="AJAX" />
             </object-type>
         </object-folder>
         <object-folder name="Sensors" />
@@ -77,6 +86,7 @@
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
+        <global-instance type="AJAX" uid="4" />
     </global-instances>
     <sounds-folder />
     <music-folder />
@@ -89,5 +99,6 @@
             <file name="icon-256.png" />
             <file name="loading-logo.png" />
         </file-folder>
+        <file name="preg-principiantes.json" />
     </files-folder>
 </c2project>
