@@ -1,13 +1,16 @@
-import nPrincipiante from "./data/nivel-1-principiante.json";
-import nFacil from "./data/nivel-2-facil.json";
-import nMedio from "./data/nivel-3-medio.json";
-import nDificil from "./data/nivel-4-dificil.json";
-
-console.log(nDificil);
+import React, { useState } from 'react';
+import Splash from "./componentes/Splash";
+import Intro from "./componentes/Intro";
+import Preguntas from "./componentes/Preguntas";
 
 
 
 function App() {
+const [curComp, setCurComp] = useState(null);
+  const handleViewa = (opt)=> {
+
+  }
+
   return (
     <div className="container">
       <h1>test        
