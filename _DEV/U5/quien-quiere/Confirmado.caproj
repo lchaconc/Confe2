@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
-    <name>plantilla</name>
+    <name>Confirmado</name>
     <description></description>
     <version>1.0.0.0</version>
     <author></author>
@@ -61,14 +61,22 @@
             <object-type name="Function" sid="558381821082318">
                 <plugin id="Function" />
             </object-type>
-            <object-type global="1" name="pregPrincipiante" sid="382553183313462">
-                <plugin id="Arr" />
-            </object-type>
             <object-type name="AJAX" sid="933389252294516">
                 <plugin id="AJAX" />
             </object-type>
         </object-folder>
         <object-folder name="Sensors" />
+        <object-folder name="Preguntas">
+            <object-type global="1" name="principiantes" sid="534229822001830">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="faciles" sid="721126943151472">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="medios" sid="810747363711876">
+                <plugin id="Arr" />
+            </object-type>
+        </object-folder>
     </object-folder>
     <families />
     <layout-folder>
@@ -99,6 +107,8 @@
             <file name="icon-256.png" />
             <file name="loading-logo.png" />
         </file-folder>
-        <file name="preg-principiantes.json" />
+        <file name="preg-principiantes-v2.json" />
+        <file name="preg-faciles.json" />
+        <file name="preg-medios.json" />
     </files-folder>
 </c2project>

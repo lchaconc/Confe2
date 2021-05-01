@@ -10,15 +10,12 @@
                         <condition id="-2" name="On start of layout" sid="921202307680557" type="System" />
                     </conditions>
                     <actions>
-                        <action id="1" name="Set size" sid="329956666674621" type="pregPrincipiante">
-                            <param id="0" name="Width">20</param>
-                            <param id="1" name="Height">20</param>
-                            <param id="2" name="Depth">20</param>
-                        </action>
-                        <action id="0" name="Clear" sid="800456690691668" type="pregPrincipiante" />
-                        <action id="1" name="Request project file" sid="796407457408210" type="AJAX">
+                        <action id="0" name="Clear" sid="800456690691668" type="principiantes" />
+                        <action id="0" name="Clear" sid="479808880925980" type="medios" />
+                        <action id="0" name="Clear" sid="870414007125618" type="faciles" />
+                        <action id="1" name="Request project file" sid="806287822015149" type="AJAX">
                             <param id="0" name="Tag">&quot;principiantes&quot;</param>
-                            <param id="1" name="File">preg-principiantes.json</param>
+                            <param id="1" name="File">preg-principiantes-v2.json</param>
                         </action>
                     </actions>
                 </event-block>
@@ -29,11 +26,43 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="11" name="Load" sid="991948633454255" type="pregPrincipiante">
+                        <action id="11" name="Load" sid="991948633454255" type="principiantes">
                             <param id="0" name="JSON">AJAX.LastData</param>
                         </action>
-                        <action id="0" name="Set text" sid="868940326643367" type="txtVisor">
-                            <param id="0" name="Text">pregPrincipiante.At(4,0,5)</param>
+                        <action id="1" name="Request project file" sid="546653276807418" type="AJAX">
+                            <param id="0" name="Tag">&quot;faciles&quot;</param>
+                            <param id="1" name="File">preg-faciles.json</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="727301448697304">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="207254929933673" type="AJAX">
+                            <param id="0" name="Tag">&quot;faciles&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="567648187498222" type="faciles">
+                            <param id="0" name="JSON">AJAX.LastData</param>
+                        </action>
+                        <action id="1" name="Request project file" sid="522834656440697" type="AJAX">
+                            <param id="0" name="Tag">&quot;medios&quot;</param>
+                            <param id="1" name="File">preg-medios.json</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="643970901140282">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="843990133832452" type="AJAX">
+                            <param id="0" name="Tag">&quot;medios&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="871528218357398" type="medios">
+                            <param id="0" name="JSON">AJAX.LastData</param>
+                        </action>
+                        <action id="0" name="Set text" sid="855256526540847" type="txtVisor">
+                            <param id="0" name="Text">medios.At(0,0,0)</param>
                         </action>
                     </actions>
                 </event-block>
