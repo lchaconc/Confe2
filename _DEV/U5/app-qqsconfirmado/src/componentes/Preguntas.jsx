@@ -17,8 +17,7 @@ export default function Preguntas(props) {
   const handleChangeItem = () => {
     index++;
     setItem(props.array[index]);
-    //console.log(index);
-    props.getIndex(index);
+    console.log(index);    
   };
 
   return (

@@ -10,8 +10,7 @@ import nDificil from "./data/nivel-4-dificil.json";
 
 import shuffleArray from "./utils/shuffle-array";
 
-const MAX_TIMES = 3;
-let level =1;
+
 
 function App() {
   const [curComp, setCurComp] = useState(null);
@@ -32,7 +31,8 @@ function App() {
         setCurComp(<Intro />);
         break;
       case 2:
-        loadQuestion();
+        //setCurComp(<Preguntas array={shuffleArray(nPrincipiante)}   />);
+        setCurComp(<Preguntas array={shuffleArray(nDificil)}   />);
         break;
 
       default:
@@ -40,19 +40,7 @@ function App() {
     }
   };
 
-  const loadQuestion = () => {
-   //TODO PAsar esta administración para preguntas
-    if (level === 1) {
-      console.log("level", level);
-      setCurComp(<Preguntas array={shuffleArray(nPrincipiante)}   />);
-    }
-    if (level === 2) {
-      console.log("level", level);
-      setCurComp(<Preguntas array={shuffleArray(nFacil)} />);
-    }
   
-  };
-
   return <div className="container">{curComp}</div>;
 }
 
