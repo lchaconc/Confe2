@@ -1,13 +1,18 @@
 import React, { useState, useEffect } from "react";
+
+import ItemsTime from "./ItemsTime";
+
 import nPrincipiante from "../data/nivel-1-principiante.json";
 import nFacil from "../data/nivel-2-facil.json";
 import nMedio from "../data/nivel-3-medio.json";
 import nDificil from "../data/nivel-4-dificil.json";
 
+
 import shuffleArray from "../utils/shuffle-array";
 
 const MAX_ITEMS = 3;
 const MAX_LEVELS = 4;
+const ITEM_DELAY = 10000;
 let index = 0;
 let level = 1;
 
@@ -28,6 +33,10 @@ export default function Preguntas(props) {
   const setup = () => {
     loadLevel(level);
   };
+
+  const handleTimeOver=(completed)=> {
+     completed && props.controller("timeover");
+  }
 
   const handleChangeItem = () => {
     //valida max items
@@ -75,6 +84,7 @@ export default function Preguntas(props) {
   return (
     item && (
       <>
+      <ItemsTime delay= {ITEM_DELAY} handleTimeOver={handleTimeOver} />
         <div className="jumbotron"></div>
 
         <div className="row">

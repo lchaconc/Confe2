@@ -3,6 +3,7 @@ import Splash from "./componentes/Splash";
 import Intro from "./componentes/Intro";
 import Preguntas from "./componentes/Preguntas";
 import Fin from "./componentes/Fin";
+import TimeOver from "./componentes/TimeOver";
 
 let currentView = "preguntas";
 
@@ -29,6 +30,9 @@ function App() {
         break;
       case "preguntas":
         setCurComp(<Preguntas controller={controller} />);
+        break;
+        case "timeover":
+        setCurComp(<TimeOver />);
         break;
       case "fin":
         setCurComp(<Fin />);
