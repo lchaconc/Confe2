@@ -2,45 +2,44 @@ import React, { useState, useEffect } from "react";
 import Splash from "./componentes/Splash";
 import Intro from "./componentes/Intro";
 import Preguntas from "./componentes/Preguntas";
+import Fin from "./componentes/Fin";
 
-import nPrincipiante from "./data/nivel-1-principiante.json";
-import nFacil from "./data/nivel-2-facil.json";
-import nMedio from "./data/nivel-3-medio.json";
-import nDificil from "./data/nivel-4-dificil.json";
-
-import shuffleArray from "./utils/shuffle-array";
-
-
+let currentView = "preguntas";
 
 function App() {
   const [curComp, setCurComp] = useState(null);
-  const [status, setStatus] = useState(2);
-  
 
   useEffect(() => {
-    controller();
+    setup();
   }, []);
 
-  const controller = () => {
-    console.log("status", status);
-    switch (status) {
-      case 0:
+  const setup =()=> {
+    controller(currentView);
+  }
+
+
+  const controller = (currentView) => {
+    console.log("currentView", currentView);
+    switch (currentView) {
+      case "splash":
         setCurComp(<Splash />);
         break;
-      case 1:
+      case "intro":
         setCurComp(<Intro />);
         break;
-      case 2:
-        //setCurComp(<Preguntas array={shuffleArray(nPrincipiante)}   />);
-        setCurComp(<Preguntas array={shuffleArray(nDificil)}   />);
+      case "preguntas":
+        setCurComp(<Preguntas controller={controller} />);
+        break;
+      case "fin":
+        setCurComp(<Fin />);
         break;
 
       default:
+        console.log("currentView fuera de rango", currentView);
         break;
     }
   };
 
-  
   return <div className="container">{curComp}</div>;
 }
 
