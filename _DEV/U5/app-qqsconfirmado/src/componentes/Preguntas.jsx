@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import ItemsTime from "./ItemsTime";
 
@@ -8,6 +8,8 @@ import nMedio from "../data/nivel-3-medio.json";
 import nDificil from "../data/nivel-4-dificil.json";
 
 import shuffleArray from "../utils/shuffle-array";
+
+import "../css/master.css";
 
 const MAX_ITEMS = 3;
 const MAX_LEVELS = 4;
@@ -19,6 +21,10 @@ export default function Preguntas(props) {
   const [item, setItem] = useState(null);
   const [filtrado, setFiltrado] = useState(null);
   const [chk, setChk] = useState(false);
+
+  //Referencia de boton de opción:
+  const refBotones = useRef();
+  refBotones.current = [];
 
   useEffect(() => {
     setup();
@@ -34,6 +40,22 @@ export default function Preguntas(props) {
     loadLevel(level);
   };
 
+  const agregarRefBotones = (item) => {
+    if (item && !refBotones.current.includes(item)) {
+      refBotones.current.push(item);
+      //console.log(refBotones.current);
+    }
+  };
+
+  const rmvClass = (array) => {
+    console.log(array);
+    const limite = array.length;
+    for (let index = 0; index < limite; index++) {
+      array[index].classList.remove("opt-right");
+      array[index].classList.remove("opt-wrong");
+    }
+  };
+
   const handleTimeOver = (completed) => {
     completed && props.controller("timeover");
   };
@@ -41,6 +63,10 @@ export default function Preguntas(props) {
   const handleChangeItem = () => {
     //Estdo desactivado para poder elegir otra opción
     setChk(false);
+
+    //remueve todas las clases css de los objetos para elimianar los
+    //estilos de los botones previamente selccionados
+    rmvClass(refBotones.current);
 
     //valida max items
     if (index < MAX_ITEMS) {
@@ -63,6 +89,9 @@ export default function Preguntas(props) {
   const handleChkAnswer = (e) => {
     if (!chk) {
       const opt = parseInt(e.currentTarget.id);
+      //selecciona el elemento del array de referencias:
+      const btn = refBotones.current[opt - 1];
+
       console.log("opt", opt);
       console.log("item.correcta", item.correcta);
       //Activa la selección
@@ -72,8 +101,11 @@ export default function Preguntas(props) {
       //valida si la opicón que marcó el usuario es la correcta
       if (opt === item.correcta) {
         console.log("Opción correcta");
+        //console.log(btn);
+        btn.classList.add("opt-right");
       } else {
         console.log("incorrecta");
+        btn.classList.add("opt-wrong");
       }
     }
   };
@@ -116,6 +148,7 @@ export default function Preguntas(props) {
             id={1}
             onClick={handleChkAnswer}
             className="col-5 alert alert-info"
+            ref={agregarRefBotones}
             role="button"
           >
             <span> {item.opcion1} </span>
@@ -125,6 +158,7 @@ export default function Preguntas(props) {
             id={2}
             onClick={handleChkAnswer}
             className="col-5 alert alert-info"
+            ref={agregarRefBotones}
             role="button"
           >
             <span> {item.opcion2} </span>
@@ -135,6 +169,7 @@ export default function Preguntas(props) {
             id={3}
             onClick={handleChkAnswer}
             className="col-5 alert alert-info"
+            ref={agregarRefBotones}
             role="button"
           >
             <span> {item.opcion3} </span>
@@ -144,6 +179,7 @@ export default function Preguntas(props) {
             id={4}
             onClick={handleChkAnswer}
             className="col-5 alert alert-info"
+            ref={agregarRefBotones}
             role="button"
           >
             <span> {item.opcion4} </span>
