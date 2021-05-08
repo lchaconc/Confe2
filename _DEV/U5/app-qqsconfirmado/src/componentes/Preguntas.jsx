@@ -22,11 +22,21 @@ export default function Preguntas(props) {
   const [filtrado, setFiltrado] = useState(null);
   const [chk, setChk] = useState(false);
 
+  //Etados para el comodin 50/50
+  const [v1, setV1] = useState(true);
+  const [v2, setV2] = useState(true);
+  const [v3, setV3] = useState(true);
+  const [v4, setV4] = useState(true);
+
+  //estado para los botones de comdines:
+  const [btn50, setBtn50] = useState(true);
+
   //Referencia de boton de opción:
   const refBotones = useRef();
   refBotones.current = [];
 
   useEffect(() => {
+    console.log("v1", !v1);
     setup();
   }, []);
 
@@ -56,6 +66,36 @@ export default function Preguntas(props) {
     }
   };
 
+  //Funcionaes comodines
+  const comod50 = () => {
+    console.log(item.correcta);
+
+    //elimina el botón del comodín 50/50
+    setBtn50(false);
+
+    switch (item.correcta) {
+      case 1:
+        setV2(false);
+        setV3(false);
+        break;
+      case 2:
+        setV1(false);
+        setV4(false);
+        break;
+      case 3:
+        setV1(false);
+        setV4(false);
+        break;
+      case 4:
+        setV1(false);
+        setV3(false);
+        break;
+
+      default:
+        break;
+    }
+  };
+
   const handleTimeOver = (completed) => {
     completed && props.controller("timeover");
   };
@@ -63,6 +103,13 @@ export default function Preguntas(props) {
   const handleChangeItem = () => {
     //Estdo desactivado para poder elegir otra opción
     setChk(false);
+
+    //Vuelve todas visibles en caso de que se haya usado el
+    //comodin 50/50
+    setV1(true);
+    setV2(true);
+    setV3(true);
+    setV4(true);
 
     //remueve todas las clases css de los objetos para elimianar los
     //estilos de los botones previamente selccionados
@@ -135,14 +182,22 @@ export default function Preguntas(props) {
   return (
     item && (
       <>
-      {
-        !chk && 
-        <ItemsTime
-        delay={ITEM_DELAY}          
-        handleTimeOver={handleTimeOver}
-      />
-      }
+        {!chk && (
+          <ItemsTime delay={ITEM_DELAY} handleTimeOver={handleTimeOver} />
+        )}
         <div className="jumbotron"></div>
+
+        <div className="row">
+          <div className="col-12">
+            {btn50 && (
+              <button onClick={comod50} className="btn btn-info">
+                50/50
+              </button>
+            )}
+          </div>
+        </div>
+
+        <br />
 
         <div className="row">
           <div className="col-12 alert alert-success">
@@ -153,17 +208,22 @@ export default function Preguntas(props) {
           <div
             id={1}
             onClick={handleChkAnswer}
-            className="col-5 alert alert-info"
+            className={
+              v1 ? "col-5 alert alert-info" : "col-5 alert alert-info invisible"
+            }
             ref={agregarRefBotones}
             role="button"
           >
             <span> {item.opcion1} </span>
           </div>
+
           <div className="col-2"></div>
           <div
             id={2}
             onClick={handleChkAnswer}
-            className="col-5 alert alert-info"
+            className={
+              v2 ? "col-5 alert alert-info" : "col-5 alert alert-info invisible"
+            }
             ref={agregarRefBotones}
             role="button"
           >
@@ -174,7 +234,9 @@ export default function Preguntas(props) {
           <div
             id={3}
             onClick={handleChkAnswer}
-            className="col-5 alert alert-info"
+            className={
+              v3 ? "col-5 alert alert-info" : "col-5 alert alert-info invisible"
+            }
             ref={agregarRefBotones}
             role="button"
           >
@@ -184,7 +246,9 @@ export default function Preguntas(props) {
           <div
             id={4}
             onClick={handleChkAnswer}
-            className="col-5 alert alert-info"
+            className={
+              v4 ? "col-5 alert alert-info" : "col-5 alert alert-info invisible"
+            }
             ref={agregarRefBotones}
             role="button"
           >
