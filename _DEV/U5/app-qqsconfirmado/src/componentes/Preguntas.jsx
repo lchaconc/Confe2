@@ -13,7 +13,7 @@ import "../css/master.css";
 
 const MAX_ITEMS = 3;
 const MAX_LEVELS = 4;
-const ITEM_DELAY = 25000;
+const ITEM_DELAY = 60000;
 let index = 0;
 let level = 1;
 
@@ -135,7 +135,13 @@ export default function Preguntas(props) {
   return (
     item && (
       <>
-        <ItemsTime delay={ITEM_DELAY} handleTimeOver={handleTimeOver} />
+      {
+        !chk && 
+        <ItemsTime
+        delay={ITEM_DELAY}          
+        handleTimeOver={handleTimeOver}
+      />
+      }
         <div className="jumbotron"></div>
 
         <div className="row">
