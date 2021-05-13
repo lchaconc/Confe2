@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>eMenu</name>
+    <events>
+        <variable constant="0" name="padrino" sid="761308773687017" static="0" type="text"></variable>
+        <variable constant="0" name="opcion" sid="157928797772383" static="0" type="number">0</variable>
+        <event-group description="" sid="430392557550060" title="Setup Menu">
+            <sub-events>
+                <event-block sid="980444987695390">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="416891481181317" type="System">
+                            <param id="0" name="Variable">sexo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;h&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="839587056335916" type="jugador">
+                            <param id="0" name="Animation">&quot;HombreBase&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="279032657350885" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="976886270857668" type="System">
+                            <param id="0" name="Group name">&quot;Setup Menu&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="147728673397211" title="Seleccion Traje">
+            <sub-events>
+                <event-block sid="965628586467652">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="644276233871187" type="Touch">
+                            <param id="0" name="Object">trajeNegro</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="145987065309038" type="jugador">
+                            <param id="0" name="Animation">&quot;HombreNegro&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="672630807162930">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="181498250334922" type="Touch">
+                            <param id="0" name="Object">trajeGris</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="980978011483488" type="jugador">
+                            <param id="0" name="Animation">&quot;HombreGris&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="969980562905104" title="Cargar Opciones">
+            <sub-events>
+                <event-block sid="725227233111425">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="419973827881693" type="System">
+                            <param id="0" name="Variable">opcion</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="870344359618910" type="Function">
+                            <param id="0" name="Name">&quot;alejar&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-3" name="Set position" sid="592168973944412" type="trajeNegro">
+                            <param id="0" name="X">753</param>
+                            <param id="1" name="Y">314</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="778292923042411" type="trajeGris">
+                            <param id="0" name="X">931</param>
+                            <param id="1" name="Y">322</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="687737407443805">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="255011729531790" type="System">
+                            <param id="0" name="Variable">opcion</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="598702701539355" type="Function">
+                            <param id="0" name="Name">&quot;alejar&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-3" name="Set position" sid="960322045235942" type="pMacha">
+                            <param id="0" name="X">850</param>
+                            <param id="1" name="Y">176</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="525404228522099" type="pChico">
+                            <param id="0" name="X">850</param>
+                            <param id="1" name="Y">347</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="122262377425502" type="pNegra">
+                            <param id="0" name="X">850</param>
+                            <param id="1" name="Y">517</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="332806519460054">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="308694275517877" type="System">
+                            <param id="0" name="Variable">opcion</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="444863328133794" type="Function">
+                            <param id="0" name="Name">&quot;alejar&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-3" name="Set position" sid="153049347581505" type="gafeteRojo">
+                            <param id="0" name="X">775</param>
+                            <param id="1" name="Y">206</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="648100921612636" type="hafeteBlanco">
+                            <param id="0" name="X">921</param>
+                            <param id="1" name="Y">206</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="137980127614048" type="gadeteDorado">
+                            <param id="0" name="X">822</param>
+                            <param id="1" name="Y">393</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="287928152944552">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="848373522274800" type="Touch">
+                            <param id="0" name="Object">btnSiguiente</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="658957688711552" type="System">
+                            <param id="0" name="Variable">opcion</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="130843632498988">
+                    <conditions>
+                        <condition id="0" name="On function" sid="152374952659689" type="Function">
+                            <param id="0" name="Name">&quot;alejar&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="658308571316916" type="pMacha">
+                            <param id="0" name="X">-600</param>
+                            <param id="1" name="Y">-600</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="792146753789937" type="pChico">
+                            <param id="0" name="X">-600</param>
+                            <param id="1" name="Y">-600</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="791367316224090" type="pNegra">
+                            <param id="0" name="X">-600</param>
+                            <param id="1" name="Y">-600</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="391707901386538" type="trajeNegro">
+                            <param id="0" name="X">-600</param>
+                            <param id="1" name="Y">-600</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="762207537808039" type="trajeGris">
+                            <param id="0" name="X">-600</param>
+                            <param id="1" name="Y">-600</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="940252697590508" type="gafeteRojo">
+                            <param id="0" name="X">-600</param>
+                            <param id="1" name="Y">-600</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="536194924672371" type="hafeteBlanco">
+                            <param id="0" name="X">-600</param>
+                            <param id="1" name="Y">-600</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="787591738541520" type="gadeteDorado">
+                            <param id="0" name="X">-600</param>
+                            <param id="1" name="Y">-600</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

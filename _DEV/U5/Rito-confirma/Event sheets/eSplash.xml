@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>eSplash</name>
+    <events>
+        <variable constant="0" name="sexo" sid="387966285863499" static="0" type="text">h</variable>
+        <event-block sid="406830170029828">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="582845548296880" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="512450581954085" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="429794614836939" type="System">
+                    <param id="0" name="Layout">Menu</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
