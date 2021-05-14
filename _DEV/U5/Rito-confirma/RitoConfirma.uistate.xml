@@ -10,10 +10,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
+        <layout order="0">Splash</layout>
         <layout order="1">Menu</layout>
-        <layout active="1" order="0">Splash</layout>
-        <event-sheet order="2">eMenu</event-sheet>
-        <event-sheet order="3">eSplash</event-sheet>
+        <layout order="3">Intro</layout>
+        <layout order="5">Main</layout>
+        <event-sheet order="2">eSplash</event-sheet>
+        <event-sheet order="4">eMenu</event-sheet>
+        <event-sheet active="1" order="6">eMain</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -38,6 +41,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
         <folder expanded="1" path="animation-folder/bgMenu/" />
+        <folder expanded="1" path="animation-folder/bgSplash/" />
+        <folder expanded="1" path="animation-folder/bgMain1/" />
         <folder expanded="1" path="animation-folder/jugador/" />
         <folder expanded="1" path="animation-folder/trajeNegro/" />
         <folder expanded="1" path="animation-folder/trajeGris/" />
@@ -45,8 +50,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/pChico/" />
         <folder expanded="1" path="animation-folder/pNegra/" />
         <folder expanded="1" path="animation-folder/gafeteRojo/" />
-        <folder expanded="1" path="animation-folder/hafeteBlanco/" />
-        <folder expanded="1" path="animation-folder/gadeteDorado/" />
+        <folder expanded="1" path="animation-folder/gafeteBlanco/" />
+        <folder expanded="1" path="animation-folder/gafeteDorado/" />
+        <folder expanded="1" path="animation-folder/padrino/" />
         <folder expanded="1" path="animation-folder/btnSiguiente/" />
     </folders-expanded>
 </c2uistate>

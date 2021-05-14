@@ -3,7 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eMenu</name>
     <events>
-        <variable constant="0" name="padrino" sid="761308773687017" static="0" type="text"></variable>
         <variable constant="0" name="opcion" sid="157928797772383" static="0" type="number">0</variable>
         <event-group description="" sid="430392557550060" title="Setup Menu">
             <sub-events>
@@ -44,6 +43,10 @@
                             <param id="0" name="Animation">&quot;HombreNegro&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
+                        <action id="-9" name="Set value" sid="780279981477981" type="System">
+                            <param id="0" name="Variable">traje</param>
+                            <param id="1" name="Value">&quot;negro&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="672630807162930">
@@ -56,6 +59,10 @@
                         <action id="4" name="Set animation" sid="980978011483488" type="jugador">
                             <param id="0" name="Animation">&quot;HombreGris&quot;</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="219677431771761" type="System">
+                            <param id="0" name="Variable">traje</param>
+                            <param id="1" name="Value">&quot;gris&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -130,13 +137,27 @@
                             <param id="0" name="X">775</param>
                             <param id="1" name="Y">206</param>
                         </action>
-                        <action id="-3" name="Set position" sid="648100921612636" type="hafeteBlanco">
+                        <action id="-3" name="Set position" sid="648100921612636" type="gafeteBlanco">
                             <param id="0" name="X">921</param>
                             <param id="1" name="Y">206</param>
                         </action>
-                        <action id="-3" name="Set position" sid="137980127614048" type="gadeteDorado">
+                        <action id="-3" name="Set position" sid="137980127614048" type="gafeteDorado">
                             <param id="0" name="X">822</param>
                             <param id="1" name="Y">393</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="261384589300294">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="278650536184515" type="System">
+                            <param id="0" name="Variable">opcion</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="271070299399887" type="System">
+                            <param id="0" name="Layout">Main</param>
                         </action>
                     </actions>
                 </event-block>
@@ -184,13 +205,141 @@
                             <param id="0" name="X">-600</param>
                             <param id="1" name="Y">-600</param>
                         </action>
-                        <action id="-3" name="Set position" sid="536194924672371" type="hafeteBlanco">
+                        <action id="-3" name="Set position" sid="536194924672371" type="gafeteBlanco">
                             <param id="0" name="X">-600</param>
                             <param id="1" name="Y">-600</param>
                         </action>
-                        <action id="-3" name="Set position" sid="787591738541520" type="gadeteDorado">
+                        <action id="-3" name="Set position" sid="787591738541520" type="gafeteDorado">
                             <param id="0" name="X">-600</param>
                             <param id="1" name="Y">-600</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="614317166086837" title="Seleccionar padrino">
+            <sub-events>
+                <event-block sid="348277729160199">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="919470352675729" type="Touch">
+                            <param id="0" name="Object">pMacha</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set blend mode" sid="979774047832686" type="pMacha">
+                            <param id="0" name="Blend mode">1</param>
+                        </action>
+                        <action id="1" name="Set blend mode" sid="322038828588057" type="pChico">
+                            <param id="0" name="Blend mode">0</param>
+                        </action>
+                        <action id="1" name="Set blend mode" sid="429339536650930" type="pNegra">
+                            <param id="0" name="Blend mode">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="235983130843169" type="System">
+                            <param id="0" name="Variable">padrino</param>
+                            <param id="1" name="Value">&quot;Macha&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="407130230622557">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="679149505177073" type="Touch">
+                            <param id="0" name="Object">pChico</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set blend mode" sid="818253821754899" type="pMacha">
+                            <param id="0" name="Blend mode">0</param>
+                        </action>
+                        <action id="1" name="Set blend mode" sid="161814049057441" type="pChico">
+                            <param id="0" name="Blend mode">1</param>
+                        </action>
+                        <action id="1" name="Set blend mode" sid="254179226197717" type="pNegra">
+                            <param id="0" name="Blend mode">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="771400542984220" type="System">
+                            <param id="0" name="Variable">padrino</param>
+                            <param id="1" name="Value">&quot;Chico&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="387825620770471">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="552814944197374" type="Touch">
+                            <param id="0" name="Object">pNegra</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set blend mode" sid="671671878314916" type="pMacha">
+                            <param id="0" name="Blend mode">0</param>
+                        </action>
+                        <action id="1" name="Set blend mode" sid="153914131576969" type="pChico">
+                            <param id="0" name="Blend mode">0</param>
+                        </action>
+                        <action id="1" name="Set blend mode" sid="558774337504388" type="pNegra">
+                            <param id="0" name="Blend mode">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="118316668707924" type="System">
+                            <param id="0" name="Variable">padrino</param>
+                            <param id="1" name="Value">&quot;Negra&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="735796956181689" title="Seleccionar gafete">
+            <sub-events>
+                <event-block sid="685982264342004">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="827587251283107" type="Touch">
+                            <param id="0" name="Object">gafeteRojo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set blend mode" sid="871700969289933" type="gafeteRojo">
+                            <param id="0" name="Blend mode">1</param>
+                        </action>
+                        <action id="1" name="Set blend mode" sid="486290122500454" type="gafeteBlanco">
+                            <param id="0" name="Blend mode">0</param>
+                        </action>
+                        <action id="1" name="Set blend mode" sid="665417132367991" type="gafeteDorado">
+                            <param id="0" name="Blend mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="430887152843645">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="235118108705647" type="Touch">
+                            <param id="0" name="Object">gafeteDorado</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set blend mode" sid="489548899295814" type="gafeteDorado">
+                            <param id="0" name="Blend mode">1</param>
+                        </action>
+                        <action id="1" name="Set blend mode" sid="114878128325232" type="gafeteBlanco">
+                            <param id="0" name="Blend mode">0</param>
+                        </action>
+                        <action id="1" name="Set blend mode" sid="434275915754886" type="gafeteRojo">
+                            <param id="0" name="Blend mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="541506279831468">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="284229576659360" type="Touch">
+                            <param id="0" name="Object">gafeteBlanco</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set blend mode" sid="734535522143254" type="gafeteBlanco">
+                            <param id="0" name="Blend mode">1</param>
+                        </action>
+                        <action id="1" name="Set blend mode" sid="899152415507999" type="gafeteDorado">
+                            <param id="0" name="Blend mode">0</param>
+                        </action>
+                        <action id="1" name="Set blend mode" sid="292659903075068" type="gafeteRojo">
+                            <param id="0" name="Blend mode">0</param>
                         </action>
                     </actions>
                 </event-block>

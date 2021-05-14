@@ -10,6 +10,88 @@
                         <condition id="-2" name="On start of layout" sid="113989134144720" type="System" />
                     </conditions>
                     <actions />
+                    <sub-events>
+                        <event-block sid="620178007983036">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="976252886487387" type="System">
+                                    <param id="0" name="Variable">sexo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;h&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="212981105649214">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="607867613581189" type="System">
+                                            <param id="0" name="Variable">traje</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;negro&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="732649582963355" type="jugador">
+                                            <param id="0" name="Animation">&quot;HombreNegro&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="179103313985154">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="815071427781870" type="System">
+                                            <param id="0" name="Variable">traje</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;gris&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="953078373455413" type="jugador">
+                                            <param id="0" name="Animation">&quot;HombreGris&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="906680369099860">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="430988827782257" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="272969701473609">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="475139135793249" type="System">
+                                            <param id="0" name="Variable">traje</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;negro&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="179826793664955" type="jugador">
+                                            <param id="0" name="Animation">&quot;HombreNegro&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="923841139816901" title="cargar padrino">
+            <sub-events>
+                <event-block sid="266842702832138">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="234823270957983" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="250770847658348" type="padrino">
+                            <param id="0" name="Animation">padrino</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

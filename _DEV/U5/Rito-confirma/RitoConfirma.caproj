@@ -25,7 +25,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
-    <first-layout>main</first-layout>
+    <first-layout>Main</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -55,6 +55,38 @@
                                 <point x="0.997669" y="0.00415512" />
                                 <point x="0.996892" y="0.99446" />
                                 <point x="0.001554" y="0.99723" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bgSplash" sid="370550329507254">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="819782751755519" speed="5">
+                        <frame duration="1" hotspotX="0.500391" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 5\Rito Confirmación\Assets\BG\splashConfirmaU5Confirmacion.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.999218" y="0.00137741" />
+                                <point x="0.999218" y="0.998623" />
+                                <point x="0.000781861" y="0.998623" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bgMain1" sid="237726577357381">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="213121040731454" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 5\Rito Confirmación\Assets\BG\fondo3U5Confirmacion.png">
+                            <collision-poly>
+                                <point x="0.014526" y="0.0263158" />
+                                <point x="0.5" y="0.00277008" />
+                                <point x="0.996177" y="0.00692521" />
+                                <point x="0.996177" y="0.993075" />
+                                <point x="0.5" y="0.998615" />
+                                <point x="0.0168196" y="0.969529" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -222,7 +254,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="hafeteBlanco" sid="999885765494605">
+            <object-type name="gafeteBlanco" sid="999885765494605">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="670554829626340" speed="5">
@@ -241,7 +273,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="gadeteDorado" sid="217413432678236">
+            <object-type name="gafeteDorado" sid="217413432678236">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="214878539838969" speed="5">
@@ -255,6 +287,53 @@
                                 <point x="0.497436" y="0.921053" />
                                 <point x="0.379487" y="0.513158" />
                                 <point x="0.379487" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="padrino" sid="840328352802973">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Negra" pingpong="0" repeatcount="1" repeatto="0" sid="804231056779159" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500824" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 5\Rito Confirmación\Assets\madrina1depieU5Confirmacion.png">
+                            <collision-poly>
+                                <point x="0.13587" y="0.0411862" />
+                                <point x="0.5" y="0.00164745" />
+                                <point x="0.858696" y="0.0428336" />
+                                <point x="0.918478" y="0.499176" />
+                                <point x="0.788043" y="0.93575" />
+                                <point x="0.5" y="0.962109" />
+                                <point x="0.211957" y="0.93575" />
+                                <point x="0.141304" y="0.499176" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Macha" pingpong="0" repeatcount="1" repeatto="0" sid="314272764027480" speed="5">
+                        <frame duration="1" hotspotX="0.501859" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 5\Rito Confirmación\Assets\madrina2depieU5Confirmacion.png">
+                            <collision-poly>
+                                <point x="0.178439" y="0.0769231" />
+                                <point x="0.498141" y="0.0272436" />
+                                <point x="0.840149" y="0.0689103" />
+                                <point x="0.788104" y="0.5" />
+                                <point x="0.620818" y="0.836538" />
+                                <point x="0.498141" y="0.964744" />
+                                <point x="0.427509" y="0.815705" />
+                                <point x="0.256506" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Chico" pingpong="0" repeatcount="1" repeatto="0" sid="959373821448381" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500813" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 5\Rito Confirmación\Assets\padrino1depieU5Confirmacion.png">
+                            <collision-poly>
+                                <point x="0.132653" y="0.0422764" />
+                                <point x="0.5" y="0.00325203" />
+                                <point x="0.846939" y="0.0487805" />
+                                <point x="0.928571" y="0.499187" />
+                                <point x="0.688776" y="0.900813" />
+                                <point x="0.5" y="0.964228" />
+                                <point x="0.357143" y="0.886179" />
+                                <point x="0.112245" y="0.499187" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -284,7 +363,7 @@
     </object-folder>
     <families />
     <layout-folder>
-        <layout>main.xml</layout>
+        <layout>Main.xml</layout>
         <layout>Splash.xml</layout>
         <layout>Intro.xml</layout>
         <layout>Menu.xml</layout>
