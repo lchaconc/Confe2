@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eMain</name>
     <events>
+        <variable constant="0" name="escena" sid="320973999731573" static="0" type="number">0</variable>
         <event-group description="" sid="370034331693827" title="Setup">
             <sub-events>
                 <event-block sid="250151715630644">
@@ -90,6 +91,55 @@
                         <action id="4" name="Set animation" sid="250770847658348" type="padrino">
                             <param id="0" name="Animation">padrino</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="319310899731851" title="Cargar Escenas">
+            <sub-events>
+                <event-block sid="952516421881038">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="594516258364844" type="Touch">
+                            <param id="0" name="Object">btnSiguiente</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="822598099650410" type="System">
+                            <param id="0" name="Variable">escena</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="523090618161200">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="882708382570965" type="System">
+                            <param id="0" name="Variable">escena</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="925406507380940" type="bgMain">
+                            <param id="0" name="Animation">&quot;Bg2&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="777178918390168" type="jugador">
+                            <param id="0" name="X">400</param>
+                            <param id="1" name="Y">422</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="167167577927338" type="padrino">
+                            <param id="0" name="X">603</param>
+                            <param id="1" name="Y">386</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="161746082386111" type="btnHincado">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="120134871199793" type="btnPie">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="918713846810589" type="btnSentado">
+                            <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
                 </event-block>
