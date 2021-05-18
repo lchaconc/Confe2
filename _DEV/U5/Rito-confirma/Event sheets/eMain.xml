@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eMain</name>
     <events>
+        <variable constant="0" name="seleccion" sid="938767976933213" static="0" type="text"></variable>
         <variable constant="0" name="escena" sid="320973999731573" static="0" type="number">0</variable>
         <event-group description="" sid="370034331693827" title="Setup">
             <sub-events>
@@ -31,8 +32,8 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="4" name="Set animation" sid="732649582963355" type="jugador">
-                                            <param id="0" name="Animation">&quot;HombreNegro&quot;</param>
+                                        <action id="4" name="Set animation" sid="732649582963355" type="hombre">
+                                            <param id="0" name="Animation">&quot;NegroPie&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
                                     </actions>
@@ -46,8 +47,8 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="4" name="Set animation" sid="953078373455413" type="jugador">
-                                            <param id="0" name="Animation">&quot;HombreGris&quot;</param>
+                                        <action id="4" name="Set animation" sid="953078373455413" type="hombre">
+                                            <param id="0" name="Animation">&quot;GrisPie&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
                                     </actions>
@@ -69,7 +70,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="4" name="Set animation" sid="179826793664955" type="jugador">
+                                        <action id="4" name="Set animation" sid="179826793664955" type="hombre">
                                             <param id="0" name="Animation">&quot;HombreNegro&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
@@ -110,38 +111,375 @@
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="523090618161200">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="882708382570965" type="System">
+                                    <param id="0" name="Variable">escena</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="925406507380940" type="bgMain">
+                                    <param id="0" name="Animation">&quot;Bg2&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="777178918390168" type="hombre">
+                                    <param id="0" name="X">400</param>
+                                    <param id="1" name="Y">422</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="167167577927338" type="padrino">
+                                    <param id="0" name="X">603</param>
+                                    <param id="1" name="Y">386</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="161746082386111" type="btnHincado">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="120134871199793" type="btnPie">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="918713846810589" type="btnSentado">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="450545924607314" type="txtMomentos">
+                                    <param id="0" name="Text">momentos.At(0)</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="945327987427372" type="btnSiguiente">
+                                    <param id="0" name="X">-600</param>
+                                    <param id="1" name="Y">-600</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="767084083859623">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="540897252267304" type="System">
+                                    <param id="0" name="Variable">escena</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="686093989111511" type="txtMomentos">
+                                    <param id="0" name="Text">momentos.At(1)</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="717769188848020" type="btnSiguiente">
+                                    <param id="0" name="X">-600</param>
+                                    <param id="1" name="Y">-600</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="776610949277622">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="401664298111615" type="System">
+                                    <param id="0" name="Variable">escena</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="982254321420820" type="txtMomentos">
+                                    <param id="0" name="Text">momentos.At(2)</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="411670460517724" type="btnSiguiente">
+                                    <param id="0" name="X">-600</param>
+                                    <param id="1" name="Y">-600</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="793225472953235">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="972241655596738" type="System">
+                                    <param id="0" name="Variable">escena</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="824755678445809" type="txtMomentos">
+                                    <param id="0" name="Text">momentos.At(3)</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="782291632568459" type="btnSiguiente">
+                                    <param id="0" name="X">-600</param>
+                                    <param id="1" name="Y">-600</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="206671473050929">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="248385182225967" type="System">
+                                    <param id="0" name="Variable">escena</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="771836520041406" type="txtMomentos">
+                                    <param id="0" name="Text">momentos.At(4)</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="448192165428099" type="btnSiguiente">
+                                    <param id="0" name="X">-600</param>
+                                    <param id="1" name="Y">-600</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
-                <event-block sid="523090618161200">
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="138934227688114" title="Botones posiciones">
+            <sub-events>
+                <event-block sid="416746012895624">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="882708382570965" type="System">
-                            <param id="0" name="Variable">escena</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
+                        <condition id="3" name="On touched object" sid="868175742311460" type="Touch">
+                            <param id="0" name="Object">btnHincado</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="925406507380940" type="bgMain">
-                            <param id="0" name="Animation">&quot;Bg2&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="777178918390168" type="jugador">
-                            <param id="0" name="X">400</param>
-                            <param id="1" name="Y">422</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="167167577927338" type="padrino">
-                            <param id="0" name="X">603</param>
-                            <param id="1" name="Y">386</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="161746082386111" type="btnHincado">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="120134871199793" type="btnPie">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="918713846810589" type="btnSentado">
-                            <param id="0" name="Visibility">1</param>
+                        <action id="-9" name="Set value" sid="743934688660710" type="System">
+                            <param id="0" name="Variable">seleccion</param>
+                            <param id="1" name="Value">&quot;hincado&quot;</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="548646657957879">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="135418967020492" type="System">
+                                    <param id="0" name="Variable">sexo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;h&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="858869639343154">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="656605821717602" type="System">
+                                            <param id="0" name="Variable">traje</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;gris&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="576980257717799" type="hombre">
+                                            <param id="0" name="Animation">&quot;GrisHincado&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="746880289144486" type="Function">
+                                            <param id="0" name="Name">&quot;verificarPos&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="723223765087167">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="888229740974226" type="Touch">
+                            <param id="0" name="Object">btnPie</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="624721482623393" type="System">
+                            <param id="0" name="Variable">seleccion</param>
+                            <param id="1" name="Value">&quot;pie&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="668801195821409">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="220792668199015" type="System">
+                                    <param id="0" name="Variable">sexo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;h&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="679365329909274">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="609576137966095" type="System">
+                                            <param id="0" name="Variable">traje</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;gris&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="241247278264358" type="hombre">
+                                            <param id="0" name="Animation">&quot;GrisPie&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="437399666893403" type="Function">
+                                            <param id="0" name="Name">&quot;verificarPos&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="796285345669599">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="964392201208487" type="Touch">
+                            <param id="0" name="Object">btnSentado</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="708781914198247" type="System">
+                            <param id="0" name="Variable">seleccion</param>
+                            <param id="1" name="Value">&quot;sentado&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="619309584328435">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="843763271053870" type="System">
+                                    <param id="0" name="Variable">sexo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;h&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="498730192564353">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="993783551754913" type="System">
+                                            <param id="0" name="Variable">traje</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;gris&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="613246945814964" type="hombre">
+                                            <param id="0" name="Animation">&quot;GrisSentado&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="490361019686915" type="Function">
+                                            <param id="0" name="Name">&quot;verificarPos&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="502031427105780" title="Verificar posiciones">
+            <sub-events>
+                <event-block sid="634102651850614">
+                    <conditions>
+                        <condition id="0" name="On function" sid="957613443121468" type="Function">
+                            <param id="0" name="Name">&quot;verificarPos&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="499939927449428">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="930227243155809" type="System">
+                                    <param id="0" name="Variable">escena</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="737061187496391" type="System">
+                                    <param id="0" name="Variable">seleccion</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;pie&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="544957498082116" type="btnSiguiente">
+                                    <param id="0" name="X">1040</param>
+                                    <param id="1" name="Y">639</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="677910924409493">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="602113107258154" type="System">
+                                    <param id="0" name="Variable">escena</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="804502737090489" type="System">
+                                    <param id="0" name="Variable">seleccion</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;sentado&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="696471644075424" type="btnSiguiente">
+                                    <param id="0" name="X">1040</param>
+                                    <param id="1" name="Y">639</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="647972462006085">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="497814931123839" type="System">
+                                    <param id="0" name="Variable">escena</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="975802685248886" type="System">
+                                    <param id="0" name="Variable">seleccion</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;pie&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="271977093182430" type="btnSiguiente">
+                                    <param id="0" name="X">1040</param>
+                                    <param id="1" name="Y">639</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="194901148475150">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="509057124125949" type="System">
+                                    <param id="0" name="Variable">escena</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="168279535046171" type="System">
+                                    <param id="0" name="Variable">seleccion</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;pie&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="692546472715142" type="btnSiguiente">
+                                    <param id="0" name="X">1040</param>
+                                    <param id="1" name="Y">639</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="286378362937633">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="159913579628910" type="System">
+                                    <param id="0" name="Variable">escena</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="912954276091550" type="System">
+                                    <param id="0" name="Variable">seleccion</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;sentado&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="886886979869319" type="btnSiguiente">
+                                    <param id="0" name="X">1040</param>
+                                    <param id="1" name="Y">639</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>

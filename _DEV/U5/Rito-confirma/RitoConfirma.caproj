@@ -10,8 +10,10 @@
     <unique-id>3subbtu8xvytq</unique-id>
     <saved-with-version>27900</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors />
@@ -106,10 +108,10 @@
             </object-type>
         </object-folder>
         <object-folder name="Sprites">
-            <object-type name="jugador" sid="628616383034871">
+            <object-type name="hombre" sid="628616383034871">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="HombreBase" pingpong="0" repeatcount="1" repeatto="0" sid="234396384583263" speed="5">
+                    <animation framecount="1" loop="0" name="Base" pingpong="0" repeatcount="1" repeatto="0" sid="234396384583263" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 5\Rito Confirmación\Assets\ConfirmandoRoperoU5Confirmacion.png">
                             <collision-poly>
                                 <point x="0.157895" y="0.0441176" />
@@ -123,7 +125,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="1" loop="0" name="HombreNegro" pingpong="0" repeatcount="1" repeatto="0" sid="805809901870352" speed="5">
+                    <animation framecount="1" loop="0" name="NegroPie" pingpong="0" repeatcount="1" repeatto="0" sid="805809901870352" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 5\Rito Confirmación\Assets\ConfirmandoNEGROHderodillasU5Confirmacion.png">
                             <collision-poly>
                                 <point x="0.164474" y="0.0459559" />
@@ -137,7 +139,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="1" loop="0" name="HombreGris" pingpong="0" repeatcount="1" repeatto="0" sid="741729647977897" speed="5">
+                    <animation framecount="1" loop="0" name="GrisPie" pingpong="0" repeatcount="1" repeatto="0" sid="741729647977897" speed="5">
                         <frame duration="1" hotspotX="0.503311" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 5\Rito Confirmación\Assets\confirmandoGRISHdepieU5Confirmacion.png">
                             <collision-poly>
                                 <point x="0.15894" y="0.0441176" />
@@ -148,6 +150,32 @@
                                 <point x="0.496689" y="0.632353" />
                                 <point x="0.119205" y="0.966912" />
                                 <point x="0.0728477" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="GrisHincado" pingpong="0" repeatcount="1" repeatto="0" sid="793032829401447" speed="5">
+                        <frame duration="1" hotspotX="0.503311" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 5\Rito Confirmación\Assets\ConfirmandoGRISHderodillasU5Confirmacion.png">
+                            <collision-poly>
+                                <point x="0.15894" y="0.056872" />
+                                <point x="0.496689" y="0" />
+                                <point x="0.847682" y="0.0545024" />
+                                <point x="0.801324" y="0.5" />
+                                <point x="0.92053" y="0.971564" />
+                                <point x="0.496689" y="0.933649" />
+                                <point x="0.0529801" y="0.981043" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="GrisSentado" pingpong="0" repeatcount="1" repeatto="0" sid="603199728218099" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\luisc\Google Drive\CENACAT CONFE APP\Unidad 5\Rito Confirmación\Assets\ConfirmandoGRISHSentadoU5Confirmacion.png">
+                            <collision-poly>
+                                <point x="0.202128" y="0.0781893" />
+                                <point x="0.5" y="0.00205761" />
+                                <point x="0.835106" y="0.063786" />
+                                <point x="0.840426" y="0.5" />
+                                <point x="0.941489" y="0.977366" />
+                                <point x="0.5" y="0.685185" />
+                                <point x="0.0585106" y="0.977366" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -352,7 +380,11 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder name="Texts" />
+        <object-folder name="Texts">
+            <object-type name="txtMomentos" sid="499094128822483">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
         <object-folder name="Controls">
             <object-type name="btnSiguiente" sid="735319081041363">
                 <plugin id="Sprite" />
@@ -393,6 +425,9 @@
             </object-type>
             <object-type name="Function" sid="558381821082318">
                 <plugin id="Function" />
+            </object-type>
+            <object-type global="1" name="momentos" sid="416388310569018">
+                <plugin id="Arr" />
             </object-type>
         </object-folder>
         <object-folder name="Sensors" />
