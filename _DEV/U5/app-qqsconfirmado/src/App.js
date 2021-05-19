@@ -3,10 +3,9 @@ import Splash from "./componentes/Splash";
 import Intro from "./componentes/Intro";
 import Preguntas from "./componentes/Preguntas";
 import Fin from "./componentes/Fin";
-import GraficoPublico from "./componentes/GraficoPublico";
 import TimeOver from "./componentes/TimeOver";
 
-let currentView = "preguntas";
+
 
 function App() {
   const [curComp, setCurComp] = useState(null);
@@ -16,7 +15,10 @@ function App() {
   }, []);
 
   const setup = () => {
-    controller(currentView);
+    controller("splash");
+    setTimeout(() => {
+      controller("intro");
+    }, 2000);
   };
 
   const controller = (currentView) => {
@@ -26,7 +28,7 @@ function App() {
         setCurComp(<Splash />);
         break;
       case "intro":
-        setCurComp(<Intro />);
+        setCurComp(<Intro controller={controller} />);
         break;
       case "preguntas":
         setCurComp(<Preguntas controller={controller} />);

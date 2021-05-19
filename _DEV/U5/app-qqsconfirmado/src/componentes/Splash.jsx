@@ -1,9 +1,9 @@
-export default function Splash(params) {
+export default function Splash() {
 
     return (
         <div className="row">
-        <div className="col-12">
-            <h1>SPLASH</h1>
+        <div className="col-12 text-center">
+            <img className="img-fluid" src="./assets/logo.png" alt="logo" />
         </div>
     </div>
     )
