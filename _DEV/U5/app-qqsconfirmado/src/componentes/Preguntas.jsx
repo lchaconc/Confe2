@@ -13,7 +13,7 @@ import "../css/master.css";
 
 const MAX_ITEMS = 3;
 const MAX_LEVELS = 4;
-const ITEM_DELAY = 60000;
+const ITEM_DELAY = 1200000;
 let index = 0;
 let level = 1;
 
@@ -185,35 +185,44 @@ export default function Preguntas(props) {
         {!chk && (
           <ItemsTime delay={ITEM_DELAY} handleTimeOver={handleTimeOver} />
         )}
-        <div className="jumbotron"></div>
 
         <div className="row">
           <div className="col-12">
             {btn50 && (
-              <button onClick={comod50} className="btn btn-info">
-                50/50
-              </button>
+              <img
+                className="img-m"
+                src="./assets/comodin-50.png"
+                onClick={comod50}
+                alt="comodin 50 50"
+              />
             )}
+
+            <img className="img-m ml-2" src="./assets/comodin-publico.png" alt="comodin publico" />
+
+            <img className="img-m ml-2" src="./assets/comodin-persona.png" alt="comodin persona" />
           </div>
         </div>
 
         <br />
 
         <div className="row">
-          <div className="col-12 alert alert-success">
+          <div className="col-12 cont-pregunta text-center ">
             <h5>{item.pregunta} </h5>
           </div>
         </div>
+        <br />
+
         <div className="row">
           <div
             id={1}
             onClick={handleChkAnswer}
             className={
-              v1 ? "col-5 alert alert-info" : "col-5 alert alert-info invisible"
+              v1 ? "col-5 cont-opcion" : "col-5 alert alert-info invisible"
             }
             ref={agregarRefBotones}
             role="button"
           >
+            <span className="letra-opcion">A:</span>{" "}
             <span> {item.opcion1} </span>
           </div>
 
@@ -222,24 +231,27 @@ export default function Preguntas(props) {
             id={2}
             onClick={handleChkAnswer}
             className={
-              v2 ? "col-5 alert alert-info" : "col-5 alert alert-info invisible"
+              v2 ? "col-5 cont-opcion" : "col-5 alert alert-info invisible"
             }
             ref={agregarRefBotones}
             role="button"
           >
+            <span className="letra-opcion">B:</span>{" "}
             <span> {item.opcion2} </span>
           </div>
         </div>
+        <br />
         <div className="row">
           <div
             id={3}
             onClick={handleChkAnswer}
             className={
-              v3 ? "col-5 alert alert-info" : "col-5 alert alert-info invisible"
+              v3 ? "col-5 cont-opcion" : "col-5 alert alert-info invisible"
             }
             ref={agregarRefBotones}
             role="button"
           >
+            <span className="letra-opcion">C:</span>{" "}
             <span> {item.opcion3} </span>
           </div>
           <div className="col-2"></div>
@@ -247,11 +259,12 @@ export default function Preguntas(props) {
             id={4}
             onClick={handleChkAnswer}
             className={
-              v4 ? "col-5 alert alert-info" : "col-5 alert alert-info invisible"
+              v4 ? "col-5 cont-opcion" : "col-5 alert alert-info invisible"
             }
             ref={agregarRefBotones}
             role="button"
           >
+            <span className="letra-opcion">D:</span>{" "}
             <span> {item.opcion4} </span>
           </div>
         </div>

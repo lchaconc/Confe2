@@ -1,9 +1,40 @@
 .opt-right {
-    border: solid green 2px;
-    background-color: green;
+  border: solid green 2px;
+  background-color: green;
 }
 
 .opt-wrong {
-    border: solid red 2px;
-    background-color: yellow;
+  border: solid red 2px;
+  background-color: yellow;
+}
+
+body {
+  background-image: url("./bg/bg-main.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cont-pregunta {
+  background-image: url("./bg/bg-pregunta.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: honeydew;
+  font-size: 1em;
+  min-height: 5em;
+}
+
+.cont-opcion {
+  background-color: #0f0c42;
+  color: honeydew;
+  font-size: 1em;
+  min-height: 3em;
+}
+
+.letra-opcion {
+  color: rgb(196, 153, 108);
+}
+
+.img-m {
+    height: 50%;
+    width: auto;
 }
