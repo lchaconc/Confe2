@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import GModal from "./Modal/GModal";
 
 import ItemsTime from "./ItemsTime";
 
@@ -31,6 +32,12 @@ export default function Preguntas(props) {
 
   //estado para los botones de comdines:
   const [btn50, setBtn50] = useState(true);
+
+
+  //Estados para el modal
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   //Referencia de boton de opción:
   const refBotones = useRef();
@@ -98,7 +105,7 @@ export default function Preguntas(props) {
   };
 
   const handleComdAskPublic = () => {
-    props.controller("grafico");
+    handleShow();
   };
 
   const handleTimeOver = (completed) => {
@@ -293,6 +300,15 @@ export default function Preguntas(props) {
             )}
           </div>
         </div>
+
+        <GModal  
+          show={show}
+        handleClose={handleClose}
+        title="Pregunta al público"
+         >
+            <GraficoPublico />
+        </GModal>
+
       </>
     )
   );

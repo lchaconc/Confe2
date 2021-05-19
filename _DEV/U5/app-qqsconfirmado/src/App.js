@@ -30,10 +30,7 @@ function App() {
         break;
       case "preguntas":
         setCurComp(<Preguntas controller={controller} />);
-        break;
-      case "grafico":
-        setCurComp(<GraficoPublico controller={controller} />);
-        break;
+        break;      
       case "timeover":
         setCurComp(<TimeOver />);
         break;
