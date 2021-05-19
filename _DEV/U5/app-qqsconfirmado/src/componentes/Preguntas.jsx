@@ -15,13 +15,14 @@ import GraficoPublico from "./GraficoPublico";
 
 const MAX_ITEMS = 3;
 const MAX_LEVELS = 4;
-const ITEM_DELAY = 1200000;
+const ITEM_DELAY = 30000;
 let index = 0;
 let level = 1;
 
 export default function Preguntas(props) {
   const [item, setItem] = useState(null);
   const [filtrado, setFiltrado] = useState(null);
+  //Estado para desactivar o activar la cuenta regresiva
   const [chk, setChk] = useState(false);
 
   //Etados para el comodin 50/50
@@ -30,9 +31,9 @@ export default function Preguntas(props) {
   const [v3, setV3] = useState(true);
   const [v4, setV4] = useState(true);
 
-  //estado para los botones de comdines:
+  //estado para los mostrar u ocultar los botones de comdines:
   const [btn50, setBtn50] = useState(true);
-
+  const [btnPublico, setBtnPublico] = useState(true);
 
   //Estados para el modal
   const [show, setShow] = useState(false);
@@ -71,6 +72,7 @@ export default function Preguntas(props) {
     for (let index = 0; index < limite; index++) {
       array[index].classList.remove("opt-right");
       array[index].classList.remove("opt-wrong");
+      array[index].classList.add("cont-opcion");
     }
   };
 
@@ -105,6 +107,7 @@ export default function Preguntas(props) {
   };
 
   const handleComdAskPublic = () => {
+    setBtnPublico(false);
     handleShow();
   };
 
@@ -161,9 +164,11 @@ export default function Preguntas(props) {
       if (opt === item.correcta) {
         console.log("Opción correcta");
         //console.log(btn);
+        btn.classList.remove("cont-opcion");
         btn.classList.add("opt-right");
       } else {
         console.log("incorrecta");
+        btn.classList.remove("cont-opcion");
         btn.classList.add("opt-wrong");
       }
     }
@@ -194,36 +199,48 @@ export default function Preguntas(props) {
   return (
     item && (
       <>
-        {!chk && (
-          <ItemsTime delay={ITEM_DELAY} handleTimeOver={handleTimeOver} />
-        )}
-
+      <hr />
         <div className="row">
-          <div className="col-12">
-            {btn50 && (
+          <div className="col-2">
+          {btn50 && (
               <img
-                className="img-m"
+                className="img-fluid"
                 src="./assets/comodin-50.png"
                 onClick={comod50}
                 alt="comodin 50 50"
               />
             )}
+          </div>
 
-            <img
-              onClick={handleComdAskPublic}
-              className="img-m ml-2"
-              src="./assets/comodin-publico.png"
-              alt="comodin publico"
-            />
+          <div className="col-2">
+          {btnPublico && (
+              <img
+                onClick={handleComdAskPublic}
+                className="img-fluid"
+                src="./assets/comodin-publico.png"
+                alt="comodin publico"
+              />
+            )}
+          </div>
 
-            <img
-              className="img-m ml-2"
+          <div className="col-2">
+          <img
+              className="img-fluid"
               src="./assets/comodin-persona.png"
               alt="comodin persona"
             />
           </div>
-        </div>
+          
 
+
+          <div className="col-6 text-right bg-info">
+          {!chk && (
+              <span className="cont-contdown">
+                <ItemsTime delay={ITEM_DELAY} handleTimeOver={handleTimeOver} />
+              </span>
+            )}
+          </div>
+        </div>
         <br />
 
         <div className="row">
@@ -301,14 +318,13 @@ export default function Preguntas(props) {
           </div>
         </div>
 
-        <GModal  
+        <GModal
           show={show}
-        handleClose={handleClose}
-        title="Pregunta al público"
-         >
-            <GraficoPublico />
+          handleClose={handleClose}
+          title="Pregunta al público"
+        >
+          <GraficoPublico />
         </GModal>
-
       </>
     )
   );
