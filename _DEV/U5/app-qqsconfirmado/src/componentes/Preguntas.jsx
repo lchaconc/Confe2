@@ -10,6 +10,7 @@ import nDificil from "../data/nivel-4-dificil.json";
 import shuffleArray from "../utils/shuffle-array";
 
 import "../css/master.css";
+import GraficoPublico from "./GraficoPublico";
 
 const MAX_ITEMS = 3;
 const MAX_LEVELS = 4;
@@ -94,6 +95,10 @@ export default function Preguntas(props) {
       default:
         break;
     }
+  };
+
+  const handleComdAskPublic = () => {
+    props.controller("grafico");
   };
 
   const handleTimeOver = (completed) => {
@@ -197,9 +202,18 @@ export default function Preguntas(props) {
               />
             )}
 
-            <img className="img-m ml-2" src="./assets/comodin-publico.png" alt="comodin publico" />
+            <img
+              onClick={handleComdAskPublic}
+              className="img-m ml-2"
+              src="./assets/comodin-publico.png"
+              alt="comodin publico"
+            />
 
-            <img className="img-m ml-2" src="./assets/comodin-persona.png" alt="comodin persona" />
+            <img
+              className="img-m ml-2"
+              src="./assets/comodin-persona.png"
+              alt="comodin persona"
+            />
           </div>
         </div>
 

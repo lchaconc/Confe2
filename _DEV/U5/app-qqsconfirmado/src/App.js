@@ -3,6 +3,7 @@ import Splash from "./componentes/Splash";
 import Intro from "./componentes/Intro";
 import Preguntas from "./componentes/Preguntas";
 import Fin from "./componentes/Fin";
+import GraficoPublico from "./componentes/GraficoPublico";
 import TimeOver from "./componentes/TimeOver";
 
 let currentView = "preguntas";
@@ -14,10 +15,9 @@ function App() {
     setup();
   }, []);
 
-  const setup =()=> {
+  const setup = () => {
     controller(currentView);
-  }
-
+  };
 
   const controller = (currentView) => {
     console.log("currentView", currentView);
@@ -31,7 +31,10 @@ function App() {
       case "preguntas":
         setCurComp(<Preguntas controller={controller} />);
         break;
-        case "timeover":
+      case "grafico":
+        setCurComp(<GraficoPublico controller={controller} />);
+        break;
+      case "timeover":
         setCurComp(<TimeOver />);
         break;
       case "fin":
