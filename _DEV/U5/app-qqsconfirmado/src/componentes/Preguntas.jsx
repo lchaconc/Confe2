@@ -12,6 +12,7 @@ import shuffleArray from "../utils/shuffle-array";
 
 import "../css/master.css";
 import GraficoPublico from "./GraficoPublico";
+import LevelScreen from "./LevelScreen";
 
 const MAX_ITEMS = 3;
 const MAX_LEVELS = 4;
@@ -41,6 +42,9 @@ export default function Preguntas(props) {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  //controla el contenido del modal
+  const [modalMode, setModalMode] = useState(null);
+
   //Referencia de boton de opción:
   const refBotones = useRef();
   refBotones.current = [];
@@ -55,6 +59,14 @@ export default function Preguntas(props) {
     filtrado && setItem(filtrado[index]);
     console.log("filtrado", filtrado);
   }, [filtrado]);
+
+  useEffect(() => {
+    //Efecto secundario del modal mode abre el modal
+    //para que una vez cargado el modo el modal ya sepa que debe abrir
+    if (modalMode) {
+      handleShow();
+    }
+  }, [modalMode]);
 
   const setup = () => {
     loadLevel(level);
@@ -109,13 +121,13 @@ export default function Preguntas(props) {
 
   const handleComdAskPublic = () => {
     setBtnPublico(false);
-    handleShow();
+    setModalMode("grafico");
   };
 
-  const handleAskSomeone=()=> {
+  const handleAskSomeone = () => {
     setBtnAskSomeone(false);
     setChk(false);
-  }
+  };
 
   const handleTimeOver = (completed) => {
     completed && props.controller("timeover");
@@ -185,15 +197,19 @@ export default function Preguntas(props) {
     switch (level) {
       case 1:
         setFiltrado(shuffleArray(nPrincipiante));
+        setModalMode("principiante");
         break;
       case 2:
         setFiltrado(shuffleArray(nFacil));
+        setModalMode("facil");
         break;
       case 3:
         setFiltrado(shuffleArray(nMedio));
+        setModalMode("intermedio");
         break;
       case 4:
         setFiltrado(shuffleArray(nDificil));
+        setModalMode("avanzado");
         break;
 
       default:
@@ -325,12 +341,12 @@ export default function Preguntas(props) {
           </div>
         </div>
 
-        <GModal
-          show={show}
-          handleClose={handleClose}
-          title="Pregunta al público"
-        >
-          <GraficoPublico />
+        <GModal show={show} handleClose={handleClose}>
+          {modalMode === "grafico" ? (
+            <GraficoPublico />
+          ) : (
+            <LevelScreen level={modalMode} />
+          )}
         </GModal>
       </>
     )
