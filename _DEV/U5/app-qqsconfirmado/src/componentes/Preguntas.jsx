@@ -15,7 +15,7 @@ import GraficoPublico from "./GraficoPublico";
 
 const MAX_ITEMS = 3;
 const MAX_LEVELS = 4;
-const ITEM_DELAY = 30000;
+const ITEM_DELAY = 60000;
 let index = 0;
 let level = 1;
 
@@ -34,6 +34,7 @@ export default function Preguntas(props) {
   //estado para los mostrar u ocultar los botones de comdines:
   const [btn50, setBtn50] = useState(true);
   const [btnPublico, setBtnPublico] = useState(true);
+  const [btnAskSomeone, setBtnAskSomeone] = useState(true);
 
   //Estados para el modal
   const [show, setShow] = useState(false);
@@ -110,6 +111,11 @@ export default function Preguntas(props) {
     setBtnPublico(false);
     handleShow();
   };
+
+  const handleAskSomeone=()=> {
+    setBtnAskSomeone(false);
+    setChk(false);
+  }
 
   const handleTimeOver = (completed) => {
     completed && props.controller("timeover");
@@ -199,10 +205,10 @@ export default function Preguntas(props) {
   return (
     item && (
       <>
-      <hr />
+        <hr />
         <div className="row">
           <div className="col-2">
-          {btn50 && (
+            {btn50 && (
               <img
                 className="img-fluid"
                 src="./assets/comodin-50.png"
@@ -213,7 +219,7 @@ export default function Preguntas(props) {
           </div>
 
           <div className="col-2">
-          {btnPublico && (
+            {btnPublico && (
               <img
                 onClick={handleComdAskPublic}
                 className="img-fluid"
@@ -224,17 +230,18 @@ export default function Preguntas(props) {
           </div>
 
           <div className="col-2">
-          <img
-              className="img-fluid"
-              src="./assets/comodin-persona.png"
-              alt="comodin persona"
-            />
+            {btnAskSomeone && (
+              <img
+                className="img-fluid"
+                onClick={handleAskSomeone}
+                src="./assets/comodin-persona.png"
+                alt="comodin persona"
+              />
+            )}
           </div>
-          
 
-
-          <div className="col-6 text-right bg-info">
-          {!chk && (
+          <div className="col-6 text-right">
+            {!chk && (
               <span className="cont-contdown">
                 <ItemsTime delay={ITEM_DELAY} handleTimeOver={handleTimeOver} />
               </span>
