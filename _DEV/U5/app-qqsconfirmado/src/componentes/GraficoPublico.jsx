@@ -9,15 +9,13 @@ export default function GraficoPublico(props) {
   console.log(rndNum);
 
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-sm-12 bg-light p-4">
-          <img
-            src={`./assets/grafico${rndNum}.png`}
-            alt="grafico"
-            className="img-fluid"
-          />
-        </div>
+    <div className="row">
+      <div className="col-sm-12 text-center">
+        <img
+          src={`./assets/grafico${rndNum}.png`}
+          alt="grafico"
+          className="img-graphic"
+        />
       </div>
     </div>
   );

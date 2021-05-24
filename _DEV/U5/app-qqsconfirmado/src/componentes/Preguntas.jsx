@@ -14,7 +14,7 @@ import "../css/master.css";
 import GraficoPublico from "./GraficoPublico";
 import LevelScreen from "./LevelScreen";
 
-const MAX_ITEMS = 3;
+const MAX_ITEMS = 1;
 const MAX_LEVELS = 4;
 const ITEM_DELAY = 60000;
 let index = 0;
@@ -341,13 +341,17 @@ export default function Preguntas(props) {
           </div>
         </div>
 
-        <GModal show={show} handleClose={handleClose}>
-          {modalMode === "grafico" ? (
+        {modalMode === "grafico" && (
+          <GModal show={show} handleClose={handleClose} className="ModalGraph">
             <GraficoPublico />
-          ) : (
+          </GModal>
+        )}
+
+        {modalMode !== "grafico" && (
+          <GModal show={show} handleClose={handleClose} className="Modal">
             <LevelScreen level={modalMode} />
-          )}
-        </GModal>
+          </GModal>
+        )}
       </>
     )
   );

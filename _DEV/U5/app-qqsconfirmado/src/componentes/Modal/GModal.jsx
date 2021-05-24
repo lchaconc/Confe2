@@ -1,21 +1,15 @@
-import Modal from "react-bootstrap/Modal";
+import Modal from "react-modal";
+import "./modal.css";
 
-const GModal = (props) => {   
-  
+const GModal = (props) => {
   return (
-    <Modal 
-    show={props.show} 
-    onHide={props.handleClose}
-    >
-      <Modal.Header closeButton>
-        <Modal.Title> {props.title} </Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-        {props.children}
-      </Modal.Body>
-      <Modal.Footer>
-        {props.footer}        
-      </Modal.Footer>
+    <Modal isOpen={props.show} className={props.className} overlayClassName="Overlay">
+      <div className="col-12 text-right">
+        <span role="button" onClick={props.handleClose}>
+          ❌
+        </span>
+      </div>
+      {props.children}
     </Modal>
   );
 };
